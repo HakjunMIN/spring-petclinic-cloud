@@ -12,7 +12,7 @@
 	</appender***REMOVED******REMOVED***
 	
 	<!-- Application Loggers --***REMOVED***
-	<logger name="org.springframework.samples"***REMOVED***
+	<logger name="org.springframework.samples.petclinic"***REMOVED***
 		<level value="debug" /***REMOVED***
 	</logger***REMOVED***
 	
