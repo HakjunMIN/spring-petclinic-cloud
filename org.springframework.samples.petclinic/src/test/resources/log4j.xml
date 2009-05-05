@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<!DOCTYPE log4j:configuration PUBLIC "-//LOGGER" "log4j.dtd"***REMOVED***
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"***REMOVED***
+
+	<!-- Appenders --***REMOVED***
+	<appender name="console" class="org.apache.log4j.ConsoleAppender"***REMOVED***
+		<param name="Target" value="System.out" /***REMOVED***
+		<layout class="org.apache.log4j.PatternLayout"***REMOVED***
+			<param name="ConversionPattern" value="%-5p: %c - %m%n" /***REMOVED***
+		</layout***REMOVED***
+	</appender***REMOVED******REMOVED***
+	
+	<!-- Application Loggers --***REMOVED***
+	<logger name="org.springframework.samples"***REMOVED***
+		<level value="debug" /***REMOVED***
+	</logger***REMOVED***
+	
+	<!-- 3rdparty Loggers --***REMOVED***
+	<logger name="org.springframework.core"***REMOVED***
+		<level value="debug" /***REMOVED***
+	</logger***REMOVED***	
+	
+	<logger name="org.springframework.beans"***REMOVED***
+		<level value="debug" /***REMOVED***
+	</logger***REMOVED***
+	
+	<logger name="org.springframework.context"***REMOVED***
+		<level value="debug" /***REMOVED***
+	</logger***REMOVED***
+
+	<logger name="org.springframework.web"***REMOVED***
+		<level value="debug" /***REMOVED***
+	</logger***REMOVED***
+
+	<!-- Root Logger --***REMOVED***
+	<root***REMOVED***
+		<priority value="warn" /***REMOVED***
+		<appender-ref ref="console" /***REMOVED***
+	</root***REMOVED***
+	
+</log4j:configuration***REMOVED***
