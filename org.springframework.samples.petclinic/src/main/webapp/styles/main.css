@@ -1,0 +1,118 @@
+* {
+    margin: 0px;
+    padding: 0px;
+***REMOVED***
+
+body {
+  background-image: url(../images/banner-graphic.png);
+  background-position: top;
+  background-repeat: no-repeat;  
+  width: 820px;
+  margin: auto;
+  margin-top: 60px;
+  font-family:verdana;
+  font-size: 62.5%;
+***REMOVED***
+
+h2 {
+	text-align: center;
+***REMOVED***
+
+/* Header */
+#header {
+    height: 50px;  
+***REMOVED***
+ 
+#signin {
+    float: right;
+    list-style: none;
+    width: 100px;
+    overflow: hidden;
+***REMOVED***
+#signin li{
+    display: inline;
+    padding: 0 2px;
+    border-left: 1px solid #000;  
+    margin-left: -1px;
+***REMOVED***
+#signin li a{
+
+***REMOVED***
+#nav {
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+    clear: right;
+    padding: 1em;  
+***REMOVED***
+#nav ul {
+    list-style: none;
+***REMOVED***
+#nav ul li {
+    display: inline;
+***REMOVED***
+#nav ul li a {
+    display: block;
+    float: left;
+    width: 150px;
+    font-size: 1.2em;
+***REMOVED***
+
+/* Sidebar */
+#sidebar {
+    float: left;
+    width: 200px;
+***REMOVED***
+#sub-nav {
+    list-style: none;
+***REMOVED***
+#sub-nav li {
+    display: inline;  
+***REMOVED***
+#sub-nav li a {
+  display: block;
+  font-size: 1.2em;
+***REMOVED***
+
+/* content */
+#content{
+  font-size: 1.2em;
+***REMOVED***
+
+#petlogo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+***REMOVED***
+
+#main{
+	padding-left: 200px;	
+***REMOVED***
+#main label{
+	display: block;
+	padding: 1em 0;	
+***REMOVED***
+/* content - application */
+
+#footer {
+    clear: both;
+    padding-top: 1em;
+***REMOVED***
+#copyright{
+    float: left;
+***REMOVED***
+ul#legal{
+    list-style: none;
+    width: 300px;
+    overflow: hidden;
+    float: right;
+***REMOVED***
+ul#legal li{
+    display: inline;
+    padding: 0px 4px 0px 5px;
+    border-left: 1px solid #000;
+    margin-left: -1px;
+***REMOVED***
+ul#legal li a{
+
+***REMOVED***

@@ -32,5 +32,18 @@
 		<servlet-name***REMOVED***Spring MVC Dispatcher Servlet</servlet-name***REMOVED***
 		<url-pattern***REMOVED***/app/*</url-pattern***REMOVED***
 	</servlet-mapping***REMOVED***
+
+  	<!-- Serves static resource content from the webapp root & .jar files such as spring-js.jar --***REMOVED***
+	<servlet***REMOVED***
+		<servlet-name***REMOVED***Resources Servlet</servlet-name***REMOVED***
+		<servlet-class***REMOVED***org.springframework.js.resource.ResourceServlet</servlet-class***REMOVED***
+		<load-on-startup***REMOVED***0</load-on-startup***REMOVED***
+	</servlet***REMOVED***
+		
+	<!-- Map all /resources requests to the Resource Servlet for handling --***REMOVED***
+	<servlet-mapping***REMOVED***
+		<servlet-name***REMOVED***Resources Servlet</servlet-name***REMOVED***
+		<url-pattern***REMOVED***/resources/*</url-pattern***REMOVED***
+	</servlet-mapping***REMOVED***	
 	
 </web-app***REMOVED***

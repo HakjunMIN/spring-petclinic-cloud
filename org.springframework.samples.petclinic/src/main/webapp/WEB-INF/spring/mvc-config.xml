@@ -28,9 +28,21 @@
 	<!--  VIEW RESOLUTION AND RENDERING --***REMOVED***
 	
 	<!-- Resolves view names to protected .jsp resources within the /WEB-INF directory --***REMOVED***
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver"***REMOVED***
+		<property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" /***REMOVED***
+	</bean***REMOVED***
+	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"***REMOVED***
 		<property name="prefix" value="/WEB-INF/"/***REMOVED***
 		<property name="suffix" value=".jsp"/***REMOVED***
+	</bean***REMOVED***
+	
+	<!-- Configures Tiles 2 --***REMOVED***
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer" /***REMOVED***
+
+	<!-- Configures Apache Commons Fileupload --***REMOVED***
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"***REMOVED***
+ 		<property name="maxUploadSize" value="10000000"/***REMOVED***
 	</bean***REMOVED***
 	
 </beans***REMOVED***
