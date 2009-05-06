@@ -2,8 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"***REMOVED***
 	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
-	<groupId***REMOVED***org.springframework</groupId***REMOVED***
-	<artifactId***REMOVED***samples</artifactId***REMOVED***
+	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
+	<artifactId***REMOVED***org.springframework.samples.petclinic</artifactId***REMOVED***
 	<name***REMOVED***org.springframework.samples.petclinic</name***REMOVED***
 	<packaging***REMOVED***war</packaging***REMOVED***
 	<version***REMOVED***1.0.0-SNAPSHOT</version***REMOVED***
