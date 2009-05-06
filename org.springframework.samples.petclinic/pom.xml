@@ -8,7 +8,7 @@
 	<packaging***REMOVED***war</packaging***REMOVED***
 	<version***REMOVED***1.0.0-SNAPSHOT</version***REMOVED***
 	<properties***REMOVED***
-		<spring.version***REMOVED***2.5.6</spring.version***REMOVED***
+		<spring.version***REMOVED***3.0.0.M3</spring.version***REMOVED***
 	</properties***REMOVED***	
 	<dependencies***REMOVED***
 		<!-- Compile dependencies --***REMOVED***
@@ -114,6 +114,13 @@
 			<scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***			
 	</dependencies***REMOVED***
+	<repositories***REMOVED***
+		<repository***REMOVED***
+			<id***REMOVED***org.springsource.maven.snapshot</id***REMOVED***
+			<name***REMOVED***SpringSource Maven Central-compatible Milestone Repository</name***REMOVED***
+			<url***REMOVED***http://maven.springframework.org/milestone</url***REMOVED***
+		</repository***REMOVED***	
+	</repositories***REMOVED***
 	<build***REMOVED***
 		<plugins***REMOVED***
 			<plugin***REMOVED***
