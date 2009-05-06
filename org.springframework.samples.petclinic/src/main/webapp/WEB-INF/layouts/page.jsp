@@ -22,9 +22,9 @@
 			</ul***REMOVED***
 			<div id="nav"***REMOVED***
 				<ul***REMOVED***
-					<li***REMOVED***<a href="<c:url value="/"/***REMOVED***"***REMOVED***Home</a***REMOVED***</li***REMOVED***
-					<li***REMOVED***<a href="appointments"***REMOVED***Appointments</a***REMOVED***</li***REMOVED***
-					<li***REMOVED***<a href="owners"***REMOVED***Owners</a***REMOVED***</li***REMOVED***
+					<li***REMOVED***<a href="${pageContext.request.contextPath***REMOVED***"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+					<li***REMOVED***<a href="${pageContext.request.contextPath***REMOVED***/appointments"***REMOVED***Appointments</a***REMOVED***</li***REMOVED***
+					<li***REMOVED***<a href="${pageContext.request.contextPath***REMOVED***/owners"***REMOVED***Owners</a***REMOVED***</li***REMOVED***
 				</ul***REMOVED***
 			</div***REMOVED***
 		</div***REMOVED***
