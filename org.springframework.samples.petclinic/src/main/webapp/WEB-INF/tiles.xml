@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd"***REMOVED***
+
+<tiles-definitions***REMOVED***
+
+	<!-- ABSTRACT PAGE TEMPLATES --***REMOVED***
+	
+	<definition name="page" template="/WEB-INF/layouts/page.jsp"/***REMOVED***
+
+	<!-- PAGES --***REMOVED***
+	
+	<definition name="home" extends="page"***REMOVED***
+		<put-attribute name="title" value="Welcome to Petclinic" type="string" /***REMOVED***
+		<put-attribute name="content" value="/WEB-INF/home.jsp" /***REMOVED***
+	</definition***REMOVED***
+
+	<!-- OWNER PAGES --***REMOVED***
+
+</tiles-definitions***REMOVED***
