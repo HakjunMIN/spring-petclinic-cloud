@@ -9,17 +9,11 @@
 	<!-- HANDLER MAPPING RULES --***REMOVED***
 	
 	<!-- Maps requests to @Controllers based on @RequestMapping("path") annotation values
-		 If no annotation-based path mapping is found, Spring MVC proceeds to the next HandlerMapping (order=2 below). --***REMOVED***
+		 If no annotation-based path mapping is found, Spring MVC sends a 404 response and logs a pageNotFound warning. --***REMOVED***
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"***REMOVED***
 		<property name="order" value="1" /***REMOVED***
 	</bean***REMOVED***
 	
-	<!-- Maps requests to @Controllers based on controller class name convention; e.g. a request for /hotels or a /hotels sub-resource maps to HotelsController
-	     If no class mapping is found, Spring MVC sends a 404 response and logs a pageNotFound warning. --***REMOVED***
-	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"***REMOVED***
-		<property name="order" value="2" /***REMOVED***
-	</bean***REMOVED***
-
 	<!-- REGISTERED HANDLER TYPES --***REMOVED***
 
 	<!-- Enables annotated @Controllers; responsible for invoking an annotated POJO @Controller when one is mapped. --***REMOVED***
@@ -27,12 +21,12 @@
 
 	<!--  VIEW RESOLUTION AND RENDERING --***REMOVED***
 	
-	<!-- Resolves view names to protected .jsp resources within the /WEB-INF directory --***REMOVED***
+	<!-- Resolves view names to tiles definitions in /WEB-INF/tiles.xml --***REMOVED***
 	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver"***REMOVED***
 		<property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" /***REMOVED***
 	</bean***REMOVED***
 		
-	<!-- Initializes the Apache Tiles 2 system --***REMOVED***
+	<!-- Initializes the Apache Tiles CompositeView system --***REMOVED***
 	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer" /***REMOVED***
 
 	<!-- Configures Apache Commons Fileupload --***REMOVED***

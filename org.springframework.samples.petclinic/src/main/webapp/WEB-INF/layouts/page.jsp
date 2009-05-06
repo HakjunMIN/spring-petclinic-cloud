@@ -16,8 +16,7 @@
 						<li***REMOVED***<a href="<c:url value="/account/signout"/***REMOVED***"***REMOVED***Sign Out</a***REMOVED***</li***REMOVED***
 					</c:when***REMOVED***
 					<c:otherwise***REMOVED***
-						<li***REMOVED***<a href="<c:url value="/account/signin"/***REMOVED***"***REMOVED***Sign In</a***REMOVED***</li***REMOVED***				
-						<li***REMOVED***<a href="<c:url value="/account/register"/***REMOVED***"***REMOVED***Register</a***REMOVED***</li***REMOVED***				
+						<li***REMOVED***<a href="<c:url value="/account/signin"/***REMOVED***"***REMOVED***Sign In</a***REMOVED***</li***REMOVED***		
 					</c:otherwise***REMOVED***
 				</c:choose***REMOVED***
 			</ul***REMOVED***
@@ -26,7 +25,6 @@
 					<li***REMOVED***<a href="<c:url value="/"/***REMOVED***"***REMOVED***Home</a***REMOVED***</li***REMOVED***
 					<li***REMOVED***<a href="appointments"***REMOVED***Appointments</a***REMOVED***</li***REMOVED***
 					<li***REMOVED***<a href="owners"***REMOVED***Owners</a***REMOVED***</li***REMOVED***
-					<li***REMOVED***<a href="pets"***REMOVED***Pets</a***REMOVED***</li***REMOVED***
 				</ul***REMOVED***
 			</div***REMOVED***
 		</div***REMOVED***
