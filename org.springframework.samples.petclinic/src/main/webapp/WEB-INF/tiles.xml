@@ -13,9 +13,19 @@
 	
 	<definition name="home" extends="page"***REMOVED***
 		<put-attribute name="title" value="Welcome to Petclinic" type="string" /***REMOVED***
-		<put-attribute name="content" value="/WEB-INF/home.jsp" /***REMOVED***
+		<put-attribute name="content" value="/WEB-INF/home.jsp" type="template" /***REMOVED***
 	</definition***REMOVED***
 
-	<!-- OWNER PAGES --***REMOVED***
+	<!-- APPOINTMENTS PAGES --***REMOVED***
+	<definition name="appointments" extends="page"***REMOVED***
+		<put-attribute name="title" value="Appointment" type="string" /***REMOVED***
+		<put-attribute name="content" value="/WEB-INF/appointments/calendar.jsp" type="template" /***REMOVED***
+	</definition***REMOVED***
+	
+	<!-- OWNERS PAGES --***REMOVED***
+	<definition name="owners" extends="page"***REMOVED***
+		<put-attribute name="title" value="Owner Search" type="string" /***REMOVED***
+		<put-attribute name="content" value="/WEB-INF/owners/search.jsp" type="template" /***REMOVED***
+	</definition***REMOVED***	
 
 </tiles-definitions***REMOVED***
