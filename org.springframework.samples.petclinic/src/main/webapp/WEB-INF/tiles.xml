@@ -17,12 +17,29 @@
 	</definition***REMOVED***
 
 	<!-- APPOINTMENTS PAGES --***REMOVED***
+
+	<!-- CALENDAR PAGE --***REMOVED***
 	<definition name="appointments" extends="page"***REMOVED***
 		<put-attribute name="title" value="Appointments" type="string" /***REMOVED***
-		<put-attribute name="content" value="/WEB-INF/appointments/calendar.jsp" type="template" /***REMOVED***
+		<put-attribute name="content" value="appointments.content" type="definition" /***REMOVED***
 	</definition***REMOVED***
 	
+	<definition name="appointments.content" template="/WEB-INF/appointments/content.jsp"***REMOVED***
+		<put-attribute name="main" value="/WEB-INF/appointments/calendar.jsp" type="template" /***REMOVED***
+	</definition***REMOVED***
+
+	<!-- ADD NEW PAGE --***REMOVED***
+	<definition name="appointments/new" extends="page"***REMOVED***
+		<put-attribute name="title" value="Add New Appointment" type="string" /***REMOVED***
+		<put-attribute name="content" value="appointments/new.content" type="definition" /***REMOVED***
+	</definition***REMOVED***
+
+	<definition name="appointments/new.content" template="/WEB-INF/appointments/content.jsp"***REMOVED***
+		<put-attribute name="main" value="/WEB-INF/appointments/addNewForm.jsp" type="template" /***REMOVED***
+	</definition***REMOVED***	
+		
 	<!-- OWNERS PAGES --***REMOVED***
+	
 	
 	<!-- SEARCH PAGE --***REMOVED***
 	<definition name="owners" extends="page"***REMOVED***
@@ -36,7 +53,7 @@
 
 	<!-- ADD NEW PAGE --***REMOVED***
 	<definition name="owners/new" extends="page"***REMOVED***
-		<put-attribute name="title" value="Owners" type="string" /***REMOVED***
+		<put-attribute name="title" value="Add New Owner" type="string" /***REMOVED***
 		<put-attribute name="content" value="owners/new.content" type="definition" /***REMOVED***
 	</definition***REMOVED***
 
@@ -54,7 +71,7 @@
 		<put-attribute name="main" value="/WEB-INF/owners/searchResults.jsp" type="template" /***REMOVED***
 	</definition***REMOVED***
 	
-	<!-- OWNER DETAIL PAGE --***REMOVED***
+	<!-- DETAIL PAGE --***REMOVED***
 	<definition name="owner" extends="page"***REMOVED***
 		<put-attribute name="title" value="Owner" type="string" /***REMOVED***
 		<put-attribute name="content" value="owner.content" type="definition" /***REMOVED***
@@ -63,5 +80,6 @@
 	<definition name="owner.content" template="/WEB-INF/owners/content.jsp"***REMOVED***
 		<put-attribute name="main" value="/WEB-INF/owners/owner.jsp" type="template" /***REMOVED***
 	</definition***REMOVED***
+	
 	
 </tiles-definitions***REMOVED***
