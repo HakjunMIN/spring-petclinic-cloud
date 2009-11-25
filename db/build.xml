@@ -1,0 +1,85 @@
+<?xml version="1.0"?***REMOVED***
+
+<project name="setupDB" basedir="." default="all"***REMOVED***
+
+	<target name="dropHSQLTables" if="useHSQL"***REMOVED***
+		<echo message="Drop tables using: ${db.driver***REMOVED*** ${db.url***REMOVED***" /***REMOVED***
+		<sql driver="${db.driver***REMOVED***" url="${db.url***REMOVED***" userid="${db.user***REMOVED***" password="${db.pw***REMOVED***" onerror="continue"***REMOVED***
+			<classpath***REMOVED***
+				<fileset dir="${spring.root***REMOVED***/lib"***REMOVED***
+					<include name="hsqldb/hsqldb.jar" /***REMOVED***
+				</fileset***REMOVED***
+			</classpath***REMOVED***
+			<transaction src="${db.dir***REMOVED***/dropTables.txt" /***REMOVED***
+		</sql***REMOVED***
+	</target***REMOVED***
+
+	<target name="createHSQLTables" if="useHSQL"***REMOVED***
+		<echo message="Create tables using: ${db.driver***REMOVED*** ${db.url***REMOVED***" /***REMOVED***
+		<sql driver="${db.driver***REMOVED***" url="${db.url***REMOVED***" userid="${db.user***REMOVED***" password="${db.pw***REMOVED***" onerror="continue"***REMOVED***
+			<classpath***REMOVED***
+				<fileset dir="${spring.root***REMOVED***/lib"***REMOVED***
+					<include name="hsqldb/hsqldb.jar" /***REMOVED***
+				</fileset***REMOVED***
+			</classpath***REMOVED***
+			<transaction src="${db.dir***REMOVED***/hsqldb/initDB.txt" /***REMOVED***
+		</sql***REMOVED***
+	</target***REMOVED***
+
+	<target name="dropMYSQLTables" if="useMYSQL"***REMOVED***
+		<echo message="Dropping tables using: ${db.driver***REMOVED*** ${db.url***REMOVED***" /***REMOVED***
+		<sql driver="${db.driver***REMOVED***" url="${db.url***REMOVED***" userid="${db.user***REMOVED***" password="${db.pw***REMOVED***" onerror="continue"***REMOVED***
+			<classpath***REMOVED***
+				<fileset dir="${db.dir***REMOVED***/mysql"***REMOVED***
+					<include name="mysql*.jar" /***REMOVED***
+				</fileset***REMOVED***
+			</classpath***REMOVED***
+			<transaction src="${db.dir***REMOVED***/dropTables.txt" /***REMOVED***
+		</sql***REMOVED***
+	</target***REMOVED***
+
+	<target name="createMYSQLTables" if="useMYSQL"***REMOVED***
+		<echo message="Creating tables using: ${db.driver***REMOVED*** ${db.url***REMOVED***" /***REMOVED***
+		<sql driver="${db.driver***REMOVED***" url="${db.url***REMOVED***" userid="${db.user***REMOVED***" password="${db.pw***REMOVED***" onerror="continue"***REMOVED***
+			<classpath***REMOVED***
+				<fileset dir="${db.dir***REMOVED***/mysql"***REMOVED***
+					<include name="mysql*.jar" /***REMOVED***
+				</fileset***REMOVED***
+			</classpath***REMOVED***
+			<transaction src="${db.dir***REMOVED***/mysql/initDB.txt" /***REMOVED***
+		</sql***REMOVED***
+	</target***REMOVED***
+
+	<target name="emptyTables"***REMOVED***
+		<echo message="Emptying tables using: ${db.driver***REMOVED*** ${db.url***REMOVED***" /***REMOVED***
+		<sql driver="${db.driver***REMOVED***" url="${db.url***REMOVED***" userid="${db.user***REMOVED***" password="${db.pw***REMOVED***"***REMOVED***
+			<classpath***REMOVED***
+				<fileset dir="${spring.root***REMOVED***/lib"***REMOVED***
+					<include name="hsqldb/hsqldb.jar" /***REMOVED***
+				</fileset***REMOVED***
+				<fileset dir="${db.dir***REMOVED***/mysql"***REMOVED***
+					<include name="mysql*.jar" /***REMOVED***
+				</fileset***REMOVED***
+			</classpath***REMOVED***
+			<transaction src="${db.dir***REMOVED***/emptyDB.txt" /***REMOVED***
+		</sql***REMOVED***
+	</target***REMOVED***
+
+	<target name="populateTables"***REMOVED***
+		<echo message="Populating tables using: ${db.driver***REMOVED*** ${db.url***REMOVED***" /***REMOVED***
+		<sql driver="${db.driver***REMOVED***" url="${db.url***REMOVED***" userid="${db.user***REMOVED***" password="${db.pw***REMOVED***"***REMOVED***
+			<classpath***REMOVED***
+				<fileset dir="${spring.root***REMOVED***/lib"***REMOVED***
+					<include name="hsqldb/hsqldb.jar" /***REMOVED***
+				</fileset***REMOVED***
+				<fileset dir="${db.dir***REMOVED***/mysql"***REMOVED***
+					<include name="mysql*.jar" /***REMOVED***
+				</fileset***REMOVED***
+			</classpath***REMOVED***
+			<transaction src="${db.dir***REMOVED***/populateDB.txt" /***REMOVED***
+		</sql***REMOVED***
+	</target***REMOVED***
+
+	<target name="all" depends="dropHSQLTables,createHSQLTables,dropMYSQLTables,createMYSQLTables,emptyTables,populateTables" /***REMOVED***
+
+</project***REMOVED***

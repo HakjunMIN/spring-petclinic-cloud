@@ -1,0 +1,16 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+		version="1.0"***REMOVED***
+
+	<persistence-unit name="PetClinic" transaction-type="RESOURCE_LOCAL"***REMOVED***
+
+		<!-- Explicitly define mapping file path, else Hibernate won't find the default --***REMOVED***
+		<mapping-file***REMOVED***META-INF/orm.xml</mapping-file***REMOVED***
+
+		<!-- Prevent annotation scanning. In this app we are purely driven by orm.xml --***REMOVED***
+		<exclude-unlisted-classes***REMOVED***true</exclude-unlisted-classes***REMOVED***
+
+	</persistence-unit***REMOVED***
+
+</persistence***REMOVED***

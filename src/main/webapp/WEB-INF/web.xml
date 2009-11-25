@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="ISO-8859-1"?***REMOVED***
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"***REMOVED***
+
+	<display-name***REMOVED***Spring PetClinic</display-name***REMOVED***
+
+	<description***REMOVED***Spring PetClinic sample application</description***REMOVED***
+
+	<!--
+		Key of the system property that should specify the root directory of this
+		web app. Applied by WebAppRootListener or Log4jConfigListener.
+	--***REMOVED***
+	<context-param***REMOVED***
+		<param-name***REMOVED***webAppRootKey</param-name***REMOVED***
+		<param-value***REMOVED***petclinic.root</param-value***REMOVED***
+	</context-param***REMOVED***
+	
+	
+
+	<!--
+		Location of the Log4J config file, for initialization and refresh checks.
+		Applied by Log4jConfigListener.
+	--***REMOVED***
+	<context-param***REMOVED***
+		<param-name***REMOVED***log4jConfigLocation</param-name***REMOVED***
+		<param-value***REMOVED***/WEB-INF/classes/log4j.properties</param-value***REMOVED***
+	</context-param***REMOVED***
+
+	<!--
+		- Location of the XML file that defines the root application context.
+		- Applied by ContextLoaderServlet.
+		-
+		- Can be set to:
+		- "/WEB-INF/applicationContext-hibernate.xml" for the Hibernate implementation,
+		- "/WEB-INF/applicationContext-jpa.xml" for the JPA one, or
+		- "/WEB-INF/applicationContext-jdbc.xml" for the JDBC one.
+	--***REMOVED***
+	<context-param***REMOVED***
+		<param-name***REMOVED***contextConfigLocation</param-name***REMOVED***
+
+		<param-value***REMOVED***/WEB-INF/applicationContext-jdbc.xml</param-value***REMOVED***
+		<!--
+		<param-value***REMOVED***/WEB-INF/applicationContext-hibernate.xml</param-value***REMOVED***
+		<param-value***REMOVED***/WEB-INF/applicationContext-jpa.xml</param-value***REMOVED***
+		--***REMOVED***
+
+		<!--
+			To use the JPA variant above, you will need to enable Spring load-time
+			weaving in your server environment. See PetClinic's readme and/or
+			Spring's JPA documentation for information on how to do this.
+		--***REMOVED***
+	</context-param***REMOVED***
+
+	<!--
+		- Configures Log4J for this web app.
+		- As this context specifies a context-param "log4jConfigLocation", its file path
+		- is used to load the Log4J configuration, including periodic refresh checks.
+		-
+		- Would fall back to default Log4J initialization (non-refreshing) if no special
+		- context-params are given.
+		-
+		- Exports a "web app root key", i.e. a system property that specifies the root
+		- directory of this web app, for usage in log file paths.
+		- This web app specifies "petclinic.root" (see log4j.properties file).
+	--***REMOVED***
+	<!-- Leave the listener commented-out if using JBoss --***REMOVED***
+	<!--
+	<listener***REMOVED***
+		<listener-class***REMOVED***org.springframework.web.util.Log4jConfigListener</listener-class***REMOVED***
+	</listener***REMOVED***
+	--***REMOVED***
+
+	<!--
+		- Loads the root application context of this web app at startup,
+		- by default from "/WEB-INF/applicationContext.xml".
+		- Note that you need to fall back to Spring's ContextLoaderServlet for
+		- J2EE servers that do not follow the Servlet 2.4 initialization order.
+		-
+		- Use WebApplicationContextUtils.getWebApplicationContext(servletContext)
+		- to access it anywhere in the web application, outside of the framework.
+		-
+		- The root context is the parent of all servlet-specific contexts.
+		- This means that its beans are automatically available in these child contexts,
+		- both for getBean(name) calls and (external) bean references.
+	--***REMOVED***
+	<listener***REMOVED***
+		<listener-class***REMOVED***org.springframework.web.context.ContextLoaderListener</listener-class***REMOVED***
+	</listener***REMOVED***
+	
+	<!--
+	 - Map static resources to the default servlet
+	 - examples:
+	 -     http://localhost:8080/static/images/pets.png
+	 -     http://localhost:8080/static/styles/petclinic.css
+	--***REMOVED***
+	<servlet-mapping***REMOVED***
+		<servlet-name***REMOVED***default</servlet-name***REMOVED***
+		<url-pattern***REMOVED***/static/*</url-pattern***REMOVED***
+	</servlet-mapping***REMOVED***
+	
+	<!--
+		- Servlet that dispatches request to registered handlers (Controller implementations).
+		- Has its own application context, by default defined in "{servlet-name***REMOVED***-servlet.xml",
+		- i.e. "petclinic-servlet.xml".
+		-
+		- A web app can contain any number of such servlets.
+		- Note that this web app has a shared root application context, serving as parent
+		- of all DispatcherServlet contexts.
+	--***REMOVED***
+	<servlet***REMOVED***
+		<servlet-name***REMOVED***petclinic</servlet-name***REMOVED***
+		<servlet-class***REMOVED***org.springframework.web.servlet.DispatcherServlet</servlet-class***REMOVED***
+		<load-on-startup***REMOVED***2</load-on-startup***REMOVED***
+	</servlet***REMOVED***
+
+	<!--
+		- Maps the petclinic dispatcher to "*.do". All handler mappings in
+		- petclinic-servlet.xml will by default be applied to this subpath.
+		- If a mapping isn't a /* subpath, the handler mappings are considered
+		- relative to the web app root.
+		-
+		- NOTE: A single dispatcher can be mapped to multiple paths, like any servlet.
+	--***REMOVED***
+	<servlet-mapping***REMOVED***
+		<servlet-name***REMOVED***petclinic</servlet-name***REMOVED***
+		<url-pattern***REMOVED***/</url-pattern***REMOVED***
+	</servlet-mapping***REMOVED***
+
+    <filter***REMOVED***
+        <filter-name***REMOVED***httpMethodFilter</filter-name***REMOVED***
+        <filter-class***REMOVED***org.springframework.web.filter.HiddenHttpMethodFilter</filter-class***REMOVED***
+    </filter***REMOVED***
+
+    <filter-mapping***REMOVED***
+        <filter-name***REMOVED***httpMethodFilter</filter-name***REMOVED***
+        <servlet-name***REMOVED***petclinic</servlet-name***REMOVED***
+    </filter-mapping***REMOVED***
+    
+	<session-config***REMOVED***
+		<session-timeout***REMOVED***10</session-timeout***REMOVED***
+	</session-config***REMOVED***
+
+	<error-page***REMOVED***
+		<exception-type***REMOVED***java.lang.Exception</exception-type***REMOVED***
+		<!-- Displays a stack trace --***REMOVED***
+		<location***REMOVED***/WEB-INF/jsp/uncaughtException.jsp</location***REMOVED***
+	</error-page***REMOVED***
+
+	<!--
+		- Reference to PetClinic database.
+		- Only needed if not using a local DataSource but a JNDI one instead.
+	--***REMOVED***
+	<!--
+	<resource-ref***REMOVED***
+		<res-ref-name***REMOVED***jdbc/petclinic</res-ref-name***REMOVED***
+		<res-type***REMOVED***javax.sql.DataSource</res-type***REMOVED***
+		<res-auth***REMOVED***Container</res-auth***REMOVED***
+	</resource-ref***REMOVED***
+	--***REMOVED***
+	
+</web-app***REMOVED***

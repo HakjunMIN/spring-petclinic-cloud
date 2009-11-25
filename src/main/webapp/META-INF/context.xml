@@ -1,0 +1,7 @@
+<!-- Tomcat context descriptor used for specifying a custom ClassLoader --***REMOVED***
+<Context path="/petclinic" reloadable="false"***REMOVED***
+	<!-- please note that useSystemClassLoaderAsParent is available since Tomcat 5.5.20 / remove if previous versions are being used --***REMOVED***
+	<!--  
+	<Loader loaderClass="org.springframework.instrument.classloading.tomcat.TomcatInstrumentableClassLoader" useSystemClassLoaderAsParent="false"/***REMOVED***
+	--***REMOVED***
+</Context***REMOVED***
