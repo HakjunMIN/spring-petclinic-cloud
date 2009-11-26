@@ -43,7 +43,6 @@
 			<groupId***REMOVED***javax.servlet</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.javax.servlet.jsp.jstl</artifactId***REMOVED***
 			<version***REMOVED***1.2.0</version***REMOVED***
-			<scope***REMOVED***provided</scope***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***javax.xml.bind</groupId***REMOVED***
@@ -70,7 +69,6 @@
 			<groupId***REMOVED***org.apache.taglibs</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.apache.taglibs.standard</artifactId***REMOVED***
 			<version***REMOVED***1.1.2</version***REMOVED***
-			<scope***REMOVED***provided</scope***REMOVED***
 		</dependency***REMOVED***		
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
