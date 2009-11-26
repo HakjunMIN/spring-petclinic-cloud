@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"***REMOVED***
 	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
 	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-	<artifactId***REMOVED***petclinic-classic</artifactId***REMOVED***
-	<name***REMOVED***petclinic-classic</name***REMOVED***
+	<artifactId***REMOVED***petclinic</artifactId***REMOVED***
+	<name***REMOVED***petclinic</name***REMOVED***
 	<packaging***REMOVED***war</packaging***REMOVED***
 	<version***REMOVED***1.0.0-SNAPSHOT</version***REMOVED***
 	<properties***REMOVED***
@@ -102,6 +102,14 @@
 			<artifactId***REMOVED***com.springsource.org.hsqldb</artifactId***REMOVED***
 			<version***REMOVED***1.8.0.9</version***REMOVED***
 		</dependency***REMOVED***
+		<!-- MySQL JDBC Connector --***REMOVED***
+		<!--
+        <dependency***REMOVED***
+            <groupId***REMOVED***com.mysql.jdbc</groupId***REMOVED***
+            <artifactId***REMOVED***com.springsource.com.mysql.jdbc</artifactId***REMOVED***
+            <version***REMOVED***5.1.6</version***REMOVED***
+        </dependency***REMOVED***
+        --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.jdom</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.jdom</artifactId***REMOVED***
@@ -110,6 +118,11 @@
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework</groupId***REMOVED***
 			<artifactId***REMOVED***org.springframework.asm</artifactId***REMOVED***
+			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***org.springframework.aspects</artifactId***REMOVED***
 			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
@@ -156,19 +169,16 @@
             <groupId***REMOVED***org.slf4j</groupId***REMOVED***
             <artifactId***REMOVED***com.springsource.slf4j.org.apache.commons.logging</artifactId***REMOVED***
             <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-            <scope***REMOVED***provided</scope***REMOVED***
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.slf4j</groupId***REMOVED***
             <artifactId***REMOVED***com.springsource.slf4j.api</artifactId***REMOVED***
             <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-            <scope***REMOVED***provided</scope***REMOVED***
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.slf4j</groupId***REMOVED***
             <artifactId***REMOVED***com.springsource.slf4j.log4j</artifactId***REMOVED***
             <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-            <scope***REMOVED***provided</scope***REMOVED***
             <exclusions***REMOVED***
                 <exclusion***REMOVED***
                     <groupId***REMOVED***log4j</groupId***REMOVED***
