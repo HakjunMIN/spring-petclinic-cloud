@@ -13,9 +13,9 @@
 
 	<!-- ========================= RESOURCE DEFINITIONS ========================= --***REMOVED***
 
-    <!-- import the dataSource definition --***REMOVED***
-    <import resource="applicationContext-dataSource.xml"/***REMOVED***
-    
+	<!-- import the dataSource definition --***REMOVED***
+	<import resource="applicationContext-dataSource.xml"/***REMOVED***
+
 	<!--
 		Activates a load-time weaver for the context. Any bean within the context that
 		implements LoadTimeWeaverAware (such as LocalContainerEntityManagerFactoryBean)
@@ -27,7 +27,7 @@
 	<!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) --***REMOVED***
 	<context:property-placeholder location="classpath:jdbc.properties"/***REMOVED***
 
-    <!-- JPA EntityManagerFactory --***REMOVED***
+	<!-- JPA EntityManagerFactory --***REMOVED***
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 			p:dataSource-ref="dataSource"***REMOVED***
 		<property name="jpaVendorAdapter"***REMOVED***
