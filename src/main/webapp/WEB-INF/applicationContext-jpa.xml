@@ -4,17 +4,18 @@
 --***REMOVED***
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
-		xmlns:context="http://www.springframework.org/schema/context" xmlns:jee="http://www.springframework.org/schema/jee"
-		xmlns:tx="http://www.springframework.org/schema/tx"
+		xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
 		xsi:schemaLocation="
 			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
 			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"***REMOVED***
 
 	<!-- ========================= RESOURCE DEFINITIONS ========================= --***REMOVED***
 
+    <!-- import the dataSource definition --***REMOVED***
+    <import resource="applicationContext-dataSource.xml"/***REMOVED***
+    
 	<!--
 		Activates a load-time weaver for the context. Any bean within the context that
 		implements LoadTimeWeaverAware (such as LocalContainerEntityManagerFactoryBean)
@@ -23,34 +24,10 @@
 	<context:load-time-weaver/***REMOVED***
 
 	<!-- Configurer that replaces ${***REMOVED******REMOVED*** placeholders with values from a properties file --***REMOVED***
-	<!-- (in this case, JDBC-related settings for the dataSource definition below) --***REMOVED***
+	<!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) --***REMOVED***
 	<context:property-placeholder location="classpath:jdbc.properties"/***REMOVED***
 
-	<!--
-		Spring FactoryBean that creates a DataSource using Apache Commons DBCP for connection 
-		pooling. See Commons DBCP documentation for the required JAR files.  This factory bean
-		can populate the data source with a schema and data scripts if configured to do so.
-		
-		An alternate factory bean can be created for different connection pool implementations,
-		C3P0 for example.
-	--***REMOVED***
-	<bean id="dataSource" class="org.springframework.samples.petclinic.config.DbcpDataSourceFactory"
-			p:driverClassName="${jdbc.driverClassName***REMOVED***" p:url="${jdbc.url***REMOVED***" 
-			p:username="${jdbc.username***REMOVED***" p:password="${jdbc.password***REMOVED***" p:populate="${jdbc.populate***REMOVED***"
-			p:schemaLocation="${jdbc.schemaLocation***REMOVED***" p:dataLocation="${jdbc.dataLocation***REMOVED***"/***REMOVED***
-
-    <!-- DataSource configuration for Apache Commons DBCP. --***REMOVED***
-    <!--
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
-			p:driverClassName="${jdbc.driverClassName***REMOVED***" p:url="${jdbc.url***REMOVED***" p:username="${jdbc.username***REMOVED***"
-			p:password="${jdbc.password***REMOVED***"/***REMOVED***
-    --***REMOVED***
-	<!-- JNDI DataSource for JEE environments --***REMOVED***
-	<!--
-	<jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/petclinic"/***REMOVED***
-	--***REMOVED***
-
-	<!-- JPA EntityManagerFactory --***REMOVED***
+    <!-- JPA EntityManagerFactory --***REMOVED***
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 			p:dataSource-ref="dataSource"***REMOVED***
 		<property name="jpaVendorAdapter"***REMOVED***

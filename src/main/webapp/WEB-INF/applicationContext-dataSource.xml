@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<!--
+	Application context definition for PetClinic Datasource.
+--***REMOVED***
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:context="http://www.springframework.org/schema/context" 
+		xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd"***REMOVED***
+				
+    <!-- ========================= DATASOURCE DEFINITION ========================= --***REMOVED***				
+    
+	<!-- Configurer that replaces ${***REMOVED******REMOVED*** placeholders with values from a properties file --***REMOVED***
+	<!-- (in this case, JDBC-related settings for the dataSource definition below) --***REMOVED***
+	<context:property-placeholder location="classpath:jdbc.properties"/***REMOVED***
+
+    <!-- DataSource configuration for Apache Commons DBCP. --***REMOVED***
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
+			p:driverClassName="${jdbc.driverClassName***REMOVED***" p:url="${jdbc.url***REMOVED***"
+			p:username="${jdbc.username***REMOVED***" p:password="${jdbc.password***REMOVED***"/***REMOVED***
+	
+	<!-- JNDI DataSource for JEE environments --***REMOVED***
+	<!--
+	<jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/petclinic"/***REMOVED***
+	--***REMOVED***
+
+	<!-- Database initializer. If any of the script fails, the initialization stops. --***REMOVED***
+	<!-- As an alternative, for embedded databases see <jdbc:embedded-database/***REMOVED***. --***REMOVED***
+    <jdbc:initialize-database data-source="dataSource"***REMOVED***
+        <jdbc:script location="${jdbc.initLocation***REMOVED***"/***REMOVED***
+        <jdbc:script location="${jdbc.dataLocation***REMOVED***"/***REMOVED***
+    </jdbc:initialize-database***REMOVED***
+
+</beans***REMOVED***    
