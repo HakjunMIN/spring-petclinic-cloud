@@ -3,6 +3,54 @@
 <Context path="/petclinic" docBase="petclinic" debug="4" reloadable="true"***REMOVED***
   <Logger className="org.apache.catalina.logger.FileLogger" prefix="localhost_petclinic_log." suffix=".txt" timestamp="true"/***REMOVED***
 
+  <!-- Define a database connection pool for HSQL --***REMOVED***
+  <!-- NOTE: make sure that a copy of hsqldb.jar is in the TOMCAT common/lib directory --***REMOVED***
+  <Resource name="jdbc/petclinicHSQL" auth="Container" type="javax.sql.DataSource"/***REMOVED***
+  <ResourceParams name="jdbc/petclinicHSQL"***REMOVED***
+    <parameter***REMOVED***
+      <name***REMOVED***factory</name***REMOVED***
+      <value***REMOVED***org.apache.commons.dbcp.BasicDataSourceFactory</value***REMOVED***
+    </parameter***REMOVED***
+    
+    <parameter***REMOVED***
+      <name***REMOVED***driverClassName</name***REMOVED***
+      <value***REMOVED***org.hsqldb.jdbcDriver</value***REMOVED***
+    </parameter***REMOVED***
+    <parameter***REMOVED***
+      <name***REMOVED***url</name***REMOVED***
+      <value***REMOVED***jdbc:hsqldb:hsql://localhost:9001</value***REMOVED***
+    </parameter***REMOVED***
+    <parameter***REMOVED***
+      <name***REMOVED***username</name***REMOVED***
+      <value***REMOVED***sa</value***REMOVED***
+    </parameter***REMOVED***
+    
+    <parameter***REMOVED***
+      <name***REMOVED***maxActive</name***REMOVED***
+      <value***REMOVED***50</value***REMOVED***
+    </parameter***REMOVED***
+    <parameter***REMOVED***
+      <name***REMOVED***maxIdle</name***REMOVED***
+      <value***REMOVED***10</value***REMOVED***
+    </parameter***REMOVED***
+    <parameter***REMOVED***
+      <name***REMOVED***maxWait</name***REMOVED***
+      <value***REMOVED***10000</value***REMOVED***
+    </parameter***REMOVED***
+    <parameter***REMOVED***
+      <name***REMOVED***removeAbandoned</name***REMOVED***
+      <value***REMOVED***true</value***REMOVED***
+    </parameter***REMOVED***
+    <parameter***REMOVED***
+      <name***REMOVED***removeAbandonedTimeout</name***REMOVED***
+      <value***REMOVED***60</value***REMOVED***
+    </parameter***REMOVED***
+    <parameter***REMOVED***
+      <name***REMOVED***logAbandoned</name***REMOVED***
+      <value***REMOVED***true</value***REMOVED***
+    </parameter***REMOVED***
+  </ResourceParams***REMOVED***
+
   <!-- Define a database connection pool for MYSQL --***REMOVED***
   <Resource name="jdbc/petclinicMYSQL" auth="Container" type="javax.sql.DataSource"/***REMOVED***
   <ResourceParams name="jdbc/petclinicMYSQL"***REMOVED***
