@@ -12,6 +12,9 @@
 
 	<!-- ========================= RESOURCE DEFINITIONS ========================= --***REMOVED***
 
+    <!-- import the dataSource definition --***REMOVED***
+    <import resource="applicationContext-dataSource.xml"/***REMOVED***
+
 	<!-- Configurer that replaces ${***REMOVED******REMOVED*** placeholders with values from a properties file --***REMOVED***
 	<!-- (in this case, Hibernate-related settings for the sessionFactory definition below) --***REMOVED***
 	<context:property-placeholder location="classpath:jdbc.properties"/***REMOVED***
