@@ -8,7 +8,7 @@
 	<packaging***REMOVED***war</packaging***REMOVED***
 	<version***REMOVED***1.0.0-SNAPSHOT</version***REMOVED***
 	<properties***REMOVED***
-		<spring.version***REMOVED***3.0.0.RC2</spring.version***REMOVED***
+		<spring.version***REMOVED***3.0.0.RC3</spring.version***REMOVED***
 		<slf4j.version***REMOVED***1.5.6</slf4j.version***REMOVED***
 	</properties***REMOVED***
 	<dependencies***REMOVED***
@@ -73,12 +73,24 @@
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.aspectj.weaver</artifactId***REMOVED***
-			<version***REMOVED***1.6.3.RELEASE</version***REMOVED***
+			<version***REMOVED***1.6.5.RELEASE</version***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
-			<artifactId***REMOVED***com.springsource.org.hibernate</artifactId***REMOVED***
-			<version***REMOVED***3.3.1.GA</version***REMOVED***
+			<artifactId***REMOVED***hibernate</artifactId***REMOVED***
+			<version***REMOVED***3.2.7.ga</version***REMOVED***
+            <exclusions***REMOVED***
+                <exclusion***REMOVED***
+                    <groupId***REMOVED***javax.transaction</groupId***REMOVED***
+                    <artifactId***REMOVED***jta</artifactId***REMOVED***
+                </exclusion***REMOVED***
+                <!--
+                <exclusion***REMOVED***
+                    <groupId***REMOVED***org.apache.log4j</groupId***REMOVED***
+                    <artifactId***REMOVED***com.springsource.org.apache.log4j</artifactId***REMOVED***
+                </exclusion***REMOVED***
+                --***REMOVED***
+            </exclusions***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
@@ -222,8 +234,10 @@
 				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
 				<artifactId***REMOVED***maven-compiler-plugin</artifactId***REMOVED***
 				<configuration***REMOVED***
+                    <verbose***REMOVED***true</verbose***REMOVED***
 					<source***REMOVED***1.5</source***REMOVED***
 					<target***REMOVED***1.5</target***REMOVED***
+					<showWarnings***REMOVED***true</showWarnings***REMOVED***
 				</configuration***REMOVED***
 			</plugin***REMOVED***
 			<plugin***REMOVED***

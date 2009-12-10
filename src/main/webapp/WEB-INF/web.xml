@@ -37,9 +37,8 @@
 	--***REMOVED***
 	<context-param***REMOVED***
 		<param-name***REMOVED***contextConfigLocation</param-name***REMOVED***
-
 		<param-value***REMOVED***/WEB-INF/applicationContext-jdbc.xml</param-value***REMOVED***
-		<!--
+        <!--
 		<param-value***REMOVED***/WEB-INF/applicationContext-hibernate.xml</param-value***REMOVED***
 		<param-value***REMOVED***/WEB-INF/applicationContext-jpa.xml</param-value***REMOVED***
 		--***REMOVED***
@@ -87,6 +86,26 @@
 		<listener-class***REMOVED***org.springframework.web.context.ContextLoaderListener</listener-class***REMOVED***
 	</listener***REMOVED***
 	
+	<!--
+		Defines the 'default' servlet (usually for service static resources).
+		Uncomment this in containers (GlassFish) that do not declare this 
+		implicit definition out of the box, or change the name of the servlet mapping 
+		below to the appropriate one.
+		
+	<servlet***REMOVED***
+		<servlet-name***REMOVED***default</servlet-name***REMOVED***
+		<servlet-class***REMOVED***org.apache.catalina.servlets.DefaultServlet</servlet-class***REMOVED***
+		<init-param***REMOVED***
+			<param-name***REMOVED***debug</param-name***REMOVED***
+			<param-value***REMOVED***0</param-value***REMOVED***
+		</init-param***REMOVED***
+		<init-param***REMOVED***
+			<param-name***REMOVED***listings</param-name***REMOVED***
+			<param-value***REMOVED***false</param-value***REMOVED***
+		</init-param***REMOVED***
+		<load-on-startup***REMOVED***1</load-on-startup***REMOVED***
+	</servlet***REMOVED***
+	--***REMOVED***
 	<!--
 	 - Map static resources to the default servlet
 	 - examples:
