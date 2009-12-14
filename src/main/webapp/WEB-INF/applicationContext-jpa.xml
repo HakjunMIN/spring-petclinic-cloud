@@ -42,6 +42,7 @@
 					p:database="${jpa.database***REMOVED***" p:showSql="${jpa.showSql***REMOVED***"/***REMOVED***
 			--***REMOVED***
 		</property***REMOVED***
+		<property name="persistenceXmlLocation" value="classpath:META-INF/jpa-persistence.xml"/***REMOVED***
 	</bean***REMOVED***
 
 	<!-- Transaction manager for a single JPA EntityManagerFactory (alternative to JTA) --***REMOVED***
@@ -62,8 +63,10 @@
 	<!--
 		Instruct Spring to perform declarative transaction management
 		automatically on annotated classes.
+		
+		for mode="aspectj"/ see SPR-6392
 	--***REMOVED***
-	<tx:annotation-driven mode="aspectj"/***REMOVED***
+	<tx:annotation-driven/***REMOVED***
 
 	<!--
 		Simply defining this bean will cause requests to owner names to be saved.
