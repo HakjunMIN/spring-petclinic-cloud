@@ -26,7 +26,7 @@
 			<groupId***REMOVED***javax.persistence</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.javax.persistence</artifactId***REMOVED***
 			<version***REMOVED***1.0.0</version***REMOVED***
-		</dependency***REMOVED***
+		</dependency***REMOVED***	
 		<dependency***REMOVED***
 			<groupId***REMOVED***javax.servlet</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.javax.servlet</artifactId***REMOVED***
@@ -146,6 +146,12 @@
 			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
             <scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***
+		<dependency***REMOVED***
+ 		   <groupId***REMOVED***javax.transaction</groupId***REMOVED***
+ 		   <artifactId***REMOVED***com.springsource.javax.transaction</artifactId***REMOVED***
+		    <version***REMOVED***1.1.0</version***REMOVED***
+		    <scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***		
 	</dependencies***REMOVED***
 	<repositories***REMOVED***
 		<repository***REMOVED***
