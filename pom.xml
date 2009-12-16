@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"***REMOVED***
 	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
 	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-	<artifactId***REMOVED***petclinic</artifactId***REMOVED***
+	<artifactId***REMOVED***org.springframework.samples.petclinic</artifactId***REMOVED***
 	<name***REMOVED***petclinic</name***REMOVED***
 	<packaging***REMOVED***war</packaging***REMOVED***
 	<version***REMOVED***1.0.0-SNAPSHOT</version***REMOVED***
 	<properties***REMOVED***
-		<spring.version***REMOVED***3.0.0.RC3</spring.version***REMOVED***
+		<spring.version***REMOVED***3.0.0.RELEASE</spring.version***REMOVED***
 		<slf4j.version***REMOVED***1.5.6</slf4j.version***REMOVED***
 	</properties***REMOVED***
 	<dependencies***REMOVED***
@@ -77,20 +77,8 @@
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
-			<artifactId***REMOVED***hibernate</artifactId***REMOVED***
-			<version***REMOVED***3.2.7.ga</version***REMOVED***
-            <exclusions***REMOVED***
-                <exclusion***REMOVED***
-                    <groupId***REMOVED***javax.transaction</groupId***REMOVED***
-                    <artifactId***REMOVED***jta</artifactId***REMOVED***
-                </exclusion***REMOVED***
-                <!--
-                <exclusion***REMOVED***
-                    <groupId***REMOVED***org.apache.log4j</groupId***REMOVED***
-                    <artifactId***REMOVED***com.springsource.org.apache.log4j</artifactId***REMOVED***
-                </exclusion***REMOVED***
-                --***REMOVED***
-            </exclusions***REMOVED***
+			<artifactId***REMOVED***com.springsource.org.hibernate</artifactId***REMOVED***
+			<version***REMOVED***3.3.2.GA</version***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
@@ -111,16 +99,6 @@
         </dependency***REMOVED***
         --***REMOVED***
 		<dependency***REMOVED***
-			<groupId***REMOVED***org.jdom</groupId***REMOVED***
-			<artifactId***REMOVED***com.springsource.org.jdom</artifactId***REMOVED***
-			<version***REMOVED***1.0.0</version***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework</groupId***REMOVED***
-			<artifactId***REMOVED***org.springframework.asm</artifactId***REMOVED***
-			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework</groupId***REMOVED***
 			<artifactId***REMOVED***org.springframework.aspects</artifactId***REMOVED***
 			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
@@ -140,31 +118,6 @@
 			<artifactId***REMOVED***org.springframework.web.servlet</artifactId***REMOVED***
 			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
-		<!-- Test dependencies --***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.junit</groupId***REMOVED***
-			<artifactId***REMOVED***com.springsource.org.junit</artifactId***REMOVED***
-			<version***REMOVED***4.5.0</version***REMOVED***
-			<scope***REMOVED***test</scope***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework</groupId***REMOVED***
-			<artifactId***REMOVED***org.springframework.test</artifactId***REMOVED***
-			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
-            <scope***REMOVED***test</scope***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***javax.transaction</groupId***REMOVED***
-			<artifactId***REMOVED***com.springsource.javax.transaction</artifactId***REMOVED***
-			<version***REMOVED***1.1.0</version***REMOVED***
-            <scope***REMOVED***test</scope***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
-			<artifactId***REMOVED***com.springsource.org.hibernate.annotations</artifactId***REMOVED***
-			<version***REMOVED***3.4.0.GA</version***REMOVED***
-			<scope***REMOVED***test</scope***REMOVED***
-		</dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.slf4j</groupId***REMOVED***
             <artifactId***REMOVED***com.springsource.slf4j.org.apache.commons.logging</artifactId***REMOVED***
@@ -179,17 +132,20 @@
             <groupId***REMOVED***org.slf4j</groupId***REMOVED***
             <artifactId***REMOVED***com.springsource.slf4j.log4j</artifactId***REMOVED***
             <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-            <exclusions***REMOVED***
-                <exclusion***REMOVED***
-                    <groupId***REMOVED***log4j</groupId***REMOVED***
-                    <artifactId***REMOVED***log4j</artifactId***REMOVED***
-                </exclusion***REMOVED***
-                <exclusion***REMOVED***
-                    <groupId***REMOVED***org.apache.log4j</groupId***REMOVED***
-                    <artifactId***REMOVED***com.springsource.org.apache.log4j</artifactId***REMOVED***
-                </exclusion***REMOVED***
-            </exclusions***REMOVED***
         </dependency***REMOVED***
+		<!-- Test dependencies --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.junit</groupId***REMOVED***
+			<artifactId***REMOVED***com.springsource.org.junit</artifactId***REMOVED***
+			<version***REMOVED***4.5.0</version***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***org.springframework.test</artifactId***REMOVED***
+			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
 	</dependencies***REMOVED***
 	<repositories***REMOVED***
 		<repository***REMOVED***
@@ -198,35 +154,20 @@
 			<url***REMOVED***http://repository.springsource.com/maven/bundles/release</url***REMOVED***
 		</repository***REMOVED***
 		<repository***REMOVED***
-			<id***REMOVED***com.springsource.repository.bundles.milestone</id***REMOVED***
-			<name***REMOVED***SpringSource Enterprise Bundle Repository - SpringSource Milestones</name***REMOVED***
-			<url***REMOVED***http://repository.springsource.com/maven/bundles/milestone</url***REMOVED***
-		</repository***REMOVED***
-		<repository***REMOVED***
 			<id***REMOVED***com.springsource.repository.bundles.external</id***REMOVED***
 			<name***REMOVED***SpringSource Enterprise Bundle Repository - External Releases</name***REMOVED***
 			<url***REMOVED***http://repository.springsource.com/maven/bundles/external</url***REMOVED***
+		</repository***REMOVED***
+		<repository***REMOVED***
+			<id***REMOVED***com.springsource.repository.bundles.milestone</id***REMOVED***
+			<name***REMOVED***SpringSource Enterprise Bundle Repository - SpringSource Milestones</name***REMOVED***
+			<url***REMOVED***http://repository.springsource.com/maven/bundles/milestone</url***REMOVED***
 		</repository***REMOVED***
 		<repository***REMOVED***
 			<id***REMOVED***com.springsource.repository.bundles.snapshot</id***REMOVED***
 			<name***REMOVED***SpringSource Enterprise Bundle Repository - Snapshot Releases</name***REMOVED***
 			<url***REMOVED***http://repository.springsource.com/maven/bundles/snapshot</url***REMOVED***
 		</repository***REMOVED***
-        <repository***REMOVED***
-            <id***REMOVED***spring-release</id***REMOVED***
-            <name***REMOVED***Spring Portfolio Release Repository</name***REMOVED***
-            <url***REMOVED***http://maven.springframework.org/release</url***REMOVED***
-        </repository***REMOVED***
-        <repository***REMOVED***
-            <id***REMOVED***spring-external</id***REMOVED***
-            <name***REMOVED***Spring Portfolio External Repository</name***REMOVED***
-            <url***REMOVED***http://maven.springframework.org/external</url***REMOVED***
-        </repository***REMOVED***
-        <repository***REMOVED***
-            <id***REMOVED***spring-milestone</id***REMOVED***
-            <name***REMOVED***Spring Portfolio Milestone Repository</name***REMOVED***
-            <url***REMOVED***http://maven.springframework.org/milestone</url***REMOVED***
-        </repository***REMOVED***
 	</repositories***REMOVED***
 	<build***REMOVED***
 		<plugins***REMOVED***
