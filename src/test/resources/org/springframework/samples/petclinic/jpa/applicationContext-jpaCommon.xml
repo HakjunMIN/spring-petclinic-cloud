@@ -14,17 +14,10 @@
 
 	<tx:annotation-driven /***REMOVED***
 
-	<!-- DataSource configuration for Apache Commons DBCP. --***REMOVED***
-	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
-			p:driverClassName="${jdbc.driverClassName***REMOVED***" p:url="${jdbc.url***REMOVED***"
-			p:username="${jdbc.username***REMOVED***" p:password="${jdbc.password***REMOVED***"/***REMOVED***
-	
-	<!-- Database initializer. If any of the script fails, the initialization stops. --***REMOVED***
-	<!-- As an alternative, for embedded databases see <jdbc:embedded-database/***REMOVED***. --***REMOVED***
-	<jdbc:initialize-database data-source="dataSource"***REMOVED***
+	<jdbc:embedded-database id="dataSource"***REMOVED***
 		<jdbc:script location="${jdbc.initLocation***REMOVED***"/***REMOVED***
 		<jdbc:script location="${jdbc.dataLocation***REMOVED***"/***REMOVED***
-	</jdbc:initialize-database***REMOVED***
+	</jdbc:embedded-database***REMOVED***
 	
 	<!-- Note: the specific "jpaAdapter" bean sits in adapter context file --***REMOVED***
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
