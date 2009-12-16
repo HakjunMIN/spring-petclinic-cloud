@@ -151,6 +151,12 @@
  		   <artifactId***REMOVED***com.springsource.javax.transaction</artifactId***REMOVED***
 		    <version***REMOVED***1.1.0</version***REMOVED***
 		    <scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+		    <groupId***REMOVED***org.hibernate</groupId***REMOVED***
+    		<artifactId***REMOVED***com.springsource.org.hibernate.annotations</artifactId***REMOVED***
+    		<version***REMOVED***3.4.0.GA</version***REMOVED***
+    		<scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***		
 	</dependencies***REMOVED***
 	<repositories***REMOVED***
