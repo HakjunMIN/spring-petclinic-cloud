@@ -19,23 +19,13 @@
 			<artifactId***REMOVED***org.springframework.context</artifactId***REMOVED***
 			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
 			<exclusions***REMOVED***
-				<!-- Exclude Commons Logging in favor of SLF4j (see 'Logging' Dependency Config below) --***REMOVED***
+				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
 				<exclusion***REMOVED***
 					<groupId***REMOVED***org.apache.commons.logging</groupId***REMOVED***
 					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
 		         </exclusion***REMOVED***
-			</exclusions***REMOVED***
+			</exclusions***REMOVED***			
 		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework</groupId***REMOVED***
-			<artifactId***REMOVED***org.springframework.aspects</artifactId***REMOVED***
-			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
-			<artifactId***REMOVED***com.springsource.org.aspectj.weaver</artifactId***REMOVED***
-			<version***REMOVED***1.6.5.RELEASE</version***REMOVED***
-		</dependency***REMOVED***		
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework</groupId***REMOVED***
 			<artifactId***REMOVED***org.springframework.orm</artifactId***REMOVED***
@@ -52,6 +42,20 @@
 			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 		
+		<!-- AspectJ --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
+			<artifactId***REMOVED***com.springsource.org.aspectj.weaver</artifactId***REMOVED***
+			<version***REMOVED***1.6.5.RELEASE</version***REMOVED***
+			<scope***REMOVED***optional</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***org.springframework.aspects</artifactId***REMOVED***
+			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***optional</scope***REMOVED***
+		</dependency***REMOVED***
+				
 		<!-- Logging --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.slf4j</groupId***REMOVED***
@@ -102,6 +106,7 @@
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.hibernate</artifactId***REMOVED***
 			<version***REMOVED***3.3.2.GA</version***REMOVED***
+			<scope***REMOVED***optional</scope***REMOVED***
 		</dependency***REMOVED***
 		
 		<!-- JPA --***REMOVED***
@@ -109,26 +114,56 @@
 			<groupId***REMOVED***javax.persistence</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.javax.persistence</artifactId***REMOVED***
 			<version***REMOVED***1.0.0</version***REMOVED***
+			<scope***REMOVED***optional</scope***REMOVED***
 		</dependency***REMOVED***
 		<!-- Toplink JPA Provider --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***com.oracle.toplink.essentials</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.oracle.toplink.essentials</artifactId***REMOVED***
 			<version***REMOVED***2.0.0.b41-beta2</version***REMOVED***
+			<scope***REMOVED***optional</scope***REMOVED***
 		</dependency***REMOVED***
 		<!-- Hibernate JPA Provider --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.hibernate.ejb</artifactId***REMOVED***
 			<version***REMOVED***3.4.0.GA</version***REMOVED***
-			<scope***REMOVED***runtime</scope***REMOVED***
+			<scope***REMOVED***optional</scope***REMOVED***
+			<exclusions***REMOVED***
+				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
+				<exclusion***REMOVED***
+					<groupId***REMOVED***org.apache.commons.logging</groupId***REMOVED***
+					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
+		         </exclusion***REMOVED***
+			</exclusions***REMOVED***			
 		</dependency***REMOVED***
+		<dependency***REMOVED***
+		    <groupId***REMOVED***org.hibernate</groupId***REMOVED***
+    		<artifactId***REMOVED***com.springsource.org.hibernate.annotations</artifactId***REMOVED***
+    		<version***REMOVED***3.4.0.GA</version***REMOVED***
+    		<scope***REMOVED***optional</scope***REMOVED***
+			<exclusions***REMOVED***
+				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
+				<exclusion***REMOVED***
+					<groupId***REMOVED***org.apache.commons.logging</groupId***REMOVED***
+					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
+		         </exclusion***REMOVED***
+			</exclusions***REMOVED***
+		</dependency***REMOVED***
+				
 		<!-- Open JPA Provider --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.apache.openjpa</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.apache.openjpa</artifactId***REMOVED***
 			<version***REMOVED***1.1.0</version***REMOVED***
-			<scope***REMOVED***runtime</scope***REMOVED***
+			<scope***REMOVED***optional</scope***REMOVED***
+			<exclusions***REMOVED***
+				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
+				<exclusion***REMOVED***
+					<groupId***REMOVED***org.apache.commons.logging</groupId***REMOVED***
+					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
+		         </exclusion***REMOVED***
+			</exclusions***REMOVED***			
 		</dependency***REMOVED***
 
 		<!-- Servlet --***REMOVED***
@@ -188,13 +223,7 @@
 		    <version***REMOVED***1.1.0</version***REMOVED***
 		    <scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***
-		<dependency***REMOVED***
-		    <groupId***REMOVED***org.hibernate</groupId***REMOVED***
-    		<artifactId***REMOVED***com.springsource.org.hibernate.annotations</artifactId***REMOVED***
-    		<version***REMOVED***3.4.0.GA</version***REMOVED***
-    		<scope***REMOVED***test</scope***REMOVED***
-		</dependency***REMOVED***
-		
+
 	</dependencies***REMOVED***
 	<repositories***REMOVED***
 		<repository***REMOVED***
