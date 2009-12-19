@@ -48,11 +48,6 @@
 			<artifactId***REMOVED***com.springsource.org.aspectj.weaver</artifactId***REMOVED***
 			<version***REMOVED***1.6.5.RELEASE</version***REMOVED***
 		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework</groupId***REMOVED***
-			<artifactId***REMOVED***org.springframework.aspects</artifactId***REMOVED***
-			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
-		</dependency***REMOVED***
 				
 		<!-- Logging --***REMOVED***
         <dependency***REMOVED***
@@ -115,7 +110,7 @@
 			<artifactId***REMOVED***com.springsource.javax.persistence</artifactId***REMOVED***
 			<version***REMOVED***1.0.0</version***REMOVED***
 			<optional***REMOVED***true</optional***REMOVED***			
-		</dependency***REMOVED***
+		</dependency***REMOVED***	
 		<!-- Toplink JPA Provider --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***com.oracle.toplink.essentials</groupId***REMOVED***
