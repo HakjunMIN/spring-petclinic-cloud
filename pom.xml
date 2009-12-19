@@ -86,11 +86,13 @@
 			<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.apache.commons.dbcp</artifactId***REMOVED***
 			<version***REMOVED***1.2.2.osgi</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***			
 		</dependency***REMOVED***		
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.hsqldb</artifactId***REMOVED***
 			<version***REMOVED***1.8.0.9</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
 		<!-- MySQL JDBC Connector --***REMOVED***
 		<!--
@@ -114,6 +116,7 @@
 			<groupId***REMOVED***javax.persistence</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.javax.persistence</artifactId***REMOVED***
 			<version***REMOVED***1.0.0</version***REMOVED***
+			<optional***REMOVED***true</optional***REMOVED***			
 		</dependency***REMOVED***
 		<!-- Toplink JPA Provider --***REMOVED***
 		<dependency***REMOVED***
