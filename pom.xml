@@ -21,7 +21,7 @@
 			<exclusions***REMOVED***
 				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
 				<exclusion***REMOVED***
-					<groupId***REMOVED***org.apache.commons.logging</groupId***REMOVED***
+					<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
 					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
 		         </exclusion***REMOVED***
 			</exclusions***REMOVED***			
@@ -134,7 +134,7 @@
 			<exclusions***REMOVED***
 				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
 				<exclusion***REMOVED***
-					<groupId***REMOVED***org.apache.commons.logging</groupId***REMOVED***
+					<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
 					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
 		         </exclusion***REMOVED***
 			</exclusions***REMOVED***			
@@ -147,12 +147,11 @@
 			<exclusions***REMOVED***
 				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
 				<exclusion***REMOVED***
-					<groupId***REMOVED***org.apache.commons.logging</groupId***REMOVED***
+					<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
 					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
 		         </exclusion***REMOVED***
 			</exclusions***REMOVED***
-		</dependency***REMOVED***		
-				
+		</dependency***REMOVED***
 		<!-- Open JPA Provider --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.apache.openjpa</groupId***REMOVED***
@@ -162,7 +161,7 @@
 			<exclusions***REMOVED***
 				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
 				<exclusion***REMOVED***
-					<groupId***REMOVED***org.apache.commons.logging</groupId***REMOVED***
+					<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
 					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
 		         </exclusion***REMOVED***
 			</exclusions***REMOVED***			
