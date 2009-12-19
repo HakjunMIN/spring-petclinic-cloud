@@ -188,6 +188,13 @@
 			<artifactId***REMOVED***com.springsource.com.sun.syndication</artifactId***REMOVED***
 			<version***REMOVED***1.0.0</version***REMOVED***
 		</dependency***REMOVED***
+		<dependency***REMOVED***
+    		<groupId***REMOVED***org.jdom</groupId***REMOVED***
+    		<artifactId***REMOVED***com.springsource.org.jdom</artifactId***REMOVED***
+    		<version***REMOVED***1.1.0</version***REMOVED***
+    		<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+				
 		<!-- JAXB --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***javax.xml.bind</groupId***REMOVED***
