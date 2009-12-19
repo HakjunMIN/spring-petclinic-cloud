@@ -12,7 +12,7 @@
 		<slf4j.version***REMOVED***1.5.10</slf4j.version***REMOVED***
 	</properties***REMOVED***
 	<dependencies***REMOVED***
-	
+
 		<!-- Spring --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework</groupId***REMOVED***
@@ -23,8 +23,8 @@
 				<exclusion***REMOVED***
 					<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
 					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
-		         </exclusion***REMOVED***
-			</exclusions***REMOVED***			
+				</exclusion***REMOVED***
+			</exclusions***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework</groupId***REMOVED***
@@ -41,32 +41,32 @@
 			<artifactId***REMOVED***org.springframework.web.servlet</artifactId***REMOVED***
 			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
-		
+
 		<!-- AspectJ --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.aspectj.weaver</artifactId***REMOVED***
 			<version***REMOVED***1.6.5.RELEASE</version***REMOVED***
 		</dependency***REMOVED***
-				
+
 		<!-- Logging --***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.slf4j</groupId***REMOVED***
-            <artifactId***REMOVED***com.springsource.slf4j.api</artifactId***REMOVED***
-            <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-        </dependency***REMOVED***		
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.slf4j</groupId***REMOVED***
-            <artifactId***REMOVED***com.springsource.slf4j.org.apache.commons.logging</artifactId***REMOVED***
-            <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
- 			<scope***REMOVED***runtime</scope***REMOVED***           
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.slf4j</groupId***REMOVED***
-            <artifactId***REMOVED***com.springsource.slf4j.log4j</artifactId***REMOVED***
-            <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-			<scope***REMOVED***runtime</scope***REMOVED***           
-        </dependency***REMOVED***		
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.slf4j</groupId***REMOVED***
+			<artifactId***REMOVED***com.springsource.slf4j.api</artifactId***REMOVED***
+			<version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.slf4j</groupId***REMOVED***
+			<artifactId***REMOVED***com.springsource.slf4j.org.apache.commons.logging</artifactId***REMOVED***
+			<version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.slf4j</groupId***REMOVED***
+			<artifactId***REMOVED***com.springsource.slf4j.log4j</artifactId***REMOVED***
+			<version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.apache.log4j</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.apache.log4j</artifactId***REMOVED***
@@ -79,8 +79,8 @@
 			<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.apache.commons.dbcp</artifactId***REMOVED***
 			<version***REMOVED***1.2.2.osgi</version***REMOVED***
-			<scope***REMOVED***runtime</scope***REMOVED***			
-		</dependency***REMOVED***		
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.hsqldb</artifactId***REMOVED***
@@ -89,13 +89,11 @@
 		</dependency***REMOVED***
 		<!-- MySQL JDBC Connector --***REMOVED***
 		<!--
-        <dependency***REMOVED***
-            <groupId***REMOVED***com.mysql.jdbc</groupId***REMOVED***
-            <artifactId***REMOVED***com.springsource.com.mysql.jdbc</artifactId***REMOVED***
-            <version***REMOVED***5.1.6</version***REMOVED***
-        </dependency***REMOVED***
-        --***REMOVED***
-        		
+			<dependency***REMOVED*** <groupId***REMOVED***com.mysql.jdbc</groupId***REMOVED***
+			<artifactId***REMOVED***com.springsource.com.mysql.jdbc</artifactId***REMOVED***
+			<version***REMOVED***5.1.6</version***REMOVED*** </dependency***REMOVED***
+		--***REMOVED***
+
 		<!-- Hibernate --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
@@ -103,20 +101,20 @@
 			<version***REMOVED***3.3.2.GA</version***REMOVED***
 			<optional***REMOVED***true</optional***REMOVED***
 		</dependency***REMOVED***
-		
+
 		<!-- JPA --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***javax.persistence</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.javax.persistence</artifactId***REMOVED***
 			<version***REMOVED***1.0.0</version***REMOVED***
-			<optional***REMOVED***true</optional***REMOVED***			
-		</dependency***REMOVED***	
+			<optional***REMOVED***true</optional***REMOVED***
+		</dependency***REMOVED***
 		<!-- Toplink JPA Provider --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***com.oracle.toplink.essentials</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.oracle.toplink.essentials</artifactId***REMOVED***
 			<version***REMOVED***2.0.0.b41-beta2</version***REMOVED***
-			<optional***REMOVED***true</optional***REMOVED***			
+			<optional***REMOVED***true</optional***REMOVED***
 		</dependency***REMOVED***
 		<!-- Hibernate JPA Provider --***REMOVED***
 		<dependency***REMOVED***
@@ -129,20 +127,20 @@
 				<exclusion***REMOVED***
 					<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
 					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
-		         </exclusion***REMOVED***
-			</exclusions***REMOVED***			
+				</exclusion***REMOVED***
+			</exclusions***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
-		    <groupId***REMOVED***org.hibernate</groupId***REMOVED***
-    		<artifactId***REMOVED***com.springsource.org.hibernate.annotations</artifactId***REMOVED***
-    		<version***REMOVED***3.4.0.GA</version***REMOVED***
+			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
+			<artifactId***REMOVED***com.springsource.org.hibernate.annotations</artifactId***REMOVED***
+			<version***REMOVED***3.4.0.GA</version***REMOVED***
 			<optional***REMOVED***true</optional***REMOVED***
 			<exclusions***REMOVED***
 				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
 				<exclusion***REMOVED***
 					<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
 					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
-		         </exclusion***REMOVED***
+				</exclusion***REMOVED***
 			</exclusions***REMOVED***
 		</dependency***REMOVED***
 		<!-- Open JPA Provider --***REMOVED***
@@ -156,8 +154,8 @@
 				<exclusion***REMOVED***
 					<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
 					<artifactId***REMOVED***com.springsource.org.apache.commons.logging</artifactId***REMOVED***
-		         </exclusion***REMOVED***
-			</exclusions***REMOVED***			
+				</exclusion***REMOVED***
+			</exclusions***REMOVED***
 		</dependency***REMOVED***
 
 		<!-- Servlet --***REMOVED***
@@ -182,7 +180,7 @@
 			<groupId***REMOVED***org.apache.taglibs</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.apache.taglibs.standard</artifactId***REMOVED***
 			<version***REMOVED***1.1.2</version***REMOVED***
-		</dependency***REMOVED***		
+		</dependency***REMOVED***
 
 		<!-- Rome RSS --***REMOVED***
 		<dependency***REMOVED***
@@ -209,13 +207,13 @@
 			<groupId***REMOVED***org.springframework</groupId***REMOVED***
 			<artifactId***REMOVED***org.springframework.test</artifactId***REMOVED***
 			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
-            <scope***REMOVED***test</scope***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
- 		   <groupId***REMOVED***javax.transaction</groupId***REMOVED***
- 		   <artifactId***REMOVED***com.springsource.javax.transaction</artifactId***REMOVED***
-		    <version***REMOVED***1.1.0</version***REMOVED***
-		    <scope***REMOVED***test</scope***REMOVED***
+			<groupId***REMOVED***javax.transaction</groupId***REMOVED***
+			<artifactId***REMOVED***com.springsource.javax.transaction</artifactId***REMOVED***
+			<version***REMOVED***1.1.0</version***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***
 
 	</dependencies***REMOVED***
@@ -247,28 +245,28 @@
 				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
 				<artifactId***REMOVED***maven-compiler-plugin</artifactId***REMOVED***
 				<configuration***REMOVED***
-                    <verbose***REMOVED***true</verbose***REMOVED***
+					<verbose***REMOVED***true</verbose***REMOVED***
 					<source***REMOVED***1.5</source***REMOVED***
 					<target***REMOVED***1.5</target***REMOVED***
 					<showWarnings***REMOVED***true</showWarnings***REMOVED***
 				</configuration***REMOVED***
 			</plugin***REMOVED***
-            <plugin***REMOVED***
-              <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-              <artifactId***REMOVED***maven-surefire-plugin</artifactId***REMOVED***
-              <configuration***REMOVED***
-                <includes***REMOVED***
-                  <include***REMOVED*****/*Tests.java</include***REMOVED***
-                </includes***REMOVED***
-              </configuration***REMOVED***
-            </plugin***REMOVED***
-            <plugin***REMOVED***
-              <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-              <artifactId***REMOVED***maven-war-plugin</artifactId***REMOVED***
-              <configuration***REMOVED***
-                <warName***REMOVED***petclinic</warName***REMOVED***
-                </configuration***REMOVED***
-            </plugin***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+				<artifactId***REMOVED***maven-surefire-plugin</artifactId***REMOVED***
+				<configuration***REMOVED***
+					<includes***REMOVED***
+						<include***REMOVED*****/*Tests.java</include***REMOVED***
+					</includes***REMOVED***
+				</configuration***REMOVED***
+			</plugin***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+				<artifactId***REMOVED***maven-war-plugin</artifactId***REMOVED***
+				<configuration***REMOVED***
+					<warName***REMOVED***petclinic</warName***REMOVED***
+				</configuration***REMOVED***
+			</plugin***REMOVED***
 			<plugin***REMOVED***
 				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
 				<artifactId***REMOVED***maven-dependency-plugin</artifactId***REMOVED***
