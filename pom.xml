@@ -82,6 +82,12 @@
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
+			<groupId***REMOVED***org.apache.commons</groupId***REMOVED***
+			<artifactId***REMOVED***com.springsource.org.apache.commons.pool</artifactId***REMOVED***
+			<version***REMOVED***1.5.3</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.hsqldb</artifactId***REMOVED***
 			<version***REMOVED***1.8.0.9</version***REMOVED***
