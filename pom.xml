@@ -105,7 +105,6 @@
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.hibernate</artifactId***REMOVED***
 			<version***REMOVED***3.3.2.GA</version***REMOVED***
-			<optional***REMOVED***true</optional***REMOVED***
 		</dependency***REMOVED***
 
 		<!-- JPA --***REMOVED***
@@ -113,21 +112,18 @@
 			<groupId***REMOVED***javax.persistence</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.javax.persistence</artifactId***REMOVED***
 			<version***REMOVED***1.0.0</version***REMOVED***
-			<optional***REMOVED***true</optional***REMOVED***
 		</dependency***REMOVED***
 		<!-- Toplink JPA Provider --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***com.oracle.toplink.essentials</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.oracle.toplink.essentials</artifactId***REMOVED***
 			<version***REMOVED***2.0.0.b41-beta2</version***REMOVED***
-			<optional***REMOVED***true</optional***REMOVED***
 		</dependency***REMOVED***
 		<!-- Hibernate JPA Provider --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.hibernate.ejb</artifactId***REMOVED***
 			<version***REMOVED***3.4.0.GA</version***REMOVED***
-			<optional***REMOVED***true</optional***REMOVED***
 			<exclusions***REMOVED***
 				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
 				<exclusion***REMOVED***
@@ -140,7 +136,6 @@
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.hibernate.annotations</artifactId***REMOVED***
 			<version***REMOVED***3.4.0.GA</version***REMOVED***
-			<optional***REMOVED***true</optional***REMOVED***
 			<exclusions***REMOVED***
 				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
 				<exclusion***REMOVED***
@@ -154,7 +149,6 @@
 			<groupId***REMOVED***org.apache.openjpa</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.apache.openjpa</artifactId***REMOVED***
 			<version***REMOVED***1.1.0</version***REMOVED***
-			<optional***REMOVED***true</optional***REMOVED***
 			<exclusions***REMOVED***
 				<!-- Exclude Commons Logging in favor of SLF4j --***REMOVED***
 				<exclusion***REMOVED***
