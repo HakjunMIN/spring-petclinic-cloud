@@ -41,7 +41,11 @@
 			<artifactId***REMOVED***org.springframework.web.servlet</artifactId***REMOVED***
 			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
-
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***org.springframework.aspects</artifactId***REMOVED***
+			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
 		<!-- AspectJ --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
