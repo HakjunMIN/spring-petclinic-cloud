@@ -211,7 +211,7 @@
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.junit</groupId***REMOVED***
 			<artifactId***REMOVED***com.springsource.org.junit</artifactId***REMOVED***
-			<version***REMOVED***4.5.0</version***REMOVED***
+			<version***REMOVED***4.7.0</version***REMOVED***
 			<scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
