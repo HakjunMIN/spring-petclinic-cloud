@@ -147,16 +147,16 @@
 		<url-pattern***REMOVED***/</url-pattern***REMOVED***
 	</servlet-mapping***REMOVED***
 
-    <filter***REMOVED***
-        <filter-name***REMOVED***httpMethodFilter</filter-name***REMOVED***
-        <filter-class***REMOVED***org.springframework.web.filter.HiddenHttpMethodFilter</filter-class***REMOVED***
-    </filter***REMOVED***
+	<filter***REMOVED***
+		<filter-name***REMOVED***httpMethodFilter</filter-name***REMOVED***
+		<filter-class***REMOVED***org.springframework.web.filter.HiddenHttpMethodFilter</filter-class***REMOVED***
+	</filter***REMOVED***
 
-    <filter-mapping***REMOVED***
-        <filter-name***REMOVED***httpMethodFilter</filter-name***REMOVED***
-        <servlet-name***REMOVED***petclinic</servlet-name***REMOVED***
-    </filter-mapping***REMOVED***
-    
+	<filter-mapping***REMOVED***
+		<filter-name***REMOVED***httpMethodFilter</filter-name***REMOVED***
+		<servlet-name***REMOVED***petclinic</servlet-name***REMOVED***
+	</filter-mapping***REMOVED***
+
 	<session-config***REMOVED***
 		<session-timeout***REMOVED***10</session-timeout***REMOVED***
 	</session-config***REMOVED***
@@ -166,6 +166,12 @@
 		<!-- Displays a stack trace --***REMOVED***
 		<location***REMOVED***/WEB-INF/jsp/uncaughtException.jsp</location***REMOVED***
 	</error-page***REMOVED***
+
+	<!-- eliminate welcome files --***REMOVED***
+	<!-- useful for Servlet 3 container (Tomcat 7 and Jetty 6) --***REMOVED***
+	<welcome-file-list***REMOVED***
+		<welcome-file***REMOVED***</welcome-file***REMOVED***
+	</welcome-file-list***REMOVED***
 
 	<!--
 		- Reference to PetClinic database.
