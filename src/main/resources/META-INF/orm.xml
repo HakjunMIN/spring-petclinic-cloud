@@ -42,10 +42,10 @@
 	</mapped-superclass***REMOVED***
 
 	<entity class="Vet"***REMOVED***
-		<table name="VETS"/***REMOVED***
+		<table name="vets"/***REMOVED***
 		<attributes***REMOVED***
 			<many-to-many name="specialtiesInternal" target-entity="Specialty" fetch="EAGER"***REMOVED***
-				<join-table name="VET_SPECIALTIES"***REMOVED***
+				<join-table name="vet_specialties"***REMOVED***
 					<join-column name="VET_ID"/***REMOVED***
 					<inverse-join-column name="SPECIALTY_ID"/***REMOVED***
 				</join-table***REMOVED***
@@ -56,11 +56,11 @@
 	</entity***REMOVED***
 
 	<entity class="Specialty"***REMOVED***
-		<table name="SPECIALTIES"/***REMOVED***
+		<table name="specialties"/***REMOVED***
 	</entity***REMOVED***
 
 	<entity class="Owner"***REMOVED***
-		<table name="OWNERS"/***REMOVED***
+		<table name="owners"/***REMOVED***
 		<attributes***REMOVED***
 			<basic name="address"/***REMOVED***
 			<basic name="city"/***REMOVED***
@@ -75,7 +75,7 @@
 	</entity***REMOVED***
 
 	<entity class="Pet"***REMOVED***
-		<table name="PETS"/***REMOVED***
+		<table name="pets"/***REMOVED***
 		<attributes***REMOVED***
 			<basic name="birthDate"***REMOVED***
 				<column name="BIRTH_DATE"/***REMOVED***
@@ -101,11 +101,11 @@
 	</entity***REMOVED***
 
 	<entity class="PetType"***REMOVED***
-		<table name="TYPES"/***REMOVED***
+		<table name="types"/***REMOVED***
 	</entity***REMOVED***
 
 	<entity class="Visit"***REMOVED***
-		<table name="VISITS"/***REMOVED***
+		<table name="visits"/***REMOVED***
 		<attributes***REMOVED***
 			<basic name="date"***REMOVED***
 				<column name="VISIT_DATE"/***REMOVED***

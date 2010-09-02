@@ -14,11 +14,16 @@
 
 	<tx:annotation-driven /***REMOVED***
 
-	<jdbc:embedded-database id="dataSource"***REMOVED***
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
+			p:driverClassName="${jdbc.driverClassName***REMOVED***" p:url="${jdbc.url***REMOVED***"
+			p:username="${jdbc.username***REMOVED***" p:password="${jdbc.password***REMOVED***"/***REMOVED***
+
+	<jdbc:initialize-database data-source="dataSource"***REMOVED***
 		<jdbc:script location="${jdbc.initLocation***REMOVED***"/***REMOVED***
 		<jdbc:script location="${jdbc.dataLocation***REMOVED***"/***REMOVED***
-	</jdbc:embedded-database***REMOVED***
-	
+	</jdbc:initialize-database***REMOVED***
+
+
 	<!-- Note: the specific "jpaAdapter" bean sits in adapter context file --***REMOVED***
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 		p:dataSource-ref="dataSource" p:jpaVendorAdapter-ref="jpaAdapter"***REMOVED***
@@ -30,5 +35,4 @@
 
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
 		p:entityManagerFactory-ref="entityManagerFactory" /***REMOVED***
-
 </beans***REMOVED***
