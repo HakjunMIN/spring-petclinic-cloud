@@ -1,7 +1,7 @@
 <%@ include file="/WEB-INF/jsp/includes.jsp" %***REMOVED***
 <%@ include file="/WEB-INF/jsp/header.jsp" %***REMOVED***
 
-<h2***REMOVED***<c:if test="${visit.new***REMOVED***"***REMOVED***New </c:if***REMOVED***Visit:</h2***REMOVED***
+<h2***REMOVED***<c:if test="${visit['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Visit:</h2***REMOVED***
 
 <form:form modelAttribute="visit"***REMOVED***
   <b***REMOVED***Pet:</b***REMOVED***
@@ -56,7 +56,7 @@
     <th***REMOVED***Description</th***REMOVED***
   </tr***REMOVED***
   <c:forEach var="visit" items="${visit.pet.visits***REMOVED***"***REMOVED***
-    <c:if test="${!visit.new***REMOVED***"***REMOVED***
+    <c:if test="${!visit['new']***REMOVED***"***REMOVED***
       <tr***REMOVED***
         <td***REMOVED***<fmt:formatDate value="${visit.date***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</td***REMOVED***
         <td***REMOVED***${visit.description***REMOVED***</td***REMOVED***

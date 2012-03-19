@@ -1,11 +1,11 @@
 <%@ include file="/WEB-INF/jsp/includes.jsp" %***REMOVED***
 <%@ include file="/WEB-INF/jsp/header.jsp" %***REMOVED***
 <c:choose***REMOVED***
-	<c:when test="${pet.new***REMOVED***"***REMOVED***<c:set var="method" value="post"/***REMOVED***</c:when***REMOVED***
+	<c:when test="${pet['new']***REMOVED***"***REMOVED***<c:set var="method" value="post"/***REMOVED***</c:when***REMOVED***
 	<c:otherwise***REMOVED***<c:set var="method" value="put"/***REMOVED***</c:otherwise***REMOVED***
 </c:choose***REMOVED***
 
-<h2***REMOVED***<c:if test="${pet.new***REMOVED***"***REMOVED***New </c:if***REMOVED***Pet</h2***REMOVED***
+<h2***REMOVED***<c:if test="${pet['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Pet</h2***REMOVED***
 
 <b***REMOVED***Owner:</b***REMOVED*** ${pet.owner.firstName***REMOVED*** ${pet.owner.lastName***REMOVED***
 <br/***REMOVED***
@@ -35,7 +35,7 @@
     <tr***REMOVED***
       <td***REMOVED***
         <c:choose***REMOVED***
-          <c:when test="${pet.new***REMOVED***"***REMOVED***
+          <c:when test="${pet['new']***REMOVED***"***REMOVED***
             <p class="submit"***REMOVED***<input type="submit" value="Add Pet"/***REMOVED***</p***REMOVED***
           </c:when***REMOVED***
           <c:otherwise***REMOVED***
@@ -47,7 +47,7 @@
   </table***REMOVED***
 </form:form***REMOVED***
 
-<c:if test="${!pet.new***REMOVED***"***REMOVED***
+<c:if test="${!pet['new']***REMOVED***"***REMOVED***
   <form:form method="delete"***REMOVED***
     <p class="submit"***REMOVED***<input type="submit" value="Delete Pet"/***REMOVED***</p***REMOVED***
   </form:form***REMOVED***
