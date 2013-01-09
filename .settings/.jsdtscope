@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?***REMOVED***
 <classpath***REMOVED***
+	<classpathentry kind="src" path="src/main/webapp"/***REMOVED***
+	<classpathentry kind="src" path="target/m2e-wtp/web-resources"/***REMOVED***
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/***REMOVED***
 	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.WebProject"***REMOVED***
 		<attributes***REMOVED***

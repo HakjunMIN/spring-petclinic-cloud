@@ -20,7 +20,7 @@
 	<context:property-placeholder location="classpath:jdbc.properties"/***REMOVED***
 
 	<!-- Hibernate SessionFactory --***REMOVED***
-	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
 			p:dataSource-ref="dataSource" p:mappingResources="petclinic.hbm.xml"***REMOVED***
 		<property name="hibernateProperties"***REMOVED***
 			<props***REMOVED***
@@ -32,14 +32,14 @@
 		<property name="eventListeners"***REMOVED***
 			<map***REMOVED***
 				<entry key="merge"***REMOVED***
-					<bean class="org.springframework.orm.hibernate3.support.IdTransferringMergeEventListener"/***REMOVED***
+					<bean class="org.springframework.orm.hibernate4.support.IdTransferringMergeEventListener"/***REMOVED***
 				</entry***REMOVED***
 			</map***REMOVED***
 		</property***REMOVED***
 	</bean***REMOVED***
 
 	<!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) --***REMOVED***
-	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"
 			p:sessionFactory-ref="sessionFactory"/***REMOVED***
 
 	<!-- Transaction manager that delegates to JTA (for a transactional JNDI DataSource) --***REMOVED***

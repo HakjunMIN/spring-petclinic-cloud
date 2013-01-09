@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?***REMOVED***
 <project-modules id="moduleCoreId" project-version="1.5.0"***REMOVED***
-	<wb-module deploy-name="org.springframework.samples.petclinic"***REMOVED***
-		<wb-resource deploy-path="/" source-path="/src/main/webapp"/***REMOVED***
-		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/***REMOVED***
-		<wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/***REMOVED***
-		<property name="java-output-path" value="target/classes"/***REMOVED***
-		<property name="context-root" value="petclinic"/***REMOVED***
-	</wb-module***REMOVED***
+    <wb-module deploy-name="spring-petclinic"***REMOVED***
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/***REMOVED***
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/***REMOVED***
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/***REMOVED***
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/***REMOVED***
+        <property name="context-root" value="petclinic"/***REMOVED***
+        <property name="java-output-path" value="/spring-petclinic/target/classes"/***REMOVED***
+    </wb-module***REMOVED***
 </project-modules***REMOVED***

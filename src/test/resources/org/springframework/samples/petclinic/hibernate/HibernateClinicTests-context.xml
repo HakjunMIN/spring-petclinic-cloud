@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?***REMOVED***
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"***REMOVED***
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"***REMOVED***
 
 	<bean class="org.springframework.samples.petclinic.hibernate.HibernateClinic"***REMOVED***
 		<constructor-arg ref="sessionFactory"/***REMOVED***
 	</bean***REMOVED***
 
-	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
 		p:dataSource-ref="dataSource" p:mappingResources="petclinic.hbm.xml"***REMOVED***
 		<property name="hibernateProperties"***REMOVED***
 			<props***REMOVED***
@@ -15,16 +15,9 @@
 				<prop key="hibernate.show_sql"***REMOVED***${hibernate.show_sql***REMOVED***</prop***REMOVED***
 			</props***REMOVED***
 		</property***REMOVED***
-		<property name="eventListeners"***REMOVED***
-			<map***REMOVED***
-				<entry key="merge"***REMOVED***
-					<bean class="org.springframework.orm.hibernate3.support.IdTransferringMergeEventListener" /***REMOVED***
-				</entry***REMOVED***
-			</map***REMOVED***
-		</property***REMOVED***
 	</bean***REMOVED***
 
-	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"
 		p:sessionFactory-ref="sessionFactory" /***REMOVED***
 
 	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" /***REMOVED***

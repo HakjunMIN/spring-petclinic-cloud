@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?***REMOVED***
+
+<!-- Authors: Chris Taylor, Ceki Gulcu. --***REMOVED***
+
+<!-- Version: 1.2 --***REMOVED***
+
+<!-- A configuration element consists of optional renderer
+elements,appender elements, categories and an optional root
+element. --***REMOVED***
+
+<!ELEMENT log4j:configuration (renderer*, appender*,(category|logger)*,root?,
+                               categoryFactory?)***REMOVED***
+
+<!-- The "threshold" attribute takes a level value such that all --***REMOVED***
+<!-- logging statements with a level equal or below this value are --***REMOVED***
+<!-- disabled. --***REMOVED***
+
+<!-- Setting the "debug" enable the printing of internal log4j logging   --***REMOVED***
+<!-- statements.                                                         --***REMOVED***
+
+<!-- By default, debug attribute is "null", meaning that we not do touch --***REMOVED***
+<!-- internal log4j logging settings. The "null" value for the threshold --***REMOVED***
+<!-- attribute can be misleading. The threshold field of a repository	 --***REMOVED***
+<!-- cannot be set to null. The "null" value for the threshold attribute --***REMOVED***
+<!-- simply means don't touch the threshold field, the threshold field   --***REMOVED*** 
+<!-- keeps its old value.                                                --***REMOVED***
+     
+<!ATTLIST log4j:configuration
+  xmlns:log4j              CDATA #FIXED "http://jakarta.apache.org/log4j/" 
+  threshold                (all|debug|info|warn|error|fatal|off|null) "null"
+  debug                    (true|false|null)  "null"
+***REMOVED***
+
+<!-- renderer elements allow the user to customize the conversion of  --***REMOVED***
+<!-- message objects to String.                                       --***REMOVED***
+
+<!ELEMENT renderer EMPTY***REMOVED***
+<!ATTLIST renderer
+  renderedClass  CDATA #REQUIRED
+  renderingClass CDATA #REQUIRED
+***REMOVED***
+
+<!-- Appenders must have a name and a class. --***REMOVED***
+<!-- Appenders may contain an error handler, a layout, optional parameters --***REMOVED***
+<!-- and filters. They may also reference (or include) other appenders. --***REMOVED***
+<!ELEMENT appender (errorHandler?, param*, layout?, filter*, appender-ref*)***REMOVED***
+<!ATTLIST appender
+  name 		ID 	#REQUIRED
+  class 	CDATA	#REQUIRED
+***REMOVED***
+
+<!ELEMENT layout (param*)***REMOVED***
+<!ATTLIST layout
+  class		CDATA	#REQUIRED
+***REMOVED***
+
+<!ELEMENT filter (param*)***REMOVED***
+<!ATTLIST filter
+  class		CDATA	#REQUIRED
+***REMOVED***
+
+<!-- ErrorHandlers can be of any class. They can admit any number of --***REMOVED***
+<!-- parameters. --***REMOVED***
+
+<!ELEMENT errorHandler (param*, root-ref?, logger-ref*,  appender-ref?)***REMOVED*** 
+<!ATTLIST errorHandler
+   class        CDATA   #REQUIRED 
+***REMOVED***
+
+<!ELEMENT root-ref EMPTY***REMOVED***
+
+<!ELEMENT logger-ref EMPTY***REMOVED***
+<!ATTLIST logger-ref
+  ref IDREF #REQUIRED
+***REMOVED***
+
+<!ELEMENT param EMPTY***REMOVED***
+<!ATTLIST param
+  name		CDATA   #REQUIRED
+  value		CDATA	#REQUIRED
+***REMOVED***
+
+
+<!-- The priority class is org.apache.log4j.Level by default --***REMOVED***
+<!ELEMENT priority (param*)***REMOVED***
+<!ATTLIST priority
+  class   CDATA	#IMPLIED
+  value	  CDATA #REQUIRED
+***REMOVED***
+
+<!-- The level class is org.apache.log4j.Level by default --***REMOVED***
+<!ELEMENT level (param*)***REMOVED***
+<!ATTLIST level
+  class   CDATA	#IMPLIED
+  value	  CDATA #REQUIRED
+***REMOVED***
+
+
+<!-- If no level element is specified, then the configurator MUST not --***REMOVED***
+<!-- touch the level of the named category. --***REMOVED***
+<!ELEMENT category (param*,(priority|level)?,appender-ref*)***REMOVED***
+<!ATTLIST category
+  class         CDATA   #IMPLIED
+  name		CDATA	#REQUIRED
+  additivity	(true|false) "true"  
+***REMOVED***
+
+<!-- If no level element is specified, then the configurator MUST not --***REMOVED***
+<!-- touch the level of the named logger. --***REMOVED***
+<!ELEMENT logger (level?,appender-ref*)***REMOVED***
+<!ATTLIST logger
+  name		ID	#REQUIRED
+  additivity	(true|false) "true"  
+***REMOVED***
+
+
+<!ELEMENT categoryFactory (param*)***REMOVED***
+<!ATTLIST categoryFactory 
+   class        CDATA #REQUIRED***REMOVED***
+
+<!ELEMENT appender-ref EMPTY***REMOVED***
+<!ATTLIST appender-ref
+  ref IDREF #REQUIRED
+***REMOVED***
+
+<!-- If no priority element is specified, then the configurator MUST not --***REMOVED***
+<!-- touch the priority of root. --***REMOVED***
+<!-- The root category always exists and cannot be subclassed. --***REMOVED***
+<!ELEMENT root (param*, (priority|level)?, appender-ref*)***REMOVED***
+
+
+<!-- ==================================================================== --***REMOVED***
+<!--                       A logging event                                --***REMOVED***
+<!-- ==================================================================== --***REMOVED***
+<!ELEMENT log4j:eventSet (log4j:event*)***REMOVED***
+<!ATTLIST log4j:eventSet
+  xmlns:log4j             CDATA #FIXED "http://jakarta.apache.org/log4j/" 
+  version                (1.1|1.2) "1.2" 
+  includesLocationInfo   (true|false) "true"
+***REMOVED***
+
+
+
+<!ELEMENT log4j:event (log4j:message, log4j:NDC?, log4j:throwable?, 
+                       log4j:locationInfo?) ***REMOVED***
+
+<!-- The timestamp format is application dependent. --***REMOVED***
+<!ATTLIST log4j:event
+    logger     CDATA #REQUIRED
+    level      CDATA #REQUIRED
+    thread     CDATA #REQUIRED
+    timestamp  CDATA #REQUIRED
+***REMOVED***
+
+<!ELEMENT log4j:message (#PCDATA)***REMOVED***
+<!ELEMENT log4j:NDC (#PCDATA)***REMOVED***
+
+<!ELEMENT log4j:throwable (#PCDATA)***REMOVED***
+
+<!ELEMENT log4j:locationInfo EMPTY***REMOVED***
+<!ATTLIST log4j:locationInfo
+  class  CDATA	#REQUIRED
+  method CDATA	#REQUIRED
+  file   CDATA	#REQUIRED
+  line   CDATA	#REQUIRED
+***REMOVED***

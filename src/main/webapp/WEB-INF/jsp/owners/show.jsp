@@ -1,7 +1,16 @@
-<%@ include file="/WEB-INF/jsp/includes.jsp" %***REMOVED***
-<%@ include file="/WEB-INF/jsp/header.jsp" %***REMOVED***
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %***REMOVED***
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %***REMOVED***
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %***REMOVED***
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %***REMOVED***
 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"***REMOVED***
+
+<jsp:include page="../header.jsp"/***REMOVED***
+
+<body***REMOVED***
+
+  <div id="main"***REMOVED***
+  
 <h2***REMOVED***Owner Information</h2***REMOVED***
 
   <table***REMOVED***
@@ -105,4 +114,9 @@
     </table***REMOVED***
   </c:forEach***REMOVED***
   
-<%@ include file="/WEB-INF/jsp/footer.jsp" %***REMOVED***
+<jsp:include page="../footer.jsp"/***REMOVED***
+
+  </div***REMOVED***
+</body***REMOVED***
+
+</html***REMOVED***
