@@ -1,13 +1,11 @@
 
 package org.springframework.samples.petclinic.web;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.Clinic;
 import org.springframework.samples.petclinic.Pet;
-import org.springframework.samples.petclinic.PetType;
-import org.springframework.samples.petclinic.validation.PetValidator;
+import org.springframework.samples.petclinic.Visit;
+import org.springframework.samples.petclinic.validation.VisitValidator;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,28 +19,24 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 /**
- * JavaBean Form controller that is used to edit an existing <code***REMOVED***Pet</code***REMOVED***.
+ * JavaBean form controller that is used to add a new <code***REMOVED***Visit</code***REMOVED*** to the
+ * system.
  * 
  * @author Juergen Hoeller
  * @author Ken Krebs
  * @author Arjen Poutsma
  */
 @Controller
-@RequestMapping("/owners/*/pets/{petId***REMOVED***/edit")
-@SessionAttributes("pet")
-public class EditPetForm {
+@RequestMapping("/owners/*/pets/{petId***REMOVED***/visits/new")
+@SessionAttributes("visit")
+public class AddVisitController {
 
 	private final Clinic clinic;
 
 
 	@Autowired
-	public EditPetForm(Clinic clinic) {
+	public AddVisitController(Clinic clinic) {
 		this.clinic = clinic;
-	***REMOVED***
-
-	@ModelAttribute("types")
-	public Collection<PetType***REMOVED*** populatePetTypes() {
-		return this.clinic.getPetTypes();
 	***REMOVED***
 
 	@InitBinder
@@ -53,28 +47,23 @@ public class EditPetForm {
 	@RequestMapping(method = RequestMethod.GET)
 	public String setupForm(@PathVariable("petId") int petId, Model model) {
 		Pet pet = this.clinic.loadPet(petId);
-		model.addAttribute("pet", pet);
-		return "pets/form";
+		Visit visit = new Visit();
+		pet.addVisit(visit);
+		model.addAttribute("visit", visit);
+		return "pets/visitForm";
 	***REMOVED***
 
-	@RequestMapping(method = { RequestMethod.PUT, RequestMethod.POST ***REMOVED***)
-	public String processSubmit(@ModelAttribute("pet") Pet pet, BindingResult result, SessionStatus status) {
-		new PetValidator().validate(pet, result);
+	@RequestMapping(method = RequestMethod.POST)
+	public String processSubmit(@ModelAttribute("visit") Visit visit, BindingResult result, SessionStatus status) {
+		new VisitValidator().validate(visit, result);
 		if (result.hasErrors()) {
-			return "pets/form";
+			return "pets/visitForm";
 		***REMOVED***
 		else {
-			this.clinic.storePet(pet);
+			this.clinic.storeVisit(visit);
 			status.setComplete();
-			return "redirect:/owners/" + pet.getOwner().getId();
+			return "redirect:/owners/" + visit.getPet().getOwner().getId();
 		***REMOVED***
-	***REMOVED***
-
-	@RequestMapping(method = RequestMethod.DELETE)
-	public String deletePet(@PathVariable int petId) {
-		Pet pet = this.clinic.loadPet(petId);
-		this.clinic.deletePet(petId);
-		return "redirect:/owners/" + pet.getOwner().getId();
 	***REMOVED***
 
 ***REMOVED***

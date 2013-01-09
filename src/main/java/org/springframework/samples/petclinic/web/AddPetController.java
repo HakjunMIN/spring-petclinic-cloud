@@ -32,13 +32,13 @@ import org.springframework.web.bind.support.SessionStatus;
 @Controller
 @RequestMapping("/owners/{ownerId***REMOVED***/pets/new")
 @SessionAttributes("pet")
-public class AddPetForm {
+public class AddPetController {
 
 	private final Clinic clinic;
 
 
 	@Autowired
-	public AddPetForm(Clinic clinic) {
+	public AddPetController(Clinic clinic) {
 		this.clinic = clinic;
 	***REMOVED***
 

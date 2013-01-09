@@ -15,6 +15,10 @@
 		<level value="DEBUG" /***REMOVED***
 	</logger***REMOVED***
 	
+	<logger name="org.springframework.web"***REMOVED***
+		<level value="DEBUG" /***REMOVED***
+	</logger***REMOVED***
+	
 
 	
 	<!-- Root Logger --***REMOVED***
