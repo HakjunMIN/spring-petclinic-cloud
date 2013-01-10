@@ -161,12 +161,6 @@
 		<session-timeout***REMOVED***10</session-timeout***REMOVED***
 	</session-config***REMOVED***
 
-	<error-page***REMOVED***
-		<exception-type***REMOVED***java.lang.Exception</exception-type***REMOVED***
-		<!-- Displays a stack trace --***REMOVED***
-		<location***REMOVED***/WEB-INF/jsp/uncaughtException.jsp</location***REMOVED***
-	</error-page***REMOVED***
-
 	<!-- eliminate welcome files --***REMOVED***
 	<!-- useful for Servlet 3 container (Tomcat 7 and Jetty 6) --***REMOVED***
 	<welcome-file-list***REMOVED***
