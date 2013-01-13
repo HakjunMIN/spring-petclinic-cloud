@@ -7,6 +7,10 @@
 <jsp:include page="header.jsp"/***REMOVED***
 
 <body***REMOVED***
+	<div id="header"***REMOVED***
+		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
+		<img src="${banner***REMOVED***" /***REMOVED***
+	</div***REMOVED***
 
   	<div id="main"***REMOVED***
 		<img src="<***REMOVED***url value="/resources/images/pets.png" htmlEscape="true" /***REMOVED***" align="right" style="position:relative;right:30px;"***REMOVED***</img***REMOVED***

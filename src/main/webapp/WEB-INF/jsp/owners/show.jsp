@@ -9,6 +9,10 @@
 
 <body***REMOVED***
 
+	<div id="header"***REMOVED***
+		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
+		<img src="${banner***REMOVED***" /***REMOVED***
+	</div***REMOVED***
   <div id="main"***REMOVED***
   
 	<h2***REMOVED***Owner Information</h2***REMOVED***

@@ -9,8 +9,12 @@
 <jsp:include page="../header.jsp"/***REMOVED***
 
 <body***REMOVED***
+	<div id="header"***REMOVED***
+		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
+		<img src="${banner***REMOVED***" /***REMOVED***
+	</div***REMOVED***
 
-  <div id="main"***REMOVED***
+  	<div id="main"***REMOVED***
 
 		<h2***REMOVED***<c:if test="${visit['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Visit:</h2***REMOVED***
 		
