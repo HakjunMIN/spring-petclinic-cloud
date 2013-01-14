@@ -8,7 +8,7 @@
 	<enableImports***REMOVED***<![CDATA[false]]***REMOVED***</enableImports***REMOVED***
 	<configs***REMOVED***
 		<config***REMOVED***src/main/resources/spring/applicationContext-dataSource.xml</config***REMOVED***
-		<config***REMOVED***src/main/resources/spring/applicationContext-jpa.xml</config***REMOVED***
+		<config***REMOVED***src/main/resources/spring/applicationContext-dao.xml</config***REMOVED***
 	</configs***REMOVED***
 	<configSets***REMOVED***
 	</configSets***REMOVED***
