@@ -11,6 +11,6 @@
 
 	<bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" /***REMOVED***
 
-	<bean id="clinic" class="org.springframework.samples.petclinic.jpa.EntityManagerClinic" /***REMOVED***
+	<bean id="clinic" class="org.springframework.samples.petclinic.jpa.JpaClinic" /***REMOVED***
 
 </beans***REMOVED***
