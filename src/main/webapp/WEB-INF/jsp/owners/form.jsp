@@ -10,69 +10,66 @@
 <jsp:include page="../header.jsp"/***REMOVED***
 
 <body***REMOVED***
-	<div id="header"***REMOVED***
+	<div id="header well"***REMOVED***
 		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
 		<img src="${banner***REMOVED***" /***REMOVED***
 	</div***REMOVED***
-  	<div id="main"***REMOVED***
+  	<div class="container" style="padding-top: 50px;"***REMOVED***
 		<c:choose***REMOVED***
 			<c:when test="${owner['new']***REMOVED***"***REMOVED***<c:set var="method" value="post"/***REMOVED***</c:when***REMOVED***
 			<c:otherwise***REMOVED***<c:set var="method" value="put"/***REMOVED***</c:otherwise***REMOVED***
 		</c:choose***REMOVED***
 		
-		<h2***REMOVED***<c:if test="${owner['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Owner:</h2***REMOVED***
-		<form:form modelAttribute="owner" method="${method***REMOVED***"***REMOVED***
-		  <table***REMOVED***
-		    <tr***REMOVED***
-		      <th***REMOVED***
-		        First Name: <form:errors path="firstName" cssClass="errors"/***REMOVED***
-		        <br/***REMOVED***
-		        <form:input path="firstName" size="30" maxlength="80"/***REMOVED***
-		      </th***REMOVED***
-		    </tr***REMOVED***
-		    <tr***REMOVED***
-		      <th***REMOVED***
-		        Last Name: <form:errors path="lastName" cssClass="errors"/***REMOVED***
-		        <br/***REMOVED***
-		        <form:input path="lastName" size="30" maxlength="80"/***REMOVED***
-		      </th***REMOVED***
-		    </tr***REMOVED***
-		    <tr***REMOVED***
-		      <th***REMOVED***
-		        Address: <form:errors path="address" cssClass="errors"/***REMOVED***
-		        <br/***REMOVED***
-		        <form:input path="address" size="30" maxlength="80"/***REMOVED***
-		      </th***REMOVED***
-		    </tr***REMOVED***
-		    <tr***REMOVED***
-		      <th***REMOVED***
-		        City: <form:errors path="city" cssClass="errors"/***REMOVED***
-		        <br/***REMOVED***
-		        <form:input path="city" size="30" maxlength="80"/***REMOVED***
-		      </th***REMOVED***
-		    </tr***REMOVED***
-		    <tr***REMOVED***
-		      <th***REMOVED***
-		        Telephone: <form:errors path="telephone" cssClass="errors"/***REMOVED***
-		        <br/***REMOVED***
-		        <form:input path="telephone" size="20" maxlength="20"/***REMOVED***
-		      </th***REMOVED***
-		    </tr***REMOVED***
-		    <tr***REMOVED***
-		      <td***REMOVED***
-		        <c:choose***REMOVED***
-		          <c:when test="${owner['new']***REMOVED***"***REMOVED***
-		            <p class="submit"***REMOVED***<input type="submit" value="Add Owner"/***REMOVED***</p***REMOVED***
-		          </c:when***REMOVED***
-		          <c:otherwise***REMOVED***
-		            <p class="submit"***REMOVED***<input type="submit" value="Update Owner"/***REMOVED***</p***REMOVED***
-		          </c:otherwise***REMOVED***
-		        </c:choose***REMOVED***
-		      </td***REMOVED***
-		    </tr***REMOVED***
-		  </table***REMOVED***
+		<h2***REMOVED***<c:if test="${owner['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Owner</h2***REMOVED***
+		<form:form modelAttribute="owner" method="${method***REMOVED***" class="form-horizontal" id="add-owner-form"***REMOVED***
+			<fieldset***REMOVED***
+					<div class="control-group" id="firstName"***REMOVED***
+						<label class="control-label"***REMOVED***First Name </label***REMOVED***
+						<div class="controls"***REMOVED***
+							<form:input path="firstName" /***REMOVED***
+							<span class="help-inline"***REMOVED***<form:errors path="firstName" /***REMOVED***</span***REMOVED***
+						</div***REMOVED***
+					</div***REMOVED***
+					<div class="control-group" id="lastName"***REMOVED***
+						<label class="control-label"***REMOVED***Last Name </label***REMOVED***
+						<div class="controls"***REMOVED***
+							<form:input path="lastName" /***REMOVED***
+							<span class="help-inline"***REMOVED***<form:errors path="lastName" /***REMOVED***</span***REMOVED***
+						</div***REMOVED***
+					</div***REMOVED***
+					<div class="control-group" id="address"***REMOVED***
+						<label class="control-label"***REMOVED***Address </label***REMOVED***
+						<div class="controls"***REMOVED***
+							<form:input path="address" /***REMOVED***
+							<span class="help-inline"***REMOVED***<form:errors path="address" /***REMOVED***</span***REMOVED***
+						</div***REMOVED***
+					</div***REMOVED***
+					<div class="control-group" id="city"***REMOVED***
+						<label class="control-label"***REMOVED***City </label***REMOVED***
+						<div class="controls"***REMOVED***
+							<form:input path="city" /***REMOVED***
+							<span class="help-inline"***REMOVED***<form:errors path="city" /***REMOVED***</span***REMOVED***
+						</div***REMOVED***
+					</div***REMOVED***
+					<div class="control-group" id="telephone"***REMOVED***
+						<label class="control-label"***REMOVED***Telephone </label***REMOVED***
+						<div class="controls"***REMOVED***
+							<form:input path="telephone" /***REMOVED***
+							<span class="help-inline"***REMOVED***<form:errors path="telephone" /***REMOVED***</span***REMOVED***
+						</div***REMOVED***
+					</div***REMOVED***
+					<div class="form-actions"***REMOVED***
+						<c:choose***REMOVED***
+				          <c:when test="${owner['new']***REMOVED***"***REMOVED***
+				            <button type="submit"***REMOVED***Add Owner</button***REMOVED***
+				          </c:when***REMOVED***
+				          <c:otherwise***REMOVED***
+				            <button type="submit"***REMOVED***Update Owner</button***REMOVED***
+				          </c:otherwise***REMOVED***
+				        </c:choose***REMOVED***
+					</div***REMOVED***
+				</fieldset***REMOVED***
 		</form:form***REMOVED***
-
   	</div***REMOVED***
 	<jsp:include page="../footer.jsp"/***REMOVED***
 </body***REMOVED***

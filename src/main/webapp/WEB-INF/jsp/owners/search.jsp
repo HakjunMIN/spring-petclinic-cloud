@@ -9,23 +9,21 @@
 
 <body***REMOVED***
 
-	<div id="header"***REMOVED***
+	<div class="container"***REMOVED***
 		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
 		<img src="${banner***REMOVED***" /***REMOVED***
-	</div***REMOVED***
-	<div id="main"***REMOVED***
 
-		<h2***REMOVED***Find Owners:</h2***REMOVED***
+		<h2***REMOVED***Find Owners</h2***REMOVED***
 		
 		<***REMOVED***url value="/owners" var="formUrl"/***REMOVED***
-		<form:form modelAttribute="owner" action="${fn:escapeXml(formUrl)***REMOVED***" method="get"***REMOVED***
+		<form:form modelAttribute="owner" action="${fn:escapeXml(formUrl)***REMOVED***" method="get" class="form-horizontal"***REMOVED***
 					<fieldset***REMOVED***
-						<label class="control-label"***REMOVED***Last name:</label***REMOVED***
 						<div class="controls"***REMOVED***
+							<label class="control-label"***REMOVED***Last name </label***REMOVED***
 							<form:input path="lastName" size="30" maxlength="80"/***REMOVED***
-							<form:errors path="*" cssClass="errors"/***REMOVED***
+							<span class="help-inline"***REMOVED***<form:errors path="*" /***REMOVED***</span***REMOVED***
 						</div***REMOVED***				
-						<div***REMOVED***
+						<div class="form-actions"***REMOVED***
 							<button type="submit"***REMOVED***Find Owner</button***REMOVED***
 						</div***REMOVED***
 					</fieldset***REMOVED***
@@ -36,7 +34,7 @@
 		
 		<jsp:include page="../footer.jsp"/***REMOVED***
 
-  </div***REMOVED***
+  	</div***REMOVED***
 </body***REMOVED***
 
 </html***REMOVED***

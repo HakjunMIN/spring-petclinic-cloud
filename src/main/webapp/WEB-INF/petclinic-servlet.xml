@@ -64,6 +64,9 @@
 	<mvc:annotation-driven content-negotiation-manager="contentNegotiationManager" /***REMOVED*** 
 
 	<mvc:resources mapping="/resources/**" location="/resources/"/***REMOVED***
+	
+	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/***REMOVED***
+	
 
 	<bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean"***REMOVED***
 	    <property name="favorPathExtension" value="false" /***REMOVED***

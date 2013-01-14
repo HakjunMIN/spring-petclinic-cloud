@@ -9,15 +9,14 @@
 <jsp:include page="../header.jsp"/***REMOVED***
 
 <body***REMOVED***
-	<div id="header"***REMOVED***
+
+  	<div class="container"***REMOVED***
+
 		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
 		<img src="${banner***REMOVED***" /***REMOVED***
-	</div***REMOVED***
-  	<div id="main"***REMOVED***
-
-	<h2***REMOVED***Owners:</h2***REMOVED***
+		<h2***REMOVED***Owners</h2***REMOVED***
 	
-		<table***REMOVED***
+		<table class="table table-striped"***REMOVED***
 		  <thead***REMOVED***
 		  	<tr***REMOVED***
 			    <th***REMOVED***Name</th***REMOVED***

@@ -3,21 +3,19 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %***REMOVED***
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %***REMOVED***
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en"***REMOVED***
+<html lang="en"***REMOVED***
 
 <jsp:include page="../header.jsp"/***REMOVED***
 
 <body***REMOVED***
 
-	<div id="header"***REMOVED***
+	<div class="container"***REMOVED***
 		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
 		<img src="${banner***REMOVED***" /***REMOVED***
-	</div***REMOVED***
-  <div id="main"***REMOVED***
   
-	<h2***REMOVED***Owner Information</h2***REMOVED***
+		<h2***REMOVED***Owner Information</h2***REMOVED***
 	
-	  <table***REMOVED***
+	  <table class="table table-striped"  style="width:600px;"***REMOVED***
 	    <tr***REMOVED***
 	      <th***REMOVED***Name</th***REMOVED***
 	      <td***REMOVED***<b***REMOVED***${owner.firstName***REMOVED*** ${owner.lastName***REMOVED***</b***REMOVED***</td***REMOVED***
@@ -55,7 +53,7 @@
 	  <h2***REMOVED***Pets and Visits</h2***REMOVED***
 	
 	  <c:forEach var="pet" items="${owner.pets***REMOVED***"***REMOVED***
-	    <table width="94%"***REMOVED***
+	    <table class="table" style="width:600px;"***REMOVED***
 	      <tr***REMOVED***
 	        <td valign="top"***REMOVED***
 	          <table***REMOVED***
@@ -119,10 +117,11 @@
 	      </tr***REMOVED***
 	    </table***REMOVED***
 	  </c:forEach***REMOVED***
+	  
+	  <jsp:include page="../footer.jsp"/***REMOVED***
   
   	</div***REMOVED***
 
-	<jsp:include page="../footer.jsp"/***REMOVED***
 </body***REMOVED***
 
 </html***REMOVED***

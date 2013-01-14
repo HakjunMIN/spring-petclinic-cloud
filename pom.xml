@@ -131,7 +131,14 @@
 			<artifactId***REMOVED***jstl</artifactId***REMOVED***
 			<version***REMOVED***1.2</version***REMOVED***
 		</dependency***REMOVED***
-
+		
+		<!-- Webjars (static dependencies distributed as JAR files) --***REMOVED***
+		<dependency***REMOVED***
+		    <groupId***REMOVED***org.webjars</groupId***REMOVED***
+		    <artifactId***REMOVED***bootstrap</artifactId***REMOVED***
+		    <version***REMOVED***2.2.1</version***REMOVED***
+		</dependency***REMOVED***
+		
 		<!-- Rome RSS --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***rome</groupId***REMOVED***

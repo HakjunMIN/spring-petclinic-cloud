@@ -53,7 +53,7 @@
 		Exporter that exposes the Clinic DAO and the CallMonitoringAspect via JMX,
 		based on the @ManagedResource, @ManagedAttribute, and @ManagedOperation annotations.
 	--***REMOVED*** 
-	<context:mbean-export/***REMOVED***
+	<context:mbean-export/***REMOVED*** 
 
 	<!-- PetClinic's central data access object using Spring's SimpleJdbcTemplate --***REMOVED***
 	<bean id="clinic" class="org.springframework.samples.petclinic.jdbc.SimpleJdbcClinic"/***REMOVED***
