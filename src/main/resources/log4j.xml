@@ -12,15 +12,15 @@
 	</appender***REMOVED***
 
 	<logger name="org.springframework.samples.petclinic.aspects"***REMOVED***
-		<level value="DEBUG" /***REMOVED***
+		<level value="info" /***REMOVED***
 	</logger***REMOVED***
 	
 	<logger name="org.springframework.web"***REMOVED***
-		<level value="DEBUG" /***REMOVED***
+		<level value="info" /***REMOVED***
 	</logger***REMOVED***
 	
 	<logger name="org.springframework.jdbc"***REMOVED***
-		<level value="DEBUG" /***REMOVED***
+		<level value="info" /***REMOVED***
 	</logger***REMOVED***
 	
 
