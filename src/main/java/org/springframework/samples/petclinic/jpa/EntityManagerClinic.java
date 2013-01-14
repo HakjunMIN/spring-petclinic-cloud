@@ -24,6 +24,7 @@ import org.springframework.dao.DataAccessException;
  * @author Mike Keith
  * @author Rod Johnson
  * @author Sam Brannen
+ * @author Michael Isvy
  * @since 22.4.2006
  */
 @Repository
@@ -65,27 +66,16 @@ public class EntityManagerClinic implements Clinic {
 	***REMOVED***
 
 	public void storeOwner(Owner owner) {
-		// Consider returning the persistent object here, for exposing
-		// a newly assigned id using any persistence provider***REMOVED***
-		Owner merged = this.em.merge(owner);
-		this.em.flush();
-		owner.setId(merged.getId());
+		this.em.merge(owner);
+
 	***REMOVED***
 
 	public void storePet(Pet pet) {
-		// Consider returning the persistent object here, for exposing
-		// a newly assigned id using any persistence provider***REMOVED***
-		Pet merged = this.em.merge(pet);
-		this.em.flush();
-		pet.setId(merged.getId());
+		this.em.merge(pet);
 	***REMOVED***
 
 	public void storeVisit(Visit visit) {
-		// Consider returning the persistent object here, for exposing
-		// a newly assigned id using any persistence provider***REMOVED***
-		Visit merged = this.em.merge(visit);
-		this.em.flush();
-		visit.setId(merged.getId());
+		this.em.merge(visit);
 	***REMOVED***
 
 	public void deletePet(int id) throws DataAccessException {

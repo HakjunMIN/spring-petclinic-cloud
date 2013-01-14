@@ -85,7 +85,7 @@
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
 			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
-			<version***REMOVED***1.8.0.10</version***REMOVED***
+			<version***REMOVED***2.2.8</version***REMOVED***
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
 		<!-- MySQL JDBC Connector --***REMOVED***
