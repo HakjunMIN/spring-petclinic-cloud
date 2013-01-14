@@ -56,7 +56,7 @@
 	<context:mbean-export/***REMOVED*** 
 
 	<!-- PetClinic's central data access object using Spring's SimpleJdbcTemplate --***REMOVED***
-	<bean id="clinic" class="org.springframework.samples.petclinic.jdbc.SimpleJdbcClinic"/***REMOVED***
+	<bean id="clinic" class="org.springframework.samples.petclinic.jdbc.JdbcClinic"/***REMOVED***
 
 	<!-- Call monitoring aspect that monitors call count and call invocation time --***REMOVED***
 	<bean id="callMonitor" class="org.springframework.samples.petclinic.aspects.CallMonitoringAspect"/***REMOVED***
