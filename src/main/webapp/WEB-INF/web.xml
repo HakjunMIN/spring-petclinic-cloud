@@ -37,7 +37,7 @@
 	--***REMOVED***
 	<context-param***REMOVED***
 		<param-name***REMOVED***contextConfigLocation</param-name***REMOVED***
-		<param-value***REMOVED***/WEB-INF/spring/applicationContext-jdbc.xml</param-value***REMOVED***
+		<param-value***REMOVED***classpath:spring/applicationContext-jdbc.xml</param-value***REMOVED***
         <!--
 		<param-value***REMOVED***/WEB-INF/spring/applicationContext-hibernate.xml</param-value***REMOVED***
 		<param-value***REMOVED***/WEB-INF/spring/applicationContext-jpa.xml</param-value***REMOVED***

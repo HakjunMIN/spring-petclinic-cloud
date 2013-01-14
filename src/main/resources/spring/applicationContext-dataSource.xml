@@ -15,7 +15,7 @@
 
 	<!-- Configurer that replaces ${***REMOVED******REMOVED*** placeholders with values from a properties file --***REMOVED***
 	<!-- (in this case, JDBC-related settings for the dataSource definition below) --***REMOVED***
-	<context:property-placeholder location="classpath:jdbc.properties"/***REMOVED***
+	<context:property-placeholder location="classpath:spring/jdbc.properties"/***REMOVED***
 
 	<!-- DataSource configuration for Apache Commons DBCP. --***REMOVED***
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"

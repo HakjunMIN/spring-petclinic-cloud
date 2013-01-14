@@ -16,33 +16,23 @@
 	<!-- import the dataSource definition --***REMOVED***
 	<import resource="applicationContext-dataSource.xml"/***REMOVED***
 
-	<!--
-		Activates a load-time weaver for the context. Any bean within the context that
-		implements LoadTimeWeaverAware (such as LocalContainerEntityManagerFactoryBean)
-		will receive a reference to the autodetected load-time weaver.
-	--***REMOVED***
-	<context:load-time-weaver/***REMOVED***
 
 	<!-- Configurer that replaces ${***REMOVED******REMOVED*** placeholders with values from a properties file --***REMOVED***
 	<!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) --***REMOVED***
-	<context:property-placeholder location="classpath:jdbc.properties"/***REMOVED***
+	<context:property-placeholder location="classpath:spring/jdbc.properties"/***REMOVED***
 
 	<!-- JPA EntityManagerFactory --***REMOVED***
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 			p:dataSource-ref="dataSource"***REMOVED***
-		<property name="jpaVendorAdapter"***REMOVED***
-			<bean class="org.springframework.orm.jpa.vendor.TopLinkJpaVendorAdapter"
-					p:databasePlatform="${jpa.databasePlatform***REMOVED***" p:showSql="${jpa.showSql***REMOVED***"/***REMOVED***
-			<!--
-			<bean class="org.springframework.orm.jpa.vendor.OpenJpaVendorAdapter"
-					p:database="${jpa.database***REMOVED***" p:showSql="${jpa.showSql***REMOVED***"/***REMOVED***
-			--***REMOVED***
-			<!--
+		<property name="jpaVendorAdapter"***REMOVED***			
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"
-					p:database="${jpa.database***REMOVED***" p:showSql="${jpa.showSql***REMOVED***"/***REMOVED***
-			--***REMOVED***
+					p:database="${jpa.database***REMOVED***" p:showSql="${jpa.showSql***REMOVED***"/***REMOVED***			
 		</property***REMOVED***
-		<property name="persistenceXmlLocation" value="classpath:META-INF/jpa-persistence.xml"/***REMOVED***
+		<property name="packagesToScan"***REMOVED***
+			<list***REMOVED***
+				<value***REMOVED***org/springframework/samples/petclinic</value***REMOVED***
+			</list***REMOVED***
+		</property***REMOVED***
 	</bean***REMOVED***
 
 	<!-- Transaction manager for a single JPA EntityManagerFactory (alternative to JTA) --***REMOVED***

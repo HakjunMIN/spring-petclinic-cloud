@@ -43,7 +43,7 @@ public interface Clinic {
 	 * @return the <code***REMOVED***Owner</code***REMOVED*** if found
 	 * @throws org.springframework.dao.DataRetrievalFailureException if not found
 	 */
-	Owner loadOwner(int id) throws DataAccessException;
+	Owner findOwner(int id) throws DataAccessException;
 
 	/**
 	 * Retrieve a <code***REMOVED***Pet</code***REMOVED*** from the data store by id.
@@ -51,7 +51,7 @@ public interface Clinic {
 	 * @return the <code***REMOVED***Pet</code***REMOVED*** if found
 	 * @throws org.springframework.dao.DataRetrievalFailureException if not found
 	 */
-	Pet loadPet(int id) throws DataAccessException;
+	Pet findPet(int id) throws DataAccessException;
 
 	/**
 	 * Save an <code***REMOVED***Owner</code***REMOVED*** to the data store, either inserting or updating it.
