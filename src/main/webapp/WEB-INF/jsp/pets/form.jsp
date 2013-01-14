@@ -12,6 +12,7 @@
   	<div class="container"***REMOVED***
 		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
 		<img src="${banner***REMOVED***" /***REMOVED***
+		
 		<c:choose***REMOVED***
 			<c:when test="${pet['new']***REMOVED***"***REMOVED***<c:set var="method" value="post"/***REMOVED***</c:when***REMOVED***
 			<c:otherwise***REMOVED***<c:set var="method" value="put"/***REMOVED***</c:otherwise***REMOVED***
@@ -22,49 +23,42 @@
 		<b***REMOVED***Owner:</b***REMOVED*** ${pet.owner.firstName***REMOVED*** ${pet.owner.lastName***REMOVED***
 		<br/***REMOVED***
 		<form:form modelAttribute="pet" method="${method***REMOVED***"***REMOVED***
-		  <table***REMOVED***
-		    <tr***REMOVED***
-		      <th***REMOVED***
-		        Name: <form:errors path="name" cssClass="errors"/***REMOVED***
-		        <br/***REMOVED***
-		        <form:input path="name" size="30" maxlength="30"/***REMOVED***
-		      </th***REMOVED***
-		    </tr***REMOVED***
-		    <tr***REMOVED***
-		      <th***REMOVED***
-		        Birth Date: <form:errors path="birthDate" cssClass="errors"/***REMOVED***
-		        <br/***REMOVED***
-		        <form:input path="birthDate" size="10" maxlength="10"/***REMOVED*** (yyyy-mm-dd)
-		      </th***REMOVED***
-		    </tr***REMOVED***
-		    <tr***REMOVED***
-		      <th***REMOVED***
-		        Type: <form:errors path="type" cssClass="errors"/***REMOVED***
-		        <br/***REMOVED***
-		        <form:select path="type" items="${types***REMOVED***"/***REMOVED***
-		      </th***REMOVED***
-		    </tr***REMOVED***
-		    <tr***REMOVED***
-		      <td***REMOVED***
-		        <c:choose***REMOVED***
-		          <c:when test="${pet['new']***REMOVED***"***REMOVED***
-		            <p class="submit"***REMOVED***<input type="submit" value="Add Pet"/***REMOVED***</p***REMOVED***
-		          </c:when***REMOVED***
-		          <c:otherwise***REMOVED***
-		            <p class="submit"***REMOVED***<input type="submit" value="Update Pet"/***REMOVED***</p***REMOVED***
-		          </c:otherwise***REMOVED***
-		        </c:choose***REMOVED***
-		      </td***REMOVED***
-		    </tr***REMOVED***
-		  </table***REMOVED***
-		</form:form***REMOVED***
-		
-		<c:if test="${!pet['new']***REMOVED***"***REMOVED***
-		  <form:form method="delete"***REMOVED***
-		    <p class="submit"***REMOVED***<input type="submit" value="Delete Pet"/***REMOVED***</p***REMOVED***
-		  </form:form***REMOVED***
-		</c:if***REMOVED***    
-
+			<fieldset***REMOVED***
+					<div class="control-group" id="name"***REMOVED***
+						<label class="control-label"***REMOVED***Name </label***REMOVED***
+						<div class="controls"***REMOVED***
+							<form:input path="name" /***REMOVED***
+							<span class="help-inline"***REMOVED***<form:errors path="name" /***REMOVED***</span***REMOVED***
+						</div***REMOVED***
+					</div***REMOVED***
+					<div class="control-group" id="birthDate"***REMOVED***
+						<label class="control-label"***REMOVED***Birth Date </label***REMOVED***
+						<div class="controls"***REMOVED***
+							<form:input path="birthDate" /***REMOVED***
+							<span class="help-inline"***REMOVED***<form:errors path="birthDate" /***REMOVED***</span***REMOVED***
+						</div***REMOVED***
+					</div***REMOVED***
+					<div class="control-group" id="type"***REMOVED***
+						<label class="control-label"***REMOVED***Type </label***REMOVED***
+							<form:select path="type" items="${types***REMOVED***"/***REMOVED***
+					</div***REMOVED***
+					<div class="form-actions"***REMOVED***
+						<c:choose***REMOVED***
+				          <c:when test="${owner['new']***REMOVED***"***REMOVED***
+				            <button type="submit"***REMOVED***Add Pet</button***REMOVED***
+				          </c:when***REMOVED***
+				          <c:otherwise***REMOVED***
+				            <button type="submit"***REMOVED***Update Pet</button***REMOVED***
+				          </c:otherwise***REMOVED***
+				        </c:choose***REMOVED***
+					</div***REMOVED***
+				</fieldset***REMOVED***	
+			</form:form***REMOVED***	
+			<c:if test="${!pet['new']***REMOVED***"***REMOVED***
+			  <form:form method="delete"***REMOVED***
+			    <p class="submit"***REMOVED***<input type="submit" value="Delete Pet"/***REMOVED***</p***REMOVED***
+			  </form:form***REMOVED***
+			</c:if***REMOVED***    
   	</div***REMOVED***
 	<jsp:include page="../footer.jsp"/***REMOVED***
 </body***REMOVED***

@@ -14,23 +14,42 @@
 		- The controllers are autodetected POJOs labeled with the @Controller annotation.
 	--***REMOVED***
 	<context:component-scan base-package="org.springframework.samples.petclinic.web"/***REMOVED***
-
-	<!--
-		- The form-based controllers within this application provide @RequestMapping 
-		- annotations at the type level for path mapping URLs and @RequestMapping 
-		- at the method level for request type mappings (e.g., GET and POST). 
-		- In contrast, ClinicController - which is not form-based - provides 
-		- @RequestMapping only at the method level for path mapping URLs.
-		-
-		- DefaultAnnotationHandlerMapping is driven by these annotations and is 
-		- enabled by default with Java 5+.
-	--***REMOVED***
+	
+	
+	<mvc:annotation-driven  /***REMOVED*** 
+	<!--  <mvc:annotation-driven content-negotiation-manager="contentNegotiationManager" /***REMOVED***  --***REMOVED***
+	
+	<!--  all resources inside folder src/main/webapp/resources are mapped so they can be refered to inside JSP files
+		(see header.jsp for more details) --***REMOVED***
+	<mvc:resources mapping="/resources/**" location="/resources/"/***REMOVED***
+	
+	<!-- uses WebJars so Javascript and CSS libs can be declared as Maven dependencies (we're using it for Bootstrap) --***REMOVED***
+	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/***REMOVED***
+	
 	
 	<!--
-		- This bean processes annotated handler methods, applying PetClinic-specific PropertyEditors
-		- for request parameter binding. It overrides the default AnnotationMethodHandlerAdapter.
+
+		- This bean configures the 'prefix' and 'suffix' properties of
+		- InternalResourceViewResolver, which resolves logical view names
+		- returned by Controllers. For example, a logical view name of "vets"
+		- will be mapped to "/WEB-INF/jsp/vets.jsp".
 	--***REMOVED***
-	 <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"***REMOVED***
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/jsp/"
+			p:suffix=".jsp" /***REMOVED***
+			
+	<!--
+		- Message source for this context, loaded from localized "messages_xx" files.
+		- Files are stored inside src/main/resources
+	--***REMOVED***
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
+			p:basename="messages"/***REMOVED***
+	
+
+	
+	<!--
+		Processes annotated handler methods, applying PetClinic-specific request parameter binding. 
+	--***REMOVED***
+	 <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"***REMOVED***
 		<property name="webBindingInitializer"***REMOVED*** 
 			<bean class="org.springframework.samples.petclinic.web.ClinicBindingInitializer"/***REMOVED***
 		</property***REMOVED***
@@ -61,14 +80,9 @@
 		- property of the vets view bean, setting it to 'application/vnd.springsource.samples.petclinic+xml'.
 	--***REMOVED***
 	
-	<mvc:annotation-driven content-negotiation-manager="contentNegotiationManager" /***REMOVED*** 
-
-	<mvc:resources mapping="/resources/**" location="/resources/"/***REMOVED***
-	
-	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/***REMOVED***
 	
 
-	<bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean"***REMOVED***
+	<!-- <bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean"***REMOVED***
 	    <property name="favorPathExtension" value="false" /***REMOVED***
 	    <property name="favorParameter" value="true" /***REMOVED***
 	    <property name="mediaTypes"***REMOVED***
@@ -78,7 +92,7 @@
 	            xml=application/xml
 	        </value***REMOVED***
 	    </property***REMOVED***
-	</bean***REMOVED***
+	</bean***REMOVED*** --***REMOVED***
 
 	
 	<!--
@@ -87,21 +101,12 @@
 		- be the first view resolver to be used after the delegating content
 		- negotiating view resolver.
 	 --***REMOVED***
-	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" /***REMOVED***
-	<!--
-
-		- This bean configures the 'prefix' and 'suffix' properties of
-		- InternalResourceViewResolver, which resolves logical view names
-		- returned by Controllers. For example, a logical view name of "vets"
-		- will be mapped to "/WEB-INF/jsp/vets.jsp".
-	--***REMOVED***
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/jsp/"
-			p:suffix=".jsp" /***REMOVED***
+	<!-- <bean class="org.springframework.web.servlet.view.BeanNameViewResolver" /***REMOVED*** --***REMOVED***
 
 	
 	<!-- 	- The AtomView rendering a Atom feed of the visits  --***REMOVED***
 	 
-	<bean id="visits" class="org.springframework.samples.petclinic.web.VisitsAtomView"/***REMOVED***
+	<!-- <bean id="visits" class="org.springframework.samples.petclinic.web.VisitsAtomView"/***REMOVED***
 
 	<bean id="vets" class="org.springframework.web.servlet.view.xml.MarshallingView"***REMOVED***
 		<property name="contentType" value="application/vnd.springsource.samples.petclinic+xml"/***REMOVED***
@@ -110,14 +115,8 @@
 
 	<oxm:jaxb2-marshaller id="marshaller"***REMOVED***
 		<oxm:class-to-be-bound name="org.springframework.samples.petclinic.Vets"/***REMOVED***
-	</oxm:jaxb2-marshaller***REMOVED***
+	</oxm:jaxb2-marshaller***REMOVED*** --***REMOVED***
 
-	<!--
-		- Message source for this context, loaded from localized "messages_xx" files.
-		- Could also reside in the root application context, as it is generic,
-		- but is currently just used within PetClinic's web tier.
-	--***REMOVED***
-	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
-			p:basename="messages"/***REMOVED***
+
 
 </beans***REMOVED***

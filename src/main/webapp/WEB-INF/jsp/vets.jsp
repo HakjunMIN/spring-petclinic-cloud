@@ -15,7 +15,7 @@
 
 		<h2***REMOVED***Veterinarians</h2***REMOVED***
 		
-			<table***REMOVED***
+			<table class="table table-stripped" style="width:600px;"***REMOVED***
 			  <thead***REMOVED***
 			  	<tr***REMOVED***
 				    <th***REMOVED***Name</th***REMOVED***
@@ -44,8 +44,8 @@
 			  </tr***REMOVED***
 			</table***REMOVED***
 	
+			<jsp:include page="footer.jsp"/***REMOVED***
 	  	</div***REMOVED***
-		<jsp:include page="footer.jsp"/***REMOVED***
 	</body***REMOVED***
 
 </html***REMOVED***

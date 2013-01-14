@@ -10,11 +10,9 @@
 <jsp:include page="../header.jsp"/***REMOVED***
 
 <body***REMOVED***
-	<div id="header well"***REMOVED***
+  	<div class="container" style="padding-top: 50px;"***REMOVED***
 		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
 		<img src="${banner***REMOVED***" /***REMOVED***
-	</div***REMOVED***
-  	<div class="container" style="padding-top: 50px;"***REMOVED***
 		<c:choose***REMOVED***
 			<c:when test="${owner['new']***REMOVED***"***REMOVED***<c:set var="method" value="post"/***REMOVED***</c:when***REMOVED***
 			<c:otherwise***REMOVED***<c:set var="method" value="put"/***REMOVED***</c:otherwise***REMOVED***

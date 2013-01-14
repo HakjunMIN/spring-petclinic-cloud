@@ -92,7 +92,7 @@
 	    <table class="table-buttons"***REMOVED***
 	      <tr***REMOVED***
 	        <td***REMOVED***
-	          <***REMOVED***url value="{ownerId***REMOVED***/pets/{petId***REMOVED***/edit" var="petUrl"***REMOVED***
+	          <***REMOVED***url value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/edit" var="petUrl"***REMOVED***
 	            <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
 	            <***REMOVED***param name="petId" value="${pet.id***REMOVED***"/***REMOVED***
 	          </***REMOVED***url***REMOVED***
@@ -100,7 +100,7 @@
 	        </td***REMOVED***
 	        <td***REMOVED***</td***REMOVED***
 	        <td***REMOVED***
-	          <***REMOVED***url value="{ownerId***REMOVED***/pets/{petId***REMOVED***/visits/new" var="visitUrl"***REMOVED***
+	          <***REMOVED***url value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits/new" var="visitUrl"***REMOVED***
 	            <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
 	            <***REMOVED***param name="petId" value="${pet.id***REMOVED***"/***REMOVED***
 	          </***REMOVED***url***REMOVED***
@@ -108,7 +108,7 @@
 	        </td***REMOVED***
 	        <td***REMOVED***</td***REMOVED***
 	        <td***REMOVED***
-	          <***REMOVED***url value="{ownerId***REMOVED***/pets/{petId***REMOVED***/visits.atom" var="feedUrl"***REMOVED***
+	          <***REMOVED***url value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits.atom" var="feedUrl"***REMOVED***
 	            <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
 	            <***REMOVED***param name="petId" value="${pet.id***REMOVED***"/***REMOVED***
 	          </***REMOVED***url***REMOVED***
