@@ -42,7 +42,7 @@
 		- Files are stored inside src/main/resources
 	--***REMOVED***
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
-			p:basename="messages"/***REMOVED***
+			p:basename="messages/messages"/***REMOVED***
 	
 
 	
