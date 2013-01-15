@@ -8,7 +8,6 @@
 <jsp:include page="../header.jsp"/***REMOVED***
 
 <body***REMOVED***
-
 	<div class="container"***REMOVED***
 		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
 		<img src="${banner***REMOVED***" /***REMOVED***
@@ -16,9 +15,9 @@
 		<h2***REMOVED***Find Owners</h2***REMOVED***
 		
 		<***REMOVED***url value="/owners.html" var="formUrl"/***REMOVED***
-		<form:form modelAttribute="owner" action="${fn:escapeXml(formUrl)***REMOVED***" method="get" class="form-horizontal" style="width:600px;"***REMOVED***
+		<form:form modelAttribute="owner" action="${fn:escapeXml(formUrl)***REMOVED***" method="get" class="form-horizontal" id="search-owner-form"***REMOVED***
 					<fieldset***REMOVED***
-						<div class="controls"***REMOVED***
+						<div class="control-group" id="lastName"***REMOVED***
 							<label class="control-label"***REMOVED***Last name </label***REMOVED***
 							<form:input path="lastName" size="30" maxlength="80"/***REMOVED***
 							<span class="help-inline"***REMOVED***<form:errors path="*" /***REMOVED***</span***REMOVED***

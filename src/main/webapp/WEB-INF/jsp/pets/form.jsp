@@ -22,7 +22,7 @@
 		
 		<b***REMOVED***Owner:</b***REMOVED*** ${pet.owner.firstName***REMOVED*** ${pet.owner.lastName***REMOVED***
 		<br/***REMOVED***
-		<form:form modelAttribute="pet" method="${method***REMOVED***"***REMOVED***
+		<form:form modelAttribute="pet" method="${method***REMOVED***" class="form-horizontal"***REMOVED***
 			<fieldset***REMOVED***
 					<div class="control-group" id="name"***REMOVED***
 						<label class="control-label"***REMOVED***Name </label***REMOVED***
@@ -40,7 +40,7 @@
 					</div***REMOVED***
 					<div class="control-group" id="type"***REMOVED***
 						<label class="control-label"***REMOVED***Type </label***REMOVED***
-							<form:select path="type" items="${types***REMOVED***"/***REMOVED***
+						<form:select path="type" items="${types***REMOVED***"/***REMOVED***
 					</div***REMOVED***
 					<div class="form-actions"***REMOVED***
 						<c:choose***REMOVED***
@@ -59,8 +59,8 @@
 			    <p class="submit"***REMOVED***<input type="submit" value="Delete Pet"/***REMOVED***</p***REMOVED***
 			  </form:form***REMOVED***
 			</c:if***REMOVED***    
+			<jsp:include page="../footer.jsp"/***REMOVED***
   	</div***REMOVED***
-	<jsp:include page="../footer.jsp"/***REMOVED***
 </body***REMOVED***
 
 </html***REMOVED***
