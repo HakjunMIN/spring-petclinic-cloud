@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * <p***REMOVED***
- * Integration tests for the {@link JdbcClinic***REMOVED*** implementation.
+ * Integration tests for the {@link JdbcClinicImpl***REMOVED*** implementation.
  * </p***REMOVED***
  * <p***REMOVED***
  * </p***REMOVED***
@@ -21,7 +21,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @DirtiesContext
 @ActiveProfiles("jdbc")
-public class JdbcClinicTests extends AbstractClinicTests {
+public class JdbcClinicImplTests extends AbstractClinicTests {
 	
 	
 

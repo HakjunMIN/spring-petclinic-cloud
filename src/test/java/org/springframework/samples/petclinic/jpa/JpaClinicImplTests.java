@@ -36,8 +36,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @ContextConfiguration(locations={"classpath:spring/applicationContext-dao.xml"***REMOVED***)
 @RunWith(SpringJUnit4ClassRunner.class)
-@ActiveProfiles("jpa")
-public class JpaClinicTests extends AbstractClinicTests {
+@ActiveProfiles({"jpa","plain-jpa"***REMOVED***)
+public class JpaClinicImplTests extends AbstractClinicTests {
 	
 	@PersistenceContext
 	private EntityManager entityManager;
