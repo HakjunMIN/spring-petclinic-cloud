@@ -54,14 +54,14 @@ public class EditPetController {
 	public String setupForm(@PathVariable("petId") int petId, Model model) {
 		Pet pet = this.clinic.findPet(petId);
 		model.addAttribute("pet", pet);
-		return "pets/form";
+		return "pets/createOrUpdatePetForm";
 	***REMOVED***
 
 	@RequestMapping(method = { RequestMethod.PUT, RequestMethod.POST ***REMOVED***)
 	public String processSubmit(@ModelAttribute("pet") Pet pet, BindingResult result, SessionStatus status) {
 		new PetValidator().validate(pet, result);
 		if (result.hasErrors()) {
-			return "pets/form";
+			return "pets/createOrUpdatePetForm";
 		***REMOVED***
 		else {
 			this.clinic.storePet(pet);

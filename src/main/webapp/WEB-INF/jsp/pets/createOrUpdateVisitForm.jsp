@@ -18,7 +18,7 @@
 		
 		<form:form modelAttribute="visit"***REMOVED***
 		  <b***REMOVED***Pet:</b***REMOVED***
-		  <table width="333"***REMOVED***
+		  <table  class="table table-striped"***REMOVED***
 		    <thead***REMOVED***
 		    	<tr***REMOVED***
 			      <th***REMOVED***Name</th***REMOVED***
@@ -35,7 +35,7 @@
 		    </tr***REMOVED***
 		  </table***REMOVED***
 		
-		  <table width="333"***REMOVED***
+		  <table class="table"***REMOVED***
 		    <tr***REMOVED***
 		      <th***REMOVED***
 		        Date:

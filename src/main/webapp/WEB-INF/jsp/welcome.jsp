@@ -14,7 +14,7 @@
 		<h2***REMOVED***<fmt:message key="welcome"/***REMOVED***</h2***REMOVED***
 		
 		<ul class="unstyled"***REMOVED***
-		  <li***REMOVED***<a href="<***REMOVED***url value="/owners/search.html" htmlEscape="true" /***REMOVED***"***REMOVED***Find owner</a***REMOVED***</li***REMOVED***
+		  <li***REMOVED***<a href="<***REMOVED***url value="/owners/find.html" htmlEscape="true" /***REMOVED***"***REMOVED***Find owner</a***REMOVED***</li***REMOVED***
 		  <li***REMOVED***<a href="<***REMOVED***url value="/vets.html" htmlEscape="true" /***REMOVED***"***REMOVED***Display all veterinarians</a***REMOVED***</li***REMOVED***
 		  <li***REMOVED***<a href="<***REMOVED***url value="/resources/html/tutorial.html" htmlEscape="true" /***REMOVED***"***REMOVED***Tutorial</a***REMOVED***</li***REMOVED***
 		</ul***REMOVED***

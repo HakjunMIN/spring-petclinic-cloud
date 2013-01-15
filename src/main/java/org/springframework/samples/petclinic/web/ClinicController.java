@@ -59,7 +59,7 @@ public class ClinicController {
 		Vets vets = new Vets();
 		vets.getVetList().addAll(this.clinic.getVets());
 		model.addAttribute("vets", vets);
-		return "vets";
+		return "vetsList";
 	***REMOVED***
 
 	/**
@@ -70,7 +70,7 @@ public class ClinicController {
 	 */
 	@RequestMapping("/owners/{ownerId***REMOVED***")
 	public ModelAndView showOwner(@PathVariable("ownerId") int ownerId) {
-		ModelAndView mav = new ModelAndView("owners/show");
+		ModelAndView mav = new ModelAndView("owners/ownerDetails");
 		mav.addObject(this.clinic.findOwner(ownerId));
 		return mav;
 	***REMOVED***

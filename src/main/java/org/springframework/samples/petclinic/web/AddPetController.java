@@ -58,14 +58,14 @@ public class AddPetController {
 		Pet pet = new Pet();
 		owner.addPet(pet);
 		model.addAttribute("pet", pet);
-		return "pets/form";
+		return "pets/createOrUpdatePetForm";
 	***REMOVED***
 
 	@RequestMapping(method = RequestMethod.POST)
 	public String processSubmit(@ModelAttribute("pet") Pet pet, BindingResult result, SessionStatus status) {
 		new PetValidator().validate(pet, result);
 		if (result.hasErrors()) {
-			return "pets/form";
+			return "pets/createOrUpdatePetForm";
 		***REMOVED***
 		else {
 			this.clinic.storePet(pet);
