@@ -15,8 +15,8 @@
 
 		<h2***REMOVED***Find Owners</h2***REMOVED***
 		
-		<***REMOVED***url value="/owners" var="formUrl"/***REMOVED***
-		<form:form modelAttribute="owner" action="${fn:escapeXml(formUrl)***REMOVED***" method="get" class="form-horizontal"***REMOVED***
+		<***REMOVED***url value="/owners.html" var="formUrl"/***REMOVED***
+		<form:form modelAttribute="owner" action="${fn:escapeXml(formUrl)***REMOVED***" method="get" class="form-horizontal" style="width:600px;"***REMOVED***
 					<fieldset***REMOVED***
 						<div class="controls"***REMOVED***
 							<label class="control-label"***REMOVED***Last name </label***REMOVED***

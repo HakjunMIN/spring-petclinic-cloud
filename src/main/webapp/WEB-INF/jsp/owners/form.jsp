@@ -10,7 +10,7 @@
 <jsp:include page="../header.jsp"/***REMOVED***
 
 <body***REMOVED***
-  	<div class="container" style="padding-top: 50px;"***REMOVED***
+  	<div class="container"***REMOVED***
 		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
 		<img src="${banner***REMOVED***" /***REMOVED***
 		<c:choose***REMOVED***
@@ -18,7 +18,9 @@
 			<c:otherwise***REMOVED***<c:set var="method" value="put"/***REMOVED***</c:otherwise***REMOVED***
 		</c:choose***REMOVED***
 		
-		<h2***REMOVED***<c:if test="${owner['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Owner</h2***REMOVED***
+		<h2***REMOVED***
+			<c:if test="${owner['new']***REMOVED***"***REMOVED***New </c:if***REMOVED*** Owner
+		</h2***REMOVED***
 		<form:form modelAttribute="owner" method="${method***REMOVED***" class="form-horizontal" id="add-owner-form"***REMOVED***
 			<fieldset***REMOVED***
 					<div class="control-group" id="firstName"***REMOVED***

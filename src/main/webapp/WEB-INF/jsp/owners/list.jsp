@@ -29,7 +29,7 @@
 		  <c:forEach var="owner" items="${selections***REMOVED***"***REMOVED***
 		    <tr***REMOVED***
 		      <td***REMOVED***
-		          <***REMOVED***url value="owners/{ownerId***REMOVED***" var="ownerUrl"***REMOVED***
+		          <***REMOVED***url value="owners/{ownerId***REMOVED***.html" var="ownerUrl"***REMOVED***
 		              <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
 		          </***REMOVED***url***REMOVED***
 		          <a href="${fn:escapeXml(ownerUrl)***REMOVED***"***REMOVED***${owner.firstName***REMOVED*** ${owner.lastName***REMOVED***</a***REMOVED***
