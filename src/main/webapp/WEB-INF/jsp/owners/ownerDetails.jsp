@@ -36,13 +36,13 @@
 	  <table class="table-buttons"***REMOVED***
 	    <tr***REMOVED***
 	      <td colspan="2" align="center"***REMOVED***
-	        <***REMOVED***url value="{ownerId***REMOVED***/edit" var="editUrl"***REMOVED***
+	        <***REMOVED***url value="{ownerId***REMOVED***/edit.html" var="editUrl"***REMOVED***
 	        	<***REMOVED***param name="ownerId" value="${owner.id***REMOVED***" /***REMOVED***
 	        </***REMOVED***url***REMOVED***
 	        <a href="${fn:escapeXml(editUrl)***REMOVED***"***REMOVED***Edit Owner</a***REMOVED***
 	      </td***REMOVED***
 	      <td***REMOVED***
-	        <***REMOVED***url value="{ownerId***REMOVED***/pets/new" var="addUrl"***REMOVED***
+	        <***REMOVED***url value="{ownerId***REMOVED***/pets/new.html" var="addUrl"***REMOVED***
 	        	<***REMOVED***param name="ownerId" value="${owner.id***REMOVED***" /***REMOVED***
 	        </***REMOVED***url***REMOVED***
 	        <a href="${fn:escapeXml(addUrl)***REMOVED***"***REMOVED***Add New Pet</a***REMOVED***

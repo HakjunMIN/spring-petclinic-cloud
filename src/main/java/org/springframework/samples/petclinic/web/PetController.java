@@ -30,15 +30,14 @@ import org.springframework.web.bind.support.SessionStatus;
  * @author Arjen Poutsma
  */
 @Controller
-@RequestMapping("/owners/{ownerId***REMOVED***/pets/new")
 @SessionAttributes("pet")
-public class AddPetController {
+public class PetController {
 
 	private final Clinic clinic;
 
 
 	@Autowired
-	public AddPetController(Clinic clinic) {
+	public PetController(Clinic clinic) {
 		this.clinic = clinic;
 	***REMOVED***
 
@@ -52,8 +51,8 @@ public class AddPetController {
 		dataBinder.setDisallowedFields("id");
 	***REMOVED***
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String setupForm(@PathVariable("ownerId") int ownerId, Model model) {
+	@RequestMapping( method = RequestMethod.GET)
+	public String initCreationForm(@PathVariable("ownerId") int ownerId, Model model) {
 		Owner owner = this.clinic.findOwner(ownerId);
 		Pet pet = new Pet();
 		owner.addPet(pet);
@@ -61,8 +60,8 @@ public class AddPetController {
 		return "pets/createOrUpdatePetForm";
 	***REMOVED***
 
-	@RequestMapping(method = RequestMethod.POST)
-	public String processSubmit(@ModelAttribute("pet") Pet pet, BindingResult result, SessionStatus status) {
+	@RequestMapping(value="/owners/{ownerId***REMOVED***/pets/new", method = RequestMethod.POST)
+	public String processCreationForm(@ModelAttribute("pet") Pet pet, BindingResult result, SessionStatus status) {
 		new PetValidator().validate(pet, result);
 		if (result.hasErrors()) {
 			return "pets/createOrUpdatePetForm";
@@ -72,6 +71,34 @@ public class AddPetController {
 			status.setComplete();
 			return "redirect:/owners/" + pet.getOwner().getId();
 		***REMOVED***
+	***REMOVED***
+	
+	@RequestMapping(value="/owners/*/pets/{petId***REMOVED***/edit", method = RequestMethod.GET)
+	public String initUpdateForm(@PathVariable("petId") int petId, Model model) {
+		Pet pet = this.clinic.findPet(petId);
+		model.addAttribute("pet", pet);
+		return "pets/createOrUpdatePetForm";
+	***REMOVED***
+
+	@RequestMapping(value="/owners/*/pets/{petId***REMOVED***/edit", method = { RequestMethod.PUT, RequestMethod.POST ***REMOVED***)
+	public String processUpdateForm(@ModelAttribute("pet") Pet pet, BindingResult result, SessionStatus status) {
+		// we're not using @Valid annotation here because it is easier to define such validation rule in Java
+		new PetValidator().validate(pet, result);
+		if (result.hasErrors()) {
+			return "pets/createOrUpdatePetForm";
+		***REMOVED***
+		else {
+			this.clinic.storePet(pet);
+			status.setComplete();
+			return "redirect:/owners/" + pet.getOwner().getId();
+		***REMOVED***
+	***REMOVED***
+
+	@RequestMapping(value="/owners/*/pets/{petId***REMOVED***/edit", method = RequestMethod.DELETE)
+	public String deletePet(@PathVariable("petId") int petId) {
+		Pet pet = this.clinic.findPet(petId);
+		this.clinic.deletePet(petId);
+		return "redirect:/owners/" + pet.getOwner().getId();
 	***REMOVED***
 
 ***REMOVED***
