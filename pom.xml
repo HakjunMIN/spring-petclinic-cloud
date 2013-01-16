@@ -13,6 +13,7 @@
 		<log4j.version***REMOVED***1.2.17</log4j.version***REMOVED***
 		<hibernate.version***REMOVED***4.1.4.Final</hibernate.version***REMOVED***
 		<aspectj.version***REMOVED***1.7.1</aspectj.version***REMOVED***
+		<hibernate.validator.version***REMOVED***4.2.0.Final</hibernate.validator.version***REMOVED***
 	</properties***REMOVED***
 	<dependencies***REMOVED*** 
 
@@ -117,6 +118,12 @@
 			<artifactId***REMOVED***hibernate-entitymanager</artifactId***REMOVED***
 			<version***REMOVED***${hibernate.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
+		
+		<dependency***REMOVED***
+				<groupId***REMOVED***org.hibernate</groupId***REMOVED***
+				<artifactId***REMOVED***hibernate-validator</artifactId***REMOVED***
+				<version***REMOVED***${hibernate.validator.version***REMOVED***</version***REMOVED***
+			</dependency***REMOVED***
 		
 		<!-- ********************************************************************** 
 			 ** 				SPRING DATA			 							 ** 

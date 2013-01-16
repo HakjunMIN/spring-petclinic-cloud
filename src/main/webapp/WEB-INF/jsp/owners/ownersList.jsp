@@ -45,9 +45,9 @@
 		    </tr***REMOVED***
 		  </c:forEach***REMOVED***
 		</table***REMOVED***
+		<jsp:include page="../footer.jsp"/***REMOVED***
 	
 	  	</div***REMOVED***
-		<jsp:include page="../footer.jsp"/***REMOVED***
 </body***REMOVED***
 
 </html***REMOVED***
