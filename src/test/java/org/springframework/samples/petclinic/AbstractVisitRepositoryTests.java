@@ -8,6 +8,9 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.samples.petclinic.repository.PetRepository;
+import org.springframework.samples.petclinic.repository.VisitRepository;
+import org.springframework.samples.petclinic.service.ClinicService;
 import org.springframework.samples.petclinic.util.EntityUtils;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
@@ -15,14 +18,14 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p***REMOVED***
- * Base class for {@link Clinic***REMOVED*** integration tests.
+ * Base class for {@link ClinicService***REMOVED*** integration tests.
  * </p***REMOVED***
  * <p***REMOVED***
  * &quot;AbstractClinicTests-context.xml&quot; declares a common
  * {@link javax.sql.DataSource DataSource***REMOVED***. Subclasses should specify
  * additional context locations which declare a
  * {@link org.springframework.transaction.PlatformTransactionManager PlatformTransactionManager***REMOVED***
- * and a concrete implementation of {@link Clinic***REMOVED***.
+ * and a concrete implementation of {@link ClinicService***REMOVED***.
  * </p***REMOVED***
  * <p***REMOVED***
  * This class extends {@link AbstractTransactionalJUnit4SpringContextTests***REMOVED***,
@@ -48,9 +51,9 @@ import org.springframework.transaction.annotation.Transactional;
  * unnecessary set up time between test execution.</li***REMOVED***
  * <li***REMOVED***<strong***REMOVED***Dependency Injection</strong***REMOVED*** of test fixture instances,
  * meaning that we don't need to perform application context lookups. See the
- * use of {@link Autowired @Autowired***REMOVED*** on the <code***REMOVED***clinic</code***REMOVED*** instance
+ * use of {@link Autowired @Autowired***REMOVED*** on the <code***REMOVED***petRepository</code***REMOVED*** instance
  * variable, which uses autowiring <em***REMOVED***by type</em***REMOVED***. As an alternative, we
- * could annotate <code***REMOVED***clinic</code***REMOVED*** with
+ * could annotate <code***REMOVED***petRepository</code***REMOVED*** with
  * {@link javax.annotation.Resource @Resource***REMOVED*** to achieve dependency injection
  * <em***REMOVED***by name</em***REMOVED***.
  * <em***REMOVED***(see: {@link ContextConfiguration @ContextConfiguration***REMOVED***,
@@ -81,140 +84,27 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Juergen Hoeller
  * @author Sam Brannen
  */
-public abstract class AbstractClinicTests {
+public abstract class AbstractVisitRepositoryTests {
 
 	@Autowired
-	protected Clinic clinic;
+	protected VisitRepository visitRepository;
+	
+	@Autowired
+	protected PetRepository petRepository;
 
-
-	@Test @Transactional
-	public void getVets() {
-		Collection<Vet***REMOVED*** vets = this.clinic.getVets();
-		
-		Vet v1 = EntityUtils.getById(vets, Vet.class, 2);
-		assertEquals("Leary", v1.getLastName());
-		assertEquals(1, v1.getNrOfSpecialties());
-		assertEquals("radiology", (v1.getSpecialties().get(0)).getName());
-		Vet v2 = EntityUtils.getById(vets, Vet.class, 3);
-		assertEquals("Douglas", v2.getLastName());
-		assertEquals(2, v2.getNrOfSpecialties());
-		assertEquals("dentistry", (v2.getSpecialties().get(0)).getName());
-		assertEquals("surgery", (v2.getSpecialties().get(1)).getName());
-	***REMOVED***
-
-	@Test
-	public void getPetTypes() {
-		Collection<PetType***REMOVED*** petTypes = this.clinic.getPetTypes();
-		
-		PetType t1 = EntityUtils.getById(petTypes, PetType.class, 1);
-		assertEquals("cat", t1.getName());
-		PetType t4 = EntityUtils.getById(petTypes, PetType.class, 4);
-		assertEquals("snake", t4.getName());
-	***REMOVED***
-
-	@Test
-	public void findOwners() {
-		Collection<Owner***REMOVED*** owners = this.clinic.findOwners("Davis");
-		assertEquals(2, owners.size());
-		owners = this.clinic.findOwners("Daviss");
-		assertEquals(0, owners.size());
-	***REMOVED***
-
-	@Test @Transactional
-	public void findOwner() {
-		Owner o1 = this.clinic.findOwner(1);
-		assertTrue(o1.getLastName().startsWith("Franklin"));
-		Owner o10 = this.clinic.findOwner(10);
-		assertEquals("Carlos", o10.getFirstName());
-
-		// XXX: Add programmatic support for ending transactions with the
-		// TestContext Framework.
-
-		// Check lazy loading, by ending the transaction:
-		// endTransaction();
-
-		// Now Owners are "disconnected" from the data store.
-		// We might need to touch this collection if we switched to lazy loading
-		// in mapping files, but this test would pick this up.
-		o1.getPets();
-	***REMOVED***
-
-	@Test
-	public void insertOwner() {
-		Collection<Owner***REMOVED*** owners = this.clinic.findOwners("Schultz");
-		int found = owners.size();
-		Owner owner = new Owner();
-		owner.setLastName("Schultz");
-		this.clinic.storeOwner(owner);
-		// assertTrue(!owner.isNew()); -- NOT TRUE FOR TOPLINK (before commit)
-		owners = this.clinic.findOwners("Schultz");
-		assertEquals("Verifying number of owners after inserting a new one.", found + 1, owners.size());
-	***REMOVED***
-
-	@Test
-	public void updateOwner() throws Exception {
-		Owner o1 = this.clinic.findOwner(1);
-		String old = o1.getLastName();
-		o1.setLastName(old + "X");
-		this.clinic.storeOwner(o1);
-		o1 = this.clinic.findOwner(1);
-		assertEquals(old + "X", o1.getLastName());
-	***REMOVED***
-
-	@Test
-	public void findPet() {
-		Collection<PetType***REMOVED*** types = this.clinic.getPetTypes();
-		Pet p7 = this.clinic.findPet(7);
-		assertTrue(p7.getName().startsWith("Samantha"));
-		assertEquals(EntityUtils.getById(types, PetType.class, 1).getId(), p7.getType().getId());
-		assertEquals("Jean", p7.getOwner().getFirstName());
-		Pet p6 = this.clinic.findPet(6);
-		assertEquals("George", p6.getName());
-		assertEquals(EntityUtils.getById(types, PetType.class, 4).getId(), p6.getType().getId());
-		assertEquals("Peter", p6.getOwner().getFirstName());
-	***REMOVED***
-
-	@Test @Transactional
-	public void insertPet() {
-		Owner o6 = this.clinic.findOwner(6);
-		int found = o6.getPets().size();
-		Pet pet = new Pet();
-		pet.setName("bowser");
-		Collection<PetType***REMOVED*** types = this.clinic.getPetTypes();
-		pet.setType(EntityUtils.getById(types, PetType.class, 2));
-		pet.setBirthDate(new Date());
-		o6.addPet(pet);
-		assertEquals(found + 1, o6.getPets().size());
-		// both storePet and storeOwner are necessary to cover all ORM tools
-		this.clinic.storePet(pet);
-		this.clinic.storeOwner(o6);
-		// assertTrue(!pet.isNew()); -- NOT TRUE FOR TOPLINK (before commit)
-		o6 = this.clinic.findOwner(6);
-		assertEquals(found + 1, o6.getPets().size());
-	***REMOVED***
-
-	@Test
-	public void updatePet() throws Exception {
-		Pet p7 = this.clinic.findPet(7);
-		String old = p7.getName();
-		p7.setName(old + "X");
-		this.clinic.storePet(p7);
-		p7 = this.clinic.findPet(7);
-		assertEquals(old + "X", p7.getName());
-	***REMOVED***
 
 	@Test  @Transactional
 	public void insertVisit() {
-		Pet p7 = this.clinic.findPet(7);
+		Pet p7 = this.petRepository.findById(7);
 		int found = p7.getVisits().size();
 		Visit visit = new Visit();
 		p7.addVisit(visit);
 		visit.setDescription("test");
 		// both storeVisit and storePet are necessary to cover all ORM tools
-		this.clinic.storeVisit(visit);
-		this.clinic.storePet(p7);
+		this.visitRepository.storeVisit(visit);
+		this.petRepository.storePet(p7);
 		// assertTrue(!visit.isNew()); -- NOT TRUE FOR TOPLINK (before commit)
-		p7 = this.clinic.findPet(7);
+		p7 = this.petRepository.findById(7);
 		assertEquals(found + 1, p7.getVisits().size());
 	***REMOVED***
 

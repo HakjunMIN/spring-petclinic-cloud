@@ -13,7 +13,7 @@
 	<!--
 		- The controllers are autodetected POJOs labeled with the @Controller annotation.
 	--***REMOVED***
-	<context:component-scan base-package="org.springframework.samples.petclinic.web"/***REMOVED***
+	<context:component-scan base-package="org.springframework.samples.petclinic.web, org.springframework.samples.petclinic.service"/***REMOVED***
 	
 	
 	 <mvc:annotation-driven  /***REMOVED***
@@ -24,6 +24,8 @@
 	
 	<!-- uses WebJars so Javascript and CSS libs can be declared as Maven dependencies (we're using it for Bootstrap) --***REMOVED***
 	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/***REMOVED***
+	
+	<mvc:view-controller path="/" view-name="welcome"/***REMOVED***
 	
 	
 <!--

@@ -1,7 +1,8 @@
 package org.springframework.samples.petclinic.jdbc;
 
 import org.junit.runner.RunWith;
-import org.springframework.samples.petclinic.AbstractClinicTests;
+import org.springframework.samples.petclinic.AbstractVetRepositoryTests;
+import org.springframework.samples.petclinic.repository.jdbc.JdbcClinicImpl;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
@@ -21,7 +22,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @DirtiesContext
 @ActiveProfiles("jdbc")
-public class JdbcClinicImplTests extends AbstractClinicTests {
+public class JdbcVetRepositoryImplTests extends AbstractVetRepositoryTests {
 	
 	
 

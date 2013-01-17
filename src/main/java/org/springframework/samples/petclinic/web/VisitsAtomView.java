@@ -41,7 +41,7 @@ public class VisitsAtomView extends AbstractAtomFeedView {
 	@Override
 	protected void buildFeedMetadata(Map<String, Object***REMOVED*** model, Feed feed, HttpServletRequest request) {
 		feed.setId("tag:springsource.com");
-		feed.setTitle("Pet Clinic Visits");
+		feed.setTitle("Pet ClinicService Visits");
 		@SuppressWarnings("unchecked")
 		List<Visit***REMOVED*** visits = (List<Visit***REMOVED***) model.get("visits");
 		for (Visit visit : visits) {
