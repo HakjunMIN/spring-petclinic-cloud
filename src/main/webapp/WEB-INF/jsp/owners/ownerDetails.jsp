@@ -2,6 +2,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %***REMOVED***
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %***REMOVED***
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %***REMOVED***
+<%@ taglib prefix="joda" uri="http://www.joda.org/joda/time/tags" %***REMOVED***
 
 <html lang="en"***REMOVED***
 
@@ -58,7 +59,7 @@
 			    	<dt***REMOVED***Name</dt***REMOVED***
 			    	<dd***REMOVED***${pet.name***REMOVED***</dd***REMOVED***
 			    	<dt***REMOVED***Birth Date</dt***REMOVED***
-			    	<dd***REMOVED***<fmt:formatDate value="${pet.birthDate***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</dd***REMOVED***
+			    	<dd***REMOVED***<joda:format value="${pet.birthDate***REMOVED***" pattern="yyyy-MM-dd" /***REMOVED***</dd***REMOVED***
 			    	<dt***REMOVED***Type</dt***REMOVED***
 			    	<dd***REMOVED***${pet.type.name***REMOVED***</dd***REMOVED***
 			    </dl***REMOVED***
@@ -73,7 +74,7 @@
 	            </thead***REMOVED***
 	            <c:forEach var="visit" items="${pet.visits***REMOVED***"***REMOVED***
 	              <tr***REMOVED***
-	                <td***REMOVED***<fmt:formatDate value="${visit.date***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</td***REMOVED***
+	                <td***REMOVED***<joda:format value="${visit.date***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</td***REMOVED***
 	                <td***REMOVED***${visit.description***REMOVED***</td***REMOVED***
 	              </tr***REMOVED***
 	            </c:forEach***REMOVED***

@@ -14,6 +14,7 @@
 		<hibernate.version***REMOVED***4.1.4.Final</hibernate.version***REMOVED***
 		<aspectj.version***REMOVED***1.7.1</aspectj.version***REMOVED***
 		<hibernate.validator.version***REMOVED***4.2.0.Final</hibernate.validator.version***REMOVED***
+		<joda.version***REMOVED***2.0</joda.version***REMOVED***
 	</properties***REMOVED***
 	<dependencies***REMOVED*** 
 
@@ -196,7 +197,26 @@
 			<version***REMOVED***1.1</version***REMOVED***
 			<scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***
+		
+		<dependency***REMOVED***
+			<groupId***REMOVED***joda-time</groupId***REMOVED***
+			<artifactId***REMOVED***joda-time</artifactId***REMOVED***
+			<version***REMOVED***${joda.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.jadira.usertype</groupId***REMOVED***
+			<artifactId***REMOVED***usertype.core</artifactId***REMOVED***
+			<version***REMOVED***3.0.0.CR1</version***REMOVED***
+		</dependency***REMOVED***
 
+		<dependency***REMOVED***
+			<groupId***REMOVED***joda-time</groupId***REMOVED***
+			<artifactId***REMOVED***joda-time-jsptags</artifactId***REMOVED***
+			<version***REMOVED***1.1</version***REMOVED***
+		</dependency***REMOVED***
+		
+		
 	</dependencies***REMOVED***
 	<build***REMOVED***
 		<plugins***REMOVED***
