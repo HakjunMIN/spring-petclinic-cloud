@@ -32,7 +32,7 @@
 						</div***REMOVED***
 					</div***REMOVED***
 					<div class="control-group" id="birthDate"***REMOVED***
-						<label class="control-label"***REMOVED***Birth Date </label***REMOVED***
+						<label class="control-label"***REMOVED***Birth Date (yyyy-MM-dd)</label***REMOVED***
 						<div class="controls"***REMOVED***
 							<form:input path="birthDate" /***REMOVED***
 							<span class="help-inline"***REMOVED***<form:errors path="birthDate" /***REMOVED***</span***REMOVED***

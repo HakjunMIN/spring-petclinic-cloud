@@ -19,6 +19,14 @@
 		<level value="info" /***REMOVED***
 	</logger***REMOVED***
 	
+	<logger name="javax.validation"***REMOVED***
+		<level value="debug" /***REMOVED***
+	</logger***REMOVED***
+	
+	<logger name="org.hibernate.validator"***REMOVED***
+		<level value="trace" /***REMOVED***
+	</logger***REMOVED***
+	
 	<!-- Root Logger --***REMOVED***
 	<root***REMOVED***
 		<priority value="info" /***REMOVED***<!--

@@ -19,11 +19,11 @@
 		<table class="table table-striped"***REMOVED***
 		  <thead***REMOVED***
 		  	<tr***REMOVED***
-			    <th***REMOVED***Name</th***REMOVED***
-			    <th***REMOVED***Address</th***REMOVED***
+			    <th style="width: 150px;"***REMOVED***Name</th***REMOVED***
+			    <th style="width: 200px;"***REMOVED***Address</th***REMOVED***
 			    <th***REMOVED***City</th***REMOVED***
 			    <th***REMOVED***Telephone</th***REMOVED***
-			    <th***REMOVED***Pets</th***REMOVED***
+			    <th style="width: 100px;"***REMOVED***Pets</th***REMOVED***
 		    </tr***REMOVED***
 		  </thead***REMOVED***
 		  <c:forEach var="owner" items="${selections***REMOVED***"***REMOVED***

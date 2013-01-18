@@ -1,14 +1,14 @@
 .container {
 	padding-top: 10px;
 	margin-left: 50px; 
-	width: 610px;
+	width: 700px;
 ***REMOVED***
 
 .form-horizontal {
   	width: 100%;
 ***REMOVED***
 
-input {
-	line-height: 35px;
+input[type="text"] {
+	height: 25px;
 ***REMOVED***
 
