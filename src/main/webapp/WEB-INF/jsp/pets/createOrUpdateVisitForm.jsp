@@ -25,10 +25,10 @@
 		      	</tr***REMOVED***
 		    </thead***REMOVED***
 		    <tr***REMOVED***
-		      <td***REMOVED***${visit.pet.name***REMOVED***</td***REMOVED***
+		      <td***REMOVED***<c:out value="${visit.pet.name***REMOVED***" /***REMOVED***</td***REMOVED***
 		      <td***REMOVED***<joda:format value="${visit.pet.birthDate***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</td***REMOVED***
-		      <td***REMOVED***${visit.pet.type.name***REMOVED***</td***REMOVED***
-		      <td***REMOVED***${visit.pet.owner.firstName***REMOVED*** ${visit.pet.owner.lastName***REMOVED***</td***REMOVED***
+		      <td***REMOVED***<c:out value="${visit.pet.type.name***REMOVED***" /***REMOVED***</td***REMOVED***
+		      <td***REMOVED***<c:out value="${visit.pet.owner.firstName***REMOVED*** ${visit.pet.owner.lastName***REMOVED***" /***REMOVED***</td***REMOVED***
 		    </tr***REMOVED***
 		  </table***REMOVED***
 		
@@ -71,7 +71,7 @@
 		    <c:if test="${!visit['new']***REMOVED***"***REMOVED***
 		      <tr***REMOVED***
 		        <td***REMOVED***<joda:format value="${visit.date***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</td***REMOVED***
-		        <td***REMOVED***${visit.description***REMOVED***</td***REMOVED***
+		        <td***REMOVED***<c:out value="${visit.description***REMOVED***" /***REMOVED***</td***REMOVED***
 		      </tr***REMOVED***
 		    </c:if***REMOVED***
 		  </c:forEach***REMOVED***

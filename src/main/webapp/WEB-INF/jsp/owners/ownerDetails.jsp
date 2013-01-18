@@ -17,19 +17,19 @@
 	  <table class="table table-striped"  style="width:600px;"***REMOVED***
 	    <tr***REMOVED***
 	      <th***REMOVED***Name</th***REMOVED***
-	      <td***REMOVED***<b***REMOVED***${owner.firstName***REMOVED*** ${owner.lastName***REMOVED***</b***REMOVED***</td***REMOVED***
+	      <td***REMOVED***<b***REMOVED***<c:out value="${owner.firstName***REMOVED*** ${owner.lastName***REMOVED***"/***REMOVED***</b***REMOVED***</td***REMOVED***
 	    </tr***REMOVED***
 	    <tr***REMOVED***
 	      <th***REMOVED***Address</th***REMOVED***
-	      <td***REMOVED***${owner.address***REMOVED***</td***REMOVED***
+	      <td***REMOVED***<c:out value="${owner.address***REMOVED***"/***REMOVED***</td***REMOVED***
 	    </tr***REMOVED***
 	    <tr***REMOVED***
 	      <th***REMOVED***City</th***REMOVED***
-	      <td***REMOVED***${owner.city***REMOVED***</td***REMOVED***
+	      <td***REMOVED***<c:out value="${owner.city***REMOVED***"/***REMOVED***</td***REMOVED***
 	    </tr***REMOVED***
 	    <tr***REMOVED***
 	      <th***REMOVED***Telephone </th***REMOVED***
-	      <td***REMOVED***${owner.telephone***REMOVED***</td***REMOVED***
+	      <td***REMOVED***<c:out value="${owner.telephone***REMOVED***"/***REMOVED***</td***REMOVED***
 	    </tr***REMOVED***
 	  </table***REMOVED***
 	  <table class="table-buttons"***REMOVED***
@@ -57,11 +57,11 @@
 	        <td valign="top" style="width: 120px;"***REMOVED***
 	            <dl class="dl-horizontal"***REMOVED***
 			    	<dt***REMOVED***Name</dt***REMOVED***
-			    	<dd***REMOVED***${pet.name***REMOVED***</dd***REMOVED***
+			    	<dd***REMOVED***<c:out value="${pet.name***REMOVED***"/***REMOVED***</dd***REMOVED***
 			    	<dt***REMOVED***Birth Date</dt***REMOVED***
 			    	<dd***REMOVED***<joda:format value="${pet.birthDate***REMOVED***" pattern="yyyy-MM-dd" /***REMOVED***</dd***REMOVED***
 			    	<dt***REMOVED***Type</dt***REMOVED***
-			    	<dd***REMOVED***${pet.type.name***REMOVED***</dd***REMOVED***
+			    	<dd***REMOVED***<c:out value="${pet.type.name***REMOVED***"/***REMOVED***</dd***REMOVED***
 			    </dl***REMOVED***
 	        </td***REMOVED***
 	        <td valign="top"***REMOVED***
@@ -75,7 +75,7 @@
 	            <c:forEach var="visit" items="${pet.visits***REMOVED***"***REMOVED***
 	              <tr***REMOVED***
 	                <td***REMOVED***<joda:format value="${visit.date***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</td***REMOVED***
-	                <td***REMOVED***${visit.description***REMOVED***</td***REMOVED***
+	                <td***REMOVED***<c:out value="${visit.description***REMOVED***"/***REMOVED***</td***REMOVED***
 	              </tr***REMOVED***
 	            </c:forEach***REMOVED***
 	          </table***REMOVED***

@@ -29,14 +29,14 @@
 		          <***REMOVED***url value="owners/{ownerId***REMOVED***.html" var="ownerUrl"***REMOVED***
 		              <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
 		          </***REMOVED***url***REMOVED***
-		          <a href="${fn:escapeXml(ownerUrl)***REMOVED***"***REMOVED***${owner.firstName***REMOVED*** ${owner.lastName***REMOVED***</a***REMOVED***
+		          <a href="${fn:escapeXml(ownerUrl)***REMOVED***"***REMOVED***<c:out value="${owner.firstName***REMOVED*** ${owner.lastName***REMOVED***" /***REMOVED***</a***REMOVED***
 		      </td***REMOVED***
-		      <td***REMOVED***${owner.address***REMOVED***</td***REMOVED***
-		      <td***REMOVED***${owner.city***REMOVED***</td***REMOVED***
-		      <td***REMOVED***${owner.telephone***REMOVED***</td***REMOVED***
+		      <td***REMOVED***<c:out value="${owner.address***REMOVED***"/***REMOVED***</td***REMOVED***
+		      <td***REMOVED***<c:out value="${owner.city***REMOVED***"/***REMOVED***</td***REMOVED***
+		      <td***REMOVED***<c:out value="${owner.telephone***REMOVED***"/***REMOVED***</td***REMOVED***
 		      <td***REMOVED***
 		        <c:forEach var="pet" items="${owner.pets***REMOVED***"***REMOVED***
-		          ${pet.name***REMOVED*** &nbsp;
+		          <c:out value="${pet.name***REMOVED***"/***REMOVED***
 		        </c:forEach***REMOVED***
 		      </td***REMOVED***
 		    </tr***REMOVED***
