@@ -120,7 +120,7 @@
 	</beans***REMOVED***
 	
 	<beans profile="spring-data-jpa"***REMOVED***
-		<jpa:repositories base-package="org.springframework.samples.petclinic.repository.jpa"/***REMOVED***
+		<jpa:repositories base-package="org.springframework.samples.petclinic.repository.springdatajpa"/***REMOVED***
 	
 	</beans***REMOVED***
 </beans***REMOVED***

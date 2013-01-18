@@ -21,7 +21,7 @@ public interface VetRepository {
 	 * Retrieve all <code***REMOVED***Vet</code***REMOVED***s from the data store.
 	 * @return a <code***REMOVED***Collection</code***REMOVED*** of <code***REMOVED***Vet</code***REMOVED***s
 	 */
-	Collection<Vet***REMOVED*** getVets() throws DataAccessException;
+	Collection<Vet***REMOVED*** findAll() throws DataAccessException;
 
 
 ***REMOVED***

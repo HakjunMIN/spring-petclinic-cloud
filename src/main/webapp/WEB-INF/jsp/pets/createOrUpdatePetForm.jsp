@@ -55,9 +55,6 @@
 				</fieldset***REMOVED***	
 			</form:form***REMOVED***	
 			<c:if test="${!pet['new']***REMOVED***"***REMOVED***
-			  <form:form method="delete"***REMOVED***
-			    <p class="submit"***REMOVED***<input type="submit" value="Delete Pet"/***REMOVED***</p***REMOVED***
-			  </form:form***REMOVED***
 			</c:if***REMOVED***    
 			<jsp:include page="../footer.jsp"/***REMOVED***
   	</div***REMOVED***
