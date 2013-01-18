@@ -6,14 +6,11 @@
 
 <html lang="en"***REMOVED***
 
-<jsp:include page="../header.jsp"/***REMOVED***
+<jsp:include page="../fragments/headTag.jsp"/***REMOVED***
 
 <body***REMOVED***
-
   	<div class="container"***REMOVED***
-
-		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
-		<img src="${banner***REMOVED***" /***REMOVED***
+		<jsp:include page="../fragments/bodyHeader.jsp"/***REMOVED***
 		<h2***REMOVED***<c:if test="${visit['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Visit:</h2***REMOVED***
 		
 		<form:form modelAttribute="visit"***REMOVED***
@@ -65,7 +62,7 @@
 		
 		<br/***REMOVED***
 		<b***REMOVED***Previous Visits:</b***REMOVED***
-		<table width="333"***REMOVED***
+		<table style="width: 333px;"***REMOVED***
 		  <tr***REMOVED***
 		    <th***REMOVED***Date</th***REMOVED***
 		    <th***REMOVED***Description</th***REMOVED***
@@ -81,7 +78,7 @@
 		</table***REMOVED***
 
   	</div***REMOVED***
-	<jsp:include page="../footer.jsp"/***REMOVED***
+	<jsp:include page="../fragments/footer.jsp"/***REMOVED***
 </body***REMOVED***
 
 </html***REMOVED***

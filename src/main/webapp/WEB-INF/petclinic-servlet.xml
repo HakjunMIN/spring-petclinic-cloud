@@ -42,7 +42,7 @@
                     <bean class="org.springframework.web.accept.PathExtensionContentNegotiationStrategy"***REMOVED***
                         <constructor-arg***REMOVED***
                             <map***REMOVED***
-				 				<entry key="xml" value="#{vetsList.contentType***REMOVED***"/***REMOVED***
+				 				<entry key="xml" value="application/vnd.springsource.samples.petclinic+xml"/***REMOVED***
 								<entry key="atom" value="#{visitsList.contentType***REMOVED***"/***REMOVED***
                            </map***REMOVED***
                         </constructor-arg***REMOVED***
@@ -101,8 +101,7 @@
 	 
 	<bean id="visitsList" class="org.springframework.samples.petclinic.web.VisitsAtomView"/***REMOVED***
 
-	<bean id="vetsList" class="org.springframework.web.servlet.view.xml.MarshallingView"***REMOVED***
-		<property name="contentType" value="application/vnd.springsource.samples.petclinic+xml"/***REMOVED***
+	<bean id="vets/vetsList" class="org.springframework.web.servlet.view.xml.MarshallingView"***REMOVED***
 		<property name="marshaller" ref="marshaller"/***REMOVED***
 	</bean***REMOVED***
 

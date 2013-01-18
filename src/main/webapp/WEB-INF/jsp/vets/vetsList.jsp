@@ -6,12 +6,11 @@
 <html lang="en"***REMOVED***
 
 
+<jsp:include page="../fragments/headTag.jsp"/***REMOVED***
+
 <body***REMOVED***
-	<div class="container"***REMOVED***
-		<jsp:include page="header.jsp"/***REMOVED***
-		
-		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
-		<img src="${banner***REMOVED***" /***REMOVED***
+  	<div class="container"***REMOVED***
+		<jsp:include page="../fragments/bodyHeader.jsp"/***REMOVED***
 
 		<h2***REMOVED***Veterinarians</h2***REMOVED***
 		
@@ -44,7 +43,7 @@
 			  </tr***REMOVED***
 			</table***REMOVED***
 	
-			<jsp:include page="footer.jsp"/***REMOVED***
+			<jsp:include page="../fragments/footer.jsp"/***REMOVED***
 	  	</div***REMOVED***
 	</body***REMOVED***
 

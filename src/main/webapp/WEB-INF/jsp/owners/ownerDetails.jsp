@@ -5,13 +5,11 @@
 
 <html lang="en"***REMOVED***
 
-<jsp:include page="../header.jsp"/***REMOVED***
+<jsp:include page="../fragments/headTag.jsp"/***REMOVED***
 
 <body***REMOVED***
-
-	<div class="container"***REMOVED***
-		<***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
-		<img src="${banner***REMOVED***" /***REMOVED***
+  	<div class="container"***REMOVED***
+		<jsp:include page="../fragments/bodyHeader.jsp"/***REMOVED***
   
 		<h2***REMOVED***Owner Information</h2***REMOVED***
 	
@@ -55,24 +53,18 @@
 	  <c:forEach var="pet" items="${owner.pets***REMOVED***"***REMOVED***
 	    <table class="table" style="width:600px;"***REMOVED***
 	      <tr***REMOVED***
-	        <td valign="top"***REMOVED***
-	          <table***REMOVED***
-	            <tr***REMOVED***
-	              <th***REMOVED***Name</th***REMOVED***
-	              <td***REMOVED***<b***REMOVED***${pet.name***REMOVED***</b***REMOVED***</td***REMOVED***
-	            </tr***REMOVED***
-	            <tr***REMOVED***
-	              <th***REMOVED***Birth Date</th***REMOVED***
-	              <td***REMOVED***<fmt:formatDate value="${pet.birthDate***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</td***REMOVED***
-	            </tr***REMOVED***
-	            <tr***REMOVED***
-	              <th***REMOVED***Type</th***REMOVED***
-	              <td***REMOVED***${pet.type.name***REMOVED***</td***REMOVED***
-	            </tr***REMOVED***
-	          </table***REMOVED***
+	        <td valign="top" style="width: 120px;"***REMOVED***
+	            <dl class="dl-horizontal"***REMOVED***
+			    	<dt***REMOVED***Name</dt***REMOVED***
+			    	<dd***REMOVED***${pet.name***REMOVED***</dd***REMOVED***
+			    	<dt***REMOVED***Birth Date</dt***REMOVED***
+			    	<dd***REMOVED***<fmt:formatDate value="${pet.birthDate***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</dd***REMOVED***
+			    	<dt***REMOVED***Type</dt***REMOVED***
+			    	<dd***REMOVED***${pet.type.name***REMOVED***</dd***REMOVED***
+			    </dl***REMOVED***
 	        </td***REMOVED***
 	        <td valign="top"***REMOVED***
-	          <table***REMOVED***
+	          <table class="table-condensed"***REMOVED***
 	            <thead***REMOVED***
 	            	<tr***REMOVED***
 		              <th***REMOVED***Visit Date</th***REMOVED***
@@ -118,7 +110,7 @@
 	    </table***REMOVED***
 	  </c:forEach***REMOVED***
 	  
-	  <jsp:include page="../footer.jsp"/***REMOVED***
+	  <jsp:include page="../fragments/footer.jsp"/***REMOVED***
   
   	</div***REMOVED***
 
