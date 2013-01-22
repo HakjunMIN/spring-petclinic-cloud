@@ -156,6 +156,12 @@
 		    <version***REMOVED***2.2.1</version***REMOVED***
 		</dependency***REMOVED***
 		
+		<dependency***REMOVED***
+		    <groupId***REMOVED***org.webjars</groupId***REMOVED***
+		    <artifactId***REMOVED***jquery-ui</artifactId***REMOVED***
+		    <version***REMOVED***1.9.1</version***REMOVED***
+		</dependency***REMOVED***
+		
 		<!-- Rome RSS --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***rome</groupId***REMOVED***

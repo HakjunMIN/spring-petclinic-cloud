@@ -14,6 +14,15 @@
 	
 	<***REMOVED***url value="/resources/css/petclinic.css" var="petclinicCss" /***REMOVED***
 	<link href="${petclinicCss***REMOVED***" rel="stylesheet"/***REMOVED***
+	
+	<***REMOVED***url value="/webjars/jquery/1.8.2/jquery.js" var="jQuery" /***REMOVED***
+	<script src="${jQuery***REMOVED***"***REMOVED***</script***REMOVED***
+	
+	<***REMOVED***url value="/webjars/jquery-ui/1.9.1/js/jquery-ui-1.9.1.custom.js" var="jQueryUi" /***REMOVED***
+	<script src="${jQueryUi***REMOVED***"***REMOVED***</script***REMOVED***
+	
+	<***REMOVED***url value="/webjars/jquery-ui/1.9.1/css/smoothness/jquery-ui-1.9.1.custom.css" var="jQueryUiCss" /***REMOVED***
+	<link href="${jQueryUiCss***REMOVED***" rel="stylesheet"***REMOVED***</link***REMOVED***
 </head***REMOVED***
 
 
