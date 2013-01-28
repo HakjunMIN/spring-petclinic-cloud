@@ -18,6 +18,10 @@
 	 <context-param***REMOVED*** 
 	    <param-name***REMOVED***spring.profiles.active</param-name***REMOVED***
 	    <param-value***REMOVED***jdbc</param-value***REMOVED***
+	    <!-- you can replace the above param with:
+	    	<param-value***REMOVED***jpa,plain-jpa</param-value***REMOVED*** (in the case of plain JPA)
+	    	<param-value***REMOVED***jpa,spring-data</param-value***REMOVED*** (in the case of Spring Data JPA)
+	     --***REMOVED***
 	  </context-param***REMOVED***
 
 	<!--
@@ -26,26 +30,16 @@
 	--***REMOVED***
 	<context-param***REMOVED***
 		<param-name***REMOVED***log4jConfigLocation</param-name***REMOVED***
-		<param-value***REMOVED***/WEB-INF/classes/log4j.properties</param-value***REMOVED***
+		<param-value***REMOVED***/WEB-INF/classes/log4j.xml</param-value***REMOVED***
 	</context-param***REMOVED***
 
 	<!--
 		- Location of the XML file that defines the root application context.
 		- Applied by ContextLoaderServlet.
-		-
-		- Can be set to:
-		- "/WEB-INF/applicationContext-hibernate.xml" for the Hibernate implementation,
-		- "/WEB-INF/applicationContext-jpa.xml" for the JPA one, or
-		- "/WEB-INF/applicationContext-jdbc.xml" for the JDBC one.
 	--***REMOVED***
 	<context-param***REMOVED***
 		<param-name***REMOVED***contextConfigLocation</param-name***REMOVED***
 		<param-value***REMOVED***classpath:spring/applicationContext-dao.xml</param-value***REMOVED***
-        <!--
-		<param-value***REMOVED***/WEB-INF/spring/applicationContext-hibernate.xml</param-value***REMOVED***
-		<param-value***REMOVED***/WEB-INF/spring/applicationContext-jpa.xml</param-value***REMOVED***
-		--***REMOVED***
-
 		<!--
 			To use the JPA variant above, you will need to enable Spring load-time
 			weaving in your server environment. Out of the box, Spring will try to
@@ -54,6 +48,10 @@
 			See PetClinic's readme and/or Spring's JPA documentation for more information.
 		--***REMOVED***
 	</context-param***REMOVED***
+	
+	<listener***REMOVED***
+		<listener-class***REMOVED***org.springframework.web.context.ContextLoaderListener</listener-class***REMOVED***
+	</listener***REMOVED***	
 
 	<!--
 		- Configures Log4J for this web app.
@@ -73,54 +71,6 @@
 		<listener-class***REMOVED***org.springframework.web.util.Log4jConfigListener</listener-class***REMOVED***
 	</listener***REMOVED***
 	--***REMOVED***
-
-	<!--
-		- Loads the root application context of this web app at startup,
-		- by default from "/WEB-INF/applicationContext.xml".
-		- Note that you need to fall back to Spring's ContextLoaderServlet for
-		- J2EE servers that do not follow the Servlet 2.4 initialization order.
-		-
-		- Use WebApplicationContextUtils.getWebApplicationContext(servletContext)
-		- to access it anywhere in the web application, outside of the framework.
-		-
-		- The root context is the parent of all servlet-specific contexts.
-		- This means that its beans are automatically available in these child contexts,
-		- both for getBean(name) calls and (external) bean references.
-	--***REMOVED***
-	<listener***REMOVED***
-		<listener-class***REMOVED***org.springframework.web.context.ContextLoaderListener</listener-class***REMOVED***
-	</listener***REMOVED***
-	
-	<!--
-		Defines the 'default' servlet (usually for service static resources).
-		Uncomment this in containers (GlassFish) that do not declare this 
-		implicit definition out of the box, or change the name of the servlet mapping 
-		below to the appropriate one.
-		
-	<servlet***REMOVED***
-		<servlet-name***REMOVED***default</servlet-name***REMOVED***
-		<servlet-class***REMOVED***org.apache.catalina.servlets.DefaultServlet</servlet-class***REMOVED***
-		<init-param***REMOVED***
-			<param-name***REMOVED***debug</param-name***REMOVED***
-			<param-value***REMOVED***0</param-value***REMOVED***
-		</init-param***REMOVED***
-		<init-param***REMOVED***
-			<param-name***REMOVED***listings</param-name***REMOVED***
-			<param-value***REMOVED***false</param-value***REMOVED***
-		</init-param***REMOVED***
-		<load-on-startup***REMOVED***1</load-on-startup***REMOVED***
-	</servlet***REMOVED***
-	--***REMOVED***
-	<!--
-	 - Map static resources to the default servlet
-	 - examples:
-	 -     http://localhost:8080/static/images/pets.png
-	 -     http://localhost:8080/static/styles/petclinic.css
-	--***REMOVED***
-	<servlet-mapping***REMOVED***
-		<servlet-name***REMOVED***default</servlet-name***REMOVED***
-		<url-pattern***REMOVED***/static/*</url-pattern***REMOVED***
-	</servlet-mapping***REMOVED***
 	
 	<!--
 		- Servlet that dispatches request to registered handlers (Controller implementations).
@@ -134,7 +84,7 @@
 	<servlet***REMOVED***
 		<servlet-name***REMOVED***petclinic</servlet-name***REMOVED***
 		<servlet-class***REMOVED***org.springframework.web.servlet.DispatcherServlet</servlet-class***REMOVED***
-		<load-on-startup***REMOVED***2</load-on-startup***REMOVED***
+		<load-on-startup***REMOVED***1</load-on-startup***REMOVED***
 	</servlet***REMOVED***
 
 	<!--
@@ -163,23 +113,5 @@
 	<session-config***REMOVED***
 		<session-timeout***REMOVED***10</session-timeout***REMOVED***
 	</session-config***REMOVED***
-
-	<!-- eliminate welcome files --***REMOVED***
-	<!-- useful for Servlet 3 container (Tomcat 7 and Jetty 6) --***REMOVED***
-	<welcome-file-list***REMOVED***
-		<welcome-file***REMOVED***</welcome-file***REMOVED***
-	</welcome-file-list***REMOVED***
-
-	<!--
-		- Reference to PetClinic database.
-		- Only needed if not using a local DataSource but a JNDI one instead.
-	--***REMOVED***
-	<!--
-	<resource-ref***REMOVED***
-		<res-ref-name***REMOVED***jdbc/petclinic</res-ref-name***REMOVED***
-		<res-type***REMOVED***javax.sql.DataSource</res-type***REMOVED***
-		<res-auth***REMOVED***Container</res-auth***REMOVED***
-	</resource-ref***REMOVED***
-	--***REMOVED***
 	
 </web-app***REMOVED***
