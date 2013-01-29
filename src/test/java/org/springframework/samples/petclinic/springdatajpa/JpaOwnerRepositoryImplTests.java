@@ -28,7 +28,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @ContextConfiguration(locations={"classpath:spring/applicationContext-dao.xml"***REMOVED***)
 @RunWith(SpringJUnit4ClassRunner.class)
-@ActiveProfiles({"jpa","spring-data-jpa"***REMOVED***)
+@ActiveProfiles("spring-data-jpa")
 public class JpaOwnerRepositoryImplTests extends AbstractOwnerRepositoryTests {
 	
 ***REMOVED***

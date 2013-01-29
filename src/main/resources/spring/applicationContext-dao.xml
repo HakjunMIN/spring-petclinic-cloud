@@ -62,7 +62,7 @@
 	
 
 
-	<beans profile="jpa"***REMOVED***
+	<beans profile="jpa,spring-data-jpa"***REMOVED***
 		<!-- JPA EntityManagerFactory --***REMOVED***
 		<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
 				p:dataSource-ref="dataSource"***REMOVED***
@@ -109,7 +109,7 @@
 	
 	</beans***REMOVED***
 	
-	<beans profile="plain-jpa"***REMOVED***
+	<beans profile="jpa"***REMOVED***
 		<!--
 			Will automatically be transactional due to @Transactional.
 			EntityManager will be auto-injected due to @PersistenceContext.
