@@ -17,10 +17,11 @@
 	
 	 <context-param***REMOVED*** 
 	    <param-name***REMOVED***spring.profiles.active</param-name***REMOVED***
-	    <param-value***REMOVED***jdbc</param-value***REMOVED***
+	    <param-value***REMOVED***jpa</param-value***REMOVED***
 	    <!-- you can replace the above param with:
-	    	<param-value***REMOVED***jpa,plain-jpa</param-value***REMOVED*** (in the case of plain JPA)
-	    	<param-value***REMOVED***jpa,spring-data</param-value***REMOVED*** (in the case of Spring Data JPA)
+	    	<param-value***REMOVED***jdbc</param-value***REMOVED***
+	    	<param-value***REMOVED***jpa</param-value***REMOVED*** (in the case of plain JPA)
+	    	<param-value***REMOVED***spring-data-jpa</param-value***REMOVED*** (in the case of Spring Data JPA)
 	     --***REMOVED***
 	  </context-param***REMOVED***
 
