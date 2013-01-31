@@ -94,6 +94,7 @@
 	--***REMOVED***
 	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"***REMOVED***
 		<property name="defaultErrorView" value="exception"/***REMOVED***
+		<property name="warnLogCategory" value="warn"/***REMOVED***
 	</bean***REMOVED***
 
 
