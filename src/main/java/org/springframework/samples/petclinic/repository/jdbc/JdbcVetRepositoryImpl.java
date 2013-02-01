@@ -35,12 +35,14 @@ public class JdbcVetRepositoryImpl implements VetRepository {
 
 	private final Logger logger = LoggerFactory.getLogger(getClass());
 
-	@Autowired
 	private JdbcTemplate jdbcTemplate;
 
 	private final List<Vet***REMOVED*** vets = new ArrayList<Vet***REMOVED***();
 
-
+	@Autowired
+	public JdbcVetRepositoryImpl(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	***REMOVED***
 
 	/**
 	 * Refresh the cache of Vets that the ClinicService is holding.
