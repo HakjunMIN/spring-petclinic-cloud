@@ -22,41 +22,56 @@
 		</h2***REMOVED***
 		<form:form modelAttribute="owner" method="${method***REMOVED***" class="form-horizontal" id="add-owner-form"***REMOVED***
 			<fieldset***REMOVED***
-					<div class="control-group" id="firstName"***REMOVED***
-						<label class="control-label"***REMOVED***First Name </label***REMOVED***
-						<div class="controls"***REMOVED***
-							<form:input path="firstName" /***REMOVED***
-							<span class="help-inline"***REMOVED***<form:errors path="firstName" /***REMOVED***</span***REMOVED***
+					<***REMOVED***bind path="firstName"***REMOVED***
+						<c:set var="cssGroup" value="control-group ${status.error ? 'error' : '' ***REMOVED***"/***REMOVED***
+						<div class="${cssGroup***REMOVED***" id="${firstName***REMOVED***"***REMOVED***
+							<label class="control-label"***REMOVED***First Name</label***REMOVED***
+							<div class="controls"***REMOVED***
+								<form:input path="firstName"/***REMOVED*** 
+								<span class="help-inline"***REMOVED***${status.errorMessage***REMOVED***</span***REMOVED***
+							</div***REMOVED***
 						</div***REMOVED***
-					</div***REMOVED***
-					<div class="control-group" id="lastName"***REMOVED***
-						<label class="control-label"***REMOVED***Last Name </label***REMOVED***
-						<div class="controls"***REMOVED***
-							<form:input path="lastName" /***REMOVED***
-							<span class="help-inline"***REMOVED***<form:errors path="lastName" /***REMOVED***</span***REMOVED***
+					</***REMOVED***bind***REMOVED***
+					<***REMOVED***bind path="firstName"***REMOVED***
+						<c:set var="cssGroup" value="control-group ${status.error ? 'error' : '' ***REMOVED***"/***REMOVED***
+						<div class="${cssGroup***REMOVED***" id="${lastName***REMOVED***"***REMOVED***
+							<label class="control-label"***REMOVED***Last Name</label***REMOVED***
+							<div class="controls"***REMOVED***
+								<form:input path="lastName"/***REMOVED*** 
+								<span class="help-inline"***REMOVED***${status.errorMessage***REMOVED***</span***REMOVED***
+							</div***REMOVED***
 						</div***REMOVED***
-					</div***REMOVED***
-					<div class="control-group" id="address"***REMOVED***
-						<label class="control-label"***REMOVED***Address </label***REMOVED***
-						<div class="controls"***REMOVED***
-							<form:input path="address" /***REMOVED***
-							<span class="help-inline"***REMOVED***<form:errors path="address" /***REMOVED***</span***REMOVED***
+					</***REMOVED***bind***REMOVED***	
+					<***REMOVED***bind path="address"***REMOVED***
+						<c:set var="cssGroup" value="control-group ${status.error ? 'error' : '' ***REMOVED***"/***REMOVED***
+						<div class="${cssGroup***REMOVED***" id="${address***REMOVED***"***REMOVED***
+							<label class="control-label"***REMOVED***Address</label***REMOVED***
+							<div class="controls"***REMOVED***
+								<form:input path="address"/***REMOVED*** 
+								<span class="help-inline"***REMOVED***${status.errorMessage***REMOVED***</span***REMOVED***
+							</div***REMOVED***
 						</div***REMOVED***
-					</div***REMOVED***
-					<div class="control-group" id="city"***REMOVED***
-						<label class="control-label"***REMOVED***City </label***REMOVED***
-						<div class="controls"***REMOVED***
-							<form:input path="city" /***REMOVED***
-							<span class="help-inline"***REMOVED***<form:errors path="city" /***REMOVED***</span***REMOVED***
+					</***REMOVED***bind***REMOVED***	
+					<***REMOVED***bind path="city"***REMOVED***
+						<c:set var="cssGroup" value="control-group ${status.error ? 'error' : '' ***REMOVED***"/***REMOVED***
+						<div class="${cssGroup***REMOVED***" id="${city***REMOVED***"***REMOVED***
+							<label class="control-label"***REMOVED***City</label***REMOVED***
+							<div class="controls"***REMOVED***
+								<form:input path="city"/***REMOVED*** 
+								<span class="help-inline"***REMOVED***${status.errorMessage***REMOVED***</span***REMOVED***
+							</div***REMOVED***
 						</div***REMOVED***
-					</div***REMOVED***
-					<div class="control-group" id="telephone"***REMOVED***
-						<label class="control-label"***REMOVED***Telephone </label***REMOVED***
-						<div class="controls"***REMOVED***
-							<form:input path="telephone" /***REMOVED***
-							<span class="help-inline"***REMOVED***<form:errors path="telephone" /***REMOVED***</span***REMOVED***
+					</***REMOVED***bind***REMOVED***	
+					<***REMOVED***bind path="telephone"***REMOVED***
+						<c:set var="cssGroup" value="control-group ${status.error ? 'error' : '' ***REMOVED***"/***REMOVED***
+						<div class="${cssGroup***REMOVED***" id="${telephone***REMOVED***"***REMOVED***
+							<label class="control-label"***REMOVED***Telephone</label***REMOVED***
+							<div class="controls"***REMOVED***
+								<form:input path="telephone"/***REMOVED*** 
+								<span class="help-inline"***REMOVED***${status.errorMessage***REMOVED***</span***REMOVED***
+							</div***REMOVED***
 						</div***REMOVED***
-					</div***REMOVED***
+					</***REMOVED***bind***REMOVED***	
 					<div class="form-actions"***REMOVED***
 						<c:choose***REMOVED***
 				          <c:when test="${owner['new']***REMOVED***"***REMOVED***

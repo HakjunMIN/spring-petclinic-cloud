@@ -12,7 +12,7 @@
 	</appender***REMOVED***
 
 	<logger name="org.springframework.web"***REMOVED***
-		<level value="info" /***REMOVED***
+		<level value="debug" /***REMOVED***
 	</logger***REMOVED***
 	
 	<logger name="org.springframework.jdbc"***REMOVED***
@@ -24,7 +24,7 @@
 	</logger***REMOVED***
 	
 	<logger name="org.hibernate.validator"***REMOVED***
-		<level value="trace" /***REMOVED***
+		<level value="debug" /***REMOVED***
 	</logger***REMOVED***
 	
 	<!-- Root Logger --***REMOVED***

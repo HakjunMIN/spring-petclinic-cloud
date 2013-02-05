@@ -15,3 +15,7 @@ input[type="text"] {
 .navbar .nav ***REMOVED*** li ***REMOVED*** a {
 	color: #000000;
 ***REMOVED***
+
+ .form-horizontal .control-label {
+    text-align: left;
+***REMOVED***
