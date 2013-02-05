@@ -17,7 +17,7 @@
 	
 	 <context-param***REMOVED*** 
 	    <param-name***REMOVED***spring.profiles.active</param-name***REMOVED***
-	    <param-value***REMOVED***jpa</param-value***REMOVED***
+	    <param-value***REMOVED***jdbc</param-value***REMOVED***
 	    <!-- you can replace the above param with:
 	    	<param-value***REMOVED***jdbc</param-value***REMOVED***
 	    	<param-value***REMOVED***jpa</param-value***REMOVED*** (in the case of plain JPA)
