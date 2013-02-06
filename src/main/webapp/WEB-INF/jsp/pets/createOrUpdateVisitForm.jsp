@@ -8,13 +8,19 @@
 
 <jsp:include page="../fragments/headTag.jsp"/***REMOVED***
 
+
 <body***REMOVED***
+	<script***REMOVED***
+		$(function() {
+			$("#date").datepicker({ dateFormat: 'yy/mm/dd'***REMOVED***);
+		***REMOVED***);
+	</script***REMOVED***
   	<div class="container"***REMOVED***
 		<jsp:include page="../fragments/bodyHeader.jsp"/***REMOVED***
 		<h2***REMOVED***<c:if test="${visit['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Visit:</h2***REMOVED***
 		
 		<form:form modelAttribute="visit"***REMOVED***
-		  <b***REMOVED***Pet:</b***REMOVED***
+		  <b***REMOVED***Pet</b***REMOVED***
 		  <table  class="table table-striped"***REMOVED***
 		    <thead***REMOVED***
 		    	<tr***REMOVED***
@@ -26,7 +32,7 @@
 		    </thead***REMOVED***
 		    <tr***REMOVED***
 		      <td***REMOVED***<c:out value="${visit.pet.name***REMOVED***" /***REMOVED***</td***REMOVED***
-		      <td***REMOVED***<joda:format value="${visit.pet.birthDate***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</td***REMOVED***
+		      <td***REMOVED***<joda:format value="${visit.pet.birthDate***REMOVED***" pattern="yyyy/MM/dd"/***REMOVED***</td***REMOVED***
 		      <td***REMOVED***<c:out value="${visit.pet.type.name***REMOVED***" /***REMOVED***</td***REMOVED***
 		      <td***REMOVED***<c:out value="${visit.pet.owner.firstName***REMOVED*** ${visit.pet.owner.lastName***REMOVED***" /***REMOVED***</td***REMOVED***
 		    </tr***REMOVED***
@@ -39,7 +45,7 @@
 		        <br/***REMOVED***<form:errors path="date" cssClass="errors"/***REMOVED***
 		      </th***REMOVED***
 		      <td***REMOVED***
-		        <form:input path="date" size="10" maxlength="10"/***REMOVED*** (yyyy-mm-dd)
+		        <form:input path="date" size="10" maxlength="10"/***REMOVED***
 		      </td***REMOVED***
 		    <tr/***REMOVED***
 		    <tr***REMOVED***
@@ -70,7 +76,7 @@
 		  <c:forEach var="visit" items="${visit.pet.visits***REMOVED***"***REMOVED***
 		    <c:if test="${!visit['new']***REMOVED***"***REMOVED***
 		      <tr***REMOVED***
-		        <td***REMOVED***<joda:format value="${visit.date***REMOVED***" pattern="yyyy-MM-dd"/***REMOVED***</td***REMOVED***
+		        <td***REMOVED***<joda:format value="${visit.date***REMOVED***" pattern="yyyy/MM/dd"/***REMOVED***</td***REMOVED***
 		        <td***REMOVED***<c:out value="${visit.description***REMOVED***" /***REMOVED***</td***REMOVED***
 		      </tr***REMOVED***
 		    </c:if***REMOVED***
