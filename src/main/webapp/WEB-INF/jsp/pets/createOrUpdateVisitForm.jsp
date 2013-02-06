@@ -17,9 +17,8 @@
 	</script***REMOVED***
   	<div class="container"***REMOVED***
 		<jsp:include page="../fragments/bodyHeader.jsp"/***REMOVED***
-		<h2***REMOVED***<c:if test="${visit['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Visit:</h2***REMOVED***
+		<h2***REMOVED***<c:if test="${visit['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Visit</h2***REMOVED***
 		
-		<form:form modelAttribute="visit"***REMOVED***
 		  <b***REMOVED***Pet</b***REMOVED***
 		  <table  class="table table-striped"***REMOVED***
 		    <thead***REMOVED***
@@ -38,32 +37,25 @@
 		    </tr***REMOVED***
 		  </table***REMOVED***
 		
-		  <table class="table"***REMOVED***
-		    <tr***REMOVED***
-		      <th***REMOVED***
-		        Date
-		        <br/***REMOVED***<form:errors path="date" cssClass="errors"/***REMOVED***
-		      </th***REMOVED***
-		      <td***REMOVED***
-		        <form:input path="date" size="10" maxlength="10"/***REMOVED***
-		      </td***REMOVED***
-		    <tr/***REMOVED***
-		    <tr***REMOVED***
-		      <th valign="top"***REMOVED***
-		        Description
-		        <br/***REMOVED***<form:errors path="description" cssClass="errors"/***REMOVED***
-		      </th***REMOVED***
-		      <td***REMOVED***
-		        <form:textarea path="description" rows="10" cols="25"/***REMOVED***
-		      </td***REMOVED***
-		    </tr***REMOVED***
-		    <tr***REMOVED***
-		      <td colspan="2"***REMOVED***
-		        <input type="hidden" name="petId" value="${visit.pet.id***REMOVED***"/***REMOVED***
-		        <p class="submit"***REMOVED***<input type="submit" value="Add Visit"/***REMOVED***</p***REMOVED***
-		      </td***REMOVED***
-		    </tr***REMOVED***
-		  </table***REMOVED***
+		<form:form modelAttribute="visit"***REMOVED***
+			<div class="control-group"***REMOVED***
+				<label class="control-label"***REMOVED***Date </label***REMOVED***
+				<div class="controls"***REMOVED***
+					<form:input path="date" /***REMOVED***
+					<span class="help-inline"***REMOVED***<form:errors path="date" /***REMOVED***</span***REMOVED***
+				</div***REMOVED***
+			</div***REMOVED***
+			<div class="control-group"***REMOVED***
+				<label class="control-label"***REMOVED***Description </label***REMOVED***
+				<div class="controls"***REMOVED***
+					<form:input path="description" /***REMOVED***
+					<span class="help-inline"***REMOVED***<form:errors path="description" /***REMOVED***</span***REMOVED***
+				</div***REMOVED***
+			</div***REMOVED***
+			<div class="form-actions"***REMOVED***
+				<input type="hidden" name="petId" value="${visit.pet.id***REMOVED***"/***REMOVED***
+				<button type="submit"***REMOVED***Add Visit</button***REMOVED***
+			</div***REMOVED***
 		</form:form***REMOVED***
 		
 		<br/***REMOVED***

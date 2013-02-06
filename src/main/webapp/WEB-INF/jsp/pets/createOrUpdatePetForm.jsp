@@ -1,6 +1,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%***REMOVED***
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%***REMOVED***
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%***REMOVED***
+<%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %***REMOVED***
 
 
 <html lang="en"***REMOVED***
@@ -36,20 +37,8 @@
 					
 					<c:out value="${pet.owner.firstName***REMOVED*** ${pet.owner.lastName***REMOVED***"/***REMOVED***
 				</div***REMOVED***
-				<div class="control-group"***REMOVED***
-					<label class="control-label"***REMOVED***Name </label***REMOVED***
-					<div class="controls"***REMOVED***
-						<form:input path="name" /***REMOVED***
-						<span class="help-inline"***REMOVED***<form:errors path="name" /***REMOVED***</span***REMOVED***
-					</div***REMOVED***
-				</div***REMOVED***
-				<div class="control-group"***REMOVED***
-					<label class="control-label"***REMOVED***Birth Date</label***REMOVED***
-					<div class="controls"***REMOVED***
-						<form:input path="birthDate" /***REMOVED***
-						<span class="help-inline"***REMOVED***<form:errors path="birthDate" /***REMOVED***</span***REMOVED***
-					</div***REMOVED***
-				</div***REMOVED***
+				<petclinic:inputField label="Name" name="name" /***REMOVED***
+				<petclinic:inputField label="Birth Date" name="birthDate" /***REMOVED***
 				<div class="control-group"***REMOVED***
 					<label class="control-label"***REMOVED***Type </label***REMOVED***
 					<form:select path="type" items="${types***REMOVED***" size="5"/***REMOVED***
