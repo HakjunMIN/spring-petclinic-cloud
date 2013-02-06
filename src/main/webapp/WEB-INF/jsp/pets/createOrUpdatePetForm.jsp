@@ -10,7 +10,7 @@
 
 <script***REMOVED***
 	$(function() {
-		$("#birthDate").datepicker();
+		$("#birthDate").datepicker({ dateFormat: 'yy/mm/dd'***REMOVED***);
 	***REMOVED***);
 </script***REMOVED***
 	<div class="container"***REMOVED***
@@ -44,7 +44,7 @@
 					</div***REMOVED***
 				</div***REMOVED***
 				<div class="control-group"***REMOVED***
-					<label class="control-label"***REMOVED***Birth Date (yyyy-MM-dd)</label***REMOVED***
+					<label class="control-label"***REMOVED***Birth Date</label***REMOVED***
 					<div class="controls"***REMOVED***
 						<form:input path="birthDate" /***REMOVED***
 						<span class="help-inline"***REMOVED***<form:errors path="birthDate" /***REMOVED***</span***REMOVED***

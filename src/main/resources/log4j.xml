@@ -11,21 +11,6 @@
 		</layout***REMOVED***
 	</appender***REMOVED***
 
-	<logger name="org.springframework.web"***REMOVED***
-		<level value="debug" /***REMOVED***
-	</logger***REMOVED***
-	
-	<logger name="org.springframework.jdbc"***REMOVED***
-		<level value="info" /***REMOVED***
-	</logger***REMOVED***
-	
-	<logger name="javax.validation"***REMOVED***
-		<level value="debug" /***REMOVED***
-	</logger***REMOVED***
-	
-	<logger name="org.hibernate.validator"***REMOVED***
-		<level value="debug" /***REMOVED***
-	</logger***REMOVED***
 	
 	<!-- Root Logger --***REMOVED***
 	<root***REMOVED***

@@ -16,7 +16,7 @@
 	<context:component-scan base-package="org.springframework.samples.petclinic.web, org.springframework.samples.petclinic.service"/***REMOVED***
 	
 	
-	 <mvc:annotation-driven  /***REMOVED***
+	 <mvc:annotation-driven  conversion-service="conversionService"/***REMOVED***
 	
 	<!--  all resources inside folder src/main/webapp/resources are mapped so they can be refered to inside JSP files
 		(see header.jsp for more details) --***REMOVED***
@@ -26,6 +26,15 @@
 	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/***REMOVED***
 	
 	<mvc:view-controller path="/" view-name="welcome"/***REMOVED***
+	
+	
+	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean"***REMOVED***
+		<property name="formatters"***REMOVED***
+			<set***REMOVED***
+				<bean class="org.springframework.samples.petclinic.web.PetTypeFormatter" /***REMOVED***
+			</set***REMOVED***
+		</property***REMOVED***
+	</bean***REMOVED***
 	
 	
 <!--
@@ -76,15 +85,6 @@
 	--***REMOVED***
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource"
 			p:basename="messages/messages"/***REMOVED***
-	
-	<!--
-		Processes annotated handler methods, applying PetClinic-specific request parameter binding. 
-	--***REMOVED***
-	 <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"***REMOVED***
-		<property name="webBindingInitializer"***REMOVED*** 
-			<bean class="org.springframework.samples.petclinic.web.ClinicBindingInitializer"/***REMOVED***
-		</property***REMOVED***
-	</bean***REMOVED***
 
 	<!--
 		- This bean resolves specific types of exceptions to corresponding logical 
