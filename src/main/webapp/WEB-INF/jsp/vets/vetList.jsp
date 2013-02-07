@@ -24,10 +24,10 @@
 			  <tbody***REMOVED***
 				  <c:forEach var="vet" items="${vets.vetList***REMOVED***"***REMOVED***
 				    <tr***REMOVED***
-				      <td***REMOVED***${vet.firstName***REMOVED*** ${vet.lastName***REMOVED***</td***REMOVED***
+				      <td***REMOVED***<c:out value="${vet.firstName***REMOVED*** ${vet.lastName***REMOVED***" /***REMOVED***</td***REMOVED***
 				      <td***REMOVED***
 					    <c:forEach var="specialty" items="${vet.specialties***REMOVED***"***REMOVED***
-				          ${specialty.name***REMOVED***
+				          <c:out value="${specialty.name***REMOVED***" /***REMOVED***
 				        </c:forEach***REMOVED***
 				        <c:if test="${vet.nrOfSpecialties == 0***REMOVED***"***REMOVED***none</c:if***REMOVED***
 				      </td***REMOVED***
