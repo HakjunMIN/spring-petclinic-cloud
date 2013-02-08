@@ -15,7 +15,7 @@
 	<!--
 		- POJOs labeled with the @Controller and @Service annotations are auto-detected.
 	--***REMOVED***
-	<context:component-scan base-package="org.springframework.samples.petclinic.web, org.springframework.samples.petclinic.service"/***REMOVED***
+	<context:component-scan base-package="org.springframework.samples.petclinic.web"/***REMOVED***
 	
 	 <mvc:annotation-driven  conversion-service="conversionService"/***REMOVED***
 	

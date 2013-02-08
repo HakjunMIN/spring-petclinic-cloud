@@ -23,7 +23,7 @@ id="WebApp_ID" version="2.5"***REMOVED***
 	--***REMOVED***
 	<context-param***REMOVED***
 		<param-name***REMOVED***contextConfigLocation</param-name***REMOVED***
-		<param-value***REMOVED***classpath:spring/applicationContext-dao.xml</param-value***REMOVED***
+		<param-value***REMOVED***classpath:spring/dao-config.xml, classpath:spring/service-config.xml, classpath:spring/jmx-aop-config.xml</param-value***REMOVED***
 	</context-param***REMOVED***
 	
 	<listener***REMOVED***
