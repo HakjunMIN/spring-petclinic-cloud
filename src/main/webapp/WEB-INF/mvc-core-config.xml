@@ -17,7 +17,7 @@
 	--***REMOVED***
 	<context:component-scan base-package="org.springframework.samples.petclinic.web, org.springframework.samples.petclinic.service"/***REMOVED***
 	
-	 <mvc:annotation-driven  conversion-service="conversionService"/***REMOVED***
+	<mvc:annotation-driven conversion-service="conversionService" /***REMOVED***
 	
 	<!--  all resources inside folder src/main/webapp/resources are mapped so they can be refered to inside JSP files
 		(see header.jsp for more details) --***REMOVED***
