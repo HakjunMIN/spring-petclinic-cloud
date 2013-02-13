@@ -23,7 +23,6 @@ import org.springframework.samples.petclinic.repository.OwnerRepository;
 import org.springframework.samples.petclinic.repository.VisitRepository;
 import org.springframework.samples.petclinic.util.EntityUtils;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 /**
  * A simple JDBC-based implementation of the {@link OwnerRepository***REMOVED*** interface.
@@ -67,7 +66,6 @@ public class JdbcOwnerRepositoryImpl implements OwnerRepository {
 	 * the {@link Pet Pets***REMOVED*** and {@link Visit Visits***REMOVED*** for the corresponding
 	 * owners, if not already loaded.
 	 */
-	@Transactional(readOnly = true)
 	public Collection<Owner***REMOVED*** findByLastName(String lastName) throws DataAccessException {
 		Map<String, Object***REMOVED*** params = new HashMap<String, Object***REMOVED***();
 		params.put("lastName", lastName+"%");
@@ -85,7 +83,6 @@ public class JdbcOwnerRepositoryImpl implements OwnerRepository {
 	 * the {@link Pet Pets***REMOVED*** and {@link Visit Visits***REMOVED*** for the corresponding
 	 * owner, if not already loaded.
 	 */
-	@Transactional(readOnly = true)
 	public Owner findById(int id) throws DataAccessException {
 		Owner owner;
 		try {
@@ -122,9 +119,6 @@ public class JdbcOwnerRepositoryImpl implements OwnerRepository {
 		***REMOVED***
 	***REMOVED***
 
-	
-
-	@Transactional
 	public void save(Owner owner) throws DataAccessException {
 		BeanPropertySqlParameterSource parameterSource = new BeanPropertySqlParameterSource(owner);
 		if (owner.isNew()) {
@@ -139,11 +133,6 @@ public class JdbcOwnerRepositoryImpl implements OwnerRepository {
 		***REMOVED***
 	***REMOVED***
 
-	
-
-
-	
-	@Transactional(readOnly = true)
 	public Collection<PetType***REMOVED*** getPetTypes() throws DataAccessException {
 		return this.namedParameterJdbcTemplate.query(
 				"SELECT id, name FROM types ORDER BY name", new HashMap<String,Object***REMOVED***(),

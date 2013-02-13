@@ -42,13 +42,11 @@ public class ClinicServiceImpl implements ClinicService {
 		return ownerRepository.findById(id);
 	***REMOVED***
 	
-	@Override
 	@Transactional(readOnly=true)
 	public Collection<Owner***REMOVED*** findOwnerByLastName(String lastName) throws DataAccessException {
 		return ownerRepository.findByLastName(lastName);
 	***REMOVED***
 
-	@Override
 	@Transactional
 	public void saveOwner(Owner owner) throws DataAccessException {
 		ownerRepository.save(owner);
