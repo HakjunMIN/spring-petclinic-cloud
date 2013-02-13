@@ -57,7 +57,7 @@
 	</bean***REMOVED***
 
 	<oxm:jaxb2-marshaller id="marshaller"***REMOVED***
-		<oxm:class-to-be-bound name="org.springframework.samples.petclinic.Vets"/***REMOVED***
+		<oxm:class-to-be-bound name="org.springframework.samples.petclinic.model.Vets"/***REMOVED***
 	</oxm:jaxb2-marshaller***REMOVED***
 
 </beans***REMOVED***
