@@ -33,6 +33,11 @@
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***spring-context-support</artifactId***REMOVED***
+			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
 			<artifactId***REMOVED***spring-orm</artifactId***REMOVED***
 			<version***REMOVED***${spring.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
@@ -202,6 +207,13 @@
 			<artifactId***REMOVED***jta</artifactId***REMOVED***
 			<version***REMOVED***1.1</version***REMOVED***
 			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+		
+		<dependency***REMOVED***
+			<groupId***REMOVED***net.sf.ehcache</groupId***REMOVED***
+			<artifactId***REMOVED***ehcache</artifactId***REMOVED***
+			<version***REMOVED***2.5.2</version***REMOVED***
+			<type***REMOVED***pom</type***REMOVED***
 		</dependency***REMOVED***
 		
 		<dependency***REMOVED***

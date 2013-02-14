@@ -10,7 +10,6 @@
 			<param name="ConversionPattern" value="%-5p: %c - %m%n" /***REMOVED***
 		</layout***REMOVED***
 	</appender***REMOVED***
-
 	
 	<!-- Root Logger --***REMOVED***
 	<root***REMOVED***

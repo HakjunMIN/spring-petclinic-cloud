@@ -4,8 +4,10 @@
 --***REMOVED***
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:cache="http://www.springframework.org/schema/cache"
 	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"***REMOVED***
 
 	<!--
@@ -18,12 +20,26 @@
 	</aop:aspectj-autoproxy***REMOVED***
 
 	<!-- Call monitoring aspect that monitors call count and call invocation time --***REMOVED***
-	<bean id="callMonitor" class="org.springframework.samples.petclinic.util.CallMonitoringAspect"/***REMOVED***	
+	<bean id="callMonitor" class="org.springframework.samples.petclinic.util.CallMonitoringAspect"/***REMOVED***
 
 	<!--
 		Exporter that exposes the CallMonitoringAspect via JMX,
 		based on the @ManagedResource, @ManagedAttribute, and @ManagedOperation annotations.
 	--***REMOVED*** 
-		<context:mbean-export /***REMOVED*** 
+	<context:mbean-export /***REMOVED*** 
+	
+	<!-- enables scanning for @Cacheable annotation --***REMOVED***
+	<cache:annotation-driven /***REMOVED***
+	
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager"***REMOVED***
+		<property name="cacheManager" ref="ehcache"/***REMOVED***
+	</bean***REMOVED***
+    
+    <bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"***REMOVED***
+    	<property name="configLocation" value="classpath:ehcache.xml"/***REMOVED***
+    </bean***REMOVED***
+    
+    
+	
 	
 </beans***REMOVED***

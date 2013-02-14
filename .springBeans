@@ -11,6 +11,7 @@
 		<config***REMOVED***src/main/webapp/WEB-INF/mvc-view-config.xml</config***REMOVED***
 		<config***REMOVED***src/main/resources/spring/dao-config.xml</config***REMOVED***
 		<config***REMOVED***src/main/resources/spring/datasource-config.xml</config***REMOVED***
+		<config***REMOVED***src/main/resources/spring/tools-config.xml</config***REMOVED***
 	</configs***REMOVED***
 	<configSets***REMOVED***
 		<configSet***REMOVED***
@@ -22,7 +23,7 @@
 				<config***REMOVED***src/main/webapp/WEB-INF/mvc-view-config.xml</config***REMOVED***
 				<config***REMOVED***src/main/resources/spring/dao-config.xml</config***REMOVED***
 				<config***REMOVED***src/main/resources/spring/datasource-config.xml</config***REMOVED***
-				<config***REMOVED***src/main/resources/spring/jmx-aop-config.xml</config***REMOVED***
+				<config***REMOVED***src/main/resources/spring/tools-config.xml</config***REMOVED***
 			</configs***REMOVED***
 			<profiles***REMOVED***
 			</profiles***REMOVED***
