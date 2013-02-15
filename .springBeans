@@ -7,26 +7,9 @@
 	</configSuffixes***REMOVED***
 	<enableImports***REMOVED***<![CDATA[false]]***REMOVED***</enableImports***REMOVED***
 	<configs***REMOVED***
-		<config***REMOVED***src/main/webapp/WEB-INF/mvc-core-config.xml</config***REMOVED***
-		<config***REMOVED***src/main/webapp/WEB-INF/mvc-view-config.xml</config***REMOVED***
-		<config***REMOVED***src/main/resources/spring/dao-config.xml</config***REMOVED***
 		<config***REMOVED***src/main/resources/spring/datasource-config.xml</config***REMOVED***
-		<config***REMOVED***src/main/resources/spring/tools-config.xml</config***REMOVED***
+		<config***REMOVED***src/main/webapp/WEB-INF/mvc-view-config.xml</config***REMOVED***
 	</configs***REMOVED***
 	<configSets***REMOVED***
-		<configSet***REMOVED***
-			<name***REMOVED***<![CDATA[config]]***REMOVED***</name***REMOVED***
-			<allowBeanDefinitionOverriding***REMOVED***true</allowBeanDefinitionOverriding***REMOVED***
-			<incomplete***REMOVED***false</incomplete***REMOVED***
-			<configs***REMOVED***
-				<config***REMOVED***src/main/webapp/WEB-INF/mvc-core-config.xml</config***REMOVED***
-				<config***REMOVED***src/main/webapp/WEB-INF/mvc-view-config.xml</config***REMOVED***
-				<config***REMOVED***src/main/resources/spring/dao-config.xml</config***REMOVED***
-				<config***REMOVED***src/main/resources/spring/datasource-config.xml</config***REMOVED***
-				<config***REMOVED***src/main/resources/spring/tools-config.xml</config***REMOVED***
-			</configs***REMOVED***
-			<profiles***REMOVED***
-			</profiles***REMOVED***
-		</configSet***REMOVED***
 	</configSets***REMOVED***
 </beansProjectDescription***REMOVED***
