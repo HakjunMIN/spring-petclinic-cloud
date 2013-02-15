@@ -1,7 +1,7 @@
-package org.springframework.samples.petclinic.jdbc;
+package org.springframework.samples.petclinic.repository.jdbc;
 
 import org.junit.runner.RunWith;
-import org.springframework.samples.petclinic.AbstractPetRepositoryTests;
+import org.springframework.samples.petclinic.repository.AbstractPetRepositoryTests;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
