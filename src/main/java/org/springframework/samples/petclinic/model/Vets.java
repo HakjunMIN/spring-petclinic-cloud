@@ -16,29 +16,28 @@
  */
 package org.springframework.samples.petclinic.model;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
 /**
- * Simple domain object representing a list of veterinarians. Mostly here to be used for the 'vets'
- * {@link org.springframework.web.servlet.view.xml.MarshallingView***REMOVED***.
+ * Simple domain object representing a list of veterinarians. Mostly here to be used for the 'vets' {@link
+ * org.springframework.web.servlet.view.xml.MarshallingView***REMOVED***.
  *
  * @author Arjen Poutsma
  */
 @XmlRootElement
 public class Vets {
 
-	private List<Vet***REMOVED*** vets;
+    private List<Vet***REMOVED*** vets;
 
-	@XmlElement
-	public List<Vet***REMOVED*** getVetList() {
-		if (vets == null) {
-			vets = new ArrayList<Vet***REMOVED***();
-		***REMOVED***
-		return vets;
-	***REMOVED***
+    @XmlElement
+    public List<Vet***REMOVED*** getVetList() {
+        if (vets == null) {
+            vets = new ArrayList<Vet***REMOVED***();
+  ***REMOVED***
+        return vets;
+    ***REMOVED***
 
 ***REMOVED***

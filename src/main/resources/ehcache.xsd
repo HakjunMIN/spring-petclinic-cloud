@@ -227,13 +227,13 @@
     </xs:element***REMOVED***
 
     <xs:element name="searchable"***REMOVED***
-      <xs:complexType***REMOVED***
-        <xs:sequence***REMOVED***
-          <xs:element minOccurs="0" maxOccurs="unbounded" ref="searchAttribute"/***REMOVED***
-        </xs:sequence***REMOVED***
-        <xs:attribute name="keys" use="optional" type="xs:boolean" default="true"/***REMOVED***
-        <xs:attribute name="values" use="optional" type="xs:boolean" default="true"/***REMOVED***
-      </xs:complexType***REMOVED***
+        <xs:complexType***REMOVED***
+            <xs:sequence***REMOVED***
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="searchAttribute"/***REMOVED***
+            </xs:sequence***REMOVED***
+            <xs:attribute name="keys" use="optional" type="xs:boolean" default="true"/***REMOVED***
+            <xs:attribute name="values" use="optional" type="xs:boolean" default="true"/***REMOVED***
+        </xs:complexType***REMOVED***
     </xs:element***REMOVED***
 
     <xs:element name="pinning"***REMOVED***
@@ -371,26 +371,27 @@
     <xs:element name="sizeOfPolicy"***REMOVED***
         <xs:complexType***REMOVED***
             <xs:attribute name="maxDepth" use="required" type="xs:integer"/***REMOVED***
-            <xs:attribute name="maxDepthExceededBehavior" use="optional" default="continue" type="maxDepthExceededBehavior"/***REMOVED***
+            <xs:attribute name="maxDepthExceededBehavior" use="optional" default="continue"
+                          type="maxDepthExceededBehavior"/***REMOVED***
         </xs:complexType***REMOVED***
     </xs:element***REMOVED***
 
-	<xs:element name="persistence"***REMOVED***
-	    <xs:complexType***REMOVED***
+    <xs:element name="persistence"***REMOVED***
+        <xs:complexType***REMOVED***
             <xs:attribute name="strategy" use="required" type="persistenceStrategy"/***REMOVED***
             <xs:attribute name="synchronousWrites" use="optional" default="false" type="xs:boolean"/***REMOVED***
-	    </xs:complexType***REMOVED***
-	</xs:element***REMOVED***
-	
-	<xs:simpleType name="persistenceStrategy"***REMOVED***
-	    <xs:restriction base="xs:string"***REMOVED***
-	        <xs:enumeration value="localTempSwap"/***REMOVED***
-	        <xs:enumeration value="localRestartable"/***REMOVED***
-	        <xs:enumeration value="none"/***REMOVED***
-	        <xs:enumeration value="distributed"/***REMOVED***
-	    </xs:restriction***REMOVED***
-	</xs:simpleType***REMOVED***
-	
+        </xs:complexType***REMOVED***
+    </xs:element***REMOVED***
+
+    <xs:simpleType name="persistenceStrategy"***REMOVED***
+        <xs:restriction base="xs:string"***REMOVED***
+            <xs:enumeration value="localTempSwap"/***REMOVED***
+            <xs:enumeration value="localRestartable"/***REMOVED***
+            <xs:enumeration value="none"/***REMOVED***
+            <xs:enumeration value="distributed"/***REMOVED***
+        </xs:restriction***REMOVED***
+    </xs:simpleType***REMOVED***
+
     <xs:simpleType name="maxDepthExceededBehavior"***REMOVED***
         <xs:restriction base="xs:string"***REMOVED***
             <xs:enumeration value="continue"/***REMOVED***

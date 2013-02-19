@@ -18,33 +18,33 @@ package org.springframework.samples.petclinic.repository.jdbc;
 import org.springframework.samples.petclinic.model.Pet;
 
 /**
- * Subclass of Pet that carries temporary id properties which
- * are only relevant for a JDBC implmentation of the ClinicService.
+ * Subclass of Pet that carries temporary id properties which are only relevant for a JDBC implmentation of the
+ * ClinicService.
  *
  * @author Juergen Hoeller
  * @see JdbcClinicImpl
  */
 class JdbcPet extends Pet {
 
-	private int typeId;
+    private int typeId;
 
-	private int ownerId;
+    private int ownerId;
 
 
-	public void setTypeId(int typeId) {
-		this.typeId = typeId;
-	***REMOVED***
+    public void setTypeId(int typeId) {
+        this.typeId = typeId;
+    ***REMOVED***
 
-	public int getTypeId() {
-		return this.typeId;
-	***REMOVED***
+    public int getTypeId() {
+        return this.typeId;
+    ***REMOVED***
 
-	public void setOwnerId(int ownerId) {
-		this.ownerId = ownerId;
-	***REMOVED***
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
+    ***REMOVED***
 
-	public int getOwnerId() {
-		return this.ownerId;
-	***REMOVED***
+    public int getOwnerId() {
+        return this.ownerId;
+    ***REMOVED***
 
 ***REMOVED***
