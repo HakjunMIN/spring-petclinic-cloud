@@ -49,6 +49,7 @@
         <maven-help-plugin.version***REMOVED***2.1.1</maven-help-plugin.version***REMOVED***
         <maven-install-plugin.version***REMOVED***2.4</maven-install-plugin.version***REMOVED***
         <maven-jar-plugin.version***REMOVED***2.4</maven-jar-plugin.version***REMOVED***
+        <maven-javadoc-plugin.version***REMOVED***2.9</maven-javadoc-plugin.version***REMOVED***
         <maven-jetty-plugin.version***REMOVED***8.1.9.v20130131</maven-jetty-plugin.version***REMOVED***
         <maven-m2e-lifecycle-plugin.version***REMOVED***1.0.0</maven-m2e-lifecycle-plugin.version***REMOVED***
         <maven-plugin-plugin.version***REMOVED***3.2</maven-plugin-plugin.version***REMOVED***
@@ -62,6 +63,9 @@
         <maven.version.range***REMOVED***[2.2.1,3.1.0)</maven.version.range***REMOVED***
         <maven-war-plugin.version***REMOVED***2.3</maven-war-plugin.version***REMOVED***
         <mysql.version***REMOVED***5.1.22</mysql.version***REMOVED***
+        <!-- gDickens: Best Practice: ALWAYS define source encoding for platform independence --***REMOVED***
+        <project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
+        <project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
         <rome.version***REMOVED***1.0</rome.version***REMOVED***
         <servlet.version***REMOVED***2.5</servlet.version***REMOVED***
         <slf4j.version***REMOVED***1.7.2</slf4j.version***REMOVED***
@@ -462,6 +466,59 @@
                     </execution***REMOVED***
                 </executions***REMOVED***
             </plugin***REMOVED***
+            <plugin***REMOVED***
+                <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+                <artifactId***REMOVED***maven-resources-plugin</artifactId***REMOVED***
+                <version***REMOVED***${maven-resources-plugin.version***REMOVED***</version***REMOVED***
+                <configuration***REMOVED***
+                    <encoding***REMOVED***${project.build.sourceEncoding***REMOVED***</encoding***REMOVED***
+                </configuration***REMOVED***
+            </plugin***REMOVED***
+            <plugin***REMOVED***
+                <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+                <artifactId***REMOVED***maven-site-plugin</artifactId***REMOVED***
+                <version***REMOVED***${maven-site-plugin.version***REMOVED***</version***REMOVED***
+                <executions***REMOVED***
+                    <execution***REMOVED***
+                        <id***REMOVED***attach-descriptor</id***REMOVED***
+                        <goals***REMOVED***
+                            <goal***REMOVED***attach-descriptor</goal***REMOVED***
+                        </goals***REMOVED***
+                    </execution***REMOVED***
+                </executions***REMOVED***
+                <configuration***REMOVED***
+                    <reportPlugins***REMOVED***
+                        <plugin***REMOVED***
+                            <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+                            <artifactId***REMOVED***maven-surefire-report-plugin</artifactId***REMOVED***
+                            <version***REMOVED***${maven-surefire-plugin.version***REMOVED***</version***REMOVED***
+                            <configuration***REMOVED***
+                                <outputDirectory***REMOVED***${project.reporting.outputDirectory***REMOVED***/testresults</outputDirectory***REMOVED***
+                            </configuration***REMOVED***
+                        </plugin***REMOVED***
+                        <plugin***REMOVED***
+                            <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+                            <artifactId***REMOVED***maven-javadoc-plugin</artifactId***REMOVED***
+                            <version***REMOVED***${maven-javadoc-plugin.version***REMOVED***</version***REMOVED***
+                            <configuration***REMOVED***
+                                <aggregate***REMOVED***true</aggregate***REMOVED***
+                            </configuration***REMOVED***
+                        </plugin***REMOVED***
+                        <plugin***REMOVED***
+                            <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+                            <artifactId***REMOVED***maven-project-info-reports-plugin</artifactId***REMOVED***
+                            <version***REMOVED***${maven-project-info-reports-plugin.version***REMOVED***</version***REMOVED***
+                            <configuration***REMOVED***
+                                <dependencyDetailsEnabled***REMOVED***false</dependencyDetailsEnabled***REMOVED***
+                                <dependencyLocationsEnabled***REMOVED***false</dependencyLocationsEnabled***REMOVED***
+                            </configuration***REMOVED***
+                        </plugin***REMOVED***
+                    </reportPlugins***REMOVED***
+                    <locales***REMOVED***en</locales***REMOVED***
+                </configuration***REMOVED***
+            </plugin***REMOVED***
+
+
         </plugins***REMOVED***
 
         <!-- gDickens: For Eclipse's M2E plugin support --***REMOVED***
@@ -885,5 +942,5 @@
         </dependencies***REMOVED***
     </dependencyManagement***REMOVED***
 
-    
+
 </project***REMOVED***

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?***REMOVED***
-<configuration debug="true" scan="true" scanPeriod="30 seconds"***REMOVED***
+<configuration scan="true" scanPeriod="30 seconds"***REMOVED***
 
     <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"***REMOVED***
         <resetJUL***REMOVED***true</resetJUL***REMOVED***
