@@ -11,6 +11,10 @@
 		</layout***REMOVED***
 	</appender***REMOVED***
 	
+	<logger name="org.springframework.test.web"***REMOVED***
+		<level value="trace" /***REMOVED***
+	</logger***REMOVED***
+	
 	<!-- Root Logger --***REMOVED***
 	<root***REMOVED***
 		<priority value="info" /***REMOVED***<!--

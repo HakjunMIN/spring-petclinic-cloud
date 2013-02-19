@@ -38,10 +38,10 @@
 	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" /***REMOVED***
 
 	<!-- Renders an Atom feed of the visits. Used by the BeanNameViewResolver  --***REMOVED***	 
-	<bean id="visitList" class="org.springframework.samples.petclinic.web.VisitsAtomView"/***REMOVED***
+	<bean id="vets/vetList.atom" class="org.springframework.samples.petclinic.web.VetsAtomView"/***REMOVED***
 
 	<!-- Renders an XML view. Used by the BeanNameViewResolver  --***REMOVED***		 
-	<bean id="vets/vetList" class="org.springframework.web.servlet.view.xml.MarshallingView"***REMOVED***
+	<bean id="vets/vetList.xml" class="org.springframework.web.servlet.view.xml.MarshallingView"***REMOVED***
 		<property name="marshaller" ref="marshaller"/***REMOVED***
 	</bean***REMOVED***
 

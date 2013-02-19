@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<!--
+	- DispatcherServlet application context for PetClinic's web tier.
+--***REMOVED***
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"***REMOVED***
+	
+	<import resource="classpath:spring/dao-config.xml"/***REMOVED***
+	<import resource="classpath:spring/mvc-core-config.xml"/***REMOVED***
+
+</beans***REMOVED***

@@ -8,7 +8,8 @@
 	<enableImports***REMOVED***<![CDATA[false]]***REMOVED***</enableImports***REMOVED***
 	<configs***REMOVED***
 		<config***REMOVED***src/main/resources/spring/datasource-config.xml</config***REMOVED***
-		<config***REMOVED***src/main/webapp/WEB-INF/mvc-view-config.xml</config***REMOVED***
+		<config***REMOVED***src/main/resources/spring/mvc-core-config.xml</config***REMOVED***
+		<config***REMOVED***src/main/resources/spring/mvc-view-config.xml</config***REMOVED***
 	</configs***REMOVED***
 	<configSets***REMOVED***
 	</configSets***REMOVED***

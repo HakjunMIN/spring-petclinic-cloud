@@ -38,7 +38,7 @@ id="WebApp_ID" version="2.5"***REMOVED***
 		<servlet-class***REMOVED***org.springframework.web.servlet.DispatcherServlet</servlet-class***REMOVED***
 		<init-param***REMOVED***
 			<param-name***REMOVED***contextConfigLocation</param-name***REMOVED***
-			<param-value***REMOVED***/WEB-INF/mvc-core-config.xml</param-value***REMOVED***
+			<param-value***REMOVED***classpath:spring/mvc-core-config.xml</param-value***REMOVED***
 		</init-param***REMOVED***
 		<load-on-startup***REMOVED***1</load-on-startup***REMOVED***
 	</servlet***REMOVED***

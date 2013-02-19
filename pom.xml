@@ -15,6 +15,8 @@
 		<aspectj.version***REMOVED***1.7.1</aspectj.version***REMOVED***
 		<hibernate.validator.version***REMOVED***4.2.0.Final</hibernate.validator.version***REMOVED***
 		<joda.version***REMOVED***2.0</joda.version***REMOVED***
+		<spring.data.jpa***REMOVED***1.1.0.RELEASE</spring.data.jpa***REMOVED***
+		<junit.version***REMOVED***4.10</junit.version***REMOVED***
 	</properties***REMOVED***
 	<dependencies***REMOVED*** 
 
@@ -152,7 +154,7 @@
 		<dependency***REMOVED***
  			<groupId***REMOVED***org.springframework.data</groupId***REMOVED***
  			<artifactId***REMOVED***spring-data-jpa</artifactId***REMOVED***
- 			<version***REMOVED***1.1.0.RELEASE</version***REMOVED***
+ 			<version***REMOVED***${spring.data.jpa***REMOVED***</version***REMOVED***
 		</dependency***REMOVED*** 
 
 		<!-- Servlet --***REMOVED***
@@ -207,7 +209,7 @@
 		<dependency***REMOVED***
 			<groupId***REMOVED***junit</groupId***REMOVED***
 			<artifactId***REMOVED***junit</artifactId***REMOVED***
-			<version***REMOVED***4.10</version***REMOVED***
+			<version***REMOVED***${junit.version***REMOVED***</version***REMOVED***
 			<scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
@@ -312,21 +314,5 @@
 				</executions***REMOVED***
 			</plugin***REMOVED***
 		</plugins***REMOVED***
-		<testResources***REMOVED***
-            <testResource***REMOVED***
-                <directory***REMOVED***src/test/resources</directory***REMOVED***
-                <filtering***REMOVED***true</filtering***REMOVED***
-            </testResource***REMOVED***
-
-            <testResource***REMOVED***
-                <directory***REMOVED***src/main/webapp/WEB-INF</directory***REMOVED***
-
-                <filtering***REMOVED***true</filtering***REMOVED***
-
-                <includes***REMOVED***
-                    <include***REMOVED*****/mvc-*-config.xml</include***REMOVED***
-                </includes***REMOVED***
-            </testResource***REMOVED***
-        </testResources***REMOVED***
 	</build***REMOVED***
 </project***REMOVED***
