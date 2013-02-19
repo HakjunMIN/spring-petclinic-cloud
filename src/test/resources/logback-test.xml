@@ -15,6 +15,7 @@
     </appender***REMOVED***
 
     <logger name="org.springframework.samples.petclinic" level="debug"/***REMOVED***
+    <logger name="org.springframework.test.web" level="trace"/***REMOVED***
 
     <root level="warn"***REMOVED***
         <appender-ref ref="console"/***REMOVED***
