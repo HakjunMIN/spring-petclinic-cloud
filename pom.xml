@@ -12,7 +12,6 @@
     <properties***REMOVED***
         <antlr.version***REMOVED***2.7.7</antlr.version***REMOVED***
         <aspectj.version***REMOVED***1.7.1</aspectj.version***REMOVED***
-        <commons-beanutils.version***REMOVED***1.8.3</commons-beanutils.version***REMOVED***
         <commons-dbcp.version***REMOVED***1.4</commons-dbcp.version***REMOVED***
         <commons-lang3.version***REMOVED***3.1</commons-lang3.version***REMOVED***
         <commons-pool.version***REMOVED***1.6</commons-pool.version***REMOVED***
@@ -230,6 +229,10 @@
             <groupId***REMOVED***org.hamcrest</groupId***REMOVED***
             <artifactId***REMOVED***hamcrest-library</artifactId***REMOVED***
         </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.aspectj</groupId***REMOVED***
+            <artifactId***REMOVED***aspectjweaver</artifactId***REMOVED***
+        </dependency***REMOVED***
     </dependencies***REMOVED***
 
     <!-- gDickens: Best Practice to ALWAYS include the Maven plugin versions --***REMOVED***
@@ -413,6 +416,24 @@
                         <version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
                         <scope***REMOVED***runtime</scope***REMOVED***
                     </dependency***REMOVED***
+                    <dependency***REMOVED***
+                        <groupId***REMOVED***commons-dbcp</groupId***REMOVED***
+                        <artifactId***REMOVED***commons-dbcp</artifactId***REMOVED***
+                        <version***REMOVED***${commons-dbcp.version***REMOVED***</version***REMOVED***
+                        <scope***REMOVED***runtime</scope***REMOVED***
+                    </dependency***REMOVED***
+                    <dependency***REMOVED***
+                        <groupId***REMOVED***commons-pool</groupId***REMOVED***
+                        <artifactId***REMOVED***commons-pool</artifactId***REMOVED***
+                        <version***REMOVED***${commons-pool.version***REMOVED***</version***REMOVED***
+                        <scope***REMOVED***runtime</scope***REMOVED***
+                    </dependency***REMOVED***
+                    <dependency***REMOVED***
+                        <groupId***REMOVED***org.jdom</groupId***REMOVED***
+                        <artifactId***REMOVED***jdom</artifactId***REMOVED***
+                        <version***REMOVED***${jdom.version***REMOVED***</version***REMOVED***
+                        <scope***REMOVED***runtime</scope***REMOVED***
+                    </dependency***REMOVED***
                 </dependencies***REMOVED***
             </plugin***REMOVED***
             <!-- *******************************************************
@@ -584,6 +605,7 @@
                 <groupId***REMOVED***org.aspectj</groupId***REMOVED***
                 <artifactId***REMOVED***aspectjweaver</artifactId***REMOVED***
                 <version***REMOVED***${aspectj.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.aspectj</groupId***REMOVED***
@@ -658,11 +680,13 @@
                 <groupId***REMOVED***javax.xml.bind</groupId***REMOVED***
                 <artifactId***REMOVED***jaxb-api</artifactId***REMOVED***
                 <version***REMOVED***${jaxb-api.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***provided</scope***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***com.sun.xml.bind</groupId***REMOVED***
                 <artifactId***REMOVED***jaxb-impl</artifactId***REMOVED***
                 <version***REMOVED***${jaxb-impl.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***provided</scope***REMOVED***
             </dependency***REMOVED***
             <!-- SPRING, SPRING, SPRINGITY SPRING --***REMOVED***
             <dependency***REMOVED***
@@ -781,6 +805,7 @@
                 <groupId***REMOVED***commons-dbcp</groupId***REMOVED***
                 <artifactId***REMOVED***commons-dbcp</artifactId***REMOVED***
                 <version***REMOVED***${commons-dbcp.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.apache.commons</groupId***REMOVED***
@@ -788,20 +813,10 @@
                 <version***REMOVED***${commons-lang3.version***REMOVED***</version***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
-                <groupId***REMOVED***commons-beanutils</groupId***REMOVED***
-                <artifactId***REMOVED***commons-beanutils</artifactId***REMOVED***
-                <version***REMOVED***${commons-beanutils.version***REMOVED***</version***REMOVED***
-                <exclusions***REMOVED***
-                    <exclusion***REMOVED***
-                        <groupId***REMOVED***commons-logging</groupId***REMOVED***
-                        <artifactId***REMOVED***commons-logging</artifactId***REMOVED***
-                    </exclusion***REMOVED***
-                </exclusions***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
                 <groupId***REMOVED***commons-pool</groupId***REMOVED***
                 <artifactId***REMOVED***commons-pool</artifactId***REMOVED***
                 <version***REMOVED***${commons-pool.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
 
             <!-- Logging with SLF4J & LogBack --***REMOVED***
@@ -809,31 +824,31 @@
                 <groupId***REMOVED***org.slf4j</groupId***REMOVED***
                 <artifactId***REMOVED***jcl-over-slf4j</artifactId***REMOVED***
                 <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.slf4j</groupId***REMOVED***
                 <artifactId***REMOVED***slf4j-api</artifactId***REMOVED***
                 <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.slf4j</groupId***REMOVED***
                 <artifactId***REMOVED***jul-to-slf4j</artifactId***REMOVED***
                 <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***ch.qos.logback</groupId***REMOVED***
                 <artifactId***REMOVED***logback-classic</artifactId***REMOVED***
                 <version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***ch.qos.logback</groupId***REMOVED***
                 <artifactId***REMOVED***logback-core</artifactId***REMOVED***
                 <version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***ch.qos.logback</groupId***REMOVED***
-                <artifactId***REMOVED***logback-access</artifactId***REMOVED***
-                <version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***rome</groupId***REMOVED***
@@ -919,6 +934,7 @@
                 <groupId***REMOVED***org.jdom</groupId***REMOVED***
                 <artifactId***REMOVED***jdom</artifactId***REMOVED***
                 <version***REMOVED***${jdom.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
             <!-- Test Artifacts --***REMOVED***
             <dependency***REMOVED***
