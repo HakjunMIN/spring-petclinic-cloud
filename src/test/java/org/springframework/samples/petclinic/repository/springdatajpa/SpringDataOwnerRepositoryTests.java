@@ -11,9 +11,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author Michael Isvy
  */
 
-@ContextConfiguration(locations={"classpath:spring/dao-config.xml"***REMOVED***)
+@ContextConfiguration(locations = {"classpath:spring/dao-config.xml"***REMOVED***)
 @RunWith(SpringJUnit4ClassRunner.class)
 @ActiveProfiles("spring-data-jpa")
 public class SpringDataOwnerRepositoryTests extends AbstractOwnerRepositoryTests {
-		
+
 ***REMOVED***

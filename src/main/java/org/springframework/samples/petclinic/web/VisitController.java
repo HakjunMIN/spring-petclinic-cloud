@@ -15,8 +15,6 @@
  */
 package org.springframework.samples.petclinic.web;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.Visit;
@@ -25,16 +23,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
+
 /**
- *
  * @author Juergen Hoeller
  * @author Ken Krebs
  * @author Arjen Poutsma
@@ -44,45 +39,44 @@ import org.springframework.web.servlet.ModelAndView;
 @SessionAttributes("visit")
 public class VisitController {
 
-	private final ClinicService clinicService;
+    private final ClinicService clinicService;
 
 
-	@Autowired
-	public VisitController(ClinicService clinicService) {
-		this.clinicService = clinicService;
-	***REMOVED***
+    @Autowired
+    public VisitController(ClinicService clinicService) {
+        this.clinicService = clinicService;
+    ***REMOVED***
 
-	@InitBinder
-	public void setAllowedFields(WebDataBinder dataBinder) {
-		dataBinder.setDisallowedFields("id");
-	***REMOVED***
+    @InitBinder
+    public void setAllowedFields(WebDataBinder dataBinder) {
+        dataBinder.setDisallowedFields("id");
+    ***REMOVED***
 
-	@RequestMapping(value="/owners/*/pets/{petId***REMOVED***/visits/new", method = RequestMethod.GET)
-	public String initNewVisitForm(@PathVariable("petId") int petId, Model model) {
-		Pet pet = this.clinicService.findPetById(petId);
-		Visit visit = new Visit();
-		pet.addVisit(visit);
-		model.addAttribute("visit", visit);
-		return "pets/createOrUpdateVisitForm";
-	***REMOVED***
+    @RequestMapping(value = "/owners/*/pets/{petId***REMOVED***/visits/new", method = RequestMethod.GET)
+    public String initNewVisitForm(@PathVariable("petId") int petId, Model model) {
+        Pet pet = this.clinicService.findPetById(petId);
+        Visit visit = new Visit();
+        pet.addVisit(visit);
+        model.addAttribute("visit", visit);
+        return "pets/createOrUpdateVisitForm";
+    ***REMOVED***
 
-	@RequestMapping(value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits/new", method = RequestMethod.POST)
-	public String processNewVisitForm(@Valid Visit visit, BindingResult result, SessionStatus status) {
-		if (result.hasErrors()) {
-			return "pets/createOrUpdateVisitForm";
-		***REMOVED***
-		else {
-			this.clinicService.saveVisit(visit);
-			status.setComplete();
-			return "redirect:/owners/{ownerId***REMOVED***";
-		***REMOVED***
-	***REMOVED***
+    @RequestMapping(value = "/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits/new", method = RequestMethod.POST)
+    public String processNewVisitForm(@Valid Visit visit, BindingResult result, SessionStatus status) {
+        if (result.hasErrors()) {
+            return "pets/createOrUpdateVisitForm";
+  ***REMOVED*** else {
+            this.clinicService.saveVisit(visit);
+            status.setComplete();
+            return "redirect:/owners/{ownerId***REMOVED***";
+  ***REMOVED***
+    ***REMOVED***
 
-	@RequestMapping(value="/owners/*/pets/{petId***REMOVED***/visits", method=RequestMethod.GET)
-	public ModelAndView showVisits(@PathVariable int petId) {
-		ModelAndView mav = new ModelAndView("visitList");
-		mav.addObject("visits", this.clinicService.findPetById(petId).getVisits());
-		return mav;
-	***REMOVED***
+    @RequestMapping(value = "/owners/*/pets/{petId***REMOVED***/visits", method = RequestMethod.GET)
+    public ModelAndView showVisits(@PathVariable int petId) {
+        ModelAndView mav = new ModelAndView("visitList");
+        mav.addObject("visits", this.clinicService.findPetById(petId).getVisits());
+        return mav;
+    ***REMOVED***
 
 ***REMOVED***

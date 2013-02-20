@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<configuration scan="true" scanPeriod="30 seconds"***REMOVED***
+
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"***REMOVED***
+        <resetJUL***REMOVED***true</resetJUL***REMOVED***
+    </contextListener***REMOVED***
+
+    <!-- To enable JMX Management --***REMOVED***
+    <jmxConfigurator/***REMOVED***
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender"***REMOVED***
+        <encoder***REMOVED***
+            <pattern***REMOVED***%-5level %logger{0***REMOVED*** - %msg%n</pattern***REMOVED***
+        </encoder***REMOVED***
+    </appender***REMOVED***
+
+    <logger name="org.springframework.samples.petclinic" level="debug"/***REMOVED***
+
+    <root level="warn"***REMOVED***
+        <appender-ref ref="console"/***REMOVED***
+    </root***REMOVED***
+</configuration***REMOVED***

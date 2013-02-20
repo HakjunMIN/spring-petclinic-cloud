@@ -10,73 +10,75 @@
 
 
 <body***REMOVED***
-	<script***REMOVED***
-		$(function() {
-			$("#date").datepicker({ dateFormat: 'yy/mm/dd'***REMOVED***);
-		***REMOVED***);
-	</script***REMOVED***
-  	<div class="container"***REMOVED***
-		<jsp:include page="../fragments/bodyHeader.jsp"/***REMOVED***
-		<h2***REMOVED***<c:if test="${visit['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Visit</h2***REMOVED***
-		
-		  <b***REMOVED***Pet</b***REMOVED***
-		  <table  class="table table-striped"***REMOVED***
-		    <thead***REMOVED***
-		    	<tr***REMOVED***
-			      <th***REMOVED***Name</th***REMOVED***
-			      <th***REMOVED***Birth Date</th***REMOVED***
-			      <th***REMOVED***Type</th***REMOVED***
-			      <th***REMOVED***Owner</th***REMOVED***
-		      	</tr***REMOVED***
-		    </thead***REMOVED***
-		    <tr***REMOVED***
-		      <td***REMOVED***<c:out value="${visit.pet.name***REMOVED***" /***REMOVED***</td***REMOVED***
-		      <td***REMOVED***<joda:format value="${visit.pet.birthDate***REMOVED***" pattern="yyyy/MM/dd"/***REMOVED***</td***REMOVED***
-		      <td***REMOVED***<c:out value="${visit.pet.type.name***REMOVED***" /***REMOVED***</td***REMOVED***
-		      <td***REMOVED***<c:out value="${visit.pet.owner.firstName***REMOVED*** ${visit.pet.owner.lastName***REMOVED***" /***REMOVED***</td***REMOVED***
-		    </tr***REMOVED***
-		  </table***REMOVED***
-		
-		<form:form modelAttribute="visit"***REMOVED***
-			<div class="control-group"***REMOVED***
-				<label class="control-label"***REMOVED***Date </label***REMOVED***
-				<div class="controls"***REMOVED***
-					<form:input path="date" /***REMOVED***
-					<span class="help-inline"***REMOVED***<form:errors path="date" /***REMOVED***</span***REMOVED***
-				</div***REMOVED***
-			</div***REMOVED***
-			<div class="control-group"***REMOVED***
-				<label class="control-label"***REMOVED***Description </label***REMOVED***
-				<div class="controls"***REMOVED***
-					<form:input path="description" /***REMOVED***
-					<span class="help-inline"***REMOVED***<form:errors path="description" /***REMOVED***</span***REMOVED***
-				</div***REMOVED***
-			</div***REMOVED***
-			<div class="form-actions"***REMOVED***
-				<input type="hidden" name="petId" value="${visit.pet.id***REMOVED***"/***REMOVED***
-				<button type="submit"***REMOVED***Add Visit</button***REMOVED***
-			</div***REMOVED***
-		</form:form***REMOVED***
-		
-		<br/***REMOVED***
-		<b***REMOVED***Previous Visits</b***REMOVED***
-		<table style="width: 333px;"***REMOVED***
-		  <tr***REMOVED***
-		    <th***REMOVED***Date</th***REMOVED***
-		    <th***REMOVED***Description</th***REMOVED***
-		  </tr***REMOVED***
-		  <c:forEach var="visit" items="${visit.pet.visits***REMOVED***"***REMOVED***
-		    <c:if test="${!visit['new']***REMOVED***"***REMOVED***
-		      <tr***REMOVED***
-		        <td***REMOVED***<joda:format value="${visit.date***REMOVED***" pattern="yyyy/MM/dd"/***REMOVED***</td***REMOVED***
-		        <td***REMOVED***<c:out value="${visit.description***REMOVED***" /***REMOVED***</td***REMOVED***
-		      </tr***REMOVED***
-		    </c:if***REMOVED***
-		  </c:forEach***REMOVED***
-		</table***REMOVED***
+<script***REMOVED***
+    $(function () {
+        $("#date").datepicker({ dateFormat: 'yy/mm/dd'***REMOVED***);
+    ***REMOVED***);
+</script***REMOVED***
+<div class="container"***REMOVED***
+    <jsp:include page="../fragments/bodyHeader.jsp"/***REMOVED***
+    <h2***REMOVED***<c:if test="${visit['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Visit</h2***REMOVED***
 
-  	</div***REMOVED***
-	<jsp:include page="../fragments/footer.jsp"/***REMOVED***
+    <b***REMOVED***Pet</b***REMOVED***
+    <table class="table table-striped"***REMOVED***
+        <thead***REMOVED***
+        <tr***REMOVED***
+            <th***REMOVED***Name</th***REMOVED***
+            <th***REMOVED***Birth Date</th***REMOVED***
+            <th***REMOVED***Type</th***REMOVED***
+            <th***REMOVED***Owner</th***REMOVED***
+        </tr***REMOVED***
+        </thead***REMOVED***
+        <tr***REMOVED***
+            <td***REMOVED***<c:out value="${visit.pet.name***REMOVED***"/***REMOVED***</td***REMOVED***
+            <td***REMOVED***<joda:format value="${visit.pet.birthDate***REMOVED***" pattern="yyyy/MM/dd"/***REMOVED***</td***REMOVED***
+            <td***REMOVED***<c:out value="${visit.pet.type.name***REMOVED***"/***REMOVED***</td***REMOVED***
+            <td***REMOVED***<c:out value="${visit.pet.owner.firstName***REMOVED*** ${visit.pet.owner.lastName***REMOVED***"/***REMOVED***</td***REMOVED***
+        </tr***REMOVED***
+    </table***REMOVED***
+
+    <form:form modelAttribute="visit"***REMOVED***
+        <div class="control-group"***REMOVED***
+            <label class="control-label"***REMOVED***Date </label***REMOVED***
+
+            <div class="controls"***REMOVED***
+                <form:input path="date"/***REMOVED***
+                <span class="help-inline"***REMOVED***<form:errors path="date"/***REMOVED***</span***REMOVED***
+            </div***REMOVED***
+        </div***REMOVED***
+        <div class="control-group"***REMOVED***
+            <label class="control-label"***REMOVED***Description </label***REMOVED***
+
+            <div class="controls"***REMOVED***
+                <form:input path="description"/***REMOVED***
+                <span class="help-inline"***REMOVED***<form:errors path="description"/***REMOVED***</span***REMOVED***
+            </div***REMOVED***
+        </div***REMOVED***
+        <div class="form-actions"***REMOVED***
+            <input type="hidden" name="petId" value="${visit.pet.id***REMOVED***"/***REMOVED***
+            <button type="submit"***REMOVED***Add Visit</button***REMOVED***
+        </div***REMOVED***
+    </form:form***REMOVED***
+
+    <br/***REMOVED***
+    <b***REMOVED***Previous Visits</b***REMOVED***
+    <table style="width: 333px;"***REMOVED***
+        <tr***REMOVED***
+            <th***REMOVED***Date</th***REMOVED***
+            <th***REMOVED***Description</th***REMOVED***
+        </tr***REMOVED***
+        <c:forEach var="visit" items="${visit.pet.visits***REMOVED***"***REMOVED***
+            <c:if test="${!visit['new']***REMOVED***"***REMOVED***
+                <tr***REMOVED***
+                    <td***REMOVED***<joda:format value="${visit.date***REMOVED***" pattern="yyyy/MM/dd"/***REMOVED***</td***REMOVED***
+                    <td***REMOVED***<c:out value="${visit.description***REMOVED***"/***REMOVED***</td***REMOVED***
+                </tr***REMOVED***
+            </c:if***REMOVED***
+        </c:forEach***REMOVED***
+    </table***REMOVED***
+
+</div***REMOVED***
+<jsp:include page="../fragments/footer.jsp"/***REMOVED***
 </body***REMOVED***
 
 </html***REMOVED***
