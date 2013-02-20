@@ -16,7 +16,7 @@
 
     <logger name="org.springframework.samples.petclinic" level="debug"/***REMOVED***
 
-    <root level="warn"***REMOVED***
+    <root level="info"***REMOVED***
         <appender-ref ref="console"/***REMOVED***
     </root***REMOVED***
 </configuration***REMOVED***

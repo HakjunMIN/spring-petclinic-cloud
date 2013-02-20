@@ -10,7 +10,6 @@
     <packaging***REMOVED***war</packaging***REMOVED***
 
     <properties***REMOVED***
-        <antlr.version***REMOVED***2.7.7</antlr.version***REMOVED***
         <aspectj.version***REMOVED***1.7.1</aspectj.version***REMOVED***
         <commons-dbcp.version***REMOVED***1.4</commons-dbcp.version***REMOVED***
         <commons-lang3.version***REMOVED***3.1</commons-lang3.version***REMOVED***
@@ -38,6 +37,16 @@
         <junit.version***REMOVED***4.11</junit.version***REMOVED***
         <logback.version***REMOVED***1.0.9</logback.version***REMOVED***
         <log4j.version***REMOVED***1.2.17</log4j.version***REMOVED***
+        <rome.version***REMOVED***1.0</rome.version***REMOVED***
+        <servlet.version***REMOVED***2.5</servlet.version***REMOVED***
+        <slf4j.version***REMOVED***1.7.2</slf4j.version***REMOVED***
+        <spring-data-jpa.version***REMOVED***1.3.0.RELEASE</spring-data-jpa.version***REMOVED***
+        <spring-framework.version***REMOVED***3.2.1.RELEASE</spring-framework.version***REMOVED***
+        <validation.version***REMOVED***1.0.0.GA</validation.version***REMOVED***
+        <webjars-bootstrap.version***REMOVED***2.3.0</webjars-bootstrap.version***REMOVED***
+        <webjars-jquery-ui.version***REMOVED***1.9.2</webjars-jquery-ui.version***REMOVED***
+        <webjars-jquery.version***REMOVED***1.9.0</webjars-jquery.version***REMOVED***
+
         <maven-assembly-plugin.version***REMOVED***2.4</maven-assembly-plugin.version***REMOVED***
         <maven-clean-plugin.version***REMOVED***2.5</maven-clean-plugin.version***REMOVED***
         <maven-compiler-plugin.version***REMOVED***3.0</maven-compiler-plugin.version***REMOVED***
@@ -62,18 +71,8 @@
         <maven.version.range***REMOVED***[2.2.1,3.1.0)</maven.version.range***REMOVED***
         <maven-war-plugin.version***REMOVED***2.3</maven-war-plugin.version***REMOVED***
         <mysql.version***REMOVED***5.1.22</mysql.version***REMOVED***
-        <!-- gDickens: Best Practice: ALWAYS define source encoding for platform independence --***REMOVED***
         <project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
         <project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
-        <rome.version***REMOVED***1.0</rome.version***REMOVED***
-        <servlet.version***REMOVED***2.5</servlet.version***REMOVED***
-        <slf4j.version***REMOVED***1.7.2</slf4j.version***REMOVED***
-        <spring-data-jpa.version***REMOVED***1.3.0.RELEASE</spring-data-jpa.version***REMOVED***
-        <spring-framework.version***REMOVED***3.2.1.RELEASE</spring-framework.version***REMOVED***
-        <validation.version***REMOVED***1.0.0.GA</validation.version***REMOVED***
-        <webjars-bootstrap.version***REMOVED***2.3.0</webjars-bootstrap.version***REMOVED***
-        <webjars-jquery-ui.version***REMOVED***1.9.2</webjars-jquery-ui.version***REMOVED***
-        <webjars-jquery.version***REMOVED***1.9.0</webjars-jquery.version***REMOVED***
     </properties***REMOVED***
 
     <dependencies***REMOVED***
@@ -133,12 +132,12 @@
             <artifactId***REMOVED***hsqldb</artifactId***REMOVED***
         </dependency***REMOVED***
         <!-- MySQL JDBC Connector --***REMOVED***
-        <!-- gDickens: standard mysql library
-            <dependency***REMOVED***
+        <!-- 
+		<dependency***REMOVED***
             <groupId***REMOVED***mysql</groupId***REMOVED***
             <artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
             <version***REMOVED***${mysql.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
+        </dependency***REMOVED***
         --***REMOVED***
         <!-- Hibernate JPA Provider --***REMOVED***
         <dependency***REMOVED***
@@ -235,7 +234,7 @@
         </dependency***REMOVED***
     </dependencies***REMOVED***
 
-    <!-- gDickens: Best Practice to ALWAYS include the Maven plugin versions --***REMOVED***
+    <!-- all Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term --***REMOVED***
     <build***REMOVED***
         <defaultGoal***REMOVED***install</defaultGoal***REMOVED***
         <plugins***REMOVED***
@@ -850,6 +849,7 @@
                 <version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
                 <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
+            <!--  used for Atom --***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***rome</groupId***REMOVED***
                 <artifactId***REMOVED***rome</artifactId***REMOVED***
@@ -870,22 +870,18 @@
                 <artifactId***REMOVED***joda-time-jsptags</artifactId***REMOVED***
                 <version***REMOVED***${jodatime-jsptags.version***REMOVED***</version***REMOVED***
             </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***antlr</groupId***REMOVED***
-                <artifactId***REMOVED***antlr</artifactId***REMOVED***
-                <version***REMOVED***${antlr.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-
-            <!-- Databases --***REMOVED***
-            <dependency***REMOVED***
+ 
+            <!-- Databases - Uses HSQL by default --***REMOVED***
+            <!-- <dependency***REMOVED***
                 <groupId***REMOVED***mysql</groupId***REMOVED***
                 <artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
                 <version***REMOVED***${mysql.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
+            </dependency***REMOVED***  --***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.hsqldb</groupId***REMOVED***
                 <artifactId***REMOVED***hsqldb</artifactId***REMOVED***
                 <version***REMOVED***${hsqldb.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***javax.servlet.jsp.jstl</groupId***REMOVED***
@@ -943,6 +939,7 @@
                 <version***REMOVED***${junit.version***REMOVED***</version***REMOVED***
                 <scope***REMOVED***test</scope***REMOVED***
             </dependency***REMOVED***
+            <!-- used by Spring MVC Test framework --***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.hamcrest</groupId***REMOVED***
                 <artifactId***REMOVED***hamcrest-library</artifactId***REMOVED***
@@ -957,6 +954,5 @@
             </dependency***REMOVED***
         </dependencies***REMOVED***
     </dependencyManagement***REMOVED***
-
 
 </project***REMOVED***
