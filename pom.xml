@@ -10,6 +10,7 @@
     <packaging***REMOVED***war</packaging***REMOVED***
 
     <properties***REMOVED***
+        <antlr.version***REMOVED***2.7.7</antlr.version***REMOVED***
         <aspectj.version***REMOVED***1.7.1</aspectj.version***REMOVED***
         <commons-dbcp.version***REMOVED***1.4</commons-dbcp.version***REMOVED***
         <commons-lang3.version***REMOVED***3.1</commons-lang3.version***REMOVED***
@@ -70,6 +71,7 @@
         <maven-taglist-plugin.version***REMOVED***2.4</maven-taglist-plugin.version***REMOVED***
         <maven.version.range***REMOVED***[2.2.1,3.1.0)</maven.version.range***REMOVED***
         <maven-war-plugin.version***REMOVED***2.3</maven-war-plugin.version***REMOVED***
+        <maven-tomcat-plugin.version***REMOVED***2.0</maven-tomcat-plugin.version***REMOVED***
         <mysql.version***REMOVED***5.1.22</mysql.version***REMOVED***
         <project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
         <project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
@@ -353,88 +355,20 @@
                     </filesets***REMOVED***
                 </configuration***REMOVED***
             </plugin***REMOVED***
-            <plugin***REMOVED***
-                <groupId***REMOVED***org.mortbay.jetty</groupId***REMOVED***
-                <artifactId***REMOVED***jetty-maven-plugin</artifactId***REMOVED***
-                <version***REMOVED***${maven-jetty-plugin.version***REMOVED***</version***REMOVED***
-                <configuration***REMOVED***
-                    <webAppConfig***REMOVED***
-                        <contextPath***REMOVED***/${project.name***REMOVED***</contextPath***REMOVED***
-                    </webAppConfig***REMOVED***
-                    <!--
-                    "stopPort" - Port number to receive a stop command and shutdown - use "mvn jetty:stop"
-                    "stopKey" - String value that must be sent to the stopPort to validate the stop command
-                    --***REMOVED***
-                    <stopPort***REMOVED***9966</stopPort***REMOVED***
-                    <stopKey***REMOVED***shutterdown</stopKey***REMOVED***
-                    <systemProperties***REMOVED***
-                        <systemProperty***REMOVED***
-                            <name***REMOVED***logback.configurationFile</name***REMOVED***
-                            <value***REMOVED***./src/main/resources/logback.xml</value***REMOVED***
-                        </systemProperty***REMOVED***
-                        <systemProperty***REMOVED***
-                            <name***REMOVED***com.sun.management.jmxremote</name***REMOVED***
-                            <value***REMOVED***true</value***REMOVED***
-                        </systemProperty***REMOVED***
-                        <systemProperty***REMOVED***
-                            <name***REMOVED***com.sun.management.jmxremote.port</name***REMOVED***
-                            <value***REMOVED***8050</value***REMOVED***
-                        </systemProperty***REMOVED***
-                        <systemProperty***REMOVED***
-                            <name***REMOVED***com.sun.management.jmxremote.ssl</name***REMOVED***
-                            <value***REMOVED***false</value***REMOVED***
-                        </systemProperty***REMOVED***
-                        <systemProperty***REMOVED***
-                            <name***REMOVED***com.sun.management.jmxremote.authenticate</name***REMOVED***
-                            <value***REMOVED***false</value***REMOVED***
-                        </systemProperty***REMOVED***
-                    </systemProperties***REMOVED***
-                </configuration***REMOVED***
-                <dependencies***REMOVED***
-                    <dependency***REMOVED***
-                        <groupId***REMOVED***org.slf4j</groupId***REMOVED***
-                        <artifactId***REMOVED***jcl-over-slf4j</artifactId***REMOVED***
-                        <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-                        <scope***REMOVED***runtime</scope***REMOVED***
-                    </dependency***REMOVED***
-                    <dependency***REMOVED***
-                        <groupId***REMOVED***org.slf4j</groupId***REMOVED***
-                        <artifactId***REMOVED***slf4j-api</artifactId***REMOVED***
-                        <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-                        <scope***REMOVED***runtime</scope***REMOVED***
-                    </dependency***REMOVED***
-                    <dependency***REMOVED***
-                        <groupId***REMOVED***org.slf4j</groupId***REMOVED***
-                        <artifactId***REMOVED***jul-to-slf4j</artifactId***REMOVED***
-                        <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-                        <scope***REMOVED***runtime</scope***REMOVED***
-                    </dependency***REMOVED***
-                    <dependency***REMOVED***
-                        <groupId***REMOVED***ch.qos.logback</groupId***REMOVED***
-                        <artifactId***REMOVED***logback-classic</artifactId***REMOVED***
-                        <version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
-                        <scope***REMOVED***runtime</scope***REMOVED***
-                    </dependency***REMOVED***
-                    <dependency***REMOVED***
-                        <groupId***REMOVED***commons-dbcp</groupId***REMOVED***
-                        <artifactId***REMOVED***commons-dbcp</artifactId***REMOVED***
-                        <version***REMOVED***${commons-dbcp.version***REMOVED***</version***REMOVED***
-                        <scope***REMOVED***runtime</scope***REMOVED***
-                    </dependency***REMOVED***
-                    <dependency***REMOVED***
-                        <groupId***REMOVED***commons-pool</groupId***REMOVED***
-                        <artifactId***REMOVED***commons-pool</artifactId***REMOVED***
-                        <version***REMOVED***${commons-pool.version***REMOVED***</version***REMOVED***
-                        <scope***REMOVED***runtime</scope***REMOVED***
-                    </dependency***REMOVED***
-                    <dependency***REMOVED***
-                        <groupId***REMOVED***org.jdom</groupId***REMOVED***
-                        <artifactId***REMOVED***jdom</artifactId***REMOVED***
-                        <version***REMOVED***${jdom.version***REMOVED***</version***REMOVED***
-                        <scope***REMOVED***runtime</scope***REMOVED***
-                    </dependency***REMOVED***
-                </dependencies***REMOVED***
-            </plugin***REMOVED***
+            
+
+		    <plugin***REMOVED***
+		      <groupId***REMOVED***org.apache.tomcat.maven</groupId***REMOVED***
+		      <artifactId***REMOVED***tomcat7-maven-plugin</artifactId***REMOVED***       
+		      <version***REMOVED***${maven-tomcat-plugin.version***REMOVED***</version***REMOVED***     
+		      <configuration***REMOVED***          
+		        <server***REMOVED***tomcat-development-server</server***REMOVED***
+		        <port***REMOVED***9966</port***REMOVED***
+		        <path***REMOVED***/petclinic</path***REMOVED***
+		      </configuration***REMOVED***
+		    </plugin***REMOVED*** 
+
+
             <!-- *******************************************************
                 gDickens: For reliable builds, ensure:
                  * NO duplicate jars of differing versions
@@ -870,7 +804,12 @@
                 <artifactId***REMOVED***joda-time-jsptags</artifactId***REMOVED***
                 <version***REMOVED***${jodatime-jsptags.version***REMOVED***</version***REMOVED***
             </dependency***REMOVED***
- 
+            <dependency***REMOVED***
+                <groupId***REMOVED***antlr</groupId***REMOVED***
+                <artifactId***REMOVED***antlr</artifactId***REMOVED***
+                <version***REMOVED***${antlr.version***REMOVED***</version***REMOVED***
+            </dependency***REMOVED***
+
             <!-- Databases - Uses HSQL by default --***REMOVED***
             <!-- <dependency***REMOVED***
                 <groupId***REMOVED***mysql</groupId***REMOVED***
