@@ -31,7 +31,7 @@
     <!-- uses WebJars so Javascript and CSS libs can be declared as Maven dependencies (Bootstrap, jQuery***REMOVED***) --***REMOVED***
     <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/***REMOVED***
 
-    <mvc:view-controller path="/" view-name="welcome"/***REMOVED***
+    <mvc:view-controller path="/" view-name="welcome" /***REMOVED***
 
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean"***REMOVED***
         <property name="formatters"***REMOVED***

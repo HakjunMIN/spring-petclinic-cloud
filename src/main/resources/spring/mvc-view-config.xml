@@ -17,23 +17,36 @@
     --***REMOVED***
     <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver"***REMOVED***
         <property name="contentNegotiationManager" ref="cnManager"/***REMOVED***
+        
+        <property name="viewResolvers"***REMOVED***
+        	<list***REMOVED***
+        		 <!-- Default viewClass: JSTL view (JSP with html output) --***REMOVED***
+			    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"***REMOVED***
+			        <!-- Example: a logical view name of 'vets' is mapped to '/WEB-INF/jsp/vets.jsp' --***REMOVED***
+			        <property name="prefix" value="/WEB-INF/jsp/"/***REMOVED***
+			        <property name="suffix" value=".jsp"/***REMOVED***
+			    </bean***REMOVED***
+			
+			    <!-- Used here for 'xml' and 'atom' views  --***REMOVED***
+			    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/***REMOVED***
+        	</list***REMOVED***
+        </property***REMOVED***
     </bean***REMOVED***
 
     <!-- Simple strategy: only path extension is taken into account --***REMOVED***
     <bean id="cnManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean"***REMOVED***
         <property name="favorPathExtension" value="true"/***REMOVED***
         <property name="ignoreAcceptHeader" value="true"/***REMOVED***
+        <property name="defaultContentType" value="text/html"/***REMOVED***
+        
+        <property name="mediaTypes"***REMOVED***
+            <map***REMOVED***
+                <entry key="html" value="text/html" /***REMOVED***
+                <entry key="xml" value="application/xml" /***REMOVED***
+                <entry key="atom" value="application/atom+xml" /***REMOVED***
+            </map***REMOVED***
+        </property***REMOVED***
     </bean***REMOVED***
-
-    <!-- Default viewClass: JSTL view (JSP with html output) --***REMOVED***
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"***REMOVED***
-        <!-- Example: a logical view name of 'vets' is mapped to '/WEB-INF/jsp/vets.jsp' --***REMOVED***
-        <property name="prefix" value="/WEB-INF/jsp/"/***REMOVED***
-        <property name="suffix" value=".jsp"/***REMOVED***
-    </bean***REMOVED***
-
-    <!-- Used here for 'xml' and 'atom' views  --***REMOVED***
-    <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/***REMOVED***
 
     <!-- Renders an Atom feed of the visits. Used by the BeanNameViewResolver  --***REMOVED***
     <bean id="vets/vetList.atom" class="org.springframework.samples.petclinic.web.VetsAtomView"/***REMOVED***
