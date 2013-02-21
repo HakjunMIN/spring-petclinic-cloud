@@ -31,21 +31,17 @@
             <th***REMOVED***Telephone</th***REMOVED***
             <td***REMOVED***<c:out value="${owner.telephone***REMOVED***"/***REMOVED***</td***REMOVED***
         </tr***REMOVED***
-    </table***REMOVED***
-    <table class="table-buttons"***REMOVED***
-        <tr***REMOVED***
-            <td colspan="2" align="center"***REMOVED***
-                <***REMOVED***url value="{ownerId***REMOVED***/edit.html" var="editUrl"***REMOVED***
+         <tr***REMOVED***
+            <td***REMOVED*** 
+            	<***REMOVED***url value="{ownerId***REMOVED***/edit.html" var="editUrl"***REMOVED***
                     <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
                 </***REMOVED***url***REMOVED***
-                <a href="${fn:escapeXml(editUrl)***REMOVED***"***REMOVED***Edit Owner</a***REMOVED***
-            </td***REMOVED***
+                <a href="${fn:escapeXml(editUrl)***REMOVED***" class="btn btn-info"***REMOVED***Edit Owner</a***REMOVED***</td***REMOVED***
             <td***REMOVED***
-                <***REMOVED***url value="{ownerId***REMOVED***/pets/new.html" var="addUrl"***REMOVED***
+            	<***REMOVED***url value="{ownerId***REMOVED***/pets/new.html" var="addUrl"***REMOVED***
                     <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
                 </***REMOVED***url***REMOVED***
-                <a href="${fn:escapeXml(addUrl)***REMOVED***"***REMOVED***Add New Pet</a***REMOVED***
-            </td***REMOVED***
+                <a href="${fn:escapeXml(addUrl)***REMOVED***"  class="btn btn-success"***REMOVED***Add New Pet</a***REMOVED***</td***REMOVED***
         </tr***REMOVED***
     </table***REMOVED***
 
@@ -78,34 +74,23 @@
                                 <td***REMOVED***<c:out value="${visit.description***REMOVED***"/***REMOVED***</td***REMOVED***
                             </tr***REMOVED***
                         </c:forEach***REMOVED***
+                        <tr***REMOVED***
+                            <td***REMOVED*** 
+                            	<***REMOVED***url value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/edit" var="petUrl"***REMOVED***
+			                        <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
+			                        <***REMOVED***param name="petId" value="${pet.id***REMOVED***"/***REMOVED***
+			                    </***REMOVED***url***REMOVED***
+			                    <a href="${fn:escapeXml(petUrl)***REMOVED***"***REMOVED***Edit Pet</a***REMOVED***
+			                </td***REMOVED***
+                            <td***REMOVED***
+			                    <***REMOVED***url value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits/new" var="visitUrl"***REMOVED***
+			                        <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
+			                        <***REMOVED***param name="petId" value="${pet.id***REMOVED***"/***REMOVED***
+			                    </***REMOVED***url***REMOVED***
+			                    <a href="${fn:escapeXml(visitUrl)***REMOVED***"***REMOVED***Add Visit</a***REMOVED***
+                            </td***REMOVED***
+                       	</tr***REMOVED***
                     </table***REMOVED***
-                </td***REMOVED***
-            </tr***REMOVED***
-        </table***REMOVED***
-        <table class="table-buttons"***REMOVED***
-            <tr***REMOVED***
-                <td***REMOVED***
-                    <***REMOVED***url value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/edit" var="petUrl"***REMOVED***
-                        <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
-                        <***REMOVED***param name="petId" value="${pet.id***REMOVED***"/***REMOVED***
-                    </***REMOVED***url***REMOVED***
-                    <a href="${fn:escapeXml(petUrl)***REMOVED***"***REMOVED***Edit Pet</a***REMOVED***
-                </td***REMOVED***
-                <td***REMOVED***</td***REMOVED***
-                <td***REMOVED***
-                    <***REMOVED***url value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits/new" var="visitUrl"***REMOVED***
-                        <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
-                        <***REMOVED***param name="petId" value="${pet.id***REMOVED***"/***REMOVED***
-                    </***REMOVED***url***REMOVED***
-                    <a href="${fn:escapeXml(visitUrl)***REMOVED***"***REMOVED***Add Visit</a***REMOVED***
-                </td***REMOVED***
-                <td***REMOVED***</td***REMOVED***
-                <td***REMOVED***
-                    <***REMOVED***url value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits.atom" var="feedUrl"***REMOVED***
-                        <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
-                        <***REMOVED***param name="petId" value="${pet.id***REMOVED***"/***REMOVED***
-                    </***REMOVED***url***REMOVED***
-                    <a href="${fn:escapeXml(feedUrl)***REMOVED***" rel="alternate" type="application/atom+xml"***REMOVED***Atom Feed</a***REMOVED***
                 </td***REMOVED***
             </tr***REMOVED***
         </table***REMOVED***
