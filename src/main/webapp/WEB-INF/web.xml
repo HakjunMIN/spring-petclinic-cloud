@@ -49,6 +49,30 @@
         <url-pattern***REMOVED***/</url-pattern***REMOVED***
     </servlet-mapping***REMOVED***
 
+    <!-- Dandelion-Datatables servlet definition --***REMOVED***
+    <servlet***REMOVED***
+        <servlet-name***REMOVED***datatablesController</servlet-name***REMOVED***
+        <servlet-class***REMOVED***com.github.dandelion.datatables.extras.servlet2.servlet.DatatablesServlet</servlet-class***REMOVED***
+    </servlet***REMOVED***
+   
+    <!-- Dandelion-Datatables servlet mapping --***REMOVED***
+    <servlet-mapping***REMOVED***
+        <servlet-name***REMOVED***datatablesController</servlet-name***REMOVED***
+        <url-pattern***REMOVED***/datatablesController/*</url-pattern***REMOVED***
+    </servlet-mapping***REMOVED***
+   
+    <!-- Dandelion-Datatables filter definition --***REMOVED***
+    <filter***REMOVED***
+        <filter-name***REMOVED***datatablesFilter</filter-name***REMOVED***
+        <filter-class***REMOVED***com.github.dandelion.datatables.extras.servlet2.filter.DatatablesFilter</filter-class***REMOVED***
+    </filter***REMOVED***
+    
+    <!-- Dandelion-Datatables filter mapping --***REMOVED***
+    <filter-mapping***REMOVED***
+        <filter-name***REMOVED***datatablesFilter</filter-name***REMOVED***
+        <url-pattern***REMOVED***/*</url-pattern***REMOVED***
+    </filter-mapping***REMOVED***
+
     <!-- used so we can use forms of method type 'PUT' and 'DELETE' 
     see here: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/view.html#rest-method-conversion
     --***REMOVED***

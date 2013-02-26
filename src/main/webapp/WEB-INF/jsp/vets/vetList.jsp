@@ -1,7 +1,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %***REMOVED***
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %***REMOVED***
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %***REMOVED***
-
+<%@ taglib prefix="datatables" uri="http://github.com/dandelion/datatables" %***REMOVED***
 
 <html lang="en"***REMOVED***
 
@@ -14,27 +14,18 @@
 
     <h2***REMOVED***Veterinarians</h2***REMOVED***
 
-    <table class="table table-stripped" style="width:600px;"***REMOVED***
-        <thead***REMOVED***
-        <tr***REMOVED***
-            <th***REMOVED***Name</th***REMOVED***
-            <th***REMOVED***Specialties</th***REMOVED***
-        </tr***REMOVED***
-        </thead***REMOVED***
-        <tbody***REMOVED***
-        <c:forEach var="vet" items="${vets.vetList***REMOVED***"***REMOVED***
-            <tr***REMOVED***
-                <td***REMOVED***<c:out value="${vet.firstName***REMOVED*** ${vet.lastName***REMOVED***"/***REMOVED***</td***REMOVED***
-                <td***REMOVED***
-                    <c:forEach var="specialty" items="${vet.specialties***REMOVED***"***REMOVED***
-                        <c:out value="${specialty.name***REMOVED***"/***REMOVED***
-                    </c:forEach***REMOVED***
-                    <c:if test="${vet.nrOfSpecialties == 0***REMOVED***"***REMOVED***none</c:if***REMOVED***
-                </td***REMOVED***
-            </tr***REMOVED***
-        </c:forEach***REMOVED***
-        </tbody***REMOVED***
-    </table***REMOVED***
+    <datatables:table id="vets" data="${vets.vetList***REMOVED***" cdn="true" row="vet" theme="bootstrap2" cssClass="table table-striped" paginate="false" info="false"***REMOVED***
+        <datatables:column title="Name"***REMOVED***
+            <c:out value="${vet.firstName***REMOVED*** ${vet.lastName***REMOVED***"***REMOVED***</c:out***REMOVED***
+        </datatables:column***REMOVED***
+        <datatables:column title="Specialties"***REMOVED***
+            <c:forEach var="specialty" items="${vet.specialties***REMOVED***"***REMOVED***
+                <c:out value="${specialty.name***REMOVED***"/***REMOVED***
+            </c:forEach***REMOVED***
+            <c:if test="${vet.nrOfSpecialties == 0***REMOVED***"***REMOVED***none</c:if***REMOVED***
+        </datatables:column***REMOVED***
+    </datatables:table***REMOVED***
+    
     <table class="table-buttons"***REMOVED***
         <tr***REMOVED***
             <td***REMOVED***
