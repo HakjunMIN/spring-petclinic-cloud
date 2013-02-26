@@ -18,10 +18,10 @@ PetClinic :: a Spring Framework demonstration
     <***REMOVED***url value="/webjars/jquery/1.9.0/jquery.js" var="jQuery"/***REMOVED***
     <script src="${jQuery***REMOVED***"***REMOVED***</script***REMOVED***
 
-    <***REMOVED***url value="/webjars/jquery-ui/1.9.2/js/jquery-ui-1.9.1.custom.js" var="jQueryUi"/***REMOVED***
+    <***REMOVED***url value="/webjars/jquery-ui/1.9.2/js/jquery-ui-1.9.2.custom.js" var="jQueryUi"/***REMOVED***
     <script src="${jQueryUi***REMOVED***"***REMOVED***</script***REMOVED***
 
-    <***REMOVED***url value="/webjars/jquery-ui/1.9.2/css/smoothness/jquery-ui-1.9.1.custom.css" var="jQueryUiCss"/***REMOVED***
+    <***REMOVED***url value="/webjars/jquery-ui/1.9.2/css/smoothness/jquery-ui-1.9.2.custom.css" var="jQueryUiCss"/***REMOVED***
     <link href="${jQueryUiCss***REMOVED***" rel="stylesheet"***REMOVED***</link***REMOVED***
 </head***REMOVED***
 
