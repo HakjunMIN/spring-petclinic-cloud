@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://java.sun.com/xml/ns/javaee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-           http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5"***REMOVED***
 
     <display-name***REMOVED***Spring PetClinic</display-name***REMOVED***
@@ -10,21 +10,21 @@
 
     <context-param***REMOVED***
         <param-name***REMOVED***spring.profiles.active</param-name***REMOVED***
-        <param-value***REMOVED***jpa</param-value***REMOVED***
+        <param-value***REMOVED***jdbc</param-value***REMOVED***
         <!-- Available profiles:
-            <param-value***REMOVED***jdbc</param-value***REMOVED***
-            <param-value***REMOVED***jpa</param-value***REMOVED*** (in the case of plain JPA)
-            <param-value***REMOVED***spring-data-jpa</param-value***REMOVED*** (in the case of Spring Data JPA)
-         --***REMOVED***
+		<param-value***REMOVED***jdbc</param-value***REMOVED***
+		<param-value***REMOVED***jpa</param-value***REMOVED*** (in the case of plain JPA)
+		<param-value***REMOVED***spring-data-jpa</param-value***REMOVED*** (in the case of Spring Data JPA)
+		--***REMOVED***
     </context-param***REMOVED***
 
     <!--
-        - Location of the XML file that defines the root application context.
-        - Applied by ContextLoaderServlet.
-    --***REMOVED***
+- Location of the XML file that defines the root application context.
+- Applied by ContextLoaderServlet.
+--***REMOVED***
     <context-param***REMOVED***
         <param-name***REMOVED***contextConfigLocation</param-name***REMOVED***
-        <param-value***REMOVED***classpath:spring/business-config.xml, classpath:spring/tools-config.xml</param-value***REMOVED***
+        <param-value***REMOVED***classpath:spring/dao-config.xml, classpath:spring/tools-config.xml</param-value***REMOVED***
     </context-param***REMOVED***
 
     <listener***REMOVED***
@@ -32,8 +32,8 @@
     </listener***REMOVED***
 
     <!--
-        - Servlet that dispatches request to registered handlers (Controller implementations).
-    --***REMOVED***
+- Servlet that dispatches request to registered handlers (Controller implementations).
+--***REMOVED***
     <servlet***REMOVED***
         <servlet-name***REMOVED***petclinic</servlet-name***REMOVED***
         <servlet-class***REMOVED***org.springframework.web.servlet.DispatcherServlet</servlet-class***REMOVED***
@@ -49,9 +49,33 @@
         <url-pattern***REMOVED***/</url-pattern***REMOVED***
     </servlet-mapping***REMOVED***
 
-    <!-- used so we can use forms of method type 'PUT' and 'DELETE' 
-    see here: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/view.html#rest-method-conversion
-    --***REMOVED***
+    <!-- Dandelion-Datatables servlet definition --***REMOVED***
+    <servlet***REMOVED***
+        <servlet-name***REMOVED***datatablesController</servlet-name***REMOVED***
+        <servlet-class***REMOVED***com.github.dandelion.datatables.extras.servlet2.servlet.DatatablesServlet</servlet-class***REMOVED***
+    </servlet***REMOVED***
+   
+    <!-- Dandelion-Datatables servlet mapping --***REMOVED***
+    <servlet-mapping***REMOVED***
+        <servlet-name***REMOVED***datatablesController</servlet-name***REMOVED***
+        <url-pattern***REMOVED***/datatablesController/*</url-pattern***REMOVED***
+    </servlet-mapping***REMOVED***
+   
+    <!-- Dandelion-Datatables filter definition --***REMOVED***
+    <filter***REMOVED***
+        <filter-name***REMOVED***datatablesFilter</filter-name***REMOVED***
+        <filter-class***REMOVED***com.github.dandelion.datatables.extras.servlet2.filter.DatatablesFilter</filter-class***REMOVED***
+    </filter***REMOVED***
+    
+    <!-- Dandelion-Datatables filter mapping --***REMOVED***
+    <filter-mapping***REMOVED***
+        <filter-name***REMOVED***datatablesFilter</filter-name***REMOVED***
+        <url-pattern***REMOVED***/*</url-pattern***REMOVED***
+    </filter-mapping***REMOVED***
+
+    <!-- used so we can use forms of method type 'PUT' and 'DELETE'
+see here: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/view.html#rest-method-conversion
+--***REMOVED***
     <filter***REMOVED***
         <filter-name***REMOVED***httpMethodFilter</filter-name***REMOVED***
         <filter-class***REMOVED***org.springframework.web.filter.HiddenHttpMethodFilter</filter-class***REMOVED***
