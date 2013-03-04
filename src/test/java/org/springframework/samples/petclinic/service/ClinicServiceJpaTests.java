@@ -7,10 +7,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * <p***REMOVED*** Provides the following services: <ul***REMOVED*** <li***REMOVED***Injects test dependencies, meaning that we don't need to perform
- * application context lookups. See the setClinic() method. Injection uses autowiring by type.</li***REMOVED*** <li***REMOVED***Executes each
- * test method in its own transaction, which is automatically rolled back by default. This means that even if tests
- * insert or otherwise change database state, there is no need for a teardown or cleanup script.</li***REMOVED*** </ul***REMOVED*** <p***REMOVED*** </p***REMOVED***
+ * <p***REMOVED*** Integration test using the jpa profile. 
+ * @see AbstractClinicServiceTests AbstractClinicServiceTests for more details. </p***REMOVED***
  *
  * @author Rod Johnson
  * @author Sam Brannen
