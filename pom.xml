@@ -47,9 +47,9 @@
         <webjars-bootstrap.version***REMOVED***2.3.0</webjars-bootstrap.version***REMOVED***
         <webjars-jquery-ui.version***REMOVED***1.9.2</webjars-jquery-ui.version***REMOVED***
         <webjars-jquery.version***REMOVED***1.9.0</webjars-jquery.version***REMOVED***
-        <dandelion.datatables.version***REMOVED***0.8.5</dandelion.datatables.version***REMOVED***
-        <dandelion.datatables.export.itext.version***REMOVED***0.1.5</dandelion.datatables.export.itext.version***REMOVED***
-        <dandelion.datatables.servlet2.version***REMOVED***0.1.4</dandelion.datatables.servlet2.version***REMOVED***
+        <dandelion.datatables.version***REMOVED***0.8.6</dandelion.datatables.version***REMOVED***
+        <dandelion.datatables.export.itext.version***REMOVED***0.8.6</dandelion.datatables.export.itext.version***REMOVED***
+        <dandelion.datatables.servlet2.version***REMOVED***0.8.6</dandelion.datatables.servlet2.version***REMOVED***
       
         <maven-assembly-plugin.version***REMOVED***2.4</maven-assembly-plugin.version***REMOVED***
         <maven-clean-plugin.version***REMOVED***2.5</maven-clean-plugin.version***REMOVED***
