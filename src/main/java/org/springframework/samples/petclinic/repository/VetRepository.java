@@ -15,10 +15,10 @@
  */
 package org.springframework.samples.petclinic.repository;
 
+import java.util.Collection;
+
 import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.model.Vet;
-
-import java.util.Collection;
 
 /**
  * Repository class for <code***REMOVED***Vet</code***REMOVED*** domain objects All method names are compliant with Spring Data naming
