@@ -61,7 +61,6 @@ public class JdbcVetRepositoryImpl implements VetRepository {
      * @see org.springframework.samples.petclinic.model.service.ClinicService#findVets()
      */
     @Override
-    @Cacheable(value = "vets")
     public Collection<Vet***REMOVED*** findAll() throws DataAccessException {
         List<Vet***REMOVED*** vets = new ArrayList<Vet***REMOVED***();
         // Retrieve the list of all vets.
