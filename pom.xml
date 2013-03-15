@@ -10,9 +10,7 @@
     <packaging***REMOVED***war</packaging***REMOVED***
 
     <properties***REMOVED***
-    	
-    	<jsp.version***REMOVED***2.2</jsp.version***REMOVED***
-    
+    	    
         <!-- Generic properties --***REMOVED***
         <java.version***REMOVED***1.6</java.version***REMOVED***
         <project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
