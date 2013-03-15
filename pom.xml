@@ -39,7 +39,6 @@
         <commons-pool.version***REMOVED***1.6</commons-pool.version***REMOVED***
         <ehcache.version***REMOVED***2.6.5</ehcache.version***REMOVED***
         <hsqldb.version***REMOVED***2.2.9</hsqldb.version***REMOVED***
-        <javassist.version***REMOVED***3.17.1-GA</javassist.version***REMOVED***
         <jdom.version***REMOVED***2.0.2</jdom.version***REMOVED***
 
 		<!-- Spring --***REMOVED***
@@ -51,6 +50,7 @@
         <log4j.version***REMOVED***1.2.17</log4j.version***REMOVED***
         <slf4j.version***REMOVED***1.7.2</slf4j.version***REMOVED***
         
+        <!-- RSS --***REMOVED***
         <rome.version***REMOVED***1.0</rome.version***REMOVED***
         
         <!-- Test --***REMOVED***
@@ -203,11 +203,6 @@
                 <groupId***REMOVED***org.springframework</groupId***REMOVED***
                 <artifactId***REMOVED***spring-jms</artifactId***REMOVED***
                 <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.javassist</groupId***REMOVED***
-                <artifactId***REMOVED***javassist</artifactId***REMOVED***
-                <version***REMOVED***${javassist.version***REMOVED***</version***REMOVED***
             </dependency***REMOVED***
 
             <!-- Apache Commons
