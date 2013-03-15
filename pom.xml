@@ -35,7 +35,6 @@
 		
         <aspectj.version***REMOVED***1.7.2</aspectj.version***REMOVED***
         <commons-dbcp.version***REMOVED***1.4</commons-dbcp.version***REMOVED***
-        <commons-lang3.version***REMOVED***3.1</commons-lang3.version***REMOVED***
         <commons-pool.version***REMOVED***1.6</commons-pool.version***REMOVED***
         <ehcache.version***REMOVED***2.6.5</ehcache.version***REMOVED***
         <hsqldb.version***REMOVED***2.2.9</hsqldb.version***REMOVED***
@@ -212,11 +211,6 @@
                 <artifactId***REMOVED***commons-dbcp</artifactId***REMOVED***
                 <version***REMOVED***${commons-dbcp.version***REMOVED***</version***REMOVED***
                 <scope***REMOVED***runtime</scope***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.apache.commons</groupId***REMOVED***
-                <artifactId***REMOVED***commons-lang3</artifactId***REMOVED***
-                <version***REMOVED***${commons-lang3.version***REMOVED***</version***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***commons-pool</groupId***REMOVED***
