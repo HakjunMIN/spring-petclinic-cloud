@@ -10,6 +10,8 @@
     <packaging***REMOVED***war</packaging***REMOVED***
 
     <properties***REMOVED***
+    	
+    	<jsp.version***REMOVED***2.2</jsp.version***REMOVED***
     
         <!-- Generic properties --***REMOVED***
         <java.version***REMOVED***1.6</java.version***REMOVED***
@@ -96,6 +98,12 @@
                 <version***REMOVED***${servlet.version***REMOVED***</version***REMOVED***
                 <scope***REMOVED***provided</scope***REMOVED***
             </dependency***REMOVED***
+	         <dependency***REMOVED***
+	             <groupId***REMOVED***javax.servlet.jsp</groupId***REMOVED***
+	             <artifactId***REMOVED***jsp-api</artifactId***REMOVED***
+	             <version***REMOVED***${jsp.version***REMOVED***</version***REMOVED***
+	             <scope***REMOVED***provided</scope***REMOVED***
+	         </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***javax.xml.bind</groupId***REMOVED***
                 <artifactId***REMOVED***jaxb-api</artifactId***REMOVED***
@@ -174,6 +182,7 @@
                 <artifactId***REMOVED***spring-jms</artifactId***REMOVED***
                 <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
             </dependency***REMOVED***
+                      
 
             <!-- Database connection pool --***REMOVED***
             <dependency***REMOVED***
@@ -395,6 +404,8 @@
             <artifactId***REMOVED***datatables-servlet2</artifactId***REMOVED***
             <version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
          </dependency***REMOVED***
+         
+         
        </dependencies***REMOVED***
 
     <!-- all Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term --***REMOVED***
