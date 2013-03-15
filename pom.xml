@@ -133,17 +133,7 @@
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-web</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
                 <artifactId***REMOVED***spring-webmvc</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-expression</artifactId***REMOVED***
                 <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
@@ -151,22 +141,7 @@
                 <artifactId***REMOVED***spring-tx</artifactId***REMOVED***
                 <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
             </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-core</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-                <exclusions***REMOVED***
-                    <exclusion***REMOVED***
-                        <groupId***REMOVED***commons-logging</groupId***REMOVED***
-                        <artifactId***REMOVED***commons-logging</artifactId***REMOVED***
-                    </exclusion***REMOVED***
-                </exclusions***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-aspects</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
+            <!-- used for EhCacheCacheManager --***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.springframework</groupId***REMOVED***
                 <artifactId***REMOVED***spring-context-support</artifactId***REMOVED***
@@ -200,8 +175,7 @@
                 <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
             </dependency***REMOVED***
 
-            <!-- Apache Commons
-            --***REMOVED***
+            <!-- Database connection pool --***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***commons-dbcp</groupId***REMOVED***
                 <artifactId***REMOVED***commons-dbcp</artifactId***REMOVED***
@@ -288,12 +262,6 @@
                 <groupId***REMOVED***javax.el</groupId***REMOVED***
                 <artifactId***REMOVED***el-api</artifactId***REMOVED***
                 <version***REMOVED***${javax-el.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***provided</scope***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***javax.servlet.jsp</groupId***REMOVED***
-                <artifactId***REMOVED***jsp-api</artifactId***REMOVED***
-                <version***REMOVED***${jsp.version***REMOVED***</version***REMOVED***
                 <scope***REMOVED***provided</scope***REMOVED***
             </dependency***REMOVED***
 
