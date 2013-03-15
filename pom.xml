@@ -70,7 +70,7 @@
         <webjars-bootstrap.version***REMOVED***2.3.0</webjars-bootstrap.version***REMOVED***
         <webjars-jquery-ui.version***REMOVED***1.9.2</webjars-jquery-ui.version***REMOVED***
         <webjars-jquery.version***REMOVED***1.9.0</webjars-jquery.version***REMOVED***
-        <dandelion.datatables.version***REMOVED***0.8.6</dandelion.datatables.version***REMOVED***
+        <dandelion.datatables.version***REMOVED***0.8.7</dandelion.datatables.version***REMOVED***
       
         <mysql.version***REMOVED***5.1.22</mysql.version***REMOVED***
         
@@ -386,13 +386,6 @@
             <groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
             <artifactId***REMOVED***datatables-jsp</artifactId***REMOVED***
             <version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
-            <exclusions***REMOVED***
-            	<!-- exclusion not needed from upcoming version 0.8.7 --***REMOVED***
-            	<exclusion***REMOVED***
-            		<groupId***REMOVED***org.eclipse.jetty</groupId***REMOVED***
-    				<artifactId***REMOVED***test-jetty-servlet</artifactId***REMOVED***
-            	</exclusion***REMOVED***
-            </exclusions***REMOVED***
          </dependency***REMOVED***
          <dependency***REMOVED***
             <groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
