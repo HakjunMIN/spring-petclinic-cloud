@@ -1,7 +1,9 @@
-<html lang="en"***REMOVED***
+<!DOCTYPE html***REMOVED*** 
+
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %***REMOVED***
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %***REMOVED***
 
+<html lang="en"***REMOVED***
 <jsp:include page="fragments/headTag.jsp"/***REMOVED***
 
 <body***REMOVED***

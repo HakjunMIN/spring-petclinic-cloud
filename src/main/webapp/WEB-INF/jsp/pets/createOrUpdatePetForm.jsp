@@ -1,3 +1,5 @@
+<!DOCTYPE html***REMOVED*** 
+
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %***REMOVED***
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %***REMOVED***
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %***REMOVED***
