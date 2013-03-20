@@ -78,9 +78,10 @@ File -***REMOVED*** Import -***REMOVED*** Maven -***REMOVED*** Existing Maven pr
     </td***REMOVED***
   </tr***REMOVED***
   <tr***REMOVED***
-    <td***REMOVED***Dandelion</td***REMOVED***
+    <td***REMOVED***Dandelion-datatables</td***REMOVED***
     <td***REMOVED***
       <a href="/SpringSource/spring-petclinic/tree/master/src/main/webapp/WEB-INF/jsp/owners/ownersList.jsp"***REMOVED***ownersList.jsp</a***REMOVED*** 
+      <a href="/SpringSource/spring-petclinic/tree/master/src/main/webapp/WEB-INF/jsp/vets/vetList.jsp"***REMOVED***vetList.jsp</a***REMOVED*** 
       <a href="/SpringSource/spring-petclinic/tree/master/src/main/webapp/WEB-INF/web.xml"***REMOVED***web.xml</a***REMOVED*** 
    </td***REMOVED***
   </tr***REMOVED***
