@@ -47,7 +47,6 @@
  
 		<!-- Logging --***REMOVED***
         <logback.version***REMOVED***1.0.9</logback.version***REMOVED***
-        <log4j.version***REMOVED***1.2.17</log4j.version***REMOVED***
         <slf4j.version***REMOVED***1.7.2</slf4j.version***REMOVED***
         
         <!-- RSS --***REMOVED***
@@ -68,7 +67,7 @@
         <webjars-bootstrap.version***REMOVED***2.3.0</webjars-bootstrap.version***REMOVED***
         <webjars-jquery-ui.version***REMOVED***1.9.2</webjars-jquery-ui.version***REMOVED***
         <webjars-jquery.version***REMOVED***1.9.0</webjars-jquery.version***REMOVED***
-        <dandelion.datatables.version***REMOVED***0.8.9</dandelion.datatables.version***REMOVED***
+        <dandelion.datatables.version***REMOVED***0.8.10</dandelion.datatables.version***REMOVED***
       
         <mysql.version***REMOVED***5.1.22</mysql.version***REMOVED***
         
@@ -215,12 +214,7 @@
                 <version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
                 <scope***REMOVED***runtime</scope***REMOVED***
             </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***ch.qos.logback</groupId***REMOVED***
-                <artifactId***REMOVED***logback-core</artifactId***REMOVED***
-                <version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***runtime</scope***REMOVED***
-            </dependency***REMOVED***
+ 
             <!--  used for Atom --***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***rome</groupId***REMOVED***
