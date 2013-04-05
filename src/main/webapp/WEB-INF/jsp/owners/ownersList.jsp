@@ -18,7 +18,7 @@
     <datatables:table id="owners" data="${selections***REMOVED***" cdn="true" row="owner" theme="bootstrap2" 
                       cssClass="table table-striped" paginate="false" info="false" export="pdf"***REMOVED***
         <datatables:column title="Name" cssStyle="width: 150px;" display="html"***REMOVED***
-            <***REMOVED***url value="owners/{ownerId***REMOVED***.html" var="ownerUrl"***REMOVED***
+            <***REMOVED***url value="/owners/{ownerId***REMOVED***.html" var="ownerUrl"***REMOVED***
                 <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
             </***REMOVED***url***REMOVED***
             <a href="${fn:escapeXml(ownerUrl)***REMOVED***"***REMOVED***<c:out value="${owner.firstName***REMOVED*** ${owner.lastName***REMOVED***"/***REMOVED***</a***REMOVED***
