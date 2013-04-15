@@ -1,537 +1,514 @@
 <?xml version="1.0" encoding="UTF-8"?***REMOVED***
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"***REMOVED***
-    <modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
-    <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-    <artifactId***REMOVED***spring-petclinic</artifactId***REMOVED***
-    <version***REMOVED***1.0.0-SNAPSHOT</version***REMOVED***
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"***REMOVED***
+	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
+	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
+	<artifactId***REMOVED***spring-petclinic</artifactId***REMOVED***
+	<version***REMOVED***1.0.0-SNAPSHOT</version***REMOVED***
 
-    <name***REMOVED***petclinic</name***REMOVED***
-    <packaging***REMOVED***war</packaging***REMOVED***
+	<name***REMOVED***petclinic</name***REMOVED***
+	<packaging***REMOVED***war</packaging***REMOVED***
 
-    <properties***REMOVED***
-    	    
-        <!-- Generic properties --***REMOVED***
-        <java.version***REMOVED***1.6</java.version***REMOVED***
-        <project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
-        <project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
-        
+	<properties***REMOVED***
+
+		<!-- Generic properties --***REMOVED***
+		<java.version***REMOVED***1.6</java.version***REMOVED***
+		<project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
+		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
+
 		<!-- Spring --***REMOVED***
-        <spring-framework.version***REMOVED***3.2.2.RELEASE</spring-framework.version***REMOVED***
-       	<spring-data-jpa.version***REMOVED***1.3.0.RELEASE</spring-data-jpa.version***REMOVED***
- 
+		<spring-framework.version***REMOVED***3.2.2.RELEASE</spring-framework.version***REMOVED***
+		<spring-data-jpa.version***REMOVED***1.3.0.RELEASE</spring-data-jpa.version***REMOVED***
 
-    	<!--  Java EE / Java SE dependencies --***REMOVED***
-        <jsp.version***REMOVED***2.2</jsp.version***REMOVED***
-        <jstl.version***REMOVED***1.2</jstl.version***REMOVED***
+
+		<!-- Java EE / Java SE dependencies --***REMOVED***
+		<jsp.version***REMOVED***2.2</jsp.version***REMOVED***
+		<jstl.version***REMOVED***1.2</jstl.version***REMOVED***
 		<servlet.version***REMOVED***2.5</servlet.version***REMOVED***
-        <javax-el.version***REMOVED***2.2</javax-el.version***REMOVED***
-        <jaxb-api.version***REMOVED***2.2.7</jaxb-api.version***REMOVED***
-        <jaxb-impl.version***REMOVED***2.2.7-b53</jaxb-impl.version***REMOVED***
-		
-		<!-- Hibernate / JPA --***REMOVED***
-        <hibernate.version***REMOVED***4.1.9.Final</hibernate.version***REMOVED***
-        <hibernate-jpa.version***REMOVED***1.0.1.Final</hibernate-jpa.version***REMOVED***
-        
-        <!-- Bean validation --***REMOVED***
-        <validation.version***REMOVED***1.0.0.GA</validation.version***REMOVED***
-        <hibernate-validator.version***REMOVED***4.3.0.Final</hibernate-validator.version***REMOVED***
-		
-		<!-- Database access --***REMOVED***
-        <commons-dbcp.version***REMOVED***1.4</commons-dbcp.version***REMOVED***
-        <ehcache.version***REMOVED***2.6.5</ehcache.version***REMOVED***
-        <hsqldb.version***REMOVED***2.2.9</hsqldb.version***REMOVED***
+		<javax-el.version***REMOVED***2.2</javax-el.version***REMOVED***
+		<jaxb-api.version***REMOVED***2.2.7</jaxb-api.version***REMOVED***
+		<jaxb-impl.version***REMOVED***2.2.7-b53</jaxb-impl.version***REMOVED***
 
- 		<!-- AOP --***REMOVED***
-        <aspectj.version***REMOVED***1.7.2</aspectj.version***REMOVED***
- 
+		<!-- Hibernate / JPA --***REMOVED***
+		<hibernate.version***REMOVED***4.1.9.Final</hibernate.version***REMOVED***
+		<hibernate-jpa.version***REMOVED***1.0.1.Final</hibernate-jpa.version***REMOVED***
+
+		<!-- Bean validation --***REMOVED***
+		<validation.version***REMOVED***1.0.0.GA</validation.version***REMOVED***
+		<hibernate-validator.version***REMOVED***4.3.0.Final</hibernate-validator.version***REMOVED***
+
+		<!-- Database access --***REMOVED***
+		<commons-dbcp.version***REMOVED***1.4</commons-dbcp.version***REMOVED***
+		<ehcache.version***REMOVED***2.6.5</ehcache.version***REMOVED***
+		<hsqldb.version***REMOVED***2.2.9</hsqldb.version***REMOVED***
+
+		<!-- AOP --***REMOVED***
+		<aspectj.version***REMOVED***1.7.2</aspectj.version***REMOVED***
+
 		<!-- Logging --***REMOVED***
-        <logback.version***REMOVED***1.0.9</logback.version***REMOVED***
-        <slf4j.version***REMOVED***1.7.2</slf4j.version***REMOVED***
-        
-        <!-- RSS --***REMOVED***
-        <rome.version***REMOVED***1.0</rome.version***REMOVED***
-        
-        <!-- Test --***REMOVED***
-        <junit.version***REMOVED***4.11</junit.version***REMOVED***
-        <hamcrest.version***REMOVED***1.3</hamcrest.version***REMOVED***
+		<logback.version***REMOVED***1.0.9</logback.version***REMOVED***
+		<slf4j.version***REMOVED***1.7.2</slf4j.version***REMOVED***
+
+		<!-- RSS --***REMOVED***
+		<rome.version***REMOVED***1.0</rome.version***REMOVED***
+
+		<!-- Test --***REMOVED***
+		<junit.version***REMOVED***4.11</junit.version***REMOVED***
+		<hamcrest.version***REMOVED***1.3</hamcrest.version***REMOVED***
 
 		<!-- Dates --***REMOVED***
-        <jodatime-hibernate.version***REMOVED***1.3</jodatime-hibernate.version***REMOVED***
-        <jodatime-jsptags.version***REMOVED***1.1.1</jodatime-jsptags.version***REMOVED***
-        <jodatime.version***REMOVED***2.2</jodatime.version***REMOVED***
-        <jadira-usertype-core.version***REMOVED***3.1.0.CR1</jadira-usertype-core.version***REMOVED***
+		<jodatime-hibernate.version***REMOVED***1.3</jodatime-hibernate.version***REMOVED***
+		<jodatime-jsptags.version***REMOVED***1.1.1</jodatime-jsptags.version***REMOVED***
+		<jodatime.version***REMOVED***2.2</jodatime.version***REMOVED***
+		<jadira-usertype-core.version***REMOVED***3.1.0.CR1</jadira-usertype-core.version***REMOVED***
 
 
 		<!-- Web dependencies --***REMOVED***
-        <webjars-bootstrap.version***REMOVED***2.3.0</webjars-bootstrap.version***REMOVED***
-        <webjars-jquery-ui.version***REMOVED***1.9.2</webjars-jquery-ui.version***REMOVED***
-        <webjars-jquery.version***REMOVED***1.9.0</webjars-jquery.version***REMOVED***
-        <dandelion.datatables.version***REMOVED***0.8.10</dandelion.datatables.version***REMOVED***
-      
-        <mysql.version***REMOVED***5.1.22</mysql.version***REMOVED***
-        
-    </properties***REMOVED***
+		<webjars-bootstrap.version***REMOVED***2.3.0</webjars-bootstrap.version***REMOVED***
+		<webjars-jquery-ui.version***REMOVED***1.9.2</webjars-jquery-ui.version***REMOVED***
+		<webjars-jquery.version***REMOVED***1.9.0</webjars-jquery.version***REMOVED***
+		<dandelion.datatables.version***REMOVED***0.8.10</dandelion.datatables.version***REMOVED***
 
-        <dependencies***REMOVED***         
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.jadira.usertype</groupId***REMOVED***
-                <artifactId***REMOVED***usertype.core</artifactId***REMOVED***
-                <version***REMOVED***${jadira-usertype-core.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***javax.validation</groupId***REMOVED***
-                <artifactId***REMOVED***validation-api</artifactId***REMOVED***
-                <version***REMOVED***${validation.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***javax.servlet</groupId***REMOVED***
-                <artifactId***REMOVED***jstl</artifactId***REMOVED***
-                <version***REMOVED***${jstl.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***javax.servlet</groupId***REMOVED***
-                <artifactId***REMOVED***servlet-api</artifactId***REMOVED***
-                <version***REMOVED***${servlet.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***provided</scope***REMOVED***
-            </dependency***REMOVED***
-	         <dependency***REMOVED***
-	             <groupId***REMOVED***javax.servlet.jsp</groupId***REMOVED***
-	             <artifactId***REMOVED***jsp-api</artifactId***REMOVED***
-	             <version***REMOVED***${jsp.version***REMOVED***</version***REMOVED***
-	             <scope***REMOVED***provided</scope***REMOVED***
-	         </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***javax.xml.bind</groupId***REMOVED***
-                <artifactId***REMOVED***jaxb-api</artifactId***REMOVED***
-                <version***REMOVED***${jaxb-api.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***provided</scope***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***com.sun.xml.bind</groupId***REMOVED***
-                <artifactId***REMOVED***jaxb-impl</artifactId***REMOVED***
-                <version***REMOVED***${jaxb-impl.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***provided</scope***REMOVED***
-            </dependency***REMOVED***
-            <!-- SPRING, SPRING, SPRINGITY SPRING --***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework.data</groupId***REMOVED***
-                <artifactId***REMOVED***spring-data-jpa</artifactId***REMOVED***
-                <version***REMOVED***${spring-data-jpa.version***REMOVED***</version***REMOVED***
-                <exclusions***REMOVED***
-                	<exclusion***REMOVED***
-			          <groupId***REMOVED***org.springframework</groupId***REMOVED***
-			          <artifactId***REMOVED****</artifactId***REMOVED***
-			        </exclusion***REMOVED***
-                </exclusions***REMOVED***
-            </dependency***REMOVED***
- 
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-jdbc</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-aop</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-webmvc</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-tx</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <!-- used for EhCacheCacheManager --***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-context-support</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-                <exclusions***REMOVED***
-                    <exclusion***REMOVED***
-                        <groupId***REMOVED***quartz</groupId***REMOVED***
-                        <artifactId***REMOVED***quartz</artifactId***REMOVED***
-                    </exclusion***REMOVED***
-                </exclusions***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-orm</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-oxm</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-                <exclusions***REMOVED***
-                    <exclusion***REMOVED***
-                        <groupId***REMOVED***commons-lang</groupId***REMOVED***
-                        <artifactId***REMOVED***commons-lang</artifactId***REMOVED***
-                    </exclusion***REMOVED***
-                </exclusions***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework</groupId***REMOVED***
-                <artifactId***REMOVED***spring-jms</artifactId***REMOVED***
-                <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-                      
+		<mysql.version***REMOVED***5.1.22</mysql.version***REMOVED***
 
-            <!-- Database connection pool --***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***commons-dbcp</groupId***REMOVED***
-                <artifactId***REMOVED***commons-dbcp</artifactId***REMOVED***
-                <version***REMOVED***${commons-dbcp.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***runtime</scope***REMOVED***
-            </dependency***REMOVED***
- 
-            <!-- Logging with SLF4J & LogBack --***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.slf4j</groupId***REMOVED***
-                <artifactId***REMOVED***jcl-over-slf4j</artifactId***REMOVED***
-                <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***runtime</scope***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.slf4j</groupId***REMOVED***
-                <artifactId***REMOVED***slf4j-api</artifactId***REMOVED***
-                <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***runtime</scope***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.slf4j</groupId***REMOVED***
-                <artifactId***REMOVED***jul-to-slf4j</artifactId***REMOVED***
-                <version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***runtime</scope***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***ch.qos.logback</groupId***REMOVED***
-                <artifactId***REMOVED***logback-classic</artifactId***REMOVED***
-                <version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***runtime</scope***REMOVED***
-            </dependency***REMOVED***
- 
-            <!--  used for Atom --***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***rome</groupId***REMOVED***
-                <artifactId***REMOVED***rome</artifactId***REMOVED***
-                <version***REMOVED***${rome.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***joda-time</groupId***REMOVED***
-                <artifactId***REMOVED***joda-time</artifactId***REMOVED***
-                <version***REMOVED***${jodatime.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***joda-time</groupId***REMOVED***
-                <artifactId***REMOVED***joda-time-hibernate</artifactId***REMOVED***
-                <version***REMOVED***${jodatime-hibernate.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***joda-time</groupId***REMOVED***
-                <artifactId***REMOVED***joda-time-jsptags</artifactId***REMOVED***
-                <version***REMOVED***${jodatime-jsptags.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
+	</properties***REMOVED***
 
-            <!-- Databases - Uses HSQL by default --***REMOVED***
-            <!-- <dependency***REMOVED***
-                <groupId***REMOVED***mysql</groupId***REMOVED***
-                <artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
-                <version***REMOVED***${mysql.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***  --***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.hsqldb</groupId***REMOVED***
-                <artifactId***REMOVED***hsqldb</artifactId***REMOVED***
-                <version***REMOVED***${hsqldb.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***runtime</scope***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***javax.servlet.jsp.jstl</groupId***REMOVED***
-                <artifactId***REMOVED***jstl-api</artifactId***REMOVED***
-                <version***REMOVED***${jstl.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.glassfish.web</groupId***REMOVED***
-                <artifactId***REMOVED***jstl-impl</artifactId***REMOVED***
-                <version***REMOVED***${jstl.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***javax.el</groupId***REMOVED***
-                <artifactId***REMOVED***el-api</artifactId***REMOVED***
-                <version***REMOVED***${javax-el.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***provided</scope***REMOVED***
-            </dependency***REMOVED***
-
-        <!-- MySQL JDBC Connector --***REMOVED***
-        <!-- 
+	<dependencies***REMOVED***
 		<dependency***REMOVED***
-            <groupId***REMOVED***mysql</groupId***REMOVED***
-            <artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
-            <version***REMOVED***${mysql.version***REMOVED***</version***REMOVED***
-        </dependency***REMOVED***
-        --***REMOVED***
-         <!-- HIBERNATE --***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.hibernate</groupId***REMOVED***
-            <artifactId***REMOVED***hibernate-core</artifactId***REMOVED***
-            <version***REMOVED***${hibernate.version***REMOVED***</version***REMOVED***
-            <exclusions***REMOVED***
-                <exclusion***REMOVED***
-                    <groupId***REMOVED***asm</groupId***REMOVED***
-                    <artifactId***REMOVED***asm-attrs</artifactId***REMOVED***
-                </exclusion***REMOVED***
-            </exclusions***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.hibernate</groupId***REMOVED***
-            <artifactId***REMOVED***hibernate-entitymanager</artifactId***REMOVED***
-            <version***REMOVED***${hibernate.version***REMOVED***</version***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.hibernate.javax.persistence</groupId***REMOVED***
-            <artifactId***REMOVED***hibernate-jpa-2.0-api</artifactId***REMOVED***
-            <version***REMOVED***${hibernate-jpa.version***REMOVED***</version***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.hibernate</groupId***REMOVED***
-            <artifactId***REMOVED***hibernate-validator</artifactId***REMOVED***
-            <version***REMOVED***${hibernate-validator.version***REMOVED***</version***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.hibernate</groupId***REMOVED***
-            <artifactId***REMOVED***hibernate-ehcache</artifactId***REMOVED***
-            <version***REMOVED***${hibernate.version***REMOVED***</version***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***net.sf.ehcache</groupId***REMOVED***
-            <artifactId***REMOVED***ehcache-core</artifactId***REMOVED***
-            <version***REMOVED***${ehcache.version***REMOVED***</version***REMOVED***
-            <exclusions***REMOVED***
-                <exclusion***REMOVED***
-                    <groupId***REMOVED***commons-logging</groupId***REMOVED***
-                    <artifactId***REMOVED***commons-logging</artifactId***REMOVED***
-                </exclusion***REMOVED***
-            </exclusions***REMOVED***
-        </dependency***REMOVED***
-        <!-- Webjars (static dependencies distributed as JAR files) --***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.webjars</groupId***REMOVED***
-            <artifactId***REMOVED***bootstrap</artifactId***REMOVED***
-            <version***REMOVED***${webjars-bootstrap.version***REMOVED***</version***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.webjars</groupId***REMOVED***
-            <artifactId***REMOVED***jquery-ui</artifactId***REMOVED***
-            <version***REMOVED***${webjars-jquery-ui.version***REMOVED***</version***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.webjars</groupId***REMOVED***
-            <artifactId***REMOVED***jquery</artifactId***REMOVED***
-            <version***REMOVED***${webjars-jquery.version***REMOVED***</version***REMOVED***
-        </dependency***REMOVED***
-        <!-- Test Artifacts --***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework</groupId***REMOVED***
-            <artifactId***REMOVED***spring-test</artifactId***REMOVED***
-            <version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-            <scope***REMOVED***test</scope***REMOVED***
-         </dependency***REMOVED***
-         <dependency***REMOVED***
-             <groupId***REMOVED***junit</groupId***REMOVED***
-             <artifactId***REMOVED***junit</artifactId***REMOVED***
-             <version***REMOVED***${junit.version***REMOVED***</version***REMOVED***
-             <scope***REMOVED***test</scope***REMOVED***
-         </dependency***REMOVED***
-         <!-- used by Spring MVC Test framework --***REMOVED***
-         <dependency***REMOVED***
-             <groupId***REMOVED***org.hamcrest</groupId***REMOVED***
-             <artifactId***REMOVED***hamcrest-library</artifactId***REMOVED***
-             <version***REMOVED***${hamcrest.version***REMOVED***</version***REMOVED***
-             <scope***REMOVED***test</scope***REMOVED***
-         </dependency***REMOVED***
-         <dependency***REMOVED***
-             <groupId***REMOVED***org.hamcrest</groupId***REMOVED***
-             <artifactId***REMOVED***hamcrest-core</artifactId***REMOVED***
-             <version***REMOVED***${hamcrest.version***REMOVED***</version***REMOVED***
-             <scope***REMOVED***test</scope***REMOVED***
-         </dependency***REMOVED***
-       
-        <dependency***REMOVED***
-             <groupId***REMOVED***org.aspectj</groupId***REMOVED***
-             <artifactId***REMOVED***aspectjrt</artifactId***REMOVED***
-             <version***REMOVED***${aspectj.version***REMOVED***</version***REMOVED***
-         </dependency***REMOVED***
-         <dependency***REMOVED***
-             <groupId***REMOVED***org.aspectj</groupId***REMOVED***
-             <artifactId***REMOVED***aspectjweaver</artifactId***REMOVED***
-             <version***REMOVED***${aspectj.version***REMOVED***</version***REMOVED***
-             <scope***REMOVED***runtime</scope***REMOVED***
-         </dependency***REMOVED***
- 
+			<groupId***REMOVED***org.jadira.usertype</groupId***REMOVED***
+			<artifactId***REMOVED***usertype.core</artifactId***REMOVED***
+			<version***REMOVED***${jadira-usertype-core.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***javax.validation</groupId***REMOVED***
+			<artifactId***REMOVED***validation-api</artifactId***REMOVED***
+			<version***REMOVED***${validation.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***javax.servlet</groupId***REMOVED***
+			<artifactId***REMOVED***jstl</artifactId***REMOVED***
+			<version***REMOVED***${jstl.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***javax.servlet</groupId***REMOVED***
+			<artifactId***REMOVED***servlet-api</artifactId***REMOVED***
+			<version***REMOVED***${servlet.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***provided</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***javax.servlet.jsp</groupId***REMOVED***
+			<artifactId***REMOVED***jsp-api</artifactId***REMOVED***
+			<version***REMOVED***${jsp.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***provided</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***javax.xml.bind</groupId***REMOVED***
+			<artifactId***REMOVED***jaxb-api</artifactId***REMOVED***
+			<version***REMOVED***${jaxb-api.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***provided</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***com.sun.xml.bind</groupId***REMOVED***
+			<artifactId***REMOVED***jaxb-impl</artifactId***REMOVED***
+			<version***REMOVED***${jaxb-impl.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***provided</scope***REMOVED***
+		</dependency***REMOVED***
+		<!-- SPRING, SPRING, SPRINGITY SPRING --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.data</groupId***REMOVED***
+			<artifactId***REMOVED***spring-data-jpa</artifactId***REMOVED***
+			<version***REMOVED***${spring-data-jpa.version***REMOVED***</version***REMOVED***
+			<exclusions***REMOVED***
+				<exclusion***REMOVED***
+					<groupId***REMOVED***org.springframework</groupId***REMOVED***
+					<artifactId***REMOVED****</artifactId***REMOVED***
+				</exclusion***REMOVED***
+			</exclusions***REMOVED***
+		</dependency***REMOVED***
 
-        <!-- Dandelion --***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
-            <artifactId***REMOVED***datatables-jsp</artifactId***REMOVED***
-            <version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
-         </dependency***REMOVED***
-         <dependency***REMOVED***
-            <groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
-            <artifactId***REMOVED***datatables-export-itext</artifactId***REMOVED***
-            <version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
-         </dependency***REMOVED***
-         <dependency***REMOVED***
-            <groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
-            <artifactId***REMOVED***datatables-servlet2</artifactId***REMOVED***
-            <version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
-         </dependency***REMOVED***
-         
-         
-       </dependencies***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***spring-jdbc</artifactId***REMOVED***
+			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***spring-aop</artifactId***REMOVED***
+			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***spring-webmvc</artifactId***REMOVED***
+			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***spring-tx</artifactId***REMOVED***
+			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<!-- used for EhCacheCacheManager --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***spring-context-support</artifactId***REMOVED***
+			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
+			<exclusions***REMOVED***
+				<exclusion***REMOVED***
+					<groupId***REMOVED***quartz</groupId***REMOVED***
+					<artifactId***REMOVED***quartz</artifactId***REMOVED***
+				</exclusion***REMOVED***
+			</exclusions***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***spring-orm</artifactId***REMOVED***
+			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***spring-oxm</artifactId***REMOVED***
+			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
+			<exclusions***REMOVED***
+				<exclusion***REMOVED***
+					<groupId***REMOVED***commons-lang</groupId***REMOVED***
+					<artifactId***REMOVED***commons-lang</artifactId***REMOVED***
+				</exclusion***REMOVED***
+			</exclusions***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***spring-jms</artifactId***REMOVED***
+			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
 
-    <!-- all Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term --***REMOVED***
-    <build***REMOVED***
-        <defaultGoal***REMOVED***install</defaultGoal***REMOVED***
-        <plugins***REMOVED***
-            <plugin***REMOVED***
-                <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-                <artifactId***REMOVED***maven-compiler-plugin</artifactId***REMOVED***
-                <version***REMOVED***3.0</version***REMOVED***
-                <configuration***REMOVED***
-                    <compilerArguments***REMOVED***
-                        <Xlint/***REMOVED***
-                    </compilerArguments***REMOVED***
-                    <verbose***REMOVED***true</verbose***REMOVED***
-                    <source***REMOVED***${java.version***REMOVED***</source***REMOVED***
-                    <target***REMOVED***${java.version***REMOVED***</target***REMOVED***
-                    <showWarnings***REMOVED***true</showWarnings***REMOVED***
-                </configuration***REMOVED***
-            </plugin***REMOVED***
-            <plugin***REMOVED***
-                <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-                <artifactId***REMOVED***maven-surefire-plugin</artifactId***REMOVED***
-                <version***REMOVED***2.13</version***REMOVED***
-                <configuration***REMOVED***
-                    <includes***REMOVED***
-                        <include***REMOVED*****/*Tests.java</include***REMOVED***
-                    </includes***REMOVED***
-                </configuration***REMOVED***
-            </plugin***REMOVED***
-            <plugin***REMOVED***
-                <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-                <artifactId***REMOVED***maven-war-plugin</artifactId***REMOVED***
-                <version***REMOVED***2.3</version***REMOVED***
-                <configuration***REMOVED***
-                    <warName***REMOVED***petclinic</warName***REMOVED***
-                </configuration***REMOVED***
-            </plugin***REMOVED***
-            <plugin***REMOVED***
-                <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-                <artifactId***REMOVED***maven-eclipse-plugin</artifactId***REMOVED***
-                <version***REMOVED***2.9</version***REMOVED***
-                <configuration***REMOVED***
-                    <downloadSources***REMOVED***true</downloadSources***REMOVED***
-                    <downloadJavadocs***REMOVED***true</downloadJavadocs***REMOVED***
-                    <wtpversion***REMOVED***2.0</wtpversion***REMOVED***
-                    <sourceIncludes***REMOVED***
-                        <sourceInclude***REMOVED*****/*.*</sourceInclude***REMOVED***
-                    </sourceIncludes***REMOVED***
-                    <additionalBuildcommands***REMOVED***
-                        <buildCommand***REMOVED***
-                            <name***REMOVED***org.springframework.ide.eclipse.core.springbuilder</name***REMOVED***
-                        </buildCommand***REMOVED***
-                        <buildCommand***REMOVED***
-                            <name***REMOVED***org.eclipse.m2e.core.maven2Builder</name***REMOVED***
-                        </buildCommand***REMOVED***
-                    </additionalBuildcommands***REMOVED***
-                    <additionalProjectnatures***REMOVED***
-                        <projectnature***REMOVED***org.eclipse.jdt.core.javanature</projectnature***REMOVED***
-                        <projectnature***REMOVED***org.springframework.ide.eclipse.core.springnature</projectnature***REMOVED***
-                        <projectnature***REMOVED***org.eclipse.m2e.core.maven2Nature</projectnature***REMOVED***
-                    </additionalProjectnatures***REMOVED***
-                </configuration***REMOVED***
-            </plugin***REMOVED***
-            <plugin***REMOVED***
-                <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-                <artifactId***REMOVED***maven-dependency-plugin</artifactId***REMOVED***
-                <version***REMOVED***2.6</version***REMOVED***
-                <executions***REMOVED***
-                    <execution***REMOVED***
-                        <id***REMOVED***install</id***REMOVED***
-                        <phase***REMOVED***install</phase***REMOVED***
-                        <goals***REMOVED***
-                            <goal***REMOVED***sources</goal***REMOVED***
-                        </goals***REMOVED***
-                    </execution***REMOVED***
-                </executions***REMOVED***
-            </plugin***REMOVED***
-            <plugin***REMOVED***
-                <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-                <artifactId***REMOVED***maven-assembly-plugin</artifactId***REMOVED***
-                <version***REMOVED***2.4</version***REMOVED***
-                <configuration***REMOVED***
-                    <descriptorRefs***REMOVED***
-                        <descriptorRef***REMOVED***jar-with-dependencies</descriptorRef***REMOVED***
-                    </descriptorRefs***REMOVED***
-                </configuration***REMOVED***
-            </plugin***REMOVED***
- 		    <plugin***REMOVED***
-		      <groupId***REMOVED***org.apache.tomcat.maven</groupId***REMOVED***
-		      <artifactId***REMOVED***tomcat7-maven-plugin</artifactId***REMOVED***       
-		      <version***REMOVED***2.0</version***REMOVED***     
-		      <configuration***REMOVED***          
-		        <server***REMOVED***tomcat-development-server</server***REMOVED***
-		        <port***REMOVED***9966</port***REMOVED***
-		        <path***REMOVED***/petclinic</path***REMOVED***
-		      </configuration***REMOVED***
-		    </plugin***REMOVED*** 
-        </plugins***REMOVED***
-        <pluginManagement***REMOVED***
-            <plugins***REMOVED***
-                <plugin***REMOVED***
-                    <groupId***REMOVED***org.eclipse.m2e</groupId***REMOVED***
-                    <artifactId***REMOVED***lifecycle-mapping</artifactId***REMOVED***
-                    <version***REMOVED***1.0.0</version***REMOVED***
-                    <configuration***REMOVED***
-                        <lifecycleMappingMetadata***REMOVED***
-                            <pluginExecutions***REMOVED***
-                                <pluginExecution***REMOVED***
-                                    <pluginExecutionFilter***REMOVED***
-                                        <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-                                        <artifactId***REMOVED***maven-enforcer-plugin</artifactId***REMOVED***
-                                        <versionRange***REMOVED***[1.0.0,)</versionRange***REMOVED***
-                                        <goals***REMOVED***
-                                            <goal***REMOVED***enforce</goal***REMOVED***
-                                        </goals***REMOVED***
-                                    </pluginExecutionFilter***REMOVED***
-                                    <action***REMOVED***
-                                        <execute/***REMOVED***
-                                    </action***REMOVED***
-                                </pluginExecution***REMOVED***
-                                <pluginExecution***REMOVED***
-                                    <pluginExecutionFilter***REMOVED***
-                                        <groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-                                        <artifactId***REMOVED***maven-dependency-plugin</artifactId***REMOVED***
-                                        <versionRange***REMOVED***[2.4,)</versionRange***REMOVED***
-                                        <goals***REMOVED***
-                                            <goal***REMOVED***unpack</goal***REMOVED***
-                                            <goal***REMOVED***sources</goal***REMOVED***
-                                        </goals***REMOVED***
-                                    </pluginExecutionFilter***REMOVED***
-                                    <action***REMOVED***
-                                        <execute/***REMOVED***
-                                    </action***REMOVED***
-                                </pluginExecution***REMOVED***
-                            </pluginExecutions***REMOVED***
-                        </lifecycleMappingMetadata***REMOVED***
-                    </configuration***REMOVED***
-                </plugin***REMOVED***
-            </plugins***REMOVED***
-        </pluginManagement***REMOVED***
-    </build***REMOVED***
+
+		<!-- Database connection pool --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***commons-dbcp</groupId***REMOVED***
+			<artifactId***REMOVED***commons-dbcp</artifactId***REMOVED***
+			<version***REMOVED***${commons-dbcp.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+
+		<!-- Logging with SLF4J & LogBack --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.slf4j</groupId***REMOVED***
+			<artifactId***REMOVED***slf4j-api</artifactId***REMOVED***
+			<version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***ch.qos.logback</groupId***REMOVED***
+			<artifactId***REMOVED***logback-classic</artifactId***REMOVED***
+			<version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+
+		<!-- used for Atom --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***rome</groupId***REMOVED***
+			<artifactId***REMOVED***rome</artifactId***REMOVED***
+			<version***REMOVED***${rome.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***joda-time</groupId***REMOVED***
+			<artifactId***REMOVED***joda-time</artifactId***REMOVED***
+			<version***REMOVED***${jodatime.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***joda-time</groupId***REMOVED***
+			<artifactId***REMOVED***joda-time-hibernate</artifactId***REMOVED***
+			<version***REMOVED***${jodatime-hibernate.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***joda-time</groupId***REMOVED***
+			<artifactId***REMOVED***joda-time-jsptags</artifactId***REMOVED***
+			<version***REMOVED***${jodatime-jsptags.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+
+		<!-- Databases - Uses HSQL by default --***REMOVED***
+		<!-- <dependency***REMOVED*** <groupId***REMOVED***mysql</groupId***REMOVED*** <artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED*** <version***REMOVED***${mysql.version***REMOVED***</version***REMOVED*** </dependency***REMOVED*** --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
+			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
+			<version***REMOVED***${hsqldb.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***javax.servlet.jsp.jstl</groupId***REMOVED***
+			<artifactId***REMOVED***jstl-api</artifactId***REMOVED***
+			<version***REMOVED***${jstl.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.glassfish.web</groupId***REMOVED***
+			<artifactId***REMOVED***jstl-impl</artifactId***REMOVED***
+			<version***REMOVED***${jstl.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***javax.el</groupId***REMOVED***
+			<artifactId***REMOVED***el-api</artifactId***REMOVED***
+			<version***REMOVED***${javax-el.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***provided</scope***REMOVED***
+		</dependency***REMOVED***
+
+		<!-- MySQL JDBC Connector --***REMOVED***
+		<!-- <dependency***REMOVED*** <groupId***REMOVED***mysql</groupId***REMOVED*** <artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED*** <version***REMOVED***${mysql.version***REMOVED***</version***REMOVED*** </dependency***REMOVED*** --***REMOVED***
+		<!-- HIBERNATE --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
+			<artifactId***REMOVED***hibernate-core</artifactId***REMOVED***
+			<version***REMOVED***${hibernate.version***REMOVED***</version***REMOVED***
+			<exclusions***REMOVED***
+				<exclusion***REMOVED***
+					<groupId***REMOVED***asm</groupId***REMOVED***
+					<artifactId***REMOVED***asm-attrs</artifactId***REMOVED***
+				</exclusion***REMOVED***
+			</exclusions***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
+			<artifactId***REMOVED***hibernate-entitymanager</artifactId***REMOVED***
+			<version***REMOVED***${hibernate.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.hibernate.javax.persistence</groupId***REMOVED***
+			<artifactId***REMOVED***hibernate-jpa-2.0-api</artifactId***REMOVED***
+			<version***REMOVED***${hibernate-jpa.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
+			<artifactId***REMOVED***hibernate-validator</artifactId***REMOVED***
+			<version***REMOVED***${hibernate-validator.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
+			<artifactId***REMOVED***hibernate-ehcache</artifactId***REMOVED***
+			<version***REMOVED***${hibernate.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***net.sf.ehcache</groupId***REMOVED***
+			<artifactId***REMOVED***ehcache-core</artifactId***REMOVED***
+			<version***REMOVED***${ehcache.version***REMOVED***</version***REMOVED***
+			<exclusions***REMOVED***
+				<exclusion***REMOVED***
+					<groupId***REMOVED***commons-logging</groupId***REMOVED***
+					<artifactId***REMOVED***commons-logging</artifactId***REMOVED***
+				</exclusion***REMOVED***
+			</exclusions***REMOVED***
+		</dependency***REMOVED***
+		<!-- Webjars (static dependencies distributed as JAR files) --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.webjars</groupId***REMOVED***
+			<artifactId***REMOVED***bootstrap</artifactId***REMOVED***
+			<version***REMOVED***${webjars-bootstrap.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.webjars</groupId***REMOVED***
+			<artifactId***REMOVED***jquery-ui</artifactId***REMOVED***
+			<version***REMOVED***${webjars-jquery-ui.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.webjars</groupId***REMOVED***
+			<artifactId***REMOVED***jquery</artifactId***REMOVED***
+			<version***REMOVED***${webjars-jquery.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<!-- Test Artifacts --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework</groupId***REMOVED***
+			<artifactId***REMOVED***spring-test</artifactId***REMOVED***
+			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***junit</groupId***REMOVED***
+			<artifactId***REMOVED***junit</artifactId***REMOVED***
+			<version***REMOVED***${junit.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+		<!-- used by Spring MVC Test framework --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.hamcrest</groupId***REMOVED***
+			<artifactId***REMOVED***hamcrest-library</artifactId***REMOVED***
+			<version***REMOVED***${hamcrest.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.hamcrest</groupId***REMOVED***
+			<artifactId***REMOVED***hamcrest-core</artifactId***REMOVED***
+			<version***REMOVED***${hamcrest.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
+			<artifactId***REMOVED***aspectjrt</artifactId***REMOVED***
+			<version***REMOVED***${aspectj.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
+			<artifactId***REMOVED***aspectjweaver</artifactId***REMOVED***
+			<version***REMOVED***${aspectj.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+
+
+		<!-- Dandelion --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
+			<artifactId***REMOVED***datatables-jsp</artifactId***REMOVED***
+			<version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
+			<artifactId***REMOVED***datatables-export-itext</artifactId***REMOVED***
+			<version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
+			<artifactId***REMOVED***datatables-servlet2</artifactId***REMOVED***
+			<version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+
+
+	</dependencies***REMOVED***
+
+	<!-- all Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term --***REMOVED***
+	<build***REMOVED***
+		<defaultGoal***REMOVED***install</defaultGoal***REMOVED***
+		<plugins***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+				<artifactId***REMOVED***maven-compiler-plugin</artifactId***REMOVED***
+				<version***REMOVED***3.0</version***REMOVED***
+				<configuration***REMOVED***
+					<compilerArguments***REMOVED***
+						<Xlint /***REMOVED***
+					</compilerArguments***REMOVED***
+					<verbose***REMOVED***true</verbose***REMOVED***
+					<source***REMOVED***${java.version***REMOVED***</source***REMOVED***
+					<target***REMOVED***${java.version***REMOVED***</target***REMOVED***
+					<showWarnings***REMOVED***true</showWarnings***REMOVED***
+				</configuration***REMOVED***
+			</plugin***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+				<artifactId***REMOVED***maven-surefire-plugin</artifactId***REMOVED***
+				<version***REMOVED***2.13</version***REMOVED***
+				<configuration***REMOVED***
+					<includes***REMOVED***
+						<include***REMOVED*****/*Tests.java</include***REMOVED***
+					</includes***REMOVED***
+				</configuration***REMOVED***
+			</plugin***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+				<artifactId***REMOVED***maven-war-plugin</artifactId***REMOVED***
+				<version***REMOVED***2.3</version***REMOVED***
+				<configuration***REMOVED***
+					<warName***REMOVED***petclinic</warName***REMOVED***
+				</configuration***REMOVED***
+			</plugin***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+				<artifactId***REMOVED***maven-eclipse-plugin</artifactId***REMOVED***
+				<version***REMOVED***2.9</version***REMOVED***
+				<configuration***REMOVED***
+					<downloadSources***REMOVED***true</downloadSources***REMOVED***
+					<downloadJavadocs***REMOVED***true</downloadJavadocs***REMOVED***
+					<wtpversion***REMOVED***2.0</wtpversion***REMOVED***
+					<sourceIncludes***REMOVED***
+						<sourceInclude***REMOVED*****/*.*</sourceInclude***REMOVED***
+					</sourceIncludes***REMOVED***
+					<additionalBuildcommands***REMOVED***
+						<buildCommand***REMOVED***
+							<name***REMOVED***org.springframework.ide.eclipse.core.springbuilder</name***REMOVED***
+						</buildCommand***REMOVED***
+						<buildCommand***REMOVED***
+							<name***REMOVED***org.eclipse.m2e.core.maven2Builder</name***REMOVED***
+						</buildCommand***REMOVED***
+					</additionalBuildcommands***REMOVED***
+					<additionalProjectnatures***REMOVED***
+						<projectnature***REMOVED***org.eclipse.jdt.core.javanature</projectnature***REMOVED***
+						<projectnature***REMOVED***org.springframework.ide.eclipse.core.springnature</projectnature***REMOVED***
+						<projectnature***REMOVED***org.eclipse.m2e.core.maven2Nature</projectnature***REMOVED***
+					</additionalProjectnatures***REMOVED***
+				</configuration***REMOVED***
+			</plugin***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+				<artifactId***REMOVED***maven-dependency-plugin</artifactId***REMOVED***
+				<version***REMOVED***2.6</version***REMOVED***
+				<executions***REMOVED***
+					<execution***REMOVED***
+						<id***REMOVED***install</id***REMOVED***
+						<phase***REMOVED***install</phase***REMOVED***
+						<goals***REMOVED***
+							<goal***REMOVED***sources</goal***REMOVED***
+						</goals***REMOVED***
+					</execution***REMOVED***
+				</executions***REMOVED***
+			</plugin***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+				<artifactId***REMOVED***maven-assembly-plugin</artifactId***REMOVED***
+				<version***REMOVED***2.4</version***REMOVED***
+				<configuration***REMOVED***
+					<descriptorRefs***REMOVED***
+						<descriptorRef***REMOVED***jar-with-dependencies</descriptorRef***REMOVED***
+					</descriptorRefs***REMOVED***
+				</configuration***REMOVED***
+			</plugin***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.apache.tomcat.maven</groupId***REMOVED***
+				<artifactId***REMOVED***tomcat7-maven-plugin</artifactId***REMOVED***
+				<version***REMOVED***2.0</version***REMOVED***
+				<configuration***REMOVED***
+					<server***REMOVED***tomcat-development-server</server***REMOVED***
+					<port***REMOVED***9966</port***REMOVED***
+					<path***REMOVED***/petclinic</path***REMOVED***
+				</configuration***REMOVED***
+			</plugin***REMOVED***
+		</plugins***REMOVED***
+		<pluginManagement***REMOVED***
+			<plugins***REMOVED***
+				<plugin***REMOVED***
+					<groupId***REMOVED***org.eclipse.m2e</groupId***REMOVED***
+					<artifactId***REMOVED***lifecycle-mapping</artifactId***REMOVED***
+					<version***REMOVED***1.0.0</version***REMOVED***
+					<configuration***REMOVED***
+						<lifecycleMappingMetadata***REMOVED***
+							<pluginExecutions***REMOVED***
+								<pluginExecution***REMOVED***
+									<pluginExecutionFilter***REMOVED***
+										<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+										<artifactId***REMOVED***maven-enforcer-plugin</artifactId***REMOVED***
+										<versionRange***REMOVED***[1.0.0,)</versionRange***REMOVED***
+										<goals***REMOVED***
+											<goal***REMOVED***enforce</goal***REMOVED***
+										</goals***REMOVED***
+									</pluginExecutionFilter***REMOVED***
+									<action***REMOVED***
+										<execute /***REMOVED***
+									</action***REMOVED***
+								</pluginExecution***REMOVED***
+								<pluginExecution***REMOVED***
+									<pluginExecutionFilter***REMOVED***
+										<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
+										<artifactId***REMOVED***maven-dependency-plugin</artifactId***REMOVED***
+										<versionRange***REMOVED***[2.4,)</versionRange***REMOVED***
+										<goals***REMOVED***
+											<goal***REMOVED***unpack</goal***REMOVED***
+											<goal***REMOVED***sources</goal***REMOVED***
+										</goals***REMOVED***
+									</pluginExecutionFilter***REMOVED***
+									<action***REMOVED***
+										<execute /***REMOVED***
+									</action***REMOVED***
+								</pluginExecution***REMOVED***
+							</pluginExecutions***REMOVED***
+						</lifecycleMappingMetadata***REMOVED***
+					</configuration***REMOVED***
+				</plugin***REMOVED***
+			</plugins***REMOVED***
+		</pluginManagement***REMOVED***
+	</build***REMOVED***
 
 </project***REMOVED***
