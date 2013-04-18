@@ -80,9 +80,5 @@
 
     <beans profile="spring-data-jpa"***REMOVED***
         <jpa:repositories base-package="org.springframework.samples.petclinic.repository.springdatajpa"/***REMOVED***
-
-        <!-- Custom configuration for the custom implementation based on JPA --***REMOVED***
-        <bean id="ownerRepository"
-              class="org.springframework.samples.petclinic.repository.springdatajpa.JpaOwnerRepositoryImpl"/***REMOVED***
     </beans***REMOVED***
 </beans***REMOVED***
