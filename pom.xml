@@ -28,10 +28,10 @@
 		<jaxb-impl.version***REMOVED***2.2.7-b63</jaxb-impl.version***REMOVED***
 
 		<!-- Hibernate / JPA --***REMOVED***
-		<hibernate.version***REMOVED***4.1.9.Final</hibernate.version***REMOVED***
+		<hibernate.version***REMOVED***4.1.11.Final</hibernate.version***REMOVED***
 
 		<!-- Bean validation --***REMOVED***
-		<hibernate-validator.version***REMOVED***4.3.0.Final</hibernate-validator.version***REMOVED***
+		<hibernate-validator.version***REMOVED***4.3.1.Final</hibernate-validator.version***REMOVED***
 
 		<!-- Database access --***REMOVED***
 		<commons-dbcp.version***REMOVED***1.4</commons-dbcp.version***REMOVED***
