@@ -31,7 +31,7 @@
 		<hibernate.version***REMOVED***4.1.11.Final</hibernate.version***REMOVED***
 
 		<!-- Bean validation --***REMOVED***
-		<hibernate-validator.version***REMOVED***4.3.1.Final</hibernate-validator.version***REMOVED***
+		<hibernate-validator.version***REMOVED***5.0.0.Final</hibernate-validator.version***REMOVED***
 
 		<!-- Database access --***REMOVED***
 		<commons-dbcp.version***REMOVED***1.4</commons-dbcp.version***REMOVED***
@@ -223,12 +223,6 @@
 			<artifactId***REMOVED***jstl-impl</artifactId***REMOVED***
 			<version***REMOVED***${jstl.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***javax.el</groupId***REMOVED***
-			<artifactId***REMOVED***el-api</artifactId***REMOVED***
-			<version***REMOVED***${javax-el.version***REMOVED***</version***REMOVED***
-			<scope***REMOVED***provided</scope***REMOVED***
-		</dependency***REMOVED***
 
 		<!-- MySQL JDBC Connector --***REMOVED***
 		<!-- <dependency***REMOVED*** <groupId***REMOVED***mysql</groupId***REMOVED*** <artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED*** <version***REMOVED***${mysql.version***REMOVED***</version***REMOVED*** </dependency***REMOVED*** --***REMOVED***
@@ -253,6 +247,16 @@
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
 			<artifactId***REMOVED***hibernate-validator</artifactId***REMOVED***
 			<version***REMOVED***${hibernate-validator.version***REMOVED***</version***REMOVED***
+			<exclusions***REMOVED***
+				<exclusion***REMOVED***
+					<groupId***REMOVED***org.glassfish.web</groupId***REMOVED***
+					<artifactId***REMOVED***javax.el</artifactId***REMOVED***
+				</exclusion***REMOVED***
+				<exclusion***REMOVED***
+					<groupId***REMOVED***javax.el</groupId***REMOVED***
+					<artifactId***REMOVED***javax.el-api</artifactId***REMOVED***
+				</exclusion***REMOVED***
+			</exclusions***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
