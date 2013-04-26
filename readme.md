@@ -90,6 +90,11 @@ File -***REMOVED*** Import -***REMOVED*** Maven -***REMOVED*** Existing Maven pr
     <td***REMOVED***
       <a href="http://www.thymeleaf.org/petclinic.html"***REMOVED***See here</a***REMOVED***</td***REMOVED***
   </tr***REMOVED***
+  <tr***REMOVED***
+    <td***REMOVED***Branch using GemFire and Spring Data GemFire instead of ehcache (thanks Bijoy Choudhury)</td***REMOVED***
+    <td***REMOVED***
+      <a href="https://github.com/bijoych/spring-petclinic-gemfire"***REMOVED***See here</a***REMOVED***</td***REMOVED***
+  </tr***REMOVED***
 </table***REMOVED***
 
 <table***REMOVED***
