@@ -248,6 +248,7 @@
 			<artifactId***REMOVED***hibernate-validator</artifactId***REMOVED***
 			<version***REMOVED***${hibernate-validator.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
+		
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
 			<artifactId***REMOVED***hibernate-ehcache</artifactId***REMOVED***
