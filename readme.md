@@ -153,3 +153,37 @@ File -***REMOVED*** Import -***REMOVED*** Maven -***REMOVED*** Existing Maven pr
       <a href="https://github.com/whimet/spring-petclinic"***REMOVED***See here</a***REMOVED***</td***REMOVED***
   </tr***REMOVED***
 </table***REMOVED***
+
+
+## Interaction with other open source projects
+
+One of the best parts about working on the Spring Petclinic application is that we have the opportunity to work in direct contact with many other Open Source projects. We found some bugs/suggested improvements on various topics such as Spring, Spring Data, Bean Validation and even Eclipse! In many cases, they've been fixed/implemented in just a few days.
+Here is a list of them:
+
+<table***REMOVED***
+  <tr***REMOVED***
+    <th width="300px"***REMOVED***Spring JDBC: simplify usage of NamedParameterJdbcTemplate</th***REMOVED***<th width="300px"***REMOVED*** <a href="https://jira.springsource.org/browse/SPR-10256"***REMOVED*** SPR-10256</a***REMOVED*** and <a href="https://jira.springsource.org/browse/SPR-10257"***REMOVED*** SPR-10257</a***REMOVED*** </th***REMOVED***
+  </tr***REMOVED***
+  <tr***REMOVED***
+    <td***REMOVED***Bean Validation / Hibernate Validator: simplify Maven dependencies and backward compatibility</td***REMOVED***
+    <td***REMOVED***
+      <a href="https://hibernate.atlassian.net/browse/HV-790"***REMOVED*** HV-790</a***REMOVED*** and <a href="https://hibernate.atlassian.net/browse/HV-792"***REMOVED*** HV-792</a***REMOVED***
+      </td***REMOVED***
+  </tr***REMOVED***
+  <tr***REMOVED***
+    <td***REMOVED***Spring Data: provide more flexibility when working with JPQL queries</td***REMOVED***
+    <td***REMOVED***
+      <a href="https://jira.springsource.org/browse/DATAJPA-292"***REMOVED*** DATAJPA-292</a***REMOVED***
+      </td***REMOVED***
+  </tr***REMOVED***  
+  <tr***REMOVED***
+    <td***REMOVED***Eclipse: validation bug when working with .tag/.tagx files</td***REMOVED***
+    <td***REMOVED***
+      <a href="https://issuetracker.springsource.com/browse/STS-3294"***REMOVED*** STS-3294</a***REMOVED***
+    </td***REMOVED***
+  </tr***REMOVED***    
+</table***REMOVED***
+
+
+
+
