@@ -16,15 +16,14 @@
 		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
 
 		<!-- Spring --***REMOVED***
-		<spring-framework.version***REMOVED***3.2.2.RELEASE</spring-framework.version***REMOVED***
-		<spring-data-jpa.version***REMOVED***1.3.1.RELEASE</spring-data-jpa.version***REMOVED***
+		<spring-framework.version***REMOVED***3.2.3.RELEASE</spring-framework.version***REMOVED***
+		<spring-data-jpa.version***REMOVED***1.3.2.RELEASE</spring-data-jpa.version***REMOVED***
 
 
 		<!-- Java EE / Java SE dependencies --***REMOVED***
 		<jsp.version***REMOVED***2.2</jsp.version***REMOVED***
 		<jstl.version***REMOVED***1.2</jstl.version***REMOVED***
 		<servlet.version***REMOVED***2.5</servlet.version***REMOVED***
-		<javax-el.version***REMOVED***2.2</javax-el.version***REMOVED***
 		<jaxb-impl.version***REMOVED***2.2.7</jaxb-impl.version***REMOVED***
 
 		<!-- Hibernate / JPA --***REMOVED***
@@ -136,12 +135,6 @@
 			<groupId***REMOVED***org.springframework</groupId***REMOVED***
 			<artifactId***REMOVED***spring-context-support</artifactId***REMOVED***
 			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-			<exclusions***REMOVED***
-				<exclusion***REMOVED***
-					<groupId***REMOVED***quartz</groupId***REMOVED***
-					<artifactId***REMOVED***quartz</artifactId***REMOVED***
-				</exclusion***REMOVED***
-			</exclusions***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework</groupId***REMOVED***
@@ -194,6 +187,8 @@
 			<artifactId***REMOVED***rome</artifactId***REMOVED***
 			<version***REMOVED***${rome.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
+		
+		<!-- Date and Time --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***joda-time</groupId***REMOVED***
 			<artifactId***REMOVED***joda-time</artifactId***REMOVED***
@@ -218,25 +213,14 @@
 			<version***REMOVED***${hsqldb.version***REMOVED***</version***REMOVED***
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.glassfish.web</groupId***REMOVED***
-			<artifactId***REMOVED***jstl-impl</artifactId***REMOVED***
-			<version***REMOVED***${jstl.version***REMOVED***</version***REMOVED***
-		</dependency***REMOVED***
 
-		<!-- MySQL JDBC Connector --***REMOVED***
+		<!-- For MySql only --***REMOVED***
 		<!-- <dependency***REMOVED*** <groupId***REMOVED***mysql</groupId***REMOVED*** <artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED*** <version***REMOVED***${mysql.version***REMOVED***</version***REMOVED*** </dependency***REMOVED*** --***REMOVED***
 		<!-- HIBERNATE --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
 			<artifactId***REMOVED***hibernate-core</artifactId***REMOVED***
 			<version***REMOVED***${hibernate.version***REMOVED***</version***REMOVED***
-			<exclusions***REMOVED***
-				<exclusion***REMOVED***
-					<groupId***REMOVED***asm</groupId***REMOVED***
-					<artifactId***REMOVED***asm-attrs</artifactId***REMOVED***
-				</exclusion***REMOVED***
-			</exclusions***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
@@ -281,6 +265,7 @@
 			<artifactId***REMOVED***jquery</artifactId***REMOVED***
 			<version***REMOVED***${webjars-jquery.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
+		
 		<!-- Test Artifacts --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework</groupId***REMOVED***
