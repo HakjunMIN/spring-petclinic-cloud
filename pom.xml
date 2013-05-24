@@ -172,7 +172,7 @@
 			<groupId***REMOVED***org.slf4j</groupId***REMOVED***
 			<artifactId***REMOVED***slf4j-api</artifactId***REMOVED***
 			<version***REMOVED***${slf4j.version***REMOVED***</version***REMOVED***
-			<scope***REMOVED***runtime</scope***REMOVED***
+			<scope***REMOVED***compile</scope***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***ch.qos.logback</groupId***REMOVED***
@@ -217,11 +217,6 @@
 		<!-- For MySql only --***REMOVED***
 		<!-- <dependency***REMOVED*** <groupId***REMOVED***mysql</groupId***REMOVED*** <artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED*** <version***REMOVED***${mysql.version***REMOVED***</version***REMOVED*** </dependency***REMOVED*** --***REMOVED***
 		<!-- HIBERNATE --***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
-			<artifactId***REMOVED***hibernate-core</artifactId***REMOVED***
-			<version***REMOVED***${hibernate.version***REMOVED***</version***REMOVED***
-		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hibernate</groupId***REMOVED***
 			<artifactId***REMOVED***hibernate-entitymanager</artifactId***REMOVED***
