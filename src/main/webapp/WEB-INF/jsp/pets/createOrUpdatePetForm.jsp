@@ -42,8 +42,7 @@
         <petclinic:inputField label="Name" name="name"/***REMOVED***
         <petclinic:inputField label="Birth Date" name="birthDate"/***REMOVED***
         <div class="control-group"***REMOVED***
-            <label class="control-label"***REMOVED***Type </label***REMOVED***
-            <form:select path="type" items="${types***REMOVED***" size="5"/***REMOVED***
+            <petclinic:selectField name="type" label="Type " names="${types***REMOVED***" size="5"/***REMOVED***
         </div***REMOVED***
         <div class="form-actions"***REMOVED***
             <c:choose***REMOVED***
