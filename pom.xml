@@ -33,7 +33,7 @@
 		<hibernate-validator.version***REMOVED***4.3.1.Final</hibernate-validator.version***REMOVED***
 
 		<!-- Database access --***REMOVED***
-		<commons-dbcp.version***REMOVED***1.4</commons-dbcp.version***REMOVED***
+		<tomcat-jdbc.version***REMOVED***7.0.37</tomcat-jdbc.version***REMOVED***
 		<ehcache.version***REMOVED***2.6.6</ehcache.version***REMOVED***
 		<hsqldb.version***REMOVED***2.2.9</hsqldb.version***REMOVED***
 
@@ -159,11 +159,14 @@
 		</dependency***REMOVED***
 
 
-		<!-- Database connection pool --***REMOVED***
+		<!-- Database connection pool 
+		See here for more details on commons-dbcp versus tomcat-jdbc: 
+    	http://blog.ippon.fr/2013/03/13/improving-the-performance-of-the-spring-petclinic-sample-application-part-3-of-5/
+    --***REMOVED***
 		<dependency***REMOVED***
-			<groupId***REMOVED***commons-dbcp</groupId***REMOVED***
-			<artifactId***REMOVED***commons-dbcp</artifactId***REMOVED***
-			<version***REMOVED***${commons-dbcp.version***REMOVED***</version***REMOVED***
+			<groupId***REMOVED***org.apache.tomcat</groupId***REMOVED***
+			<artifactId***REMOVED***tomcat-jdbc</artifactId***REMOVED***
+			<version***REMOVED***${tomcat-jdbc.version***REMOVED***</version***REMOVED***
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
 
