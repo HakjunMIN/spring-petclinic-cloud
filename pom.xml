@@ -318,9 +318,19 @@
 
 	</dependencies***REMOVED***
 
-	<!-- all Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term --***REMOVED***
+	<!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term --***REMOVED***
 	<build***REMOVED***
 		<defaultGoal***REMOVED***install</defaultGoal***REMOVED***
+		<testResources***REMOVED***
+		  <testResource***REMOVED***
+		  	<!-- declared explicitly so Spring config files can be placed next to their corresponding JUnit test class 
+		  		(see example with ValidatorTests) --***REMOVED***
+		    <directory***REMOVED***${project.basedir***REMOVED***/src/test/java</directory***REMOVED***
+		  </testResource***REMOVED***
+		  <testResource***REMOVED***
+		    <directory***REMOVED***${project.basedir***REMOVED***/src/test/resources</directory***REMOVED***
+		  </testResource***REMOVED***
+		</testResources***REMOVED***
 		<plugins***REMOVED***
 			<plugin***REMOVED***
 				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
@@ -382,20 +392,6 @@
 			</plugin***REMOVED***
 			<plugin***REMOVED***
 				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-				<artifactId***REMOVED***maven-dependency-plugin</artifactId***REMOVED***
-				<version***REMOVED***2.6</version***REMOVED***
-				<executions***REMOVED***
-					<execution***REMOVED***
-						<id***REMOVED***install</id***REMOVED***
-						<phase***REMOVED***install</phase***REMOVED***
-						<goals***REMOVED***
-							<goal***REMOVED***sources</goal***REMOVED***
-						</goals***REMOVED***
-					</execution***REMOVED***
-				</executions***REMOVED***
-			</plugin***REMOVED***
-			<plugin***REMOVED***
-				<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
 				<artifactId***REMOVED***maven-assembly-plugin</artifactId***REMOVED***
 				<version***REMOVED***2.4</version***REMOVED***
 				<configuration***REMOVED***
@@ -415,48 +411,6 @@
 				</configuration***REMOVED***
 			</plugin***REMOVED***
 		</plugins***REMOVED***
-		<pluginManagement***REMOVED***
-			<plugins***REMOVED***
-				<plugin***REMOVED***
-					<groupId***REMOVED***org.eclipse.m2e</groupId***REMOVED***
-					<artifactId***REMOVED***lifecycle-mapping</artifactId***REMOVED***
-					<version***REMOVED***1.0.0</version***REMOVED***
-					<configuration***REMOVED***
-						<lifecycleMappingMetadata***REMOVED***
-							<pluginExecutions***REMOVED***
-								<pluginExecution***REMOVED***
-									<pluginExecutionFilter***REMOVED***
-										<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-										<artifactId***REMOVED***maven-enforcer-plugin</artifactId***REMOVED***
-										<versionRange***REMOVED***[1.0.0,)</versionRange***REMOVED***
-										<goals***REMOVED***
-											<goal***REMOVED***enforce</goal***REMOVED***
-										</goals***REMOVED***
-									</pluginExecutionFilter***REMOVED***
-									<action***REMOVED***
-										<execute /***REMOVED***
-									</action***REMOVED***
-								</pluginExecution***REMOVED***
-								<pluginExecution***REMOVED***
-									<pluginExecutionFilter***REMOVED***
-										<groupId***REMOVED***org.apache.maven.plugins</groupId***REMOVED***
-										<artifactId***REMOVED***maven-dependency-plugin</artifactId***REMOVED***
-										<versionRange***REMOVED***[2.4,)</versionRange***REMOVED***
-										<goals***REMOVED***
-											<goal***REMOVED***unpack</goal***REMOVED***
-											<goal***REMOVED***sources</goal***REMOVED***
-										</goals***REMOVED***
-									</pluginExecutionFilter***REMOVED***
-									<action***REMOVED***
-										<execute /***REMOVED***
-									</action***REMOVED***
-								</pluginExecution***REMOVED***
-							</pluginExecutions***REMOVED***
-						</lifecycleMappingMetadata***REMOVED***
-					</configuration***REMOVED***
-				</plugin***REMOVED***
-			</plugins***REMOVED***
-		</pluginManagement***REMOVED***
 	</build***REMOVED***
 
 </project***REMOVED***
