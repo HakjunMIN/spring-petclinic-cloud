@@ -8,15 +8,20 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
     <display-name***REMOVED***Spring PetClinic</display-name***REMOVED***
     <description***REMOVED***Spring PetClinic sample application</description***REMOVED***
 
-    <context-param***REMOVED***
+   <!-- Default profile is "jpa" (see business-config.xml for more details). 
+   When using Spring JDBC, uncomment the following: --***REMOVED***
+   <!--  <context-param***REMOVED***
         <param-name***REMOVED***spring.profiles.active</param-name***REMOVED***
         <param-value***REMOVED***jdbc</param-value***REMOVED***
-        <!-- Available profiles:
-		<param-value***REMOVED***jdbc</param-value***REMOVED***
-		<param-value***REMOVED***jpa</param-value***REMOVED*** (in the case of plain JPA)
-		<param-value***REMOVED***spring-data-jpa</param-value***REMOVED*** (in the case of Spring Data JPA)
-		--***REMOVED***
+    </context-param***REMOVED***  --***REMOVED***
+
+   <!--  When using Spring Data JPA, uncomment the following: --***REMOVED***
+   <!--
+   	<context-param***REMOVED***
+        <param-name***REMOVED***spring.profiles.active</param-name***REMOVED***
+		<param-value***REMOVED***spring-data-jpa</param-value***REMOVED***
     </context-param***REMOVED***
+	--***REMOVED***
 
     <!--
 		- Location of the XML file that defines the root application context.

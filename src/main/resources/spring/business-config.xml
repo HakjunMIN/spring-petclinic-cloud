@@ -25,8 +25,14 @@
      <!-- enables scanning for @Transactional annotations --***REMOVED***
     <tx:annotation-driven /***REMOVED***
  
-
-    <beans profile="jpa,spring-data-jpa"***REMOVED***
+	
+	<!-- ==================		 3 Profiles to choose from 			=================== 
+									- default (uses JPA)
+									- jdbc (uses Spring" JdbcTemplate)
+									- spring-data-jpa	
+		  =============================================================================--***REMOVED***
+	
+    <beans profile="default,spring-data-jpa"***REMOVED***
         <!-- JPA EntityManagerFactory --***REMOVED***
         <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
               p:dataSource-ref="dataSource"***REMOVED***
@@ -69,8 +75,9 @@
         <context:component-scan base-package="org.springframework.samples.petclinic.repository.jdbc"/***REMOVED***
     </beans***REMOVED***
 
-    <beans profile="jpa"***REMOVED***
+    <beans profile="default"***REMOVED***
         <!--
+            Loads JPA beans
             Will automatically be transactional due to @Transactional.
             EntityManager will be auto-injected due to @PersistenceContext.
             PersistenceExceptions will be auto-translated due to @Repository.
