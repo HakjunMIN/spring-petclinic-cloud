@@ -20,7 +20,7 @@
 
     <!-- Configurer that replaces ${***REMOVED******REMOVED*** placeholders with values from a properties file --***REMOVED***
     <!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) --***REMOVED***
-    <context:property-placeholder location="classpath:spring/data-access.properties"/***REMOVED***
+    <context:property-placeholder location="classpath:spring/data-access.properties" system-properties-mode="OVERRIDE"/***REMOVED***
 
      <!-- enables scanning for @Transactional annotations --***REMOVED***
     <tx:annotation-driven /***REMOVED***
