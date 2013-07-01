@@ -17,7 +17,7 @@
 
     <!-- Configurer that replaces ${***REMOVED******REMOVED*** placeholders with values from a properties file --***REMOVED***
     <!-- (in this case, JDBC-related settings for the dataSource definition below) --***REMOVED***
-    <context:property-placeholder location="classpath:spring/data-access.properties"/***REMOVED***
+    <context:property-placeholder location="classpath:spring/data-access.properties" system-properties-mode="OVERRIDE"/***REMOVED***
 
     <!-- DataSource configuration for the tomcat jdbc connection pool 
     See here for more details on commons-dbcp versus tomcat-jdbc: 
