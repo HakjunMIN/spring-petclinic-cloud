@@ -16,7 +16,7 @@
 		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
 
 		<!-- Spring --***REMOVED***
-		<spring-framework.version***REMOVED***3.2.3.RELEASE</spring-framework.version***REMOVED***
+		<spring-framework.version***REMOVED***3.2.4.RELEASE</spring-framework.version***REMOVED***
 		<spring-data-jpa.version***REMOVED***1.3.4.RELEASE</spring-data-jpa.version***REMOVED***
 
 
