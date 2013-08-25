@@ -61,7 +61,7 @@ File -***REMOVED*** Import -***REMOVED*** Maven -***REMOVED*** Existing Maven pr
   </tr***REMOVED***
   <tr***REMOVED***
     <td***REMOVED***Spring MVC Test Framework</td***REMOVED***
-    <td***REMOVED***<a href="/src/test/java/org/springframework/samples/petclinic/web/VisitsViewTest.java"***REMOVED***VisitsViewTest.java</a***REMOVED***</td***REMOVED***
+    <td***REMOVED***<a href="/src/test/java/org/springframework/samples/petclinic/web/VisitsViewTests.java"***REMOVED***VisitsViewTest.java</a***REMOVED***</td***REMOVED***
   </tr***REMOVED***
   <tr***REMOVED***
     <td***REMOVED***JSP custom tags</td***REMOVED***
