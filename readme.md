@@ -47,7 +47,7 @@ File -***REMOVED*** Import -***REMOVED*** Maven -***REMOVED*** Existing Maven pr
   <tr***REMOVED***
     <td***REMOVED***Spring MVC- Atom integration</td***REMOVED***
     <td***REMOVED***
-      <a href="/SpringSource/spring-petclinic/blob/master/src/main/java/org/springframework/samples/petclinic/web/VetsAtomView.java"***REMOVED***VetsAtomView.java</a***REMOVED***
+      <a href="/src/main/java/org/springframework/samples/petclinic/web/VetsAtomView.java"***REMOVED***VetsAtomView.java</a***REMOVED***
       <a href="/SpringSource/spring-petclinic/blob/master/src/main/resources/spring/mvc-view-config.xml"***REMOVED***mvc-view-config.xml</a***REMOVED***
     </td***REMOVED***
   </tr***REMOVED***
