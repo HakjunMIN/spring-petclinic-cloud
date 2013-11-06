@@ -29,12 +29,21 @@ public class PetValidator {
 
     public void validate(Pet pet, Errors errors) {
         String name = pet.getName();
+        // name validaation
         if (!StringUtils.hasLength(name)) {
             errors.rejectValue("name", "required", "required");
   ***REMOVED*** else if (pet.isNew() && pet.getOwner().getPet(name, true) != null) {
             errors.rejectValue("name", "duplicate", "already exists");
-  ***REMOVED*** else if (pet.isNew() && pet.getType() == null) {
+  ***REMOVED***
+        
+        // type valication
+        if (pet.isNew() && pet.getType() == null) {
             errors.rejectValue("type", "required", "required");
+  ***REMOVED***
+        
+     // type valication
+        if (pet.getBirthDate()==null) {
+            errors.rejectValue("birthDate", "required", "required");
   ***REMOVED***
     ***REMOVED***
 
