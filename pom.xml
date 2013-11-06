@@ -38,7 +38,7 @@
 		<hsqldb.version***REMOVED***2.3.0</hsqldb.version***REMOVED***
 
 		<!-- AOP --***REMOVED***
-		<aspectj.version***REMOVED***1.7.3</aspectj.version***REMOVED***
+		<aspectj.version***REMOVED***1.7.4</aspectj.version***REMOVED***
 
 		<!-- Logging --***REMOVED***
 		<logback.version***REMOVED***1.0.13</logback.version***REMOVED***
@@ -62,7 +62,7 @@
 		<webjars-bootstrap.version***REMOVED***2.3.0</webjars-bootstrap.version***REMOVED***
 		<webjars-jquery-ui.version***REMOVED***1.9.2</webjars-jquery-ui.version***REMOVED***
 		<webjars-jquery.version***REMOVED***1.9.0</webjars-jquery.version***REMOVED***
-		<dandelion.datatables.version***REMOVED***0.9.1</dandelion.datatables.version***REMOVED***
+		<dandelion.datatables.version***REMOVED***0.9.2</dandelion.datatables.version***REMOVED***
 
 		<mysql.version***REMOVED***5.1.22</mysql.version***REMOVED***
 
