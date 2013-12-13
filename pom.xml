@@ -16,14 +16,14 @@
 		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
 
 		<!-- Spring --***REMOVED***
-		<spring-framework.version***REMOVED***3.2.5.RELEASE</spring-framework.version***REMOVED***
+		<spring-framework.version***REMOVED***4.0.0.RELEASE</spring-framework.version***REMOVED***
 		<spring-data-jpa.version***REMOVED***1.4.2.RELEASE</spring-data-jpa.version***REMOVED***
 
 
 		<!-- Java EE / Java SE dependencies --***REMOVED***
 		<jsp.version***REMOVED***2.2</jsp.version***REMOVED***
 		<jstl.version***REMOVED***1.2</jstl.version***REMOVED***
-		<servlet.version***REMOVED***2.5</servlet.version***REMOVED***
+		<tomcat.servlet.version***REMOVED***7.0.30</tomcat.servlet.version***REMOVED***
 		<jaxb-impl.version***REMOVED***2.2.7</jaxb-impl.version***REMOVED***
 
 		<!-- Hibernate / JPA --***REMOVED***
@@ -75,22 +75,29 @@
 			<version***REMOVED***${jadira-usertype-core.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
-			<groupId***REMOVED***javax.servlet</groupId***REMOVED***
-			<artifactId***REMOVED***jstl</artifactId***REMOVED***
-			<version***REMOVED***${jstl.version***REMOVED***</version***REMOVED***
-		</dependency***REMOVED***
+        	<groupId***REMOVED***org.apache.tomcat</groupId***REMOVED***
+        	<artifactId***REMOVED***tomcat-servlet-api</artifactId***REMOVED***
+         	<version***REMOVED***${tomcat.servlet.version***REMOVED***</version***REMOVED***
+          	<scope***REMOVED***provided</scope***REMOVED***
+        </dependency***REMOVED***
 		<dependency***REMOVED***
-			<groupId***REMOVED***javax.servlet</groupId***REMOVED***
-			<artifactId***REMOVED***servlet-api</artifactId***REMOVED***
-			<version***REMOVED***${servlet.version***REMOVED***</version***REMOVED***
-			<scope***REMOVED***provided</scope***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***javax.servlet.jsp</groupId***REMOVED***
-			<artifactId***REMOVED***jsp-api</artifactId***REMOVED***
-			<version***REMOVED***${jsp.version***REMOVED***</version***REMOVED***
-			<scope***REMOVED***provided</scope***REMOVED***
-		</dependency***REMOVED***
+                        <groupId***REMOVED***javax.servlet.jsp</groupId***REMOVED***
+                        <artifactId***REMOVED***jsp-api</artifactId***REMOVED***
+                        <version***REMOVED***2.1</version***REMOVED***
+                        <scope***REMOVED***provided</scope***REMOVED***
+                </dependency***REMOVED***
+
+                <dependency***REMOVED***
+                        <groupId***REMOVED***org.glassfish.web</groupId***REMOVED***
+                        <artifactId***REMOVED***jstl-impl</artifactId***REMOVED***
+                        <version***REMOVED***1.2</version***REMOVED***
+                        <exclusions***REMOVED***
+                                <exclusion***REMOVED***
+                                        <groupId***REMOVED***javax.servlet</groupId***REMOVED***
+                                        <artifactId***REMOVED***servlet-api</artifactId***REMOVED***
+                                </exclusion***REMOVED***
+                        </exclusions***REMOVED***
+                </dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***com.sun.xml.bind</groupId***REMOVED***
 			<artifactId***REMOVED***jaxb-impl</artifactId***REMOVED***
