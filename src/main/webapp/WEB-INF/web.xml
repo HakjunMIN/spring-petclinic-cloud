@@ -10,11 +10,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
     
     <context-param***REMOVED***
         <param-name***REMOVED***spring.profiles.active</param-name***REMOVED***
-        <param-value***REMOVED***default</param-value***REMOVED***
+        <param-value***REMOVED***jpa</param-value***REMOVED***
     </context-param***REMOVED***
 
-   <!-- Default profile is "jpa" (see business-config.xml for more details). 
-   When using Spring JDBC, uncomment the following: --***REMOVED***
+   <!-- When using Spring JDBC, use the following: --***REMOVED***
    <!--  <context-param***REMOVED***
         <param-name***REMOVED***spring.profiles.active</param-name***REMOVED***
         <param-value***REMOVED***jdbc</param-value***REMOVED***
