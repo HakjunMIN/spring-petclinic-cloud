@@ -41,7 +41,7 @@
 		<aspectj.version***REMOVED***1.7.4</aspectj.version***REMOVED***
 
 		<!-- Logging --***REMOVED***
-		<logback.version***REMOVED***1.0.13</logback.version***REMOVED***
+		<logback.version***REMOVED***1.1.0</logback.version***REMOVED***
 		<slf4j.version***REMOVED***1.7.5</slf4j.version***REMOVED***
 
 		<!-- RSS --***REMOVED***
