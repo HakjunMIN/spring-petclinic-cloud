@@ -27,7 +27,7 @@
 		<jaxb-impl.version***REMOVED***2.2.7</jaxb-impl.version***REMOVED***
 
 		<!-- Hibernate / JPA --***REMOVED***
-		<hibernate.version***REMOVED***4.3.1.Final</hibernate.version***REMOVED***
+		<hibernate.version***REMOVED***4.3.3.Final</hibernate.version***REMOVED***
 
 		<!-- Bean validation --***REMOVED***
 		<hibernate-validator.version***REMOVED***4.3.1.Final</hibernate-validator.version***REMOVED***
