@@ -16,8 +16,8 @@
 		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
 
 		<!-- Spring --***REMOVED***
-		<spring-framework.version***REMOVED***4.0.2.RELEASE</spring-framework.version***REMOVED***
-		<spring-data-jpa.version***REMOVED***1.4.3.RELEASE</spring-data-jpa.version***REMOVED***
+		<spring-framework.version***REMOVED***4.0.3.RELEASE</spring-framework.version***REMOVED***
+		<spring-data-jpa.version***REMOVED***1.5.1.RELEASE</spring-data-jpa.version***REMOVED***
 
 
 		<!-- Java EE / Java SE dependencies --***REMOVED***
@@ -27,7 +27,7 @@
 		<jaxb-impl.version***REMOVED***2.2.7</jaxb-impl.version***REMOVED***
 
 		<!-- Hibernate / JPA --***REMOVED***
-		<hibernate.version***REMOVED***4.3.3.Final</hibernate.version***REMOVED***
+		<hibernate.version***REMOVED***4.3.5.Final</hibernate.version***REMOVED***
 
 		<!-- Bean validation --***REMOVED***
 		<hibernate-validator.version***REMOVED***4.3.1.Final</hibernate-validator.version***REMOVED***
@@ -35,14 +35,14 @@
 		<!-- Database access --***REMOVED***
 		<tomcat-jdbc.version***REMOVED***7.0.42</tomcat-jdbc.version***REMOVED***
 		<ehcache.version***REMOVED***2.6.8</ehcache.version***REMOVED***
-		<hsqldb.version***REMOVED***2.3.1</hsqldb.version***REMOVED***
+		<hsqldb.version***REMOVED***2.3.2</hsqldb.version***REMOVED***
 
 		<!-- AOP --***REMOVED***
 		<aspectj.version***REMOVED***1.7.4</aspectj.version***REMOVED***
 
 		<!-- Logging --***REMOVED***
-		<logback.version***REMOVED***1.1.1</logback.version***REMOVED***
-		<slf4j.version***REMOVED***1.7.6</slf4j.version***REMOVED***
+		<logback.version***REMOVED***1.1.2</logback.version***REMOVED***
+		<slf4j.version***REMOVED***1.7.7</slf4j.version***REMOVED***
 
 		<!-- RSS --***REMOVED***
 		<rome.version***REMOVED***1.0</rome.version***REMOVED***
@@ -55,7 +55,7 @@
 		<jodatime-hibernate.version***REMOVED***1.3</jodatime-hibernate.version***REMOVED***
 		<jodatime-jsptags.version***REMOVED***1.1.1</jodatime-jsptags.version***REMOVED***
 		<jodatime.version***REMOVED***2.3</jodatime.version***REMOVED***
-		<jadira-usertype-core.version***REMOVED***3.1.0.CR10</jadira-usertype-core.version***REMOVED***
+		<jadira-usertype-core.version***REMOVED***3.1.0.GA</jadira-usertype-core.version***REMOVED***
 
 
 		<!-- Web dependencies --***REMOVED***
