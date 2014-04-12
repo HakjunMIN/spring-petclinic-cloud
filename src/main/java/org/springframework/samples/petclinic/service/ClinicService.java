@@ -32,19 +32,19 @@ import org.springframework.samples.petclinic.model.Visit;
  */
 public interface ClinicService {
 
-    public Collection<PetType***REMOVED*** findPetTypes() throws DataAccessException;
+    Collection<PetType***REMOVED*** findPetTypes() throws DataAccessException;
 
-    public Owner findOwnerById(int id) throws DataAccessException;
+    Owner findOwnerById(int id) throws DataAccessException;
 
-    public Pet findPetById(int id) throws DataAccessException;
+    Pet findPetById(int id) throws DataAccessException;
 
-    public void savePet(Pet pet) throws DataAccessException;
+    void savePet(Pet pet) throws DataAccessException;
 
-    public void saveVisit(Visit visit) throws DataAccessException;
+    void saveVisit(Visit visit) throws DataAccessException;
 
-    public Collection<Vet***REMOVED*** findVets() throws DataAccessException;
+    Collection<Vet***REMOVED*** findVets() throws DataAccessException;
 
-    public void saveOwner(Owner owner) throws DataAccessException;
+    void saveOwner(Owner owner) throws DataAccessException;
 
     Collection<Owner***REMOVED*** findOwnerByLastName(String lastName) throws DataAccessException;
 
