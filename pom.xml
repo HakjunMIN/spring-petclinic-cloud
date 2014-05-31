@@ -62,7 +62,7 @@
 		<webjars-bootstrap.version***REMOVED***2.3.0</webjars-bootstrap.version***REMOVED***
 		<webjars-jquery-ui.version***REMOVED***1.10.3</webjars-jquery-ui.version***REMOVED***
 		<webjars-jquery.version***REMOVED***2.0.3-1</webjars-jquery.version***REMOVED***
-		<dandelion.datatables.version***REMOVED***0.9.3</dandelion.datatables.version***REMOVED***
+		<dandelion.version***REMOVED***0.10.0</dandelion.version***REMOVED***
 
 		<mysql.version***REMOVED***5.1.22</mysql.version***REMOVED***
 
@@ -303,19 +303,13 @@
 		<dependency***REMOVED***
 			<groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
 			<artifactId***REMOVED***datatables-jsp</artifactId***REMOVED***
-			<version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
+			<version***REMOVED***${dandelion.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
 			<artifactId***REMOVED***datatables-export-itext</artifactId***REMOVED***
-			<version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
+			<version***REMOVED***${dandelion.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***com.github.dandelion</groupId***REMOVED***
-			<artifactId***REMOVED***datatables-servlet2</artifactId***REMOVED***
-			<version***REMOVED***${dandelion.datatables.version***REMOVED***</version***REMOVED***
-		</dependency***REMOVED***
-
 
 	</dependencies***REMOVED***
 

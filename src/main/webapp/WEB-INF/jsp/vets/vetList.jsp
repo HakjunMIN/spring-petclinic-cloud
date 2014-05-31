@@ -16,7 +16,7 @@
 
     <h2***REMOVED***Veterinarians</h2***REMOVED***
 
-    <datatables:table id="vets" data="${vets.vetList***REMOVED***" cdn="true" row="vet" theme="bootstrap2" cssClass="table table-striped" paginate="false" info="false"***REMOVED***
+    <datatables:table id="vets" data="${vets.vetList***REMOVED***" row="vet" theme="bootstrap2" cssClass="table table-striped" pageable="false" info="false"***REMOVED***
         <datatables:column title="Name"***REMOVED***
             <c:out value="${vet.firstName***REMOVED*** ${vet.lastName***REMOVED***"***REMOVED***</c:out***REMOVED***
         </datatables:column***REMOVED***
