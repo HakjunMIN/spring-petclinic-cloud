@@ -87,6 +87,7 @@ File -***REMOVED*** Import -***REMOVED*** Maven -***REMOVED*** Existing Maven pr
       <a href="/src/main/webapp/WEB-INF/jsp/owners/ownersList.jsp"***REMOVED***ownersList.jsp</a***REMOVED*** 
       <a href="/src/main/webapp/WEB-INF/jsp/vets/vetList.jsp"***REMOVED***vetList.jsp</a***REMOVED*** 
       <a href="/src/main/webapp/WEB-INF/web.xml"***REMOVED***web.xml</a***REMOVED*** 
+      <a href="/src/main/resources/dandelion/datatables/datatables.properties"***REMOVED***datatables.properties</a***REMOVED*** 
    </td***REMOVED***
   </tr***REMOVED***
   <tr***REMOVED***
