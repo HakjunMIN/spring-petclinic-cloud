@@ -58,17 +58,26 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <url-pattern***REMOVED***/</url-pattern***REMOVED***
     </servlet-mapping***REMOVED***
 
-    <!-- Dandelion-Datatables servlet definition --***REMOVED***
+    <!-- Dandelion servlet definition and mapping --***REMOVED***
     <servlet***REMOVED***
-        <servlet-name***REMOVED***datatablesController</servlet-name***REMOVED***
-        <servlet-class***REMOVED***com.github.dandelion.datatables.extras.servlet2.servlet.DatatablesServlet</servlet-class***REMOVED***
+        <servlet-name***REMOVED***dandelionServlet</servlet-name***REMOVED***
+        <servlet-class***REMOVED***com.github.dandelion.core.web.DandelionServlet</servlet-class***REMOVED***
+        <load-on-startup***REMOVED***2</load-on-startup***REMOVED***
     </servlet***REMOVED***
-   
-    <!-- Dandelion-Datatables servlet mapping --***REMOVED***
     <servlet-mapping***REMOVED***
-        <servlet-name***REMOVED***datatablesController</servlet-name***REMOVED***
-        <url-pattern***REMOVED***/datatablesController/*</url-pattern***REMOVED***
+        <servlet-name***REMOVED***dandelionServlet</servlet-name***REMOVED***
+        <url-pattern***REMOVED***/dandelion-assets/*</url-pattern***REMOVED***
     </servlet-mapping***REMOVED***
+   
+    <!-- Dandelion filter definition and mapping --***REMOVED***
+    <filter***REMOVED***
+        <filter-name***REMOVED***dandelionFilter</filter-name***REMOVED***
+        <filter-class***REMOVED***com.github.dandelion.core.web.DandelionFilter</filter-class***REMOVED***
+    </filter***REMOVED***
+    <filter-mapping***REMOVED***
+        <filter-name***REMOVED***dandelionFilter</filter-name***REMOVED***
+        <url-pattern***REMOVED***/*</url-pattern***REMOVED***
+    </filter-mapping***REMOVED***
 
     <!-- used so we can use forms of method type 'PUT' and 'DELETE' (such as in the Pet form)
 see here: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/view.html#rest-method-conversion
@@ -102,17 +111,15 @@ see here: http://static.springsource.org/spring/docs/current/spring-framework-re
 	    <url-pattern***REMOVED***/*</url-pattern***REMOVED***
 	 </filter-mapping***REMOVED***
  
-     <!-- Dandelion-Datatables filter definition --***REMOVED***
-    <filter***REMOVED***
-        <filter-name***REMOVED***datatablesFilter</filter-name***REMOVED***
-        <filter-class***REMOVED***com.github.dandelion.datatables.extras.servlet2.filter.DatatablesFilter</filter-class***REMOVED***
-    </filter***REMOVED***
-    
-    <!-- Dandelion-Datatables filter mapping --***REMOVED***
-    <filter-mapping***REMOVED***
-        <filter-name***REMOVED***datatablesFilter</filter-name***REMOVED***
+     <!-- Dandelion-Datatables filter, used for basic export --***REMOVED***
+     <filter***REMOVED***
+        <filter-name***REMOVED***datatables</filter-name***REMOVED***
+        <filter-class***REMOVED***com.github.dandelion.datatables.core.web.filter.DatatablesFilter</filter-class***REMOVED***
+     </filter***REMOVED***
+     <filter-mapping***REMOVED***
+        <filter-name***REMOVED***datatables</filter-name***REMOVED***
         <url-pattern***REMOVED***/*</url-pattern***REMOVED***
-    </filter-mapping***REMOVED***
+     </filter-mapping***REMOVED***
     
     <!--  	No need for welcome-file declaration here.
     		See inside spring/mvc-core-config.xml : 

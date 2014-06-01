@@ -15,8 +15,8 @@
     <jsp:include page="../fragments/bodyHeader.jsp"/***REMOVED***
     <h2***REMOVED***Owners</h2***REMOVED***
     
-    <datatables:table id="owners" data="${selections***REMOVED***" cdn="true" row="owner" theme="bootstrap2" 
-                      cssClass="table table-striped" paginate="false" info="false" export="pdf"***REMOVED***
+    <datatables:table id="owners" data="${selections***REMOVED***" row="owner" theme="bootstrap2" 
+                      cssClass="table table-striped" pageable="false" info="false" export="pdf"***REMOVED***
         <datatables:column title="Name" cssStyle="width: 150px;" display="html"***REMOVED***
             <***REMOVED***url value="/owners/{ownerId***REMOVED***.html" var="ownerUrl"***REMOVED***
                 <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
@@ -34,7 +34,7 @@
                 <c:out value="${pet.name***REMOVED***"/***REMOVED***
             </c:forEach***REMOVED***
         </datatables:column***REMOVED***
-        <datatables:export type="pdf" cssClass="btn btn-small" /***REMOVED***
+        <datatables:export type="pdf" cssClass="btn" cssStyle="height: 25px;" /***REMOVED***
     </datatables:table***REMOVED***
     
     <jsp:include page="../fragments/footer.jsp"/***REMOVED***
