@@ -17,7 +17,7 @@
 
 		<!-- Spring --***REMOVED***
 		<spring-framework.version***REMOVED***4.0.5.RELEASE</spring-framework.version***REMOVED***
-		<spring-data-jpa.version***REMOVED***1.6.0.RELEASE</spring-data-jpa.version***REMOVED***
+		<spring-data-jpa.version***REMOVED***1.6.1.RELEASE</spring-data-jpa.version***REMOVED***
 
 
 		<!-- Java EE / Java SE dependencies --***REMOVED***
@@ -38,7 +38,7 @@
 		<hsqldb.version***REMOVED***2.3.2</hsqldb.version***REMOVED***
 
 		<!-- AOP --***REMOVED***
-		<aspectj.version***REMOVED***1.7.4</aspectj.version***REMOVED***
+		<aspectj.version***REMOVED***1.8.1</aspectj.version***REMOVED***
 
 		<!-- Logging --***REMOVED***
 		<logback.version***REMOVED***1.1.2</logback.version***REMOVED***
