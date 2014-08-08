@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?***REMOVED***
 <beansProjectDescription***REMOVED***
 	<version***REMOVED***1</version***REMOVED***
-	<pluginVersion***REMOVED***<![CDATA[3.2.0.201301251408-M2]]***REMOVED***</pluginVersion***REMOVED***
+	<pluginVersion***REMOVED***<![CDATA[3.5.0.201404011509-RELEASE]]***REMOVED***</pluginVersion***REMOVED***
 	<configSuffixes***REMOVED***
 		<configSuffix***REMOVED***<![CDATA[xml]]***REMOVED***</configSuffix***REMOVED***
 	</configSuffixes***REMOVED***
@@ -12,6 +12,9 @@
 		<config***REMOVED***src/main/resources/spring/mvc-view-config.xml</config***REMOVED***
 		<config***REMOVED***src/main/resources/spring/business-config.xml</config***REMOVED***
 	</configs***REMOVED***
+	<autoconfigs***REMOVED***
+		<config***REMOVED***src/main/resources/spring/tools-config.xml</config***REMOVED***
+	</autoconfigs***REMOVED***
 	<configSets***REMOVED***
 	</configSets***REMOVED***
 </beansProjectDescription***REMOVED***
