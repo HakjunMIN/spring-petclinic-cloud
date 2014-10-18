@@ -17,7 +17,7 @@
 
 		<!-- Spring --***REMOVED***
 		<spring-framework.version***REMOVED***4.1.1.RELEASE</spring-framework.version***REMOVED***
-		<spring-data-jpa.version***REMOVED***1.6.2.RELEASE</spring-data-jpa.version***REMOVED***
+		<spring-data-jpa.version***REMOVED***1.7.0.RELEASE</spring-data-jpa.version***REMOVED***
 
 
 		<!-- Java EE / Java SE dependencies --***REMOVED***
