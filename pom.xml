@@ -16,7 +16,7 @@
 		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
 
 		<!-- Spring --***REMOVED***
-		<spring-framework.version***REMOVED***4.0.6.RELEASE</spring-framework.version***REMOVED***
+		<spring-framework.version***REMOVED***4.1.1.RELEASE</spring-framework.version***REMOVED***
 		<spring-data-jpa.version***REMOVED***1.6.2.RELEASE</spring-data-jpa.version***REMOVED***
 
 
@@ -45,7 +45,7 @@
 		<slf4j.version***REMOVED***1.7.7</slf4j.version***REMOVED***
 
 		<!-- RSS --***REMOVED***
-		<rome.version***REMOVED***1.0</rome.version***REMOVED***
+		<rome.version***REMOVED***1.5.0</rome.version***REMOVED***
 
 		<!-- Test --***REMOVED***
 		<junit.version***REMOVED***4.11</junit.version***REMOVED***
@@ -187,7 +187,7 @@
 
 		<!-- used for Atom --***REMOVED***
 		<dependency***REMOVED***
-			<groupId***REMOVED***rome</groupId***REMOVED***
+			<groupId***REMOVED***com.rometools</groupId***REMOVED***
 			<artifactId***REMOVED***rome</artifactId***REMOVED***
 			<version***REMOVED***${rome.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
