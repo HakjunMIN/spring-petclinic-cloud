@@ -10,7 +10,7 @@
 
 <html lang="en"***REMOVED***
 
-<jsp:include page="../fragments/headTag.jsp"/***REMOVED***
+<jsp:include page="../fragments/staticFiles.jsp"/***REMOVED***
 
 
 <body***REMOVED***
