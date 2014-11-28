@@ -5,6 +5,8 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %***REMOVED***
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %***REMOVED***
 <%@ taglib prefix="joda" uri="http://www.joda.org/joda/time/tags" %***REMOVED***
+<%@ taglib prefix="petclinic" tagdir="/WEB-INF/tags" %***REMOVED***
+
 
 <html lang="en"***REMOVED***
 
@@ -40,22 +42,10 @@
     </table***REMOVED***
 
     <form:form modelAttribute="visit"***REMOVED***
-        <div class="control-group"***REMOVED***
-            <label class="control-label"***REMOVED***Date </label***REMOVED***
-
-            <div class="controls"***REMOVED***
-                <form:input path="date"/***REMOVED***
-                <span class="help-inline"***REMOVED***<form:errors path="date"/***REMOVED***</span***REMOVED***
-            </div***REMOVED***
-        </div***REMOVED***
-        <div class="control-group"***REMOVED***
-            <label class="control-label"***REMOVED***Description </label***REMOVED***
-
-            <div class="controls"***REMOVED***
-                <form:input path="description"/***REMOVED***
-                <span class="help-inline"***REMOVED***<form:errors path="description"/***REMOVED***</span***REMOVED***
-            </div***REMOVED***
-        </div***REMOVED***
+    
+        <petclinic:inputField label="date" name="date" /***REMOVED***
+        <petclinic:inputField label="description" name="description" /***REMOVED***
+        
         <div class="form-actions"***REMOVED***
             <input type="hidden" name="petId" value="${visit.pet.id***REMOVED***"/***REMOVED***
             <button type="submit"***REMOVED***Add Visit</button***REMOVED***
