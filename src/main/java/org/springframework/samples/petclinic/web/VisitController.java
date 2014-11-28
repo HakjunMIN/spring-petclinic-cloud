@@ -27,12 +27,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.SessionAttributes;
-import org.springframework.web.bind.support.SessionStatus;
-import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author Juergen Hoeller
@@ -41,7 +39,6 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Michael Isvy
  */
 @Controller
-@SessionAttributes("visit")
 public class VisitController {
 
     private final ClinicService clinicService;
@@ -56,32 +53,45 @@ public class VisitController {
     public void setAllowedFields(WebDataBinder dataBinder) {
         dataBinder.setDisallowedFields("id");
     ***REMOVED***
-
-    @RequestMapping(value = "/owners/*/pets/{petId***REMOVED***/visits/new", method = RequestMethod.GET)
-    public String initNewVisitForm(@PathVariable("petId") int petId, Map<String, Object***REMOVED*** model) {
+    
+    /**
+     *  Called before each and every @RequestMapping annotated method.
+     *  2 goals:
+     *  - Make sure we always have fresh data
+     *  - Since we do not use the session scope, make sure that Pet object always has an id 
+     *    (Even though id is not part of the form fields)
+     * @param petId
+     * @return Pet
+     */
+    @ModelAttribute("visit")
+    public Visit loadPetWithVisit(@PathVariable("petId") int petId) {
         Pet pet = this.clinicService.findPetById(petId);
         Visit visit = new Visit();
-        pet.addVisit(visit);
-        model.put("visit", visit);
+        pet.addVisit(visit);  
+        return visit;
+    ***REMOVED***
+
+	// Spring MVC calls method loadPetWithVisit(***REMOVED***) before initNewVisitForm is called
+    @RequestMapping(value = "/owners/*/pets/{petId***REMOVED***/visits/new", method = RequestMethod.GET)
+    public String initNewVisitForm(@PathVariable("petId") int petId, Map<String, Object***REMOVED*** model) {
         return "pets/createOrUpdateVisitForm";
     ***REMOVED***
 
+	// Spring MVC calls method loadPetWithVisit(***REMOVED***) before processNewVisitForm is called
     @RequestMapping(value = "/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits/new", method = RequestMethod.POST)
-    public String processNewVisitForm(@Valid Visit visit, BindingResult result, SessionStatus status) {
+    public String processNewVisitForm(@Valid Visit visit, BindingResult result) {
         if (result.hasErrors()) {
             return "pets/createOrUpdateVisitForm";
   ***REMOVED*** else {
             this.clinicService.saveVisit(visit);
-            status.setComplete();
             return "redirect:/owners/{ownerId***REMOVED***";
   ***REMOVED***
     ***REMOVED***
 
     @RequestMapping(value = "/owners/*/pets/{petId***REMOVED***/visits", method = RequestMethod.GET)
-    public ModelAndView showVisits(@PathVariable int petId) {
-        ModelAndView mav = new ModelAndView("visitList");
-        mav.addObject("visits", this.clinicService.findPetById(petId).getVisits());
-        return mav;
+    public String showVisits(@PathVariable int petId, Map<String, Object***REMOVED*** model) {
+        model.put("visits", this.clinicService.findPetById(petId).getVisits());
+        return "visitList";
     ***REMOVED***
 
 ***REMOVED***
