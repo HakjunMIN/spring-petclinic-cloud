@@ -20,6 +20,7 @@ import javax.persistence.Table;
 
 /**
  * @author Juergen Hoeller
+ * Can be Cat, Dog, Hamster***REMOVED***
  */
 @Entity
 @Table(name = "types")
