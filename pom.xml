@@ -49,7 +49,7 @@
 
 		<!-- Test --***REMOVED***
 		<junit.version***REMOVED***4.12</junit.version***REMOVED***
-		<hamcrest.version***REMOVED***1.3</hamcrest.version***REMOVED***
+		<assertj.version***REMOVED***1.7.1</assertj.version***REMOVED***
 
 		<!-- Dates --***REMOVED***
 		<jodatime-hibernate.version***REMOVED***1.3</jodatime-hibernate.version***REMOVED***
@@ -278,12 +278,10 @@
 			<version***REMOVED***${junit.version***REMOVED***</version***REMOVED***
 			<scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***
-		<!-- used by Spring MVC Test framework --***REMOVED***
 		<dependency***REMOVED***
-			<groupId***REMOVED***org.hamcrest</groupId***REMOVED***
-			<artifactId***REMOVED***hamcrest-library</artifactId***REMOVED***
-			<version***REMOVED***${hamcrest.version***REMOVED***</version***REMOVED***
-			<scope***REMOVED***test</scope***REMOVED***
+			<groupId***REMOVED***org.assertj</groupId***REMOVED***
+			<artifactId***REMOVED***assertj-core</artifactId***REMOVED***
+			<version***REMOVED***${assertj.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 
 		<dependency***REMOVED***
