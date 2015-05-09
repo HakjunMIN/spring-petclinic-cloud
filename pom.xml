@@ -66,6 +66,8 @@
 
 		<mysql.version***REMOVED***5.1.22</mysql.version***REMOVED***
 
+		<cobertura.version***REMOVED***2.7</cobertura.version***REMOVED***
+
 	</properties***REMOVED***
 
 	<dependencies***REMOVED***
@@ -442,8 +444,39 @@
 					<path***REMOVED***/petclinic</path***REMOVED***
 				</configuration***REMOVED***
 			</plugin***REMOVED***
+			 <plugin***REMOVED***
+		        <groupId***REMOVED***org.codehaus.mojo</groupId***REMOVED***
+		        <artifactId***REMOVED***cobertura-maven-plugin</artifactId***REMOVED***
+				<version***REMOVED***${cobertura.version***REMOVED***</version***REMOVED***
+		        <configuration***REMOVED***
+		        </configuration***REMOVED***
+		        <executions***REMOVED***
+		          <execution***REMOVED***
+		            <goals***REMOVED***
+		              <goal***REMOVED***clean</goal***REMOVED***
+		              <goal***REMOVED***check</goal***REMOVED***
+		            </goals***REMOVED***
+		          </execution***REMOVED***
+		        </executions***REMOVED***
+         </plugin***REMOVED***
 		</plugins***REMOVED***
 	</build***REMOVED***
+		<reporting***REMOVED***
+		<plugins***REMOVED***
+		 
+			<!--  integrate maven-cobertura-plugin to project site  --***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.codehaus.mojo</groupId***REMOVED***
+				<artifactId***REMOVED***cobertura-maven-plugin</artifactId***REMOVED***
+				<version***REMOVED***${cobertura.version***REMOVED***</version***REMOVED***
+				<configuration***REMOVED***
+					<formats***REMOVED***
+						<format***REMOVED***html</format***REMOVED***
+					</formats***REMOVED***
+				</configuration***REMOVED***
+			</plugin***REMOVED***
+		</plugins***REMOVED***
+	</reporting***REMOVED***
 
 	<url***REMOVED***demopetclinic</url***REMOVED***
 </project***REMOVED***
