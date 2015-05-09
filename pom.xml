@@ -311,46 +311,6 @@
 			<version***REMOVED***${dandelion.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 	</dependencies***REMOVED***
-	<dependencyManagement***REMOVED***
-		<dependencies***REMOVED***
-			<!--
-				Force the version of all the spring jars (core, beans, context, ***REMOVED***) 
-				pulled by spring-data-jpa:1.3.4.RELEASE to 3.2.x when spring-data pulls 
-				the 3.1.x versions to prevent some misbehaviors of maven which sometimes 
-				pulls both 3.2.x and 3.1.x versions of spring-core, spring-beans and spring-context
-			--***REMOVED***
-			<dependency***REMOVED***
-					<groupId***REMOVED***org.springframework</groupId***REMOVED***
-					<artifactId***REMOVED***spring-core</artifactId***REMOVED***
-					<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-			</dependency***REMOVED***
-			<dependency***REMOVED***
-				<groupId***REMOVED***org.springframework</groupId***REMOVED***
-				<artifactId***REMOVED***spring-beans</artifactId***REMOVED***
-				<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-			</dependency***REMOVED***
-			<dependency***REMOVED***
-				<groupId***REMOVED***org.springframework</groupId***REMOVED***
-				<artifactId***REMOVED***spring-context</artifactId***REMOVED***
-				<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-			</dependency***REMOVED***
-			<dependency***REMOVED***
-				<groupId***REMOVED***org.springframework</groupId***REMOVED***
-				<artifactId***REMOVED***spring-orm</artifactId***REMOVED***
-				<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-			</dependency***REMOVED***
-			<dependency***REMOVED***
-				<groupId***REMOVED***org.springframework</groupId***REMOVED***
-				<artifactId***REMOVED***spring-aop</artifactId***REMOVED***
-				<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-			</dependency***REMOVED***
-			<dependency***REMOVED***
-				<groupId***REMOVED***org.springframework</groupId***REMOVED***
-				<artifactId***REMOVED***spring-tx</artifactId***REMOVED***
-				<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-			</dependency***REMOVED***
-		</dependencies***REMOVED***
-	</dependencyManagement***REMOVED***
 
 	<!-- Maven plugin versions are mentioned in order to guarantee the build reproducibility in the long term --***REMOVED***
 	<build***REMOVED***
