@@ -111,6 +111,12 @@
 			<groupId***REMOVED***org.springframework.data</groupId***REMOVED***
 			<artifactId***REMOVED***spring-data-jpa</artifactId***REMOVED***
 			<version***REMOVED***${spring-data-jpa.version***REMOVED***</version***REMOVED***
+			<exclusions***REMOVED***
+			    <exclusion***REMOVED***
+			      <groupId***REMOVED***org.springframework</groupId***REMOVED***
+			      <artifactId***REMOVED****</artifactId***REMOVED***
+			    </exclusion***REMOVED***
+			</exclusions***REMOVED***
 		</dependency***REMOVED***
 
 		<dependency***REMOVED***
