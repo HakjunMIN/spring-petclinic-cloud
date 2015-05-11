@@ -11,7 +11,7 @@
 	<properties***REMOVED***
 
 		<!-- Generic properties --***REMOVED***
-		<java.version***REMOVED***1.6</java.version***REMOVED***
+		<java.version***REMOVED***1.8</java.version***REMOVED***
 		<project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
 		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
 
