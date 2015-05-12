@@ -34,7 +34,7 @@
                 <a href="<***REMOVED***url value="/vets.xml" htmlEscape="true" /***REMOVED***"***REMOVED***View as XML</a***REMOVED***
             </td***REMOVED***
             <td***REMOVED***
-                <a href="<***REMOVED***url value="/vets.atom" htmlEscape="true" /***REMOVED***"***REMOVED***Subscribe to Atom feed</a***REMOVED***
+                <a href="<***REMOVED***url value="/vets.json" htmlEscape="true" /***REMOVED***"***REMOVED***View as JSon</a***REMOVED***
             </td***REMOVED***
         </tr***REMOVED***
     </table***REMOVED***

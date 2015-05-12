@@ -44,8 +44,7 @@
 		<logback.version***REMOVED***1.1.2</logback.version***REMOVED***
 		<slf4j.version***REMOVED***1.7.10</slf4j.version***REMOVED***
 
-		<!-- RSS and JSon--***REMOVED***
-		<rome.version***REMOVED***1.5.0</rome.version***REMOVED***
+		<!-- JSon--***REMOVED***
 		<json-path.version***REMOVED***0.9.1</json-path.version***REMOVED***
 
 		<!-- Test --***REMOVED***
@@ -107,6 +106,7 @@
 			<version***REMOVED***${jaxb-impl.version***REMOVED***</version***REMOVED***
 			<scope***REMOVED***provided</scope***REMOVED***
 		</dependency***REMOVED***
+		<!--  JSon --***REMOVED***
 		 <dependency***REMOVED***
             <groupId***REMOVED***com.jayway.jsonpath</groupId***REMOVED***
             <artifactId***REMOVED***json-path</artifactId***REMOVED***
@@ -123,6 +123,7 @@
 			      <groupId***REMOVED***org.springframework</groupId***REMOVED***
 			      <artifactId***REMOVED****</artifactId***REMOVED***
 			    </exclusion***REMOVED***
+			    <!--  because Spring Data usually comes with a slightly older version of Spring --***REMOVED***
 			</exclusions***REMOVED***
 		</dependency***REMOVED***
 
@@ -174,7 +175,18 @@
 			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 
-
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
+			<artifactId***REMOVED***aspectjrt</artifactId***REMOVED***
+			<version***REMOVED***${aspectj.version***REMOVED***</version***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
+			<artifactId***REMOVED***aspectjweaver</artifactId***REMOVED***
+			<version***REMOVED***${aspectj.version***REMOVED***</version***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+		
 		<!-- Database connection pool 
 		See here for more details on commons-dbcp versus tomcat-jdbc: 
     	http://blog.ippon.fr/2013/03/13/improving-the-performance-of-the-spring-petclinic-sample-application-part-3-of-5/
@@ -198,13 +210,6 @@
 			<artifactId***REMOVED***logback-classic</artifactId***REMOVED***
 			<version***REMOVED***${logback.version***REMOVED***</version***REMOVED***
 			<scope***REMOVED***runtime</scope***REMOVED***
-		</dependency***REMOVED***
-
-		<!-- used for Atom --***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***com.rometools</groupId***REMOVED***
-			<artifactId***REMOVED***rome</artifactId***REMOVED***
-			<version***REMOVED***${rome.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 		
 		<!-- Date and Time --***REMOVED***
@@ -298,19 +303,6 @@
 			<artifactId***REMOVED***assertj-core</artifactId***REMOVED***
 			<version***REMOVED***${assertj.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
-
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
-			<artifactId***REMOVED***aspectjrt</artifactId***REMOVED***
-			<version***REMOVED***${aspectj.version***REMOVED***</version***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
-			<artifactId***REMOVED***aspectjweaver</artifactId***REMOVED***
-			<version***REMOVED***${aspectj.version***REMOVED***</version***REMOVED***
-			<scope***REMOVED***runtime</scope***REMOVED***
-		</dependency***REMOVED***
-
 
 		<!-- Dandelion --***REMOVED***
 		<dependency***REMOVED***
