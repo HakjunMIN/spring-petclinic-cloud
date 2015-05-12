@@ -317,8 +317,7 @@
 		<defaultGoal***REMOVED***install</defaultGoal***REMOVED***
 		<testResources***REMOVED***
 		  <testResource***REMOVED***
-		  	<!-- declared explicitly so Spring config files can be placed next to their corresponding JUnit test class 
-		  		(see example with ValidatorTests) --***REMOVED***
+		  	<!-- declared explicitly so Spring config files can be placed next to their corresponding JUnit test class  --***REMOVED***
 		    <directory***REMOVED***${project.basedir***REMOVED***/src/test/java</directory***REMOVED***
 		  </testResource***REMOVED***
 		  <testResource***REMOVED***
