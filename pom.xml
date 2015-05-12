@@ -44,8 +44,9 @@
 		<logback.version***REMOVED***1.1.2</logback.version***REMOVED***
 		<slf4j.version***REMOVED***1.7.10</slf4j.version***REMOVED***
 
-		<!-- RSS --***REMOVED***
+		<!-- RSS and JSon--***REMOVED***
 		<rome.version***REMOVED***1.5.0</rome.version***REMOVED***
+		<json-path.version***REMOVED***0.9.1</json-path.version***REMOVED***
 
 		<!-- Test --***REMOVED***
 		<junit.version***REMOVED***4.12</junit.version***REMOVED***
@@ -106,6 +107,12 @@
 			<version***REMOVED***${jaxb-impl.version***REMOVED***</version***REMOVED***
 			<scope***REMOVED***provided</scope***REMOVED***
 		</dependency***REMOVED***
+		 <dependency***REMOVED***
+            <groupId***REMOVED***com.jayway.jsonpath</groupId***REMOVED***
+            <artifactId***REMOVED***json-path</artifactId***REMOVED***
+            <version***REMOVED***${json-path.version***REMOVED***</version***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
 		<!-- SPRING, SPRING, SPRINGITY SPRING --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.data</groupId***REMOVED***
