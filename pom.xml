@@ -169,11 +169,6 @@
 				</exclusion***REMOVED***
 			</exclusions***REMOVED***
 		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework</groupId***REMOVED***
-			<artifactId***REMOVED***spring-jms</artifactId***REMOVED***
-			<version***REMOVED***${spring-framework.version***REMOVED***</version***REMOVED***
-		</dependency***REMOVED***
 
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.aspectj</groupId***REMOVED***
