@@ -41,7 +41,7 @@ public class VetController {
         this.clinicService = clinicService;
     ***REMOVED***
 
-    @RequestMapping(value="/vets.xml")
+    @RequestMapping(value={"/vets.xml","/vets.html"***REMOVED***)
     public String showVetList(Map<String, Object***REMOVED*** model) {
         // Here we are returning an object of type 'Vets' rather than a collection of Vet objects 
         // so it is simpler for Object-Xml mapping
