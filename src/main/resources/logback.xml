@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<!DOCTYPE xml***REMOVED***
+
 <configuration scan="true" scanPeriod="30 seconds"***REMOVED***
 
     <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator"***REMOVED***
