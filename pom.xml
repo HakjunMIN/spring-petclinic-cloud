@@ -23,7 +23,7 @@
 		<!-- Java EE / Java SE dependencies --***REMOVED***
 		<jsp.version***REMOVED***2.2</jsp.version***REMOVED***
 		<jstl.version***REMOVED***1.2</jstl.version***REMOVED***
-		<tomcat.servlet.version***REMOVED***7.0.30</tomcat.servlet.version***REMOVED***
+		<tomcat.servlet.version***REMOVED***7.0.47</tomcat.servlet.version***REMOVED***
 		<jaxb-impl.version***REMOVED***2.2.7</jaxb-impl.version***REMOVED***
 
 		<!-- Hibernate / JPA --***REMOVED***
@@ -396,7 +396,7 @@
 			<plugin***REMOVED***
 				<groupId***REMOVED***org.apache.tomcat.maven</groupId***REMOVED***
 				<artifactId***REMOVED***tomcat7-maven-plugin</artifactId***REMOVED***
-				<version***REMOVED***2.0</version***REMOVED***
+				<version***REMOVED***2.2</version***REMOVED***
 				<configuration***REMOVED***
 					<server***REMOVED***tomcat-development-server</server***REMOVED***
 					<port***REMOVED***9966</port***REMOVED***
