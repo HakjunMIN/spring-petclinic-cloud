@@ -408,6 +408,7 @@
 		        <artifactId***REMOVED***cobertura-maven-plugin</artifactId***REMOVED***
 				<version***REMOVED***${cobertura.version***REMOVED***</version***REMOVED***
 		        <configuration***REMOVED***
+		        	<check/***REMOVED***
 		        </configuration***REMOVED***
 		        <executions***REMOVED***
 		          <execution***REMOVED***
