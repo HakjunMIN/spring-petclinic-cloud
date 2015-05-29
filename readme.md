@@ -48,7 +48,7 @@ File -***REMOVED*** Import -***REMOVED*** Maven -***REMOVED*** Existing Maven pr
   <tr***REMOVED***
     <td***REMOVED***Java Config branch</td***REMOVED***
     <td***REMOVED***
-      Petclinic uses XML configuration by default. In case you'd like to use Java Config instead, there is a Java Config branch available <a href="https://github.com/arey/spring-petclinic/tree/javaconfig"***REMOVED***here</a***REMOVED***. Thanks to Antoine Rey for his contribution.     
+      Petclinic uses XML configuration by default. In case you'd like to use Java Config instead, there is a Java Config branch available <a href="https://github.com/spring-projects/spring-petclinic/tree/javaconfig"***REMOVED***here</a***REMOVED***. Thanks to Antoine Rey for his contribution.     
     </td***REMOVED***
   </tr***REMOVED***
   <tr***REMOVED***
