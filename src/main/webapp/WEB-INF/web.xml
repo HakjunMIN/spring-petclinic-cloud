@@ -68,6 +68,25 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <servlet-name***REMOVED***dandelionServlet</servlet-name***REMOVED***
         <url-pattern***REMOVED***/dandelion-assets/*</url-pattern***REMOVED***
     </servlet-mapping***REMOVED***
+    
+    <!-- used to provide the ability to enter Chinese characters inside the Owner Form --***REMOVED***    
+    <filter***REMOVED***
+	    <filter-name***REMOVED***encodingFilter</filter-name***REMOVED***
+	    <filter-class***REMOVED***org.springframework.web.filter.CharacterEncodingFilter</filter-class***REMOVED***
+	    <init-param***REMOVED***
+	        <param-name***REMOVED***encoding</param-name***REMOVED***
+	        <param-value***REMOVED***UTF-8</param-value***REMOVED***
+	    </init-param***REMOVED***
+	    <init-param***REMOVED***
+	        <param-name***REMOVED***forceEncoding</param-name***REMOVED***
+	        <param-value***REMOVED***true</param-value***REMOVED***
+	    </init-param***REMOVED***
+	 </filter***REMOVED***
+	
+	 <filter-mapping***REMOVED***
+	    <filter-name***REMOVED***encodingFilter</filter-name***REMOVED***
+	    <url-pattern***REMOVED***/*</url-pattern***REMOVED***
+	 </filter-mapping***REMOVED***
    
     <!-- Dandelion filter definition and mapping --***REMOVED***
     <filter***REMOVED***
@@ -91,25 +110,6 @@ see here: http://static.springsource.org/spring/docs/current/spring-framework-re
         <filter-name***REMOVED***httpMethodFilter</filter-name***REMOVED***
         <servlet-name***REMOVED***petclinic</servlet-name***REMOVED***
     </filter-mapping***REMOVED***
-    
-    <!-- used to provide the ability to enter Chinese characters inside the Owner Form --***REMOVED***    
-    <filter***REMOVED***
-	    <filter-name***REMOVED***encodingFilter</filter-name***REMOVED***
-	    <filter-class***REMOVED***org.springframework.web.filter.CharacterEncodingFilter</filter-class***REMOVED***
-	    <init-param***REMOVED***
-	        <param-name***REMOVED***encoding</param-name***REMOVED***
-	        <param-value***REMOVED***UTF-8</param-value***REMOVED***
-	    </init-param***REMOVED***
-	    <init-param***REMOVED***
-	        <param-name***REMOVED***forceEncoding</param-name***REMOVED***
-	        <param-value***REMOVED***true</param-value***REMOVED***
-	    </init-param***REMOVED***
-	 </filter***REMOVED***
-	
-	 <filter-mapping***REMOVED***
-	    <filter-name***REMOVED***encodingFilter</filter-name***REMOVED***
-	    <url-pattern***REMOVED***/*</url-pattern***REMOVED***
-	 </filter-mapping***REMOVED***
  
      <!-- Dandelion-Datatables filter, used for basic export --***REMOVED***
      <filter***REMOVED***
