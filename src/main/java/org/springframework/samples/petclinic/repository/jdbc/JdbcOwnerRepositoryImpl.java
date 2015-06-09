@@ -116,18 +116,12 @@ public class JdbcOwnerRepositoryImpl implements OwnerRepository {
         Map<String, Object***REMOVED*** params = new HashMap<String, Object***REMOVED***();
         params.put("id", owner.getId().intValue());
         final List<JdbcPet***REMOVED*** pets = this.namedParameterJdbcTemplate.query(
-                "SELECT id, name, birth_date, type_id, owner_id FROM pets WHERE owner_id=:id",
+                "SELECT pets.id, name, birth_date, type_id, owner_id, visits.id, visit_date, description, pet_id FROM pets LEFT OUTER JOIN visits ON  pets.id = pet_id WHERE owner_id=:id",
                 params,
-                new JdbcPetRowMapper()
+                new JdbcPetVisitExtractor()
         );
         for (JdbcPet pet : pets) {
             owner.addPet(pet);
-            // Pet types have not been loaded at this stage. They are loaded separately
-            pet.setType(EntityUtils.getById(getPetTypes(), PetType.class, pet.getTypeId()));
-            List<Visit***REMOVED*** visits = this.visitRepository.findByPetId(pet.getId());
-            for (Visit visit : visits) {
-                pet.addVisit(visit);
-      ***REMOVED***
   ***REMOVED***
     ***REMOVED***
 
