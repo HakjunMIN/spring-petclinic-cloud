@@ -1,0 +1,161 @@
+<!-- Subhead
+================================================== --***REMOVED***
+<header class="jumbotron subhead" id="overview"***REMOVED***
+  <div class="container"***REMOVED***
+    <h1***REMOVED***{{_i***REMOVED******REMOVED***Extending Bootstrap{{/i***REMOVED******REMOVED***</h1***REMOVED***
+    <p class="lead"***REMOVED***{{_i***REMOVED******REMOVED***Extend Bootstrap to take advantage of included styles and components, as well as LESS variables and mixins.{{/i***REMOVED******REMOVED***</p***REMOVED***
+  <div***REMOVED***
+</header***REMOVED***
+
+  <div class="container"***REMOVED***
+
+    <!-- Docs nav
+    ================================================== --***REMOVED***
+    <div class="row"***REMOVED***
+      <div class="span3 bs-docs-sidebar"***REMOVED***
+        <ul class="nav nav-list bs-docs-sidenav"***REMOVED***
+          <li***REMOVED***<a href="#built-with-less"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Built with LESS{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#compiling"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Compiling Bootstrap{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#static-assets"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Use as static assets{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+        </ul***REMOVED***
+      </div***REMOVED***
+      <div class="span9"***REMOVED***
+
+
+
+        <!-- BUILT WITH LESS
+        ================================================== --***REMOVED***
+        <section id="built-with-less"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Built with LESS{{/i***REMOVED******REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <img style="float: right; height: 36px; margin: 10px 20px 20px" src="assets/img/less-logo-large.png" alt="LESS CSS"***REMOVED***
+          <p class="lead"***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap is made with LESS at its core, a dynamic stylesheet language created by our good friend, <a href="http://cloudhead.io"***REMOVED***Alexis Sellier</a***REMOVED***. It makes developing systems-based CSS faster, easier, and more fun.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Why LESS?{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***One of Bootstrap's creators wrote a quick <a href="http://www.wordsbyf.at/2012/03/08/why-less/"***REMOVED***blog post about this</a***REMOVED***, summarized here:{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <ul***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap compiles faster ~6x faster with Less compared to Sass{{/i***REMOVED******REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Less is written in JavaScript, making it easier to us to dive in and patch compared to Ruby with Sass.{{/i***REMOVED******REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Less is more; we want to feel like we're writing CSS and making Bootstrap approachable to all.{{/i***REMOVED******REMOVED***</li***REMOVED***
+          </ul***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***What's included?{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***As an extension of CSS, LESS includes variables, mixins for reusable snippets of code, operations for simple math, nesting, and even color functions.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Learn more{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Visit the official website at <a href="http://lesscss.org"***REMOVED***http://lesscss.org</a***REMOVED*** to learn more.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        </section***REMOVED***
+
+
+
+        <!-- COMPILING LESS AND BOOTSTRAP
+        ================================================== --***REMOVED***
+        <section id="compiling"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Compiling Bootstrap with Less{{/i***REMOVED******REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <p class="lead"***REMOVED***{{_i***REMOVED******REMOVED***Since our CSS is written with Less and utilizes variables and mixins, it needs to be compiled for final production implementation. Here's how.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <div class="alert alert-info"***REMOVED***
+            {{_i***REMOVED******REMOVED***<strong***REMOVED***Note:</strong***REMOVED*** If you're submitting a pull request to GitHub with modified CSS, you <strong***REMOVED***must</strong***REMOVED*** recompile the CSS via any of these methods.{{/i***REMOVED******REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Tools for compiling{{/i***REMOVED******REMOVED***</h2***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Command line{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Follow <a href="https://github.com/twitter/bootstrap#developers"***REMOVED***the instructions in the project readme</a***REMOVED*** on GitHub for compiling via command line.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***JavaScript{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***<a href="http://lesscss.org/"***REMOVED***Download the latest Less.js</a***REMOVED*** and include the path to it (and Bootstrap) in the <code***REMOVED***&lt;head&gt;</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint"***REMOVED***
+&lt;link rel="stylesheet/less" href="/path/to/bootstrap.less"&gt;
+&lt;script src="/path/to/less.js"&gt;&lt;/script&gt;
+</pre***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***To recompile the .less files, just save them and reload your page. Less.js compiles them and stores them in local storage.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Unofficial Mac app{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***<a href="http://incident57.com/less/"***REMOVED***The unofficial Mac app</a***REMOVED*** watches directories of .less files and compiles the code to local files after every save of a watched .less file. If you like, you can toggle preferences in the app for automatic minifying and which directory the compiled files end up in.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***More apps{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <h4***REMOVED***<a href="http://crunchapp.net/" target="_blank"***REMOVED***Crunch</a***REMOVED***</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Crunch is a great looking LESS editor and compiler built on Adobe Air.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <h4***REMOVED***<a href="http://incident57.com/codekit/" target="_blank"***REMOVED***CodeKit</a***REMOVED***</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Created by the same guy as the unofficial Mac app, CodeKit is a Mac app that compiles LESS, SASS, Stylus, and CoffeeScript.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <h4***REMOVED***<a href="http://wearekiss.com/simpless" target="_blank"***REMOVED***Simpless</a***REMOVED***</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Mac, Linux, and Windows app for drag and drop compiling of LESS files. Plus, the <a href="https://github.com/Paratron/SimpLESS" target="_blank"***REMOVED***source code is on GitHub</a***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Static assets
+        ================================================== --***REMOVED***
+        <section id="static-assets"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Use as static assets{{/i***REMOVED******REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+          <p class="lead"***REMOVED***{{_i***REMOVED******REMOVED***<a href="./getting-started.html"***REMOVED***Quickly start</a***REMOVED*** any web project by dropping in the compiled or minified CSS and JS. Layer on custom styles separately for easy upgrades and maintenance moving forward.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Setup file structure{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Download the latest compiled Bootstrap and place into your project. For example, you might have something like this:{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre***REMOVED***
+  <span class="icon-folder-open"***REMOVED***</span***REMOVED*** app/
+      <span class="icon-folder-open"***REMOVED***</span***REMOVED*** layouts/
+      <span class="icon-folder-open"***REMOVED***</span***REMOVED*** templates/
+  <span class="icon-folder-open"***REMOVED***</span***REMOVED*** public/
+      <span class="icon-folder-open"***REMOVED***</span***REMOVED*** css/
+          <span class="icon-file"***REMOVED***</span***REMOVED*** bootstrap.min.css
+      <span class="icon-folder-open"***REMOVED***</span***REMOVED*** js/
+          <span class="icon-file"***REMOVED***</span***REMOVED*** bootstrap.min.js
+      <span class="icon-folder-open"***REMOVED***</span***REMOVED*** img/
+          <span class="icon-file"***REMOVED***</span***REMOVED*** glyphicons-halflings.png
+          <span class="icon-file"***REMOVED***</span***REMOVED*** glyphicons-halflings-white.png
+</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Utilize starter template{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Copy the following base HTML to get started.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="public/css/bootstrap.min.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;script src="public/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Layer on custom code{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Work in your custom CSS, JS, and more as necessary to make Bootstrap your own with your own separate CSS and JS files.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;link href="public/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;!-- Project --&gt;
+    &lt;link href="public/css/application.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;!-- Bootstrap --&gt;
+    &lt;script src="public/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;!-- Project --&gt;
+    &lt;script src="public/js/application.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+      </div***REMOVED***{{! /span9 ***REMOVED******REMOVED***
+    </div***REMOVED***{{! row***REMOVED******REMOVED***
+
+  </div***REMOVED***{{! /.container ***REMOVED******REMOVED***

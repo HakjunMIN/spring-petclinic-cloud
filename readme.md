@@ -48,7 +48,7 @@ File -***REMOVED*** Import -***REMOVED*** Maven -***REMOVED*** Existing Maven pr
   <tr***REMOVED***
     <td***REMOVED***Java Config branch</td***REMOVED***
     <td***REMOVED***
-      Petclinic uses XML configuration by default. In case you'd like to use Java Config instead, there is a Java Config branch available <a href="https://github.com/spring-projects/spring-petclinic/tree/javaconfig"***REMOVED***here</a***REMOVED***. Thanks to Antoine Rey for his contribution.     
+      Petclinic uses XML configuration by default. In case you'd like to use Java Config instead, there is a Java Config branch available <a href="https://github.com/arey/spring-petclinic/tree/javaconfig"***REMOVED***here</a***REMOVED***. Thanks to Antoine Rey for his contribution.     
     </td***REMOVED***
   </tr***REMOVED***
   <tr***REMOVED***
@@ -73,7 +73,7 @@ File -***REMOVED*** Import -***REMOVED*** Maven -***REMOVED*** Existing Maven pr
     <td***REMOVED***
       <a href="/pom.xml"***REMOVED***webjars declaration inside pom.xml</a***REMOVED*** <br /***REMOVED***
       <a href="/src/main/resources/spring/mvc-core-config.xml#L24"***REMOVED***Resource mapping in Spring configuration</a***REMOVED*** <br /***REMOVED***
-      <a href="/src/main/webapp/WEB-INF/jsp/fragments/staticFiles.jsp#L12"***REMOVED***sample usage in JSP</a***REMOVED***</td***REMOVED***
+      <a href="/src/main/webapp/WEB-INF/jsp/fragments/headTag.jsp#L12"***REMOVED***sample usage in JSP</a***REMOVED***</td***REMOVED***
     </td***REMOVED***
   </tr***REMOVED***
   <tr***REMOVED***

@@ -1,0 +1,244 @@
+//
+// Tables
+// --------------------------------------------------
+
+
+// BASE TABLES
+// -----------------
+
+table {
+  max-width: 100%;
+  background-color: @tableBackground;
+  border-collapse: collapse;
+  border-spacing: 0;
+***REMOVED***
+
+// BASELINE STYLES
+// ---------------
+
+.table {
+  width: 100%;
+  margin-bottom: @baseLineHeight;
+  // Cells
+  th,
+  td {
+    padding: 8px;
+    line-height: @baseLineHeight;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid @tableBorder;
+  ***REMOVED***
+  th {
+    font-weight: bold;
+  ***REMOVED***
+  // Bottom align for column headings
+  thead th {
+    vertical-align: bottom;
+  ***REMOVED***
+  // Remove top border from thead by default
+  caption + thead tr:first-child th,
+  caption + thead tr:first-child td,
+  colgroup + thead tr:first-child th,
+  colgroup + thead tr:first-child td,
+  thead:first-child tr:first-child th,
+  thead:first-child tr:first-child td {
+    border-top: 0;
+  ***REMOVED***
+  // Account for multiple tbody instances
+  tbody + tbody {
+    border-top: 2px solid @tableBorder;
+  ***REMOVED***
+
+  // Nesting
+  .table {
+    background-color: @bodyBackground;
+  ***REMOVED***
+***REMOVED***
+
+
+
+// CONDENSED TABLE W/ HALF PADDING
+// -------------------------------
+
+.table-condensed {
+  th,
+  td {
+    padding: 4px 5px;
+  ***REMOVED***
+***REMOVED***
+
+
+// BORDERED VERSION
+// ----------------
+
+.table-bordered {
+  border: 1px solid @tableBorder;
+  border-collapse: separate; // Done so we can round those corners!
+  *border-collapse: collapse; // IE7 can't round corners anyway
+  border-left: 0;
+  .border-radius(@baseBorderRadius);
+  th,
+  td {
+    border-left: 1px solid @tableBorder;
+  ***REMOVED***
+  // Prevent a double border
+  caption + thead tr:first-child th,
+  caption + tbody tr:first-child th,
+  caption + tbody tr:first-child td,
+  colgroup + thead tr:first-child th,
+  colgroup + tbody tr:first-child th,
+  colgroup + tbody tr:first-child td,
+  thead:first-child tr:first-child th,
+  tbody:first-child tr:first-child th,
+  tbody:first-child tr:first-child td {
+    border-top: 0;
+  ***REMOVED***
+  // For first th/td in the first row in the first thead or tbody
+  thead:first-child tr:first-child ***REMOVED*** th:first-child,
+  tbody:first-child tr:first-child ***REMOVED*** td:first-child,
+  tbody:first-child tr:first-child ***REMOVED*** th:first-child {
+    .border-top-left-radius(@baseBorderRadius);
+  ***REMOVED***
+  // For last th/td in the first row in the first thead or tbody
+  thead:first-child tr:first-child ***REMOVED*** th:last-child,
+  tbody:first-child tr:first-child ***REMOVED*** td:last-child,
+  tbody:first-child tr:first-child ***REMOVED*** th:last-child {
+    .border-top-right-radius(@baseBorderRadius);
+  ***REMOVED***
+  // For first th/td (can be either) in the last row in the last thead, tbody, and tfoot
+  thead:last-child tr:last-child ***REMOVED*** th:first-child,
+  tbody:last-child tr:last-child ***REMOVED*** td:first-child,
+  tbody:last-child tr:last-child ***REMOVED*** th:first-child,
+  tfoot:last-child tr:last-child ***REMOVED*** td:first-child,
+  tfoot:last-child tr:last-child ***REMOVED*** th:first-child {
+    .border-bottom-left-radius(@baseBorderRadius);
+  ***REMOVED***
+  // For last th/td (can be either) in the last row in the last thead, tbody, and tfoot
+  thead:last-child tr:last-child ***REMOVED*** th:last-child,
+  tbody:last-child tr:last-child ***REMOVED*** td:last-child,
+  tbody:last-child tr:last-child ***REMOVED*** th:last-child,
+  tfoot:last-child tr:last-child ***REMOVED*** td:last-child,
+  tfoot:last-child tr:last-child ***REMOVED*** th:last-child {
+    .border-bottom-right-radius(@baseBorderRadius);
+  ***REMOVED***
+
+  // Clear border-radius for first and last td in the last row in the last tbody for table with tfoot
+  tfoot + tbody:last-child tr:last-child td:first-child {
+    .border-bottom-left-radius(0);
+  ***REMOVED***
+  tfoot + tbody:last-child tr:last-child td:last-child {
+    .border-bottom-right-radius(0);
+  ***REMOVED***
+
+  // Special fixes to round the left border on the first td/th
+  caption + thead tr:first-child th:first-child,
+  caption + tbody tr:first-child td:first-child,
+  colgroup + thead tr:first-child th:first-child,
+  colgroup + tbody tr:first-child td:first-child {
+    .border-top-left-radius(@baseBorderRadius);
+  ***REMOVED***
+  caption + thead tr:first-child th:last-child,
+  caption + tbody tr:first-child td:last-child,
+  colgroup + thead tr:first-child th:last-child,
+  colgroup + tbody tr:first-child td:last-child {
+    .border-top-right-radius(@baseBorderRadius);
+  ***REMOVED***
+
+***REMOVED***
+
+
+
+
+// ZEBRA-STRIPING
+// --------------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+  tbody {
+    ***REMOVED*** tr:nth-child(odd) ***REMOVED*** td,
+    ***REMOVED*** tr:nth-child(odd) ***REMOVED*** th {
+      background-color: @tableBackgroundAccent;
+    ***REMOVED***
+  ***REMOVED***
+***REMOVED***
+
+
+// HOVER EFFECT
+// ------------
+// Placed here since it has to come after the potential zebra striping
+.table-hover {
+  tbody {
+    tr:hover ***REMOVED*** td,
+    tr:hover ***REMOVED*** th {
+      background-color: @tableBackgroundHover;
+    ***REMOVED***
+  ***REMOVED***
+***REMOVED***
+
+
+// TABLE CELL SIZING
+// -----------------
+
+// Reset default grid behavior
+table td[class*="span"],
+table th[class*="span"],
+.row-fluid table td[class*="span"],
+.row-fluid table th[class*="span"] {
+  display: table-cell;
+  float: none; // undo default grid column styles
+  margin-left: 0; // undo default grid column styles
+***REMOVED***
+
+// Change the column widths to account for td/th padding
+.table td,
+.table th {
+  &.span1     { .tableColumns(1); ***REMOVED***
+  &.span2     { .tableColumns(2); ***REMOVED***
+  &.span3     { .tableColumns(3); ***REMOVED***
+  &.span4     { .tableColumns(4); ***REMOVED***
+  &.span5     { .tableColumns(5); ***REMOVED***
+  &.span6     { .tableColumns(6); ***REMOVED***
+  &.span7     { .tableColumns(7); ***REMOVED***
+  &.span8     { .tableColumns(8); ***REMOVED***
+  &.span9     { .tableColumns(9); ***REMOVED***
+  &.span10    { .tableColumns(10); ***REMOVED***
+  &.span11    { .tableColumns(11); ***REMOVED***
+  &.span12    { .tableColumns(12); ***REMOVED***
+***REMOVED***
+
+
+
+// TABLE BACKGROUNDS
+// -----------------
+// Exact selectors below required to override .table-striped
+
+.table tbody tr {
+  &.success ***REMOVED*** td {
+    background-color: @successBackground;
+  ***REMOVED***
+  &.error ***REMOVED*** td {
+    background-color: @errorBackground;
+  ***REMOVED***
+  &.warning ***REMOVED*** td {
+    background-color: @warningBackground;
+  ***REMOVED***
+  &.info ***REMOVED*** td {
+    background-color: @infoBackground;
+  ***REMOVED***
+***REMOVED***
+
+// Hover states for .table-hover
+.table-hover tbody tr {
+  &.success:hover ***REMOVED*** td {
+    background-color: darken(@successBackground, 5%);
+  ***REMOVED***
+  &.error:hover ***REMOVED*** td {
+    background-color: darken(@errorBackground, 5%);
+  ***REMOVED***
+  &.warning:hover ***REMOVED*** td {
+    background-color: darken(@warningBackground, 5%);
+  ***REMOVED***
+  &.info:hover ***REMOVED*** td {
+    background-color: darken(@infoBackground, 5%);
+  ***REMOVED***
+***REMOVED***

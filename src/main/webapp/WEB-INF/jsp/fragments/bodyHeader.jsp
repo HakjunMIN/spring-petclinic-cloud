@@ -2,7 +2,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %***REMOVED***
 
 <***REMOVED***url value="/resources/images/banner-graphic.png" var="banner"/***REMOVED***
-<img src="${banner***REMOVED***"/***REMOVED***
+<img src="/resources/images/banner-graphic.png"/***REMOVED***
 
 <div class="navbar" style="width: 601px;"***REMOVED***
     <div class="navbar-inner"***REMOVED***

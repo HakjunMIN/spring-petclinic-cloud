@@ -18,7 +18,6 @@
 		<!-- Spring --***REMOVED***
 		<spring-framework.version***REMOVED***4.1.6.RELEASE</spring-framework.version***REMOVED***
 		<spring-data-jpa.version***REMOVED***1.8.0.RELEASE</spring-data-jpa.version***REMOVED***
-		<spring-data-jdbc.version***REMOVED***1.1.0.RELEASE</spring-data-jdbc.version***REMOVED***
 
 
 		<!-- Java EE / Java SE dependencies --***REMOVED***
@@ -57,6 +56,7 @@
 		<jodatime-jsptags.version***REMOVED***1.1.1</jodatime-jsptags.version***REMOVED***
 		<jodatime.version***REMOVED***2.7</jodatime.version***REMOVED***
 		<jadira-usertype-core.version***REMOVED***3.2.0.GA</jadira-usertype-core.version***REMOVED***
+		<jackson.datatype.joda.version***REMOVED***2.4.5</jackson.datatype.joda.version***REMOVED***
 
 
 		<!-- Web dependencies --***REMOVED***
@@ -125,19 +125,6 @@
 			      <artifactId***REMOVED****</artifactId***REMOVED***
 			    </exclusion***REMOVED***
 			    <!--  because Spring Data usually comes with a slightly older version of Spring --***REMOVED***
-			</exclusions***REMOVED***
-		</dependency***REMOVED***
-
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.data</groupId***REMOVED***
-			<artifactId***REMOVED***spring-data-jdbc-core</artifactId***REMOVED***
-			<version***REMOVED***${spring-data-jdbc.version***REMOVED***</version***REMOVED***
-			<exclusions***REMOVED***
-				<exclusion***REMOVED***
-					<groupId***REMOVED***org.springframework</groupId***REMOVED***
-					<artifactId***REMOVED****</artifactId***REMOVED***
-				</exclusion***REMOVED***
-				<!--  because Spring Data usually comes with a slightly older version of Spring --***REMOVED***
 			</exclusions***REMOVED***
 		</dependency***REMOVED***
 
@@ -227,6 +214,12 @@
 			<artifactId***REMOVED***joda-time</artifactId***REMOVED***
 			<version***REMOVED***${jodatime.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
+		<dependency***REMOVED***
+            <groupId***REMOVED***com.fasterxml.jackson.datatype</groupId***REMOVED***
+            <artifactId***REMOVED***jackson-datatype-joda</artifactId***REMOVED***
+            <version***REMOVED***${jackson.datatype.joda.version***REMOVED***</version***REMOVED***
+        </dependency***REMOVED***
+		
 		<dependency***REMOVED***
 			<groupId***REMOVED***joda-time</groupId***REMOVED***
 			<artifactId***REMOVED***joda-time-hibernate</artifactId***REMOVED***
@@ -422,7 +415,6 @@
 		        <artifactId***REMOVED***cobertura-maven-plugin</artifactId***REMOVED***
 				<version***REMOVED***${cobertura.version***REMOVED***</version***REMOVED***
 		        <configuration***REMOVED***
-		        	<check/***REMOVED***
 		        </configuration***REMOVED***
 		        <executions***REMOVED***
 		          <execution***REMOVED***

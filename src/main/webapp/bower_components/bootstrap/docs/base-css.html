@@ -1,0 +1,2215 @@
+<!DOCTYPE html***REMOVED***
+<html lang="en"***REMOVED***
+  <head***REMOVED***
+    <meta charset="utf-8"***REMOVED***
+    <title***REMOVED***Base · Bootstrap</title***REMOVED***
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"***REMOVED***
+    <meta name="description" content=""***REMOVED***
+    <meta name="author" content=""***REMOVED***
+
+    <!-- Le styles --***REMOVED***
+    <link href="assets/css/bootstrap.css" rel="stylesheet"***REMOVED***
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"***REMOVED***
+    <link href="assets/css/docs.css" rel="stylesheet"***REMOVED***
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet"***REMOVED***
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements --***REMOVED***
+    <!--[if lt IE 9]***REMOVED***
+      <script src="assets/js/html5shiv.js"***REMOVED***</script***REMOVED***
+    <![endif]--***REMOVED***
+
+    <!-- Le fav and touch icons --***REMOVED***
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"***REMOVED***
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"***REMOVED***
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"***REMOVED***
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"***REMOVED***
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png"***REMOVED***
+
+  </head***REMOVED***
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar"***REMOVED***
+
+    <!-- Navbar
+    ================================================== --***REMOVED***
+    <div class="navbar navbar-inverse navbar-fixed-top"***REMOVED***
+      <div class="navbar-inner"***REMOVED***
+        <div class="container"***REMOVED***
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"***REMOVED***
+            <span class="icon-bar"***REMOVED***</span***REMOVED***
+            <span class="icon-bar"***REMOVED***</span***REMOVED***
+            <span class="icon-bar"***REMOVED***</span***REMOVED***
+          </button***REMOVED***
+          <a class="brand" href="./index.html"***REMOVED***Bootstrap</a***REMOVED***
+          <div class="nav-collapse collapse"***REMOVED***
+            <ul class="nav"***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./index.html"***REMOVED***Home</a***REMOVED***
+              </li***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./getting-started.html"***REMOVED***Get started</a***REMOVED***
+              </li***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./scaffolding.html"***REMOVED***Scaffolding</a***REMOVED***
+              </li***REMOVED***
+              <li class="active"***REMOVED***
+                <a href="./base-css.html"***REMOVED***Base CSS</a***REMOVED***
+              </li***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./components.html"***REMOVED***Components</a***REMOVED***
+              </li***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./javascript.html"***REMOVED***JavaScript</a***REMOVED***
+              </li***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./customize.html"***REMOVED***Customize</a***REMOVED***
+              </li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+        </div***REMOVED***
+      </div***REMOVED***
+    </div***REMOVED***
+
+<!-- Subhead
+================================================== --***REMOVED***
+<header class="jumbotron subhead" id="overview"***REMOVED***
+  <div class="container"***REMOVED***
+    <h1***REMOVED***Base CSS</h1***REMOVED***
+    <p class="lead"***REMOVED***Fundamental HTML elements styled and enhanced with extensible classes.</p***REMOVED***
+  </div***REMOVED***
+</header***REMOVED***
+
+
+  <div class="container"***REMOVED***
+
+    <!-- Docs nav
+    ================================================== --***REMOVED***
+    <div class="row"***REMOVED***
+      <div class="span3 bs-docs-sidebar"***REMOVED***
+        <ul class="nav nav-list bs-docs-sidenav"***REMOVED***
+          <li***REMOVED***<a href="#typography"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Typography</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#code"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Code</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#tables"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Tables</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#forms"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Forms</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#buttons"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Buttons</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#images"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Images</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#icons"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Icons by Glyphicons</a***REMOVED***</li***REMOVED***
+        </ul***REMOVED***
+      </div***REMOVED***
+      <div class="span9"***REMOVED***
+
+
+
+        <!-- Typography
+        ================================================== --***REMOVED***
+        <section id="typography"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Typography</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2 id="headings"***REMOVED***Headings</h2***REMOVED***
+          <p***REMOVED***All HTML headings, <code***REMOVED***&lt;h1&gt;</code***REMOVED*** through <code***REMOVED***&lt;h6&gt;</code***REMOVED*** are available.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <h1***REMOVED***h1. Heading 1</h1***REMOVED***
+            <h2***REMOVED***h2. Heading 2</h2***REMOVED***
+            <h3***REMOVED***h3. Heading 3</h3***REMOVED***
+            <h4***REMOVED***h4. Heading 4</h4***REMOVED***
+            <h5***REMOVED***h5. Heading 5</h5***REMOVED***
+            <h6***REMOVED***h6. Heading 6</h6***REMOVED***
+          </div***REMOVED***
+
+          <h2 id="body-copy"***REMOVED***Body copy</h2***REMOVED***
+          <p***REMOVED***Bootstrap's global default <code***REMOVED***font-size</code***REMOVED*** is <strong***REMOVED***14px</strong***REMOVED***, with a <code***REMOVED***line-height</code***REMOVED*** of <strong***REMOVED***20px</strong***REMOVED***. This is applied to the <code***REMOVED***&lt;body&gt;</code***REMOVED*** and all paragraphs. In addition, <code***REMOVED***&lt;p&gt;</code***REMOVED*** (paragraphs) receive a bottom margin of half their line-height (10px by default).</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p***REMOVED***Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p***REMOVED***
+            <p***REMOVED***Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p***REMOVED***
+            <p***REMOVED***Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p***REMOVED***
+          </div***REMOVED***
+          <pre class="prettyprint"***REMOVED***&lt;p&gt;***REMOVED***&lt;/p&gt;</pre***REMOVED***
+
+          <h3***REMOVED***Lead body copy</h3***REMOVED***
+          <p***REMOVED***Make a paragraph stand out by adding <code***REMOVED***.lead</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p class="lead"***REMOVED***Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p***REMOVED***
+          </div***REMOVED***
+          <pre class="prettyprint"***REMOVED***&lt;p class="lead"&gt;***REMOVED***&lt;/p&gt;</pre***REMOVED***
+
+          <h3***REMOVED***Built with Less</h3***REMOVED***
+          <p***REMOVED***The typographic scale is based on two LESS variables in <strong***REMOVED***variables.less</strong***REMOVED***: <code***REMOVED***@baseFontSize</code***REMOVED*** and <code***REMOVED***@baseLineHeight</code***REMOVED***. The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Bootstrap adapts.</p***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2 id="emphasis"***REMOVED***Emphasis</h2***REMOVED***
+          <p***REMOVED***Make use of HTML's default emphasis tags with lightweight styles.</p***REMOVED***
+
+          <h3***REMOVED***<code***REMOVED***&lt;small&gt;</code***REMOVED***</h3***REMOVED***
+          <p***REMOVED***For de-emphasizing inline or blocks of text, <small***REMOVED***use the small tag.</small***REMOVED***</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p***REMOVED***<small***REMOVED***This line of text is meant to be treated as fine print.</small***REMOVED***</p***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint"***REMOVED***
+&lt;p&gt;
+  &lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
+&lt;/p&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Bold</h3***REMOVED***
+          <p***REMOVED***For emphasizing a snippet of text with a heavier font-weight.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p***REMOVED***The following snippet of text is <strong***REMOVED***rendered as bold text</strong***REMOVED***.</p***REMOVED***
+          </div***REMOVED***
+          <pre class="prettyprint"***REMOVED***&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre***REMOVED***
+
+          <h3***REMOVED***Italics</h3***REMOVED***
+          <p***REMOVED***For emphasizing a snippet of text with italics.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p***REMOVED***The following snippet of text is <em***REMOVED***rendered as italicized text</em***REMOVED***.</p***REMOVED***
+          </div***REMOVED***
+          <pre class="prettyprint"***REMOVED***&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre***REMOVED***
+
+          <p***REMOVED***<span class="label label-info"***REMOVED***Heads up!</span***REMOVED*** Feel free to use <code***REMOVED***&lt;b&gt;</code***REMOVED*** and <code***REMOVED***&lt;i&gt;</code***REMOVED*** in HTML5. <code***REMOVED***&lt;b&gt;</code***REMOVED*** is meant to highlight words or phrases without conveying additional importance while <code***REMOVED***&lt;i&gt;</code***REMOVED*** is mostly for voice, technical terms, etc.</p***REMOVED***
+
+          <h3***REMOVED***Alignment classes</h3***REMOVED***
+          <p***REMOVED***Easily realign text to components with text alignment classes.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p class="text-left"***REMOVED***Left aligned text.</p***REMOVED***
+            <p class="text-center"***REMOVED***Center aligned text.</p***REMOVED***
+            <p class="text-right"***REMOVED***Right aligned text.</p***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;p class="text-left"&gt;Left aligned text.&lt;/p&gt;
+&lt;p class="text-center"&gt;Center aligned text.&lt;/p&gt;
+&lt;p class="text-right"&gt;Right aligned text.&lt;/p&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Emphasis classes</h3***REMOVED***
+          <p***REMOVED***Convey meaning through color with a handful of emphasis utility classes.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p class="muted"***REMOVED***Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p***REMOVED***
+            <p class="text-warning"***REMOVED***Etiam porta sem malesuada magna mollis euismod.</p***REMOVED***
+            <p class="text-error"***REMOVED***Donec ullamcorper nulla non metus auctor fringilla.</p***REMOVED***
+            <p class="text-info"***REMOVED***Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p***REMOVED***
+            <p class="text-success"***REMOVED***Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;p class="muted"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.&lt;/p&gt;
+&lt;p class="text-warning"&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
+&lt;p class="text-error"&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
+&lt;p class="text-info"&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.&lt;/p&gt;
+&lt;p class="text-success"&gt;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&lt;/p&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2 id="abbreviations"***REMOVED***Abbreviations</h2***REMOVED***
+          <p***REMOVED***Stylized implementation of HTML's <code***REMOVED***&lt;abbr&gt;</code***REMOVED*** element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code***REMOVED***title</code***REMOVED*** attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p***REMOVED***
+
+          <h3***REMOVED***<code***REMOVED***&lt;abbr&gt;</code***REMOVED***</h3***REMOVED***
+          <p***REMOVED***For expanded text on long hover of an abbreviation, include the <code***REMOVED***title</code***REMOVED*** attribute.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p***REMOVED***An abbreviation of the word attribute is <abbr title="attribute"***REMOVED***attr</abbr***REMOVED***.</p***REMOVED***
+          </div***REMOVED***
+          <pre class="prettyprint"***REMOVED***&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;</pre***REMOVED***
+
+          <h3***REMOVED***<code***REMOVED***&lt;abbr class="initialism"&gt;</code***REMOVED***</h3***REMOVED***
+          <p***REMOVED***Add <code***REMOVED***.initialism</code***REMOVED*** to an abbreviation for a slightly smaller font-size.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p***REMOVED***<abbr title="HyperText Markup Language" class="initialism"***REMOVED***HTML</abbr***REMOVED*** is the best thing since sliced bread.</p***REMOVED***
+          </div***REMOVED***
+          <pre class="prettyprint"***REMOVED***&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2 id="addresses"***REMOVED***Addresses</h2***REMOVED***
+          <p***REMOVED***Present contact information for the nearest ancestor or the entire body of work.</p***REMOVED***
+
+          <h3***REMOVED***<code***REMOVED***&lt;address&gt;</code***REMOVED***</h3***REMOVED***
+          <p***REMOVED***Preserve formatting by ending all lines with <code***REMOVED***&lt;br&gt;</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <address***REMOVED***
+              <strong***REMOVED***Twitter, Inc.</strong***REMOVED***<br***REMOVED***
+              795 Folsom Ave, Suite 600<br***REMOVED***
+              San Francisco, CA 94107<br***REMOVED***
+              <abbr title="Phone"***REMOVED***P:</abbr***REMOVED*** (123) 456-7890
+            </address***REMOVED***
+            <address***REMOVED***
+              <strong***REMOVED***Full Name</strong***REMOVED***<br***REMOVED***
+              <a href="mailto:#"***REMOVED***first.last@example.com</a***REMOVED***
+            </address***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;address&gt;
+  &lt;strong&gt;Twitter, Inc.&lt;/strong&gt;&lt;br&gt;
+  795 Folsom Ave, Suite 600&lt;br&gt;
+  San Francisco, CA 94107&lt;br&gt;
+  &lt;abbr title="Phone"&gt;P:&lt;/abbr&gt; (123) 456-7890
+&lt;/address&gt;
+
+&lt;address&gt;
+  &lt;strong&gt;Full Name&lt;/strong&gt;&lt;br&gt;
+  &lt;a href="mailto:#"&gt;first.last@example.com&lt;/a&gt;
+&lt;/address&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2 id="blockquotes"***REMOVED***Blockquotes</h2***REMOVED***
+          <p***REMOVED***For quoting blocks of content from another source within your document.</p***REMOVED***
+
+          <h3***REMOVED***Default blockquote</h3***REMOVED***
+          <p***REMOVED***Wrap <code***REMOVED***&lt;blockquote&gt;</code***REMOVED*** around any <abbr title="HyperText Markup Language"***REMOVED***HTML</abbr***REMOVED*** as the quote. For straight quotes we recommend a <code***REMOVED***&lt;p&gt;</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <blockquote***REMOVED***
+              <p***REMOVED***Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p***REMOVED***
+            </blockquote***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+&lt;/blockquote&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Blockquote options</h3***REMOVED***
+          <p***REMOVED***Style and content changes for simple variations on a standard blockquote.</p***REMOVED***
+
+          <h4***REMOVED***Naming a source</h4***REMOVED***
+          <p***REMOVED***Add <code***REMOVED***&lt;small&gt;</code***REMOVED*** tag for identifying the source. Wrap the name of the source work in <code***REMOVED***&lt;cite&gt;</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <blockquote***REMOVED***
+              <p***REMOVED***Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p***REMOVED***
+              <small***REMOVED***Someone famous in <cite title="Source Title"***REMOVED***Source Title</cite***REMOVED***</small***REMOVED***
+            </blockquote***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+  &lt;small&gt;Someone famous &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/small&gt;
+&lt;/blockquote&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Alternate displays</h4***REMOVED***
+          <p***REMOVED***Use <code***REMOVED***.pull-right</code***REMOVED*** for a floated, right-aligned blockquote.</p***REMOVED***
+          <div class="bs-docs-example" style="overflow: hidden;"***REMOVED***
+            <blockquote class="pull-right"***REMOVED***
+              <p***REMOVED***Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p***REMOVED***
+              <small***REMOVED***Someone famous in <cite title="Source Title"***REMOVED***Source Title</cite***REMOVED***</small***REMOVED***
+            </blockquote***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;blockquote class="pull-right"&gt;
+  ***REMOVED***
+&lt;/blockquote&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <!-- Lists --***REMOVED***
+          <h2 id="lists"***REMOVED***Lists</h2***REMOVED***
+
+          <h3***REMOVED***Unordered</h3***REMOVED***
+          <p***REMOVED***A list of items in which the order does <em***REMOVED***not</em***REMOVED*** explicitly matter.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul***REMOVED***
+              <li***REMOVED***Lorem ipsum dolor sit amet</li***REMOVED***
+              <li***REMOVED***Consectetur adipiscing elit</li***REMOVED***
+              <li***REMOVED***Integer molestie lorem at massa</li***REMOVED***
+              <li***REMOVED***Facilisis in pretium nisl aliquet</li***REMOVED***
+              <li***REMOVED***Nulla volutpat aliquam velit
+                <ul***REMOVED***
+                  <li***REMOVED***Phasellus iaculis neque</li***REMOVED***
+                  <li***REMOVED***Purus sodales ultricies</li***REMOVED***
+                  <li***REMOVED***Vestibulum laoreet porttitor sem</li***REMOVED***
+                  <li***REMOVED***Ac tristique libero volutpat at</li***REMOVED***
+                </ul***REMOVED***
+              </li***REMOVED***
+              <li***REMOVED***Faucibus porta lacus fringilla vel</li***REMOVED***
+              <li***REMOVED***Aenean sit amet erat nunc</li***REMOVED***
+              <li***REMOVED***Eget porttitor lorem</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul&gt;
+  &lt;li&gt;***REMOVED***&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Ordered</h3***REMOVED***
+          <p***REMOVED***A list of items in which the order <em***REMOVED***does</em***REMOVED*** explicitly matter.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ol***REMOVED***
+              <li***REMOVED***Lorem ipsum dolor sit amet</li***REMOVED***
+              <li***REMOVED***Consectetur adipiscing elit</li***REMOVED***
+              <li***REMOVED***Integer molestie lorem at massa</li***REMOVED***
+              <li***REMOVED***Facilisis in pretium nisl aliquet</li***REMOVED***
+              <li***REMOVED***Nulla volutpat aliquam velit</li***REMOVED***
+              <li***REMOVED***Faucibus porta lacus fringilla vel</li***REMOVED***
+              <li***REMOVED***Aenean sit amet erat nunc</li***REMOVED***
+              <li***REMOVED***Eget porttitor lorem</li***REMOVED***
+            </ol***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ol&gt;
+  &lt;li&gt;***REMOVED***&lt;/li&gt;
+&lt;/ol&gt;
+</pre***REMOVED***
+
+        <h3***REMOVED***Unstyled</h3***REMOVED***
+        <p***REMOVED***Remove the default <code***REMOVED***list-style</code***REMOVED*** and left padding on list items (immediate children only).</p***REMOVED***
+        <div class="bs-docs-example"***REMOVED***
+          <ul class="unstyled"***REMOVED***
+            <li***REMOVED***Lorem ipsum dolor sit amet</li***REMOVED***
+            <li***REMOVED***Consectetur adipiscing elit</li***REMOVED***
+            <li***REMOVED***Integer molestie lorem at massa</li***REMOVED***
+            <li***REMOVED***Facilisis in pretium nisl aliquet</li***REMOVED***
+            <li***REMOVED***Nulla volutpat aliquam velit
+              <ul***REMOVED***
+                <li***REMOVED***Phasellus iaculis neque</li***REMOVED***
+                <li***REMOVED***Purus sodales ultricies</li***REMOVED***
+                <li***REMOVED***Vestibulum laoreet porttitor sem</li***REMOVED***
+                <li***REMOVED***Ac tristique libero volutpat at</li***REMOVED***
+              </ul***REMOVED***
+            </li***REMOVED***
+            <li***REMOVED***Faucibus porta lacus fringilla vel</li***REMOVED***
+            <li***REMOVED***Aenean sit amet erat nunc</li***REMOVED***
+            <li***REMOVED***Eget porttitor lorem</li***REMOVED***
+          </ul***REMOVED***
+        </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="unstyled"&gt;
+  &lt;li&gt;***REMOVED***&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+        <h3***REMOVED***Inline</h3***REMOVED***
+        <p***REMOVED***Place all list items on a single line with <code***REMOVED***inline-block</code***REMOVED*** and some light padding.</p***REMOVED***
+        <div class="bs-docs-example"***REMOVED***
+          <ul class="inline"***REMOVED***
+            <li***REMOVED***Lorem ipsum</li***REMOVED***
+            <li***REMOVED***Phasellus iaculis</li***REMOVED***
+            <li***REMOVED***Nulla volutpat</li***REMOVED***
+          </ul***REMOVED***
+        </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="inline"&gt;
+  &lt;li&gt;***REMOVED***&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+        <h3***REMOVED***Description</h3***REMOVED***
+        <p***REMOVED***A list of terms with their associated descriptions.</p***REMOVED***
+        <div class="bs-docs-example"***REMOVED***
+          <dl***REMOVED***
+            <dt***REMOVED***Description lists</dt***REMOVED***
+            <dd***REMOVED***A description list is perfect for defining terms.</dd***REMOVED***
+            <dt***REMOVED***Euismod</dt***REMOVED***
+            <dd***REMOVED***Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd***REMOVED***
+            <dd***REMOVED***Donec id elit non mi porta gravida at eget metus.</dd***REMOVED***
+            <dt***REMOVED***Malesuada porta</dt***REMOVED***
+            <dd***REMOVED***Etiam porta sem malesuada magna mollis euismod.</dd***REMOVED***
+          </dl***REMOVED***
+        </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;dl&gt;
+  &lt;dt&gt;***REMOVED***&lt;/dt&gt;
+  &lt;dd&gt;***REMOVED***&lt;/dd&gt;
+&lt;/dl&gt;
+</pre***REMOVED***
+
+        <h4***REMOVED***Horizontal description</h4***REMOVED***
+        <p***REMOVED***Make terms and descriptions in <code***REMOVED***&lt;dl&gt;</code***REMOVED*** line up side-by-side.</p***REMOVED***
+        <div class="bs-docs-example"***REMOVED***
+          <dl class="dl-horizontal"***REMOVED***
+            <dt***REMOVED***Description lists</dt***REMOVED***
+            <dd***REMOVED***A description list is perfect for defining terms.</dd***REMOVED***
+            <dt***REMOVED***Euismod</dt***REMOVED***
+            <dd***REMOVED***Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd***REMOVED***
+            <dd***REMOVED***Donec id elit non mi porta gravida at eget metus.</dd***REMOVED***
+            <dt***REMOVED***Malesuada porta</dt***REMOVED***
+            <dd***REMOVED***Etiam porta sem malesuada magna mollis euismod.</dd***REMOVED***
+            <dt***REMOVED***Felis euismod semper eget lacinia</dt***REMOVED***
+            <dd***REMOVED***Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd***REMOVED***
+          </dl***REMOVED***
+        </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;dl class="dl-horizontal"&gt;
+  &lt;dt&gt;***REMOVED***&lt;/dt&gt;
+  &lt;dd&gt;***REMOVED***&lt;/dd&gt;
+&lt;/dl&gt;
+</pre***REMOVED***
+        <p***REMOVED***
+          <span class="label label-info"***REMOVED***Heads up!</span***REMOVED***
+          Horizontal description lists will truncate terms that are too long to fit in the left column fix <code***REMOVED***text-overflow</code***REMOVED***. In narrower viewports, they will change to the default stacked layout.
+        </p***REMOVED***
+      </section***REMOVED***
+
+
+
+        <!-- Code
+        ================================================== --***REMOVED***
+        <section id="code"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Code</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Inline</h2***REMOVED***
+          <p***REMOVED***Wrap inline snippets of code with <code***REMOVED***&lt;code&gt;</code***REMOVED***.</p***REMOVED***
+<div class="bs-docs-example"***REMOVED***
+  For example, <code***REMOVED***&lt;section&gt;</code***REMOVED*** should be wrapped as inline.
+</div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+For example, &lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt; should be wrapped as inline.
+</pre***REMOVED***
+
+          <h2***REMOVED***Basic block</h2***REMOVED***
+          <p***REMOVED***Use <code***REMOVED***&lt;pre&gt;</code***REMOVED*** for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p***REMOVED***
+<div class="bs-docs-example"***REMOVED***
+  <pre***REMOVED***&lt;p&gt;Sample text here***REMOVED***&lt;/p&gt;</pre***REMOVED***
+</div***REMOVED***
+<pre class="prettyprint linenums" style="margin-bottom: 9px;"***REMOVED***
+&lt;pre&gt;
+  &amp;lt;p&amp;gt;Sample text here***REMOVED***&amp;lt;/p&amp;gt;
+&lt;/pre&gt;
+</pre***REMOVED***
+          <p***REMOVED***<span class="label label-info"***REMOVED***Heads up!</span***REMOVED*** Be sure to keep code within <code***REMOVED***&lt;pre&gt;</code***REMOVED*** tags as close to the left as possible; it will render all tabs.</p***REMOVED***
+          <p***REMOVED***You may optionally add the <code***REMOVED***.pre-scrollable</code***REMOVED*** class which will set a max-height of 350px and provide a y-axis scrollbar.</p***REMOVED***
+        </section***REMOVED***
+
+
+
+        <!-- Tables
+        ================================================== --***REMOVED***
+        <section id="tables"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Tables</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Default styles</h2***REMOVED***
+          <p***REMOVED***For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code***REMOVED***.table</code***REMOVED*** to any <code***REMOVED***&lt;table&gt;</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <table class="table"***REMOVED***
+              <thead***REMOVED***
+                <tr***REMOVED***
+                  <th***REMOVED***#</th***REMOVED***
+                  <th***REMOVED***First Name</th***REMOVED***
+                  <th***REMOVED***Last Name</th***REMOVED***
+                  <th***REMOVED***Username</th***REMOVED***
+                </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***1</td***REMOVED***
+                  <td***REMOVED***Mark</td***REMOVED***
+                  <td***REMOVED***Otto</td***REMOVED***
+                  <td***REMOVED***@mdo</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***2</td***REMOVED***
+                  <td***REMOVED***Jacob</td***REMOVED***
+                  <td***REMOVED***Thornton</td***REMOVED***
+                  <td***REMOVED***@fat</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***3</td***REMOVED***
+                  <td***REMOVED***Larry</td***REMOVED***
+                  <td***REMOVED***the Bird</td***REMOVED***
+                  <td***REMOVED***@twitter</td***REMOVED***
+                </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;table class="table"&gt;
+  …
+&lt;/table&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Optional classes</h2***REMOVED***
+          <p***REMOVED***Add any of the following classes to the <code***REMOVED***.table</code***REMOVED*** base class.</p***REMOVED***
+
+          <h3***REMOVED***<code***REMOVED***.table-striped</code***REMOVED***</h3***REMOVED***
+          <p***REMOVED***Adds zebra-striping to any table row within the <code***REMOVED***&lt;tbody&gt;</code***REMOVED*** via the <code***REMOVED***:nth-child</code***REMOVED*** CSS selector (not available in IE7-8).</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <table class="table table-striped"***REMOVED***
+              <thead***REMOVED***
+                <tr***REMOVED***
+                  <th***REMOVED***#</th***REMOVED***
+                  <th***REMOVED***First Name</th***REMOVED***
+                  <th***REMOVED***Last Name</th***REMOVED***
+                  <th***REMOVED***Username</th***REMOVED***
+                </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***1</td***REMOVED***
+                  <td***REMOVED***Mark</td***REMOVED***
+                  <td***REMOVED***Otto</td***REMOVED***
+                  <td***REMOVED***@mdo</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***2</td***REMOVED***
+                  <td***REMOVED***Jacob</td***REMOVED***
+                  <td***REMOVED***Thornton</td***REMOVED***
+                  <td***REMOVED***@fat</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***3</td***REMOVED***
+                  <td***REMOVED***Larry</td***REMOVED***
+                  <td***REMOVED***the Bird</td***REMOVED***
+                  <td***REMOVED***@twitter</td***REMOVED***
+                </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums" style="margin-bottom: 18px;"***REMOVED***
+&lt;table class="table table-striped"&gt;
+  …
+&lt;/table&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***<code***REMOVED***.table-bordered</code***REMOVED***</h3***REMOVED***
+          <p***REMOVED***Add borders and rounded corners to the table.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <table class="table table-bordered"***REMOVED***
+              <thead***REMOVED***
+                <tr***REMOVED***
+                  <th***REMOVED***#</th***REMOVED***
+                  <th***REMOVED***First Name</th***REMOVED***
+                  <th***REMOVED***Last Name</th***REMOVED***
+                  <th***REMOVED***Username</th***REMOVED***
+                </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+                <tr***REMOVED***
+                  <td rowspan="2"***REMOVED***1</td***REMOVED***
+                  <td***REMOVED***Mark</td***REMOVED***
+                  <td***REMOVED***Otto</td***REMOVED***
+                  <td***REMOVED***@mdo</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***Mark</td***REMOVED***
+                  <td***REMOVED***Otto</td***REMOVED***
+                  <td***REMOVED***@TwBootstrap</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***2</td***REMOVED***
+                  <td***REMOVED***Jacob</td***REMOVED***
+                  <td***REMOVED***Thornton</td***REMOVED***
+                  <td***REMOVED***@fat</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***3</td***REMOVED***
+                  <td colspan="2"***REMOVED***Larry the Bird</td***REMOVED***
+                  <td***REMOVED***@twitter</td***REMOVED***
+                </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;table class="table table-bordered"&gt;
+  …
+&lt;/table&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***<code***REMOVED***.table-hover</code***REMOVED***</h3***REMOVED***
+          <p***REMOVED***Enable a hover state on table rows within a <code***REMOVED***&lt;tbody&gt;</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <table class="table table-hover"***REMOVED***
+              <thead***REMOVED***
+                <tr***REMOVED***
+                  <th***REMOVED***#</th***REMOVED***
+                  <th***REMOVED***First Name</th***REMOVED***
+                  <th***REMOVED***Last Name</th***REMOVED***
+                  <th***REMOVED***Username</th***REMOVED***
+                </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***1</td***REMOVED***
+                  <td***REMOVED***Mark</td***REMOVED***
+                  <td***REMOVED***Otto</td***REMOVED***
+                  <td***REMOVED***@mdo</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***2</td***REMOVED***
+                  <td***REMOVED***Jacob</td***REMOVED***
+                  <td***REMOVED***Thornton</td***REMOVED***
+                  <td***REMOVED***@fat</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***3</td***REMOVED***
+                  <td colspan="2"***REMOVED***Larry the Bird</td***REMOVED***
+                  <td***REMOVED***@twitter</td***REMOVED***
+                </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums" style="margin-bottom: 18px;"***REMOVED***
+&lt;table class="table table-hover"&gt;
+  …
+&lt;/table&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***<code***REMOVED***.table-condensed</code***REMOVED***</h3***REMOVED***
+          <p***REMOVED***Makes tables more compact by cutting cell padding in half.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <table class="table table-condensed"***REMOVED***
+              <thead***REMOVED***
+                <tr***REMOVED***
+                  <th***REMOVED***#</th***REMOVED***
+                  <th***REMOVED***First Name</th***REMOVED***
+                  <th***REMOVED***Last Name</th***REMOVED***
+                  <th***REMOVED***Username</th***REMOVED***
+                </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***1</td***REMOVED***
+                  <td***REMOVED***Mark</td***REMOVED***
+                  <td***REMOVED***Otto</td***REMOVED***
+                  <td***REMOVED***@mdo</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***2</td***REMOVED***
+                  <td***REMOVED***Jacob</td***REMOVED***
+                  <td***REMOVED***Thornton</td***REMOVED***
+                  <td***REMOVED***@fat</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                  <td***REMOVED***3</td***REMOVED***
+                  <td colspan="2"***REMOVED***Larry the Bird</td***REMOVED***
+                  <td***REMOVED***@twitter</td***REMOVED***
+                </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums" style="margin-bottom: 18px;"***REMOVED***
+&lt;table class="table table-condensed"&gt;
+  …
+&lt;/table&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Optional row classes</h2***REMOVED***
+          <p***REMOVED***Use contextual classes to color table rows.</p***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <colgroup***REMOVED***
+              <col class="span1"***REMOVED***
+              <col class="span7"***REMOVED***
+            </colgroup***REMOVED***
+            <thead***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***Class</th***REMOVED***
+                <th***REMOVED***Description</th***REMOVED***
+              </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***.success</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***Indicates a successful or positive action.</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***.error</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***Indicates a dangerous or potentially negative action.</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***.warning</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***Indicates a warning that might need attention.</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***.info</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***Used as an alternative to the default styles.</td***REMOVED***
+              </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <table class="table"***REMOVED***
+              <thead***REMOVED***
+                <tr***REMOVED***
+                  <th***REMOVED***#</th***REMOVED***
+                  <th***REMOVED***Product</th***REMOVED***
+                  <th***REMOVED***Payment Taken</th***REMOVED***
+                  <th***REMOVED***Status</th***REMOVED***
+                </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+                <tr class="success"***REMOVED***
+                  <td***REMOVED***1</td***REMOVED***
+                  <td***REMOVED***TB - Monthly</td***REMOVED***
+                  <td***REMOVED***01/04/2012</td***REMOVED***
+                  <td***REMOVED***Approved</td***REMOVED***
+                </tr***REMOVED***
+                <tr class="error"***REMOVED***
+                  <td***REMOVED***2</td***REMOVED***
+                  <td***REMOVED***TB - Monthly</td***REMOVED***
+                  <td***REMOVED***02/04/2012</td***REMOVED***
+                  <td***REMOVED***Declined</td***REMOVED***
+                </tr***REMOVED***
+                <tr class="warning"***REMOVED***
+                  <td***REMOVED***3</td***REMOVED***
+                  <td***REMOVED***TB - Monthly</td***REMOVED***
+                  <td***REMOVED***03/04/2012</td***REMOVED***
+                  <td***REMOVED***Pending</td***REMOVED***
+                </tr***REMOVED***
+                <tr class="info"***REMOVED***
+                  <td***REMOVED***4</td***REMOVED***
+                  <td***REMOVED***TB - Monthly</td***REMOVED***
+                  <td***REMOVED***04/04/2012</td***REMOVED***
+                  <td***REMOVED***Call in to confirm</td***REMOVED***
+                </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+***REMOVED***
+  &lt;tr class="success"&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;TB - Monthly&lt;/td&gt;
+    &lt;td&gt;01/04/2012&lt;/td&gt;
+    &lt;td&gt;Approved&lt;/td&gt;
+  &lt;/tr&gt;
+***REMOVED***
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Supported table markup</h2***REMOVED***
+          <p***REMOVED***List of supported table HTML elements and how they should be used.</p***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <colgroup***REMOVED***
+              <col class="span1"***REMOVED***
+              <col class="span7"***REMOVED***
+            </colgroup***REMOVED***
+            <thead***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***Tag</th***REMOVED***
+                <th***REMOVED***Description</th***REMOVED***
+              </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;table&gt;</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  Wrapping element for displaying data in a tabular format
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;thead&gt;</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  Container element for table header rows (<code***REMOVED***&lt;tr&gt;</code***REMOVED***) to label table columns
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;tbody&gt;</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  Container element for table rows (<code***REMOVED***&lt;tr&gt;</code***REMOVED***) in the body of the table
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;tr&gt;</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  Container element for a set of table cells (<code***REMOVED***&lt;td&gt;</code***REMOVED*** or <code***REMOVED***&lt;th&gt;</code***REMOVED***) that appears on a single row
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;td&gt;</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  Default table cell
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;th&gt;</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  Special table cell for column (or row, depending on scope and placement) labels
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;caption&gt;</code***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  Description or summary of what the table holds, especially useful for screen readers
+                </td***REMOVED***
+              </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;table&gt;
+  &lt;caption&gt;***REMOVED***&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;***REMOVED***&lt;/th&gt;
+      &lt;th&gt;***REMOVED***&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;***REMOVED***&lt;/td&gt;
+      &lt;td&gt;***REMOVED***&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Forms
+        ================================================== --***REMOVED***
+        <section id="forms"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Forms</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Default styles</h2***REMOVED***
+          <p***REMOVED***Individual form controls receive styling, but without any required base class on the <code***REMOVED***&lt;form&gt;</code***REMOVED*** or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <fieldset***REMOVED***
+              <legend***REMOVED***Legend</legend***REMOVED***
+              <label***REMOVED***Label name</label***REMOVED***
+              <input type="text" placeholder="Type something…"***REMOVED***
+              <span class="help-block"***REMOVED***Example block-level help text here.</span***REMOVED***
+              <label class="checkbox"***REMOVED***
+                <input type="checkbox"***REMOVED*** Check me out
+              </label***REMOVED***
+              <button type="submit" class="btn"***REMOVED***Submit</button***REMOVED***
+            </fieldset***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Legend&lt;/legend&gt;
+    &lt;label&gt;Label name&lt;/label&gt;
+    &lt;input type="text" placeholder="Type something…"&gt;
+    &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
+    &lt;label class="checkbox"&gt;
+      &lt;input type="checkbox"&gt; Check me out
+    &lt;/label&gt;
+    &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Optional layouts</h2***REMOVED***
+          <p***REMOVED***Included with Bootstrap are three optional form layouts for common use cases.</p***REMOVED***
+
+          <h3***REMOVED***Search form</h3***REMOVED***
+          <p***REMOVED***Add <code***REMOVED***.form-search</code***REMOVED*** to the form and <code***REMOVED***.search-query</code***REMOVED*** to the <code***REMOVED***&lt;input&gt;</code***REMOVED*** for an extra-rounded text input.</p***REMOVED***
+          <form class="bs-docs-example form-search"***REMOVED***
+            <input type="text" class="input-medium search-query"***REMOVED***
+            <button type="submit" class="btn"***REMOVED***Search</button***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;form class="form-search"&gt;
+  &lt;input type="text" class="input-medium search-query"&gt;
+  &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+&lt;/form&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Inline form</h3***REMOVED***
+          <p***REMOVED***Add <code***REMOVED***.form-inline</code***REMOVED*** for left-aligned labels and inline-block controls for a compact layout.</p***REMOVED***
+          <form class="bs-docs-example form-inline"***REMOVED***
+            <input type="text" class="input-small" placeholder="Email"***REMOVED***
+            <input type="password" class="input-small" placeholder="Password"***REMOVED***
+            <label class="checkbox"***REMOVED***
+              <input type="checkbox"***REMOVED*** Remember me
+            </label***REMOVED***
+            <button type="submit" class="btn"***REMOVED***Sign in</button***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;form class="form-inline"&gt;
+  &lt;input type="text" class="input-small" placeholder="Email"&gt;
+  &lt;input type="password" class="input-small" placeholder="Password"&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt; Remember me
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Horizontal form</h3***REMOVED***
+          <p***REMOVED***Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p***REMOVED***
+          <ul***REMOVED***
+            <li***REMOVED***Add <code***REMOVED***.form-horizontal</code***REMOVED*** to the form</li***REMOVED***
+            <li***REMOVED***Wrap labels and controls in <code***REMOVED***.control-group</code***REMOVED***</li***REMOVED***
+            <li***REMOVED***Add <code***REMOVED***.control-label</code***REMOVED*** to the label</li***REMOVED***
+            <li***REMOVED***Wrap any associated controls in <code***REMOVED***.controls</code***REMOVED*** for proper alignment</li***REMOVED***
+          </ul***REMOVED***
+          <form class="bs-docs-example form-horizontal"***REMOVED***
+            <div class="control-group"***REMOVED***
+              <label class="control-label" for="inputEmail"***REMOVED***Email</label***REMOVED***
+              <div class="controls"***REMOVED***
+                <input type="text" id="inputEmail" placeholder="Email"***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+            <div class="control-group"***REMOVED***
+              <label class="control-label" for="inputPassword"***REMOVED***Password</label***REMOVED***
+              <div class="controls"***REMOVED***
+                <input type="password" id="inputPassword" placeholder="Password"***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+            <div class="control-group"***REMOVED***
+              <div class="controls"***REMOVED***
+                <label class="checkbox"***REMOVED***
+                  <input type="checkbox"***REMOVED*** Remember me
+                </label***REMOVED***
+                <button type="submit" class="btn"***REMOVED***Sign in</button***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;form class="form-horizontal"&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;div class="controls"&gt;
+      &lt;label class="checkbox"&gt;
+        &lt;input type="checkbox"&gt; Remember me
+      &lt;/label&gt;
+      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Supported form controls</h2***REMOVED***
+          <p***REMOVED***Examples of standard form controls supported in an example form layout.</p***REMOVED***
+
+          <h3***REMOVED***Inputs</h3***REMOVED***
+          <p***REMOVED***Most common form control, text-based input fields. Includes support for all HTML5 types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.</p***REMOVED***
+          <p***REMOVED***Requires the use of a specified <code***REMOVED***type</code***REMOVED*** at all times.</p***REMOVED***
+          <form class="bs-docs-example form-inline"***REMOVED***
+            <input type="text" placeholder="Text input"***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;input type="text" placeholder="Text input"&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Textarea</h3***REMOVED***
+          <p***REMOVED***Form control which supports multiple lines of text. Change <code***REMOVED***rows</code***REMOVED*** attribute as necessary.</p***REMOVED***
+          <form class="bs-docs-example form-inline"***REMOVED***
+            <textarea rows="3"***REMOVED***</textarea***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;textarea rows="3"&gt;&lt;/textarea&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Checkboxes and radios</h3***REMOVED***
+          <p***REMOVED***Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p***REMOVED***
+          <h4***REMOVED***Default (stacked)</h4***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <label class="checkbox"***REMOVED***
+              <input type="checkbox" value=""***REMOVED***
+              Option one is this and that&mdash;be sure to include why it's great
+            </label***REMOVED***
+            <br***REMOVED***
+            <label class="radio"***REMOVED***
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked***REMOVED***
+              Option one is this and that&mdash;be sure to include why it's great
+            </label***REMOVED***
+            <label class="radio"***REMOVED***
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"***REMOVED***
+              Option two can be something else and selecting it will deselect option one
+            </label***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" value=""&gt;
+  Option one is this and that&mdash;be sure to include why it's great
+&lt;/label&gt;
+
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+  Option one is this and that&mdash;be sure to include why it's great
+&lt;/label&gt;
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+  Option two can be something else and selecting it will deselect option one
+&lt;/label&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Inline checkboxes</h4***REMOVED***
+          <p***REMOVED***Add the <code***REMOVED***.inline</code***REMOVED*** class to a series of checkboxes or radios for controls appear on the same line.</p***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <label class="checkbox inline"***REMOVED***
+              <input type="checkbox" id="inlineCheckbox1" value="option1"***REMOVED*** 1
+            </label***REMOVED***
+            <label class="checkbox inline"***REMOVED***
+              <input type="checkbox" id="inlineCheckbox2" value="option2"***REMOVED*** 2
+            </label***REMOVED***
+            <label class="checkbox inline"***REMOVED***
+              <input type="checkbox" id="inlineCheckbox3" value="option3"***REMOVED*** 3
+            </label***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt; 3
+&lt;/label&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Selects</h3***REMOVED***
+          <p***REMOVED***Use the default option or specify a <code***REMOVED***multiple="multiple"</code***REMOVED*** to show multiple options at once.</p***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <select***REMOVED***
+              <option***REMOVED***1</option***REMOVED***
+              <option***REMOVED***2</option***REMOVED***
+              <option***REMOVED***3</option***REMOVED***
+              <option***REMOVED***4</option***REMOVED***
+              <option***REMOVED***5</option***REMOVED***
+            </select***REMOVED***
+            <br***REMOVED***
+            <select multiple="multiple"***REMOVED***
+              <option***REMOVED***1</option***REMOVED***
+              <option***REMOVED***2</option***REMOVED***
+              <option***REMOVED***3</option***REMOVED***
+              <option***REMOVED***4</option***REMOVED***
+              <option***REMOVED***5</option***REMOVED***
+            </select***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;select&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select multiple="multiple"&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Extending form controls</h2***REMOVED***
+          <p***REMOVED***Adding on top of existing browser controls, Bootstrap includes other useful form components.</p***REMOVED***
+
+          <h3***REMOVED***Prepended and appended inputs</h3***REMOVED***
+          <p***REMOVED***Add text or buttons before or after any text-based input. Do note that <code***REMOVED***select</code***REMOVED*** elements are not supported here.</p***REMOVED***
+
+          <h4***REMOVED***Default options</h4***REMOVED***
+          <p***REMOVED***Wrap an <code***REMOVED***.add-on</code***REMOVED*** and an <code***REMOVED***input</code***REMOVED*** with one of two classes to prepend or append text to an input.</p***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <div class="input-prepend"***REMOVED***
+              <span class="add-on"***REMOVED***@</span***REMOVED***
+              <input class="span2" id="prependedInput" type="text" placeholder="Username"***REMOVED***
+            </div***REMOVED***
+            <br***REMOVED***
+            <div class="input-append"***REMOVED***
+              <input class="span2" id="appendedInput" type="text"***REMOVED***
+              <span class="add-on"***REMOVED***.00</span***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="input-prepend"&gt;
+  &lt;span class="add-on"&gt;@&lt;/span&gt;
+  &lt;input class="span2" id="prependedInput" type="text" placeholder="Username"&gt;
+&lt;/div&gt;
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInput" type="text"&gt;
+  &lt;span class="add-on"&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Combined</h4***REMOVED***
+          <p***REMOVED***Use both classes and two instances of <code***REMOVED***.add-on</code***REMOVED*** to prepend and append an input.</p***REMOVED***
+          <form class="bs-docs-example form-inline"***REMOVED***
+            <div class="input-prepend input-append"***REMOVED***
+              <span class="add-on"***REMOVED***$</span***REMOVED***
+              <input class="span2" id="appendedPrependedInput" type="text"***REMOVED***
+              <span class="add-on"***REMOVED***.00</span***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="input-prepend input-append"&gt;
+  &lt;span class="add-on"&gt;$&lt;/span&gt;
+  &lt;input class="span2" id="appendedPrependedInput" type="text"&gt;
+  &lt;span class="add-on"&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Buttons instead of text</h4***REMOVED***
+          <p***REMOVED***Instead of a <code***REMOVED***&lt;span&gt;</code***REMOVED*** with text, use a <code***REMOVED***.btn</code***REMOVED*** to attach a button (or two) to an input.</p***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <div class="input-append"***REMOVED***
+              <input class="span2" id="appendedInputButton" type="text"***REMOVED***
+              <button class="btn" type="button"***REMOVED***Go!</button***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInputButton" type="text"&gt;
+  &lt;button class="btn" type="button"&gt;Go!&lt;/button&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <div class="input-append"***REMOVED***
+              <input class="span2" id="appendedInputButtons" type="text"***REMOVED***
+              <button class="btn" type="button"***REMOVED***Search</button***REMOVED***
+              <button class="btn" type="button"***REMOVED***Options</button***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInputButtons" type="text"&gt;
+  &lt;button class="btn" type="button"&gt;Search&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;Options&lt;/button&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Button dropdowns</h4***REMOVED***
+          <p***REMOVED***</p***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <div class="input-append"***REMOVED***
+              <input class="span2" id="appendedDropdownButton" type="text"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn dropdown-toggle" data-toggle="dropdown"***REMOVED***Action <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+            </div***REMOVED***<!-- /input-append --***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedDropdownButton" type="text"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ***REMOVED***
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <form class="bs-docs-example"***REMOVED***
+            <div class="input-prepend"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn dropdown-toggle" data-toggle="dropdown"***REMOVED***Action <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <input class="span2" id="prependedDropdownButton" type="text"***REMOVED***
+            </div***REMOVED***<!-- /input-prepend --***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="input-prepend"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ***REMOVED***
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;input class="span2" id="prependedDropdownButton" type="text"&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <form class="bs-docs-example"***REMOVED***
+            <div class="input-prepend input-append"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn dropdown-toggle" data-toggle="dropdown"***REMOVED***Action <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <input class="span2" id="appendedPrependedDropdownButton" type="text"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn dropdown-toggle" data-toggle="dropdown"***REMOVED***Action <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+            </div***REMOVED***<!-- /input-prepend input-append --***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="input-prepend input-append"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ***REMOVED***
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;input class="span2" id="appendedPrependedDropdownButton" type="text"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ***REMOVED***
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Segmented dropdown groups</h4***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <div class="input-prepend"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn" tabindex="-1"***REMOVED***Action</button***REMOVED***
+                <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1"***REMOVED***
+                  <span class="caret"***REMOVED***</span***REMOVED***
+                </button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***
+              <input type="text"***REMOVED***
+            </div***REMOVED***
+            <div class="input-append"***REMOVED***
+              <input type="text"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn" tabindex="-1"***REMOVED***Action</button***REMOVED***
+                <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1"***REMOVED***
+                  <span class="caret"***REMOVED***</span***REMOVED***
+                </button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;form&gt;
+  &lt;div class="input-prepend"&gt;
+    &lt;div class="btn-group"&gt;***REMOVED***&lt;/div&gt;
+    &lt;input type="text"&gt;
+  &lt;/div&gt;
+  &lt;div class="input-append"&gt;
+    &lt;input type="text"&gt;
+    &lt;div class="btn-group"&gt;***REMOVED***&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Search form</h4***REMOVED***
+          <form class="bs-docs-example form-search"***REMOVED***
+            <div class="input-append"***REMOVED***
+              <input type="text" class="span2 search-query"***REMOVED***
+              <button type="submit" class="btn"***REMOVED***Search</button***REMOVED***
+            </div***REMOVED***
+            <div class="input-prepend"***REMOVED***
+              <button type="submit" class="btn"***REMOVED***Search</button***REMOVED***
+              <input type="text" class="span2 search-query"***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;form class="form-search"&gt;
+  &lt;div class="input-append"&gt;
+    &lt;input type="text" class="span2 search-query"&gt;
+    &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="input-prepend"&gt;
+    &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+    &lt;input type="text" class="span2 search-query"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Control sizing</h3***REMOVED***
+          <p***REMOVED***Use relative sizing classes like <code***REMOVED***.input-large</code***REMOVED*** or match your inputs to the grid column sizes using <code***REMOVED***.span*</code***REMOVED*** classes.</p***REMOVED***
+
+          <h4***REMOVED***Block level inputs</h4***REMOVED***
+          <p***REMOVED***Make any <code***REMOVED***&lt;input&gt;</code***REMOVED*** or <code***REMOVED***&lt;textarea&gt;</code***REMOVED*** element behave like a block level element.</p***REMOVED***
+          <form class="bs-docs-example" style="padding-bottom: 15px;"***REMOVED***
+            <div class="controls"***REMOVED***
+              <input class="input-block-level" type="text" placeholder=".input-block-level"***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;input class="input-block-level" type="text" placeholder=".input-block-level"&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Relative sizing</h4***REMOVED***
+          <form class="bs-docs-example" style="padding-bottom: 15px;"***REMOVED***
+            <div class="controls docs-input-sizes"***REMOVED***
+              <input class="input-mini" type="text" placeholder=".input-mini"***REMOVED***
+              <input class="input-small" type="text" placeholder=".input-small"***REMOVED***
+              <input class="input-medium" type="text" placeholder=".input-medium"***REMOVED***
+              <input class="input-large" type="text" placeholder=".input-large"***REMOVED***
+              <input class="input-xlarge" type="text" placeholder=".input-xlarge"***REMOVED***
+              <input class="input-xxlarge" type="text" placeholder=".input-xxlarge"***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;input class="input-mini" type="text" placeholder=".input-mini"&gt;
+&lt;input class="input-small" type="text" placeholder=".input-small"&gt;
+&lt;input class="input-medium" type="text" placeholder=".input-medium"&gt;
+&lt;input class="input-large" type="text" placeholder=".input-large"&gt;
+&lt;input class="input-xlarge" type="text" placeholder=".input-xlarge"&gt;
+&lt;input class="input-xxlarge" type="text" placeholder=".input-xxlarge"&gt;
+</pre***REMOVED***
+          <p***REMOVED***
+            <span class="label label-info"***REMOVED***Heads up!</span***REMOVED*** In future versions, we'll be altering the use of these relative input classes to match our button sizes. For example, <code***REMOVED***.input-large</code***REMOVED*** will increase the padding and font-size of an input.
+          </p***REMOVED***
+
+          <h4***REMOVED***Grid sizing</h4***REMOVED***
+          <p***REMOVED***Use <code***REMOVED***.span1</code***REMOVED*** to <code***REMOVED***.span12</code***REMOVED*** for inputs that match the same sizes of the grid columns.</p***REMOVED***
+          <form class="bs-docs-example" style="padding-bottom: 15px;"***REMOVED***
+            <div class="controls docs-input-sizes"***REMOVED***
+              <input class="span1" type="text" placeholder=".span1"***REMOVED***
+              <input class="span2" type="text" placeholder=".span2"***REMOVED***
+              <input class="span3" type="text" placeholder=".span3"***REMOVED***
+              <select class="span1"***REMOVED***
+                <option***REMOVED***1</option***REMOVED***
+                <option***REMOVED***2</option***REMOVED***
+                <option***REMOVED***3</option***REMOVED***
+                <option***REMOVED***4</option***REMOVED***
+                <option***REMOVED***5</option***REMOVED***
+              </select***REMOVED***
+              <select class="span2"***REMOVED***
+                <option***REMOVED***1</option***REMOVED***
+                <option***REMOVED***2</option***REMOVED***
+                <option***REMOVED***3</option***REMOVED***
+                <option***REMOVED***4</option***REMOVED***
+                <option***REMOVED***5</option***REMOVED***
+              </select***REMOVED***
+              <select class="span3"***REMOVED***
+                <option***REMOVED***1</option***REMOVED***
+                <option***REMOVED***2</option***REMOVED***
+                <option***REMOVED***3</option***REMOVED***
+                <option***REMOVED***4</option***REMOVED***
+                <option***REMOVED***5</option***REMOVED***
+              </select***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;input class="span1" type="text" placeholder=".span1"&gt;
+&lt;input class="span2" type="text" placeholder=".span2"&gt;
+&lt;input class="span3" type="text" placeholder=".span3"&gt;
+&lt;select class="span1"&gt;
+  ***REMOVED***
+&lt;/select&gt;
+&lt;select class="span2"&gt;
+  ***REMOVED***
+&lt;/select&gt;
+&lt;select class="span3"&gt;
+  ***REMOVED***
+&lt;/select&gt;
+</pre***REMOVED***
+
+          <p***REMOVED***For multiple grid inputs per line, <strong***REMOVED***use the <code***REMOVED***.controls-row</code***REMOVED*** modifier class for proper spacing</strong***REMOVED***. It floats the inputs to collapse white-space, sets the proper margins, and clears the float.</p***REMOVED***
+          <form class="bs-docs-example" style="padding-bottom: 15px;"***REMOVED***
+            <div class="controls"***REMOVED***
+              <input class="span5" type="text" placeholder=".span5"***REMOVED***
+            </div***REMOVED***
+            <div class="controls controls-row"***REMOVED***
+              <input class="span4" type="text" placeholder=".span4"***REMOVED***
+              <input class="span1" type="text" placeholder=".span1"***REMOVED***
+            </div***REMOVED***
+            <div class="controls controls-row"***REMOVED***
+              <input class="span3" type="text" placeholder=".span3"***REMOVED***
+              <input class="span2" type="text" placeholder=".span2"***REMOVED***
+            </div***REMOVED***
+            <div class="controls controls-row"***REMOVED***
+              <input class="span2" type="text" placeholder=".span2"***REMOVED***
+              <input class="span3" type="text" placeholder=".span3"***REMOVED***
+            </div***REMOVED***
+            <div class="controls controls-row"***REMOVED***
+              <input class="span1" type="text" placeholder=".span1"***REMOVED***
+              <input class="span4" type="text" placeholder=".span4"***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="controls"&gt;
+  &lt;input class="span5" type="text" placeholder=".span5"&gt;
+&lt;/div&gt;
+&lt;div class="controls controls-row"&gt;
+  &lt;input class="span4" type="text" placeholder=".span4"&gt;
+  &lt;input class="span1" type="text" placeholder=".span1"&gt;
+&lt;/div&gt;
+***REMOVED***
+</pre***REMOVED***
+
+          <h3***REMOVED***Uneditable inputs</h3***REMOVED***
+          <p***REMOVED***Present data in a form that's not editable without using actual form markup.</p***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <span class="input-xlarge uneditable-input"***REMOVED***Some value here</span***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;span class="input-xlarge uneditable-input"&gt;Some value here&lt;/span&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Form actions</h3***REMOVED***
+          <p***REMOVED***End a form with a group of actions (buttons). When placed within a <code***REMOVED***.form-actions</code***REMOVED***, the buttons will automatically indent to line up with the form controls.</p***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <div class="form-actions"***REMOVED***
+              <button type="submit" class="btn btn-primary"***REMOVED***Save changes</button***REMOVED***
+              <button type="button" class="btn"***REMOVED***Cancel</button***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="form-actions"&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Help text</h3***REMOVED***
+          <p***REMOVED***Inline and block level support for help text that appears around form controls.</p***REMOVED***
+          <h4***REMOVED***Inline help</h4***REMOVED***
+          <form class="bs-docs-example form-inline"***REMOVED***
+            <input type="text"***REMOVED*** <span class="help-inline"***REMOVED***Inline help text</span***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;input type="text"&gt;&lt;span class="help-inline"&gt;Inline help text&lt;/span&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Block help</h4***REMOVED***
+          <form class="bs-docs-example form-inline"***REMOVED***
+            <input type="text"***REMOVED***
+            <span class="help-block"***REMOVED***A longer block of help text that breaks onto a new line and may extend beyond one line.</span***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;input type="text"&gt;&lt;span class="help-block"&gt;A longer block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Form control states</h2***REMOVED***
+          <p***REMOVED***Provide feedback to users or visitors with basic feedback states on form controls and labels.</p***REMOVED***
+
+          <h3***REMOVED***Input focus</h3***REMOVED***
+          <p***REMOVED***We remove the default <code***REMOVED***outline</code***REMOVED*** styles on some form controls and apply a <code***REMOVED***box-shadow</code***REMOVED*** in its place for <code***REMOVED***:focus</code***REMOVED***.</p***REMOVED***
+          <form class="bs-docs-example form-inline"***REMOVED***
+            <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused***REMOVED***"***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;input class="input-xlarge" id="focusedInput" type="text" value="This is focused***REMOVED***"&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Invalid inputs</h3***REMOVED***
+          <p***REMOVED***Style inputs via default browser functionality with <code***REMOVED***:invalid</code***REMOVED***. Specify a <code***REMOVED***type</code***REMOVED***, add the <code***REMOVED***required</code***REMOVED*** attribute if the field is not optional, and (if applicable) specify a <code***REMOVED***pattern</code***REMOVED***.</p***REMOVED***
+          <p***REMOVED***This is not available in versions of Internet Explorer 7-9 due to lack of support for CSS pseudo selectors.</p***REMOVED***
+          <form class="bs-docs-example form-inline"***REMOVED***
+            <input class="span3" type="email" placeholder="test@example.com" required***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;input class="span3" type="email" required&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Disabled inputs</h3***REMOVED***
+          <p***REMOVED***Add the <code***REMOVED***disabled</code***REMOVED*** attribute on an input to prevent user input and trigger a slightly different look.</p***REMOVED***
+          <form class="bs-docs-example form-inline"***REMOVED***
+            <input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here…" disabled***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here***REMOVED***" disabled&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Validation states</h3***REMOVED***
+          <p***REMOVED***Bootstrap includes validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding <code***REMOVED***.control-group</code***REMOVED***.</p***REMOVED***
+
+          <form class="bs-docs-example form-horizontal"***REMOVED***
+            <div class="control-group warning"***REMOVED***
+              <label class="control-label" for="inputWarning"***REMOVED***Input with warning</label***REMOVED***
+              <div class="controls"***REMOVED***
+                <input type="text" id="inputWarning"***REMOVED***
+                <span class="help-inline"***REMOVED***Something may have gone wrong</span***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+            <div class="control-group error"***REMOVED***
+              <label class="control-label" for="inputError"***REMOVED***Input with error</label***REMOVED***
+              <div class="controls"***REMOVED***
+                <input type="text" id="inputError"***REMOVED***
+                <span class="help-inline"***REMOVED***Please correct the error</span***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+            <div class="control-group info"***REMOVED***
+              <label class="control-label" for="inputInfo"***REMOVED***Input with info</label***REMOVED***
+              <div class="controls"***REMOVED***
+                <input type="text" id="inputInfo"***REMOVED***
+                <span class="help-inline"***REMOVED***Username is taken</span***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+            <div class="control-group success"***REMOVED***
+              <label class="control-label" for="inputSuccess"***REMOVED***Input with success</label***REMOVED***
+              <div class="controls"***REMOVED***
+                <input type="text" id="inputSuccess"***REMOVED***
+                <span class="help-inline"***REMOVED***Woohoo!</span***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="control-group warning"&gt;
+  &lt;label class="control-label" for="inputWarning"&gt;Input with warning&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputWarning"&gt;
+    &lt;span class="help-inline"&gt;Something may have gone wrong&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="control-group error"&gt;
+  &lt;label class="control-label" for="inputError"&gt;Input with error&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputError"&gt;
+    &lt;span class="help-inline"&gt;Please correct the error&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="control-group info"&gt;
+  &lt;label class="control-label" for="inputInfo"&gt;Input with info&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputInfo"&gt;
+    &lt;span class="help-inline"&gt;Username is already taken&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="control-group success"&gt;
+  &lt;label class="control-label" for="inputSuccess"&gt;Input with success&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputSuccess"&gt;
+    &lt;span class="help-inline"&gt;Woohoo!&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Buttons
+        ================================================== --***REMOVED***
+        <section id="buttons"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Buttons</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Default buttons</h2***REMOVED***
+          <p***REMOVED***Button styles can be applied to anything with the <code***REMOVED***.btn</code***REMOVED*** class applied. However, typically you'll want to apply these to only <code***REMOVED***&lt;a&gt;</code***REMOVED*** and <code***REMOVED***&lt;button&gt;</code***REMOVED*** elements for the best rendering.</p***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***Button</th***REMOVED***
+                <th***REMOVED***class=""</th***REMOVED***
+                <th***REMOVED***Description</th***REMOVED***
+              </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***<button type="button" class="btn"***REMOVED***Default</button***REMOVED***</td***REMOVED***
+                <td***REMOVED***<code***REMOVED***btn</code***REMOVED***</td***REMOVED***
+                <td***REMOVED***Standard gray button with gradient</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***<button type="button" class="btn btn-primary"***REMOVED***Primary</button***REMOVED***</td***REMOVED***
+                <td***REMOVED***<code***REMOVED***btn btn-primary</code***REMOVED***</td***REMOVED***
+                <td***REMOVED***Provides extra visual weight and identifies the primary action in a set of buttons</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***<button type="button" class="btn btn-info"***REMOVED***Info</button***REMOVED***</td***REMOVED***
+                <td***REMOVED***<code***REMOVED***btn btn-info</code***REMOVED***</td***REMOVED***
+                <td***REMOVED***Used as an alternative to the default styles</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***<button type="button" class="btn btn-success"***REMOVED***Success</button***REMOVED***</td***REMOVED***
+                <td***REMOVED***<code***REMOVED***btn btn-success</code***REMOVED***</td***REMOVED***
+                <td***REMOVED***Indicates a successful or positive action</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***<button type="button" class="btn btn-warning"***REMOVED***Warning</button***REMOVED***</td***REMOVED***
+                <td***REMOVED***<code***REMOVED***btn btn-warning</code***REMOVED***</td***REMOVED***
+                <td***REMOVED***Indicates caution should be taken with this action</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***<button type="button" class="btn btn-danger"***REMOVED***Danger</button***REMOVED***</td***REMOVED***
+                <td***REMOVED***<code***REMOVED***btn btn-danger</code***REMOVED***</td***REMOVED***
+                <td***REMOVED***Indicates a dangerous or potentially negative action</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***<button type="button" class="btn btn-inverse"***REMOVED***Inverse</button***REMOVED***</td***REMOVED***
+                <td***REMOVED***<code***REMOVED***btn btn-inverse</code***REMOVED***</td***REMOVED***
+                <td***REMOVED***Alternate dark gray button, not tied to a semantic action or use</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***<button type="button" class="btn btn-link"***REMOVED***Link</button***REMOVED***</td***REMOVED***
+                <td***REMOVED***<code***REMOVED***btn btn-link</code***REMOVED***</td***REMOVED***
+                <td***REMOVED***Deemphasize a button by making it look like a link while maintaining button behavior</td***REMOVED***
+              </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+
+          <h4***REMOVED***Cross browser compatibility</h4***REMOVED***
+          <p***REMOVED***IE9 doesn't crop background gradients on rounded corners, so we remove it. Related, IE9 jankifies disabled <code***REMOVED***button</code***REMOVED*** elements, rendering text gray with a nasty text-shadow that we cannot fix.</p***REMOVED***
+
+
+          <h2***REMOVED***Button sizes</h2***REMOVED***
+          <p***REMOVED***Fancy larger or smaller buttons? Add <code***REMOVED***.btn-large</code***REMOVED***, <code***REMOVED***.btn-small</code***REMOVED***, or <code***REMOVED***.btn-mini</code***REMOVED*** for additional sizes.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p***REMOVED***
+              <button type="button" class="btn btn-large btn-primary"***REMOVED***Large button</button***REMOVED***
+              <button type="button" class="btn btn-large"***REMOVED***Large button</button***REMOVED***
+            </p***REMOVED***
+            <p***REMOVED***
+              <button type="button" class="btn btn-primary"***REMOVED***Default button</button***REMOVED***
+              <button type="button" class="btn"***REMOVED***Default button</button***REMOVED***
+            </p***REMOVED***
+            <p***REMOVED***
+              <button type="button" class="btn btn-small btn-primary"***REMOVED***Small button</button***REMOVED***
+              <button type="button" class="btn btn-small"***REMOVED***Small button</button***REMOVED***
+            </p***REMOVED***
+            <p***REMOVED***
+              <button type="button" class="btn btn-mini btn-primary"***REMOVED***Mini button</button***REMOVED***
+              <button type="button" class="btn btn-mini"***REMOVED***Mini button</button***REMOVED***
+            </p***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;p&gt;
+  &lt;button class="btn btn-large btn-primary" type="button"&gt;Large button&lt;/button&gt;
+  &lt;button class="btn btn-large" type="button"&gt;Large button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-primary" type="button"&gt;Default button&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;Default button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-small btn-primary" type="button"&gt;Small button&lt;/button&gt;
+  &lt;button class="btn btn-small" type="button"&gt;Small button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-mini btn-primary" type="button"&gt;Mini button&lt;/button&gt;
+  &lt;button class="btn btn-mini" type="button"&gt;Mini button&lt;/button&gt;
+&lt;/p&gt;
+</pre***REMOVED***
+          <p***REMOVED***Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code***REMOVED***.btn-block</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="well" style="max-width: 400px; margin: 0 auto 10px;"***REMOVED***
+              <button type="button" class="btn btn-large btn-block btn-primary"***REMOVED***Block level button</button***REMOVED***
+              <button type="button" class="btn btn-large btn-block"***REMOVED***Block level button</button***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;button class="btn btn-large btn-block btn-primary" type="button"&gt;Block level button&lt;/button&gt;
+&lt;button class="btn btn-large btn-block" type="button"&gt;Block level button&lt;/button&gt;
+</pre***REMOVED***
+
+
+          <h2***REMOVED***Disabled state</h2***REMOVED***
+          <p***REMOVED***Make buttons look unclickable by fading them back 50%.</p***REMOVED***
+
+          <h3***REMOVED***Anchor element</h3***REMOVED***
+          <p***REMOVED***Add the <code***REMOVED***.disabled</code***REMOVED*** class to <code***REMOVED***&lt;a&gt;</code***REMOVED*** buttons.</p***REMOVED***
+          <p class="bs-docs-example"***REMOVED***
+            <a href="#" class="btn btn-large btn-primary disabled"***REMOVED***Primary link</a***REMOVED***
+            <a href="#" class="btn btn-large disabled"***REMOVED***Link</a***REMOVED***
+          </p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;a href="#" class="btn btn-large btn-primary disabled"&gt;Primary link&lt;/a&gt;
+&lt;a href="#" class="btn btn-large disabled"&gt;Link&lt;/a&gt;
+</pre***REMOVED***
+          <p***REMOVED***
+            <span class="label label-info"***REMOVED***Heads up!</span***REMOVED***
+            We use <code***REMOVED***.disabled</code***REMOVED*** as a utility class here, similar to the common <code***REMOVED***.active</code***REMOVED*** class, so no prefix is required. Also, this class is only for aesthetic; you must use custom JavaScript to disable links here.
+          </p***REMOVED***
+
+          <h3***REMOVED***Button element</h3***REMOVED***
+          <p***REMOVED***Add the <code***REMOVED***disabled</code***REMOVED*** attribute to <code***REMOVED***&lt;button&gt;</code***REMOVED*** buttons.</p***REMOVED***
+          <p class="bs-docs-example"***REMOVED***
+            <button type="button" class="btn btn-large btn-primary disabled" disabled="disabled"***REMOVED***Primary button</button***REMOVED***
+            <button type="button" class="btn btn-large" disabled***REMOVED***Button</button***REMOVED***
+          </p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;button type="button" class="btn btn-large btn-primary disabled" disabled="disabled"&gt;Primary button&lt;/button&gt;
+&lt;button type="button" class="btn btn-large" disabled&gt;Button&lt;/button&gt;
+</pre***REMOVED***
+
+
+          <h2***REMOVED***One class, multiple tags</h2***REMOVED***
+          <p***REMOVED***Use the <code***REMOVED***.btn</code***REMOVED*** class on an <code***REMOVED***&lt;a&gt;</code***REMOVED***, <code***REMOVED***&lt;button&gt;</code***REMOVED***, or <code***REMOVED***&lt;input&gt;</code***REMOVED*** element.</p***REMOVED***
+          <form class="bs-docs-example"***REMOVED***
+            <a class="btn" href=""***REMOVED***Link</a***REMOVED***
+            <button class="btn" type="submit"***REMOVED***Button</button***REMOVED***
+            <input class="btn" type="button" value="Input"***REMOVED***
+            <input class="btn" type="submit" value="Submit"***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;a class="btn" href=""&gt;Link&lt;/a&gt;
+&lt;button class="btn" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn" type="button" value="Input"&gt;
+&lt;input class="btn" type="submit" value="Submit"&gt;
+</pre***REMOVED***
+          <p***REMOVED***As a best practice, try to match the element for your context to ensure matching cross-browser rendering. If you have an <code***REMOVED***input</code***REMOVED***, use an <code***REMOVED***&lt;input type="submit"&gt;</code***REMOVED*** for your button.</p***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Images
+        ================================================== --***REMOVED***
+        <section id="images"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Images</h1***REMOVED***
+          </div***REMOVED***
+
+          <p***REMOVED***Add classes to an <code***REMOVED***&lt;img&gt;</code***REMOVED*** element to easily style images in any project.</p***REMOVED***
+          <div class="bs-docs-example bs-docs-example-images"***REMOVED***
+            <img data-src="holder.js/140x140" class="img-rounded"***REMOVED***
+            <img data-src="holder.js/140x140" class="img-circle"***REMOVED***
+            <img data-src="holder.js/140x140" class="img-polaroid"***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;img src="***REMOVED***" class="img-rounded"&gt;
+&lt;img src="***REMOVED***" class="img-circle"&gt;
+&lt;img src="***REMOVED***" class="img-polaroid"&gt;
+</pre***REMOVED***
+          <p***REMOVED***<span class="label label-info"***REMOVED***Heads up!</span***REMOVED*** <code***REMOVED***.img-rounded</code***REMOVED*** and <code***REMOVED***.img-circle</code***REMOVED*** do not work in IE7-8 due to lack of <code***REMOVED***border-radius</code***REMOVED*** support.</p***REMOVED***
+
+
+        </section***REMOVED***
+
+
+
+        <!-- Icons
+        ================================================== --***REMOVED***
+        <section id="icons"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Icons <small***REMOVED***by <a href="http://glyphicons.com" target="_blank"***REMOVED***Glyphicons</a***REMOVED***</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Icon glyphs</h2***REMOVED***
+          <p***REMOVED***140 icons in sprite form, available in dark gray (default) and white, provided by <a href="http://glyphicons.com" target="_blank"***REMOVED***Glyphicons</a***REMOVED***.</p***REMOVED***
+          <ul class="the-icons clearfix"***REMOVED***
+            <li***REMOVED***<i class="icon-glass"***REMOVED***</i***REMOVED*** icon-glass</li***REMOVED***
+            <li***REMOVED***<i class="icon-music"***REMOVED***</i***REMOVED*** icon-music</li***REMOVED***
+            <li***REMOVED***<i class="icon-search"***REMOVED***</i***REMOVED*** icon-search</li***REMOVED***
+            <li***REMOVED***<i class="icon-envelope"***REMOVED***</i***REMOVED*** icon-envelope</li***REMOVED***
+            <li***REMOVED***<i class="icon-heart"***REMOVED***</i***REMOVED*** icon-heart</li***REMOVED***
+            <li***REMOVED***<i class="icon-star"***REMOVED***</i***REMOVED*** icon-star</li***REMOVED***
+            <li***REMOVED***<i class="icon-star-empty"***REMOVED***</i***REMOVED*** icon-star-empty</li***REMOVED***
+            <li***REMOVED***<i class="icon-user"***REMOVED***</i***REMOVED*** icon-user</li***REMOVED***
+            <li***REMOVED***<i class="icon-film"***REMOVED***</i***REMOVED*** icon-film</li***REMOVED***
+            <li***REMOVED***<i class="icon-th-large"***REMOVED***</i***REMOVED*** icon-th-large</li***REMOVED***
+            <li***REMOVED***<i class="icon-th"***REMOVED***</i***REMOVED*** icon-th</li***REMOVED***
+            <li***REMOVED***<i class="icon-th-list"***REMOVED***</i***REMOVED*** icon-th-list</li***REMOVED***
+            <li***REMOVED***<i class="icon-ok"***REMOVED***</i***REMOVED*** icon-ok</li***REMOVED***
+            <li***REMOVED***<i class="icon-remove"***REMOVED***</i***REMOVED*** icon-remove</li***REMOVED***
+            <li***REMOVED***<i class="icon-zoom-in"***REMOVED***</i***REMOVED*** icon-zoom-in</li***REMOVED***
+            <li***REMOVED***<i class="icon-zoom-out"***REMOVED***</i***REMOVED*** icon-zoom-out</li***REMOVED***
+            <li***REMOVED***<i class="icon-off"***REMOVED***</i***REMOVED*** icon-off</li***REMOVED***
+            <li***REMOVED***<i class="icon-signal"***REMOVED***</i***REMOVED*** icon-signal</li***REMOVED***
+            <li***REMOVED***<i class="icon-cog"***REMOVED***</i***REMOVED*** icon-cog</li***REMOVED***
+            <li***REMOVED***<i class="icon-trash"***REMOVED***</i***REMOVED*** icon-trash</li***REMOVED***
+            <li***REMOVED***<i class="icon-home"***REMOVED***</i***REMOVED*** icon-home</li***REMOVED***
+            <li***REMOVED***<i class="icon-file"***REMOVED***</i***REMOVED*** icon-file</li***REMOVED***
+            <li***REMOVED***<i class="icon-time"***REMOVED***</i***REMOVED*** icon-time</li***REMOVED***
+            <li***REMOVED***<i class="icon-road"***REMOVED***</i***REMOVED*** icon-road</li***REMOVED***
+            <li***REMOVED***<i class="icon-download-alt"***REMOVED***</i***REMOVED*** icon-download-alt</li***REMOVED***
+            <li***REMOVED***<i class="icon-download"***REMOVED***</i***REMOVED*** icon-download</li***REMOVED***
+            <li***REMOVED***<i class="icon-upload"***REMOVED***</i***REMOVED*** icon-upload</li***REMOVED***
+            <li***REMOVED***<i class="icon-inbox"***REMOVED***</i***REMOVED*** icon-inbox</li***REMOVED***
+
+            <li***REMOVED***<i class="icon-play-circle"***REMOVED***</i***REMOVED*** icon-play-circle</li***REMOVED***
+            <li***REMOVED***<i class="icon-repeat"***REMOVED***</i***REMOVED*** icon-repeat</li***REMOVED***
+            <li***REMOVED***<i class="icon-refresh"***REMOVED***</i***REMOVED*** icon-refresh</li***REMOVED***
+            <li***REMOVED***<i class="icon-list-alt"***REMOVED***</i***REMOVED*** icon-list-alt</li***REMOVED***
+            <li***REMOVED***<i class="icon-lock"***REMOVED***</i***REMOVED*** icon-lock</li***REMOVED***
+            <li***REMOVED***<i class="icon-flag"***REMOVED***</i***REMOVED*** icon-flag</li***REMOVED***
+            <li***REMOVED***<i class="icon-headphones"***REMOVED***</i***REMOVED*** icon-headphones</li***REMOVED***
+            <li***REMOVED***<i class="icon-volume-off"***REMOVED***</i***REMOVED*** icon-volume-off</li***REMOVED***
+            <li***REMOVED***<i class="icon-volume-down"***REMOVED***</i***REMOVED*** icon-volume-down</li***REMOVED***
+            <li***REMOVED***<i class="icon-volume-up"***REMOVED***</i***REMOVED*** icon-volume-up</li***REMOVED***
+            <li***REMOVED***<i class="icon-qrcode"***REMOVED***</i***REMOVED*** icon-qrcode</li***REMOVED***
+            <li***REMOVED***<i class="icon-barcode"***REMOVED***</i***REMOVED*** icon-barcode</li***REMOVED***
+            <li***REMOVED***<i class="icon-tag"***REMOVED***</i***REMOVED*** icon-tag</li***REMOVED***
+            <li***REMOVED***<i class="icon-tags"***REMOVED***</i***REMOVED*** icon-tags</li***REMOVED***
+            <li***REMOVED***<i class="icon-book"***REMOVED***</i***REMOVED*** icon-book</li***REMOVED***
+            <li***REMOVED***<i class="icon-bookmark"***REMOVED***</i***REMOVED*** icon-bookmark</li***REMOVED***
+            <li***REMOVED***<i class="icon-print"***REMOVED***</i***REMOVED*** icon-print</li***REMOVED***
+            <li***REMOVED***<i class="icon-camera"***REMOVED***</i***REMOVED*** icon-camera</li***REMOVED***
+            <li***REMOVED***<i class="icon-font"***REMOVED***</i***REMOVED*** icon-font</li***REMOVED***
+            <li***REMOVED***<i class="icon-bold"***REMOVED***</i***REMOVED*** icon-bold</li***REMOVED***
+            <li***REMOVED***<i class="icon-italic"***REMOVED***</i***REMOVED*** icon-italic</li***REMOVED***
+            <li***REMOVED***<i class="icon-text-height"***REMOVED***</i***REMOVED*** icon-text-height</li***REMOVED***
+            <li***REMOVED***<i class="icon-text-width"***REMOVED***</i***REMOVED*** icon-text-width</li***REMOVED***
+            <li***REMOVED***<i class="icon-align-left"***REMOVED***</i***REMOVED*** icon-align-left</li***REMOVED***
+            <li***REMOVED***<i class="icon-align-center"***REMOVED***</i***REMOVED*** icon-align-center</li***REMOVED***
+            <li***REMOVED***<i class="icon-align-right"***REMOVED***</i***REMOVED*** icon-align-right</li***REMOVED***
+            <li***REMOVED***<i class="icon-align-justify"***REMOVED***</i***REMOVED*** icon-align-justify</li***REMOVED***
+            <li***REMOVED***<i class="icon-list"***REMOVED***</i***REMOVED*** icon-list</li***REMOVED***
+
+            <li***REMOVED***<i class="icon-indent-left"***REMOVED***</i***REMOVED*** icon-indent-left</li***REMOVED***
+            <li***REMOVED***<i class="icon-indent-right"***REMOVED***</i***REMOVED*** icon-indent-right</li***REMOVED***
+            <li***REMOVED***<i class="icon-facetime-video"***REMOVED***</i***REMOVED*** icon-facetime-video</li***REMOVED***
+            <li***REMOVED***<i class="icon-picture"***REMOVED***</i***REMOVED*** icon-picture</li***REMOVED***
+            <li***REMOVED***<i class="icon-pencil"***REMOVED***</i***REMOVED*** icon-pencil</li***REMOVED***
+            <li***REMOVED***<i class="icon-map-marker"***REMOVED***</i***REMOVED*** icon-map-marker</li***REMOVED***
+            <li***REMOVED***<i class="icon-adjust"***REMOVED***</i***REMOVED*** icon-adjust</li***REMOVED***
+            <li***REMOVED***<i class="icon-tint"***REMOVED***</i***REMOVED*** icon-tint</li***REMOVED***
+            <li***REMOVED***<i class="icon-edit"***REMOVED***</i***REMOVED*** icon-edit</li***REMOVED***
+            <li***REMOVED***<i class="icon-share"***REMOVED***</i***REMOVED*** icon-share</li***REMOVED***
+            <li***REMOVED***<i class="icon-check"***REMOVED***</i***REMOVED*** icon-check</li***REMOVED***
+            <li***REMOVED***<i class="icon-move"***REMOVED***</i***REMOVED*** icon-move</li***REMOVED***
+            <li***REMOVED***<i class="icon-step-backward"***REMOVED***</i***REMOVED*** icon-step-backward</li***REMOVED***
+            <li***REMOVED***<i class="icon-fast-backward"***REMOVED***</i***REMOVED*** icon-fast-backward</li***REMOVED***
+            <li***REMOVED***<i class="icon-backward"***REMOVED***</i***REMOVED*** icon-backward</li***REMOVED***
+            <li***REMOVED***<i class="icon-play"***REMOVED***</i***REMOVED*** icon-play</li***REMOVED***
+            <li***REMOVED***<i class="icon-pause"***REMOVED***</i***REMOVED*** icon-pause</li***REMOVED***
+            <li***REMOVED***<i class="icon-stop"***REMOVED***</i***REMOVED*** icon-stop</li***REMOVED***
+            <li***REMOVED***<i class="icon-forward"***REMOVED***</i***REMOVED*** icon-forward</li***REMOVED***
+            <li***REMOVED***<i class="icon-fast-forward"***REMOVED***</i***REMOVED*** icon-fast-forward</li***REMOVED***
+            <li***REMOVED***<i class="icon-step-forward"***REMOVED***</i***REMOVED*** icon-step-forward</li***REMOVED***
+            <li***REMOVED***<i class="icon-eject"***REMOVED***</i***REMOVED*** icon-eject</li***REMOVED***
+            <li***REMOVED***<i class="icon-chevron-left"***REMOVED***</i***REMOVED*** icon-chevron-left</li***REMOVED***
+            <li***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** icon-chevron-right</li***REMOVED***
+            <li***REMOVED***<i class="icon-plus-sign"***REMOVED***</i***REMOVED*** icon-plus-sign</li***REMOVED***
+            <li***REMOVED***<i class="icon-minus-sign"***REMOVED***</i***REMOVED*** icon-minus-sign</li***REMOVED***
+            <li***REMOVED***<i class="icon-remove-sign"***REMOVED***</i***REMOVED*** icon-remove-sign</li***REMOVED***
+            <li***REMOVED***<i class="icon-ok-sign"***REMOVED***</i***REMOVED*** icon-ok-sign</li***REMOVED***
+
+            <li***REMOVED***<i class="icon-question-sign"***REMOVED***</i***REMOVED*** icon-question-sign</li***REMOVED***
+            <li***REMOVED***<i class="icon-info-sign"***REMOVED***</i***REMOVED*** icon-info-sign</li***REMOVED***
+            <li***REMOVED***<i class="icon-screenshot"***REMOVED***</i***REMOVED*** icon-screenshot</li***REMOVED***
+            <li***REMOVED***<i class="icon-remove-circle"***REMOVED***</i***REMOVED*** icon-remove-circle</li***REMOVED***
+            <li***REMOVED***<i class="icon-ok-circle"***REMOVED***</i***REMOVED*** icon-ok-circle</li***REMOVED***
+            <li***REMOVED***<i class="icon-ban-circle"***REMOVED***</i***REMOVED*** icon-ban-circle</li***REMOVED***
+            <li***REMOVED***<i class="icon-arrow-left"***REMOVED***</i***REMOVED*** icon-arrow-left</li***REMOVED***
+            <li***REMOVED***<i class="icon-arrow-right"***REMOVED***</i***REMOVED*** icon-arrow-right</li***REMOVED***
+            <li***REMOVED***<i class="icon-arrow-up"***REMOVED***</i***REMOVED*** icon-arrow-up</li***REMOVED***
+            <li***REMOVED***<i class="icon-arrow-down"***REMOVED***</i***REMOVED*** icon-arrow-down</li***REMOVED***
+            <li***REMOVED***<i class="icon-share-alt"***REMOVED***</i***REMOVED*** icon-share-alt</li***REMOVED***
+            <li***REMOVED***<i class="icon-resize-full"***REMOVED***</i***REMOVED*** icon-resize-full</li***REMOVED***
+            <li***REMOVED***<i class="icon-resize-small"***REMOVED***</i***REMOVED*** icon-resize-small</li***REMOVED***
+            <li***REMOVED***<i class="icon-plus"***REMOVED***</i***REMOVED*** icon-plus</li***REMOVED***
+            <li***REMOVED***<i class="icon-minus"***REMOVED***</i***REMOVED*** icon-minus</li***REMOVED***
+            <li***REMOVED***<i class="icon-asterisk"***REMOVED***</i***REMOVED*** icon-asterisk</li***REMOVED***
+            <li***REMOVED***<i class="icon-exclamation-sign"***REMOVED***</i***REMOVED*** icon-exclamation-sign</li***REMOVED***
+            <li***REMOVED***<i class="icon-gift"***REMOVED***</i***REMOVED*** icon-gift</li***REMOVED***
+            <li***REMOVED***<i class="icon-leaf"***REMOVED***</i***REMOVED*** icon-leaf</li***REMOVED***
+            <li***REMOVED***<i class="icon-fire"***REMOVED***</i***REMOVED*** icon-fire</li***REMOVED***
+            <li***REMOVED***<i class="icon-eye-open"***REMOVED***</i***REMOVED*** icon-eye-open</li***REMOVED***
+            <li***REMOVED***<i class="icon-eye-close"***REMOVED***</i***REMOVED*** icon-eye-close</li***REMOVED***
+            <li***REMOVED***<i class="icon-warning-sign"***REMOVED***</i***REMOVED*** icon-warning-sign</li***REMOVED***
+            <li***REMOVED***<i class="icon-plane"***REMOVED***</i***REMOVED*** icon-plane</li***REMOVED***
+            <li***REMOVED***<i class="icon-calendar"***REMOVED***</i***REMOVED*** icon-calendar</li***REMOVED***
+            <li***REMOVED***<i class="icon-random"***REMOVED***</i***REMOVED*** icon-random</li***REMOVED***
+            <li***REMOVED***<i class="icon-comment"***REMOVED***</i***REMOVED*** icon-comment</li***REMOVED***
+            <li***REMOVED***<i class="icon-magnet"***REMOVED***</i***REMOVED*** icon-magnet</li***REMOVED***
+
+            <li***REMOVED***<i class="icon-chevron-up"***REMOVED***</i***REMOVED*** icon-chevron-up</li***REMOVED***
+            <li***REMOVED***<i class="icon-chevron-down"***REMOVED***</i***REMOVED*** icon-chevron-down</li***REMOVED***
+            <li***REMOVED***<i class="icon-retweet"***REMOVED***</i***REMOVED*** icon-retweet</li***REMOVED***
+            <li***REMOVED***<i class="icon-shopping-cart"***REMOVED***</i***REMOVED*** icon-shopping-cart</li***REMOVED***
+            <li***REMOVED***<i class="icon-folder-close"***REMOVED***</i***REMOVED*** icon-folder-close</li***REMOVED***
+            <li***REMOVED***<i class="icon-folder-open"***REMOVED***</i***REMOVED*** icon-folder-open</li***REMOVED***
+            <li***REMOVED***<i class="icon-resize-vertical"***REMOVED***</i***REMOVED*** icon-resize-vertical</li***REMOVED***
+            <li***REMOVED***<i class="icon-resize-horizontal"***REMOVED***</i***REMOVED*** icon-resize-horizontal</li***REMOVED***
+            <li***REMOVED***<i class="icon-hdd"***REMOVED***</i***REMOVED*** icon-hdd</li***REMOVED***
+            <li***REMOVED***<i class="icon-bullhorn"***REMOVED***</i***REMOVED*** icon-bullhorn</li***REMOVED***
+            <li***REMOVED***<i class="icon-bell"***REMOVED***</i***REMOVED*** icon-bell</li***REMOVED***
+            <li***REMOVED***<i class="icon-certificate"***REMOVED***</i***REMOVED*** icon-certificate</li***REMOVED***
+            <li***REMOVED***<i class="icon-thumbs-up"***REMOVED***</i***REMOVED*** icon-thumbs-up</li***REMOVED***
+            <li***REMOVED***<i class="icon-thumbs-down"***REMOVED***</i***REMOVED*** icon-thumbs-down</li***REMOVED***
+            <li***REMOVED***<i class="icon-hand-right"***REMOVED***</i***REMOVED*** icon-hand-right</li***REMOVED***
+            <li***REMOVED***<i class="icon-hand-left"***REMOVED***</i***REMOVED*** icon-hand-left</li***REMOVED***
+            <li***REMOVED***<i class="icon-hand-up"***REMOVED***</i***REMOVED*** icon-hand-up</li***REMOVED***
+            <li***REMOVED***<i class="icon-hand-down"***REMOVED***</i***REMOVED*** icon-hand-down</li***REMOVED***
+            <li***REMOVED***<i class="icon-circle-arrow-right"***REMOVED***</i***REMOVED*** icon-circle-arrow-right</li***REMOVED***
+            <li***REMOVED***<i class="icon-circle-arrow-left"***REMOVED***</i***REMOVED*** icon-circle-arrow-left</li***REMOVED***
+            <li***REMOVED***<i class="icon-circle-arrow-up"***REMOVED***</i***REMOVED*** icon-circle-arrow-up</li***REMOVED***
+            <li***REMOVED***<i class="icon-circle-arrow-down"***REMOVED***</i***REMOVED*** icon-circle-arrow-down</li***REMOVED***
+            <li***REMOVED***<i class="icon-globe"***REMOVED***</i***REMOVED*** icon-globe</li***REMOVED***
+            <li***REMOVED***<i class="icon-wrench"***REMOVED***</i***REMOVED*** icon-wrench</li***REMOVED***
+            <li***REMOVED***<i class="icon-tasks"***REMOVED***</i***REMOVED*** icon-tasks</li***REMOVED***
+            <li***REMOVED***<i class="icon-filter"***REMOVED***</i***REMOVED*** icon-filter</li***REMOVED***
+            <li***REMOVED***<i class="icon-briefcase"***REMOVED***</i***REMOVED*** icon-briefcase</li***REMOVED***
+            <li***REMOVED***<i class="icon-fullscreen"***REMOVED***</i***REMOVED*** icon-fullscreen</li***REMOVED***
+          </ul***REMOVED***
+
+          <h3***REMOVED***Glyphicons attribution</h3***REMOVED***
+          <p***REMOVED***<a href="http://glyphicons.com/"***REMOVED***Glyphicons</a***REMOVED*** Halflings are normally not available for free, but an arrangement between Bootstrap and the Glyphicons creators have made this possible at no cost to you as developers. As a thank you, we ask you to include an optional link back to <a href="http://glyphicons.com/"***REMOVED***Glyphicons</a***REMOVED*** whenever practical.</p***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***How to use</h2***REMOVED***
+          <p***REMOVED***All icons require an <code***REMOVED***&lt;i&gt;</code***REMOVED*** tag with a unique class, prefixed with <code***REMOVED***icon-</code***REMOVED***. To use, place the following code just about anywhere:</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;i class="icon-search"&gt;&lt;/i&gt;
+</pre***REMOVED***
+          <p***REMOVED***There are also styles available for inverted (white) icons, made ready with one extra class. We will specifically enforce this class on hover and active states for nav and dropdown links.</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;i class="icon-search icon-white"&gt;&lt;/i&gt;
+</pre***REMOVED***
+          <p***REMOVED***
+            <span class="label label-info"***REMOVED***Heads up!</span***REMOVED***
+            When using beside strings of text, as in buttons or nav links, be sure to leave a space after the <code***REMOVED***&lt;i&gt;</code***REMOVED*** tag for proper spacing.
+          </p***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Icon examples</h2***REMOVED***
+          <p***REMOVED***Use them in buttons, button groups for a toolbar, navigation, or prepended form inputs.</p***REMOVED***
+
+          <h4***REMOVED***Buttons</h4***REMOVED***
+
+          <h5***REMOVED***Button group in a button toolbar</h5***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="btn-toolbar"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <a class="btn" href="#"***REMOVED***<i class="icon-align-left"***REMOVED***</i***REMOVED***</a***REMOVED***
+                <a class="btn" href="#"***REMOVED***<i class="icon-align-center"***REMOVED***</i***REMOVED***</a***REMOVED***
+                <a class="btn" href="#"***REMOVED***<i class="icon-align-right"***REMOVED***</i***REMOVED***</a***REMOVED***
+                <a class="btn" href="#"***REMOVED***<i class="icon-align-justify"***REMOVED***</i***REMOVED***</a***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-justify"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h5***REMOVED***Dropdown in a button group</h5***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="btn-group"***REMOVED***
+              <a class="btn btn-primary" href="#"***REMOVED***<i class="icon-user icon-white"***REMOVED***</i***REMOVED*** User</a***REMOVED***
+              <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</a***REMOVED***
+              <ul class="dropdown-menu"***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***<i class="icon-pencil"***REMOVED***</i***REMOVED*** Edit</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***<i class="icon-trash"***REMOVED***</i***REMOVED*** Delete</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***<i class="icon-ban-circle"***REMOVED***</i***REMOVED*** Ban</a***REMOVED***</li***REMOVED***
+                <li class="divider"***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***<i class="i"***REMOVED***</i***REMOVED*** Make admin</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn btn-primary" href="#"&gt;&lt;i class="icon-user icon-white"&gt;&lt;/i&gt; User&lt;/a&gt;
+  &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"&gt;&lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-pencil"&gt;&lt;/i&gt; Edit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-trash"&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-ban-circle"&gt;&lt;/i&gt; Ban&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; Make admin&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h5***REMOVED***Button sizes</h5***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <a class="btn btn-large" href="#"***REMOVED***<i class="icon-star"***REMOVED***</i***REMOVED*** Star</a***REMOVED***
+            <a class="btn btn-small" href="#"***REMOVED***<i class="icon-star"***REMOVED***</i***REMOVED*** Star</a***REMOVED***
+            <a class="btn btn-mini" href="#"***REMOVED***<i class="icon-star"***REMOVED***</i***REMOVED*** Star</a***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;a class="btn btn-large" href="#"&gt;&lt;i class="icon-star"&gt;&lt;/i&gt; Star&lt;/a&gt;
+&lt;a class="btn btn-small" href="#"&gt;&lt;i class="icon-star"&gt;&lt;/i&gt; Star&lt;/a&gt;
+&lt;a class="btn btn-mini" href="#"&gt;&lt;i class="icon-star"&gt;&lt;/i&gt; Star&lt;/a&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Navigation</h4***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="well" style="padding: 8px 0; margin-bottom: 0;"***REMOVED***
+              <ul class="nav nav-list"***REMOVED***
+                <li class="active"***REMOVED***<a href="#"***REMOVED***<i class="icon-home icon-white"***REMOVED***</i***REMOVED*** Home</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***<i class="icon-book"***REMOVED***</i***REMOVED*** Library</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***<i class="icon-pencil"***REMOVED***</i***REMOVED*** Applications</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***<i class="i"***REMOVED***</i***REMOVED*** Misc</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-list"&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;&lt;i class="icon-home icon-white"&gt;&lt;/i&gt; Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-book"&gt;&lt;/i&gt; Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-pencil"&gt;&lt;/i&gt; Applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; Misc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Form fields</h4***REMOVED***
+          <form class="bs-docs-example form-horizontal"***REMOVED***
+            <div class="control-group"***REMOVED***
+              <label class="control-label" for="inputIcon"***REMOVED***Email address</label***REMOVED***
+              <div class="controls"***REMOVED***
+                <div class="input-prepend"***REMOVED***
+                  <span class="add-on"***REMOVED***<i class="icon-envelope"***REMOVED***</i***REMOVED***</span***REMOVED***<input class="span2" id="inputIcon" type="text"***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </form***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="control-group"&gt;
+  &lt;label class="control-label" for="inputIcon"&gt;Email address&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;div class="input-prepend"&gt;
+      &lt;span class="add-on"&gt;&lt;i class="icon-envelope"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;input class="span2" id="inputIcon" type="text"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+      </div***REMOVED***
+    </div***REMOVED***
+
+  </div***REMOVED***
+
+
+
+    <!-- Footer
+    ================================================== --***REMOVED***
+    <footer class="footer"***REMOVED***
+      <div class="container"***REMOVED***
+        <p***REMOVED***Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank"***REMOVED***@mdo</a***REMOVED*** and <a href="http://twitter.com/fat" target="_blank"***REMOVED***@fat</a***REMOVED***.</p***REMOVED***
+        <p***REMOVED***Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank"***REMOVED***Apache License v2.0</a***REMOVED***, documentation under <a href="http://creativecommons.org/licenses/by/3.0/"***REMOVED***CC BY 3.0</a***REMOVED***.</p***REMOVED***
+        <p***REMOVED***<a href="http://glyphicons.com"***REMOVED***Glyphicons Free</a***REMOVED*** licensed under <a href="http://creativecommons.org/licenses/by/3.0/"***REMOVED***CC BY 3.0</a***REMOVED***.</p***REMOVED***
+        <ul class="footer-links"***REMOVED***
+          <li***REMOVED***<a href="http://blog.getbootstrap.com"***REMOVED***Blog</a***REMOVED***</li***REMOVED***
+          <li class="muted"***REMOVED***&middot;</li***REMOVED***
+          <li***REMOVED***<a href="https://github.com/twitter/bootstrap/issues?state=open"***REMOVED***Issues</a***REMOVED***</li***REMOVED***
+          <li class="muted"***REMOVED***&middot;</li***REMOVED***
+          <li***REMOVED***<a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md"***REMOVED***Changelog</a***REMOVED***</li***REMOVED***
+        </ul***REMOVED***
+      </div***REMOVED***
+    </footer***REMOVED***
+
+
+
+    <!-- Le javascript
+    ================================================== --***REMOVED***
+    <!-- Placed at the end of the document so the pages load faster --***REMOVED***
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/jquery.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-transition.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-alert.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-modal.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-dropdown.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-scrollspy.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-tab.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-tooltip.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-popover.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-button.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-collapse.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-carousel.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-typeahead.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-affix.js"***REMOVED***</script***REMOVED***
+
+    <script src="assets/js/holder/holder.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/google-code-prettify/prettify.js"***REMOVED***</script***REMOVED***
+
+    <script src="assets/js/application.js"***REMOVED***</script***REMOVED***
+
+
+
+  </body***REMOVED***
+</html***REMOVED***

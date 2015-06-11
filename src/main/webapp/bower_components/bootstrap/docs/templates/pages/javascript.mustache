@@ -1,0 +1,1660 @@
+<!-- Subhead
+================================================== --***REMOVED***
+<header class="jumbotron subhead"***REMOVED***
+  <div class="container"***REMOVED***
+    <h1***REMOVED***{{_i***REMOVED******REMOVED***JavaScript{{/i***REMOVED******REMOVED***</h1***REMOVED***
+    <p class="lead"***REMOVED***{{_i***REMOVED******REMOVED***Bring Bootstrap's components to life&mdash;now with 13 custom jQuery plugins.{{/i***REMOVED******REMOVED***
+  </div***REMOVED***
+</header***REMOVED***
+
+  <div class="container"***REMOVED***
+
+    <!-- Docs nav
+    ================================================== --***REMOVED***
+    <div class="row"***REMOVED***
+      <div class="span3 bs-docs-sidebar"***REMOVED***
+        <ul class="nav nav-list bs-docs-sidenav"***REMOVED***
+          <li***REMOVED***<a href="#overview"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Overview{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#transitions"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Transitions{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#modals"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Modal{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#dropdowns"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Dropdown{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#scrollspy"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Scrollspy{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#tabs"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Tab{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#tooltips"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Tooltip{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#popovers"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Popover{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#alerts"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Alert{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#buttons"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Button{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#collapse"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Collapse{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#carousel"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Carousel{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#typeahead"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Typeahead{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#affix"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Affix{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+        </ul***REMOVED***
+      </div***REMOVED***
+      <div class="span9"***REMOVED***
+
+
+        <!-- Overview
+        ================================================== --***REMOVED***
+        <section id="overview"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***JavaScript in Bootstrap{{/i***REMOVED******REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Individual or compiled{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Plugins can be included individually (though some have required dependencies), or all at once. Both <strong***REMOVED***bootstrap.js</strong***REMOVED*** and <strong***REMOVED***bootstrap.min.js</strong***REMOVED*** contain all plugins in a single file.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Data attributes{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first class API and should be your first consideration when using a plugin.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <p***REMOVED***{{_i***REMOVED******REMOVED***That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the body namespaced with `'data-api'`. This looks like this:{{/i***REMOVED******REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('body').off('.data-api')</pre***REMOVED***
+
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Alternatively, to target a specific plugin, just include the plugin's name as a namespace along with the data-api namespace like this:{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('body').off('.alert.data-api')</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Programmatic API{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$(".btn.danger").button("toggle").addClass("fat")</pre***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$("#myModal").modal()                       // initialized with defaults
+$("#myModal").modal({ keyboard: false ***REMOVED***)   // initialized with no keyboard
+$("#myModal").modal('show')                // initializes and invokes show immediately</p***REMOVED***
+</pre***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Each plugin also exposes its raw constructor on a `Constructor` property: <code***REMOVED***$.fn.popover.Constructor</code***REMOVED***. If you'd like to get a particular plugin instance, retrieve it directly from an element: <code***REMOVED***$('[rel=popover]').data('popover')</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***No Conflict{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Sometimes it is necessary to use Bootstrap plugins with other UI frameworks. In these circumstances,  namespace collisions can occasionally occur. If this happens, you may call <code***REMOVED***.noConflict</code***REMOVED*** on the plugin you wish to revert the value of.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+<pre class="prettyprint linenums"***REMOVED***
+var bootstrapButton = $.fn.button.noConflict() // return $.fn.button to previously assigned value
+$.fn.bootstrapBtn = bootstrapButton            // give $().bootstrapBtn the bootstrap functionality
+</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Events{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code***REMOVED***show</code***REMOVED***) is triggered at the start of an event, and its past participle form (ex. <code***REMOVED***shown</code***REMOVED***) is trigger on the completion of an action.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***All infinitive events provide preventDefault functionality. This provides the ability to stop the execution of an action before it starts.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('#myModal').on('show', function (e) {
+    if (!data) return e.preventDefault() // stops modal from being shown
+***REMOVED***)
+</pre***REMOVED***
+        </section***REMOVED***
+
+
+
+        <!-- Transitions
+        ================================================== --***REMOVED***
+        <section id="transitions"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Transitions{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-transition.js</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***About transitions{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***For simple transition effects, include <strong***REMOVED***bootstrap-transition.js</strong***REMOVED*** once alongside the other JS files. If you're using the compiled (or minified) <strong***REMOVED***bootstrap.js</strong***REMOVED***, there is no need to include this&mdash;it's already there.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Use cases{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***A few examples of the transition plugin:{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <ul***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Sliding or fading in modals{{/i***REMOVED******REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Fading out tabs{{/i***REMOVED******REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Fading out alerts{{/i***REMOVED******REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Sliding carousel panes{{/i***REMOVED******REMOVED***</li***REMOVED***
+          </ul***REMOVED***
+
+          {{! Ideas: include docs for .fade.in, .slide.in, etc ***REMOVED******REMOVED***
+        </section***REMOVED***
+
+
+
+        <!-- Modal
+        ================================================== --***REMOVED***
+        <section id="modals"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Modals{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-modal.js</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Examples{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Static example{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***A rendered modal with header, body, and set of actions in the footer.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="bs-docs-example" style="background-color: #f5f5f5;"***REMOVED***
+            <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;"***REMOVED***
+              <div class="modal-header"***REMOVED***
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"***REMOVED***&times;</button***REMOVED***
+                <h3***REMOVED***{{_i***REMOVED******REMOVED***Modal header{{/i***REMOVED******REMOVED***</h3***REMOVED***
+              </div***REMOVED***
+              <div class="modal-body"***REMOVED***
+                <p***REMOVED***{{_i***REMOVED******REMOVED***One fine body&hellip;{{/i***REMOVED******REMOVED***</p***REMOVED***
+              </div***REMOVED***
+              <div class="modal-footer"***REMOVED***
+                <a href="#" class="btn"***REMOVED***{{_i***REMOVED******REMOVED***Close{{/i***REMOVED******REMOVED***</a***REMOVED***
+                <a href="#" class="btn btn-primary"***REMOVED***{{_i***REMOVED******REMOVED***Save changes{{/i***REMOVED******REMOVED***</a***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="modal hide fade"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
+    &lt;h3&gt;{{_i***REMOVED******REMOVED***Modal header{{/i***REMOVED******REMOVED***&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;p&gt;{{_i***REMOVED******REMOVED***One fine body&hellip;{{/i***REMOVED******REMOVED***&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-footer"&gt;
+    &lt;a href="#" class="btn"&gt;{{_i***REMOVED******REMOVED***Close{{/i***REMOVED******REMOVED***&lt;/a&gt;
+    &lt;a href="#" class="btn btn-primary"&gt;{{_i***REMOVED******REMOVED***Save changes{{/i***REMOVED******REMOVED***&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Live demo{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <!-- sample modal content --***REMOVED***
+          <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"***REMOVED***
+            <div class="modal-header"***REMOVED***
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"***REMOVED***&times;</button***REMOVED***
+              <h3 id="myModalLabel"***REMOVED***{{_i***REMOVED******REMOVED***Modal Heading{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            </div***REMOVED***
+            <div class="modal-body"***REMOVED***
+              <h4***REMOVED***{{_i***REMOVED******REMOVED***Text in a modal{{/i***REMOVED******REMOVED***</h4***REMOVED***
+              <p***REMOVED***Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p***REMOVED***
+
+              <h4***REMOVED***{{_i***REMOVED******REMOVED***Popover in a modal{{/i***REMOVED******REMOVED***</h4***REMOVED***
+              <p***REMOVED***{{_i***REMOVED******REMOVED***This <a href="#" role="button" class="btn popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?"***REMOVED***button</a***REMOVED*** should trigger a popover on click.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+              <h4***REMOVED***{{_i***REMOVED******REMOVED***Tooltips in a modal{{/i***REMOVED******REMOVED***</h4***REMOVED***
+              <p***REMOVED***{{_i***REMOVED******REMOVED***<a href="#" class="tooltip-test" title="Tooltip"***REMOVED***This link</a***REMOVED*** and <a href="#" class="tooltip-test" title="Tooltip"***REMOVED***that link</a***REMOVED*** should have tooltips on hover.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+              <hr***REMOVED***
+
+              <h4***REMOVED***{{_i***REMOVED******REMOVED***Overflowing text to show optional scrollbar{{/i***REMOVED******REMOVED***</h4***REMOVED***
+              <p***REMOVED***{{_i***REMOVED******REMOVED***We set a fixed <code***REMOVED***max-height</code***REMOVED*** on the <code***REMOVED***.modal-body</code***REMOVED***. Watch it overflow with all this extra lorem ipsum text we've included.{{/i***REMOVED******REMOVED***</p***REMOVED***
+              <p***REMOVED***Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p***REMOVED***
+              <p***REMOVED***Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p***REMOVED***
+              <p***REMOVED***Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p***REMOVED***
+              <p***REMOVED***Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p***REMOVED***
+              <p***REMOVED***Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p***REMOVED***
+              <p***REMOVED***Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p***REMOVED***
+            </div***REMOVED***
+            <div class="modal-footer"***REMOVED***
+              <button class="btn" data-dismiss="modal"***REMOVED***{{_i***REMOVED******REMOVED***Close{{/i***REMOVED******REMOVED***</button***REMOVED***
+              <button class="btn btn-primary"***REMOVED***{{_i***REMOVED******REMOVED***Save changes{{/i***REMOVED******REMOVED***</button***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+          <div class="bs-docs-example" style="padding-bottom: 24px;"***REMOVED***
+            <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-large"***REMOVED***{{_i***REMOVED******REMOVED***Launch demo modal{{/i***REMOVED******REMOVED***</a***REMOVED***
+          </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt!-- Button to trigger modal --&gt;
+&lt;a href="#myModal" role="button" class="btn" data-toggle="modal"&gt;{{_i***REMOVED******REMOVED***Launch demo modal{{/i***REMOVED******REMOVED***&lt;/a&gt;
+
+&lt!-- Modal --&gt;
+&lt;div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&times;&lt;/button&gt;
+    &lt;h3 id="myModalLabel"&gt;Modal header&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;p&gt;{{_i***REMOVED******REMOVED***One fine body&hellip;{{/i***REMOVED******REMOVED***&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="modal-footer"&gt;
+    &lt;button class="btn" data-dismiss="modal" aria-hidden="true"&gt;{{_i***REMOVED******REMOVED***Close{{/i***REMOVED******REMOVED***&lt;/button&gt;
+    &lt;button class="btn btn-primary"&gt;{{_i***REMOVED******REMOVED***Save changes{{/i***REMOVED******REMOVED***&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Via data attributes{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Activate a modal without writing JavaScript. Set <code***REMOVED***data-toggle="modal"</code***REMOVED*** on a controller element, like a button, along with a <code***REMOVED***data-target="#foo"</code***REMOVED*** or <code***REMOVED***href="#foo"</code***REMOVED*** to target a specific modal to toggle.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***&lt;button type="button" data-toggle="modal" data-target="#myModal"&gt;Launch modal&lt;/button&gt;</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Via JavaScript{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Call a modal with id <code***REMOVED***myModal</code***REMOVED*** with a single line of JavaScript:{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('#myModal').modal(options)</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Options{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code***REMOVED***data-</code***REMOVED***, as in <code***REMOVED***data-backdrop=""</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+             <tr***REMOVED***
+               <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***Name{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***type{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***default{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th***REMOVED***{{_i***REMOVED******REMOVED***description{{/i***REMOVED******REMOVED***</th***REMOVED***
+             </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***backdrop{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***boolean{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***true{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***Includes a modal-backdrop element. Alternatively, specify <code***REMOVED***static</code***REMOVED*** for a backdrop which doesn't close the modal on click.{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***keyboard{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***boolean{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***true{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***Closes the modal when escape key is pressed{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***show{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***boolean{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***true{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***Shows the modal when initialized.{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***remote{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***path{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***false{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***<p***REMOVED***{{_i***REMOVED******REMOVED***If a remote url is provided, content will be loaded via jQuery's <code***REMOVED***load</code***REMOVED*** method and injected into the <code***REMOVED***.modal-body</code***REMOVED***. If you're using the data api, you may alternatively use the <code***REMOVED***href</code***REMOVED*** tag to specify the remote source. An example of this is shown below:{{/i***REMOVED******REMOVED***</p***REMOVED***
+              <pre class="prettyprint linenums"***REMOVED***<code***REMOVED***&lt;a data-toggle="modal" href="remote.html" data-target="#modal"&gt;click me&lt;/a&gt;</code***REMOVED***</pre***REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+
+          <h3{{_i***REMOVED******REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <h4***REMOVED***.modal({{_i***REMOVED******REMOVED***options{{/i***REMOVED******REMOVED***)</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Activates your content as a modal. Accepts an optional options <code***REMOVED***object</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('#myModal').modal({
+  keyboard: false
+***REMOVED***)
+</pre***REMOVED***
+          <h4***REMOVED***.modal('toggle')</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Manually toggles a modal.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('#myModal').modal('toggle')</pre***REMOVED***
+          <h4***REMOVED***.modal('show')</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Manually opens a modal.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('#myModal').modal('show')</pre***REMOVED***
+          <h4***REMOVED***.modal('hide')</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Manually hides a modal.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('#myModal').modal('hide')</pre***REMOVED***
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Events{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap's modal class exposes a few events for hooking into modal functionality.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+             <tr***REMOVED***
+               <th style="width: 150px;"***REMOVED***{{_i***REMOVED******REMOVED***Event{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th***REMOVED***{{_i***REMOVED******REMOVED***Description{{/i***REMOVED******REMOVED***</th***REMOVED***
+             </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***show{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***This event fires immediately when the <code***REMOVED***show</code***REMOVED*** instance method is called.{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***shown{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***This event is fired when the modal has been made visible to the user (will wait for css transitions to complete).{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***hide{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***This event is fired immediately when the <code***REMOVED***hide</code***REMOVED*** instance method has been called.{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***This event is fired when the modal has finished being hidden from the user (will wait for css transitions to complete).{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('#myModal').on('hidden', function () {
+  // {{_i***REMOVED******REMOVED***do something…{{/i***REMOVED******REMOVED***
+***REMOVED***)
+</pre***REMOVED***
+        </section***REMOVED***
+
+
+
+        <!-- Dropdowns
+        ================================================== --***REMOVED***
+        <section id="dropdowns"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Dropdowns{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-dropdown.js</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Examples{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Within a navbar{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div id="navbar-example" class="navbar navbar-static"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <div class="container" style="width: auto;"***REMOVED***
+                  <a class="brand" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Project Name{{/i***REMOVED******REMOVED***</a***REMOVED***
+                  <ul class="nav" role="navigation"***REMOVED***
+                    <li class="dropdown"***REMOVED***
+                      <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"***REMOVED***{{_i***REMOVED******REMOVED***Dropdown{{/i***REMOVED******REMOVED*** <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop1"***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="http://google.com"***REMOVED***{{_i***REMOVED******REMOVED***Action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#anotherAction"***REMOVED***{{_i***REMOVED******REMOVED***Another action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Something else here{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li role="presentation" class="divider"***REMOVED***</li***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Separated link{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                      </ul***REMOVED***
+                    </li***REMOVED***
+                    <li class="dropdown"***REMOVED***
+                      <a href="#" id="drop2" role="button" class="dropdown-toggle" data-toggle="dropdown"***REMOVED***{{_i***REMOVED******REMOVED***Dropdown 2 {{/i***REMOVED******REMOVED***<b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop2"***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Another action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Something else here{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li role="presentation" class="divider"***REMOVED***</li***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Separated link{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                      </ul***REMOVED***
+                    </li***REMOVED***
+                  </ul***REMOVED***
+                  <ul class="nav pull-right"***REMOVED***
+                    <li id="fat-menu" class="dropdown"***REMOVED***
+                      <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown"***REMOVED***{{_i***REMOVED******REMOVED***Dropdown 3{{/i***REMOVED******REMOVED*** <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="drop3"***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Another action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Something else here{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li role="presentation" class="divider"***REMOVED***</li***REMOVED***
+                        <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Separated link{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                      </ul***REMOVED***
+                    </li***REMOVED***
+                  </ul***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED*** <!-- /navbar-example --***REMOVED***
+          </div***REMOVED*** {{! /example ***REMOVED******REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Within tabs{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="nav nav-pills"***REMOVED***
+              <li class="active"***REMOVED***<a href="#"***REMOVED***{{_i***REMOVED******REMOVED***Regular link{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+              <li class="dropdown"***REMOVED***
+                <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Dropdown{{/i***REMOVED******REMOVED*** <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4"***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Another action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Something else here{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                  <li role="presentation" class="divider"***REMOVED***</li***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Separated link{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </li***REMOVED***
+              <li class="dropdown"***REMOVED***
+                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Dropdown 2{{/i***REMOVED******REMOVED*** <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5"***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Another action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Something else here{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                  <li role="presentation" class="divider"***REMOVED***</li***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Separated link{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </li***REMOVED***
+              <li class="dropdown"***REMOVED***
+                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Dropdown 3{{/i***REMOVED******REMOVED*** <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5"***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Another action{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Something else here{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                  <li role="presentation" class="divider"***REMOVED***</li***REMOVED***
+                  <li role="presentation"***REMOVED***<a role="menuitem" tabindex="-1" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Separated link{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </li***REMOVED***
+            </ul***REMOVED*** <!-- /tabs --***REMOVED***
+          </div***REMOVED*** {{! /example ***REMOVED******REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Via data attributes{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Add <code***REMOVED***data-toggle="dropdown"</code***REMOVED*** to a link or button to toggle a dropdown.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="dropdown"&gt;
+  &lt;a class="dropdown-toggle" data-toggle="dropdown" href="#"&gt;Dropdown trigger&lt;/a&gt;
+  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***To keep URLs intact, use the <code***REMOVED***data-target</code***REMOVED*** attribute instead of <code***REMOVED***href="#"</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="dropdown"&gt;
+  &lt;a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html"&gt;
+    {{_i***REMOVED******REMOVED***Dropdown{{/i***REMOVED******REMOVED***
+    &lt;b class="caret"&gt;&lt;/b&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Via JavaScript{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Call the dropdowns via JavaScript:{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('.dropdown-toggle').dropdown()</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Options{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***<em***REMOVED***{{_i***REMOVED******REMOVED***None{{/i***REMOVED******REMOVED***</em***REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <h4***REMOVED***$().dropdown('toggle')</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***A programmatic api for toggling menus for a given navbar or tabbed navigation.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        </section***REMOVED***
+
+
+
+        <!-- ScrollSpy
+        ================================================== --***REMOVED***
+        <section id="scrollspy"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***ScrollSpy{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-scrollspy.js</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Example in navbar{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div id="navbarExample" class="navbar navbar-static"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <div class="container" style="width: auto;"***REMOVED***
+                  <a class="brand" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Project Name{{/i***REMOVED******REMOVED***</a***REMOVED***
+                  <ul class="nav"***REMOVED***
+                    <li***REMOVED***<a href="#fat"***REMOVED***@fat</a***REMOVED***</li***REMOVED***
+                    <li***REMOVED***<a href="#mdo"***REMOVED***@mdo</a***REMOVED***</li***REMOVED***
+                    <li class="dropdown"***REMOVED***
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown"***REMOVED***{{_i***REMOVED******REMOVED***Dropdown{{/i***REMOVED******REMOVED*** <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                      <ul class="dropdown-menu"***REMOVED***
+                        <li***REMOVED***<a href="#one"***REMOVED***{{_i***REMOVED******REMOVED***one{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li***REMOVED***<a href="#two"***REMOVED***{{_i***REMOVED******REMOVED***two{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                        <li class="divider"***REMOVED***</li***REMOVED***
+                        <li***REMOVED***<a href="#three"***REMOVED***{{_i***REMOVED******REMOVED***three{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+                      </ul***REMOVED***
+                    </li***REMOVED***
+                  </ul***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+            <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example"***REMOVED***
+              <h4 id="fat"***REMOVED***@fat</h4***REMOVED***
+              <p***REMOVED***Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p***REMOVED***
+              <h4 id="mdo"***REMOVED***@mdo</h4***REMOVED***
+              <p***REMOVED***Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p***REMOVED***
+              <h4 id="one"***REMOVED***one</h4***REMOVED***
+              <p***REMOVED***Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.</p***REMOVED***
+              <h4 id="two"***REMOVED***two</h4***REMOVED***
+              <p***REMOVED***In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.</p***REMOVED***
+              <h4 id="three"***REMOVED***three</h4***REMOVED***
+              <p***REMOVED***Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p***REMOVED***
+              <p***REMOVED***Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats.
+              </p***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Via data attributes{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***To easily add scrollspy behavior to your topbar navigation, just add <code***REMOVED***data-spy="scroll"</code***REMOVED*** to the element you want to spy on (most typically this would be the body) and <code***REMOVED***data-target=".navbar"</code***REMOVED*** to select which nav to use. You'll want to use scrollspy with a <code***REMOVED***.nav</code***REMOVED*** component.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***&lt;body data-spy="scroll" data-target=".navbar"&gt;***REMOVED***&lt;/body&gt;</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Via JavaScript{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Call the scrollspy via JavaScript:{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('#navbar').scrollspy()</pre***REMOVED***
+
+          <div class="alert alert-info"***REMOVED***
+            <strong***REMOVED***{{_i***REMOVED******REMOVED***Heads up!{{/i***REMOVED******REMOVED***</strong***REMOVED***
+            {{_i***REMOVED******REMOVED***Navbar links must have resolvable id targets. For example, a <code***REMOVED***&lt;a href="#home"&gt;home&lt;/a&gt;</code***REMOVED*** must correspond to something in the dom like <code***REMOVED***&lt;div id="home"&gt;&lt;/div&gt;</code***REMOVED***.{{/i***REMOVED******REMOVED***
+          </div***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <h4***REMOVED***.scrollspy('refresh')</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***When using scrollspy in conjunction with adding or removing of elements from the DOM, you'll need to call the refresh method like so:{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('[data-spy="scroll"]').each(function () {
+  var $spy = $(this).scrollspy('refresh')
+***REMOVED***);
+</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Options{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code***REMOVED***data-</code***REMOVED***, as in <code***REMOVED***data-offset=""</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+             <tr***REMOVED***
+               <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***Name{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***type{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***default{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th***REMOVED***{{_i***REMOVED******REMOVED***description{{/i***REMOVED******REMOVED***</th***REMOVED***
+             </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***offset{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***number{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***10{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***Pixels to offset from top when calculating position of scroll.{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Events{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+             <tr***REMOVED***
+               <th style="width: 150px;"***REMOVED***{{_i***REMOVED******REMOVED***Event{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th***REMOVED***{{_i***REMOVED******REMOVED***Description{{/i***REMOVED******REMOVED***</th***REMOVED***
+             </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***activate{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***This event fires whenever a new item becomes activated by the scrollspy.{{/i***REMOVED******REMOVED***</td***REMOVED***
+            </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+        </section***REMOVED***
+
+
+
+        <!-- Tabs
+        ================================================== --***REMOVED***
+        <section id="tabs"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Togglable tabs{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-tab.js</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Example tabs{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul id="myTab" class="nav nav-tabs"***REMOVED***
+              <li class="active"***REMOVED***<a href="#home" data-toggle="tab"***REMOVED***{{_i***REMOVED******REMOVED***Home{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#profile" data-toggle="tab"***REMOVED***{{_i***REMOVED******REMOVED***Profile{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+              <li class="dropdown"***REMOVED***
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"***REMOVED***{{_i***REMOVED******REMOVED***Dropdown{{/i***REMOVED******REMOVED*** <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#dropdown1" data-toggle="tab"***REMOVED***@fat</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#dropdown2" data-toggle="tab"***REMOVED***@mdo</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </li***REMOVED***
+            </ul***REMOVED***
+            <div id="myTabContent" class="tab-content"***REMOVED***
+              <div class="tab-pane fade in active" id="home"***REMOVED***
+                <p***REMOVED***Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p***REMOVED***
+              </div***REMOVED***
+              <div class="tab-pane fade" id="profile"***REMOVED***
+                <p***REMOVED***Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p***REMOVED***
+              </div***REMOVED***
+              <div class="tab-pane fade" id="dropdown1"***REMOVED***
+                <p***REMOVED***Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p***REMOVED***
+              </div***REMOVED***
+              <div class="tab-pane fade" id="dropdown2"***REMOVED***
+                <p***REMOVED***Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Enable tabbable tabs via JavaScript (each tab needs to be activated individually):{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+***REMOVED***)</pre***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***You can activate individual tabs in several ways:{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('#myTab a[href="#profile"]').tab('show'); // Select tab by name
+$('#myTab a:first').tab('show'); // Select first tab
+$('#myTab a:last').tab('show'); // Select last tab
+$('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
+</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Markup{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code***REMOVED***data-toggle="tab"</code***REMOVED*** or <code***REMOVED***data-toggle="pill"</code***REMOVED*** on an element. Adding the <code***REMOVED***nav</code***REMOVED*** and <code***REMOVED***nav-tabs</code***REMOVED*** classes to the tab <code***REMOVED***ul</code***REMOVED*** will apply the Bootstrap tab styling.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;{{_i***REMOVED******REMOVED***Home{{/i***REMOVED******REMOVED***&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;{{_i***REMOVED******REMOVED***Profile{{/i***REMOVED******REMOVED***&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#messages" data-toggle="tab"&gt;{{_i***REMOVED******REMOVED***Messages{{/i***REMOVED******REMOVED***&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#settings" data-toggle="tab"&gt;{{_i***REMOVED******REMOVED***Settings{{/i***REMOVED******REMOVED***&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <h4***REMOVED***$().tab</h4***REMOVED***
+          <p***REMOVED***
+            {{_i***REMOVED******REMOVED***Activates a tab element and content container. Tab should have either a <code***REMOVED***data-target</code***REMOVED*** or an <code***REMOVED***href</code***REMOVED*** targeting a container node in the DOM.{{/i***REMOVED******REMOVED***
+          </p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-tabs" id="myTab"&gt;
+  &lt;li class="active"&gt;&lt;a href="#home"&gt;{{_i***REMOVED******REMOVED***Home{{/i***REMOVED******REMOVED***&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#profile"&gt;{{_i***REMOVED******REMOVED***Profile{{/i***REMOVED******REMOVED***&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#messages"&gt;{{_i***REMOVED******REMOVED***Messages{{/i***REMOVED******REMOVED***&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#settings"&gt;{{_i***REMOVED******REMOVED***Settings{{/i***REMOVED******REMOVED***&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content"&gt;
+  &lt;div class="tab-pane active" id="home"&gt;***REMOVED***&lt;/div&gt;
+  &lt;div class="tab-pane" id="profile"&gt;***REMOVED***&lt;/div&gt;
+  &lt;div class="tab-pane" id="messages"&gt;***REMOVED***&lt;/div&gt;
+  &lt;div class="tab-pane" id="settings"&gt;***REMOVED***&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(function () {
+    $('#myTab a:last').tab('show');
+  ***REMOVED***)
+&lt;/script&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Events{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+             <tr***REMOVED***
+               <th style="width: 150px;"***REMOVED***{{_i***REMOVED******REMOVED***Event{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th***REMOVED***{{_i***REMOVED******REMOVED***Description{{/i***REMOVED******REMOVED***</th***REMOVED***
+             </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***show{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***This event fires on tab show, but before the new tab has been shown. Use <code***REMOVED***event.target</code***REMOVED*** and <code***REMOVED***event.relatedTarget</code***REMOVED*** to target the active tab and the previous active tab (if available) respectively.{{/i***REMOVED******REMOVED***</td***REMOVED***
+            </tr***REMOVED***
+            <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***shown{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***This event fires on tab show after a tab has been shown. Use <code***REMOVED***event.target</code***REMOVED*** and <code***REMOVED***event.relatedTarget</code***REMOVED*** to target the active tab and the previous active tab (if available) respectively.{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('a[data-toggle="tab"]').on('shown', function (e) {
+  e.target // activated tab
+  e.relatedTarget // previous tab
+***REMOVED***)
+</pre***REMOVED***
+        </section***REMOVED***
+
+
+        <!-- Tooltips
+        ================================================== --***REMOVED***
+        <section id="tooltips"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Tooltips{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-tooltip.js</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Examples{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Inspired by the excellent jQuery.tipsy plugin written by Jason Frame; Tooltips are an updated version, which don't rely on images, use CSS3 for animations, and data-attributes for local title storage.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***For performance reasons, the tooltip and popover data-apis are opt in, meaning <strong***REMOVED***you must initialize them yourself</strong***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Hover over the links below to see tooltips:{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="bs-docs-example tooltip-demo"***REMOVED***
+            <p class="muted" style="margin-bottom: 0;"***REMOVED***{{_i***REMOVED******REMOVED***Tight pants next level keffiyeh <a href="#" data-toggle="tooltip" title="Default tooltip"***REMOVED***you probably</a***REMOVED*** haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" data-toggle="tooltip" title="Another tooltip"***REMOVED***have a</a***REMOVED*** terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A really ironic artisan <a href="#" data-toggle="tooltip" title="A much longer tooltip belongs right here to demonstrate the max-width we apply."***REMOVED***whatever keytar</a***REMOVED***, scenester farm-to-table banksy Austin <a href="#" data-toggle="tooltip" title="The last tip!"***REMOVED***twitter handle</a***REMOVED*** freegan cred raw denim single-origin coffee viral.{{/i***REMOVED******REMOVED***
+            </p***REMOVED***
+          </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Four directions{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <div class="bs-docs-example tooltip-demo"***REMOVED***
+            <ul class="bs-docs-tooltip-examples"***REMOVED***
+              <li***REMOVED***<a href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top"***REMOVED***Tooltip on top</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#" data-toggle="tooltip" data-placement="right" title="Tooltip on right"***REMOVED***Tooltip on right</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"***REMOVED***Tooltip on bottom</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left"***REMOVED***Tooltip on left</a***REMOVED***</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Tooltips in input groups{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***When using tooltips and popovers with the Bootstrap input groups, you'll have to set the <code***REMOVED***container</code***REMOVED*** (documented below) option to avoid unwanted side effects.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Trigger the tooltip via JavaScript:{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('#example').tooltip({{_i***REMOVED******REMOVED***options{{/i***REMOVED******REMOVED***)</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Options{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code***REMOVED***data-</code***REMOVED***, as in <code***REMOVED***data-animation=""</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+             <tr***REMOVED***
+               <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***Name{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***type{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***default{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th***REMOVED***{{_i***REMOVED******REMOVED***description{{/i***REMOVED******REMOVED***</th***REMOVED***
+             </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***animation{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***boolean{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***true</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***apply a css fade transition to the tooltip{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***html{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***boolean{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***false</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***Insert html into the tooltip. If false, jquery's <code***REMOVED***text</code***REMOVED*** method will be used to insert content into the dom. Use text if you're worried about XSS attacks.{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***placement{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***string | function{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***'top'</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***how to position the tooltip{{/i***REMOVED******REMOVED*** - top | bottom | left | right</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***selector{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***string{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***false</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***If a selector is provided, tooltip objects will be delegated to the specified targets.{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***title{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***string | function{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***''</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***default title value if `title` tag isn't present{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***trigger{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***string{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***'hover focus'</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***how tooltip is triggered{{/i***REMOVED******REMOVED*** - click | hover | focus | manual. {{_i***REMOVED******REMOVED***Note you case pass trigger mutliple, space seperated, trigger types.{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***delay{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***number | object{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***0</td***REMOVED***
+               <td***REMOVED***
+                <p***REMOVED***{{_i***REMOVED******REMOVED***delay showing and hiding the tooltip (ms) - does not apply to manual trigger type{{/i***REMOVED******REMOVED***</p***REMOVED***
+                <p***REMOVED***{{_i***REMOVED******REMOVED***If a number is supplied, delay is applied to both hide/show{{/i***REMOVED******REMOVED***</p***REMOVED***
+                <p***REMOVED***{{_i***REMOVED******REMOVED***Object structure is: <code***REMOVED***delay: { show: 500, hide: 100 ***REMOVED***</code***REMOVED***{{/i***REMOVED******REMOVED***</p***REMOVED***
+               </td***REMOVED***
+             </tr***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***container{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***string | false{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***false{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***
+                <p***REMOVED***{{_i***REMOVED******REMOVED***Appends the tooltip to a specific element <code***REMOVED***container: 'body'</code***REMOVED***{{/i***REMOVED******REMOVED***</p***REMOVED***
+               </td***REMOVED***
+             </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+          <div class="alert alert-info"***REMOVED***
+            <strong***REMOVED***{{_i***REMOVED******REMOVED***Heads up!{{/i***REMOVED******REMOVED***</strong***REMOVED***
+            {{_i***REMOVED******REMOVED***Options for individual tooltips can alternatively be specified through the use of data attributes.{{/i***REMOVED******REMOVED***
+          </div***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Markup{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***&lt;a href="#" data-toggle="tooltip" title="{{_i***REMOVED******REMOVED***first tooltip{{/i***REMOVED******REMOVED***"&gt;{{_i***REMOVED******REMOVED***hover over me{{/i***REMOVED******REMOVED***&lt;/a&gt;</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <h4***REMOVED***$().tooltip({{_i***REMOVED******REMOVED***options{{/i***REMOVED******REMOVED***)</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Attaches a tooltip handler to an element collection.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <h4***REMOVED***.tooltip('show')</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Reveals an element's tooltip.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('#element').tooltip('show')</pre***REMOVED***
+          <h4***REMOVED***.tooltip('hide')</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Hides an element's tooltip.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('#element').tooltip('hide')</pre***REMOVED***
+          <h4***REMOVED***.tooltip('toggle')</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Toggles an element's tooltip.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('#element').tooltip('toggle')</pre***REMOVED***
+          <h4***REMOVED***.tooltip('destroy')</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Hides and destroys an element's tooltip.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***$('#element').tooltip('destroy')</pre***REMOVED***
+        </section***REMOVED***
+
+
+
+      <!-- Popovers
+      ================================================== --***REMOVED***
+      <section id="popovers"***REMOVED***
+        <div class="page-header"***REMOVED***
+          <h1***REMOVED***{{_i***REMOVED******REMOVED***Popovers{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-popover.js</small***REMOVED***</h1***REMOVED***
+        </div***REMOVED***
+
+        <h2***REMOVED***{{_i***REMOVED******REMOVED***Examples{{/i***REMOVED******REMOVED***</h2***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Add small overlays of content, like those on the iPad, to any element for housing secondary information. Hover over the button to trigger the popover. <strong***REMOVED***Requires <a href="#tooltips"***REMOVED***Tooltip</a***REMOVED*** to be included.</strong***REMOVED***{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+        <h3***REMOVED***{{_i***REMOVED******REMOVED***Static popover{{/i***REMOVED******REMOVED***</h3***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Four options are available: top, right, bottom, and left aligned.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <div class="bs-docs-example bs-docs-example-popover"***REMOVED***
+          <div class="popover top"***REMOVED***
+            <div class="arrow"***REMOVED***</div***REMOVED***
+            <h3 class="popover-title"***REMOVED***Popover top</h3***REMOVED***
+            <div class="popover-content"***REMOVED***
+              <p***REMOVED***Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+
+          <div class="popover right"***REMOVED***
+            <div class="arrow"***REMOVED***</div***REMOVED***
+            <h3 class="popover-title"***REMOVED***Popover right</h3***REMOVED***
+            <div class="popover-content"***REMOVED***
+              <p***REMOVED***Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+
+          <div class="popover bottom"***REMOVED***
+            <div class="arrow"***REMOVED***</div***REMOVED***
+            <h3 class="popover-title"***REMOVED***Popover bottom</h3***REMOVED***
+            <div class="popover-content"***REMOVED***
+              <p***REMOVED***Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+
+          <div class="popover left"***REMOVED***
+            <div class="arrow"***REMOVED***</div***REMOVED***
+            <h3 class="popover-title"***REMOVED***Popover left</h3***REMOVED***
+            <div class="popover-content"***REMOVED***
+              <p***REMOVED***Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+
+          <div class="clearfix"***REMOVED***</div***REMOVED***
+        </div***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***No markup shown as popovers are generated from JavaScript and content within a <code***REMOVED***data</code***REMOVED*** attribute.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+        <h3***REMOVED***Live demo</h3***REMOVED***
+        <div class="bs-docs-example" style="padding-bottom: 24px;"***REMOVED***
+          <a href="#" class="btn btn-large btn-danger" data-toggle="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?"***REMOVED***{{_i***REMOVED******REMOVED***Click to toggle popover{{/i***REMOVED******REMOVED***</a***REMOVED***
+        </div***REMOVED***
+
+        <h4***REMOVED***{{_i***REMOVED******REMOVED***Four directions{{/i***REMOVED******REMOVED***</h4***REMOVED***
+        <div class="bs-docs-example tooltip-demo"***REMOVED***
+          <ul class="bs-docs-tooltip-examples"***REMOVED***
+            <li***REMOVED***<a href="#" class="btn" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top"***REMOVED***Popover on top</a***REMOVED***</li***REMOVED***
+            <li***REMOVED***<a href="#" class="btn" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right"***REMOVED***Popover on right</a***REMOVED***</li***REMOVED***
+            <li***REMOVED***<a href="#" class="btn" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom"***REMOVED***Popover on bottom</a***REMOVED***</li***REMOVED***
+            <li***REMOVED***<a href="#" class="btn" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on left"***REMOVED***Popover on left</a***REMOVED***</li***REMOVED***
+          </ul***REMOVED***
+        </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+
+
+        <hr class="bs-docs-separator"***REMOVED***
+
+
+        <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Enable popovers via JavaScript:{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <pre class="prettyprint linenums"***REMOVED***$('#example').popover({{_i***REMOVED******REMOVED***options{{/i***REMOVED******REMOVED***)</pre***REMOVED***
+
+        <h3***REMOVED***{{_i***REMOVED******REMOVED***Options{{/i***REMOVED******REMOVED***</h3***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code***REMOVED***data-</code***REMOVED***, as in <code***REMOVED***data-animation=""</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <table class="table table-bordered table-striped"***REMOVED***
+          <thead***REMOVED***
+           <tr***REMOVED***
+             <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***Name{{/i***REMOVED******REMOVED***</th***REMOVED***
+             <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***type{{/i***REMOVED******REMOVED***</th***REMOVED***
+             <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***default{{/i***REMOVED******REMOVED***</th***REMOVED***
+             <th***REMOVED***{{_i***REMOVED******REMOVED***description{{/i***REMOVED******REMOVED***</th***REMOVED***
+           </tr***REMOVED***
+          </thead***REMOVED***
+          <tbody***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***animation{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***boolean{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***true</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***apply a css fade transition to the tooltip{{/i***REMOVED******REMOVED***</td***REMOVED***
+           </tr***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***html{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***boolean{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***false</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***Insert html into the popover. If false, jquery's <code***REMOVED***text</code***REMOVED*** method will be used to insert content into the dom. Use text if you're worried about XSS attacks.{{/i***REMOVED******REMOVED***</td***REMOVED***
+           </tr***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***placement{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***string | function{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***'right'</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***how to position the popover{{/i***REMOVED******REMOVED*** - top | bottom | left | right</td***REMOVED***
+           </tr***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***selector{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***string{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***false</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***if a selector is provided, tooltip objects will be delegated to the specified targets{{/i***REMOVED******REMOVED***</td***REMOVED***
+           </tr***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***trigger{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***string{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***'click'</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***how popover is triggered{{/i***REMOVED******REMOVED*** - click | hover | focus | manual</td***REMOVED***
+           </tr***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***title{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***string | function{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***''</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***default title value if `title` attribute isn't present{{/i***REMOVED******REMOVED***</td***REMOVED***
+           </tr***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***content{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***string | function{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***''</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***default content value if `data-content` attribute isn't present{{/i***REMOVED******REMOVED***</td***REMOVED***
+           </tr***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***delay{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***number | object{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***0</td***REMOVED***
+             <td***REMOVED***
+              <p***REMOVED***{{_i***REMOVED******REMOVED***delay showing and hiding the popover (ms) - does not apply to manual trigger type{{/i***REMOVED******REMOVED***</p***REMOVED***
+              <p***REMOVED***{{_i***REMOVED******REMOVED***If a number is supplied, delay is applied to both hide/show{{/i***REMOVED******REMOVED***</p***REMOVED***
+              <p***REMOVED***{{_i***REMOVED******REMOVED***Object structure is: <code***REMOVED***delay: { show: 500, hide: 100 ***REMOVED***</code***REMOVED***{{/i***REMOVED******REMOVED***</p***REMOVED***
+             </td***REMOVED***
+           </tr***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***container{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***string | false{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***false{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***
+              <p***REMOVED***{{_i***REMOVED******REMOVED***Appends the popover to a specific element <code***REMOVED***container: 'body'</code***REMOVED***{{/i***REMOVED******REMOVED***</p***REMOVED***
+             </td***REMOVED***
+           </tr***REMOVED***
+          </tbody***REMOVED***
+        </table***REMOVED***
+        <div class="alert alert-info"***REMOVED***
+          <strong***REMOVED***{{_i***REMOVED******REMOVED***Heads up!{{/i***REMOVED******REMOVED***</strong***REMOVED***
+          {{_i***REMOVED******REMOVED***Options for individual popovers can alternatively be specified through the use of data attributes.{{/i***REMOVED******REMOVED***
+        </div***REMOVED***
+
+        <h3***REMOVED***{{_i***REMOVED******REMOVED***Markup{{/i***REMOVED******REMOVED***</h3***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***For performance reasons, the Tooltip and Popover data-apis are opt in. If you would like to use them just specify a selector option.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+        <h3***REMOVED***{{_i***REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+        <h4***REMOVED***$().popover({{_i***REMOVED******REMOVED***options{{/i***REMOVED******REMOVED***)</h4***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Initializes popovers for an element collection.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <h4***REMOVED***.popover('show')</h4***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Reveals an elements popover.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <pre class="prettyprint linenums"***REMOVED***$('#element').popover('show')</pre***REMOVED***
+        <h4***REMOVED***.popover('hide')</h4***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Hides an elements popover.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <pre class="prettyprint linenums"***REMOVED***$('#element').popover('hide')</pre***REMOVED***
+        <h4***REMOVED***.popover('toggle')</h4***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Toggles an elements popover.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <pre class="prettyprint linenums"***REMOVED***$('#element').popover('toggle')</pre***REMOVED***
+        <h4***REMOVED***.popover('destroy')</h4***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Hides and destroys an element's popover.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <pre class="prettyprint linenums"***REMOVED***$('#element').popover('destroy')</pre***REMOVED***
+      </section***REMOVED***
+
+
+
+      <!-- Alert
+      ================================================== --***REMOVED***
+      <section id="alerts"***REMOVED***
+        <div class="page-header"***REMOVED***
+          <h1***REMOVED***{{_i***REMOVED******REMOVED***Alert messages{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-alert.js</small***REMOVED***</h1***REMOVED***
+        </div***REMOVED***
+
+
+        <h2***REMOVED***{{_i***REMOVED******REMOVED***Example alerts{{/i***REMOVED******REMOVED***</h2***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Add dismiss functionality to all alert messages with this plugin.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <div class="bs-docs-example"***REMOVED***
+          <div class="alert fade in"***REMOVED***
+            <button type="button" class="close" data-dismiss="alert"***REMOVED***&times;</button***REMOVED***
+            <strong***REMOVED***{{_i***REMOVED******REMOVED***Holy guacamole!{{/i***REMOVED******REMOVED***</strong***REMOVED*** {{_i***REMOVED******REMOVED***Best check yo self, you're not looking too good.{{/i***REMOVED******REMOVED***
+          </div***REMOVED***
+        </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+
+        <div class="bs-docs-example"***REMOVED***
+          <div class="alert alert-block alert-error fade in"***REMOVED***
+            <button type="button" class="close" data-dismiss="alert"***REMOVED***&times;</button***REMOVED***
+            <h4 class="alert-heading"***REMOVED***{{_i***REMOVED******REMOVED***Oh snap! You got an error!{{/i***REMOVED******REMOVED***</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <p***REMOVED***
+              <a class="btn btn-danger" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Take this action{{/i***REMOVED******REMOVED***</a***REMOVED*** <a class="btn" href="#"***REMOVED***{{_i***REMOVED******REMOVED***Or do this{{/i***REMOVED******REMOVED***</a***REMOVED***
+            </p***REMOVED***
+          </div***REMOVED***
+        </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+
+
+        <hr class="bs-docs-separator"***REMOVED***
+
+
+        <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Enable dismissal of an alert via JavaScript:{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <pre class="prettyprint linenums"***REMOVED***$(".alert").alert()</pre***REMOVED***
+
+        <h3***REMOVED***{{_i***REMOVED******REMOVED***Markup{{/i***REMOVED******REMOVED***</h3***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Just add <code***REMOVED***data-dismiss="alert"</code***REMOVED*** to your close button to automatically give an alert close functionality.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <pre class="prettyprint linenums"***REMOVED***&lt;a class="close" data-dismiss="alert" href="#"&gt;&amp;times;&lt;/a&gt;</pre***REMOVED***
+
+        <h3***REMOVED***{{_i***REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+        <h4***REMOVED***$().alert()</h4***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Wraps all alerts with close functionality. To have your alerts animate out when closed, make sure they have the <code***REMOVED***.fade</code***REMOVED*** and <code***REMOVED***.in</code***REMOVED*** class already applied to them.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <h4***REMOVED***.alert('close')</h4***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Closes an alert.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <pre class="prettyprint linenums"***REMOVED***$(".alert").alert('close')</pre***REMOVED***
+
+
+        <h3***REMOVED***{{_i***REMOVED******REMOVED***Events{{/i***REMOVED******REMOVED***</h3***REMOVED***
+        <p***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap's alert class exposes a few events for hooking into alert functionality.{{/i***REMOVED******REMOVED***</p***REMOVED***
+        <table class="table table-bordered table-striped"***REMOVED***
+          <thead***REMOVED***
+           <tr***REMOVED***
+             <th style="width: 150px;"***REMOVED***{{_i***REMOVED******REMOVED***Event{{/i***REMOVED******REMOVED***</th***REMOVED***
+             <th***REMOVED***{{_i***REMOVED******REMOVED***Description{{/i***REMOVED******REMOVED***</th***REMOVED***
+           </tr***REMOVED***
+          </thead***REMOVED***
+          <tbody***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***close{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***This event fires immediately when the <code***REMOVED***close</code***REMOVED*** instance method is called.{{/i***REMOVED******REMOVED***</td***REMOVED***
+           </tr***REMOVED***
+           <tr***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***closed{{/i***REMOVED******REMOVED***</td***REMOVED***
+             <td***REMOVED***{{_i***REMOVED******REMOVED***This event is fired when the alert has been closed (will wait for css transitions to complete).{{/i***REMOVED******REMOVED***</td***REMOVED***
+           </tr***REMOVED***
+          </tbody***REMOVED***
+        </table***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('#my-alert').bind('closed', function () {
+  // {{_i***REMOVED******REMOVED***do something…{{/i***REMOVED******REMOVED***
+***REMOVED***)
+</pre***REMOVED***
+      </section***REMOVED***
+
+
+
+          <!-- Buttons
+          ================================================== --***REMOVED***
+          <section id="buttons"***REMOVED***
+            <div class="page-header"***REMOVED***
+              <h1***REMOVED***{{_i***REMOVED******REMOVED***Buttons{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-button.js</small***REMOVED***</h1***REMOVED***
+            </div***REMOVED***
+
+            <h2***REMOVED***{{_i***REMOVED******REMOVED***Example uses{{/i***REMOVED******REMOVED***</h2***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Do more with buttons. Control button states or create groups of buttons for more components like toolbars.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <h4***REMOVED***{{_i***REMOVED******REMOVED***Stateful{{/i***REMOVED******REMOVED***</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Add <code***REMOVED***data-loading-text="Loading***REMOVED***"</code***REMOVED*** to use a loading state on a button.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <div class="bs-docs-example" style="padding-bottom: 24px;"***REMOVED***
+              <button type="button" id="fat-btn" data-loading-text="loading***REMOVED***" class="btn btn-primary"***REMOVED***
+                {{_i***REMOVED******REMOVED***Loading state{{/i***REMOVED******REMOVED***
+              </button***REMOVED***
+            </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+            <pre class="prettyprint linenums"***REMOVED***&lt;button type="button" class="btn btn-primary" data-loading-text="Loading***REMOVED***"&gt;Loading state&lt;/button&gt;</pre***REMOVED***
+
+            <h4***REMOVED***{{_i***REMOVED******REMOVED***Single toggle{{/i***REMOVED******REMOVED***</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Add <code***REMOVED***data-toggle="button"</code***REMOVED*** to activate toggling on a single button.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <div class="bs-docs-example" style="padding-bottom: 24px;"***REMOVED***
+              <button type="button" class="btn btn-primary" data-toggle="button"***REMOVED***{{_i***REMOVED******REMOVED***Single Toggle{{/i***REMOVED******REMOVED***</button***REMOVED***
+            </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+            <pre class="prettyprint linenums"***REMOVED***&lt;button type="button" class="btn btn-primary" data-toggle="button"&gt;Single Toggle&lt;/button&gt;</pre***REMOVED***
+
+            <h4***REMOVED***{{_i***REMOVED******REMOVED***Checkbox{{/i***REMOVED******REMOVED***</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Add <code***REMOVED***data-toggle="buttons-checkbox"</code***REMOVED*** for checkbox style toggling on btn-group.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <div class="bs-docs-example" style="padding-bottom: 24px;"***REMOVED***
+              <div class="btn-group" data-toggle="buttons-checkbox"***REMOVED***
+                <button type="button" class="btn btn-primary"***REMOVED***{{_i***REMOVED******REMOVED***Left{{/i***REMOVED******REMOVED***</button***REMOVED***
+                <button type="button" class="btn btn-primary"***REMOVED***{{_i***REMOVED******REMOVED***Middle{{/i***REMOVED******REMOVED***</button***REMOVED***
+                <button type="button" class="btn btn-primary"***REMOVED***{{_i***REMOVED******REMOVED***Right{{/i***REMOVED******REMOVED***</button***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Left&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Middle&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+            <h4***REMOVED***{{_i***REMOVED******REMOVED***Radio{{/i***REMOVED******REMOVED***</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Add <code***REMOVED***data-toggle="buttons-radio"</code***REMOVED*** for radio style toggling on btn-group.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <div class="bs-docs-example" style="padding-bottom: 24px;"***REMOVED***
+              <div class="btn-group" data-toggle="buttons-radio"***REMOVED***
+                <button type="button" class="btn btn-primary"***REMOVED***{{_i***REMOVED******REMOVED***Left{{/i***REMOVED******REMOVED***</button***REMOVED***
+                <button type="button" class="btn btn-primary"***REMOVED***{{_i***REMOVED******REMOVED***Middle{{/i***REMOVED******REMOVED***</button***REMOVED***
+                <button type="button" class="btn btn-primary"***REMOVED***{{_i***REMOVED******REMOVED***Right{{/i***REMOVED******REMOVED***</button***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-group" data-toggle="buttons-radio"&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Left&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Middle&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary"&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+            <hr class="bs-docs-separator"***REMOVED***
+
+
+            <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Enable buttons via JavaScript:{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <pre class="prettyprint linenums"***REMOVED***$('.nav-tabs').button()</pre***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Markup{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Data attributes are integral to the button plugin. Check out the example code below for the various markup types.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Options{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***<em***REMOVED***{{_i***REMOVED******REMOVED***None{{/i***REMOVED******REMOVED***</em***REMOVED***</p***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <h4***REMOVED***$().button('toggle')</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Toggles push state. Gives the button the appearance that it has been activated.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <div class="alert alert-info"***REMOVED***
+              <strong***REMOVED***{{_i***REMOVED******REMOVED***Heads up!{{/i***REMOVED******REMOVED***</strong***REMOVED***
+              {{_i***REMOVED******REMOVED***You can enable auto toggling of a button by using the <code***REMOVED***data-toggle</code***REMOVED*** attribute.{{/i***REMOVED******REMOVED***
+            </div***REMOVED***
+            <pre class="prettyprint linenums"***REMOVED***&lt;button type="button" class="btn" data-toggle="button" &gt;…&lt;/button&gt;</pre***REMOVED***
+            <h4***REMOVED***$().button('loading')</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Sets button state to loading - disables button and swaps text to loading text. Loading text should be defined on the button element using the data attribute <code***REMOVED***data-loading-text</code***REMOVED***.{{/i***REMOVED******REMOVED***
+            </p***REMOVED***
+            <pre class="prettyprint linenums"***REMOVED***&lt;button type="button" class="btn" data-loading-text="loading stuff***REMOVED***" &gt;***REMOVED***&lt;/button&gt;</pre***REMOVED***
+            <div class="alert alert-info"***REMOVED***
+              <strong***REMOVED***{{_i***REMOVED******REMOVED***Heads up!{{/i***REMOVED******REMOVED***</strong***REMOVED***
+              {{_i***REMOVED******REMOVED***<a href="https://github.com/twitter/bootstrap/issues/793"***REMOVED***Firefox persists the disabled state across page loads</a***REMOVED***. A workaround for this is to use <code***REMOVED***autocomplete="off"</code***REMOVED***.{{/i***REMOVED******REMOVED***
+            </div***REMOVED***
+            <h4***REMOVED***$().button('reset')</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Resets button state - swaps text to original text.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <h4***REMOVED***$().button(string)</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Resets button state - swaps text to any data defined text state.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***&lt;button type="button" class="btn" data-complete-text="finished!" &gt;***REMOVED***&lt;/button&gt;
+&lt;script&gt;
+  $('.btn').button('complete')
+&lt;/script&gt;
+</pre***REMOVED***
+          </section***REMOVED***
+
+
+
+          <!-- Collapse
+          ================================================== --***REMOVED***
+          <section id="collapse"***REMOVED***
+            <div class="page-header"***REMOVED***
+              <h1***REMOVED***{{_i***REMOVED******REMOVED***Collapse{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-collapse.js</small***REMOVED***</h1***REMOVED***
+            </div***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***About{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Get base styles and flexible support for collapsible components like accordions and navigation.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <p class="muted"***REMOVED***<strong***REMOVED****</strong***REMOVED*** {{_i***REMOVED******REMOVED***Requires the Transitions plugin to be included.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <h2***REMOVED***{{_i***REMOVED******REMOVED***Example accordion{{/i***REMOVED******REMOVED***</h2***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Using the collapse plugin, we built a simple accordion style widget:{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <div class="bs-docs-example"***REMOVED***
+              <div class="accordion" id="accordion2"***REMOVED***
+                <div class="accordion-group"***REMOVED***
+                  <div class="accordion-heading"***REMOVED***
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"***REMOVED***
+                      {{_i***REMOVED******REMOVED***Collapsible Group Item #1{{/i***REMOVED******REMOVED***
+                    </a***REMOVED***
+                  </div***REMOVED***
+                  <div id="collapseOne" class="accordion-body collapse in"***REMOVED***
+                    <div class="accordion-inner"***REMOVED***
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div***REMOVED***
+                  </div***REMOVED***
+                </div***REMOVED***
+                <div class="accordion-group"***REMOVED***
+                  <div class="accordion-heading"***REMOVED***
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"***REMOVED***
+                      {{_i***REMOVED******REMOVED***Collapsible Group Item #2{{/i***REMOVED******REMOVED***
+                    </a***REMOVED***
+                  </div***REMOVED***
+                  <div id="collapseTwo" class="accordion-body collapse"***REMOVED***
+                    <div class="accordion-inner"***REMOVED***
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div***REMOVED***
+                  </div***REMOVED***
+                </div***REMOVED***
+                <div class="accordion-group"***REMOVED***
+                  <div class="accordion-heading"***REMOVED***
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree"***REMOVED***
+                      {{_i***REMOVED******REMOVED***Collapsible Group Item #3{{/i***REMOVED******REMOVED***
+                    </a***REMOVED***
+                  </div***REMOVED***
+                  <div id="collapseThree" class="accordion-body collapse"***REMOVED***
+                    <div class="accordion-inner"***REMOVED***
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div***REMOVED***
+                  </div***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="accordion" id="accordion2"&gt;
+  &lt;div class="accordion-group"&gt;
+    &lt;div class="accordion-heading"&gt;
+      &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"&gt;
+        {{_i***REMOVED******REMOVED***Collapsible Group Item #1{{/i***REMOVED******REMOVED***
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseOne" class="accordion-body collapse in"&gt;
+      &lt;div class="accordion-inner"&gt;
+        Anim pariatur cliche***REMOVED***
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="accordion-group"&gt;
+    &lt;div class="accordion-heading"&gt;
+      &lt;a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo"&gt;
+        {{_i***REMOVED******REMOVED***Collapsible Group Item #2{{/i***REMOVED******REMOVED***
+      &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div id="collapseTwo" class="accordion-body collapse"&gt;
+      &lt;div class="accordion-inner"&gt;
+        Anim pariatur cliche***REMOVED***
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+***REMOVED***
+</pre***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***You can also use the plugin without the accordion markup. Make a button toggle the expanding and collapsing of another element.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;button type="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo"&gt;
+  {{_i***REMOVED******REMOVED***simple collapsible{{/i***REMOVED******REMOVED***
+&lt;/button&gt;
+
+&lt;div id="demo" class="collapse in"&gt; … &lt;/div&gt;
+</pre***REMOVED***
+
+
+            <hr class="bs-docs-separator"***REMOVED***
+
+
+            <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Via data attributes{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Just add <code***REMOVED***data-toggle="collapse"</code***REMOVED*** and a <code***REMOVED***data-target</code***REMOVED*** to element to automatically assign control of a collapsible element. The <code***REMOVED***data-target</code***REMOVED*** attribute accepts a css selector to apply the collapse to. Be sure to add the class <code***REMOVED***collapse</code***REMOVED*** to the collapsible element. If you'd like it to default open, add the additional class <code***REMOVED***in</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***To add accordion-like group management to a collapsible control, add the data attribute <code***REMOVED***data-parent="#selector"</code***REMOVED***. Refer to the demo to see this in action.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Via JavaScript{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Enable manually with:{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <pre class="prettyprint linenums"***REMOVED***$(".collapse").collapse()</pre***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Options{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code***REMOVED***data-</code***REMOVED***, as in <code***REMOVED***data-parent=""</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <table class="table table-bordered table-striped"***REMOVED***
+              <thead***REMOVED***
+               <tr***REMOVED***
+                 <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***Name{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***type{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***default{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th***REMOVED***{{_i***REMOVED******REMOVED***description{{/i***REMOVED******REMOVED***</th***REMOVED***
+               </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***parent{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***selector{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***false</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***If selector then all collapsible elements under the specified parent will be closed when this collapsible item is shown. (similar to traditional accordion behavior){{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***toggle{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***boolean{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***true</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***Toggles the collapsible element on invocation{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <h4***REMOVED***.collapse({{_i***REMOVED******REMOVED***options{{/i***REMOVED******REMOVED***)</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Activates your content as a collapsible element. Accepts an optional options <code***REMOVED***object</code***REMOVED***.{{/i***REMOVED******REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('#myCollapsible').collapse({
+  toggle: false
+***REMOVED***)
+</pre***REMOVED***
+            <h4***REMOVED***.collapse('toggle')</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Toggles a collapsible element to shown or hidden.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <h4***REMOVED***.collapse('show')</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Shows a collapsible element.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <h4***REMOVED***.collapse('hide')</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Hides a collapsible element.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Events{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap's collapse class exposes a few events for hooking into collapse functionality.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <table class="table table-bordered table-striped"***REMOVED***
+              <thead***REMOVED***
+               <tr***REMOVED***
+                 <th style="width: 150px;"***REMOVED***{{_i***REMOVED******REMOVED***Event{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th***REMOVED***{{_i***REMOVED******REMOVED***Description{{/i***REMOVED******REMOVED***</th***REMOVED***
+               </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***show{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***This event fires immediately when the <code***REMOVED***show</code***REMOVED*** instance method is called.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***shown{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***This event is fired when a collapse element has been made visible to the user (will wait for css transitions to complete).{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***hide{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***
+                  {{_i***REMOVED******REMOVED***This event is fired immediately when the <code***REMOVED***hide</code***REMOVED*** method has been called.{{/i***REMOVED******REMOVED***
+                 </td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***This event is fired when a collapse element has been hidden from the user (will wait for css transitions to complete).{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('#myCollapsible').on('hidden', function () {
+  // {{_i***REMOVED******REMOVED***do something…{{/i***REMOVED******REMOVED***
+***REMOVED***)</pre***REMOVED***
+          </section***REMOVED***
+
+
+
+           <!-- Carousel
+          ================================================== --***REMOVED***
+          <section id="carousel"***REMOVED***
+            <div class="page-header"***REMOVED***
+              <h1***REMOVED***{{_i***REMOVED******REMOVED***Carousel{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-carousel.js</small***REMOVED***</h1***REMOVED***
+            </div***REMOVED***
+
+            <h2***REMOVED***{{_i***REMOVED******REMOVED***Example carousel{{/i***REMOVED******REMOVED***</h2***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***The slideshow below shows a generic plugin and component for cycling through elements like a carousel.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <div class="bs-docs-example"***REMOVED***
+              <div id="myCarousel" class="carousel slide"***REMOVED***
+                <ol class="carousel-indicators"***REMOVED***
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"***REMOVED***</li***REMOVED***
+                  <li data-target="#myCarousel" data-slide-to="1"***REMOVED***</li***REMOVED***
+                  <li data-target="#myCarousel" data-slide-to="2"***REMOVED***</li***REMOVED***
+                </ol***REMOVED***
+                <div class="carousel-inner"***REMOVED***
+                  <div class="item active"***REMOVED***
+                    <img src="assets/img/bootstrap-mdo-sfmoma-01.jpg" alt=""***REMOVED***
+                    <div class="carousel-caption"***REMOVED***
+                      <h4***REMOVED***{{_i***REMOVED******REMOVED***First Thumbnail label{{/i***REMOVED******REMOVED***</h4***REMOVED***
+                      <p***REMOVED***Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p***REMOVED***
+                    </div***REMOVED***
+                  </div***REMOVED***
+                  <div class="item"***REMOVED***
+                    <img src="assets/img/bootstrap-mdo-sfmoma-02.jpg" alt=""***REMOVED***
+                    <div class="carousel-caption"***REMOVED***
+                      <h4***REMOVED***{{_i***REMOVED******REMOVED***Second Thumbnail label{{/i***REMOVED******REMOVED***</h4***REMOVED***
+                      <p***REMOVED***Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p***REMOVED***
+                    </div***REMOVED***
+                  </div***REMOVED***
+                  <div class="item"***REMOVED***
+                    <img src="assets/img/bootstrap-mdo-sfmoma-03.jpg" alt=""***REMOVED***
+                    <div class="carousel-caption"***REMOVED***
+                      <h4***REMOVED***{{_i***REMOVED******REMOVED***Third Thumbnail label{{/i***REMOVED******REMOVED***</h4***REMOVED***
+                      <p***REMOVED***Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p***REMOVED***
+                    </div***REMOVED***
+                  </div***REMOVED***
+                </div***REMOVED***
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"***REMOVED***&lsaquo;</a***REMOVED***
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"***REMOVED***&rsaquo;</a***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div id="myCarousel" class="carousel slide"&gt;
+  &lt;ol class="carousel-indicators"&gt
+    &lt;li data-target="#myCarousel" data-slide-to="0" class="active"&gt&lt;/li&gt
+    &lt;li data-target="#myCarousel" data-slide-to="1"&gt&lt;/li&gt
+    &lt;li data-target="#myCarousel" data-slide-to="2"&gt&lt;/li&gt
+  &lt;/ol&gt
+  &lt;!-- {{_i***REMOVED******REMOVED***Carousel items{{/i***REMOVED******REMOVED*** --&gt;
+  &lt;div class="carousel-inner"&gt;
+    &lt;div class="active item"&gt;…&lt;/div&gt;
+    &lt;div class="item"&gt;…&lt;/div&gt;
+    &lt;div class="item"&gt;…&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- {{_i***REMOVED******REMOVED***Carousel nav{{/i***REMOVED******REMOVED*** --&gt;
+  &lt;a class="carousel-control left" href="#myCarousel" data-slide="prev"&gt;&amp;lsaquo;&lt;/a&gt;
+  &lt;a class="carousel-control right" href="#myCarousel" data-slide="next"&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+            <div class="alert alert-warning"***REMOVED***
+              <strong***REMOVED***{{_i***REMOVED******REMOVED***Heads up!{{/i***REMOVED******REMOVED***</strong***REMOVED***
+              {{_i***REMOVED******REMOVED***When implementing this carousel, remove the images we have provided and replace them with your own.{{/i***REMOVED******REMOVED***
+            </div***REMOVED***
+
+
+            <hr class="bs-docs-separator"***REMOVED***
+
+
+            <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Via data attributes{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Use data attributes to easily control the position of the carousel. <code***REMOVED***data-slide</code***REMOVED*** accepts the keywords <code***REMOVED***prev</code***REMOVED*** or <code***REMOVED***next</code***REMOVED***, which alters the slide position relative to it's current position. Alternatively, use <code***REMOVED***data-slide-to</code***REMOVED*** to pass a raw slide index to the carousel <code***REMOVED***data-slide-to="2"</code***REMOVED***, which jump's the slide position to a particular index beginning with <code***REMOVED***0</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Via JavaScript{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Call carousel manually with:{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <pre class="prettyprint linenums"***REMOVED***$('.carousel').carousel()</pre***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Options{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Options can be passed via data attributes or JavaScriptz. For data attributes, append the option name to <code***REMOVED***data-</code***REMOVED***, as in <code***REMOVED***data-interval=""</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <table class="table table-bordered table-striped"***REMOVED***
+              <thead***REMOVED***
+               <tr***REMOVED***
+                 <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***Name{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***type{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***default{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th***REMOVED***{{_i***REMOVED******REMOVED***description{{/i***REMOVED******REMOVED***</th***REMOVED***
+               </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***interval{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***number{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***5000</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***The amount of time to delay between automatically cycling an item. If false, carousel will not automatically cycle.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***pause{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***string{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***"hover"</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***Pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <h4***REMOVED***.carousel({{_i***REMOVED******REMOVED***options{{/i***REMOVED******REMOVED***)</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Initializes the carousel with an optional options <code***REMOVED***object</code***REMOVED*** and starts cycling through items.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+$('.carousel').carousel({
+  interval: 2000
+***REMOVED***)
+</pre***REMOVED***
+            <h4***REMOVED***.carousel('cycle')</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Cycles through the carousel items from left to right.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <h4***REMOVED***.carousel('pause')</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Stops the carousel from cycling through items.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <h4***REMOVED***.carousel(number)</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Cycles the carousel to a particular frame (0 based, similar to an array).{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <h4***REMOVED***.carousel('prev')</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Cycles to the previous item.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <h4***REMOVED***.carousel('next')</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Cycles to the next item.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Events{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap's carousel class exposes two events for hooking into carousel functionality.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <table class="table table-bordered table-striped"***REMOVED***
+              <thead***REMOVED***
+               <tr***REMOVED***
+                 <th style="width: 150px;"***REMOVED***{{_i***REMOVED******REMOVED***Event{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th***REMOVED***{{_i***REMOVED******REMOVED***Description{{/i***REMOVED******REMOVED***</th***REMOVED***
+               </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***slide{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***This event fires immediately when the <code***REMOVED***slide</code***REMOVED*** instance method is invoked.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***slid{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***This event is fired when the carousel has completed its slide transition.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+          </section***REMOVED***
+
+
+
+          <!-- Typeahead
+          ================================================== --***REMOVED***
+          <section id="typeahead"***REMOVED***
+            <div class="page-header"***REMOVED***
+              <h1***REMOVED***{{_i***REMOVED******REMOVED***Typeahead{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-typeahead.js</small***REMOVED***</h1***REMOVED***
+            </div***REMOVED***
+
+
+            <h2***REMOVED***{{_i***REMOVED******REMOVED***Example{{/i***REMOVED******REMOVED***</h2***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***A basic, easily extended plugin for quickly creating elegant typeaheads with any form text input.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <div class="bs-docs-example" style="background-color: #f5f5f5;"***REMOVED***
+              <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'***REMOVED***
+            </div***REMOVED***{{! /example ***REMOVED******REMOVED***
+            <pre class="prettyprint linenums"***REMOVED***&lt;input type="text" data-provide="typeahead"&gt;</pre***REMOVED***
+            <p***REMOVED***You'll want to set <code***REMOVED***autocomplete="off"</code***REMOVED*** to prevent default browser menus from appearing over the Bootstrap typeahead dropdown.</p***REMOVED***
+
+            <hr class="bs-docs-separator"***REMOVED***
+
+
+            <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Via data attributes{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Add data attributes to register an element with typeahead functionality as shown in the example above.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Via JavaScript{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Call the typeahead manually with:{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <pre class="prettyprint linenums"***REMOVED***$('.typeahead').typeahead()</pre***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Options{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code***REMOVED***data-</code***REMOVED***, as in <code***REMOVED***data-source=""</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <table class="table table-bordered table-striped"***REMOVED***
+              <thead***REMOVED***
+               <tr***REMOVED***
+                 <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***Name{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***type{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***default{{/i***REMOVED******REMOVED***</th***REMOVED***
+                 <th***REMOVED***{{_i***REMOVED******REMOVED***description{{/i***REMOVED******REMOVED***</th***REMOVED***
+               </tr***REMOVED***
+              </thead***REMOVED***
+              <tbody***REMOVED***
+                <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***source{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***array, function{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***[ ]</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***The data source to query against. May be an array of strings or a function. The function is passed two arguments, the <code***REMOVED***query</code***REMOVED*** value in the input field and the <code***REMOVED***process</code***REMOVED*** callback. The function may be used synchronously by returning the data source directly or asynchronously via the <code***REMOVED***process</code***REMOVED*** callback's single argument.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***items{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***number{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***8</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***The max number of items to display in the dropdown.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***minLength{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***number{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***1{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***The minimum character length needed before triggering autocomplete suggestions{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***matcher{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***function{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***case insensitive{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***The method used to determine if a query matches an item. Accepts a single argument, the <code***REMOVED***item</code***REMOVED*** against which to test the query. Access the current query with <code***REMOVED***this.query</code***REMOVED***. Return a boolean <code***REMOVED***true</code***REMOVED*** if query is a match.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***sorter{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***function{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***exact match,<br***REMOVED*** case sensitive,<br***REMOVED*** case insensitive{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***Method used to sort autocomplete results. Accepts a single argument <code***REMOVED***items</code***REMOVED*** and has the scope of the typeahead instance. Reference the current query with <code***REMOVED***this.query</code***REMOVED***.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***updater{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***function{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***returns selected item{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***The method used to return selected item. Accepts a single argument, the <code***REMOVED***item</code***REMOVED*** and has the scope of the typeahead instance.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+               <tr***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***highlighter{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***function{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***highlights all default matches{{/i***REMOVED******REMOVED***</td***REMOVED***
+                 <td***REMOVED***{{_i***REMOVED******REMOVED***Method used to highlight autocomplete results. Accepts a single argument <code***REMOVED***item</code***REMOVED*** and has the scope of the typeahead instance. Should return html.{{/i***REMOVED******REMOVED***</td***REMOVED***
+               </tr***REMOVED***
+              </tbody***REMOVED***
+            </table***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Methods{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <h4***REMOVED***.typeahead({{_i***REMOVED******REMOVED***options{{/i***REMOVED******REMOVED***)</h4***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Initializes an input with a typeahead.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          </section***REMOVED***
+
+
+
+          <!-- Affix
+          ================================================== --***REMOVED***
+          <section id="affix"***REMOVED***
+            <div class="page-header"***REMOVED***
+              <h1***REMOVED***{{_i***REMOVED******REMOVED***Affix{{/i***REMOVED******REMOVED*** <small***REMOVED***bootstrap-affix.js</small***REMOVED***</h1***REMOVED***
+            </div***REMOVED***
+
+            <h2***REMOVED***{{_i***REMOVED******REMOVED***Example{{/i***REMOVED******REMOVED***</h2***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***The subnavigation on the left is a live demo of the affix plugin.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <hr class="bs-docs-separator"***REMOVED***
+
+            <h2***REMOVED***{{_i***REMOVED******REMOVED***Usage{{/i***REMOVED******REMOVED***</h2***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Via data attributes{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***To easily add affix behavior to any element, just add <code***REMOVED***data-spy="affix"</code***REMOVED*** to the element you want to spy on. Then use offsets to define when to toggle the pinning of an element on and off.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+            <pre class="prettyprint linenums"***REMOVED***&lt;div data-spy="affix" data-offset-top="200"&gt;***REMOVED***&lt;/div&gt;</pre***REMOVED***
+
+            <div class="alert alert-info"***REMOVED***
+              <strong***REMOVED***{{_i***REMOVED******REMOVED***Heads up!{{/i***REMOVED******REMOVED***</strong***REMOVED***
+              {{_i***REMOVED******REMOVED***You must manage the position of a pinned element and the behavior of its immediate parent. Position is controlled by <code***REMOVED***affix</code***REMOVED***, <code***REMOVED***affix-top</code***REMOVED***, and <code***REMOVED***affix-bottom</code***REMOVED***. Remember to check for a potentially collapsed parent when the affix kicks in as it's removing content from the normal flow of the page.{{/i***REMOVED******REMOVED***
+            </div***REMOVED***
+
+            <h3***REMOVED***{{_i***REMOVED******REMOVED***Via JavaScript{{/i***REMOVED******REMOVED***</h3***REMOVED***
+            <p***REMOVED***{{_i***REMOVED******REMOVED***Call the affix plugin via JavaScript:{{/i***REMOVED******REMOVED***</p***REMOVED***
+            <pre class="prettyprint linenums"***REMOVED***$('#navbar').affix()</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Options{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code***REMOVED***data-</code***REMOVED***, as in <code***REMOVED***data-offset-top="200"</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+             <tr***REMOVED***
+               <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***Name{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th style="width: 100px;"***REMOVED***{{_i***REMOVED******REMOVED***type{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th style="width: 50px;"***REMOVED***{{_i***REMOVED******REMOVED***default{{/i***REMOVED******REMOVED***</th***REMOVED***
+               <th***REMOVED***{{_i***REMOVED******REMOVED***description{{/i***REMOVED******REMOVED***</th***REMOVED***
+             </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+             <tr***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***offset{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***number | function | object{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***10{{/i***REMOVED******REMOVED***</td***REMOVED***
+               <td***REMOVED***{{_i***REMOVED******REMOVED***Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and left directions. To listen for a single direction, or multiple unique offsets, just provide an object <code***REMOVED***offset: { x: 10 ***REMOVED***</code***REMOVED***. Use a function when you need to dynamically provide an offset (useful for some responsive designs).{{/i***REMOVED******REMOVED***</td***REMOVED***
+             </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+        </section***REMOVED***
+
+
+
+      </div***REMOVED***{{! /span9 ***REMOVED******REMOVED***
+    </div***REMOVED***{{! row***REMOVED******REMOVED***
+
+  </div***REMOVED***{{! /.container ***REMOVED******REMOVED***

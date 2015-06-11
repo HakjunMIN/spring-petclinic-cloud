@@ -7,34 +7,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"***REMOVED***
-    <!--
-    - The ContentNegotiatingViewResolver delegates to the InternalResourceViewResolver and BeanNameViewResolver,
-    - and uses the requested media type (determined by the path extension) to pick a matching view. 
-    - When the media type is 'text/html', it will delegate to the InternalResourceViewResolver's JstlView, 
-    - otherwise to the BeanNameViewResolver.
-    --***REMOVED***
+
 	<mvc:view-resolvers***REMOVED***
-		<mvc:content-negotiation use-not-acceptable="true"***REMOVED***
-	    	<mvc:default-views***REMOVED***	    		
-	      		<bean class="org.springframework.web.servlet.view.JstlView"***REMOVED***
-	      			<property name="url" value="" /***REMOVED***
-	      		</bean***REMOVED***
-	    	</mvc:default-views***REMOVED***
-	  	</mvc:content-negotiation***REMOVED***
-	
-	  	<!-- Registering BeanNameViewResolver and InternalViewResolver --***REMOVED***
 	  	<mvc:bean-name /***REMOVED***
-	  	<mvc:jsp prefix="/WEB-INF/jsp/" suffix=".jsp"/***REMOVED***
 	</mvc:view-resolvers***REMOVED***
-
-    <!-- Renders an XML view. Used by the BeanNameViewResolver  --***REMOVED***
-    <bean id="vets/vetList.xml" class="org.springframework.web.servlet.view.xml.MarshallingView"***REMOVED***
-        <property name="marshaller" ref="marshaller"/***REMOVED***
-    </bean***REMOVED***
-
-    <oxm:jaxb2-marshaller id="marshaller"***REMOVED***
-        <!-- Object-XML mapping declared using annotations inside 'Vets' --***REMOVED***
-        <oxm:class-to-be-bound name="org.springframework.samples.petclinic.model.Vets"/***REMOVED***
-    </oxm:jaxb2-marshaller***REMOVED***
 
 </beans***REMOVED***

@@ -1,0 +1,485 @@
+<!-- Subhead
+================================================== --***REMOVED***
+<header class="jumbotron subhead" id="overview"***REMOVED***
+  <div class="container"***REMOVED***
+    <h1***REMOVED***{{_i***REMOVED******REMOVED***Scaffolding{{/i***REMOVED******REMOVED***</h1***REMOVED***
+    <p class="lead"***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap is built on responsive 12-column grids, layouts, and components.{{/i***REMOVED******REMOVED***</p***REMOVED***
+  </div***REMOVED***
+</header***REMOVED***
+
+  <div class="container"***REMOVED***
+
+    <!-- Docs nav
+    ================================================== --***REMOVED***
+    <div class="row"***REMOVED***
+      <div class="span3 bs-docs-sidebar"***REMOVED***
+        <ul class="nav nav-list bs-docs-sidenav"***REMOVED***
+          <li***REMOVED***<a href="#global"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Global styles{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#gridSystem"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Grid system{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#fluidGridSystem"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Fluid grid system{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#layouts"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Layouts{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#responsive"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** {{_i***REMOVED******REMOVED***Responsive design{{/i***REMOVED******REMOVED***</a***REMOVED***</li***REMOVED***
+        </ul***REMOVED***
+      </div***REMOVED***
+      <div class="span9"***REMOVED***
+
+
+
+        <!-- Global Bootstrap settings
+        ================================================== --***REMOVED***
+        <section id="global"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Global settings{{/i***REMOVED******REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Requires HTML5 doctype{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  ***REMOVED***
+&lt;/html&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Typography and links{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap sets basic global display, typography, and link styles. Specifically, we:{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <ul***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Remove <code***REMOVED***margin</code***REMOVED*** on the body{{/i***REMOVED******REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Set <code***REMOVED***background-color: white;</code***REMOVED*** on the <code***REMOVED***body</code***REMOVED***{{/i***REMOVED******REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Use the <code***REMOVED***@baseFontFamily</code***REMOVED***, <code***REMOVED***@baseFontSize</code***REMOVED***, and <code***REMOVED***@baseLineHeight</code***REMOVED*** attributes as our typographic base{{/i***REMOVED******REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Set the global link color via <code***REMOVED***@linkColor</code***REMOVED*** and apply link underlines only on <code***REMOVED***:hover</code***REMOVED***{{/i***REMOVED******REMOVED***</li***REMOVED***
+          </ul***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***These styles can be found within <strong***REMOVED***scaffolding.less</strong***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Reset via Normalize{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***With Bootstrap 2, the old reset block has been dropped in favor of <a href="http://necolas.github.com/normalize.css/" target="_blank"***REMOVED***Normalize.css</a***REMOVED***, a project by <a href="http://twitter.com/necolas" target="_blank"***REMOVED***Nicolas Gallagher</a***REMOVED*** and <a href="http://twitter.com/jon_neal" target="_blank"***REMOVED***Jonathan Neal</a***REMOVED*** that also powers the <a href="http://html5boilerplate.com" target="_blank"***REMOVED***HTML5 Boilerplate</a***REMOVED***. While we use much of Normalize within our <strong***REMOVED***reset.less</strong***REMOVED***, we have removed some elements specifically for Bootstrap.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+        </section***REMOVED***
+
+
+
+
+        <!-- Grid system
+        ================================================== --***REMOVED***
+        <section id="gridSystem"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Default grid system{{/i***REMOVED******REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Live grid example{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***The default Bootstrap grid system utilizes <strong***REMOVED***12 columns</strong***REMOVED***, making for a 940px wide container without <a href="./scaffolding.html#responsive"***REMOVED***responsive features</a***REMOVED*** enabled. With the responsive CSS file added, the grid adapts to be 724px and 1170px wide depending on your viewport. Below 767px viewports, the columns become fluid and stack vertically.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="bs-docs-grid"***REMOVED***
+            <div class="row show-grid"***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+            </div***REMOVED***
+            <div class="row show-grid"***REMOVED***
+              <div class="span2"***REMOVED***2</div***REMOVED***
+              <div class="span3"***REMOVED***3</div***REMOVED***
+              <div class="span4"***REMOVED***4</div***REMOVED***
+            </div***REMOVED***
+            <div class="row show-grid"***REMOVED***
+              <div class="span4"***REMOVED***4</div***REMOVED***
+              <div class="span5"***REMOVED***5</div***REMOVED***
+            </div***REMOVED***
+            <div class="row show-grid"***REMOVED***
+              <div class="span9"***REMOVED***9</div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Basic grid HTML{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***For a simple two column layout, create a <code***REMOVED***.row</code***REMOVED*** and add the appropriate number of <code***REMOVED***.span*</code***REMOVED*** columns. As this is a 12-column grid, each <code***REMOVED***.span*</code***REMOVED*** spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent).{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;***REMOVED***&lt;/div&gt;
+  &lt;div class="span8"&gt;***REMOVED***&lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Given this example, we have <code***REMOVED***.span4</code***REMOVED*** and <code***REMOVED***.span8</code***REMOVED***, making for 12 total columns and a complete row.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Offsetting columns{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Move columns to the right using <code***REMOVED***.offset*</code***REMOVED*** classes. Each class increases the left margin of a column by a whole column. For example, <code***REMOVED***.offset4</code***REMOVED*** moves <code***REMOVED***.span4</code***REMOVED*** over four columns.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="bs-docs-grid"***REMOVED***
+            <div class="row show-grid"***REMOVED***
+              <div class="span4"***REMOVED***4</div***REMOVED***
+              <div class="span3 offset2"***REMOVED***3 offset 2</div***REMOVED***
+            </div***REMOVED***<!-- /row --***REMOVED***
+            <div class="row show-grid"***REMOVED***
+              <div class="span3 offset1"***REMOVED***3 offset 1</div***REMOVED***
+              <div class="span3 offset2"***REMOVED***3 offset 2</div***REMOVED***
+            </div***REMOVED***<!-- /row --***REMOVED***
+            <div class="row show-grid"***REMOVED***
+              <div class="span6 offset3"***REMOVED***6 offset 3</div***REMOVED***
+            </div***REMOVED***<!-- /row --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;***REMOVED***&lt;/div&gt;
+  &lt;div class="span3 offset2"&gt;***REMOVED***&lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Nesting columns{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***To nest your content with the default grid, add a new <code***REMOVED***.row</code***REMOVED*** and set of <code***REMOVED***.span*</code***REMOVED*** columns within an existing <code***REMOVED***.span*</code***REMOVED*** column. Nested rows should include a set of columns that add up to the number of columns of its parent.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="row show-grid"***REMOVED***
+            <div class="span9"***REMOVED***
+              {{_i***REMOVED******REMOVED***Level 1 column{{/i***REMOVED******REMOVED***
+              <div class="row show-grid"***REMOVED***
+                <div class="span6"***REMOVED***
+                  {{_i***REMOVED******REMOVED***Level 2{{/i***REMOVED******REMOVED***
+                </div***REMOVED***
+                <div class="span3"***REMOVED***
+                  {{_i***REMOVED******REMOVED***Level 2{{/i***REMOVED******REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="row"&gt;
+  &lt;div class="span9"&gt;
+    {{_i***REMOVED******REMOVED***Level 1 column{{/i***REMOVED******REMOVED***
+    &lt;div class="row"&gt;
+      &lt;div class="span6"&gt;{{_i***REMOVED******REMOVED***Level 2{{/i***REMOVED******REMOVED***&lt;/div&gt;
+      &lt;div class="span3"&gt;{{_i***REMOVED******REMOVED***Level 2{{/i***REMOVED******REMOVED***&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+        </section***REMOVED***
+
+
+
+        <!-- Fluid grid system
+        ================================================== --***REMOVED***
+        <section id="fluidGridSystem"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Fluid grid system{{/i***REMOVED******REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Live fluid grid example{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***The fluid grid system uses percents instead of pixels for column widths. It has the same responsive capabilities as our fixed grid system, ensuring proper proportions for key screen resolutions and devices.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="bs-docs-grid"***REMOVED***
+            <div class="row-fluid show-grid"***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+              <div class="span1"***REMOVED***1</div***REMOVED***
+            </div***REMOVED***
+            <div class="row-fluid show-grid"***REMOVED***
+              <div class="span4"***REMOVED***4</div***REMOVED***
+              <div class="span4"***REMOVED***4</div***REMOVED***
+              <div class="span4"***REMOVED***4</div***REMOVED***
+            </div***REMOVED***
+            <div class="row-fluid show-grid"***REMOVED***
+              <div class="span4"***REMOVED***4</div***REMOVED***
+              <div class="span8"***REMOVED***8</div***REMOVED***
+            </div***REMOVED***
+            <div class="row-fluid show-grid"***REMOVED***
+              <div class="span6"***REMOVED***6</div***REMOVED***
+              <div class="span6"***REMOVED***6</div***REMOVED***
+            </div***REMOVED***
+            <div class="row-fluid show-grid"***REMOVED***
+              <div class="span12"***REMOVED***12</div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Basic fluid grid HTML{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Make any row "fluid" by changing <code***REMOVED***.row</code***REMOVED*** to <code***REMOVED***.row-fluid</code***REMOVED***. The column classes stay the exact same, making it easy to flip between fixed and fluid grids.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span4"&gt;***REMOVED***&lt;/div&gt;
+  &lt;div class="span8"&gt;***REMOVED***&lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Fluid offsetting{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Operates the same way as the fixed grid system offsetting: add <code***REMOVED***.offset*</code***REMOVED*** to any column to offset by that many columns.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="bs-docs-grid"***REMOVED***
+            <div class="row-fluid show-grid"***REMOVED***
+              <div class="span4"***REMOVED***4</div***REMOVED***
+              <div class="span4 offset4"***REMOVED***4 offset 4</div***REMOVED***
+            </div***REMOVED***<!-- /row --***REMOVED***
+            <div class="row-fluid show-grid"***REMOVED***
+              <div class="span3 offset3"***REMOVED***3 offset 3</div***REMOVED***
+              <div class="span3 offset3"***REMOVED***3 offset 3</div***REMOVED***
+            </div***REMOVED***<!-- /row --***REMOVED***
+            <div class="row-fluid show-grid"***REMOVED***
+              <div class="span6 offset6"***REMOVED***6 offset 6</div***REMOVED***
+            </div***REMOVED***<!-- /row --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span4"&gt;***REMOVED***&lt;/div&gt;
+  &lt;div class="span4 offset2"&gt;***REMOVED***&lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Fluid nesting{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Fluid grids utilize nesting differently: each nested level of columns should add up to 12 columns. This is because the fluid grid uses percentages, not pixels, for setting widths.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="row-fluid show-grid"***REMOVED***
+            <div class="span12"***REMOVED***
+              {{_i***REMOVED******REMOVED***Fluid 12{{/i***REMOVED******REMOVED***
+              <div class="row-fluid show-grid"***REMOVED***
+                <div class="span6"***REMOVED***
+                  {{_i***REMOVED******REMOVED***Fluid 6{{/i***REMOVED******REMOVED***
+                  <div class="row-fluid show-grid"***REMOVED***
+                    <div class="span6"***REMOVED***
+                      {{_i***REMOVED******REMOVED***Fluid 6{{/i***REMOVED******REMOVED***
+                    </div***REMOVED***
+                    <div class="span6"***REMOVED***
+                      {{_i***REMOVED******REMOVED***Fluid 6{{/i***REMOVED******REMOVED***
+                    </div***REMOVED***
+                  </div***REMOVED***
+                </div***REMOVED***
+                <div class="span6"***REMOVED***
+                  {{_i***REMOVED******REMOVED***Fluid 6{{/i***REMOVED******REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="row-fluid"&gt;
+  &lt;div class="span12"&gt;
+    {{_i***REMOVED******REMOVED***Fluid 12{{/i***REMOVED******REMOVED***
+    &lt;div class="row-fluid"&gt;
+      &lt;div class="span6"&gt;
+        {{_i***REMOVED******REMOVED***Fluid 6{{/i***REMOVED******REMOVED***
+        &lt;div class="row-fluid"&gt;
+          &lt;div class="span6"&gt;{{_i***REMOVED******REMOVED***Fluid 6{{/i***REMOVED******REMOVED***&lt;/div&gt;
+          &lt;div class="span6"&gt;{{_i***REMOVED******REMOVED***Fluid 6{{/i***REMOVED******REMOVED***&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="span6"&gt;{{_i***REMOVED******REMOVED***Fluid 6{{/i***REMOVED******REMOVED***&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+
+        <!-- Layouts (Default and fluid)
+        ================================================== --***REMOVED***
+        <section id="layouts"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Layouts{{/i***REMOVED******REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Fixed layout{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Provides a common fixed-width (and optionally responsive) layout with only <code***REMOVED***&lt;div class="container"&gt;</code***REMOVED*** required.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="mini-layout"***REMOVED***
+            <div class="mini-layout-body"***REMOVED***</div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    ***REMOVED***
+  &lt;/div&gt;
+&lt;/body&gt;
+</pre***REMOVED***
+
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Fluid layout{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Create a fluid, two-column page with <code***REMOVED***&lt;div class="container-fluid"&gt;</code***REMOVED***&mdash;great for applications and docs.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <div class="mini-layout fluid"***REMOVED***
+            <div class="mini-layout-sidebar"***REMOVED***</div***REMOVED***
+            <div class="mini-layout-body"***REMOVED***</div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="container-fluid"&gt;
+  &lt;div class="row-fluid"&gt;
+    &lt;div class="span2"&gt;
+      &lt;!--{{_i***REMOVED******REMOVED***Sidebar content{{/i***REMOVED******REMOVED***--&gt;
+    &lt;/div&gt;
+    &lt;div class="span10"&gt;
+      &lt;!--{{_i***REMOVED******REMOVED***Body content{{/i***REMOVED******REMOVED***--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+        </section***REMOVED***
+
+
+
+
+        <!-- Responsive design
+        ================================================== --***REMOVED***
+        <section id="responsive"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***{{_i***REMOVED******REMOVED***Responsive design{{/i***REMOVED******REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          {{! Enabling ***REMOVED******REMOVED***
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Enabling responsive features{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Turn on responsive CSS in your project by including the proper meta tag and additional stylesheet within the <code***REMOVED***&lt;head&gt;</code***REMOVED*** of your document. If you've compiled Bootstrap from the Customize page, you need only include the meta tag.{{/i***REMOVED******REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link href="assets/css/bootstrap-responsive.css" rel="stylesheet"&gt;
+</pre***REMOVED***
+          <p***REMOVED***<span class="label label-info"***REMOVED***{{_i***REMOVED******REMOVED***Heads up!{{/i***REMOVED******REMOVED***</span***REMOVED*** {{_i***REMOVED******REMOVED*** Bootstrap doesn't include responsive features by default at this time as not everything needs to be responsive. Instead of encouraging developers to remove this feature, we figure it best to enable it as needed.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          {{! About ***REMOVED******REMOVED***
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***About responsive Bootstrap{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <img src="assets/img/responsive-illustrations.png" alt="Responsive devices" style="float: right; margin: 0 0 20px 20px;"***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Media queries allow for custom CSS based on a number of conditions&mdash;ratios, widths, display type, etc&mdash;but usually focuses around <code***REMOVED***min-width</code***REMOVED*** and <code***REMOVED***max-width</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <ul***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Modify the width of column in our grid{{/i***REMOVED******REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Stack elements instead of float wherever necessary{{/i***REMOVED******REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Resize headings and text to be more appropriate for devices{{/i***REMOVED******REMOVED***</li***REMOVED***
+          </ul***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Use media queries responsibly and only as a start to your mobile audiences. For larger projects, do consider dedicated code bases and not layers of media queries.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          {{! Supported ***REMOVED******REMOVED***
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Supported devices{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Bootstrap supports a handful of media queries in a single file to help make your projects more appropriate on different devices and screen resolutions. Here's what's included:{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***{{_i***REMOVED******REMOVED***Label{{/i***REMOVED******REMOVED***</th***REMOVED***
+                <th***REMOVED***{{_i***REMOVED******REMOVED***Layout width{{/i***REMOVED******REMOVED***</th***REMOVED***
+                <th***REMOVED***{{_i***REMOVED******REMOVED***Column width{{/i***REMOVED******REMOVED***</th***REMOVED***
+                <th***REMOVED***{{_i***REMOVED******REMOVED***Gutter width{{/i***REMOVED******REMOVED***</th***REMOVED***
+              </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***{{_i***REMOVED******REMOVED***Large display{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td***REMOVED***1200px and up</td***REMOVED***
+                <td***REMOVED***70px</td***REMOVED***
+                <td***REMOVED***30px</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***{{_i***REMOVED******REMOVED***Default{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td***REMOVED***980px and up</td***REMOVED***
+                <td***REMOVED***60px</td***REMOVED***
+                <td***REMOVED***20px</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***{{_i***REMOVED******REMOVED***Portrait tablets{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td***REMOVED***768px and above</td***REMOVED***
+                <td***REMOVED***42px</td***REMOVED***
+                <td***REMOVED***20px</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***{{_i***REMOVED******REMOVED***Phones to tablets{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td***REMOVED***767px and below</td***REMOVED***
+                <td class="muted" colspan="2"***REMOVED***{{_i***REMOVED******REMOVED***Fluid columns, no fixed widths{{/i***REMOVED******REMOVED***</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***{{_i***REMOVED******REMOVED***Phones{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td***REMOVED***480px and below</td***REMOVED***
+                <td class="muted" colspan="2"***REMOVED***{{_i***REMOVED******REMOVED***Fluid columns, no fixed widths{{/i***REMOVED******REMOVED***</td***REMOVED***
+              </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+/* {{_i***REMOVED******REMOVED***Large desktop{{/i***REMOVED******REMOVED*** */
+@media (min-width: 1200px) { ***REMOVED*** ***REMOVED***
+
+/* {{_i***REMOVED******REMOVED***Portrait tablet to landscape and desktop{{/i***REMOVED******REMOVED*** */
+@media (min-width: 768px) and (max-width: 979px) { ***REMOVED*** ***REMOVED***
+
+/* {{_i***REMOVED******REMOVED***Landscape phone to portrait tablet{{/i***REMOVED******REMOVED*** */
+@media (max-width: 767px) { ***REMOVED*** ***REMOVED***
+
+/* {{_i***REMOVED******REMOVED***Landscape phones and down{{/i***REMOVED******REMOVED*** */
+@media (max-width: 480px) { ***REMOVED*** ***REMOVED***
+</pre***REMOVED***
+
+
+          {{! Responsive utility classes ***REMOVED******REMOVED***
+          <h2***REMOVED***{{_i***REMOVED******REMOVED***Responsive utility classes{{/i***REMOVED******REMOVED***</h2***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***For faster mobile-friendly development, use these utility classes for showing and hiding content by device. Below is a table of the available classes and their effect on a given media query layout (labeled by device). They can be found in <code***REMOVED***responsive.less</code***REMOVED***.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <table class="table table-bordered table-striped responsive-utilities"***REMOVED***
+            <thead***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***{{_i***REMOVED******REMOVED***Class{{/i***REMOVED******REMOVED***</th***REMOVED***
+                <th***REMOVED***{{_i***REMOVED******REMOVED***Phones <small***REMOVED***767px and below</small***REMOVED***{{/i***REMOVED******REMOVED***</th***REMOVED***
+                <th***REMOVED***{{_i***REMOVED******REMOVED***Tablets <small***REMOVED***979px to 768px</small***REMOVED***{{/i***REMOVED******REMOVED***</th***REMOVED***
+                <th***REMOVED***{{_i***REMOVED******REMOVED***Desktops <small***REMOVED***Default</small***REMOVED***{{/i***REMOVED******REMOVED***</th***REMOVED***
+              </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***<code***REMOVED***.visible-phone</code***REMOVED***</th***REMOVED***
+                <td class="is-visible"***REMOVED***{{_i***REMOVED******REMOVED***Visible{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-hidden"***REMOVED***{{_i***REMOVED******REMOVED***Hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-hidden"***REMOVED***{{_i***REMOVED******REMOVED***Hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***<code***REMOVED***.visible-tablet</code***REMOVED***</th***REMOVED***
+                <td class="is-hidden"***REMOVED***{{_i***REMOVED******REMOVED***Hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-visible"***REMOVED***{{_i***REMOVED******REMOVED***Visible{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-hidden"***REMOVED***{{_i***REMOVED******REMOVED***Hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***<code***REMOVED***.visible-desktop</code***REMOVED***</th***REMOVED***
+                <td class="is-hidden"***REMOVED***{{_i***REMOVED******REMOVED***Hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-hidden"***REMOVED***{{_i***REMOVED******REMOVED***Hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-visible"***REMOVED***{{_i***REMOVED******REMOVED***Visible{{/i***REMOVED******REMOVED***</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***<code***REMOVED***.hidden-phone</code***REMOVED***</th***REMOVED***
+                <td class="is-hidden"***REMOVED***{{_i***REMOVED******REMOVED***Hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-visible"***REMOVED***{{_i***REMOVED******REMOVED***Visible{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-visible"***REMOVED***{{_i***REMOVED******REMOVED***Visible{{/i***REMOVED******REMOVED***</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***<code***REMOVED***.hidden-tablet</code***REMOVED***</th***REMOVED***
+                <td class="is-visible"***REMOVED***{{_i***REMOVED******REMOVED***Visible{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-hidden"***REMOVED***{{_i***REMOVED******REMOVED***Hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-visible"***REMOVED***{{_i***REMOVED******REMOVED***Visible{{/i***REMOVED******REMOVED***</td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***<code***REMOVED***.hidden-desktop</code***REMOVED***</th***REMOVED***
+                <td class="is-visible"***REMOVED***{{_i***REMOVED******REMOVED***Visible{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-visible"***REMOVED***{{_i***REMOVED******REMOVED***Visible{{/i***REMOVED******REMOVED***</td***REMOVED***
+                <td class="is-hidden"***REMOVED***{{_i***REMOVED******REMOVED***Hidden{{/i***REMOVED******REMOVED***</td***REMOVED***
+              </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***When to use{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Use on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation. Responsive utilities should not be used with tables, and as such are not supported.{{/i***REMOVED******REMOVED***</p***REMOVED***
+
+          <h3***REMOVED***{{_i***REMOVED******REMOVED***Responsive utilities test case{{/i***REMOVED******REMOVED***</h3***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Resize your browser or load on different devices to test the above classes.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <h4***REMOVED***{{_i***REMOVED******REMOVED***Visible on***REMOVED***{{/i***REMOVED******REMOVED***</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Green checkmarks indicate that class is visible in your current viewport.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <ul class="responsive-utilities-test"***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Phone{{/i***REMOVED******REMOVED***<span class="visible-phone"***REMOVED***&#10004; {{_i***REMOVED******REMOVED***Phone{{/i***REMOVED******REMOVED***</span***REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Tablet{{/i***REMOVED******REMOVED***<span class="visible-tablet"***REMOVED***&#10004; {{_i***REMOVED******REMOVED***Tablet{{/i***REMOVED******REMOVED***</span***REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Desktop{{/i***REMOVED******REMOVED***<span class="visible-desktop"***REMOVED***&#10004; {{_i***REMOVED******REMOVED***Desktop{{/i***REMOVED******REMOVED***</span***REMOVED***</li***REMOVED***
+          </ul***REMOVED***
+          <h4***REMOVED***{{_i***REMOVED******REMOVED***Hidden on***REMOVED***{{/i***REMOVED******REMOVED***</h4***REMOVED***
+          <p***REMOVED***{{_i***REMOVED******REMOVED***Here, green checkmarks indicate that class is hidden in your current viewport.{{/i***REMOVED******REMOVED***</p***REMOVED***
+          <ul class="responsive-utilities-test hidden-on"***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Phone{{/i***REMOVED******REMOVED***<span class="hidden-phone"***REMOVED***&#10004; {{_i***REMOVED******REMOVED***Phone{{/i***REMOVED******REMOVED***</span***REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Tablet{{/i***REMOVED******REMOVED***<span class="hidden-tablet"***REMOVED***&#10004; {{_i***REMOVED******REMOVED***Tablet{{/i***REMOVED******REMOVED***</span***REMOVED***</li***REMOVED***
+            <li***REMOVED***{{_i***REMOVED******REMOVED***Desktop{{/i***REMOVED******REMOVED***<span class="hidden-desktop"***REMOVED***&#10004; {{_i***REMOVED******REMOVED***Desktop{{/i***REMOVED******REMOVED***</span***REMOVED***</li***REMOVED***
+          </ul***REMOVED***
+
+        </section***REMOVED***
+
+
+
+      </div***REMOVED***{{! /span9 ***REMOVED******REMOVED***
+    </div***REMOVED***{{! row***REMOVED******REMOVED***
+
+  </div***REMOVED***{{! /.container ***REMOVED******REMOVED***

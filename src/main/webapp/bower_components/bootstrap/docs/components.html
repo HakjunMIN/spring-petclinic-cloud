@@ -1,0 +1,2626 @@
+<!DOCTYPE html***REMOVED***
+<html lang="en"***REMOVED***
+  <head***REMOVED***
+    <meta charset="utf-8"***REMOVED***
+    <title***REMOVED***Components · Bootstrap</title***REMOVED***
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"***REMOVED***
+    <meta name="description" content=""***REMOVED***
+    <meta name="author" content=""***REMOVED***
+
+    <!-- Le styles --***REMOVED***
+    <link href="assets/css/bootstrap.css" rel="stylesheet"***REMOVED***
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"***REMOVED***
+    <link href="assets/css/docs.css" rel="stylesheet"***REMOVED***
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet"***REMOVED***
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements --***REMOVED***
+    <!--[if lt IE 9]***REMOVED***
+      <script src="assets/js/html5shiv.js"***REMOVED***</script***REMOVED***
+    <![endif]--***REMOVED***
+
+    <!-- Le fav and touch icons --***REMOVED***
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"***REMOVED***
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"***REMOVED***
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"***REMOVED***
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"***REMOVED***
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png"***REMOVED***
+
+  </head***REMOVED***
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar"***REMOVED***
+
+    <!-- Navbar
+    ================================================== --***REMOVED***
+    <div class="navbar navbar-inverse navbar-fixed-top"***REMOVED***
+      <div class="navbar-inner"***REMOVED***
+        <div class="container"***REMOVED***
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"***REMOVED***
+            <span class="icon-bar"***REMOVED***</span***REMOVED***
+            <span class="icon-bar"***REMOVED***</span***REMOVED***
+            <span class="icon-bar"***REMOVED***</span***REMOVED***
+          </button***REMOVED***
+          <a class="brand" href="./index.html"***REMOVED***Bootstrap</a***REMOVED***
+          <div class="nav-collapse collapse"***REMOVED***
+            <ul class="nav"***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./index.html"***REMOVED***Home</a***REMOVED***
+              </li***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./getting-started.html"***REMOVED***Get started</a***REMOVED***
+              </li***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./scaffolding.html"***REMOVED***Scaffolding</a***REMOVED***
+              </li***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./base-css.html"***REMOVED***Base CSS</a***REMOVED***
+              </li***REMOVED***
+              <li class="active"***REMOVED***
+                <a href="./components.html"***REMOVED***Components</a***REMOVED***
+              </li***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./javascript.html"***REMOVED***JavaScript</a***REMOVED***
+              </li***REMOVED***
+              <li class=""***REMOVED***
+                <a href="./customize.html"***REMOVED***Customize</a***REMOVED***
+              </li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+        </div***REMOVED***
+      </div***REMOVED***
+    </div***REMOVED***
+
+<!-- Subhead
+================================================== --***REMOVED***
+<header class="jumbotron subhead" id="overview"***REMOVED***
+  <div class="container"***REMOVED***
+    <h1***REMOVED***Components</h1***REMOVED***
+    <p class="lead"***REMOVED***Dozens of reusable components built to provide navigation, alerts, popovers, and more.</p***REMOVED***
+  </div***REMOVED***
+</header***REMOVED***
+
+
+  <div class="container"***REMOVED***
+
+    <!-- Docs nav
+    ================================================== --***REMOVED***
+    <div class="row"***REMOVED***
+      <div class="span3 bs-docs-sidebar"***REMOVED***
+        <ul class="nav nav-list bs-docs-sidenav"***REMOVED***
+          <li***REMOVED***<a href="#dropdowns"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Dropdowns</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#buttonGroups"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Button groups</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#buttonDropdowns"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Button dropdowns</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#navs"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Navs</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#navbar"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Navbar</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#breadcrumbs"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Breadcrumbs</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#pagination"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Pagination</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#labels-badges"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Labels and badges</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#typography"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Typography</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#thumbnails"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Thumbnails</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#alerts"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Alerts</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#progress"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Progress bars</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#media"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Media object</a***REMOVED***</li***REMOVED***
+          <li***REMOVED***<a href="#misc"***REMOVED***<i class="icon-chevron-right"***REMOVED***</i***REMOVED*** Misc</a***REMOVED***</li***REMOVED***
+        </ul***REMOVED***
+      </div***REMOVED***
+      <div class="span9"***REMOVED***
+
+
+
+        <!-- Dropdowns
+        ================================================== --***REMOVED***
+        <section id="dropdowns"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Dropdown menus</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Example</h2***REMOVED***
+          <p***REMOVED***Toggleable, contextual menu for displaying lists of links. Made interactive with the <a href="./javascript.html#dropdowns"***REMOVED***dropdown JavaScript plugin</a***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="dropdown clearfix"***REMOVED***
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;"***REMOVED***
+                <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                <li class="divider"***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h2***REMOVED***Markup</h2***REMOVED***
+          <p***REMOVED***Looking at just the dropdown menu, here's the required HTML. You need to wrap the dropdown's trigger and the dropdown menu within <code***REMOVED***.dropdown</code***REMOVED***, or another element that declares <code***REMOVED***position: relative;</code***REMOVED***. Then just create the menu.</p***REMOVED***
+
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="dropdown"&gt;
+  &lt;!-- Link or button to toggle dropdown --&gt;
+  &lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h2***REMOVED***Options</h2***REMOVED***
+          <p***REMOVED***Align menus to the right and add include additional levels of dropdowns.</p***REMOVED***
+
+          <h3***REMOVED***Aligning the menus</h3***REMOVED***
+          <p***REMOVED***Add <code***REMOVED***.pull-right</code***REMOVED*** to a <code***REMOVED***.dropdown-menu</code***REMOVED*** to right align the dropdown menu.</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel"&gt;
+  ***REMOVED***
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Disabled menu options</h3***REMOVED***
+          <p***REMOVED***Add <code***REMOVED***.disabled</code***REMOVED*** to a <code***REMOVED***&lt;li&gt;</code***REMOVED*** in the dropdown to disable the link.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="dropdown clearfix"***REMOVED***
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;"***REMOVED***
+                <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Regular link</a***REMOVED***</li***REMOVED***
+                <li class="disabled"***REMOVED***<a tabindex="-1" href="#"***REMOVED***Disabled link</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Another link</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Regular link&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="disabled"&gt;&lt;a tabindex="-1" href="#"&gt;Disabled link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Sub menus on dropdowns</h3***REMOVED***
+          <p***REMOVED***Add an extra level of dropdown menus, appearing on hover like those of OS X, with some simple markup additions. Add <code***REMOVED***.dropdown-submenu</code***REMOVED*** to any <code***REMOVED***li</code***REMOVED*** in an existing dropdown menu for automatic styling.</p***REMOVED***
+          <div class="bs-docs-example bs-docs-example-submenus"***REMOVED***
+
+            <div class="pull-left"***REMOVED***
+              <p class="muted"***REMOVED***Default</p***REMOVED***
+              <div class="dropdown clearfix"***REMOVED***
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"***REMOVED***
+                  <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li class="dropdown-submenu"***REMOVED***
+                    <a tabindex="-1" href="#"***REMOVED***More options</a***REMOVED***
+                    <ul class="dropdown-menu"***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                    </ul***REMOVED***
+                  </li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+
+            <div class="pull-left"***REMOVED***
+              <p class="muted"***REMOVED***Dropup</p***REMOVED***
+              <div class="dropup"***REMOVED***
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"***REMOVED***
+                  <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li class="dropdown-submenu"***REMOVED***
+                    <a tabindex="-1" href="#"***REMOVED***More options</a***REMOVED***
+                    <ul class="dropdown-menu"***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                    </ul***REMOVED***
+                  </li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+
+            <div class="pull-left"***REMOVED***
+              <p class="muted"***REMOVED***Left submenu</p***REMOVED***
+              <div class="dropdown"***REMOVED***
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"***REMOVED***
+                  <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li class="dropdown-submenu pull-left"***REMOVED***
+                    <a tabindex="-1" href="#"***REMOVED***More options</a***REMOVED***
+                    <ul class="dropdown-menu"***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a tabindex="-1" href="#"***REMOVED***Second level link</a***REMOVED***</li***REMOVED***
+                    </ul***REMOVED***
+                  </li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dLabel"&gt;
+  ***REMOVED***
+  &lt;li class="dropdown-submenu"&gt;
+    &lt;a tabindex="-1" href="#"&gt;More options&lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ***REMOVED***
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+
+        <!-- Button Groups
+        ================================================== --***REMOVED***
+        <section id="buttonGroups"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Button groups</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Examples</h2***REMOVED***
+          <p***REMOVED***Two basic options, along with two more specific variations.</p***REMOVED***
+
+          <h3***REMOVED***Single button group</h3***REMOVED***
+          <p***REMOVED***Wrap a series of buttons with <code***REMOVED***.btn</code***REMOVED*** in <code***REMOVED***.btn-group</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="btn-group" style="margin: 9px 0 5px;"***REMOVED***
+              <button class="btn"***REMOVED***Left</button***REMOVED***
+              <button class="btn"***REMOVED***Middle</button***REMOVED***
+              <button class="btn"***REMOVED***Right</button***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;Left&lt;/button&gt;
+  &lt;button class="btn"&gt;Middle&lt;/button&gt;
+  &lt;button class="btn"&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Multiple button groups</h3***REMOVED***
+          <p***REMOVED***Combine sets of <code***REMOVED***&lt;div class="btn-group"&gt;</code***REMOVED*** into a <code***REMOVED***&lt;div class="btn-toolbar"&gt;</code***REMOVED*** for more complex components.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="btn-toolbar" style="margin: 0;"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn"***REMOVED***1</button***REMOVED***
+                <button class="btn"***REMOVED***2</button***REMOVED***
+                <button class="btn"***REMOVED***3</button***REMOVED***
+                <button class="btn"***REMOVED***4</button***REMOVED***
+              </div***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn"***REMOVED***5</button***REMOVED***
+                <button class="btn"***REMOVED***6</button***REMOVED***
+                <button class="btn"***REMOVED***7</button***REMOVED***
+              </div***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn"***REMOVED***8</button***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+    ***REMOVED***
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Vertical button groups</h3***REMOVED***
+          <p***REMOVED***Make a set of buttons appear vertically stacked rather than horizontally.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="btn-group btn-group-vertical"***REMOVED***
+              <button type="button" class="btn"***REMOVED***<i class="icon-align-left"***REMOVED***</i***REMOVED***</button***REMOVED***
+              <button type="button" class="btn"***REMOVED***<i class="icon-align-center"***REMOVED***</i***REMOVED***</button***REMOVED***
+              <button type="button" class="btn"***REMOVED***<i class="icon-align-right"***REMOVED***</i***REMOVED***</button***REMOVED***
+              <button type="button" class="btn"***REMOVED***<i class="icon-align-justify"***REMOVED***</i***REMOVED***</button***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-group btn-group-vertical"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h4***REMOVED***Checkbox and radio flavors</h4***REMOVED***
+          <p***REMOVED***Button groups can also function as radios, where only one button may be active, or checkboxes, where any number of buttons may be active. View <a href="./javascript.html#buttons"***REMOVED***the JavaScript docs</a***REMOVED*** for that.</p***REMOVED***
+
+          <h4***REMOVED***Dropdowns in button groups</h4***REMOVED***
+          <p***REMOVED***<span class="label label-info"***REMOVED***Heads up!</span***REMOVED*** Buttons with dropdowns must be individually wrapped in their own <code***REMOVED***.btn-group</code***REMOVED*** within a <code***REMOVED***.btn-toolbar</code***REMOVED*** for proper rendering.</p***REMOVED***
+        </section***REMOVED***
+
+
+
+        <!-- Split button dropdowns
+        ================================================== --***REMOVED***
+        <section id="buttonDropdowns"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Button dropdown menus</h1***REMOVED***
+          </div***REMOVED***
+
+
+          <h2***REMOVED***Overview and examples</h2***REMOVED***
+          <p***REMOVED***Use any button to trigger a dropdown menu by placing it within a <code***REMOVED***.btn-group</code***REMOVED*** and providing the proper menu markup.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="btn-toolbar" style="margin: 0;"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn dropdown-toggle" data-toggle="dropdown"***REMOVED***Action <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"***REMOVED***Action <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"***REMOVED***Danger <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"***REMOVED***Warning <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"***REMOVED***Success <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"***REMOVED***Info <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"***REMOVED***Inverse <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+            </div***REMOVED***<!-- /btn-toolbar --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    Action
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Works with all button sizes</h3***REMOVED***
+          <p***REMOVED***Button dropdowns work at any size:  <code***REMOVED***.btn-large</code***REMOVED***, <code***REMOVED***.btn-small</code***REMOVED***, or <code***REMOVED***.btn-mini</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="btn-toolbar" style="margin: 0;"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"***REMOVED***Large button <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"***REMOVED***Small button <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"***REMOVED***Mini button <span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+            </div***REMOVED***<!-- /btn-toolbar --***REMOVED***
+          </div***REMOVED***
+
+          <h3***REMOVED***Requires JavaScript</h3***REMOVED***
+          <p***REMOVED***Button dropdowns require the <a href="./javascript.html#dropdowns"***REMOVED***Bootstrap dropdown plugin</a***REMOVED*** to function.</p***REMOVED***
+          <p***REMOVED***In some cases&mdash;like mobile&mdash;dropdown menus will extend outside the viewport. You need to resolve the alignment manually or with custom JavaScript.</p***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Split button dropdowns</h2***REMOVED***
+          <p***REMOVED***Building on the button group styles and markup, we can easily create a split button. Split buttons feature a standard action on the left and a dropdown toggle on the right with contextual links.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="btn-toolbar" style="margin: 0;"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn"***REMOVED***Action</button***REMOVED***
+                <button class="btn dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-primary"***REMOVED***Action</button***REMOVED***
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-danger"***REMOVED***Danger</button***REMOVED***
+                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-warning"***REMOVED***Warning</button***REMOVED***
+                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-success"***REMOVED***Success</button***REMOVED***
+                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-info"***REMOVED***Info</button***REMOVED***
+                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-inverse"***REMOVED***Inverse</button***REMOVED***
+                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+            </div***REMOVED***<!-- /btn-toolbar --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn"&gt;Action&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Sizes</h3***REMOVED***
+          <p***REMOVED***Utilize the extra button classes <code***REMOVED***.btn-mini</code***REMOVED***, <code***REMOVED***.btn-small</code***REMOVED***, or <code***REMOVED***.btn-large</code***REMOVED*** for sizing.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="btn-toolbar"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-large"***REMOVED***Large action</button***REMOVED***
+                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+            </div***REMOVED***<!-- /btn-toolbar --***REMOVED***
+            <div class="btn-toolbar"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-small"***REMOVED***Small action</button***REMOVED***
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+            </div***REMOVED***<!-- /btn-toolbar --***REMOVED***
+            <div class="btn-toolbar"***REMOVED***
+              <div class="btn-group"***REMOVED***
+                <button class="btn btn-mini"***REMOVED***Mini action</button***REMOVED***
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+            </div***REMOVED***<!-- /btn-toolbar --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-group"&gt;
+  &lt;button class="btn btn-mini"&gt;Action&lt;/button&gt;
+  &lt;button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Dropup menus</h3***REMOVED***
+          <p***REMOVED***Dropdown menus can also be toggled from the bottom up by adding a single class to the immediate parent of <code***REMOVED***.dropdown-menu</code***REMOVED***. It will flip the direction of the <code***REMOVED***.caret</code***REMOVED*** and reposition the menu itself to move from the bottom up instead of top down.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="btn-toolbar" style="margin: 0;"***REMOVED***
+              <div class="btn-group dropup"***REMOVED***
+                <button class="btn"***REMOVED***Dropup</button***REMOVED***
+                <button class="btn dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+              <div class="btn-group dropup"***REMOVED***
+                <button class="btn primary"***REMOVED***Right dropup</button***REMOVED***
+                <button class="btn primary dropdown-toggle" data-toggle="dropdown"***REMOVED***<span class="caret"***REMOVED***</span***REMOVED***</button***REMOVED***
+                <ul class="dropdown-menu pull-right"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***<!-- /btn-group --***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="btn-group dropup"&gt;
+  &lt;button class="btn"&gt;Dropup&lt;/button&gt;
+  &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;!-- dropdown menu links --&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Nav, Tabs, & Pills
+        ================================================== --***REMOVED***
+        <section id="navs"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Nav: tabs, pills, and lists</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Lightweight defaults <small***REMOVED***Same markup, different classes</small***REMOVED***</h2***REMOVED***
+          <p***REMOVED***All nav components here&mdash;tabs, pills, and lists&mdash;<strong***REMOVED***share the same base markup and styles</strong***REMOVED*** through the <code***REMOVED***.nav</code***REMOVED*** class.</p***REMOVED***
+
+          <h3***REMOVED***Basic tabs</h3***REMOVED***
+          <p***REMOVED***Take a regular <code***REMOVED***&lt;ul&gt;</code***REMOVED*** of links and add <code***REMOVED***.nav-tabs</code***REMOVED***:</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="nav nav-tabs"***REMOVED***
+              <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Profile</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Messages</a***REMOVED***</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;***REMOVED***&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;***REMOVED***&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Basic pills</h3***REMOVED***
+          <p***REMOVED***Take that same HTML, but use <code***REMOVED***.nav-pills</code***REMOVED*** instead:</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="nav nav-pills"***REMOVED***
+              <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Profile</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Messages</a***REMOVED***</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;***REMOVED***&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;***REMOVED***&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Disabled state</h3***REMOVED***
+          <p***REMOVED***For any nav component (tabs, pills, or list), add <code***REMOVED***.disabled</code***REMOVED*** for <strong***REMOVED***gray links and no hover effects</strong***REMOVED***. Links will remain clickable, however, unless you remove the <code***REMOVED***href</code***REMOVED*** attribute. Alternatively, you could implement custom JavaScript to prevent those clicks.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="nav nav-pills"***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Clickable link</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Clickable link</a***REMOVED***</li***REMOVED***
+              <li class="disabled"***REMOVED***<a href="#"***REMOVED***Disabled link</a***REMOVED***</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-pills"&gt;
+  ***REMOVED***
+  &lt;li class="disabled"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  ***REMOVED***
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Component alignment</h3***REMOVED***
+          <p***REMOVED***To align nav links, use the <code***REMOVED***.pull-left</code***REMOVED*** or <code***REMOVED***.pull-right</code***REMOVED*** utility classes. Both classes will add a CSS float in the specified direction.</p***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Stackable</h2***REMOVED***
+          <p***REMOVED***As tabs and pills are horizontal by default, just add a second class, <code***REMOVED***.nav-stacked</code***REMOVED***, to make them appear vertically stacked.</p***REMOVED***
+
+          <h3***REMOVED***Stacked tabs</h3***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="nav nav-tabs nav-stacked"***REMOVED***
+              <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Profile</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Messages</a***REMOVED***</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-tabs nav-stacked"&gt;
+  ***REMOVED***
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Stacked pills</h3***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="nav nav-pills nav-stacked"***REMOVED***
+              <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Profile</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Messages</a***REMOVED***</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-pills nav-stacked"&gt;
+  ***REMOVED***
+&lt;/ul&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Dropdowns</h2***REMOVED***
+          <p***REMOVED***Add dropdown menus with a little extra HTML and the <a href="./javascript.html#dropdowns"***REMOVED***dropdowns JavaScript plugin</a***REMOVED***.</p***REMOVED***
+
+          <h3***REMOVED***Tabs with dropdowns</h3***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="nav nav-tabs"***REMOVED***
+              <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Help</a***REMOVED***</li***REMOVED***
+              <li class="dropdown"***REMOVED***
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"***REMOVED***Dropdown <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-tabs"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        Dropdown
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- links --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Pills with dropdowns</h3***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="nav nav-pills"***REMOVED***
+              <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Help</a***REMOVED***</li***REMOVED***
+              <li class="dropdown"***REMOVED***
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"***REMOVED***Dropdown <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                <ul class="dropdown-menu"***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                  <li class="divider"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-pills"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a class="dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"&gt;
+        Dropdown
+        &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;!-- links --&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Nav lists</h2***REMOVED***
+          <p***REMOVED***A simple and easy way to build groups of nav links with optional headers. They're best used in sidebars like the Finder in OS X.</p***REMOVED***
+
+          <h3***REMOVED***Example nav list</h3***REMOVED***
+          <p***REMOVED***Take a list of links and add <code***REMOVED***class="nav nav-list"</code***REMOVED***:</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="well" style="max-width: 340px; padding: 8px 0;"***REMOVED***
+              <ul class="nav nav-list"***REMOVED***
+                <li class="nav-header"***REMOVED***List header</li***REMOVED***
+                <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***Library</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***Applications</a***REMOVED***</li***REMOVED***
+                <li class="nav-header"***REMOVED***Another list header</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***Profile</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***Settings</a***REMOVED***</li***REMOVED***
+                <li class="divider"***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***Help</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED*** <!-- /well --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-list"&gt;
+  &lt;li class="nav-header"&gt;List header&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+  ***REMOVED***
+&lt;/ul&gt;
+</pre***REMOVED***
+          <p***REMOVED***
+            <span class="label label-info"***REMOVED***Note</span***REMOVED***
+            For nesting within a nav list, include <code***REMOVED***class="nav nav-list"</code***REMOVED*** on any nested <code***REMOVED***&lt;ul&gt;</code***REMOVED***.
+          </p***REMOVED***
+
+          <h3***REMOVED***Horizontal dividers</h3***REMOVED***
+          <p***REMOVED***Add a horizontal divider by creating an empty list item with the class <code***REMOVED***.divider</code***REMOVED***, like so:</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav nav-list"&gt;
+  ***REMOVED***
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  ***REMOVED***
+&lt;/ul&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Tabbable nav</h2***REMOVED***
+          <p***REMOVED***Bring your tabs to life with a simple plugin to toggle between content via tabs. Bootstrap integrates tabbable tabs in four styles: top (default), right, bottom, and left.</p***REMOVED***
+
+          <h3***REMOVED***Tabbable example</h3***REMOVED***
+          <p***REMOVED***To make tabs tabbable, create a <code***REMOVED***.tab-pane</code***REMOVED*** with unique ID for every tab and wrap them in <code***REMOVED***.tab-content</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="tabbable" style="margin-bottom: 18px;"***REMOVED***
+              <ul class="nav nav-tabs"***REMOVED***
+                <li class="active"***REMOVED***<a href="#tab1" data-toggle="tab"***REMOVED***Section 1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#tab2" data-toggle="tab"***REMOVED***Section 2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#tab3" data-toggle="tab"***REMOVED***Section 3</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+              <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;"***REMOVED***
+                <div class="tab-pane active" id="tab1"***REMOVED***
+                  <p***REMOVED***I'm in Section 1.</p***REMOVED***
+                </div***REMOVED***
+                <div class="tab-pane" id="tab2"***REMOVED***
+                  <p***REMOVED***Howdy, I'm in Section 2.</p***REMOVED***
+                </div***REMOVED***
+                <div class="tab-pane" id="tab3"***REMOVED***
+                  <p***REMOVED***What up girl, this is Section 3.</p***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED*** <!-- /tabbable --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="tabbable"&gt; &lt;!-- Only required for left/right tabs --&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;I'm in Section 1.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Fade in tabs</h4***REMOVED***
+          <p***REMOVED***To make tabs fade in, add <code***REMOVED***.fade</code***REMOVED*** to each <code***REMOVED***.tab-pane</code***REMOVED***.</p***REMOVED***
+
+          <h4***REMOVED***Requires jQuery plugin</h4***REMOVED***
+          <p***REMOVED***All tabbable tabs are powered by our lightweight jQuery plugin. Read more about how to bring tabbable tabs to life <a href="./javascript.html#tabs"***REMOVED***on the JavaScript docs page</a***REMOVED***.</p***REMOVED***
+
+          <h3***REMOVED***Tabbable in any direction</h3***REMOVED***
+
+          <h4***REMOVED***Tabs on the bottom</h4***REMOVED***
+          <p***REMOVED***Flip the order of the HTML and add a class to put tabs on the bottom.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="tabbable tabs-below"***REMOVED***
+              <div class="tab-content"***REMOVED***
+                <div class="tab-pane active" id="A"***REMOVED***
+                  <p***REMOVED***I'm in Section A.</p***REMOVED***
+                </div***REMOVED***
+                <div class="tab-pane" id="B"***REMOVED***
+                  <p***REMOVED***Howdy, I'm in Section B.</p***REMOVED***
+                </div***REMOVED***
+                <div class="tab-pane" id="C"***REMOVED***
+                  <p***REMOVED***What up girl, this is Section C.</p***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+              <ul class="nav nav-tabs"***REMOVED***
+                <li class="active"***REMOVED***<a href="#A" data-toggle="tab"***REMOVED***Section 1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#B" data-toggle="tab"***REMOVED***Section 2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#C" data-toggle="tab"***REMOVED***Section 3</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED*** <!-- /tabbable --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="tabbable tabs-below"&gt;
+  &lt;div class="tab-content"&gt;
+    ***REMOVED***
+  &lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Tabs on the left</h4***REMOVED***
+          <p***REMOVED***Swap the class to put tabs on the left.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="tabbable tabs-left"***REMOVED***
+              <ul class="nav nav-tabs"***REMOVED***
+                <li class="active"***REMOVED***<a href="#lA" data-toggle="tab"***REMOVED***Section 1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#lB" data-toggle="tab"***REMOVED***Section 2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#lC" data-toggle="tab"***REMOVED***Section 3</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+              <div class="tab-content"***REMOVED***
+                <div class="tab-pane active" id="lA"***REMOVED***
+                  <p***REMOVED***I'm in Section A.</p***REMOVED***
+                </div***REMOVED***
+                <div class="tab-pane" id="lB"***REMOVED***
+                  <p***REMOVED***Howdy, I'm in Section B.</p***REMOVED***
+                </div***REMOVED***
+                <div class="tab-pane" id="lC"***REMOVED***
+                  <p***REMOVED***What up girl, this is Section C.</p***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED*** <!-- /tabbable --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="tabbable tabs-left"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ***REMOVED***
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h4***REMOVED***Tabs on the right</h4***REMOVED***
+          <p***REMOVED***Swap the class to put tabs on the right.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="tabbable tabs-right"***REMOVED***
+              <ul class="nav nav-tabs"***REMOVED***
+                <li class="active"***REMOVED***<a href="#rA" data-toggle="tab"***REMOVED***Section 1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#rB" data-toggle="tab"***REMOVED***Section 2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#rC" data-toggle="tab"***REMOVED***Section 3</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+              <div class="tab-content"***REMOVED***
+                <div class="tab-pane active" id="rA"***REMOVED***
+                  <p***REMOVED***I'm in Section A.</p***REMOVED***
+                </div***REMOVED***
+                <div class="tab-pane" id="rB"***REMOVED***
+                  <p***REMOVED***Howdy, I'm in Section B.</p***REMOVED***
+                </div***REMOVED***
+                <div class="tab-pane" id="rC"***REMOVED***
+                  <p***REMOVED***What up girl, this is Section C.</p***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED*** <!-- /tabbable --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="tabbable tabs-right"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ***REMOVED***
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Navbar
+        ================================================== --***REMOVED***
+        <section id="navbar"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Navbar</h1***REMOVED***
+          </div***REMOVED***
+
+
+          <h2***REMOVED***Basic navbar</h2***REMOVED***
+          <p***REMOVED***To start, navbars are static (not fixed to the top) and include support for a project name and basic navigation. Place one anywhere within a <code***REMOVED***.container</code***REMOVED***, which sets the width of your site and content.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="navbar"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <a class="brand" href="#"***REMOVED***Title</a***REMOVED***
+                <ul class="nav"***REMOVED***
+                  <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;a class="brand" href="#"&gt;Title&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Navbar components</h2***REMOVED***
+
+          <h3***REMOVED***Brand</h3***REMOVED***
+          <p***REMOVED***A simple link to show your brand or project name only requires an anchor tag.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="navbar"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <a class="brand" href="#"***REMOVED***Title</a***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;a class="brand" href="#"&gt;Project name&lt;/a&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Nav links</h3***REMOVED***
+          <p***REMOVED***Nav items are simple to add via unordered lists.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="navbar"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <ul class="nav"***REMOVED***
+                  <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav"&gt;
+  &lt;li class="active"&gt;
+    &lt;a href="#"***REMOVED***Home&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+          <p***REMOVED***You can easily add dividers to your nav links with an empty list item and a simple class. Just add this between links:</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="navbar"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <ul class="nav"***REMOVED***
+                  <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+                  <li class="divider-vertical"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                  <li class="divider-vertical"***REMOVED***</li***REMOVED***
+                  <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                  <li class="divider-vertical"***REMOVED***</li***REMOVED***
+                </ul***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav"&gt;
+  ***REMOVED***
+  &lt;li class="divider-vertical"&gt;&lt;/li&gt;
+  ***REMOVED***
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Forms</h3***REMOVED***
+          <p***REMOVED***To properly style and position a form within the navbar, add the appropriate classes as shown below. For a default form, include <code***REMOVED***.navbar-form</code***REMOVED*** and either <code***REMOVED***.pull-left</code***REMOVED*** or <code***REMOVED***.pull-right</code***REMOVED*** to properly align it.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="navbar"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <form class="navbar-form pull-left"***REMOVED***
+                  <input type="text" class="span2"***REMOVED***
+                  <button type="submit" class="btn"***REMOVED***Submit</button***REMOVED***
+                </form***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;form class="navbar-form pull-left"&gt;
+  &lt;input type="text" class="span2"&gt;
+  &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Search form</h3***REMOVED***
+          <p***REMOVED***For a more customized search form, add <code***REMOVED***.navbar-search</code***REMOVED*** to the <code***REMOVED***form</code***REMOVED*** and <code***REMOVED***.search-query</code***REMOVED*** to the input for specialized styles in the navbar.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="navbar"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <form class="navbar-search pull-left"***REMOVED***
+                  <input type="text" class="search-query" placeholder="Search"***REMOVED***
+                </form***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;form class="navbar-search pull-left"&gt;
+  &lt;input type="text" class="search-query" placeholder="Search"&gt;
+&lt;/form&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Component alignment</h3***REMOVED***
+          <p***REMOVED***Align nav links, search form, or text, use the <code***REMOVED***.pull-left</code***REMOVED*** or <code***REMOVED***.pull-right</code***REMOVED*** utility classes. Both classes will add a CSS float in the specified direction.</p***REMOVED***
+
+          <h3***REMOVED***Using dropdowns</h3***REMOVED***
+          <p***REMOVED***Add dropdowns and dropups to the nav with a bit of markup and the <a href="./javascript.html#dropdowns"***REMOVED***dropdowns JavaScript plugin</a***REMOVED***.</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="nav"&gt;
+  &lt;li class="dropdown"&gt;
+    &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"***REMOVED***
+      Account
+      &lt;b class="caret"&gt;&lt;/b&gt;
+    &lt;/a&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ***REMOVED***
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+          <p***REMOVED***Visit the <a href="./javascript.html#dropdowns"***REMOVED***JavaScript dropdowns documentation</a***REMOVED*** for more markup and information on calling dropdowns.</p***REMOVED***
+
+          <h3***REMOVED***Text</h3***REMOVED***
+          <p***REMOVED***Wrap strings of text in an element with <code***REMOVED***.navbar-text</code***REMOVED***, usually on a <code***REMOVED***&lt;p&gt;</code***REMOVED*** tag for proper leading and color.</p***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Optional display variations</h2***REMOVED***
+          <p***REMOVED***Fix the navbar to the top or bottom of the viewport with an additional class on the outermost div, <code***REMOVED***.navbar</code***REMOVED***.</p***REMOVED***
+
+          <h3***REMOVED***Fixed to top</h3***REMOVED***
+          <p***REMOVED***Add <code***REMOVED***.navbar-fixed-top</code***REMOVED*** and remember to account for the hidden area underneath it by adding at least 40px <code***REMOVED***padding</code***REMOVED*** to the <code***REMOVED***&lt;body&gt;</code***REMOVED***. Be sure to add this after the core Bootstrap CSS and before the optional responsive CSS.</p***REMOVED***
+          <div class="bs-docs-example bs-navbar-top-example"***REMOVED***
+            <div class="navbar navbar-fixed-top" style="position: absolute;"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <div class="container" style="width: auto; padding: 0 20px;"***REMOVED***
+                  <a class="brand" href="#"***REMOVED***Title</a***REMOVED***
+                  <ul class="nav"***REMOVED***
+                    <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+                    <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                    <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                  </ul***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="navbar navbar-fixed-top"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Fixed to bottom</h3***REMOVED***
+          <p***REMOVED***Add <code***REMOVED***.navbar-fixed-bottom</code***REMOVED*** instead.</p***REMOVED***
+          <div class="bs-docs-example bs-navbar-bottom-example"***REMOVED***
+            <div class="navbar navbar-fixed-bottom" style="position: absolute;"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <div class="container" style="width: auto; padding: 0 20px;"***REMOVED***
+                  <a class="brand" href="#"***REMOVED***Title</a***REMOVED***
+                  <ul class="nav"***REMOVED***
+                    <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+                    <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                    <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                  </ul***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="navbar navbar-fixed-bottom"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Static top navbar</h3***REMOVED***
+          <p***REMOVED***Create a full-width navbar that scrolls away with the page by adding <code***REMOVED***.navbar-static-top</code***REMOVED***. Unlike the <code***REMOVED***.navbar-fixed-top</code***REMOVED*** class, you do not need to change any padding on the <code***REMOVED***body</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example bs-navbar-top-example"***REMOVED***
+            <div class="navbar navbar-static-top" style="margin: -1px -1px 0;"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <div class="container" style="width: auto; padding: 0 20px;"***REMOVED***
+                  <a class="brand" href="#"***REMOVED***Title</a***REMOVED***
+                  <ul class="nav"***REMOVED***
+                    <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+                    <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                    <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                  </ul***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="navbar navbar-static-top"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Responsive navbar</h2***REMOVED***
+          <p***REMOVED***To implement a collapsing responsive navbar, wrap your navbar content in a containing div, <code***REMOVED***.nav-collapse.collapse</code***REMOVED***, and add the navbar toggle button, <code***REMOVED***.btn-navbar</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="navbar"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <div class="container"***REMOVED***
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse"***REMOVED***
+                    <span class="icon-bar"***REMOVED***</span***REMOVED***
+                    <span class="icon-bar"***REMOVED***</span***REMOVED***
+                    <span class="icon-bar"***REMOVED***</span***REMOVED***
+                  </a***REMOVED***
+                  <a class="brand" href="#"***REMOVED***Title</a***REMOVED***
+                  <div class="nav-collapse collapse navbar-responsive-collapse"***REMOVED***
+                    <ul class="nav"***REMOVED***
+                      <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                      <li class="dropdown"***REMOVED***
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"***REMOVED***Dropdown <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                        <ul class="dropdown-menu"***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                          <li class="divider"***REMOVED***</li***REMOVED***
+                          <li class="nav-header"***REMOVED***Nav header</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***One more separated link</a***REMOVED***</li***REMOVED***
+                        </ul***REMOVED***
+                      </li***REMOVED***
+                    </ul***REMOVED***
+                    <form class="navbar-search pull-left" action=""***REMOVED***
+                      <input type="text" class="search-query span2" placeholder="Search"***REMOVED***
+                    </form***REMOVED***
+                    <ul class="nav pull-right"***REMOVED***
+                      <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                      <li class="divider-vertical"***REMOVED***</li***REMOVED***
+                      <li class="dropdown"***REMOVED***
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"***REMOVED***Dropdown <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                        <ul class="dropdown-menu"***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                          <li class="divider"***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                        </ul***REMOVED***
+                      </li***REMOVED***
+                    </ul***REMOVED***
+                  </div***REMOVED***<!-- /.nav-collapse --***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***<!-- /navbar-inner --***REMOVED***
+            </div***REMOVED***<!-- /navbar --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;div class="container"&gt;
+
+      &lt;!-- .btn-navbar is used as the toggle for collapsed navbar content --&gt;
+      &lt;a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/a&gt;
+
+      &lt;!-- Be sure to leave the brand out there if you want it shown --&gt;
+      &lt;a class="brand" href="#"&gt;Project name&lt;/a&gt;
+
+      &lt;!-- Everything you want hidden at 940px or less, place within here --&gt;
+      &lt;div class="nav-collapse collapse"&gt;
+        &lt;!-- .nav, .navbar-search, .navbar-form, etc --&gt;
+      &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+          <div class="alert alert-info"***REMOVED***
+            <strong***REMOVED***Heads up!</strong***REMOVED*** The responsive navbar requires the <a href="./javascript.html#collapse"***REMOVED***collapse plugin</a***REMOVED*** and <a href="./scaffolding.html#responsive"***REMOVED***responsive Bootstrap CSS file</a***REMOVED***.
+          </div***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Inverted variation</h2***REMOVED***
+          <p***REMOVED***Modify the look of the navbar by adding <code***REMOVED***.navbar-inverse</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="navbar navbar-inverse" style="position: static;"***REMOVED***
+              <div class="navbar-inner"***REMOVED***
+                <div class="container"***REMOVED***
+                  <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse"***REMOVED***
+                    <span class="icon-bar"***REMOVED***</span***REMOVED***
+                    <span class="icon-bar"***REMOVED***</span***REMOVED***
+                    <span class="icon-bar"***REMOVED***</span***REMOVED***
+                  </a***REMOVED***
+                  <a class="brand" href="#"***REMOVED***Title</a***REMOVED***
+                  <div class="nav-collapse collapse navbar-inverse-collapse"***REMOVED***
+                    <ul class="nav"***REMOVED***
+                      <li class="active"***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                      <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                      <li class="dropdown"***REMOVED***
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"***REMOVED***Dropdown <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                        <ul class="dropdown-menu"***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                          <li class="divider"***REMOVED***</li***REMOVED***
+                          <li class="nav-header"***REMOVED***Nav header</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***One more separated link</a***REMOVED***</li***REMOVED***
+                        </ul***REMOVED***
+                      </li***REMOVED***
+                    </ul***REMOVED***
+                    <form class="navbar-search pull-left" action=""***REMOVED***
+                      <input type="text" class="search-query span2" placeholder="Search"***REMOVED***
+                    </form***REMOVED***
+                    <ul class="nav pull-right"***REMOVED***
+                      <li***REMOVED***<a href="#"***REMOVED***Link</a***REMOVED***</li***REMOVED***
+                      <li class="divider-vertical"***REMOVED***</li***REMOVED***
+                      <li class="dropdown"***REMOVED***
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"***REMOVED***Dropdown <b class="caret"***REMOVED***</b***REMOVED***</a***REMOVED***
+                        <ul class="dropdown-menu"***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Action</a***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Another action</a***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Something else here</a***REMOVED***</li***REMOVED***
+                          <li class="divider"***REMOVED***</li***REMOVED***
+                          <li***REMOVED***<a href="#"***REMOVED***Separated link</a***REMOVED***</li***REMOVED***
+                        </ul***REMOVED***
+                      </li***REMOVED***
+                    </ul***REMOVED***
+                  </div***REMOVED***<!-- /.nav-collapse --***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***<!-- /navbar-inner --***REMOVED***
+            </div***REMOVED***<!-- /navbar --***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="navbar navbar-inverse"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Breadcrumbs
+        ================================================== --***REMOVED***
+        <section id="breadcrumbs"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Breadcrumbs <small***REMOVED***</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Examples</h2***REMOVED***
+          <p***REMOVED***A single example shown as it might be displayed across multiple pages.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="breadcrumb"***REMOVED***
+              <li class="active"***REMOVED***Home</li***REMOVED***
+            </ul***REMOVED***
+            <ul class="breadcrumb"***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED*** <span class="divider"***REMOVED***/</span***REMOVED***</li***REMOVED***
+              <li class="active"***REMOVED***Library</li***REMOVED***
+            </ul***REMOVED***
+            <ul class="breadcrumb" style="margin-bottom: 5px;"***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Home</a***REMOVED*** <span class="divider"***REMOVED***/</span***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Library</a***REMOVED*** <span class="divider"***REMOVED***/</span***REMOVED***</li***REMOVED***
+              <li class="active"***REMOVED***Data</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="breadcrumb"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt; &lt;span class="divider"&gt;/&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;Data&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Pagination
+        ================================================== --***REMOVED***
+        <section id="pagination"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Pagination <small***REMOVED***Two options for paging through content</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Standard pagination</h2***REMOVED***
+          <p***REMOVED***Simple pagination inspired by Rdio, great for apps and search results. The large block is hard to miss, easily scalable, and provides large click areas.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="pagination"***REMOVED***
+              <ul***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&laquo;</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***3</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***4</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***5</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&raquo;</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Prev&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Options</h2***REMOVED***
+
+          <h3***REMOVED***Disabled and active states</h3***REMOVED***
+          <p***REMOVED***Links are customizable for different circumstances. Use <code***REMOVED***.disabled</code***REMOVED*** for unclickable links and <code***REMOVED***.active</code***REMOVED*** to indicate the current page.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="pagination pagination-centered"***REMOVED***
+              <ul***REMOVED***
+                <li class="disabled"***REMOVED***<a href="#"***REMOVED***&laquo;</a***REMOVED***</li***REMOVED***
+                <li class="active"***REMOVED***<a href="#"***REMOVED***1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***3</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***4</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***5</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&raquo;</a***REMOVED***</li***REMOVED***
+             </ul***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li class="disabled"&gt;&lt;a href="#"&gt;&amp;laquo;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+          <p***REMOVED***You can optionally swap out active or disabled anchors for spans to remove click functionality while retaining intended styles.</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    &lt;li class="disabled"&gt;&lt;span&gt;&amp;laquo;&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Sizes</h3***REMOVED***
+          <p***REMOVED***Fancy larger or smaller pagination? Add <code***REMOVED***.pagination-large</code***REMOVED***, <code***REMOVED***.pagination-small</code***REMOVED***, or <code***REMOVED***.pagination-mini</code***REMOVED*** for additional sizes.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="pagination pagination-large"***REMOVED***
+              <ul***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&laquo;</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***3</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***4</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***5</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&raquo;</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED***
+            <div class="pagination"***REMOVED***
+              <ul***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&laquo;</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***3</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***4</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***5</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&raquo;</a***REMOVED***</li***REMOVED***
+             </ul***REMOVED***
+            </div***REMOVED***
+            <div class="pagination pagination-small"***REMOVED***
+              <ul***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&laquo;</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***3</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***4</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***5</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&raquo;</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED***
+            <div class="pagination pagination-mini"***REMOVED***
+              <ul***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&laquo;</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***3</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***4</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***5</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&raquo;</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="pagination pagination-large"&gt;
+  &lt;ul&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="pagination"&gt;
+  &lt;ul&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="pagination pagination-small"&gt;
+  &lt;ul&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="pagination pagination-mini"&gt;
+  &lt;ul&gt;
+    ***REMOVED***
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Alignment</h3***REMOVED***
+          <p***REMOVED***Add one of two optional classes to change the alignment of pagination links: <code***REMOVED***.pagination-centered</code***REMOVED*** and <code***REMOVED***.pagination-right</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="pagination pagination-centered"***REMOVED***
+              <ul***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&laquo;</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***3</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***4</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***5</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&raquo;</a***REMOVED***</li***REMOVED***
+             </ul***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="pagination pagination-centered"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="pagination pagination-right"***REMOVED***
+              <ul***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&laquo;</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***1</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***2</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***3</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***4</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***5</a***REMOVED***</li***REMOVED***
+                <li***REMOVED***<a href="#"***REMOVED***&raquo;</a***REMOVED***</li***REMOVED***
+              </ul***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="pagination pagination-right"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Pager</h2***REMOVED***
+          <p***REMOVED***Quick previous and next links for simple pagination implementations with light markup and styles. It's great for simple sites like blogs or magazines.</p***REMOVED***
+
+          <h3***REMOVED***Default example</h3***REMOVED***
+          <p***REMOVED***By default, the pager centers links.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="pager"***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Previous</a***REMOVED***</li***REMOVED***
+              <li***REMOVED***<a href="#"***REMOVED***Next</a***REMOVED***</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="pager"&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Previous&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Next&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Aligned links</h3***REMOVED***
+          <p***REMOVED***Alternatively, you can align each link to the sides:</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="pager"***REMOVED***
+              <li class="previous"***REMOVED***<a href="#"***REMOVED***&larr; Older</a***REMOVED***</li***REMOVED***
+              <li class="next"***REMOVED***<a href="#"***REMOVED***Newer &rarr;</a***REMOVED***</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="pager"&gt;
+  &lt;li class="previous"&gt;
+    &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="next"&gt;
+    &lt;a href="#"&gt;Newer &amp;rarr;&lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Optional disabled state</h3***REMOVED***
+          <p***REMOVED***Pager links also use the general <code***REMOVED***.disabled</code***REMOVED*** utility class from the pagination.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="pager"***REMOVED***
+              <li class="previous disabled"***REMOVED***<a href="#"***REMOVED***&larr; Older</a***REMOVED***</li***REMOVED***
+              <li class="next"***REMOVED***<a href="#"***REMOVED***Newer &rarr;</a***REMOVED***</li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="pager"&gt;
+  &lt;li class="previous disabled"&gt;
+    &lt;a href="#"&gt;&amp;larr; Older&lt;/a&gt;
+  &lt;/li&gt;
+  ***REMOVED***
+&lt;/ul&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Labels and badges
+        ================================================== --***REMOVED***
+        <section id="labels-badges"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Labels and badges</h1***REMOVED***
+          </div***REMOVED***
+          <h3***REMOVED***Labels</h3***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***Labels</th***REMOVED***
+                <th***REMOVED***Markup</th***REMOVED***
+              </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <span class="label"***REMOVED***Default</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="label"&gt;Default&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <span class="label label-success"***REMOVED***Success</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="label label-success"&gt;Success&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <span class="label label-warning"***REMOVED***Warning</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <span class="label label-important"***REMOVED***Important</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="label label-important"&gt;Important&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <span class="label label-info"***REMOVED***Info</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="label label-info"&gt;Info&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  <span class="label label-inverse"***REMOVED***Inverse</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="label label-inverse"&gt;Inverse&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+
+          <h3***REMOVED***Badges</h3***REMOVED***
+          <table class="table table-bordered table-striped"***REMOVED***
+            <thead***REMOVED***
+              <tr***REMOVED***
+                <th***REMOVED***Name</th***REMOVED***
+                <th***REMOVED***Example</th***REMOVED***
+                <th***REMOVED***Markup</th***REMOVED***
+              </tr***REMOVED***
+            </thead***REMOVED***
+            <tbody***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  Default
+                </td***REMOVED***
+                <td***REMOVED***
+                  <span class="badge"***REMOVED***1</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="badge"&gt;1&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  Success
+                </td***REMOVED***
+                <td***REMOVED***
+                  <span class="badge badge-success"***REMOVED***2</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="badge badge-success"&gt;2&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  Warning
+                </td***REMOVED***
+                <td***REMOVED***
+                  <span class="badge badge-warning"***REMOVED***4</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  Important
+                </td***REMOVED***
+                <td***REMOVED***
+                  <span class="badge badge-important"***REMOVED***6</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="badge badge-important"&gt;6&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  Info
+                </td***REMOVED***
+                <td***REMOVED***
+                  <span class="badge badge-info"***REMOVED***8</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="badge badge-info"&gt;8&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+              <tr***REMOVED***
+                <td***REMOVED***
+                  Inverse
+                </td***REMOVED***
+                <td***REMOVED***
+                  <span class="badge badge-inverse"***REMOVED***10</span***REMOVED***
+                </td***REMOVED***
+                <td***REMOVED***
+                  <code***REMOVED***&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;</code***REMOVED***
+                </td***REMOVED***
+              </tr***REMOVED***
+            </tbody***REMOVED***
+          </table***REMOVED***
+
+          <h3***REMOVED***Easily collapsible</h3***REMOVED***
+          <p***REMOVED***For easy implementation, labels and badges will simply collapse (via CSS's <code***REMOVED***:empty</code***REMOVED*** selector) when no content exists within.</p***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Typographic components
+        ================================================== --***REMOVED***
+        <section id="typography"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Typographic components</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Hero unit</h2***REMOVED***
+          <p***REMOVED***A lightweight, flexible component to showcase key content on your site. It works well on marketing and content-heavy sites.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="hero-unit"***REMOVED***
+              <h1***REMOVED***Hello, world!</h1***REMOVED***
+              <p***REMOVED***This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p***REMOVED***
+              <p***REMOVED***<a class="btn btn-primary btn-large"***REMOVED***Learn more</a***REMOVED***</p***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="hero-unit"&gt;
+  &lt;h1&gt;Heading&lt;/h1&gt;
+  &lt;p&gt;Tagline&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a class="btn btn-primary btn-large"&gt;
+      Learn more
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h2***REMOVED***Page header</h2***REMOVED***
+          <p***REMOVED***A simple shell for an <code***REMOVED***h1</code***REMOVED*** to appropriately space out and segment sections of content on a page. It can utilize the <code***REMOVED***h1</code***REMOVED***'s default <code***REMOVED***small</code***REMOVED***, element as well most other components (with additional styles).</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="page-header"***REMOVED***
+              <h1***REMOVED***Example page header <small***REMOVED***Subtext for header</small***REMOVED***</h1***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="page-header"&gt;
+  &lt;h1&gt;Example page header &lt;small&gt;Subtext for header&lt;/small&gt;&lt;/h1&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+        <!-- Thumbnails
+        ================================================== --***REMOVED***
+        <section id="thumbnails"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Thumbnails <small***REMOVED***Grids of images, videos, text, and more</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Default thumbnails</h2***REMOVED***
+          <p***REMOVED***By default, Bootstrap's thumbnails are designed to showcase linked images with minimal required markup.</p***REMOVED***
+          <div class="row-fluid"***REMOVED***
+            <ul class="thumbnails"***REMOVED***
+              <li class="span3"***REMOVED***
+                <a href="#" class="thumbnail"***REMOVED***
+                  <img data-src="holder.js/260x180" alt=""***REMOVED***
+                </a***REMOVED***
+              </li***REMOVED***
+              <li class="span3"***REMOVED***
+                <a href="#" class="thumbnail"***REMOVED***
+                  <img data-src="holder.js/260x180" alt=""***REMOVED***
+                </a***REMOVED***
+              </li***REMOVED***
+              <li class="span3"***REMOVED***
+                <a href="#" class="thumbnail"***REMOVED***
+                  <img data-src="holder.js/260x180" alt=""***REMOVED***
+                </a***REMOVED***
+              </li***REMOVED***
+              <li class="span3"***REMOVED***
+                <a href="#" class="thumbnail"***REMOVED***
+                  <img data-src="holder.js/260x180" alt=""***REMOVED***
+                </a***REMOVED***
+              </li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Highly customizable</h2***REMOVED***
+          <p***REMOVED***With a bit of extra markup, it's possible to add any kind of HTML content like headings, paragraphs, or buttons into thumbnails.</p***REMOVED***
+          <div class="row-fluid"***REMOVED***
+            <ul class="thumbnails"***REMOVED***
+              <li class="span4"***REMOVED***
+                <div class="thumbnail"***REMOVED***
+                  <img data-src="holder.js/300x200" alt=""***REMOVED***
+                  <div class="caption"***REMOVED***
+                    <h3***REMOVED***Thumbnail label</h3***REMOVED***
+                    <p***REMOVED***Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p***REMOVED***
+                    <p***REMOVED***<a href="#" class="btn btn-primary"***REMOVED***Action</a***REMOVED*** <a href="#" class="btn"***REMOVED***Action</a***REMOVED***</p***REMOVED***
+                  </div***REMOVED***
+                </div***REMOVED***
+              </li***REMOVED***
+              <li class="span4"***REMOVED***
+                <div class="thumbnail"***REMOVED***
+                  <img data-src="holder.js/300x200" alt=""***REMOVED***
+                  <div class="caption"***REMOVED***
+                    <h3***REMOVED***Thumbnail label</h3***REMOVED***
+                    <p***REMOVED***Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p***REMOVED***
+                    <p***REMOVED***<a href="#" class="btn btn-primary"***REMOVED***Action</a***REMOVED*** <a href="#" class="btn"***REMOVED***Action</a***REMOVED***</p***REMOVED***
+                  </div***REMOVED***
+                </div***REMOVED***
+              </li***REMOVED***
+              <li class="span4"***REMOVED***
+                <div class="thumbnail"***REMOVED***
+                  <img data-src="holder.js/300x200" alt=""***REMOVED***
+                  <div class="caption"***REMOVED***
+                    <h3***REMOVED***Thumbnail label</h3***REMOVED***
+                    <p***REMOVED***Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p***REMOVED***
+                    <p***REMOVED***<a href="#" class="btn btn-primary"***REMOVED***Action</a***REMOVED*** <a href="#" class="btn"***REMOVED***Action</a***REMOVED***</p***REMOVED***
+                  </div***REMOVED***
+                </div***REMOVED***
+              </li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+
+          <h3***REMOVED***Why use thumbnails</h3***REMOVED***
+          <p***REMOVED***Thumbnails (previously <code***REMOVED***.media-grid</code***REMOVED*** up until v1.4) are great for grids of photos or videos, image search results, retail products, portfolios, and much more. They can be links or static content.</p***REMOVED***
+
+          <h3***REMOVED***Simple, flexible markup</h3***REMOVED***
+          <p***REMOVED***Thumbnail markup is simple&mdash;a <code***REMOVED***ul</code***REMOVED*** with any number of <code***REMOVED***li</code***REMOVED*** elements is all that is required. It's also super flexible, allowing for any type of content with just a bit more markup to wrap your contents.</p***REMOVED***
+
+          <h3***REMOVED***Uses grid column sizes</h3***REMOVED***
+          <p***REMOVED***Lastly, the thumbnails component uses existing grid system classes&mdash;like <code***REMOVED***.span2</code***REMOVED*** or <code***REMOVED***.span3</code***REMOVED***&mdash;for control of thumbnail dimensions.</p***REMOVED***
+
+          <h2***REMOVED***Markup</h2***REMOVED***
+          <p***REMOVED***As mentioned previously, the required markup for thumbnails is light and straightforward. Here's a look at the default setup <strong***REMOVED***for linked images</strong***REMOVED***:</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span4"&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img data-src="holder.js/300x200" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  ***REMOVED***
+&lt;/ul&gt;
+</pre***REMOVED***
+          <p***REMOVED***For custom HTML content in thumbnails, the markup changes slightly. To allow block level content anywhere, we swap the <code***REMOVED***&lt;a&gt;</code***REMOVED*** for a <code***REMOVED***&lt;div&gt;</code***REMOVED*** like so:</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span4"&gt;
+    &lt;div class="thumbnail"&gt;
+      &lt;img data-src="holder.js/300x200" alt=""&gt;
+      &lt;h3&gt;Thumbnail label&lt;/h3&gt;
+      &lt;p&gt;Thumbnail caption***REMOVED***&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  ***REMOVED***
+&lt;/ul&gt;
+</pre***REMOVED***
+
+          <h2***REMOVED***More examples</h2***REMOVED***
+          <p***REMOVED***Explore all your options with the various grid classes available to you. You can also mix and match different sizes.</p***REMOVED***
+          <ul class="thumbnails"***REMOVED***
+            <li class="span4"***REMOVED***
+              <a href="#" class="thumbnail"***REMOVED***
+                <img data-src="holder.js/360x270" alt=""***REMOVED***
+              </a***REMOVED***
+            </li***REMOVED***
+            <li class="span3"***REMOVED***
+              <a href="#" class="thumbnail"***REMOVED***
+                <img data-src="holder.js/260x120" alt=""***REMOVED***
+              </a***REMOVED***
+            </li***REMOVED***
+            <li class="span2"***REMOVED***
+              <a href="#" class="thumbnail"***REMOVED***
+                <img data-src="holder.js/160x120" alt=""***REMOVED***
+              </a***REMOVED***
+            </li***REMOVED***
+            <li class="span3"***REMOVED***
+              <a href="#" class="thumbnail"***REMOVED***
+                <img data-src="holder.js/260x120" alt=""***REMOVED***
+              </a***REMOVED***
+            </li***REMOVED***
+            <li class="span2"***REMOVED***
+              <a href="#" class="thumbnail"***REMOVED***
+                <img data-src="holder.js/160x120" alt=""***REMOVED***
+              </a***REMOVED***
+            </li***REMOVED***
+          </ul***REMOVED***
+
+        </section***REMOVED***
+
+
+
+
+        <!-- Alerts
+        ================================================== --***REMOVED***
+        <section id="alerts"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Alerts <small***REMOVED***Styles for success, warning, and error messages</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Default alert</h2***REMOVED***
+          <p***REMOVED***Wrap any text and an optional dismiss button in <code***REMOVED***.alert</code***REMOVED*** for a basic warning alert message.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="alert"***REMOVED***
+              <button type="button" class="close" data-dismiss="alert"***REMOVED***&times;</button***REMOVED***
+              <strong***REMOVED***Warning!</strong***REMOVED*** Best check yo self, you're not looking too good.
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="alert"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
+  &lt;strong&gt;Warning!&lt;/strong&gt; Best check yo self, you're not looking too good.
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Dismiss buttons</h3***REMOVED***
+          <p***REMOVED***Mobile Safari and Mobile Opera browsers, in addition to the <code***REMOVED***data-dismiss="alert"</code***REMOVED*** attribute, require an <code***REMOVED***href="#"</code***REMOVED*** for the dismissal of alerts when using an <code***REMOVED***&lt;a&gt;</code***REMOVED*** tag.</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***&lt;a href="#" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/a&gt;</pre***REMOVED***
+          <p***REMOVED***Alternatively, you may use a <code***REMOVED***&lt;button&gt;</code***REMOVED*** element with the data attribute, which we have opted to do for our docs. When using <code***REMOVED***&lt;button&gt;</code***REMOVED***, you must include <code***REMOVED***type="button"</code***REMOVED*** or your forms may not submit.</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***&lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;</pre***REMOVED***
+
+          <h3***REMOVED***Dismiss alerts via JavaScript</h3***REMOVED***
+          <p***REMOVED***Use the <a href="./javascript.html#alerts"***REMOVED***alerts jQuery plugin</a***REMOVED*** for quick and easy dismissal of alerts.</p***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Options</h2***REMOVED***
+          <p***REMOVED***For longer messages, increase the padding on the top and bottom of the alert wrapper by adding <code***REMOVED***.alert-block</code***REMOVED***.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="alert alert-block"***REMOVED***
+              <button type="button" class="close" data-dismiss="alert"***REMOVED***&times;</button***REMOVED***
+              <h4***REMOVED***Warning!</h4***REMOVED***
+              <p***REMOVED***Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="alert alert-block"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&amp;times;&lt;/button&gt;
+  &lt;h4&gt;Warning!&lt;/h4&gt;
+  Best check yo self, you're not***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Contextual alternatives</h2***REMOVED***
+          <p***REMOVED***Add optional classes to change an alert's connotation.</p***REMOVED***
+
+          <h3***REMOVED***Error or danger</h3***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="alert alert-error"***REMOVED***
+              <button type="button" class="close" data-dismiss="alert"***REMOVED***&times;</button***REMOVED***
+              <strong***REMOVED***Oh snap!</strong***REMOVED*** Change a few things up and try submitting again.
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="alert alert-error"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Success</h3***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="alert alert-success"***REMOVED***
+              <button type="button" class="close" data-dismiss="alert"***REMOVED***&times;</button***REMOVED***
+              <strong***REMOVED***Well done!</strong***REMOVED*** You successfully read this important alert message.
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="alert alert-success"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Information</h3***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="alert alert-info"***REMOVED***
+              <button type="button" class="close" data-dismiss="alert"***REMOVED***&times;</button***REMOVED***
+              <strong***REMOVED***Heads up!</strong***REMOVED*** This alert needs your attention, but it's not super important.
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="alert alert-info"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+
+        <!-- Progress bars
+        ================================================== --***REMOVED***
+        <section id="progress"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Progress bars <small***REMOVED***For loading, redirecting, or action status</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Examples and markup</h2***REMOVED***
+
+          <h3***REMOVED***Basic</h3***REMOVED***
+          <p***REMOVED***Default progress bar with a vertical gradient.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="progress"***REMOVED***
+              <div class="bar" style="width: 60%;"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="progress"&gt;
+  &lt;div class="bar" style="width: 60%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Striped</h3***REMOVED***
+          <p***REMOVED***Uses a gradient to create a striped effect. Not available in IE7-8.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="progress progress-striped"***REMOVED***
+              <div class="bar" style="width: 20%;"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="progress progress-striped"&gt;
+  &lt;div class="bar" style="width: 20%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Animated</h3***REMOVED***
+          <p***REMOVED***Add <code***REMOVED***.active</code***REMOVED*** to <code***REMOVED***.progress-striped</code***REMOVED*** to animate the stripes right to left. Not available in all versions of IE.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="progress progress-striped active"***REMOVED***
+              <div class="bar" style="width: 45%"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="progress progress-striped active"&gt;
+  &lt;div class="bar" style="width: 40%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Stacked</h3***REMOVED***
+          <p***REMOVED***Place multiple bars into the same <code***REMOVED***.progress</code***REMOVED*** to stack them.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="progress"***REMOVED***
+              <div class="bar bar-success" style="width: 35%"***REMOVED***</div***REMOVED***
+              <div class="bar bar-warning" style="width: 20%"***REMOVED***</div***REMOVED***
+              <div class="bar bar-danger" style="width: 10%"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="progress"&gt;
+  &lt;div class="bar bar-success" style="width: 35%;"&gt;&lt;/div&gt;
+  &lt;div class="bar bar-warning" style="width: 20%;"&gt;&lt;/div&gt;
+  &lt;div class="bar bar-danger" style="width: 10%;"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Options</h2***REMOVED***
+
+          <h3***REMOVED***Additional colors</h3***REMOVED***
+          <p***REMOVED***Progress bars use some of the same button and alert classes for consistent styles.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="progress progress-info" style="margin-bottom: 9px;"***REMOVED***
+              <div class="bar" style="width: 20%"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+            <div class="progress progress-success" style="margin-bottom: 9px;"***REMOVED***
+              <div class="bar" style="width: 40%"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+            <div class="progress progress-warning" style="margin-bottom: 9px;"***REMOVED***
+              <div class="bar" style="width: 60%"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+            <div class="progress progress-danger"***REMOVED***
+              <div class="bar" style="width: 80%"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="progress progress-info"&gt;
+  &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-success"&gt;
+  &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-warning"&gt;
+  &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-danger"&gt;
+  &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h3***REMOVED***Striped bars</h3***REMOVED***
+          <p***REMOVED***Similar to the solid colors, we have varied striped progress bars.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="progress progress-info progress-striped" style="margin-bottom: 9px;"***REMOVED***
+              <div class="bar" style="width: 20%"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+            <div class="progress progress-success progress-striped" style="margin-bottom: 9px;"***REMOVED***
+              <div class="bar" style="width: 40%"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+            <div class="progress progress-warning progress-striped" style="margin-bottom: 9px;"***REMOVED***
+              <div class="bar" style="width: 60%"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+            <div class="progress progress-danger progress-striped"***REMOVED***
+              <div class="bar" style="width: 80%"***REMOVED***</div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="progress progress-info progress-striped"&gt;
+  &lt;div class="bar" style="width: 20%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-success progress-striped"&gt;
+  &lt;div class="bar" style="width: 40%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-warning progress-striped"&gt;
+  &lt;div class="bar" style="width: 60%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress progress-danger progress-striped"&gt;
+  &lt;div class="bar" style="width: 80%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Browser support</h2***REMOVED***
+          <p***REMOVED***Progress bars use CSS3 gradients, transitions, and animations to achieve all their effects. These features are not supported in IE7-9 or older versions of Firefox.</p***REMOVED***
+          <p***REMOVED***Versions earlier than Internet Explorer 10 and Opera 12 do not support animations.</p***REMOVED***
+
+        </section***REMOVED***
+
+
+
+
+        <!-- Media object
+        ================================================== --***REMOVED***
+        <section id="media"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Media object</h1***REMOVED***
+          </div***REMOVED***
+          <p class="lead"***REMOVED***Abstract object styles for building various types of components (like blog comments, Tweets, etc) that feature a left- or right-aligned image alongside textual content.</p***REMOVED***
+
+          <h2***REMOVED***Default example</h2***REMOVED***
+          <p***REMOVED***The default media allow to float a media object (images, video, audio) to the left or right of a content block.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="media"***REMOVED***
+              <a class="pull-left" href="#"***REMOVED***
+                <img class="media-object" data-src="holder.js/64x64"***REMOVED***
+              </a***REMOVED***
+              <div class="media-body"***REMOVED***
+                <h4 class="media-heading"***REMOVED***Media heading</h4***REMOVED***
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+              </div***REMOVED***
+            </div***REMOVED***
+            <div class="media"***REMOVED***
+              <a class="pull-left" href="#"***REMOVED***
+                <img class="media-object" data-src="holder.js/64x64"***REMOVED***
+              </a***REMOVED***
+              <div class="media-body"***REMOVED***
+                <h4 class="media-heading"***REMOVED***Media heading</h4***REMOVED***
+                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                <div class="media"***REMOVED***
+                  <a class="pull-left" href="#"***REMOVED***
+                    <img class="media-object" data-src="holder.js/64x64"***REMOVED***
+                  </a***REMOVED***
+                  <div class="media-body"***REMOVED***
+                    <h4 class="media-heading"***REMOVED***Media heading</h4***REMOVED***
+                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                  </div***REMOVED***
+                </div***REMOVED***
+              </div***REMOVED***
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="media"&gt;
+  &lt;a class="pull-left" href="#"&gt;
+    &lt;img class="media-object" data-src="holder.js/64x64"&gt;
+  &lt;/a&gt;
+  &lt;div class="media-body"&gt;
+    &lt;h4 class="media-heading"&gt;Media heading&lt;/h4&gt;
+    ***REMOVED***
+
+    &lt;!-- Nested media object --&gt;
+    &lt;div class="media"&gt;
+      ***REMOVED***
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre***REMOVED***
+
+
+          <hr class="bs-docs-separator"***REMOVED***
+
+
+          <h2***REMOVED***Media list</h2***REMOVED***
+          <p***REMOVED***With a bit of extra markup, you can use media inside list (useful for comment threads or articles lists).</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <ul class="media-list"***REMOVED***
+              <li class="media"***REMOVED***
+                <a class="pull-left" href="#"***REMOVED***
+                  <img class="media-object" data-src="holder.js/64x64"***REMOVED***
+                </a***REMOVED***
+                <div class="media-body"***REMOVED***
+                  <h4 class="media-heading"***REMOVED***Media heading</h4***REMOVED***
+                  <p***REMOVED***Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p***REMOVED***
+                  <!-- Nested media object --***REMOVED***
+                  <div class="media"***REMOVED***
+                    <a class="pull-left" href="#"***REMOVED***
+                      <img class="media-object" data-src="holder.js/64x64"***REMOVED***
+                    </a***REMOVED***
+                    <div class="media-body"***REMOVED***
+                      <h4 class="media-heading"***REMOVED***Nested media heading</h4***REMOVED***
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                      <!-- Nested media object --***REMOVED***
+                      <div class="media"***REMOVED***
+                        <a class="pull-left" href="#"***REMOVED***
+                          <img class="media-object" data-src="holder.js/64x64"***REMOVED***
+                        </a***REMOVED***
+                        <div class="media-body"***REMOVED***
+                          <h4 class="media-heading"***REMOVED***Nested media heading</h4***REMOVED***
+                          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                        </div***REMOVED***
+                      </div***REMOVED***
+                    </div***REMOVED***
+                  </div***REMOVED***
+                  <!-- Nested media object --***REMOVED***
+                  <div class="media"***REMOVED***
+                    <a class="pull-left" href="#"***REMOVED***
+                      <img class="media-object" data-src="holder.js/64x64"***REMOVED***
+                    </a***REMOVED***
+                    <div class="media-body"***REMOVED***
+                      <h4 class="media-heading"***REMOVED***Nested media heading</h4***REMOVED***
+                      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                    </div***REMOVED***
+                  </div***REMOVED***
+                </div***REMOVED***
+              </li***REMOVED***
+              <li class="media"***REMOVED***
+                <a class="pull-right" href="#"***REMOVED***
+                  <img class="media-object" data-src="holder.js/64x64"***REMOVED***
+                </a***REMOVED***
+                <div class="media-body"***REMOVED***
+                  <h4 class="media-heading"***REMOVED***Media heading</h4***REMOVED***
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                </div***REMOVED***
+              </li***REMOVED***
+            </ul***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;ul class="media-list"&gt;
+  &lt;li class="media"&gt;
+    &lt;a class="pull-left" href="#"&gt;
+      &lt;img class="media-object" data-src="holder.js/64x64"&gt;
+    &lt;/a&gt;
+    &lt;div class="media-body"&gt;
+      &lt;h4 class="media-heading"&gt;Media heading&lt;/h4&gt;
+      ***REMOVED***
+
+      &lt;!-- Nested media object --&gt;
+      &lt;div class="media"&gt;
+        ***REMOVED***
+     &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre***REMOVED***
+
+</section***REMOVED***
+
+
+
+
+
+        <!-- Miscellaneous
+        ================================================== --***REMOVED***
+        <section id="misc"***REMOVED***
+          <div class="page-header"***REMOVED***
+            <h1***REMOVED***Miscellaneous <small***REMOVED***Lightweight utility components</small***REMOVED***</h1***REMOVED***
+          </div***REMOVED***
+
+          <h2***REMOVED***Wells</h2***REMOVED***
+          <p***REMOVED***Use the well as a simple effect on an element to give it an inset effect.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="well"***REMOVED***
+              Look, I'm in a well!
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="well"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+          <h3***REMOVED***Optional classes</h3***REMOVED***
+          <p***REMOVED***Control padding and rounded corners with two optional modifier classes.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="well well-large"***REMOVED***
+              Look, I'm in a well!
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="well well-large"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <div class="well well-small"***REMOVED***
+              Look, I'm in a well!
+            </div***REMOVED***
+          </div***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+&lt;div class="well well-small"&gt;
+  ***REMOVED***
+&lt;/div&gt;
+</pre***REMOVED***
+
+          <h2***REMOVED***Close icon</h2***REMOVED***
+          <p***REMOVED***Use the generic close icon for dismissing content like modals and alerts.</p***REMOVED***
+          <div class="bs-docs-example"***REMOVED***
+            <p***REMOVED***<button class="close" style="float: none;"***REMOVED***&times;</button***REMOVED***</p***REMOVED***
+          </div***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre***REMOVED***
+          <p***REMOVED***iOS devices require an <code***REMOVED***href="#"</code***REMOVED*** for click events if you would rather use an anchor.</p***REMOVED***
+          <pre class="prettyprint linenums"***REMOVED***&lt;a class="close" href="#"&gt;&amp;times;&lt;/a&gt;</pre***REMOVED***
+
+          <h2***REMOVED***Helper classes</h2***REMOVED***
+          <p***REMOVED***Simple, focused classes for small display or behavior tweaks.</p***REMOVED***
+
+          <h4***REMOVED***.pull-left</h4***REMOVED***
+          <p***REMOVED***Float an element left</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+class="pull-left"
+</pre***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+.pull-left {
+  float: left;
+***REMOVED***
+</pre***REMOVED***
+
+          <h4***REMOVED***.pull-right</h4***REMOVED***
+          <p***REMOVED***Float an element right</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+class="pull-right"
+</pre***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+.pull-right {
+  float: right;
+***REMOVED***
+</pre***REMOVED***
+
+          <h4***REMOVED***.muted</h4***REMOVED***
+          <p***REMOVED***Change an element's color to <code***REMOVED***#999</code***REMOVED***</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+class="muted"
+</pre***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+.muted {
+  color: #999;
+***REMOVED***
+</pre***REMOVED***
+
+          <h4***REMOVED***.clearfix</h4***REMOVED***
+          <p***REMOVED***Clear the <code***REMOVED***float</code***REMOVED*** on any element</p***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+class="clearfix"
+</pre***REMOVED***
+<pre class="prettyprint linenums"***REMOVED***
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  ***REMOVED***
+  &:after {
+    clear: both;
+  ***REMOVED***
+***REMOVED***
+</pre***REMOVED***
+
+        </section***REMOVED***
+
+
+
+      </div***REMOVED***
+    </div***REMOVED***
+
+  </div***REMOVED***
+
+
+
+    <!-- Footer
+    ================================================== --***REMOVED***
+    <footer class="footer"***REMOVED***
+      <div class="container"***REMOVED***
+        <p***REMOVED***Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank"***REMOVED***@mdo</a***REMOVED*** and <a href="http://twitter.com/fat" target="_blank"***REMOVED***@fat</a***REMOVED***.</p***REMOVED***
+        <p***REMOVED***Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank"***REMOVED***Apache License v2.0</a***REMOVED***, documentation under <a href="http://creativecommons.org/licenses/by/3.0/"***REMOVED***CC BY 3.0</a***REMOVED***.</p***REMOVED***
+        <p***REMOVED***<a href="http://glyphicons.com"***REMOVED***Glyphicons Free</a***REMOVED*** licensed under <a href="http://creativecommons.org/licenses/by/3.0/"***REMOVED***CC BY 3.0</a***REMOVED***.</p***REMOVED***
+        <ul class="footer-links"***REMOVED***
+          <li***REMOVED***<a href="http://blog.getbootstrap.com"***REMOVED***Blog</a***REMOVED***</li***REMOVED***
+          <li class="muted"***REMOVED***&middot;</li***REMOVED***
+          <li***REMOVED***<a href="https://github.com/twitter/bootstrap/issues?state=open"***REMOVED***Issues</a***REMOVED***</li***REMOVED***
+          <li class="muted"***REMOVED***&middot;</li***REMOVED***
+          <li***REMOVED***<a href="https://github.com/twitter/bootstrap/blob/master/CHANGELOG.md"***REMOVED***Changelog</a***REMOVED***</li***REMOVED***
+        </ul***REMOVED***
+      </div***REMOVED***
+    </footer***REMOVED***
+
+
+
+    <!-- Le javascript
+    ================================================== --***REMOVED***
+    <!-- Placed at the end of the document so the pages load faster --***REMOVED***
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/jquery.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-transition.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-alert.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-modal.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-dropdown.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-scrollspy.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-tab.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-tooltip.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-popover.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-button.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-collapse.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-carousel.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-typeahead.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/bootstrap-affix.js"***REMOVED***</script***REMOVED***
+
+    <script src="assets/js/holder/holder.js"***REMOVED***</script***REMOVED***
+    <script src="assets/js/google-code-prettify/prettify.js"***REMOVED***</script***REMOVED***
+
+    <script src="assets/js/application.js"***REMOVED***</script***REMOVED***
+
+
+
+  </body***REMOVED***
+</html***REMOVED***
