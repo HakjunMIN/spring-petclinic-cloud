@@ -33,7 +33,7 @@ petClinicApp.config(['$routeProvider',
 ***REMOVED***).
       when('/owner/:id/edit', {
     	  templateUrl: 'scripts/app/owner/ownerForm.html',
-    	  controller: 'ownerDetailController'
+    	  controller: 'ownerFormController'
 ***REMOVED***).
       when('/vets', {
           templateUrl: 'scripts/app/vet/vetList.html',

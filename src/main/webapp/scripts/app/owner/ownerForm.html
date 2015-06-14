@@ -1,37 +1,36 @@
 <div class="container"***REMOVED***
  
-
     <h2***REMOVED***Owner</h2***REMOVED***
-    <form method="POST" class="form-horizontal" id="ownerForm"***REMOVED***
+    <form class="form-horizontal" name="ownerForm" ng-controller="ownerFormController"***REMOVED***
     	<fieldset***REMOVED***
     		<div class="control-group" id="firstName"***REMOVED***
                 <label class="control-label"***REMOVED***First name </label***REMOVED***
-                <input ng-model="owner.firstName" /***REMOVED***
-                <span ng-show="owner.firstName.$error.required" class="help-inline"***REMOVED***First name is required.</span***REMOVED***
+                <input ng-model="owner.firstName" name="firstName" required/***REMOVED***
+                <span ng-show="ownerForm.firstName.$error.required" class="help-inline"***REMOVED***First name is required.</span***REMOVED***
             </div***REMOVED***
             <div class="control-group" id="lastName"***REMOVED***
                 <label class="control-label"***REMOVED***Last name </label***REMOVED***
-                <input ng-model="owner.lastName" /***REMOVED***
-                <span ng-show="myForm.lastName.$error.required" class="help-inline"***REMOVED***Last name is required.</span***REMOVED***
+                <input ng-model="owner.lastName" name="lastName" required/***REMOVED***
+                <span ng-show="ownerForm.lastName.$error.required" class="help-inline"***REMOVED***Last name is required.</span***REMOVED***
             </div***REMOVED***
             <div class="control-group" id="address"***REMOVED***
                 <label class="control-label"***REMOVED***Address </label***REMOVED***
-                <input ng-model="owner.address" /***REMOVED***
-                <span ng-show="myForm.address.$error.required" class="help-inline"***REMOVED***Address is required.</span***REMOVED***
+                <input ng-model="owner.address" name="address" required/***REMOVED***
+                <span ng-show="ownerForm.address.$error.required" class="help-inline"***REMOVED***Address is required.</span***REMOVED***
             </div***REMOVED***
             <div class="control-group" id="city"***REMOVED***
                 <label class="control-label"***REMOVED***City </label***REMOVED***
-                <input ng-model="owner.city" /***REMOVED***
-                <span ng-show="myForm.city.$error.required" class="help-inline"***REMOVED***City is required.</span***REMOVED***
+                <input ng-model="owner.city" name="city" required/***REMOVED***
+                <span ng-show="ownerForm.city.$error.required" class="help-inline"***REMOVED***City is required.</span***REMOVED***
             </div***REMOVED***
             <div class="control-group" id="telephone"***REMOVED***
                 <label class="control-label"***REMOVED***Telephone </label***REMOVED***
-                <input ng-model="owner.telephone" /***REMOVED***
-                <span ng-show="myForm.telephone.$error.required" class="help-inline"***REMOVED***Telephone is required.</span***REMOVED***
+                <input ng-model="owner.telephone" name="telephone" required/***REMOVED***
+                <span ng-show="ownerForm.telephone.$error.required" class="help-inline"***REMOVED***Telephone is required.</span***REMOVED***
             </div***REMOVED***
 	
 	        <div class="form-actions"***REMOVED***
-	                    <button type="submit" ng-click="submitOwnerFindForm()"***REMOVED***Submit</button***REMOVED***
+	                    <button type="submit" ng-click="submitOwnerForm()"***REMOVED***Submit</button***REMOVED***
 	        </div***REMOVED***
         </fieldset***REMOVED***
     </form***REMOVED***
