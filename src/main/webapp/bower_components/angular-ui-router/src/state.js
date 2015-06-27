@@ -215,6 +215,13 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
     var globSegments = glob.split('.'),
         segments = $state.$current.name.split('.');
 
+    //match single stars
+    for (var i = 0, l = globSegments.length; i < l; i++) {
+      if (globSegments[i] === '*') {
+        segments[i] = '*';
+***REMOVED***
+    ***REMOVED***
+
     //match greedy starts
     if (globSegments[0] === '**') {
        segments = segments.slice(indexOf(segments, globSegments[1]));
@@ -228,13 +235,6 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
 
     if (globSegments.length != segments.length) {
       return false;
-    ***REMOVED***
-
-    //match single stars
-    for (var i = 0, l = globSegments.length; i < l; i++) {
-      if (globSegments[i] === '*') {
-        segments[i] = '*';
-***REMOVED***
     ***REMOVED***
 
     return segments.join('') === globSegments.join('');
@@ -445,6 +445,13 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *   published to scope under the controllerAs name.
    * <pre***REMOVED***controllerAs: "myCtrl"</pre***REMOVED***
    *
+   * @param {string|object=***REMOVED*** stateConfig.parent
+   * <a id='parent'***REMOVED***</a***REMOVED***
+   * Optionally specifies the parent state of this state.
+   *
+   * <pre***REMOVED***parent: 'parentState'</pre***REMOVED***
+   * <pre***REMOVED***parent: parentState // JS variable</pre***REMOVED***
+   *
    * @param {object=***REMOVED*** stateConfig.resolve
    * <a id='resolve'***REMOVED***</a***REMOVED***
    *
@@ -476,6 +483,9 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    *   transitioned to, the `$stateParams` service will be populated with any 
    *   parameters that were passed.
    *
+   *   (See {@link ui.router.util.type:UrlMatcher UrlMatcher***REMOVED*** `UrlMatcher`***REMOVED*** for
+   *   more details on acceptable patterns )
+   *
    * examples:
    * <pre***REMOVED***url: "/home"
    * url: "/users/:userid"
@@ -483,8 +493,9 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
    * url: "/books/{categoryid:int***REMOVED***"
    * url: "/books/{publishername:string***REMOVED***/{categoryid:int***REMOVED***"
    * url: "/messages?before&after"
-   * url: "/messages?{before:date***REMOVED***&{after:date***REMOVED***"</pre***REMOVED***
+   * url: "/messages?{before:date***REMOVED***&{after:date***REMOVED***"
    * url: "/messages/:mailboxid?{before:date***REMOVED***&{after:date***REMOVED***"
+   * </pre***REMOVED***
    *
    * @param {object=***REMOVED*** stateConfig.views
    * <a id='views'***REMOVED***</a***REMOVED***
@@ -788,8 +799,8 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
      * @methodOf ui.router.state.$state
      *
      * @description
-     * A method that force reloads the current state. All resolves are re-resolved, events are not re-fired, 
-     * and controllers reinstantiated (bug with controllers reinstantiating right now, fixing soon).
+     * A method that force reloads the current state. All resolves are re-resolved,
+     * controllers reinstantiated, and events re-fired.
      *
      * @example
      * <pre***REMOVED***
@@ -809,11 +820,33 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
      * ***REMOVED***);
      * </pre***REMOVED***
      *
+     * @param {string=|object=***REMOVED*** state - A state name or a state object, which is the root of the resolves to be re-resolved.
+     * @example
+     * <pre***REMOVED***
+     * //assuming app application consists of 3 states: 'contacts', 'contacts.detail', 'contacts.detail.item' 
+     * //and current state is 'contacts.detail.item'
+     * var app angular.module('app', ['ui.router']);
+     *
+     * app.controller('ctrl', function ($scope, $state) {
+     *   $scope.reload = function(){
+     *     //will reload 'contact.detail' and 'contact.detail.item' states
+     *     $state.reload('contact.detail');
+     *   ***REMOVED***
+     * ***REMOVED***);
+     * </pre***REMOVED***
+     *
+     * `reload()` is just an alias for:
+     * <pre***REMOVED***
+     * $state.transitionTo($state.current, $stateParams, { 
+     *   reload: true, inherit: false, notify: true
+     * ***REMOVED***);
+     * </pre***REMOVED***
+
      * @returns {promise***REMOVED*** A promise representing the state of the new transition. See
      * {@link ui.router.state.$state#methods_go $state.go***REMOVED***.
      */
-    $state.reload = function reload() {
-      return $state.transitionTo($state.current, $stateParams, { reload: true, inherit: false, notify: true ***REMOVED***);
+    $state.reload = function reload(state) {
+      return $state.transitionTo($state.current, $stateParams, { reload: state || true, inherit: false, notify: true***REMOVED***);
     ***REMOVED***;
 
     /**
@@ -917,9 +950,11 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
      * - **`relative`** - {object=***REMOVED***, When transitioning with relative path (e.g '^'), 
      *    defines which state to be relative from.
      * - **`notify`** - {boolean=true***REMOVED***, If `true` will broadcast $stateChangeStart and $stateChangeSuccess events.
-     * - **`reload`** (v0.2.5) - {boolean=false***REMOVED***, If `true` will force transition even if the state or params 
+     * - **`reload`** (v0.2.5) - {boolean=false|string=|object=***REMOVED***, If `true` will force transition even if the state or params 
      *    have not changed, aka a reload of the same state. It differs from reloadOnSearch because you'd
      *    use this when you want to force a reload when *everything* is the same, including search params.
+     *    if String, then will reload the state with the name given in reload, and any children.
+     *    if Object, then a stateObj is expected, will reload the state found in stateObj, and any children.
      *
      * @returns {promise***REMOVED*** A promise representing the state of the new transition. See
      * {@link ui.router.state.$state#methods_go $state.go***REMOVED***.
@@ -932,6 +967,9 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
 
       var from = $state.$current, fromParams = $state.params, fromPath = from.path;
       var evt, toState = findState(to, options.relative);
+
+      // Store the hash param for later (since it will be stripped out by various methods)
+      var hash = toParams['#'];
 
       if (!isDefined(toState)) {
         var redirect = { to: to, toParams: toParams, options: options ***REMOVED***;
@@ -971,6 +1009,21 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
           keep++;
           state = toPath[keep];
   ***REMOVED***
+***REMOVED*** else if (isString(options.reload) || isObject(options.reload)) {
+        if (isObject(options.reload) && !options.reload.name) {
+          throw new Error('Invalid reload state object');
+  ***REMOVED***
+        
+        var reloadState = options.reload === true ? fromPath[0] : findState(options.reload);
+        if (options.reload && !reloadState) {
+          throw new Error("No such reload state '" + (isString(options.reload) ? options.reload : options.reload.name) + "'");
+  ***REMOVED***
+
+        while (state && state === fromPath[keep] && state !== reloadState) {
+          locals = toLocals[keep] = state.locals;
+          keep++;
+          state = toPath[keep];
+  ***REMOVED***
 ***REMOVED***
 
       // If we're going to the same state and all locals are kept, we've got nothing to do.
@@ -978,8 +1031,16 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
       // TODO: We may not want to bump 'transition' if we're called from a location change
       // that we've initiated ourselves, because we might accidentally abort a legitimate
       // transition initiated from code?
-      if (shouldTriggerReload(to, from, locals, options)) {
-        if (to.self.reloadOnSearch !== false) $urlRouter.update();
+      if (shouldSkipReload(to, toParams, from, fromParams, locals, options)) {
+        if (hash) toParams['#'] = hash;
+        $state.params = toParams;
+        copy($state.params, $stateParams);
+        if (options.location && to.navigable && to.navigable.url) {
+          $urlRouter.push(to.navigable.url, toParams, {
+            $$avoidResync: true, replace: options.location === 'replace'
+    ***REMOVED***);
+          $urlRouter.update(true);
+  ***REMOVED***
         $state.transition = null;
         return $q.when($state.current);
 ***REMOVED***
@@ -1017,6 +1078,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
          * </pre***REMOVED***
          */
         if ($rootScope.$broadcast('$stateChangeStart', to.self, toParams, from.self, fromParams).defaultPrevented) {
+          $rootScope.$broadcast('$stateChangeCancel', to.self, toParams, from.self, fromParams);
           $urlRouter.update();
           return TransitionPrevented;
   ***REMOVED***
@@ -1062,6 +1124,9 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
             $injector.invoke(entering.self.onEnter, entering.self, entering.locals.globals);
     ***REMOVED***
   ***REMOVED***
+
+        // Re-add the saved hash before we start returning things
+        if (hash) toParams['#'] = hash;
 
         // Run it again, to catch any transitions in callbacks
         if ($state.transition !== transition) return TransitionSuperseded;
@@ -1288,7 +1353,7 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
       if (!nav || nav.url === undefined || nav.url === null) {
         return null;
 ***REMOVED***
-      return $urlRouter.href(nav.url, filterByKeys(state.params.$$keys(), params || {***REMOVED***), {
+      return $urlRouter.href(nav.url, filterByKeys(state.params.$$keys().concat('#'), params || {***REMOVED***), {
         absolute: options.absolute
 ***REMOVED***);
     ***REMOVED***;
@@ -1330,30 +1395,38 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
 ***REMOVED***)];
       if (inherited) promises.push(inherited);
 
-      // Resolve template and dependencies for all views.
-      forEach(state.views, function (view, name) {
-        var injectables = (view.resolve && view.resolve !== state.resolve ? view.resolve : {***REMOVED***);
-        injectables.$template = [ function () {
-          return $view.load(name, { view: view, locals: locals, params: $stateParams, notify: options.notify ***REMOVED***) || '';
-  ***REMOVED***];
+      function resolveViews() {
+        var viewsPromises = [];
 
-        promises.push($resolve.resolve(injectables, locals, dst.resolve, state).then(function (result) {
-          // References to the controller (only instantiated at link time)
-          if (isFunction(view.controllerProvider) || isArray(view.controllerProvider)) {
-            var injectLocals = angular.extend({***REMOVED***, injectables, locals);
-            result.$$controller = $injector.invoke(view.controllerProvider, null, injectLocals);
-    ***REMOVED*** else {
-            result.$$controller = view.controller;
-    ***REMOVED***
-          // Provide access to the state itself for internal use
-          result.$$state = state;
-          result.$$controllerAs = view.controllerAs;
-          dst[name] = result;
-  ***REMOVED***));
-***REMOVED***);
+        // Resolve template and dependencies for all views.
+        forEach(state.views, function (view, name) {
+          var injectables = (view.resolve && view.resolve !== state.resolve ? view.resolve : {***REMOVED***);
+          injectables.$template = [ function () {
+            return $view.load(name, { view: view, locals: dst.globals, params: $stateParams, notify: options.notify ***REMOVED***) || '';
+    ***REMOVED***];
+
+          viewsPromises.push($resolve.resolve(injectables, dst.globals, dst.resolve, state).then(function (result) {
+            // References to the controller (only instantiated at link time)
+            if (isFunction(view.controllerProvider) || isArray(view.controllerProvider)) {
+              var injectLocals = angular.extend({***REMOVED***, injectables, dst.globals);
+              result.$$controller = $injector.invoke(view.controllerProvider, null, injectLocals);
+      ***REMOVED*** else {
+              result.$$controller = view.controller;
+      ***REMOVED***
+            // Provide access to the state itself for internal use
+            result.$$state = state;
+            result.$$controllerAs = view.controllerAs;
+            dst[name] = result;
+    ***REMOVED***));
+  ***REMOVED***);
+
+        return $q.all(viewsPromises).then(function(){
+          return dst.globals;
+  ***REMOVED***);
+***REMOVED***
 
       // Wait for all the promises and then return the activation object
-      return $q.all(promises).then(function (values) {
+      return $q.all(promises).then(resolveViews).then(function (values) {
         return dst;
 ***REMOVED***);
     ***REMOVED***
@@ -1361,8 +1434,27 @@ function $StateProvider(   $urlRouterProvider,   $urlMatcherFactory) {
     return $state;
   ***REMOVED***
 
-  function shouldTriggerReload(to, from, locals, options) {
-    if (to === from && ((locals === from.locals && !options.reload) || (to.self.reloadOnSearch === false))) {
+  function shouldSkipReload(to, toParams, from, fromParams, locals, options) {
+    // Return true if there are no differences in non-search (path/object) params, false if there are differences
+    function nonSearchParamsEqual(fromAndToState, fromParams, toParams) {
+      // Identify whether all the parameters that differ between `fromParams` and `toParams` were search params.
+      function notSearchParam(key) {
+        return fromAndToState.params[key].location != "search";
+***REMOVED***
+      var nonQueryParamKeys = fromAndToState.params.$$keys().filter(notSearchParam);
+      var nonQueryParams = pick.apply({***REMOVED***, [fromAndToState.params].concat(nonQueryParamKeys));
+      var nonQueryParamSet = new $$UMFP.ParamSet(nonQueryParams);
+      return nonQueryParamSet.$$equals(fromParams, toParams);
+    ***REMOVED***
+
+    // If reload was not explicitly requested
+    // and we're transitioning to the same state we're already in
+    // and    the locals didn't change
+    //     or they changed in a way that doesn't merit reloading
+    //        (reloadOnParams:false, or reloadOnSearch.false and only search params changed)
+    // Then return true.
+    if (!options.reload && to === from &&
+      (locals === from.locals || (to.self.reloadOnSearch === false && nonSearchParamsEqual(from, fromParams, toParams)))) {
       return true;
     ***REMOVED***
   ***REMOVED***
