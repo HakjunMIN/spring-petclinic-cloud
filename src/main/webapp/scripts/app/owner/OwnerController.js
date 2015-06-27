@@ -3,8 +3,8 @@
 /*
  * Owner Search
  */
-angular.module('controllers').controller('ownerSearchController', ['$scope', '$rootScope', '$resource', '$location',
-                                                            function($scope, $rootScope, $resource, $location) {
+angular.module('controllers').controller('ownerSearchController', ['$scope', '$rootScope', '$resource', '$state',
+                                                            function($scope, $rootScope, $resource, $state) {
 
 	$scope.submitOwnerFindForm = function() {
 
@@ -15,42 +15,36 @@ angular.module('controllers').controller('ownerSearchController', ['$scope', '$r
 
 	    var ownerResource = $resource(destUrl);
 	    $rootScope.owners = ownerResource.query();
-	    $location.path('/owner/list');
+	    $state.go('app.ownerlist'); //updating URL in address bar
 	***REMOVED******REMOVED***]);
 
 /*
  * Owners List
  */
-angular.module('controllers').controller('ownerListController', ['$scope', '$rootScope', '$location',
+angular.module('controllers').controller('ownerListController', ['$scope', '$rootScope',
              function($scope, $rootScope, $location) {
                	if ($rootScope.owners!=null){
                		$scope.ownerList = $rootScope.owners;
-               	***REMOVED***
-
-               	$scope.displayOwnerDetail = function(id) {
-					var url = "owner/" + id + "/view";
-					$rootScope.ownerId = id;
-                    $location.path(url);
-          ***REMOVED***
+               	***REMOVED***              
        ***REMOVED***]);
 
 /*
  * Owners detail (used for both Editable and non-editable pages)
  */
-angular.module('controllers').controller('ownerDetailController', ['$scope', '$resource', '$rootScope',
+angular.module('controllers').controller('ownerDetailController', ['$scope', '$resource', '$stateParams',
                loadOwner
 ]);
 
-function loadOwner($scope, $resource, $rootScope) {
-	var ownerResource = $resource('/petclinic/owner/' + $rootScope.ownerId);
+function loadOwner($scope, $resource, $stateParams) {
+	var ownerResource = $resource('/petclinic/owner/' + $stateParams.id);
 	$scope.owner =  ownerResource.get();
 ***REMOVED***
 
 /*
  * Owner Edit Form
  */
-angular.module('controllers').controller('ownerFormController', ['$scope', '$resource', '$http', '$rootScope', '$location',
-function($scope, $resource, $http, $rootScope, $location) {
+angular.module('controllers').controller('ownerFormController', ['$scope', '$resource', '$http', '$stateParams', '$state',
+function($scope, $resource, $http, $stateParams, $state) {
 	
 	$scope.submitOwnerForm = function() {
 		var form = $scope.owner;
@@ -63,12 +57,12 @@ function($scope, $resource, $http, $rootScope, $location) {
 				city: 		form.city,
 				telephone:	form.telephone	
 		***REMOVED***;
-		var restUrl = "/petclinic/owner/" + $rootScope.ownerId;
-		$http.post(restUrl, data);
-		$location.path('/owner/list');
+		var restUrl = "/petclinic/owner/" + $stateParams.id;
+		$http.put(restUrl, data);
+		$state.go('app.ownerlist');
 	***REMOVED***
 	
-	loadOwner($scope, $resource, $rootScope);
+	loadOwner($scope, $resource, $stateParams);
 
 ***REMOVED***]);
 

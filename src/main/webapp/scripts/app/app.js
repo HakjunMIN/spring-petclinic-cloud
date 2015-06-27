@@ -7,40 +7,73 @@ angular.module('services', ['ngResource']);
 
 /* App Module */
 var petClinicApp = angular.module('petClinicApp', [
-  'ngRoute', 'controllers', 'services'
+  'ui.router', 'controllers', 'services'
 ]);
 
 
 		
-petClinicApp.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-    when('/', {
-        templateUrl: 'scripts/app/main/main.html',
-        controller: 'mainController'
+petClinicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+    
+    $stateProvider
+    .state('app', {
+    	url: '/',
+    	controller: 'mainController',
+    	views: {
+            'header': 	{ templateUrl: 'scripts/app/fragments/bodyHeader.html'***REMOVED***,
+            'content': 	{ templateUrl: 'scripts/app/main/main.html'***REMOVED***,
+            'footer': 	{ templateUrl: 'scripts/app/fragments/footer.html'***REMOVED***
+  ***REMOVED***
 ***REMOVED***).
-    when('/owner/search', {
-        templateUrl: 'scripts/app/owner/ownerSearchForm.html',
-        controller: 'ownerSearchController'
+      state('app.ownersearch', {
+          url: 'owner/search',
+          views: {
+              'content@': {
+            	  templateUrl: 'scripts/app/owner/ownerSearchForm.html',
+                  controller: 'ownerSearchController'
+        ***REMOVED***
+    ***REMOVED***
+   
 ***REMOVED***).
-    when('/owner/list', {
-        templateUrl: 'scripts/app/owner/ownerList.html',
-        controller: 'ownerListController'
-    ***REMOVED***).
-     when('/owner/:id/view', {
-    	  templateUrl: 'scripts/app/owner/ownerDetail.html',
-    	  controller: 'ownerDetailController'
+      state('app.ownerlist', {
+          url: 'owner/list',
+          views: {
+              'content@': {
+                  templateUrl: 'scripts/app/owner/ownerList.html',
+                  controller: 'ownerListController'
+        ***REMOVED***
+    ***REMOVED***
+   
 ***REMOVED***).
-      when('/owner/:id/edit', {
-    	  templateUrl: 'scripts/app/owner/ownerForm.html',
-    	  controller: 'ownerFormController'
+      state('app.ownerdetail', {
+          url: 'owner/:id',
+          views: {
+              'content@': {
+                  templateUrl: 'scripts/app/owner/ownerDetail.html',
+                  controller: 'ownerDetailController'
+        ***REMOVED***
+    ***REMOVED***
+   
 ***REMOVED***).
-      when('/vets', {
-          templateUrl: 'scripts/app/vet/vetList.html',
-          controller: 'vetController'
-  ***REMOVED***).
-      otherwise({
-        redirectTo: '/'
+      state('app.owneredit', {
+          url: 'owner/:id/edit',
+          views: {
+              'content@': {
+                  templateUrl: 'scripts/app/owner/ownerForm.html',
+                  controller: 'ownerFormController'
+        ***REMOVED***
+    ***REMOVED***
+   
+***REMOVED***).
+      state('app.vets', {
+          url: 'vets',
+          views: {
+              'content@': {
+                  templateUrl: 'scripts/app/vet/vetList.html',
+                  controller: 'vetController'
+        ***REMOVED***
+    ***REMOVED***
+   
 ***REMOVED***);
   ***REMOVED***]);
 
