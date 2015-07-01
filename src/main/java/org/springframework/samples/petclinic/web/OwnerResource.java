@@ -15,17 +15,19 @@
  */
 package org.springframework.samples.petclinic.web;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.service.ClinicService;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -50,14 +52,14 @@ public class OwnerResource {
         dataBinder.setDisallowedFields("id");
     ***REMOVED***
     
-    @ModelAttribute
-    public Owner retrieveOwner(@PathVariable("ownerId") int ownerId) {
+    private Owner retrieveOwner(int ownerId) {
         return this.clinicService.findOwnerById(ownerId);
     ***REMOVED***
 
-    // TODO: should be improved so we have a single method parameter
     @RequestMapping(value = "/owner/{ownerId***REMOVED***", method = RequestMethod.PUT)
-    public Owner updateOwner(@ModelAttribute Owner ownerModel, @RequestBody Owner ownerRequest) {
+    public Owner updateOwner(@PathVariable("ownerId") int ownerId, @RequestBody Owner ownerRequest) {
+    	Owner ownerModel = retrieveOwner(ownerId);
+    	// This is done by hand for simplicity purpose. In a real life use-case we should consider using MapStruct.
     	ownerModel.setFirstName(ownerRequest.getFirstName());
     	ownerModel.setLastName(ownerRequest.getLastName());
     	ownerModel.setCity(ownerRequest.getCity());
@@ -71,9 +73,25 @@ public class OwnerResource {
 
     @RequestMapping(value = "/owner/{ownerId***REMOVED***", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
-    public Owner findOwner(Owner owner) {
-    	// Has already been retrieved from 'retrieveOwner' method
-        return owner;
+    public Owner findOwner(@PathVariable("ownerId") int ownerId) {
+        return retrieveOwner(ownerId);
+    ***REMOVED***
+    
+    @RequestMapping(value = "/owner/list", method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public Collection<Owner***REMOVED*** findOwnerCollection(@RequestParam("lastName") String ownerLastName) {
+
+    	if (ownerLastName == null) {
+    		ownerLastName = "";
+    	***REMOVED***
+    	
+        Collection<Owner***REMOVED*** results = this.clinicService.findOwnerByLastName(ownerLastName);
+        if (results.isEmpty()) {
+            return null;
+  ***REMOVED***
+        else {
+            return results;
+  ***REMOVED***
     ***REMOVED***
 
 ***REMOVED***
