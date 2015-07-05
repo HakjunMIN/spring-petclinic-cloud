@@ -21,7 +21,7 @@
     --***REMOVED***
     <context:component-scan
             base-package="org.springframework.samples.petclinic.web"/***REMOVED***
-
+    
     <mvc:annotation-driven conversion-service="conversionService"***REMOVED***
     	<mvc:message-converters***REMOVED***
 	        <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"***REMOVED***
@@ -31,7 +31,7 @@
 	        </bean***REMOVED***
     	</mvc:message-converters***REMOVED***
     </mvc:annotation-driven***REMOVED***
-
+    
     <!--  all resources inside folder src/main/webapp/resources are mapped so they can be refered to inside JSP files
         (see header.jsp for more details) --***REMOVED***
     <mvc:resources mapping="/resources/**" location="/resources/"/***REMOVED***

@@ -23,10 +23,8 @@
             <td***REMOVED*** 
                 <a class="btn btn-info" ui-sref="app.owneredit({id: owner.id***REMOVED***)"***REMOVED***Edit Owner</a***REMOVED***</td***REMOVED***
             <td***REMOVED***
-            	<***REMOVED***url value="{ownerId***REMOVED***/pets/new.html" var="addUrl"***REMOVED***
-                    <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
-                </***REMOVED***url***REMOVED***
-                <a href="${fn:escapeXml(addUrl)***REMOVED***"  class="btn btn-success"***REMOVED***Add New Pet</a***REMOVED***</td***REMOVED***
+                <a ui-sref="app.petcreate({ownerid: owner.id***REMOVED***)"  class="btn btn-success"***REMOVED***Add New Pet</a***REMOVED***
+                </td***REMOVED***
         </tr***REMOVED***
     </table***REMOVED***
 
@@ -58,11 +56,7 @@
                             </tr***REMOVED***
                         <tr***REMOVED***
                             <td***REMOVED*** 
-                            	<***REMOVED***url value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/edit" var="petUrl"***REMOVED***
-			                        <***REMOVED***param name="ownerId" value="${owner.id***REMOVED***"/***REMOVED***
-			                        <***REMOVED***param name="petId" value="${pet.id***REMOVED***"/***REMOVED***
-			                    </***REMOVED***url***REMOVED***
-			                    <a href="${fn:escapeXml(petUrl)***REMOVED***"***REMOVED***Edit Pet</a***REMOVED***
+			                    <a ui-sref="app.petedit( {ownerid: owner.id, petid: pet.id***REMOVED***)"***REMOVED***Edit Pet</a***REMOVED***
 			                </td***REMOVED***
                             <td***REMOVED***
 			                    <***REMOVED***url value="/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits/new" var="visitUrl"***REMOVED***
