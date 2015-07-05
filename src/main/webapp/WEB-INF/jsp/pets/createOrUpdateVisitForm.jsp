@@ -10,7 +10,6 @@
 
 <html lang="en"***REMOVED***
 
-<jsp:include page="../fragments/staticFiles.jsp"/***REMOVED***
 
 
 <body***REMOVED***
@@ -20,7 +19,6 @@
     ***REMOVED***);
 </script***REMOVED***
 <div class="container"***REMOVED***
-    <jsp:include page="../fragments/bodyHeader.jsp"/***REMOVED***
     <h2***REMOVED***<c:if test="${visit['new']***REMOVED***"***REMOVED***New </c:if***REMOVED***Visit</h2***REMOVED***
 
     <b***REMOVED***Pet</b***REMOVED***
@@ -70,7 +68,6 @@
     </table***REMOVED***
 
 </div***REMOVED***
-<jsp:include page="../fragments/footer.jsp"/***REMOVED***
 </body***REMOVED***
 
 </html***REMOVED***
