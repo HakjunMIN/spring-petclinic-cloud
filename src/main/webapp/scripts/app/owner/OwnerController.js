@@ -70,8 +70,7 @@ function($scope, $http, $resource, $stateParams, $state) {
         if ($state.current.name == 'app.owneredit') {
             var restUrl = "/petclinic/owner/" + $stateParams.id;
             request = $http.put(restUrl, data);
-  ***REMOVED***
-        else { // in case of owner creation
+  ***REMOVED*** else { // in case of owner creation
             var restUrl = "/petclinic/owner";
             request = $http.post(restUrl, data);
   ***REMOVED***
