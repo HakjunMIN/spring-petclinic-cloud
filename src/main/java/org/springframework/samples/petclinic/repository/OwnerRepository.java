@@ -13,26 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-/*
- * Copyright 2002-2013 the original author or authors.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.springframework.samples.petclinic.repository;
 
 import java.util.Collection;
 
 import org.springframework.dao.DataAccessException;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.samples.petclinic.model.BaseEntity;
 import org.springframework.samples.petclinic.model.Owner;
 
@@ -45,36 +33,31 @@ import org.springframework.samples.petclinic.model.Owner;
  * @author Sam Brannen
  * @author Michael Isvy
  */
-public interface OwnerRepository {
+public interface OwnerRepository extends Repository<Owner, Integer***REMOVED*** {
 
     /**
-     * Retrieve <code***REMOVED***Owner</code***REMOVED***s from the data store by last name, returning all owners whose last name <i***REMOVED***starts</i***REMOVED***
-     * with the given name.
-     *
+     * Retrieve {@link Owner***REMOVED***s from the data store by last name, returning all owners
+     * whose last name <i***REMOVED***starts</i***REMOVED*** with the given name.
      * @param lastName Value to search for
-     * @return a <code***REMOVED***Collection</code***REMOVED*** of matching <code***REMOVED***Owner</code***REMOVED***s (or an empty <code***REMOVED***Collection</code***REMOVED*** if none
-     *         found)
+     * @return a Collection of matching {@link Owner***REMOVED***s (or an empty Collection if none
+     * found)
      */
-    Collection<Owner***REMOVED*** findByLastName(String lastName) throws DataAccessException;
+    @Query("SELECT DISTINCT owner FROM Owner owner left join fetch owner.pets WHERE owner.lastName LIKE :lastName%")
+    Collection<Owner***REMOVED*** findByLastName(@Param("lastName") String lastName);
 
     /**
-     * Retrieve an <code***REMOVED***Owner</code***REMOVED*** from the data store by id.
-     *
+     * Retrieve an {@link Owner***REMOVED*** from the data store by id.
      * @param id the id to search for
-     * @return the <code***REMOVED***Owner</code***REMOVED*** if found
-     * @throws org.springframework.dao.DataRetrievalFailureException
-     *          if not found
+     * @return the {@link Owner***REMOVED*** if found
      */
-    Owner findById(int id) throws DataAccessException;
-
+    @Query("SELECT owner FROM Owner owner left join fetch owner.pets WHERE owner.id =:id")
+    Owner findById(@Param("id") int id);
 
     /**
-     * Save an <code***REMOVED***Owner</code***REMOVED*** to the data store, either inserting or updating it.
-     *
-     * @param owner the <code***REMOVED***Owner</code***REMOVED*** to save
-     * @see BaseEntity#isNew
+     * Save an {@link Owner***REMOVED*** to the data store, either inserting or updating it.
+     * @param owner the {@link Owner***REMOVED*** to save
      */
-    void save(Owner owner) throws DataAccessException;
+    void save(Owner owner);
 
 
 ***REMOVED***
