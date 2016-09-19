@@ -26,9 +26,11 @@ import org.springframework.samples.petclinic.service.ClinicService;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -72,13 +74,13 @@ public class VisitController {
     ***REMOVED***
 
 	// Spring MVC calls method loadPetWithVisit(***REMOVED***) before initNewVisitForm is called
-    @RequestMapping(value = "/owners/*/pets/{petId***REMOVED***/visits/new", method = RequestMethod.GET)
+    @GetMapping("/owners/*/pets/{petId***REMOVED***/visits/new")
     public String initNewVisitForm(@PathVariable("petId") int petId, Map<String, Object***REMOVED*** model) {
         return "pets/createOrUpdateVisitForm";
     ***REMOVED***
 
 	// Spring MVC calls method loadPetWithVisit(***REMOVED***) before processNewVisitForm is called
-    @RequestMapping(value = "/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits/new", method = RequestMethod.POST)
+    @PostMapping("/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits/new")
     public String processNewVisitForm(@Valid Visit visit, BindingResult result) {
         if (result.hasErrors()) {
             return "pets/createOrUpdateVisitForm";
@@ -88,7 +90,7 @@ public class VisitController {
   ***REMOVED***
     ***REMOVED***
 
-    @RequestMapping(value = "/owners/*/pets/{petId***REMOVED***/visits", method = RequestMethod.GET)
+    @GetMapping("/owners/*/pets/{petId***REMOVED***/visits")
     public String showVisits(@PathVariable int petId, Map<String, Object***REMOVED*** model) {
         model.put("visits", this.clinicService.findPetById(petId).getVisits());
         return "visitList";

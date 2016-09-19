@@ -1,44 +1,38 @@
-<!DOCTYPE html***REMOVED*** 
-
-<script***REMOVED***
-    $(function () {
-        $("#birthDate").datepicker({ dateFormat: 'yy/mm/dd'***REMOVED***);
-    ***REMOVED***);
-</script***REMOVED***
 <div class="container"***REMOVED***
 
-    <h2***REMOVED***Pet (work in progress) </h2***REMOVED***
+    <h2***REMOVED***Pet</h2***REMOVED***
+
     <form class="form-horizontal" name="petForm" data-ng-controller="petFormController"***REMOVED***
-    	<fieldset***REMOVED***
-	        <div class="control-group" id="owner"***REMOVED***
-	            <label class="control-label"***REMOVED*** Owner </label***REMOVED***
-	            {{pet.owner.firstName***REMOVED******REMOVED*** {{pet.owner.lastName***REMOVED******REMOVED***
-	        </div***REMOVED***
-    		<div class="control-group" id="name"***REMOVED***
-                <label class="control-label"***REMOVED***Name </label***REMOVED***
-                <input ng-model="pet.name" name="name" required/***REMOVED***
+        <div class="form-group"***REMOVED***
+            <label class="col-sm-2 control-label"***REMOVED***Owner</label***REMOVED***
+            <div class="col-sm-6"***REMOVED***
+                <p class="form-control-static"***REMOVED***{{pet.owner***REMOVED******REMOVED***</p***REMOVED***
+            </div***REMOVED***
+        </div***REMOVED***
+
+        <div class="form-group"***REMOVED***
+            <label class="col-sm-2 control-label"***REMOVED***Name </label***REMOVED***
+            <div class="col-sm-6"***REMOVED***
+                <input class="form-control col-sm-4" ng-model="pet.name" name="name" required type="text"/***REMOVED***
                 <span ng-show="petForm.name.$error.required" class="help-inline"***REMOVED*** Name is required.</span***REMOVED***
             </div***REMOVED***
-    		<div class="control-group" id="birthDate"***REMOVED***
-                <label class="control-label"***REMOVED***Birth date </label***REMOVED***
-                <input ng-model="pet.birthDate" value="{{pet.birthDate | date:'MM/dd/yyyy'***REMOVED******REMOVED*** name="birthDate" required/***REMOVED***
+        </div***REMOVED***
+
+        <div class="form-group"***REMOVED***
+            <label class="col-sm-2 control-label"***REMOVED***Birth date </label***REMOVED***
+            <div class="col-sm-6"***REMOVED***
+                <input class="form-control" ng-model="pet.birthDate" value="{{pet.birthDate***REMOVED******REMOVED***" required type="text"/***REMOVED***
                 <span ng-show="petForm.name.$error.required" class="help-inline"***REMOVED*** birth date is required.</span***REMOVED***
             </div***REMOVED***
-
-
-        <div class="control-group"***REMOVED***
-            <petclinic:selectField name="type" label="Type " names="${types***REMOVED***" size="5"/***REMOVED***
         </div***REMOVED***
-        <div class="form-actions"***REMOVED***
-            <c:choose***REMOVED***
-                <c:when test="${pet['new']***REMOVED***"***REMOVED***
-                    <button type="submit"***REMOVED***Add Pet</button***REMOVED***
-                </c:when***REMOVED***
-                <c:otherwise***REMOVED***
-                    <button type="submit"***REMOVED***Update Pet</button***REMOVED***
-                </c:otherwise***REMOVED***
-            </c:choose***REMOVED***
+
+        <div class="form-group"***REMOVED***
+            <label class="col-sm-2 control-label"***REMOVED***Type </label***REMOVED***
+            <div class="col-sm-6"***REMOVED***
+                <select class="form-control" ng-model="pet.type.id"***REMOVED***
+                    <option ng-repeat="x in types" value="{{x.id***REMOVED******REMOVED***"***REMOVED***{{x.name***REMOVED******REMOVED***</option***REMOVED***
+                </select***REMOVED***
+            </div***REMOVED***
         </div***REMOVED***
-        </fieldset***REMOVED***
     </form***REMOVED***
 </div***REMOVED***
