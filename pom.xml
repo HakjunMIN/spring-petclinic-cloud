@@ -78,6 +78,12 @@
 		</dependency***REMOVED***
 
 		<dependency***REMOVED***
+			<groupId***REMOVED***org.webjars</groupId***REMOVED***
+			<artifactId***REMOVED***angularjs</artifactId***REMOVED***
+			<version***REMOVED***1.5.8</version***REMOVED***
+		</dependency***REMOVED***
+
+		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
 			<scope***REMOVED***test</scope***REMOVED***
