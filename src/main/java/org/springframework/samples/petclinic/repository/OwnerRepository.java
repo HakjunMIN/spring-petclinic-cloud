@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic.repository;
 import java.util.Collection;
 
 import org.springframework.dao.DataAccessException;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
@@ -33,31 +34,4 @@ import org.springframework.samples.petclinic.model.Owner;
  * @author Sam Brannen
  * @author Michael Isvy
  */
-public interface OwnerRepository extends Repository<Owner, Integer***REMOVED*** {
-
-    /**
-     * Retrieve {@link Owner***REMOVED***s from the data store by last name, returning all owners
-     * whose last name <i***REMOVED***starts</i***REMOVED*** with the given name.
-     * @param lastName Value to search for
-     * @return a Collection of matching {@link Owner***REMOVED***s (or an empty Collection if none
-     * found)
-     */
-    @Query("SELECT DISTINCT owner FROM Owner owner left join fetch owner.pets WHERE owner.lastName LIKE :lastName%")
-    Collection<Owner***REMOVED*** findByLastName(@Param("lastName") String lastName);
-
-    /**
-     * Retrieve an {@link Owner***REMOVED*** from the data store by id.
-     * @param id the id to search for
-     * @return the {@link Owner***REMOVED*** if found
-     */
-    @Query("SELECT owner FROM Owner owner left join fetch owner.pets WHERE owner.id =:id")
-    Owner findById(@Param("id") int id);
-
-    /**
-     * Save an {@link Owner***REMOVED*** to the data store, either inserting or updating it.
-     * @param owner the {@link Owner***REMOVED*** to save
-     */
-    void save(Owner owner);
-
-
-***REMOVED***
+public interface OwnerRepository extends JpaRepository<Owner, Integer***REMOVED*** { ***REMOVED***

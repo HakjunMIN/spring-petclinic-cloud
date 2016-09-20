@@ -66,6 +66,18 @@
         </dependency***REMOVED***
 
 		<dependency***REMOVED***
+			<groupId***REMOVED***org.webjars</groupId***REMOVED***
+			<artifactId***REMOVED***bootstrap</artifactId***REMOVED***
+			<version***REMOVED***3.3.7</version***REMOVED***
+		</dependency***REMOVED***
+
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.webjars</groupId***REMOVED***
+			<artifactId***REMOVED***jquery</artifactId***REMOVED***
+			<version***REMOVED***3.1.0</version***REMOVED***
+		</dependency***REMOVED***
+
+		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
 			<scope***REMOVED***test</scope***REMOVED***

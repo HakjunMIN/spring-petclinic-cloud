@@ -17,7 +17,6 @@ package org.springframework.samples.petclinic.service;
 
 import java.util.Collection;
 
-import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.PetType;
@@ -32,20 +31,20 @@ import org.springframework.samples.petclinic.model.Visit;
  */
 public interface ClinicService {
 
-    Collection<PetType***REMOVED*** findPetTypes() throws DataAccessException;
+    Collection<PetType***REMOVED*** findPetTypes();
 
-    Owner findOwnerById(int id) throws DataAccessException;
+    Owner findOwnerById(int id);
 
-    Pet findPetById(int id) throws DataAccessException;
+    Pet findPetById(int id);
 
-    void savePet(Pet pet) throws DataAccessException;
+    void savePet(Pet pet);
 
-    void saveVisit(Visit visit) throws DataAccessException;
+    void saveVisit(Visit visit);
 
-    Collection<Vet***REMOVED*** findVets() throws DataAccessException;
+    Collection<Vet***REMOVED*** findVets();
 
-    void saveOwner(Owner owner) throws DataAccessException;
+    void saveOwner(Owner owner);
 
-    Collection<Owner***REMOVED*** findOwnerByLastName(String lastName) throws DataAccessException;
+    Collection<Owner***REMOVED*** findAll();
 
 ***REMOVED***

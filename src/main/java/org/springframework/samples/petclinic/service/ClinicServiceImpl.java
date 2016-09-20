@@ -63,13 +63,12 @@ public class ClinicServiceImpl implements ClinicService {
     @Override
     @Transactional(readOnly = true)
     public Owner findOwnerById(int id) throws DataAccessException {
-        return ownerRepository.findById(id);
+        return ownerRepository.findOne(id);
     ***REMOVED***
 
-    @Override
     @Transactional(readOnly = true)
-    public Collection<Owner***REMOVED*** findOwnerByLastName(String lastName) throws DataAccessException {
-        return ownerRepository.findByLastName(lastName);
+    public Collection<Owner***REMOVED*** findAll() throws DataAccessException {
+        return ownerRepository.findAll();
     ***REMOVED***
 
     @Override
