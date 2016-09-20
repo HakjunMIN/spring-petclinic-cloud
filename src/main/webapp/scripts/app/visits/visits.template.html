@@ -1,0 +1,27 @@
+<h2***REMOVED***Visits</h2***REMOVED***
+
+<form ng-submit="$ctrl.submit()"***REMOVED***
+
+    <div class="form-group"***REMOVED***
+        <label***REMOVED***Date</label***REMOVED***
+        <input type="date" class="form-control" ng-model='$ctrl.date'/***REMOVED***
+    </div***REMOVED***
+
+    <div class="form-group"***REMOVED***
+        <label***REMOVED***Description</label***REMOVED***
+        <textarea class="form-control" ng-model="$ctrl.desc" style="resize:vertical;" required***REMOVED***</textarea***REMOVED***
+    </div***REMOVED***
+
+    <div class="form-group"***REMOVED***
+        <button class="btn btn-primary" type="submit"***REMOVED***Add New Visit</button***REMOVED***
+    </div***REMOVED***
+
+</form***REMOVED***
+
+<h3***REMOVED***Previous Visits</h3***REMOVED***
+<table class="table table-striped"***REMOVED***
+    <tr ng-repeat="v in $ctrl.visits"***REMOVED***
+        <td class="col-sm-2"***REMOVED***{{v.date***REMOVED******REMOVED***</td***REMOVED***
+        <td***REMOVED***{{v.description***REMOVED******REMOVED***</td***REMOVED***
+    </tr***REMOVED***
+</table***REMOVED***

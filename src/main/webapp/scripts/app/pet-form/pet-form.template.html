@@ -1,6 +1,6 @@
 <h2***REMOVED***Pet</h2***REMOVED***
 
-<form class="form-horizontal"***REMOVED***
+<form class="form-horizontal" ng-submit="$ctrl.submit()"***REMOVED***
     <div class="form-group"***REMOVED***
         <label class="col-sm-2 control-label"***REMOVED***Owner</label***REMOVED***
         <div class="col-sm-6"***REMOVED***
@@ -19,7 +19,7 @@
     <div class="form-group"***REMOVED***
         <label class="col-sm-2 control-label"***REMOVED***Birth date</label***REMOVED***
         <div class="col-sm-6"***REMOVED***
-            <input class="form-control" ng-model="$ctrl.pet.birthDate" value="{{pet.birthDate***REMOVED******REMOVED***" required type="text"/***REMOVED***
+            <input class="form-control" ng-model="$ctrl.pet.birthDate" required type="date"/***REMOVED***
             <span ng-show="petForm.name.$error.required" class="help-inline"***REMOVED*** birth date is required.</span***REMOVED***
         </div***REMOVED***
     </div***REMOVED***
@@ -35,7 +35,7 @@
 
     <div class="form-group"***REMOVED***
         <div class="col-sm-6 col-sm-offset-2"***REMOVED***
-            <button class="btn btn-primary" type="submit" ng-click="$ctrl.submit()"***REMOVED***
+            <button class="btn btn-primary" type="submit"***REMOVED***
                 Submit
             </button***REMOVED***
         </div***REMOVED***
