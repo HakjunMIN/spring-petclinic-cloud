@@ -1,4 +1,12 @@
 <h2***REMOVED***Owners</h2***REMOVED***
+
+<form onsubmit="javascript:void(0)"***REMOVED***
+    <div class="form-group "***REMOVED***
+        <label***REMOVED***Seach</label***REMOVED***
+        <input type="text" class="form-control" placeholder="Filter" ng-model="$ctrl.query" /***REMOVED***
+    </div***REMOVED***
+</form***REMOVED***
+
 <table class="table table-striped"***REMOVED***
     <thead***REMOVED***
     <tr***REMOVED***
@@ -10,7 +18,7 @@
     </tr***REMOVED***
     </thead***REMOVED***
 
-    <tr ng-repeat="owner in $ctrl.owners"***REMOVED***
+    <tr ng-repeat="owner in $ctrl.owners | filter:$ctrl.query"***REMOVED***
         <td***REMOVED***
             <a href="#!/owners/{{owner.id***REMOVED******REMOVED***"***REMOVED***
                 {{owner.firstName***REMOVED******REMOVED*** {{owner.lastName***REMOVED******REMOVED***
