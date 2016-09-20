@@ -15,6 +15,10 @@
 	<name***REMOVED***petclinic</name***REMOVED***
 	<packaging***REMOVED***war</packaging***REMOVED***
 
+	<properties***REMOVED***
+		<java.version***REMOVED***1.8</java.version***REMOVED***
+	</properties***REMOVED***
+
 	<dependencies***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
@@ -91,6 +95,7 @@
 	</dependencies***REMOVED***
 
 	<build***REMOVED***
+		<finalName***REMOVED***petclinic</finalName***REMOVED***
 		<plugins***REMOVED***
 			<plugin***REMOVED***
 				<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
