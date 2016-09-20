@@ -1,44 +1,38 @@
 <h2***REMOVED***Owner</h2***REMOVED***
-<form class="form-horizontal" name="ownerForm"***REMOVED***
+<form ng-submit="$ctrl.submitOwnerForm()" style="max-width: 25em;"***REMOVED***
     <div class="form-group"***REMOVED***
-        <label class="col-sm-2 control-label"***REMOVED***First name</label***REMOVED***
-        <div class="col-sm-4"***REMOVED***
-            <input class="form-control" ng-model="$ctrl.owner.firstName" name="firstName" required/***REMOVED***
-            <span ng-show="ownerForm.firstName.$error.required" class="help-inline"***REMOVED***First name is required.</span***REMOVED***
-        </div***REMOVED***
+        <label***REMOVED***First name</label***REMOVED***
+        <input class="form-control" ng-model="$ctrl.owner.firstName" name="firstName" required/***REMOVED***
+        <span ng-show="ownerForm.firstName.$error.required" class="help-block"***REMOVED***First name is required.</span***REMOVED***
     </div***REMOVED***
+
     <div class="form-group"***REMOVED***
-        <label class="col-sm-2 control-label"***REMOVED***Last name</label***REMOVED***
-        <div class="col-sm-4"***REMOVED***
-            <input class="form-control" ng-model="$ctrl.owner.lastName" name="lastName" required/***REMOVED***
-            <span ng-show="ownerForm.lastName.$error.required" class="help-inline"***REMOVED***Last name is required.</span***REMOVED***
-        </div***REMOVED***
+        <label***REMOVED***Last name</label***REMOVED***
+        <input class="form-control" ng-model="$ctrl.owner.lastName" name="lastName" required/***REMOVED***
+        <span ng-show="ownerForm.lastName.$error.required" class="help-block"***REMOVED***Last name is required.</span***REMOVED***
     </div***REMOVED***
+
+
     <div class="form-group"***REMOVED***
-        <label class="col-sm-2 control-label"***REMOVED***Address</label***REMOVED***
-        <div class="col-sm-4"***REMOVED***
-            <input class="form-control" ng-model="$ctrl.owner.address" name="address" required/***REMOVED***
-            <span ng-show="ownerForm.address.$error.required" class="help-inline"***REMOVED***Address is required.</span***REMOVED***
-        </div***REMOVED***
+        <label***REMOVED***Address</label***REMOVED***
+        <input class="form-control" ng-model="$ctrl.owner.address" name="address" required/***REMOVED***
+        <span ng-show="ownerForm.address.$error.required" class="help-block"***REMOVED***Address is required.</span***REMOVED***
     </div***REMOVED***
+
     <div class="form-group"***REMOVED***
-        <label class="col-sm-2 control-label"***REMOVED***City</label***REMOVED***
-        <div class="col-sm-4"***REMOVED***
-            <input class="form-control" ng-model="$ctrl.owner.city" name="city" required/***REMOVED***
-            <span ng-show="ownerForm.city.$error.required" class="help-inline"***REMOVED***City is required.</span***REMOVED***
-        </div***REMOVED***
+        <label***REMOVED***City</label***REMOVED***
+        <input class="form-control" ng-model="$ctrl.owner.city" name="city" required/***REMOVED***
+        <span ng-show="ownerForm.city.$error.required" class="help-block"***REMOVED***City is required.</span***REMOVED***
     </div***REMOVED***
+    
     <div class="form-group"***REMOVED***
-        <label class="col-sm-2 control-label"***REMOVED***Telephone</label***REMOVED***
-        <div class="col-sm-4"***REMOVED***
-            <input class="form-control" ng-model="$ctrl.owner.telephone" name="telephone" required/***REMOVED***
-            <span ng-show="ownerForm.telephone.$error.required" class="help-inline"***REMOVED***Telephone is required.</span***REMOVED***
-        </div***REMOVED***
+        <label***REMOVED***Telephone</label***REMOVED***
+        <input class="form-control" ng-model="$ctrl.owner.telephone" name="telephone" required/***REMOVED***
+        <span ng-show="ownerForm.telephone.$error.required" class="help-block"***REMOVED***Telephone is required.</span***REMOVED***
     </div***REMOVED***
+    
     <div class="form-group"***REMOVED***
-        <div class="col-sm-offset-2 col-sm-4"***REMOVED***
-            <button class="btn btn-primary" type="submit" ng-click="$ctrl.submitOwnerForm()"***REMOVED***Submit</button***REMOVED***
-        </div***REMOVED***
+        <button class="btn btn-primary" type="submit"***REMOVED***Submit</button***REMOVED***
     </div***REMOVED***
 </form***REMOVED***
 
