@@ -2,28 +2,32 @@
 
 <html ng-app="petClinicApp"***REMOVED***
 
-	<head***REMOVED***
-		<title***REMOVED***PetClinic :: a Spring Framework demonstration</title***REMOVED***
-		
-		<link rel="stylesheet" href="bower_components/bootstrap/docs/assets/css/bootstrap.css" /***REMOVED***
-    	<link href="resources/css/petclinic.css" rel="stylesheet"/***REMOVED***    	
-		
-		<script src="bower_components/angular/angular.js"***REMOVED***</script***REMOVED***
-		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"***REMOVED***</script***REMOVED***
-		<script src="bower_components/angular-resource/angular-resource.js"***REMOVED***</script***REMOVED***
-		<script src="scripts/app/app.js"***REMOVED***</script***REMOVED***
-		<script src="scripts/app/main/MainController.js"***REMOVED***</script***REMOVED***
-		<script src="scripts/app/vet/VetController.js"***REMOVED***</script***REMOVED***
-		<script src="scripts/app/owner/OwnerController.js"***REMOVED***</script***REMOVED***
-		<script src="scripts/app/pet/PetController.js"***REMOVED***</script***REMOVED***
-	</head***REMOVED***
-	
-	<body class="container"***REMOVED***
-		<div ui-view="header"***REMOVED***</div***REMOVED***
-	
-		<div ui-view="content"***REMOVED***</div***REMOVED***
-		
-		<div ui-view="footer"***REMOVED***</div***REMOVED***
-	</body***REMOVED***
+<head***REMOVED***
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui"***REMOVED***
+    <title***REMOVED***PetClinic :: a Spring Framework demonstration</title***REMOVED***
+    <link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css"/***REMOVED***
+    <link rel="stylesheet" href="resources/css/petclinic.css"/***REMOVED***
+
+    <script src="webjars/jquery/3.1.0/jquery.min.js"***REMOVED***</script***REMOVED***
+    <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"***REMOVED***</script***REMOVED***
+
+    <script src="webjars/angularjs/1.5.8/angular.min.js"***REMOVED***</script***REMOVED***
+    <script src="webjars/angularjs/1.5.8/angular-route.min.js"***REMOVED***</script***REMOVED***
+
+    <script src="scripts/app/app.js"***REMOVED***</script***REMOVED***
+    <script src="scripts/app/owner-list/owner-list.component.js"***REMOVED***</script***REMOVED***
+    <script src="scripts/app/owner-details/owner-details.component.js"***REMOVED***</script***REMOVED***
+    <script src="scripts/app/owner-form/owner-form.component.js"***REMOVED***</script***REMOVED***
+    <script src="scripts/app/pet-form/pet-form.component.js"***REMOVED***</script***REMOVED***
+    <script src="scripts/app/visits/visits.component.js"***REMOVED***</script***REMOVED***
+    <script src="scripts/app/vet-list/vet-list.component.js"***REMOVED***</script***REMOVED***
+
+</head***REMOVED***
+
+<body class="container"***REMOVED***
+<layout-nav***REMOVED***</layout-nav***REMOVED***
+<div ng-view***REMOVED***</div***REMOVED***
+<layout-footer***REMOVED***</layout-footer***REMOVED***
+</body***REMOVED***
 
 </html***REMOVED***

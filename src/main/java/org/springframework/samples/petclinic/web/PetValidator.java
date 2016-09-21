@@ -35,14 +35,14 @@ public class PetValidator {
   ***REMOVED*** else if (pet.isNew() && pet.getOwner().getPet(name, true) != null) {
             errors.rejectValue("name", "duplicate", "already exists");
   ***REMOVED***
-        
+
         // type validation
         if (pet.isNew() && pet.getType() == null) {
             errors.rejectValue("type", "required", "required");
   ***REMOVED***
-        
+
         // birth date validation
-        if (pet.getBirthDate()==null) {
+        if (pet.getBirthDate() == null) {
             errors.rejectValue("birthDate", "required", "required");
   ***REMOVED***
     ***REMOVED***

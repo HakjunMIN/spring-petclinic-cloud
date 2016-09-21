@@ -66,10 +66,11 @@ public class CallMonitoringAspect {
 
     @ManagedAttribute
     public long getCallTime() {
-    	if (this.callCount ***REMOVED*** 0) 
-    		return this.accumulatedCallTime / this.callCount;
-    	else
-    		return 0;
+    	if (this.callCount ***REMOVED*** 0) {
+            return this.accumulatedCallTime / this.callCount;
+  ***REMOVED*** else {
+            return 0;
+  ***REMOVED***
     ***REMOVED***
 
 

@@ -18,6 +18,8 @@ package org.springframework.samples.petclinic.repository;
 import java.util.List;
 
 import org.springframework.dao.DataAccessException;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.Repository;
 import org.springframework.samples.petclinic.model.BaseEntity;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.PetType;
@@ -31,31 +33,27 @@ import org.springframework.samples.petclinic.model.PetType;
  * @author Sam Brannen
  * @author Michael Isvy
  */
-public interface PetRepository {
+public interface PetRepository extends Repository<Pet, Integer***REMOVED*** {
 
     /**
-     * Retrieve all <code***REMOVED***PetType</code***REMOVED***s from the data store.
-     *
-     * @return a <code***REMOVED***Collection</code***REMOVED*** of <code***REMOVED***PetType</code***REMOVED***s
+     * Retrieve all {@link PetType***REMOVED***s from the data store.
+     * @return a Collection of {@link PetType***REMOVED***s.
      */
-    List<PetType***REMOVED*** findPetTypes() throws DataAccessException;
+    @Query("SELECT ptype FROM PetType ptype ORDER BY ptype.name")
+    List<PetType***REMOVED*** findPetTypes();
 
     /**
-     * Retrieve a <code***REMOVED***Pet</code***REMOVED*** from the data store by id.
-     *
+     * Retrieve a {@link Pet***REMOVED*** from the data store by id.
      * @param id the id to search for
-     * @return the <code***REMOVED***Pet</code***REMOVED*** if found
-     * @throws org.springframework.dao.DataRetrievalFailureException
-     *          if not found
+     * @return the {@link Pet***REMOVED*** if found
      */
-    Pet findById(int id) throws DataAccessException;
+    Pet findById(int id);
 
     /**
-     * Save a <code***REMOVED***Pet</code***REMOVED*** to the data store, either inserting or updating it.
-     *
-     * @param pet the <code***REMOVED***Pet</code***REMOVED*** to save
-     * @see BaseEntity#isNew
+     * Save a {@link Pet***REMOVED*** to the data store, either inserting or updating it.
+     * @param pet the {@link Pet***REMOVED*** to save
      */
-    void save(Pet pet) throws DataAccessException;
+    void save(Pet pet);
 
 ***REMOVED***
+
