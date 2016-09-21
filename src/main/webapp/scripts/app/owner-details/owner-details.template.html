@@ -38,12 +38,13 @@
         <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***/visits"***REMOVED***Add Visit</a***REMOVED***
     </p***REMOVED***
     <h4***REMOVED***Visits</h4***REMOVED***
-    <p style="margin-left: 2em;" ng-repeat="visit in pet.visits"***REMOVED***
-        <span style="font-style: italic; margin-right: 1em;"***REMOVED***{{visit.date | date:'yyyy MMM dd'***REMOVED******REMOVED***</span***REMOVED***
-        {{visit.description***REMOVED******REMOVED***
-    </p***REMOVED***
 
-    <p style="margin-left: 2em;" ng-if="pet.visits.length == 0"***REMOVED***
+    <div ng-repeat="visit in pet.visits" style="margin-top: 1em;"***REMOVED***
+        <h5***REMOVED***{{visit.date | date:'yyyy MMM dd'***REMOVED******REMOVED***</h5***REMOVED***
+        <p style="white-space: pre-line"***REMOVED***{{visit.description***REMOVED******REMOVED***</p***REMOVED***
+    </div***REMOVED***
+
+    <p ng-if="pet.visits.length == 0"***REMOVED***
         No visit yet
     </p***REMOVED***
 
