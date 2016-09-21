@@ -30,7 +30,9 @@
 <h2***REMOVED***Pets and Visits</h2***REMOVED***
 
 <div ng-repeat="pet in $ctrl.owner.pets"***REMOVED***
-    <h3***REMOVED***{{pet.name***REMOVED******REMOVED***</h3***REMOVED***
+    <h3***REMOVED***
+        <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***"***REMOVED***{{pet.name***REMOVED******REMOVED***</a***REMOVED***
+    </h3***REMOVED***
     <p***REMOVED***
         {{pet.birthDate | date:'yyyy MMM dd'***REMOVED******REMOVED*** - {{pet.type.name***REMOVED******REMOVED*** -
         <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***/visits"***REMOVED***Add Visit</a***REMOVED***
