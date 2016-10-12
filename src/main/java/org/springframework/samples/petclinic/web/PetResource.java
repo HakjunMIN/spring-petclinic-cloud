@@ -16,8 +16,6 @@
 package org.springframework.samples.petclinic.web;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import lombok.Data;
-import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -25,13 +23,7 @@ import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.PetType;
 import org.springframework.samples.petclinic.service.ClinicService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.constraints.Size;
 import java.util.Date;
@@ -105,7 +97,6 @@ public class PetResource {
         return new PetDetails(pet);
     ***REMOVED***
 
-    @Data
     static class PetRequest {
         int id;
         @JsonFormat(pattern = "yyyy-MM-dd")
@@ -113,9 +104,40 @@ public class PetResource {
         @Size(min = 1)
         String name;
         int typeId;
+
+        public int getId() {
+            return id;
+  ***REMOVED***
+
+        public void setId(int id) {
+            this.id = id;
+  ***REMOVED***
+
+        public Date getBirthDate() {
+            return birthDate;
+  ***REMOVED***
+
+        public void setBirthDate(Date birthDate) {
+            this.birthDate = birthDate;
+  ***REMOVED***
+
+        public String getName() {
+            return name;
+  ***REMOVED***
+
+        public void setName(String name) {
+            this.name = name;
+  ***REMOVED***
+
+        public int getTypeId() {
+            return typeId;
+  ***REMOVED***
+
+        public void setTypeId(int typeId) {
+            this.typeId = typeId;
+  ***REMOVED***
     ***REMOVED***
 
-    @Getter
     static class PetDetails {
 
         long id;
@@ -133,6 +155,25 @@ public class PetResource {
             this.type = pet.getType();
   ***REMOVED***
 
+        public long getId() {
+            return id;
+  ***REMOVED***
+
+        public String getName() {
+            return name;
+  ***REMOVED***
+
+        public String getOwner() {
+            return owner;
+  ***REMOVED***
+
+        public Date getBirthDate() {
+            return birthDate;
+  ***REMOVED***
+
+        public PetType getType() {
+            return type;
+  ***REMOVED***
     ***REMOVED***
 
 ***REMOVED***

@@ -51,13 +51,6 @@
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
 
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.projectlombok</groupId***REMOVED***
-            <artifactId***REMOVED***lombok</artifactId***REMOVED***
-            <version***REMOVED***1.16.10</version***REMOVED***
-            <scope***REMOVED***provided</scope***REMOVED***
-        </dependency***REMOVED***
-
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.webjars</groupId***REMOVED***
 			<artifactId***REMOVED***bootstrap</artifactId***REMOVED***
