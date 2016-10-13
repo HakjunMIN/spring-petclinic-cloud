@@ -79,6 +79,16 @@
 			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
 			<scope***REMOVED***test</scope***REMOVED***
 		</dependency***REMOVED***
+
+		<!-- EhCache --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***javax.cache</groupId***REMOVED***
+			<artifactId***REMOVED***cache-api</artifactId***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.ehcache</groupId***REMOVED***
+			<artifactId***REMOVED***ehcache</artifactId***REMOVED***
+		</dependency***REMOVED***
 	</dependencies***REMOVED***
 
 	<build***REMOVED***
