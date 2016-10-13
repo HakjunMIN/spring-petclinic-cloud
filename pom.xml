@@ -13,7 +13,7 @@
 	<version***REMOVED***1.0.0-SNAPSHOT</version***REMOVED***
 
 	<name***REMOVED***petclinic</name***REMOVED***
-	<packaging***REMOVED***war</packaging***REMOVED***
+	<packaging***REMOVED***jar</packaging***REMOVED***
 
 	<properties***REMOVED***
 		<java.version***REMOVED***1.7</java.version***REMOVED***
