@@ -100,6 +100,22 @@
 				<configuration***REMOVED***
 					<fork***REMOVED***true</fork***REMOVED***
 				</configuration***REMOVED***
+				<executions***REMOVED***
+					<execution***REMOVED***
+						<!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties file is present --***REMOVED***
+						<goals***REMOVED***
+							<goal***REMOVED***build-info</goal***REMOVED***
+						</goals***REMOVED***
+						<configuration***REMOVED***
+							<additionalProperties***REMOVED***
+								<encoding.source***REMOVED***${project.build.sourceEncoding***REMOVED***</encoding.source***REMOVED***
+								<encoding.reporting***REMOVED***${project.reporting.outputEncoding***REMOVED***</encoding.reporting***REMOVED***
+								<java.source***REMOVED***${maven.compiler.source***REMOVED***</java.source***REMOVED***
+								<java.target***REMOVED***${maven.compiler.target***REMOVED***</java.target***REMOVED***
+							</additionalProperties***REMOVED***
+						</configuration***REMOVED***
+					</execution***REMOVED***
+				</executions***REMOVED***
 			</plugin***REMOVED***
 		</plugins***REMOVED***
 	</build***REMOVED***
