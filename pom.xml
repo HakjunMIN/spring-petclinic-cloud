@@ -5,7 +5,7 @@
 	<parent***REMOVED***
 		<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 		<artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-		<version***REMOVED***1.4.0.RELEASE</version***REMOVED***
+		<version***REMOVED***1.4.1.RELEASE</version***REMOVED***
 	</parent***REMOVED***
 
 	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
