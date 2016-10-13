@@ -71,7 +71,7 @@
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.webjars</groupId***REMOVED***
 			<artifactId***REMOVED***angularjs</artifactId***REMOVED***
-			<version***REMOVED***${webjars-angularjs.version***REMOVED******REMOVED***</version***REMOVED***
+			<version***REMOVED***${webjars-angularjs.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 
 		<dependency***REMOVED***
