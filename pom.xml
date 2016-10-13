@@ -17,6 +17,11 @@
 
 	<properties***REMOVED***
 		<java.version***REMOVED***1.8</java.version***REMOVED***
+
+		<!-- Web dependencies --***REMOVED***
+		<webjars-bootstrap.version***REMOVED***3.3.7</webjars-bootstrap.version***REMOVED***
+		<webjars-angularjs.version***REMOVED***1.5.8</webjars-angularjs.version***REMOVED***
+		<webjars-jquery.version***REMOVED***3.1.0</webjars-jquery.version***REMOVED***
 	</properties***REMOVED***
 
 	<dependencies***REMOVED***
@@ -54,19 +59,19 @@
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.webjars</groupId***REMOVED***
 			<artifactId***REMOVED***bootstrap</artifactId***REMOVED***
-			<version***REMOVED***3.3.7</version***REMOVED***
+			<version***REMOVED***${webjars-bootstrap.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.webjars</groupId***REMOVED***
 			<artifactId***REMOVED***jquery</artifactId***REMOVED***
-			<version***REMOVED***3.1.0</version***REMOVED***
+			<version***REMOVED***${webjars-jquery.version***REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.webjars</groupId***REMOVED***
 			<artifactId***REMOVED***angularjs</artifactId***REMOVED***
-			<version***REMOVED***1.5.8</version***REMOVED***
+			<version***REMOVED***${webjars-angularjs.version***REMOVED******REMOVED***</version***REMOVED***
 		</dependency***REMOVED***
 
 		<dependency***REMOVED***
