@@ -19,36 +19,53 @@
     </tr***REMOVED***
     <tr***REMOVED***
         <td***REMOVED***
-            <a class="btn btn-info" href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/edit"***REMOVED***Edit Owner</a***REMOVED***
+            <a class="btn btn-default" href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/edit"***REMOVED***Edit Owner</a***REMOVED***
         </td***REMOVED***
         <td***REMOVED***
-            <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/new-pet" class="btn btn-success"***REMOVED***Add New Pet</a***REMOVED***
+            <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/new-pet" class="btn btn-default"***REMOVED***Add New Pet</a***REMOVED***
         </td***REMOVED***
     </tr***REMOVED***
 </table***REMOVED***
 
 <h2***REMOVED***Pets and Visits</h2***REMOVED***
 
-<div ng-repeat="pet in $ctrl.owner.pets"***REMOVED***
-    <h3***REMOVED***
-        <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***"***REMOVED***{{pet.name***REMOVED******REMOVED***</a***REMOVED***
-    </h3***REMOVED***
-    <p***REMOVED***
-        {{pet.birthDate | date:'yyyy MMM dd'***REMOVED******REMOVED*** - {{pet.type.name***REMOVED******REMOVED*** -
-        <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***/visits"***REMOVED***Add Visit</a***REMOVED***
-    </p***REMOVED***
-    <h4***REMOVED***Visits</h4***REMOVED***
+<table class="table table-striped"***REMOVED***
+    <tr ng-repeat="pet in $ctrl.owner.pets"***REMOVED***
+        <td valign="top"***REMOVED***
+            <dl class="dl-horizontal"***REMOVED***
+                <dt***REMOVED***Name</dt***REMOVED***
+                <dd***REMOVED***<a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***"***REMOVED***{{pet.name***REMOVED******REMOVED***</a***REMOVED***</dd***REMOVED***
+                <dt***REMOVED***Birth Date</dt***REMOVED***
+                <dd***REMOVED***{{pet.birthDate | date:'yyyy MMM dd'***REMOVED******REMOVED***</dd***REMOVED***
+                <dt***REMOVED***Type</dt***REMOVED***
+                <dd***REMOVED***{{pet.type.name***REMOVED******REMOVED***</dd***REMOVED***
+            </dl***REMOVED***
+        </td***REMOVED***
+        <td valign="top"***REMOVED***
+            <table class="table-condensed"***REMOVED***
+                <thead***REMOVED***
+                <tr***REMOVED***
+                    <th***REMOVED***Visit Date</th***REMOVED***
+                    <th***REMOVED***Description</th***REMOVED***
+                </tr***REMOVED***
+                </thead***REMOVED***
+                <tr ng-repeat="visit in pet.visits"***REMOVED***
+                    <td***REMOVED***{{visit.date | date:'yyyy MMM dd'***REMOVED******REMOVED***</td***REMOVED***
+                    <td***REMOVED***{{visit.description***REMOVED******REMOVED***</td***REMOVED***
+                </tr***REMOVED***
+                <tr***REMOVED***
+                    <td***REMOVED***
+                        <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***"***REMOVED***Edit Pet</a***REMOVED***
+                    </td***REMOVED***
+                    <td***REMOVED***
+                        <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***/visits"***REMOVED***Add Visit</a***REMOVED***
+                    </td***REMOVED***
+                </tr***REMOVED***
+            </table***REMOVED***
+        </td***REMOVED***
 
-    <div ng-repeat="visit in pet.visits" style="margin-top: 1em;"***REMOVED***
-        <h5***REMOVED***{{visit.date | date:'yyyy MMM dd'***REMOVED******REMOVED***</h5***REMOVED***
-        <p style="white-space: pre-line"***REMOVED***{{visit.description***REMOVED******REMOVED***</p***REMOVED***
-    </div***REMOVED***
+    </tr***REMOVED***
+</table***REMOVED***
 
-    <p ng-if="pet.visits.length == 0"***REMOVED***
-        No visit yet
-    </p***REMOVED***
-
-    <hr/***REMOVED***
-</div***REMOVED***
 
 
