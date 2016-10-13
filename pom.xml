@@ -16,7 +16,7 @@
 	<packaging***REMOVED***war</packaging***REMOVED***
 
 	<properties***REMOVED***
-		<java.version***REMOVED***1.8</java.version***REMOVED***
+		<java.version***REMOVED***1.7</java.version***REMOVED***
 
 		<!-- Web dependencies --***REMOVED***
 		<webjars-bootstrap.version***REMOVED***3.3.7</webjars-bootstrap.version***REMOVED***
