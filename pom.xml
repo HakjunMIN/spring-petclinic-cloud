@@ -32,6 +32,11 @@
 
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-thymeleaf</artifactId***REMOVED***
+		</dependency***REMOVED***
+
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 			<artifactId***REMOVED***spring-boot-starter-data-jpa</artifactId***REMOVED***
 		</dependency***REMOVED***
 
@@ -48,6 +53,7 @@
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 			<artifactId***REMOVED***spring-boot-devtools</artifactId***REMOVED***
+			<optional***REMOVED***true</optional***REMOVED***
 		</dependency***REMOVED***
 
 		<dependency***REMOVED***
