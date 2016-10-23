@@ -18,7 +18,7 @@
 	<build***REMOVED***
 		<resources***REMOVED***
 			<resource***REMOVED***
-				<directory***REMOVED***${basedir***REMOVED***/src</directory***REMOVED***
+				<directory***REMOVED***${project.build.directory***REMOVED***/dist</directory***REMOVED***
 			</resource***REMOVED***
 			<resource***REMOVED***
 				<directory***REMOVED***${basedir***REMOVED***/bower_components</directory***REMOVED***
@@ -52,6 +52,12 @@
 						<id***REMOVED***bower install</id***REMOVED***
 						<goals***REMOVED***
 							<goal***REMOVED***bower</goal***REMOVED***
+						</goals***REMOVED***
+					</execution***REMOVED***
+					<execution***REMOVED***
+						<id***REMOVED***gulp build</id***REMOVED***
+						<goals***REMOVED***
+							<goal***REMOVED***gulp</goal***REMOVED***
 						</goals***REMOVED***
 					</execution***REMOVED***
 				</executions***REMOVED***
