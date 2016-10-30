@@ -17,8 +17,10 @@ package org.springframework.samples.petclinic.domain.model.pet;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Repository class for <code***REMOVED***Pet</code***REMOVED*** domain objects All method names are compliant with Spring Data naming
@@ -37,6 +39,9 @@ public interface PetRepository extends Repository<Pet, Integer***REMOVED*** {
      */
     @Query("SELECT ptype FROM PetType ptype ORDER BY ptype.name")
     List<PetType***REMOVED*** findPetTypes();
+
+    @Query("FROM PetType ptype WHERE ptype.id = :typeId")
+    Optional<PetType***REMOVED*** findPetTypeById(@Param("typeId") int typeId);
 
     /**
      * Retrieve a {@link Pet***REMOVED*** from the data store by id.

@@ -12,9 +12,10 @@
     <name***REMOVED***Spring Petclinic :: Spring MVC REST server</name***REMOVED***
 
     <properties***REMOVED***
-        <java.version***REMOVED***1.7</java.version***REMOVED***
+        <java.version***REMOVED***1.8</java.version***REMOVED***
 
         <docker.image.prefix***REMOVED***arey</docker.image.prefix***REMOVED***
+        <assertj.version***REMOVED***3.5.2</assertj.version***REMOVED***
     </properties***REMOVED***
 
     <dependencies***REMOVED***
@@ -69,6 +70,13 @@
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.assertj</groupId***REMOVED***
+            <artifactId***REMOVED***assertj-core</artifactId***REMOVED***
+            <version***REMOVED***${assertj.version***REMOVED***</version***REMOVED***
             <scope***REMOVED***test</scope***REMOVED***
         </dependency***REMOVED***
 

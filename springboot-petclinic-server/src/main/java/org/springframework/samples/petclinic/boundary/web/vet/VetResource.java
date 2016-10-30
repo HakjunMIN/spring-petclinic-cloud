@@ -42,6 +42,6 @@ public class VetResource extends AbstractResourceController {
 
     @GetMapping("/vets")
     public Collection<Vet***REMOVED*** showResourcesVetList() {
-        return this.vetService.findVets();
+        return vetService.findVets();
     ***REMOVED***
 ***REMOVED***

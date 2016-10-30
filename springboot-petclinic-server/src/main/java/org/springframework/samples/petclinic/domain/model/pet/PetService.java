@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.Optional;
 
 /**
  * @author mszarlinski on 2016-10-30.
@@ -33,5 +34,10 @@ public class PetService {
     @Transactional(readOnly = true)
     public Collection<PetType***REMOVED*** findPetTypes() throws DataAccessException {
         return petRepository.findPetTypes();
+    ***REMOVED***
+
+    @Transactional(readOnly = true)
+    public Optional<PetType***REMOVED*** findPetTypeById(int typeId) {
+        return petRepository.findPetTypeById(typeId);
     ***REMOVED***
 ***REMOVED***
