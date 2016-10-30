@@ -16,14 +16,11 @@
 package org.springframework.samples.petclinic.domain.model.pet;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.springframework.beans.support.MutableSortDefinition;
-import org.springframework.beans.support.PropertyComparator;
 import org.springframework.samples.petclinic.domain.model.owner.Owner;
-import org.springframework.samples.petclinic.domain.model.visit.Visit;
 import org.springframework.samples.petclinic.support.jpa.NamedEntity;
 
 import javax.persistence.*;
-import java.util.*;
+import java.util.Date;
 
 /**
  * Simple business object representing a pet.
@@ -49,16 +46,12 @@ public class Pet extends NamedEntity {
     @JsonIgnore
     private Owner owner;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet", fetch = FetchType.EAGER)
-    private Set<Visit***REMOVED*** visits;
-
-
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     ***REMOVED***
 
     public Date getBirthDate() {
-        return this.birthDate;
+        return birthDate;
     ***REMOVED***
 
     public void setType(PetType type) {
@@ -66,7 +59,7 @@ public class Pet extends NamedEntity {
     ***REMOVED***
 
     public PetType getType() {
-        return this.type;
+        return type;
     ***REMOVED***
 
     public void setOwner(Owner owner) {
@@ -74,29 +67,6 @@ public class Pet extends NamedEntity {
     ***REMOVED***
 
     public Owner getOwner() {
-        return this.owner;
+        return owner;
     ***REMOVED***
-
-    protected void setVisitsInternal(Set<Visit***REMOVED*** visits) {
-        this.visits = visits;
-    ***REMOVED***
-
-    protected Set<Visit***REMOVED*** getVisitsInternal() {
-        if (this.visits == null) {
-            this.visits = new HashSet<***REMOVED***();
-  ***REMOVED***
-        return this.visits;
-    ***REMOVED***
-
-    public List<Visit***REMOVED*** getVisits() {
-        List<Visit***REMOVED*** sortedVisits = new ArrayList<Visit***REMOVED***(getVisitsInternal());
-        PropertyComparator.sort(sortedVisits, new MutableSortDefinition("date", false, false));
-        return Collections.unmodifiableList(sortedVisits);
-    ***REMOVED***
-
-    public void addVisit(Visit visit) {
-        getVisitsInternal().add(visit);
-        visit.setPet(this);
-    ***REMOVED***
-
 ***REMOVED***

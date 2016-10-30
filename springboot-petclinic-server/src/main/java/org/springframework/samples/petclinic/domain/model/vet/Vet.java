@@ -57,14 +57,14 @@ public class Vet extends Person {
 
     protected Set<Specialty***REMOVED*** getSpecialtiesInternal() {
         if (this.specialties == null) {
-            this.specialties = new HashSet<Specialty***REMOVED***();
+            this.specialties = new HashSet<***REMOVED***();
   ***REMOVED***
         return this.specialties;
     ***REMOVED***
 
     @XmlElement
     public List<Specialty***REMOVED*** getSpecialties() {
-        List<Specialty***REMOVED*** sortedSpecs = new ArrayList<Specialty***REMOVED***(getSpecialtiesInternal());
+        List<Specialty***REMOVED*** sortedSpecs = new ArrayList<***REMOVED***(getSpecialtiesInternal());
         PropertyComparator.sort(sortedSpecs, new MutableSortDefinition("name", true, true));
         return Collections.unmodifiableList(sortedSpecs);
     ***REMOVED***
