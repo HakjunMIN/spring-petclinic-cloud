@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"***REMOVED***
+	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
+
+	<groupId***REMOVED***org.springframework.samples.petclinic.client</groupId***REMOVED***
+	<artifactId***REMOVED***client-service</artifactId***REMOVED***
+	<version***REMOVED***1.4.1</version***REMOVED***
+	<packaging***REMOVED***jar</packaging***REMOVED***
+
+	<name***REMOVED***petclinic-clients-service</name***REMOVED***
+	<description***REMOVED***PetClinic Clients Service</description***REMOVED***
+
+	<parent***REMOVED***
+		<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
+		<artifactId***REMOVED***springboot-petclinic</artifactId***REMOVED***
+		<version***REMOVED***1.4.1</version***REMOVED***
+	</parent***REMOVED***
+
+	<properties***REMOVED***
+		<project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
+		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
+		<java.version***REMOVED***1.8</java.version***REMOVED***
+	</properties***REMOVED***
+
+	<dependencies***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-data-jpa</artifactId***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.projectlombok</groupId***REMOVED***
+			<artifactId***REMOVED***lombok</artifactId***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
+		</dependency***REMOVED***
+
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
+			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***mysql</groupId***REMOVED***
+			<artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+	</dependencies***REMOVED***
+
+	<build***REMOVED***
+		<plugins***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+				<artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
+			</plugin***REMOVED***
+		</plugins***REMOVED***
+	</build***REMOVED***
+
+
+</project***REMOVED***

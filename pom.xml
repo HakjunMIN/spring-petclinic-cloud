@@ -17,6 +17,9 @@
 	<modules***REMOVED***
 		<module***REMOVED***springboot-petclinic-client</module***REMOVED***
 		<module***REMOVED***springboot-petclinic-server</module***REMOVED***
+		<module***REMOVED***petclinic-clients-service</module***REMOVED***
+		<module***REMOVED***petclinic-vets-service</module***REMOVED***
+		<module***REMOVED***petclinic-visits-service</module***REMOVED***
 	</modules***REMOVED***
 
 	<dependencyManagement***REMOVED***
