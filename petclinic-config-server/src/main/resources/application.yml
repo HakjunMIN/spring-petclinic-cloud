@@ -5,4 +5,4 @@ server.port: 8888
       server:
         git:
           uri: https://github.com/mszarlinski/petclinic-config-repo
-#          uri: file:///{$GIT_REPO***REMOVED***
+#          uri: file:///${GIT_REPO***REMOVED***

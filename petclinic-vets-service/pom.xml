@@ -32,6 +32,22 @@
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 			<artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
 		</dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-cache</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***javax.cache</groupId***REMOVED***
+            <artifactId***REMOVED***cache-api</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.ehcache</groupId***REMOVED***
+            <artifactId***REMOVED***ehcache</artifactId***REMOVED***
+        </dependency***REMOVED***
 
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***

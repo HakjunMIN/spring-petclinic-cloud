@@ -7,3 +7,5 @@
 
 server:
   port: 0
+
+eureka.enabled: true

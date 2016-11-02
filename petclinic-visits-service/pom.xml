@@ -32,6 +32,10 @@
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 			<artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
 		</dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
+        </dependency***REMOVED***
 
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***

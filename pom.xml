@@ -24,6 +24,11 @@
         <module***REMOVED***petclinic-discovery-server</module***REMOVED***
 	</modules***REMOVED***
 
+    <properties***REMOVED***
+        <assertj.version***REMOVED***3.5.2</assertj.version***REMOVED***
+        <spring-cloud.version***REMOVED***Camden.SR1</spring-cloud.version***REMOVED***
+    </properties***REMOVED***
+
 	<dependencyManagement***REMOVED***
 		<dependencies***REMOVED***
 			<dependency***REMOVED***
@@ -34,10 +39,17 @@
 			<dependency***REMOVED***
 				<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
 				<artifactId***REMOVED***spring-cloud-dependencies</artifactId***REMOVED***
-				<version***REMOVED***Camden.SR1</version***REMOVED***
+				<version***REMOVED***${spring-cloud.version***REMOVED***</version***REMOVED***
 				<type***REMOVED***pom</type***REMOVED***
 				<scope***REMOVED***import</scope***REMOVED***
 			</dependency***REMOVED***
+
+            <dependency***REMOVED***
+                <groupId***REMOVED***org.assertj</groupId***REMOVED***
+                <artifactId***REMOVED***assertj-core</artifactId***REMOVED***
+                <version***REMOVED***${assertj.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***test</scope***REMOVED***
+            </dependency***REMOVED***
 		</dependencies***REMOVED***
 	</dependencyManagement***REMOVED***
 
