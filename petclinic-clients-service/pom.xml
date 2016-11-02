@@ -47,6 +47,16 @@
 			<artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
+
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-eureka</artifactId***REMOVED***
+        </dependency***REMOVED***
+
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***

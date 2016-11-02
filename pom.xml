@@ -20,6 +20,8 @@
 		<module***REMOVED***petclinic-clients-service</module***REMOVED***
 		<module***REMOVED***petclinic-vets-service</module***REMOVED***
 		<module***REMOVED***petclinic-visits-service</module***REMOVED***
+		<module***REMOVED***petclinic-config-server</module***REMOVED***
+        <module***REMOVED***petclinic-discovery-server</module***REMOVED***
 	</modules***REMOVED***
 
 	<dependencyManagement***REMOVED***
@@ -28,6 +30,13 @@
 				<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
 				<artifactId***REMOVED***spring-petclinic-client</artifactId***REMOVED***
 				<version***REMOVED***${project.version***REMOVED***</version***REMOVED***
+			</dependency***REMOVED***
+			<dependency***REMOVED***
+				<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+				<artifactId***REMOVED***spring-cloud-dependencies</artifactId***REMOVED***
+				<version***REMOVED***Camden.SR1</version***REMOVED***
+				<type***REMOVED***pom</type***REMOVED***
+				<scope***REMOVED***import</scope***REMOVED***
 			</dependency***REMOVED***
 		</dependencies***REMOVED***
 	</dependencyManagement***REMOVED***
