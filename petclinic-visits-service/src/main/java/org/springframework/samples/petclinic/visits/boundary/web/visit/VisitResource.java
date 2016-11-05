@@ -15,14 +15,14 @@
  */
 package org.springframework.samples.petclinic.visits.boundary.web.visit;
 
-    import org.springframework.beans.factory.annotation.Autowired;
-    import org.springframework.http.HttpStatus;
-    import org.springframework.samples.petclinic.visits.domain.model.visit.Visit;
-    import org.springframework.samples.petclinic.visits.application.VisitService;
-    import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.samples.petclinic.visits.application.VisitService;
+import org.springframework.samples.petclinic.visits.domain.model.visit.Visit;
+import org.springframework.web.bind.annotation.*;
 
-    import javax.validation.Valid;
-    import java.util.List;
+import javax.validation.Valid;
+import java.util.List;
 
 /**
  * @author Juergen Hoeller
@@ -40,7 +40,7 @@ public class VisitResource {
         this.visitService = visitService;
     ***REMOVED***
 
-    @PostMapping("/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits")
+    @PostMapping("/pets/{petId***REMOVED***/visits")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void create(
         @Valid @RequestBody Visit visit,
@@ -50,7 +50,7 @@ public class VisitResource {
         visitService.saveVisit(visit);
     ***REMOVED***
 
-    @GetMapping("/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***/visits")
+    @GetMapping("/pets/{petId***REMOVED***/visits")
     public List<Visit***REMOVED*** visits(@PathVariable("petId") int petId) {
         return visitService.findVisitsByPetId(petId);
     ***REMOVED***

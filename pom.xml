@@ -22,6 +22,7 @@
 		<module***REMOVED***petclinic-visits-service</module***REMOVED***
 		<module***REMOVED***petclinic-config-server</module***REMOVED***
         <module***REMOVED***petclinic-discovery-server</module***REMOVED***
+        <module***REMOVED***petclinic-api-gateway</module***REMOVED***
 	</modules***REMOVED***
 
     <properties***REMOVED***
