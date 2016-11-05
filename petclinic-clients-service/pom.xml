@@ -4,7 +4,7 @@
 	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
 
 	<groupId***REMOVED***org.springframework.samples.petclinic.client</groupId***REMOVED***
-	<artifactId***REMOVED***client-service</artifactId***REMOVED***
+	<artifactId***REMOVED***petclinic-client-service</artifactId***REMOVED***
 	<version***REMOVED***1.4.1</version***REMOVED***
 	<packaging***REMOVED***jar</packaging***REMOVED***
 

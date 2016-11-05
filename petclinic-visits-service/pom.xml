@@ -4,7 +4,7 @@
 	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
 
 	<groupId***REMOVED***org.springframework.samples.petclinic.visits</groupId***REMOVED***
-	<artifactId***REMOVED***visit-service</artifactId***REMOVED***
+	<artifactId***REMOVED***petclinic-visit-service</artifactId***REMOVED***
 	<version***REMOVED***1.4.1</version***REMOVED***
 	<packaging***REMOVED***jar</packaging***REMOVED***
 
