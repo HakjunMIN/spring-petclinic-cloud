@@ -16,7 +16,6 @@
 
 	<modules***REMOVED***
 		<module***REMOVED***springboot-petclinic-client</module***REMOVED***
-		<module***REMOVED***springboot-petclinic-server</module***REMOVED***
 		<module***REMOVED***petclinic-clients-service</module***REMOVED***
 		<module***REMOVED***petclinic-vets-service</module***REMOVED***
 		<module***REMOVED***petclinic-visits-service</module***REMOVED***
@@ -32,11 +31,6 @@
 
 	<dependencyManagement***REMOVED***
 		<dependencies***REMOVED***
-			<dependency***REMOVED***
-				<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-				<artifactId***REMOVED***spring-petclinic-client</artifactId***REMOVED***
-				<version***REMOVED***${project.version***REMOVED***</version***REMOVED***
-			</dependency***REMOVED***
 			<dependency***REMOVED***
 				<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
 				<artifactId***REMOVED***spring-cloud-dependencies</artifactId***REMOVED***

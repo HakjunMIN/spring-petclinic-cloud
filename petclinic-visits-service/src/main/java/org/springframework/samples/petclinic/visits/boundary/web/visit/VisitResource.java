@@ -40,7 +40,7 @@ public class VisitResource {
         this.visitService = visitService;
     ***REMOVED***
 
-    @PostMapping("/pets/{petId***REMOVED***/visits")
+    @PostMapping("owners/*/pets/{petId***REMOVED***/visits")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void create(
         @Valid @RequestBody Visit visit,
@@ -50,7 +50,7 @@ public class VisitResource {
         visitService.saveVisit(visit);
     ***REMOVED***
 
-    @GetMapping("/pets/{petId***REMOVED***/visits")
+    @GetMapping("owners/*/pets/{petId***REMOVED***/visits")
     public List<Visit***REMOVED*** visits(@PathVariable("petId") int petId) {
         return visitService.findVisitsByPetId(petId);
     ***REMOVED***

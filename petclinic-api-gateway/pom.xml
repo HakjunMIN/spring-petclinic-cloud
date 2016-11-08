@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?***REMOVED***
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"***REMOVED***
-	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"***REMOVED***
+    <modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
 
     <groupId***REMOVED***org.springframework.samples.petclinic.api</groupId***REMOVED***
     <artifactId***REMOVED***petclinic-api-gateway</artifactId***REMOVED***
@@ -23,51 +23,130 @@
         <java.version***REMOVED***1.8</java.version***REMOVED***
     </properties***REMOVED***
 
-	<dependencies***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-			<artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-			<artifactId***REMOVED***spring-cloud-starter-eureka</artifactId***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-			<artifactId***REMOVED***spring-cloud-starter-zuul</artifactId***REMOVED***
-		</dependency***REMOVED***
+    <dependencies***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-zuul</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
+            <artifactId***REMOVED***springboot-petclinic-client</artifactId***REMOVED***
+            <version***REMOVED***${project.version***REMOVED***</version***REMOVED***
+        </dependency***REMOVED***
 
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
-			<scope***REMOVED***test</scope***REMOVED***
-		</dependency***REMOVED***
-	</dependencies***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
+        </dependency***REMOVED***
 
-	<dependencyManagement***REMOVED***
-		<dependencies***REMOVED***
-			<dependency***REMOVED***
-				<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-				<artifactId***REMOVED***spring-cloud-dependencies</artifactId***REMOVED***
-				<version***REMOVED***Camden.SR1</version***REMOVED***
-				<type***REMOVED***pom</type***REMOVED***
-				<scope***REMOVED***import</scope***REMOVED***
-			</dependency***REMOVED***
-		</dependencies***REMOVED***
-	</dependencyManagement***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-thymeleaf</artifactId***REMOVED***
+        </dependency***REMOVED***
 
-	<build***REMOVED***
-		<plugins***REMOVED***
-			<plugin***REMOVED***
-				<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-				<artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
-			</plugin***REMOVED***
-		</plugins***REMOVED***
-	</build***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-devtools</artifactId***REMOVED***
+            <optional***REMOVED***true</optional***REMOVED***
+        </dependency***REMOVED***
+
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-configuration-processor</artifactId***REMOVED***
+            <optional***REMOVED***true</optional***REMOVED***
+        </dependency***REMOVED***
+
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-eureka</artifactId***REMOVED***
+        </dependency***REMOVED***
+
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+    </dependencies***REMOVED***
+
+    <build***REMOVED***
+        <finalName***REMOVED***petclinic</finalName***REMOVED***
+        <plugins***REMOVED***
+            <plugin***REMOVED***
+                <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+                <artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
+                <configuration***REMOVED***
+                    <fork***REMOVED***true</fork***REMOVED***
+                </configuration***REMOVED***
+                <executions***REMOVED***
+                    <execution***REMOVED***
+                        <!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties file is present --***REMOVED***
+                        <goals***REMOVED***
+                            <goal***REMOVED***build-info</goal***REMOVED***
+                        </goals***REMOVED***
+                        <configuration***REMOVED***
+                            <additionalProperties***REMOVED***
+                                <encoding.source***REMOVED***${project.build.sourceEncoding***REMOVED***</encoding.source***REMOVED***
+                                <encoding.reporting***REMOVED***${project.reporting.outputEncoding***REMOVED***</encoding.reporting***REMOVED***
+                                <java.source***REMOVED***${maven.compiler.source***REMOVED***</java.source***REMOVED***
+                                <java.target***REMOVED***${maven.compiler.target***REMOVED***</java.target***REMOVED***
+                            </additionalProperties***REMOVED***
+                        </configuration***REMOVED***
+                    </execution***REMOVED***
+                </executions***REMOVED***
+            </plugin***REMOVED***
+
+            <!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties file is present --***REMOVED***
+            <plugin***REMOVED***
+                <groupId***REMOVED***pl.project13.maven</groupId***REMOVED***
+                <artifactId***REMOVED***git-commit-id-plugin</artifactId***REMOVED***
+                <executions***REMOVED***
+                    <execution***REMOVED***
+                        <goals***REMOVED***
+                            <goal***REMOVED***revision</goal***REMOVED***
+                        </goals***REMOVED***
+                    </execution***REMOVED***
+                </executions***REMOVED***
+                <configuration***REMOVED***
+                    <verbose***REMOVED***true</verbose***REMOVED***
+                    <dateFormat***REMOVED***yyyy-MM-dd'T'HH:mm:ssZ</dateFormat***REMOVED***
+                    <generateGitPropertiesFile***REMOVED***true</generateGitPropertiesFile***REMOVED***
+                    <generateGitPropertiesFilename***REMOVED***${project.build.outputDirectory***REMOVED***/git.properties
+                    </generateGitPropertiesFilename***REMOVED***
+                </configuration***REMOVED***
+            </plugin***REMOVED***
+
+            <plugin***REMOVED***
+                <groupId***REMOVED***com.spotify</groupId***REMOVED***
+                <artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
+                <version***REMOVED***0.4.13</version***REMOVED***
+                <configuration***REMOVED***
+                    <imageName***REMOVED***${docker.image.prefix***REMOVED***/springboot-petclinic</imageName***REMOVED***
+                    <dockerDirectory***REMOVED***src/main/docker</dockerDirectory***REMOVED***
+                    <resources***REMOVED***
+                        <resource***REMOVED***
+                            <targetPath***REMOVED***/</targetPath***REMOVED***
+                            <directory***REMOVED***${project.build.directory***REMOVED***</directory***REMOVED***
+                            <include***REMOVED***${project.build.finalName***REMOVED***.jar</include***REMOVED***
+                        </resource***REMOVED***
+                    </resources***REMOVED***
+                    <forceTags***REMOVED***true</forceTags***REMOVED***
+                    <imageTags***REMOVED***
+                        <imageTag***REMOVED***${project.version***REMOVED***</imageTag***REMOVED***
+                        <imageTag***REMOVED***latest</imageTag***REMOVED***
+                    </imageTags***REMOVED***
+                    <useConfigFile***REMOVED***true</useConfigFile***REMOVED***
+                </configuration***REMOVED***
+            </plugin***REMOVED***
+        </plugins***REMOVED***
+    </build***REMOVED***
 
 
 </project***REMOVED***

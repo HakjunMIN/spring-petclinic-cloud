@@ -53,16 +53,6 @@ public class PetResource {
         return petService.findPetTypes();
     ***REMOVED***
 
-    //TODO: unused?
-//    @GetMapping("/owners/{ownerId***REMOVED***/pets/new")
-//    public String initCreationForm(@PathVariable("ownerId") int ownerId, Map<String, Object***REMOVED*** model) {
-//        Owner owner = ownerService.findOwnerById(ownerId);
-//        Pet pet = new Pet();
-//        owner.addPet(pet);
-//        model.put("pet", pet);
-//        return "pets/createOrUpdatePetForm";
-//    ***REMOVED***
-
     @PostMapping("/owners/{ownerId***REMOVED***/pets")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void processCreationForm(
@@ -76,7 +66,7 @@ public class PetResource {
         save(pet, petRequest);
     ***REMOVED***
 
-    @PutMapping("/owners/{ownerId***REMOVED***/pets/{petId***REMOVED***")
+    @PutMapping("/owners/*/pets/{petId***REMOVED***")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void processUpdateForm(@RequestBody PetRequest petRequest) {
         save(petService.findPetById(petRequest.getId()), petRequest);
@@ -93,7 +83,7 @@ public class PetResource {
         petService.savePet(pet);
     ***REMOVED***
 
-    @GetMapping("/pets/{petId***REMOVED***")
+    @GetMapping("owners/*/pets/{petId***REMOVED***")
     public PetDetails findPet(@PathVariable("petId") int petId) {
         return new PetDetails(petService.findPetById(petId));
     ***REMOVED***
