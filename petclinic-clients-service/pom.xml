@@ -40,8 +40,12 @@
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
         </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.samples.petclinic.monitoring</groupId***REMOVED***
+            <artifactId***REMOVED***petclinic-monitoring</artifactId***REMOVED***
+        </dependency***REMOVED***
 
-		<dependency***REMOVED***
+        <dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
 			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
 			<scope***REMOVED***runtime</scope***REMOVED***

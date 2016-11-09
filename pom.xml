@@ -22,7 +22,8 @@
 		<module***REMOVED***petclinic-config-server</module***REMOVED***
         <module***REMOVED***petclinic-discovery-server</module***REMOVED***
         <module***REMOVED***petclinic-api-gateway</module***REMOVED***
-	</modules***REMOVED***
+        <module***REMOVED***petclinic-monitoring</module***REMOVED***
+    </modules***REMOVED***
 
     <properties***REMOVED***
         <assertj.version***REMOVED***3.5.2</assertj.version***REMOVED***
@@ -39,6 +40,11 @@
 				<scope***REMOVED***import</scope***REMOVED***
 			</dependency***REMOVED***
 
+            <dependency***REMOVED***
+                <groupId***REMOVED***org.springframework.samples.petclinic.monitoring</groupId***REMOVED***
+                <artifactId***REMOVED***petclinic-monitoring</artifactId***REMOVED***
+                <version***REMOVED***${project.version***REMOVED***</version***REMOVED***
+            </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.assertj</groupId***REMOVED***
                 <artifactId***REMOVED***assertj-core</artifactId***REMOVED***

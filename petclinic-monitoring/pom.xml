@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"***REMOVED***
+    <modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
+
+    <groupId***REMOVED***org.springframework.samples.petclinic.monitoring</groupId***REMOVED***
+    <artifactId***REMOVED***petclinic-monitoring</artifactId***REMOVED***
+    <version***REMOVED***1.4.1</version***REMOVED***
+    <packaging***REMOVED***jar</packaging***REMOVED***
+
+    <name***REMOVED***petclinic-monitoring</name***REMOVED***
+    <description***REMOVED***PetClinic monitoring utils</description***REMOVED***
+
+    <properties***REMOVED***
+        <project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
+        <project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
+        <java.version***REMOVED***1.8</java.version***REMOVED***
+    </properties***REMOVED***
+    <dependencies***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.aspectj</groupId***REMOVED***
+            <artifactId***REMOVED***aspectjweaver</artifactId***REMOVED***
+            <version***REMOVED***1.8.0</version***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework</groupId***REMOVED***
+            <artifactId***REMOVED***spring-jmx</artifactId***REMOVED***
+            <scope***REMOVED***provided</scope***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework</groupId***REMOVED***
+            <artifactId***REMOVED***spring-context</artifactId***REMOVED***
+            <scope***REMOVED***provided</scope***REMOVED***
+        </dependency***REMOVED***
+    </dependencies***REMOVED***
+</project***REMOVED***
