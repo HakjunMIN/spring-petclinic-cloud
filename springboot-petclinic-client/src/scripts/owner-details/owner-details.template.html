@@ -19,10 +19,10 @@
     </tr***REMOVED***
     <tr***REMOVED***
         <td***REMOVED***
-            <a class="btn btn-default" href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/edit"***REMOVED***Edit Owner</a***REMOVED***
+            <a class="btn btn-default" ui-sref="ownerEdit({ownerId: $ctrl.owner.id***REMOVED***)"***REMOVED***Edit Owner</a***REMOVED***
         </td***REMOVED***
         <td***REMOVED***
-            <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/new-pet" class="btn btn-default"***REMOVED***Add New Pet</a***REMOVED***
+            <a ui-sref="petNew({ownerId: $ctrl.owner.id***REMOVED***)" class="btn btn-default"***REMOVED***Add New Pet</a***REMOVED***
         </td***REMOVED***
     </tr***REMOVED***
 </table***REMOVED***
@@ -30,11 +30,11 @@
 <h2***REMOVED***Pets and Visits</h2***REMOVED***
 
 <table class="table table-striped"***REMOVED***
-    <tr ng-repeat="pet in $ctrl.owner.pets"***REMOVED***
+    <tr ng-repeat="pet in $ctrl.owner.pets track by pet.id"***REMOVED***
         <td valign="top"***REMOVED***
             <dl class="dl-horizontal"***REMOVED***
                 <dt***REMOVED***Name</dt***REMOVED***
-                <dd***REMOVED***<a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***"***REMOVED***{{pet.name***REMOVED******REMOVED***</a***REMOVED***</dd***REMOVED***
+                <dd***REMOVED***<a ui-sref="petEdit({ownerId: $ctrl.owner.id, petId: pet.id***REMOVED***)"***REMOVED***{{pet.name***REMOVED******REMOVED***</a***REMOVED***</dd***REMOVED***
                 <dt***REMOVED***Birth Date</dt***REMOVED***
                 <dd***REMOVED***{{pet.birthDate | date:'yyyy MMM dd'***REMOVED******REMOVED***</dd***REMOVED***
                 <dt***REMOVED***Type</dt***REMOVED***
@@ -49,21 +49,20 @@
                     <th***REMOVED***Description</th***REMOVED***
                 </tr***REMOVED***
                 </thead***REMOVED***
-                <tr ng-repeat="visit in pet.visits"***REMOVED***
+                <tr ng-repeat="visit in pet.visits track by visit.id"***REMOVED***
                     <td***REMOVED***{{visit.date | date:'yyyy MMM dd'***REMOVED******REMOVED***</td***REMOVED***
                     <td***REMOVED***{{visit.description***REMOVED******REMOVED***</td***REMOVED***
                 </tr***REMOVED***
                 <tr***REMOVED***
                     <td***REMOVED***
-                        <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***"***REMOVED***Edit Pet</a***REMOVED***
+                        <a ui-sref="petEdit({ownerId: $ctrl.owner.id, petId: pet.id***REMOVED***)"***REMOVED***Edit Pet</a***REMOVED***
                     </td***REMOVED***
                     <td***REMOVED***
-                        <a href="#!/owners/{{$ctrl.owner.id***REMOVED******REMOVED***/pets/{{pet.id***REMOVED******REMOVED***/visits"***REMOVED***Add Visit</a***REMOVED***
+                        <a ui-sref="visits({ownerId: $ctrl.owner.id, petId: pet.id***REMOVED***)"***REMOVED***Add Visit</a***REMOVED***
                     </td***REMOVED***
                 </tr***REMOVED***
             </table***REMOVED***
         </td***REMOVED***
-
     </tr***REMOVED***
 </table***REMOVED***
 

@@ -28,7 +28,7 @@
         <label class="col-sm-2 control-label"***REMOVED***Type</label***REMOVED***
         <div class="col-sm-6"***REMOVED***
             <select class="form-control" ng-model="$ctrl.petTypeId"***REMOVED***
-                <option ng-repeat="t in $ctrl.types" value="{{t.id***REMOVED******REMOVED***"***REMOVED***{{t.name***REMOVED******REMOVED***</option***REMOVED***
+                <option ng-repeat="t in $ctrl.types track by t.id" value="{{t.id***REMOVED******REMOVED***"***REMOVED***{{t.name***REMOVED******REMOVED***</option***REMOVED***
             </select***REMOVED***
         </div***REMOVED***
     </div***REMOVED***
