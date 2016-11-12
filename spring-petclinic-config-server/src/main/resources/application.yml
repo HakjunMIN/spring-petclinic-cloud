@@ -4,5 +4,5 @@ server.port: 8888
   ***REMOVED***
       server:
         git:
-#          uri: https://github.com/mszarlinski/petclinic-config-repo
+#          uri: https://github.com/spring-petclinic/spring-petclinic-microservices-config
           uri: file:///${GIT_REPO***REMOVED***
