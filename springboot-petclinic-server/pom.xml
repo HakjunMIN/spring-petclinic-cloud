@@ -57,7 +57,7 @@
 
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-            <artifactId***REMOVED***springboot-petclinic-client</artifactId***REMOVED***
+            <artifactId***REMOVED***spring-petclinic-client</artifactId***REMOVED***
         </dependency***REMOVED***
 
         <dependency***REMOVED***
