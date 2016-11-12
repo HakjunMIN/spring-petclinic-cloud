@@ -4,10 +4,10 @@
 
 	<parent***REMOVED***
 		<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-		<artifactId***REMOVED***springboot-petclinic</artifactId***REMOVED***
+		<artifactId***REMOVED***spring-petclinic-angular1</artifactId***REMOVED***
 		<version***REMOVED***1.4.1</version***REMOVED***
 	</parent***REMOVED***
-	<artifactId***REMOVED***springboot-petclinic-client</artifactId***REMOVED***
+	<artifactId***REMOVED***spring-petclinic-client</artifactId***REMOVED***
 	<name***REMOVED***Spring Petclinic :: AngularJS Client</name***REMOVED***
 
 	<properties***REMOVED***
