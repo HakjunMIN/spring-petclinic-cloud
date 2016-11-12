@@ -6,7 +6,7 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
         <artifactId***REMOVED***spring-petclinic-angular1</artifactId***REMOVED***
-        <version***REMOVED***1.4.1</version***REMOVED***
+        <version***REMOVED***1.4.2</version***REMOVED***
     </parent***REMOVED***
     <artifactId***REMOVED***spring-petclinic-server</artifactId***REMOVED***
     <name***REMOVED***Spring Petclinic :: Spring MVC REST server</name***REMOVED***

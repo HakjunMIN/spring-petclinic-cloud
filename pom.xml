@@ -5,12 +5,12 @@
 	<parent***REMOVED***
 		<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 		<artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-		<version***REMOVED***1.4.1.RELEASE</version***REMOVED***
+		<version***REMOVED***1.4.2.RELEASE</version***REMOVED***
 	</parent***REMOVED***
 
 	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
 	<artifactId***REMOVED***spring-petclinic-angular1</artifactId***REMOVED***
-	<version***REMOVED***1.4.1</version***REMOVED***
+	<version***REMOVED***1.4.2</version***REMOVED***
 	<name***REMOVED***Spring Petclinic :: Parent POM</name***REMOVED***
 	<packaging***REMOVED***pom</packaging***REMOVED***
 
