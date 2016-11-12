@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"***REMOVED***
+	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
+
+	<groupId***REMOVED***org.springframework.samples.petclinic.config</groupId***REMOVED***
+	<artifactId***REMOVED***spring-petclinic-config-server</artifactId***REMOVED***
+	<version***REMOVED***1.4.2</version***REMOVED***
+	<packaging***REMOVED***jar</packaging***REMOVED***
+
+	<name***REMOVED***spring-petclinic-config-server</name***REMOVED***
+	<description***REMOVED***Spring PetClinic Config Server</description***REMOVED***
+
+    <parent***REMOVED***
+        <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
+        <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
+        <version***REMOVED***1.4.2</version***REMOVED***
+    </parent***REMOVED***
+
+	<properties***REMOVED***
+		<project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
+		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
+		<java.version***REMOVED***1.8</java.version***REMOVED***
+	</properties***REMOVED***
+
+	<dependencies***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+			<artifactId***REMOVED***spring-cloud-config-server</artifactId***REMOVED***
+		</dependency***REMOVED***
+
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+	</dependencies***REMOVED***
+
+	<dependencyManagement***REMOVED***
+		<dependencies***REMOVED***
+			<dependency***REMOVED***
+				<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+				<artifactId***REMOVED***spring-cloud-dependencies</artifactId***REMOVED***
+				<version***REMOVED***Camden.SR1</version***REMOVED***
+				<type***REMOVED***pom</type***REMOVED***
+				<scope***REMOVED***import</scope***REMOVED***
+			</dependency***REMOVED***
+		</dependencies***REMOVED***
+	</dependencyManagement***REMOVED***
+
+	<build***REMOVED***
+		<plugins***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+				<artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
+			</plugin***REMOVED***
+		</plugins***REMOVED***
+	</build***REMOVED***
+
+
+</project***REMOVED***
