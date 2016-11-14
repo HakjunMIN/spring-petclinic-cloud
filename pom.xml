@@ -15,8 +15,8 @@
 	<packaging***REMOVED***pom</packaging***REMOVED***
 
 	<modules***REMOVED***
-		<module***REMOVED***spring-petclinic-client</module***REMOVED***
-		<module***REMOVED***spring-petclinic-clients-service</module***REMOVED***
+		<module***REMOVED***spring-petclinic-ui</module***REMOVED***
+		<module***REMOVED***spring-petclinic-customers-service</module***REMOVED***
 		<module***REMOVED***spring-petclinic-vets-service</module***REMOVED***
 		<module***REMOVED***spring-petclinic-visits-service</module***REMOVED***
 		<module***REMOVED***spring-petclinic-config-server</module***REMOVED***
