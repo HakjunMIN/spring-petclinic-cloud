@@ -9,7 +9,7 @@ angular.module('ownerForm')
         if (!ownerId) {
             self.owner = {***REMOVED***;
   ***REMOVED*** else {
-            $http.get("api/client/ownera/" + ownerId).then(function (resp) {
+            $http.get("api/client/owners/" + ownerId).then(function (resp) {
                 self.owner = resp.data;
       ***REMOVED***);
   ***REMOVED***
@@ -18,9 +18,9 @@ angular.module('ownerForm')
             var id = self.owner.id;
             var req;
             if (id) {
-                req = $http.put("api/client/ownera/" + id, self.owner);
+                req = $http.put("api/client/owners/" + id, self.owner);
       ***REMOVED*** else {
-                req = $http.post("api/client/ownera", self.owner);
+                req = $http.post("api/client/owners", self.owner);
       ***REMOVED***
 
             req.then(function () {
