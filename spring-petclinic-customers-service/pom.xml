@@ -9,7 +9,7 @@
 	<packaging***REMOVED***jar</packaging***REMOVED***
 
 	<name***REMOVED***spring-petclinic-customers-service</name***REMOVED***
-	<description***REMOVED***Spring PetClinic Clients Service</description***REMOVED***
+	<description***REMOVED***Spring PetClinic Customers Service</description***REMOVED***
 
 	<parent***REMOVED***
 		<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
