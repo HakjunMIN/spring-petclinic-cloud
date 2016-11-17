@@ -30,7 +30,7 @@
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-            <artifactId***REMOVED***spring-petclinic-client</artifactId***REMOVED***
+            <artifactId***REMOVED***spring-petclinic-ui</artifactId***REMOVED***
             <version***REMOVED***${project.version***REMOVED***</version***REMOVED***
         </dependency***REMOVED***
 
