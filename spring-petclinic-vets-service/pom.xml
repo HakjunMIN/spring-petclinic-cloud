@@ -72,6 +72,11 @@
             <artifactId***REMOVED***ehcache</artifactId***REMOVED***
         </dependency***REMOVED***
 		<dependency***REMOVED***
+			<groupId***REMOVED***org.projectlombok</groupId***REMOVED***
+			<artifactId***REMOVED***lombok</artifactId***REMOVED***
+		</dependency***REMOVED***
+
+		<dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
 			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
 			<scope***REMOVED***runtime</scope***REMOVED***

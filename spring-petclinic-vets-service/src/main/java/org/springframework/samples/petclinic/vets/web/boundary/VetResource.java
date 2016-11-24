@@ -15,34 +15,32 @@
  */
 package org.springframework.samples.petclinic.vets.web.boundary;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.samples.petclinic.vets.application.VetService;
+import lombok.RequiredArgsConstructor;
+
+import java.util.List;
+
 import org.springframework.samples.petclinic.vets.domain.model.vet.Vet;
+import org.springframework.samples.petclinic.vets.domain.model.vet.VetRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Collection;
 
 /**
  * @author Juergen Hoeller
  * @author Mark Fisher
  * @author Ken Krebs
  * @author Arjen Poutsma
+ * @author Maciej Szarlinski
  */
 @RequestMapping("/vets")
 @RestController
-public class VetResource {
+@RequiredArgsConstructor
+class VetResource {
 
-    private final VetService vetService;
-
-    @Autowired
-    public VetResource(VetService vetService) {
-        this.vetService = vetService;
-    ***REMOVED***
+    private final VetRepository vetRepository;
 
     @GetMapping
-    public Collection<Vet***REMOVED*** showResourcesVetList() {
-        return vetService.findVets();
+    public List<Vet***REMOVED*** showResourcesVetList() {
+        return vetRepository.findAll();
     ***REMOVED***
 ***REMOVED***
