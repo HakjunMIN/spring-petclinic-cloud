@@ -15,42 +15,42 @@
  */
 package org.springframework.samples.petclinic.customers.boundary.web.pet;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.HttpStatus;
-import org.springframework.samples.petclinic.customers.application.OwnerService;
-import org.springframework.samples.petclinic.customers.application.PetService;
-import org.springframework.samples.petclinic.customers.domain.model.owner.Owner;
-import org.springframework.samples.petclinic.customers.domain.model.pet.Pet;
-import org.springframework.samples.petclinic.customers.domain.model.pet.PetType;
-import org.springframework.web.bind.annotation.*;
+import lombok.RequiredArgsConstructor;
 
-import javax.validation.constraints.Size;
-import java.util.Collection;
-import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.samples.petclinic.customers.domain.model.owner.Owner;
+import org.springframework.samples.petclinic.customers.domain.model.owner.OwnerRepository;
+import org.springframework.samples.petclinic.customers.domain.model.pet.Pet;
+import org.springframework.samples.petclinic.customers.domain.model.pet.PetRepository;
+import org.springframework.samples.petclinic.customers.domain.model.pet.PetType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author Juergen Hoeller
  * @author Ken Krebs
  * @author Arjen Poutsma
+ * @author Maciej Szarlinski
  */
 @RestController
-public class PetResource {
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
+class PetResource {
 
-    private final PetService petService;
+    private final PetRepository petRepository;
 
-    private final OwnerService ownerService;
-
-    @Autowired
-    public PetResource(PetService petService, OwnerService ownerService) {
-        this.petService = petService;
-        this.ownerService = ownerService;
-    ***REMOVED***
+    private final OwnerRepository ownerRepository;
 
     @GetMapping("/petTypes")
-    public Collection<PetType***REMOVED*** getPetTypes() {
-        return petService.findPetTypes();
+    public List<PetType***REMOVED*** getPetTypes() {
+        return petRepository.findPetTypes();
     ***REMOVED***
 
     @PostMapping("/owners/{ownerId***REMOVED***/pets")
@@ -59,8 +59,8 @@ public class PetResource {
         @RequestBody PetRequest petRequest,
         @PathVariable("ownerId") int ownerId) {
 
-        Pet pet = new Pet();
-        Owner owner = ownerService.findOwnerById(ownerId);
+        final Pet pet = new Pet();
+        final Owner owner = ownerRepository.findOne(ownerId);
         owner.addPet(pet);
 
         save(pet, petRequest);
@@ -69,102 +69,23 @@ public class PetResource {
     @PutMapping("/owners/*/pets/{petId***REMOVED***")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void processUpdateForm(@RequestBody PetRequest petRequest) {
-        save(petService.findPetById(petRequest.getId()), petRequest);
+        save(petRepository.findOne(petRequest.getId()), petRequest);
     ***REMOVED***
 
-    private void save(Pet pet, PetRequest petRequest) {
+    private void save(final Pet pet, final PetRequest petRequest) {
 
         pet.setName(petRequest.getName());
         pet.setBirthDate(petRequest.getBirthDate());
 
-        petService.findPetTypeById(petRequest.getTypeId())
+        petRepository.findPetTypeById(petRequest.getTypeId())
             .ifPresent(pet::setType);
 
-        petService.savePet(pet);
+        petRepository.save(pet);
     ***REMOVED***
 
     @GetMapping("owners/*/pets/{petId***REMOVED***")
     public PetDetails findPet(@PathVariable("petId") int petId) {
-        return new PetDetails(petService.findPetById(petId));
-    ***REMOVED***
-
-    static class PetRequest {
-        int id;
-        @JsonFormat(pattern = "yyyy-MM-dd")
-        Date birthDate;
-        @Size(min = 1)
-        String name;
-        int typeId;
-
-        public int getId() {
-            return id;
-  ***REMOVED***
-
-        public void setId(int id) {
-            this.id = id;
-  ***REMOVED***
-
-        public Date getBirthDate() {
-            return birthDate;
-  ***REMOVED***
-
-        public void setBirthDate(Date birthDate) {
-            this.birthDate = birthDate;
-  ***REMOVED***
-
-        public String getName() {
-            return name;
-  ***REMOVED***
-
-        public void setName(String name) {
-            this.name = name;
-  ***REMOVED***
-
-        public int getTypeId() {
-            return typeId;
-  ***REMOVED***
-
-        public void setTypeId(int typeId) {
-            this.typeId = typeId;
-  ***REMOVED***
-    ***REMOVED***
-
-    static class PetDetails {
-
-        long id;
-        String name;
-        String owner;
-        @DateTimeFormat(pattern = "yyyy-MM-dd")
-        Date birthDate;
-        PetType type;
-
-        PetDetails(Pet pet) {
-            this.id = pet.getId();
-            this.name = pet.getName();
-            this.owner = pet.getOwner().getFirstName() + " " + pet.getOwner().getLastName();
-            this.birthDate = pet.getBirthDate();
-            this.type = pet.getType();
-  ***REMOVED***
-
-        public long getId() {
-            return id;
-  ***REMOVED***
-
-        public String getName() {
-            return name;
-  ***REMOVED***
-
-        public String getOwner() {
-            return owner;
-  ***REMOVED***
-
-        public Date getBirthDate() {
-            return birthDate;
-  ***REMOVED***
-
-        public PetType getType() {
-            return type;
-  ***REMOVED***
+        return new PetDetails(petRepository.findOne(petId));
     ***REMOVED***
 
 ***REMOVED***
