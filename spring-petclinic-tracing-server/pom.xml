@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"***REMOVED***
     <modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
 
-    <groupId***REMOVED***org.springframework.samples.petclinic.visits</groupId***REMOVED***
-    <artifactId***REMOVED***spring-petclinic-zipkin-server</artifactId***REMOVED***
+    <groupId***REMOVED***org.springframework.samples.petclinic.tracing</groupId***REMOVED***
+    <artifactId***REMOVED***spring-petclinic-tracing-server</artifactId***REMOVED***
     <version***REMOVED***1.4.2</version***REMOVED***
     <packaging***REMOVED***jar</packaging***REMOVED***
     <description***REMOVED***Zipkin server with UI</description***REMOVED***
