@@ -68,6 +68,10 @@
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-eureka</artifactId***REMOVED***
         </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-sleuth</artifactId***REMOVED***
+        </dependency***REMOVED***
 
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
