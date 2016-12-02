@@ -28,6 +28,7 @@
     <properties***REMOVED***
         <assertj.version***REMOVED***3.5.2</assertj.version***REMOVED***
         <spring-cloud.version***REMOVED***Camden.SR1</spring-cloud.version***REMOVED***
+        <java.version***REMOVED***1.8</java.version***REMOVED***
     </properties***REMOVED***
 
 	<dependencyManagement***REMOVED***
