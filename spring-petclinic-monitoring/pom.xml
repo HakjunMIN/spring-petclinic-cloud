@@ -12,10 +12,6 @@
     <name***REMOVED***spring-petclinic-monitoring</name***REMOVED***
     <description***REMOVED***Spring PetClinic monitoring utilities</description***REMOVED***
 
-    <properties***REMOVED***
-        <project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
-        <project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
-    </properties***REMOVED***
     <dependencies***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.aspectj</groupId***REMOVED***

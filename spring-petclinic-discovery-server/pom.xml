@@ -17,11 +17,6 @@
         <version***REMOVED***1.4.2</version***REMOVED***
     </parent***REMOVED***
 
-    <properties***REMOVED***
-        <project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
-        <project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
-    </properties***REMOVED***
-
     <dependencies***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
