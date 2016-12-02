@@ -18,38 +18,32 @@
 	</parent***REMOVED***
 
 	<dependencies***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-data-jpa</artifactId***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.projectlombok</groupId***REMOVED***
-			<artifactId***REMOVED***lombok</artifactId***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
-		</dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
-        </dependency***REMOVED***
+        <!-- Petclinic --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.samples.petclinic.monitoring</groupId***REMOVED***
             <artifactId***REMOVED***spring-petclinic-monitoring</artifactId***REMOVED***
         </dependency***REMOVED***
 
+        <!-- Spring Boot --***REMOVED***
         <dependency***REMOVED***
-			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
-			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
-			<scope***REMOVED***runtime</scope***REMOVED***
-		</dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
+        </dependency***REMOVED***
 		<dependency***REMOVED***
-			<groupId***REMOVED***mysql</groupId***REMOVED***
-			<artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
-			<scope***REMOVED***runtime</scope***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-data-jpa</artifactId***REMOVED***
 		</dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
+        </dependency***REMOVED***
 
+        <!-- Spring Cloud --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
@@ -63,16 +57,27 @@
             <artifactId***REMOVED***spring-cloud-starter-sleuth</artifactId***REMOVED***
         </dependency***REMOVED***
 
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
-			<scope***REMOVED***test</scope***REMOVED***
-		</dependency***REMOVED***
+        <!-- Third parties --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***mysql</groupId***REMOVED***
+            <artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
+            <scope***REMOVED***runtime</scope***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.hsqldb</groupId***REMOVED***
+            <artifactId***REMOVED***hsqldb</artifactId***REMOVED***
+            <scope***REMOVED***runtime</scope***REMOVED***
+        </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.assertj</groupId***REMOVED***
             <artifactId***REMOVED***assertj-core</artifactId***REMOVED***
             <scope***REMOVED***test</scope***REMOVED***
         </dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.projectlombok</groupId***REMOVED***
+			<artifactId***REMOVED***lombok</artifactId***REMOVED***
+		</dependency***REMOVED***
+
 	</dependencies***REMOVED***
 
 	<build***REMOVED***

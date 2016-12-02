@@ -18,16 +18,19 @@
     </parent***REMOVED***
 
 	<dependencies***REMOVED***
+        <!-- Spring Boot --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+
+        <!-- Spring Cloud --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
 			<artifactId***REMOVED***spring-cloud-config-server</artifactId***REMOVED***
 		</dependency***REMOVED***
 
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
-			<scope***REMOVED***test</scope***REMOVED***
-		</dependency***REMOVED***
 	</dependencies***REMOVED***
 
 	<dependencyManagement***REMOVED***

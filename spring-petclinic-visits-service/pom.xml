@@ -18,6 +18,11 @@
     </parent***REMOVED***
 
 	<dependencies***REMOVED***
+        <!-- Spring Boot --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
+        </dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 			<artifactId***REMOVED***spring-boot-starter-data-jpa</artifactId***REMOVED***
@@ -28,20 +33,11 @@
 		</dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
         </dependency***REMOVED***
 
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
-			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
-			<scope***REMOVED***runtime</scope***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***mysql</groupId***REMOVED***
-			<artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
-			<scope***REMOVED***runtime</scope***REMOVED***
-		</dependency***REMOVED***
-
+        <!-- Spring Cloud --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
@@ -55,11 +51,18 @@
             <artifactId***REMOVED***spring-cloud-starter-sleuth</artifactId***REMOVED***
         </dependency***REMOVED***
 
+        <!-- Third parties --***REMOVED***
 		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
-			<scope***REMOVED***test</scope***REMOVED***
+			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
+			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***mysql</groupId***REMOVED***
+			<artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
+			<scope***REMOVED***runtime</scope***REMOVED***
+		</dependency***REMOVED***
+
 	</dependencies***REMOVED***
 
 	<build***REMOVED***

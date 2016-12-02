@@ -18,42 +18,44 @@
     </parent***REMOVED***
 
     <dependencies***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-starter-zuul</artifactId***REMOVED***
-        </dependency***REMOVED***
+
+        <!-- Petclinic --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
             <artifactId***REMOVED***spring-petclinic-ui</artifactId***REMOVED***
             <version***REMOVED***${project.version***REMOVED***</version***REMOVED***
         </dependency***REMOVED***
 
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
-        </dependency***REMOVED***
-
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-starter-thymeleaf</artifactId***REMOVED***
-        </dependency***REMOVED***
-
+        <!-- Spring Boot --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-devtools</artifactId***REMOVED***
             <optional***REMOVED***true</optional***REMOVED***
         </dependency***REMOVED***
-
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-configuration-processor</artifactId***REMOVED***
             <optional***REMOVED***true</optional***REMOVED***
         </dependency***REMOVED***
-
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
         </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-thymeleaf</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+
+        <!-- Spring Cloud --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
@@ -66,12 +68,11 @@
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-sleuth</artifactId***REMOVED***
         </dependency***REMOVED***
-
         <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
-            <scope***REMOVED***test</scope***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-zuul</artifactId***REMOVED***
         </dependency***REMOVED***
+
     </dependencies***REMOVED***
 
     <build***REMOVED***
