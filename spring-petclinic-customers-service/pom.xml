@@ -56,6 +56,10 @@
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-sleuth</artifactId***REMOVED***
         </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-sleuth-zipkin</artifactId***REMOVED***
+        </dependency***REMOVED***
 
         <!-- Third parties --***REMOVED***
         <dependency***REMOVED***
