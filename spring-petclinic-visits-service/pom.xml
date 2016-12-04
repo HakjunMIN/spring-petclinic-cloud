@@ -7,8 +7,6 @@
 	<artifactId***REMOVED***spring-petclinic-visits-service</artifactId***REMOVED***
 	<version***REMOVED***1.4.2</version***REMOVED***
 	<packaging***REMOVED***jar</packaging***REMOVED***
-
-	<name***REMOVED***spring-petclinic-visits-service</name***REMOVED***
 	<description***REMOVED***Spring PetClinic Visits Service</description***REMOVED***
 
     <parent***REMOVED***

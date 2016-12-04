@@ -7,8 +7,6 @@
 	<artifactId***REMOVED***spring-petclinic-config-server</artifactId***REMOVED***
 	<version***REMOVED***1.4.2</version***REMOVED***
 	<packaging***REMOVED***jar</packaging***REMOVED***
-
-	<name***REMOVED***spring-petclinic-config-server</name***REMOVED***
 	<description***REMOVED***Spring PetClinic Config Server</description***REMOVED***
 
     <parent***REMOVED***

@@ -8,8 +8,6 @@
     <artifactId***REMOVED***spring-petclinic-monitoring</artifactId***REMOVED***
     <version***REMOVED***1.4.2</version***REMOVED***
     <packaging***REMOVED***jar</packaging***REMOVED***
-
-    <name***REMOVED***spring-petclinic-monitoring</name***REMOVED***
     <description***REMOVED***Spring PetClinic monitoring utilities</description***REMOVED***
 
     <dependencies***REMOVED***

@@ -7,8 +7,6 @@
     <artifactId***REMOVED***spring-petclinic-discovery-server</artifactId***REMOVED***
     <version***REMOVED***1.4.2</version***REMOVED***
     <packaging***REMOVED***jar</packaging***REMOVED***
-
-    <name***REMOVED***spring-petclinic-discovery-server</name***REMOVED***
     <description***REMOVED***Spring PetClinic Discovery Server</description***REMOVED***
 
     <parent***REMOVED***

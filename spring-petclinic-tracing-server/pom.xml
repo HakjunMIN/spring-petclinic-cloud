@@ -8,8 +8,6 @@
     <artifactId***REMOVED***spring-petclinic-zipkin-server</artifactId***REMOVED***
     <version***REMOVED***1.4.2</version***REMOVED***
     <packaging***REMOVED***jar</packaging***REMOVED***
-
-    <name***REMOVED***spring-petclinic-tracing-server</name***REMOVED***
     <description***REMOVED***Zipkin server with UI</description***REMOVED***
 
     <parent***REMOVED***
