@@ -11,7 +11,7 @@
 	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
 	<artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
 	<version***REMOVED***1.4.2</version***REMOVED***
-	<name***REMOVED***Spring Petclinic :: Parent POM</name***REMOVED***
+    <name***REMOVED***${project.artifactId***REMOVED***</name***REMOVED***
 	<packaging***REMOVED***pom</packaging***REMOVED***
 
 	<modules***REMOVED***
@@ -29,6 +29,7 @@
     <properties***REMOVED***
         <assertj.version***REMOVED***3.5.2</assertj.version***REMOVED***
         <spring-cloud.version***REMOVED***Camden.SR1</spring-cloud.version***REMOVED***
+        <java.version***REMOVED***1.8</java.version***REMOVED***
     </properties***REMOVED***
 
 	<dependencyManagement***REMOVED***
@@ -54,32 +55,5 @@
             </dependency***REMOVED***
 		</dependencies***REMOVED***
 	</dependencyManagement***REMOVED***
-
-	<build***REMOVED***
-		<plugins***REMOVED***
-			<plugin***REMOVED***
-				<groupId***REMOVED***com.spotify</groupId***REMOVED***
-				<artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
-				<version***REMOVED***0.4.13</version***REMOVED***
-				<configuration***REMOVED***
-					<imageName***REMOVED***${docker.image.prefix***REMOVED***/${project.artifactId***REMOVED***</imageName***REMOVED***
-					<dockerDirectory***REMOVED***src/main/docker</dockerDirectory***REMOVED***
-					<resources***REMOVED***
-						<resource***REMOVED***
-							<targetPath***REMOVED***/</targetPath***REMOVED***
-							<directory***REMOVED***${project.build.directory***REMOVED***</directory***REMOVED***
-							<include***REMOVED***${project.build.finalName***REMOVED***.war</include***REMOVED***
-						</resource***REMOVED***
-					</resources***REMOVED***
-					<forceTags***REMOVED***true</forceTags***REMOVED***
-					<imageTags***REMOVED***
-						<imageTag***REMOVED***${project.version***REMOVED***</imageTag***REMOVED***
-						<imageTag***REMOVED***latest</imageTag***REMOVED***
-					</imageTags***REMOVED***
-					<useConfigFile***REMOVED***true</useConfigFile***REMOVED***
-				</configuration***REMOVED***
-			</plugin***REMOVED***
-		</plugins***REMOVED***
-	</build***REMOVED***
 
 </project***REMOVED***

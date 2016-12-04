@@ -7,8 +7,6 @@
 	<artifactId***REMOVED***spring-petclinic-vets-service</artifactId***REMOVED***
 	<version***REMOVED***1.4.2</version***REMOVED***
 	<packaging***REMOVED***jar</packaging***REMOVED***
-
-	<name***REMOVED***spring-petclinic-vets-service</name***REMOVED***
 	<description***REMOVED***Spring PetClinic Vets Service</description***REMOVED***
 
 	<parent***REMOVED***
@@ -17,21 +15,13 @@
 		<version***REMOVED***1.4.2</version***REMOVED***
 	</parent***REMOVED***
 
-	<properties***REMOVED***
-		<project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
-		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
-		<java.version***REMOVED***1.8</java.version***REMOVED***
-	</properties***REMOVED***
-
 	<dependencies***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-data-jpa</artifactId***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
-		</dependency***REMOVED***
+        <!-- Spring Boot --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-configuration-processor</artifactId***REMOVED***
+            <optional***REMOVED***true</optional***REMOVED***
+        </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
@@ -40,11 +30,35 @@
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-starter-cache</artifactId***REMOVED***
         </dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-data-jpa</artifactId***REMOVED***
+		</dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-configuration-processor</artifactId***REMOVED***
-            <optional***REMOVED***true</optional***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
         </dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
+		</dependency***REMOVED***
+
+        <!-- Spring Cloud--***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-eureka</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-sleuth</artifactId***REMOVED***
+        </dependency***REMOVED***
+
+        <!-- Third parties--***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***javax.cache</groupId***REMOVED***
             <artifactId***REMOVED***cache-api</artifactId***REMOVED***
@@ -53,7 +67,6 @@
             <groupId***REMOVED***org.ehcache</groupId***REMOVED***
             <artifactId***REMOVED***ehcache</artifactId***REMOVED***
         </dependency***REMOVED***
-
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
 			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
@@ -65,29 +78,6 @@
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
 
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-			<artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
-		</dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-			<artifactId***REMOVED***spring-cloud-starter-eureka</artifactId***REMOVED***
-		</dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-starter-sleuth</artifactId***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-sleuth-zipkin</artifactId***REMOVED***
-        </dependency***REMOVED***
-
-
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
-			<scope***REMOVED***test</scope***REMOVED***
-		</dependency***REMOVED***
 	</dependencies***REMOVED***
 
 	<build***REMOVED***

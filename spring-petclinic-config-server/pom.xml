@@ -7,8 +7,6 @@
 	<artifactId***REMOVED***spring-petclinic-config-server</artifactId***REMOVED***
 	<version***REMOVED***1.4.2</version***REMOVED***
 	<packaging***REMOVED***jar</packaging***REMOVED***
-
-	<name***REMOVED***spring-petclinic-config-server</name***REMOVED***
 	<description***REMOVED***Spring PetClinic Config Server</description***REMOVED***
 
     <parent***REMOVED***
@@ -17,23 +15,20 @@
         <version***REMOVED***1.4.2</version***REMOVED***
     </parent***REMOVED***
 
-	<properties***REMOVED***
-		<project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
-		<project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
-		<java.version***REMOVED***1.8</java.version***REMOVED***
-	</properties***REMOVED***
-
 	<dependencies***REMOVED***
+        <!-- Spring Boot --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+
+        <!-- Spring Cloud --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
 			<artifactId***REMOVED***spring-cloud-config-server</artifactId***REMOVED***
 		</dependency***REMOVED***
 
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
-			<scope***REMOVED***test</scope***REMOVED***
-		</dependency***REMOVED***
 	</dependencies***REMOVED***
 
 	<dependencyManagement***REMOVED***

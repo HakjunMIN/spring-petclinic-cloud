@@ -8,8 +8,8 @@
 		<version***REMOVED***1.4.2</version***REMOVED***
 	</parent***REMOVED***
 	<artifactId***REMOVED***spring-petclinic-ui</artifactId***REMOVED***
-	<name***REMOVED***Spring Petclinic :: AngularJS UI</name***REMOVED***
     <version***REMOVED***1.4.2</version***REMOVED***
+    <description***REMOVED***Front-end webjar based on Angular 1</description***REMOVED***
 
 	<properties***REMOVED***
 		<node.version***REMOVED***v4.4.3</node.version***REMOVED***

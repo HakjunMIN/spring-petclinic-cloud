@@ -8,16 +8,10 @@
     <artifactId***REMOVED***spring-petclinic-monitoring</artifactId***REMOVED***
     <version***REMOVED***1.4.2</version***REMOVED***
     <packaging***REMOVED***jar</packaging***REMOVED***
-
-    <name***REMOVED***spring-petclinic-monitoring</name***REMOVED***
     <description***REMOVED***Spring PetClinic monitoring utilities</description***REMOVED***
 
-    <properties***REMOVED***
-        <project.build.sourceEncoding***REMOVED***UTF-8</project.build.sourceEncoding***REMOVED***
-        <project.reporting.outputEncoding***REMOVED***UTF-8</project.reporting.outputEncoding***REMOVED***
-        <java.version***REMOVED***1.8</java.version***REMOVED***
-    </properties***REMOVED***
     <dependencies***REMOVED***
+        <!-- Third-parties --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.aspectj</groupId***REMOVED***
             <artifactId***REMOVED***aspectjweaver</artifactId***REMOVED***
