@@ -59,6 +59,10 @@
         </dependency***REMOVED***
 
         <!-- Third parties--***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.projectlombok</groupId***REMOVED***
+			<artifactId***REMOVED***lombok</artifactId***REMOVED***
+		</dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***javax.cache</groupId***REMOVED***
             <artifactId***REMOVED***cache-api</artifactId***REMOVED***
