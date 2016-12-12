@@ -4,11 +4,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
+/**
+ * @author Maciej Szarlinski
+ */
 @EnableDiscoveryClient
 ***REMOVED***
 public class VisitsServiceApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(VisitsServiceApplication.class, args);
-	***REMOVED***
+    public static void main(String[] args) {
+        SpringApplication.run(VisitsServiceApplication.class, args);
+    ***REMOVED***
 ***REMOVED***
