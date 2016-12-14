@@ -30,6 +30,9 @@
         <assertj.version***REMOVED***3.5.2</assertj.version***REMOVED***
         <spring-cloud.version***REMOVED***Camden.SR1</spring-cloud.version***REMOVED***
         <java.version***REMOVED***1.8</java.version***REMOVED***
+
+		<docker.image.prefix***REMOVED***mszarlinski</docker.image.prefix***REMOVED***
+		<docker.plugin.version***REMOVED***0.3.258</docker.plugin.version***REMOVED***
     </properties***REMOVED***
 
 	<dependencyManagement***REMOVED***

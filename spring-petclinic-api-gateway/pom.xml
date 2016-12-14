@@ -123,14 +123,21 @@
                     </generateGitPropertiesFilename***REMOVED***
                 </configuration***REMOVED***
             </plugin***REMOVED***
-
             <plugin***REMOVED***
                 <groupId***REMOVED***com.spotify</groupId***REMOVED***
                 <artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
-                <version***REMOVED***0.4.13</version***REMOVED***
+                <version***REMOVED***${docker.plugin.version***REMOVED***</version***REMOVED***
+                <executions***REMOVED***
+                    <execution***REMOVED***
+                        <phase***REMOVED***install</phase***REMOVED***
+                        <goals***REMOVED***
+                            <goal***REMOVED***build</goal***REMOVED***
+                        </goals***REMOVED***
+                    </execution***REMOVED***
+                </executions***REMOVED***
                 <configuration***REMOVED***
-                    <imageName***REMOVED***${docker.image.prefix***REMOVED***/springboot-petclinic</imageName***REMOVED***
-                    <dockerDirectory***REMOVED***src/main/docker</dockerDirectory***REMOVED***
+                    <imageName***REMOVED***${docker.image.prefix***REMOVED***/${project.artifactId***REMOVED***</imageName***REMOVED***
+                    <dockerDirectory***REMOVED***${project.basedir***REMOVED***/src/main/docker</dockerDirectory***REMOVED***
                     <resources***REMOVED***
                         <resource***REMOVED***
                             <targetPath***REMOVED***/</targetPath***REMOVED***
@@ -138,12 +145,6 @@
                             <include***REMOVED***${project.build.finalName***REMOVED***.jar</include***REMOVED***
                         </resource***REMOVED***
                     </resources***REMOVED***
-                    <forceTags***REMOVED***true</forceTags***REMOVED***
-                    <imageTags***REMOVED***
-                        <imageTag***REMOVED***${project.version***REMOVED***</imageTag***REMOVED***
-                        <imageTag***REMOVED***latest</imageTag***REMOVED***
-                    </imageTags***REMOVED***
-                    <useConfigFile***REMOVED***true</useConfigFile***REMOVED***
                 </configuration***REMOVED***
             </plugin***REMOVED***
         </plugins***REMOVED***
