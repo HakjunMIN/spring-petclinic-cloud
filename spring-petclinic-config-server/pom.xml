@@ -31,18 +31,6 @@
 
 	</dependencies***REMOVED***
 
-	<dependencyManagement***REMOVED***
-		<dependencies***REMOVED***
-			<dependency***REMOVED***
-				<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-				<artifactId***REMOVED***spring-cloud-dependencies</artifactId***REMOVED***
-				<version***REMOVED***Camden.SR1</version***REMOVED***
-				<type***REMOVED***pom</type***REMOVED***
-				<scope***REMOVED***import</scope***REMOVED***
-			</dependency***REMOVED***
-		</dependencies***REMOVED***
-	</dependencyManagement***REMOVED***
-
 	<build***REMOVED***
 		<plugins***REMOVED***
 			<plugin***REMOVED***
