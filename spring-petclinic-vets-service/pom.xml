@@ -125,6 +125,9 @@
                                     <include***REMOVED***${project.build.finalName***REMOVED***.jar</include***REMOVED***
                                 </resource***REMOVED***
                             </resources***REMOVED***
+                            <buildArgs***REMOVED***
+                                <ARTIFACT_NAME***REMOVED***${project.build.finalName***REMOVED***</ARTIFACT_NAME***REMOVED***
+                            </buildArgs***REMOVED***
                         </configuration***REMOVED***
                     </plugin***REMOVED***
                 </plugins***REMOVED***

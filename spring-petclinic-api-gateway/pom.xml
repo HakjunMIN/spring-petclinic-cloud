@@ -78,7 +78,6 @@
     </dependencies***REMOVED***
 
     <build***REMOVED***
-        <finalName***REMOVED***petclinic</finalName***REMOVED***
         <plugins***REMOVED***
             <plugin***REMOVED***
                 <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
@@ -153,6 +152,9 @@
                                     <include***REMOVED***${project.build.finalName***REMOVED***.jar</include***REMOVED***
                                 </resource***REMOVED***
                             </resources***REMOVED***
+                            <buildArgs***REMOVED***
+                                <ARTIFACT_NAME***REMOVED***${project.build.finalName***REMOVED***</ARTIFACT_NAME***REMOVED***
+                            </buildArgs***REMOVED***
                         </configuration***REMOVED***
                     </plugin***REMOVED***
                 </plugins***REMOVED***
