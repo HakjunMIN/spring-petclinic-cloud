@@ -10,24 +10,23 @@
     <packaging***REMOVED***jar</packaging***REMOVED***
     <description***REMOVED***Spring PetClinic monitoring utilities</description***REMOVED***
 
+    <parent***REMOVED***
+        <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
+        <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
+        <version***REMOVED***1.4.2</version***REMOVED***
+    </parent***REMOVED***
+
     <dependencies***REMOVED***
+        <!-- Spring dependencies --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework</groupId***REMOVED***
+            <artifactId***REMOVED***spring-context</artifactId***REMOVED***
+        </dependency***REMOVED***
+
         <!-- Third-parties --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.aspectj</groupId***REMOVED***
             <artifactId***REMOVED***aspectjweaver</artifactId***REMOVED***
-            <version***REMOVED***1.8.0</version***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework</groupId***REMOVED***
-            <artifactId***REMOVED***spring-jmx</artifactId***REMOVED***
-            <scope***REMOVED***provided</scope***REMOVED***
-            <version***REMOVED***2.0.8</version***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework</groupId***REMOVED***
-            <artifactId***REMOVED***spring-context</artifactId***REMOVED***
-            <scope***REMOVED***provided</scope***REMOVED***
-            <version***REMOVED***4.3.4.RELEASE</version***REMOVED***
         </dependency***REMOVED***
     </dependencies***REMOVED***
 </project***REMOVED***
