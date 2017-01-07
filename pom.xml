@@ -15,6 +15,7 @@
 	<packaging***REMOVED***pom</packaging***REMOVED***
 
 	<modules***REMOVED***
+		<module***REMOVED***spring-petclinic-admin</module***REMOVED***
 		<module***REMOVED***spring-petclinic-ui</module***REMOVED***
 		<module***REMOVED***spring-petclinic-customers-service</module***REMOVED***
 		<module***REMOVED***spring-petclinic-vets-service</module***REMOVED***
