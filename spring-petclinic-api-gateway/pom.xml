@@ -82,7 +82,6 @@
     </dependencies***REMOVED***
 
     <build***REMOVED***
-        <finalName***REMOVED***petclinic</finalName***REMOVED***
         <plugins***REMOVED***
             <plugin***REMOVED***
                 <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
@@ -127,31 +126,43 @@
                     </generateGitPropertiesFilename***REMOVED***
                 </configuration***REMOVED***
             </plugin***REMOVED***
-
-            <plugin***REMOVED***
-                <groupId***REMOVED***com.spotify</groupId***REMOVED***
-                <artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
-                <version***REMOVED***0.4.13</version***REMOVED***
-                <configuration***REMOVED***
-                    <imageName***REMOVED***${docker.image.prefix***REMOVED***/springboot-petclinic</imageName***REMOVED***
-                    <dockerDirectory***REMOVED***src/main/docker</dockerDirectory***REMOVED***
-                    <resources***REMOVED***
-                        <resource***REMOVED***
-                            <targetPath***REMOVED***/</targetPath***REMOVED***
-                            <directory***REMOVED***${project.build.directory***REMOVED***</directory***REMOVED***
-                            <include***REMOVED***${project.build.finalName***REMOVED***.jar</include***REMOVED***
-                        </resource***REMOVED***
-                    </resources***REMOVED***
-                    <forceTags***REMOVED***true</forceTags***REMOVED***
-                    <imageTags***REMOVED***
-                        <imageTag***REMOVED***${project.version***REMOVED***</imageTag***REMOVED***
-                        <imageTag***REMOVED***latest</imageTag***REMOVED***
-                    </imageTags***REMOVED***
-                    <useConfigFile***REMOVED***true</useConfigFile***REMOVED***
-                </configuration***REMOVED***
-            </plugin***REMOVED***
         </plugins***REMOVED***
     </build***REMOVED***
 
-
+    <profiles***REMOVED***
+        <profile***REMOVED***
+            <id***REMOVED***buildDocker</id***REMOVED***
+            <build***REMOVED***
+                <plugins***REMOVED***
+                    <plugin***REMOVED***
+                        <groupId***REMOVED***com.spotify</groupId***REMOVED***
+                        <artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
+                        <version***REMOVED***${docker.plugin.version***REMOVED***</version***REMOVED***
+                        <executions***REMOVED***
+                            <execution***REMOVED***
+                                <phase***REMOVED***install</phase***REMOVED***
+                                <goals***REMOVED***
+                                    <goal***REMOVED***build</goal***REMOVED***
+                                </goals***REMOVED***
+                            </execution***REMOVED***
+                        </executions***REMOVED***
+                        <configuration***REMOVED***
+                            <imageName***REMOVED***${docker.image.prefix***REMOVED***/${project.artifactId***REMOVED***</imageName***REMOVED***
+                            <dockerDirectory***REMOVED***${project.basedir***REMOVED***/src/main/docker</dockerDirectory***REMOVED***
+                            <resources***REMOVED***
+                                <resource***REMOVED***
+                                    <targetPath***REMOVED***/</targetPath***REMOVED***
+                                    <directory***REMOVED***${project.build.directory***REMOVED***</directory***REMOVED***
+                                    <include***REMOVED***${project.build.finalName***REMOVED***.jar</include***REMOVED***
+                                </resource***REMOVED***
+                            </resources***REMOVED***
+                            <buildArgs***REMOVED***
+                                <ARTIFACT_NAME***REMOVED***${project.build.finalName***REMOVED***</ARTIFACT_NAME***REMOVED***
+                            </buildArgs***REMOVED***
+                        </configuration***REMOVED***
+                    </plugin***REMOVED***
+                </plugins***REMOVED***
+            </build***REMOVED***
+        </profile***REMOVED***
+    </profiles***REMOVED***
 </project***REMOVED***

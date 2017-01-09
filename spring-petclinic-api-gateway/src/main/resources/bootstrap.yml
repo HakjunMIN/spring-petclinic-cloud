@@ -4,3 +4,9 @@
       uri: http://localhost:8888
   application:
     name: api-gateway
+---
+***REMOVED***
+  profiles: docker
+***REMOVED***
+  ***REMOVED***
+      uri: http://config-server:8888
