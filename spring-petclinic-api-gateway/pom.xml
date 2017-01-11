@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?***REMOVED***
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"***REMOVED***
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"***REMOVED***
     <modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
 
     <groupId***REMOVED***org.springframework.samples.petclinic.api</groupId***REMOVED***
@@ -15,14 +15,16 @@
         <version***REMOVED***1.4.2</version***REMOVED***
     </parent***REMOVED***
 
-    <dependencies***REMOVED***
+    <properties***REMOVED***
+        <webjars-bootstrap.version***REMOVED***3.3.6</webjars-bootstrap.version***REMOVED***
+        <webjars-jquery-ui.version***REMOVED***1.11.4</webjars-jquery-ui.version***REMOVED***
+        <webjars-jquery.version***REMOVED***2.2.4</webjars-jquery.version***REMOVED***
+        <webjars-angular.version***REMOVED***1.5.8</webjars-angular.version***REMOVED***
+        <webjars-angular-ui-router.version***REMOVED***0.2.18</webjars-angular-ui-router.version***REMOVED***
+        <wro4j.version***REMOVED***1.8.0</wro4j.version***REMOVED***
+    </properties***REMOVED***
 
-        <!-- Petclinic --***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-            <artifactId***REMOVED***spring-petclinic-ui</artifactId***REMOVED***
-            <version***REMOVED***${project.version***REMOVED***</version***REMOVED***
-        </dependency***REMOVED***
+    <dependencies***REMOVED***
 
         <!-- Spring Boot --***REMOVED***
         <dependency***REMOVED***
@@ -42,10 +44,6 @@
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-starter-thymeleaf</artifactId***REMOVED***
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
@@ -79,6 +77,31 @@
             <groupId***REMOVED***org.projectlombok</groupId***REMOVED***
             <artifactId***REMOVED***lombok</artifactId***REMOVED***
         </dependency***REMOVED***
+        <!-- Webjars --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.webjars</groupId***REMOVED***
+            <artifactId***REMOVED***angularjs</artifactId***REMOVED***
+            <version***REMOVED***${webjars-angular.version***REMOVED***</version***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.webjars</groupId***REMOVED***
+            <artifactId***REMOVED***jquery</artifactId***REMOVED***
+            <version***REMOVED***${webjars-jquery.version***REMOVED***</version***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.webjars</groupId***REMOVED***
+            <artifactId***REMOVED***bootstrap</artifactId***REMOVED***
+            <version***REMOVED***${webjars-bootstrap.version***REMOVED***</version***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.webjars</groupId***REMOVED***
+            <artifactId***REMOVED***angular-ui-router</artifactId***REMOVED***
+            <version***REMOVED***${webjars-angular-ui-router.version***REMOVED***</version***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.webjars</groupId***REMOVED***
+            <artifactId***REMOVED***webjars-locator</artifactId***REMOVED***
+        </dependency***REMOVED***
     </dependencies***REMOVED***
 
     <build***REMOVED***
@@ -91,7 +114,8 @@
                 </configuration***REMOVED***
                 <executions***REMOVED***
                     <execution***REMOVED***
-                        <!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties file is present --***REMOVED***
+                        <!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties 
+                            file is present --***REMOVED***
                         <goals***REMOVED***
                             <goal***REMOVED***build-info</goal***REMOVED***
                         </goals***REMOVED***
@@ -125,6 +149,33 @@
                     <generateGitPropertiesFilename***REMOVED***${project.build.outputDirectory***REMOVED***/git.properties
                     </generateGitPropertiesFilename***REMOVED***
                 </configuration***REMOVED***
+            </plugin***REMOVED***
+            <plugin***REMOVED***
+                <groupId***REMOVED***ro.isdc.wro4j</groupId***REMOVED***
+                <artifactId***REMOVED***wro4j-maven-plugin</artifactId***REMOVED***
+                <version***REMOVED***${wro4j.version***REMOVED***</version***REMOVED***
+                <executions***REMOVED***
+                    <execution***REMOVED***
+                        <phase***REMOVED***generate-resources</phase***REMOVED***
+                        <goals***REMOVED***
+                            <goal***REMOVED***run</goal***REMOVED***
+                        </goals***REMOVED***
+                    </execution***REMOVED***
+                </executions***REMOVED***
+                <configuration***REMOVED***
+                    <wroManagerFactory***REMOVED***ro.isdc.wro.maven.plugin.manager.factory.ConfigurableWroManagerFactory</wroManagerFactory***REMOVED***
+                    <cssDestinationFolder***REMOVED***${project.build.directory***REMOVED***/classes/static/css</cssDestinationFolder***REMOVED***
+                    <wroFile***REMOVED***${basedir***REMOVED***/src/main/wro/wro.xml</wroFile***REMOVED***
+                    <extraConfigFile***REMOVED***${basedir***REMOVED***/src/main/wro/wro.properties</extraConfigFile***REMOVED***
+                    <contextFolder***REMOVED***${basedir***REMOVED***/src/main/less</contextFolder***REMOVED***
+                </configuration***REMOVED***
+                <dependencies***REMOVED***
+                    <dependency***REMOVED***
+                        <groupId***REMOVED***org.webjars</groupId***REMOVED***
+                        <artifactId***REMOVED***bootstrap</artifactId***REMOVED***
+                        <version***REMOVED***${webjars-bootstrap.version***REMOVED***</version***REMOVED***
+                    </dependency***REMOVED***
+                </dependencies***REMOVED***
             </plugin***REMOVED***
         </plugins***REMOVED***
     </build***REMOVED***
