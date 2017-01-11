@@ -5,7 +5,7 @@
     <modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
 
     <groupId***REMOVED***org.springframework.samples.petclinic.admin</groupId***REMOVED***
-    <artifactId***REMOVED***spring-petclinic-admin</artifactId***REMOVED***
+    <artifactId***REMOVED***spring-petclinic-admin-server</artifactId***REMOVED***
     <version***REMOVED***1.4.2</version***REMOVED***
     <packaging***REMOVED***jar</packaging***REMOVED***
     <description***REMOVED***Spring Boot Admin server</description***REMOVED***
