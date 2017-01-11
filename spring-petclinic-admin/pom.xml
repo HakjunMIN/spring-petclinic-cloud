@@ -43,6 +43,12 @@
             <version***REMOVED***1.4.4</version***REMOVED***
         </dependency***REMOVED***
 
+        <!-- Third-party librairies --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.jolokia</groupId***REMOVED***
+            <artifactId***REMOVED***jolokia-core</artifactId***REMOVED***
+        </dependency***REMOVED***
+
     </dependencies***REMOVED***
 
     <build***REMOVED***

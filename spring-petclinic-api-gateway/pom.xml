@@ -74,7 +74,12 @@
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-zuul</artifactId***REMOVED***
         </dependency***REMOVED***
+
         <!-- Third parties --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.jolokia</groupId***REMOVED***
+            <artifactId***REMOVED***jolokia-core</artifactId***REMOVED***
+        </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.projectlombok</groupId***REMOVED***
             <artifactId***REMOVED***lombok</artifactId***REMOVED***

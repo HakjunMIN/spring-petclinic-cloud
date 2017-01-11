@@ -63,6 +63,10 @@
 			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.jolokia</groupId***REMOVED***
+            <artifactId***REMOVED***jolokia-core</artifactId***REMOVED***
+        </dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***mysql</groupId***REMOVED***
 			<artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***

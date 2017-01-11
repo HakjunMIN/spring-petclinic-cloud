@@ -48,6 +48,10 @@
             <artifactId***REMOVED***zipkin-autoconfigure-ui</artifactId***REMOVED***
             <scope***REMOVED***runtime</scope***REMOVED***
         </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.jolokia</groupId***REMOVED***
+            <artifactId***REMOVED***jolokia-core</artifactId***REMOVED***
+        </dependency***REMOVED***
 
     </dependencies***REMOVED***
 
