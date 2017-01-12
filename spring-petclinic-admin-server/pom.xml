@@ -6,7 +6,6 @@
 
     <groupId***REMOVED***org.springframework.samples.petclinic.admin</groupId***REMOVED***
     <artifactId***REMOVED***spring-petclinic-admin-server</artifactId***REMOVED***
-    <version***REMOVED***1.4.2</version***REMOVED***
     <packaging***REMOVED***jar</packaging***REMOVED***
     <description***REMOVED***Spring Boot Admin server</description***REMOVED***
 
@@ -15,6 +14,10 @@
         <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
         <version***REMOVED***1.4.2</version***REMOVED***
     </parent***REMOVED***
+
+    <properties***REMOVED***
+        <spring-boot-admin.version***REMOVED***1.4.5</spring-boot-admin.version***REMOVED***
+    </properties***REMOVED***
 
     <dependencies***REMOVED***
         <!-- Spring Boot --***REMOVED***
@@ -35,12 +38,12 @@
         <dependency***REMOVED***
             <groupId***REMOVED***de.codecentric</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-admin-server</artifactId***REMOVED***
-            <version***REMOVED***1.4.4</version***REMOVED***
+            <version***REMOVED***${spring-boot-admin.version***REMOVED***</version***REMOVED***
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***de.codecentric</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-admin-server-ui</artifactId***REMOVED***
-            <version***REMOVED***1.4.4</version***REMOVED***
+            <version***REMOVED***${spring-boot-admin.version***REMOVED***</version***REMOVED***
         </dependency***REMOVED***
 
         <!-- Third-party librairies --***REMOVED***
