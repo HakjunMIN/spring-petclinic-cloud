@@ -54,13 +54,4 @@
 
     </dependencies***REMOVED***
 
-    <build***REMOVED***
-        <plugins***REMOVED***
-            <plugin***REMOVED***
-                <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-                <artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
-            </plugin***REMOVED***
-        </plugins***REMOVED***
-    </build***REMOVED***
-
 </project***REMOVED***
