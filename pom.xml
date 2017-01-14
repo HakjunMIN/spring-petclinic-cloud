@@ -16,7 +16,6 @@
 
 	<modules***REMOVED***
 		<module***REMOVED***spring-petclinic-admin-server</module***REMOVED***
-		<module***REMOVED***spring-petclinic-ui</module***REMOVED***
 		<module***REMOVED***spring-petclinic-customers-service</module***REMOVED***
 		<module***REMOVED***spring-petclinic-vets-service</module***REMOVED***
 		<module***REMOVED***spring-petclinic-visits-service</module***REMOVED***
@@ -29,7 +28,8 @@
 
     <properties***REMOVED***
         <assertj.version***REMOVED***3.5.2</assertj.version***REMOVED***
-        <spring-cloud.version***REMOVED***Camden.SR1</spring-cloud.version***REMOVED***
+        <spring-cloud.version***REMOVED***Camden.SR3</spring-cloud.version***REMOVED***
+        <sleuth.version***REMOVED***1.1.0.RELEASE</sleuth.version***REMOVED***
         <java.version***REMOVED***1.8</java.version***REMOVED***
 
 		<docker.image.prefix***REMOVED***mszarlinski</docker.image.prefix***REMOVED***
@@ -38,6 +38,13 @@
 
 	<dependencyManagement***REMOVED***
 		<dependencies***REMOVED***
+            <dependency***REMOVED***
+                <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+                <artifactId***REMOVED***spring-cloud-sleuth-dependencies</artifactId***REMOVED***
+				<type***REMOVED***pom</type***REMOVED***
+				<scope***REMOVED***import</scope***REMOVED***
+                <version***REMOVED***${sleuth.version***REMOVED***</version***REMOVED***
+            </dependency***REMOVED***
 			<dependency***REMOVED***
 				<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
 				<artifactId***REMOVED***spring-cloud-dependencies</artifactId***REMOVED***

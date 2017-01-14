@@ -1,12 +1,4 @@
-petclinic.database: hsqldb
-***REMOVED***
-  datasource:
-    schema: classpath*:db/${petclinic.database***REMOVED***/schema.sql
-    data: classpath*:db/${petclinic.database***REMOVED***/data.sql
-
 spring.jpa.hibernate.ddl-auto: none
-
-logging.level.org.springframework: INFO
 
 ***REMOVED***
   cache:
