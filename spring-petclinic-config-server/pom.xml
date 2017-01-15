@@ -29,16 +29,13 @@
 			<artifactId***REMOVED***spring-cloud-config-server</artifactId***REMOVED***
 		</dependency***REMOVED***
 
-	</dependencies***REMOVED***
+        <!-- Third-party librairies --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.jolokia</groupId***REMOVED***
+            <artifactId***REMOVED***jolokia-core</artifactId***REMOVED***
+        </dependency***REMOVED***
 
-	<build***REMOVED***
-		<plugins***REMOVED***
-			<plugin***REMOVED***
-				<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-				<artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
-			</plugin***REMOVED***
-		</plugins***REMOVED***
-	</build***REMOVED***
+	</dependencies***REMOVED***
 
     <profiles***REMOVED***
         <profile***REMOVED***

@@ -71,6 +71,10 @@
             <scope***REMOVED***runtime</scope***REMOVED***
         </dependency***REMOVED***
         <dependency***REMOVED***
+            <groupId***REMOVED***org.jolokia</groupId***REMOVED***
+            <artifactId***REMOVED***jolokia-core</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
             <groupId***REMOVED***org.assertj</groupId***REMOVED***
             <artifactId***REMOVED***assertj-core</artifactId***REMOVED***
             <scope***REMOVED***test</scope***REMOVED***
@@ -81,15 +85,6 @@
 		</dependency***REMOVED***
 
 	</dependencies***REMOVED***
-
-	<build***REMOVED***
-		<plugins***REMOVED***
-			<plugin***REMOVED***
-				<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-				<artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
-			</plugin***REMOVED***
-		</plugins***REMOVED***
-	</build***REMOVED***
 
     <profiles***REMOVED***
         <profile***REMOVED***
