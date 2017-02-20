@@ -5,12 +5,12 @@
 	<parent***REMOVED***
 		<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 		<artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-		<version***REMOVED***1.4.2.RELEASE</version***REMOVED***
+		<version***REMOVED***1.5.1.RELEASE</version***REMOVED***
 	</parent***REMOVED***
 
 	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
 	<artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-	<version***REMOVED***1.4.2</version***REMOVED***
+	<version***REMOVED***1.5.1</version***REMOVED***
     <name***REMOVED***${project.artifactId***REMOVED***</name***REMOVED***
 	<packaging***REMOVED***pom</packaging***REMOVED***
 
@@ -28,8 +28,8 @@
 
     <properties***REMOVED***
         <assertj.version***REMOVED***3.5.2</assertj.version***REMOVED***
-        <spring-cloud.version***REMOVED***Camden.SR4</spring-cloud.version***REMOVED***
-        <sleuth.version***REMOVED***1.1.0.RELEASE</sleuth.version***REMOVED***
+        <spring-cloud.version***REMOVED***Camden.SR5</spring-cloud.version***REMOVED***
+        <sleuth.version***REMOVED***1.1.2.RELEASE</sleuth.version***REMOVED***
         <java.version***REMOVED***1.8</java.version***REMOVED***
 
 		<docker.image.prefix***REMOVED***mszarlinski</docker.image.prefix***REMOVED***

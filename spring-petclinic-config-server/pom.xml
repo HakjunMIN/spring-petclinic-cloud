@@ -5,14 +5,13 @@
 
 	<groupId***REMOVED***org.springframework.samples.petclinic.config</groupId***REMOVED***
 	<artifactId***REMOVED***spring-petclinic-config-server</artifactId***REMOVED***
-	<version***REMOVED***1.4.2</version***REMOVED***
 	<packaging***REMOVED***jar</packaging***REMOVED***
 	<description***REMOVED***Spring PetClinic Config Server</description***REMOVED***
 
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
         <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-        <version***REMOVED***1.4.2</version***REMOVED***
+        <version***REMOVED***1.5.1</version***REMOVED***
     </parent***REMOVED***
 
 	<dependencies***REMOVED***

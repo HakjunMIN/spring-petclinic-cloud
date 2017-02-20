@@ -6,14 +6,13 @@
 
     <groupId***REMOVED***org.springframework.samples.petclinic.monitoring</groupId***REMOVED***
     <artifactId***REMOVED***spring-petclinic-monitoring</artifactId***REMOVED***
-    <version***REMOVED***1.4.2</version***REMOVED***
     <packaging***REMOVED***jar</packaging***REMOVED***
     <description***REMOVED***Spring PetClinic monitoring utilities</description***REMOVED***
 
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
         <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-        <version***REMOVED***1.4.2</version***REMOVED***
+        <version***REMOVED***1.5.1</version***REMOVED***
     </parent***REMOVED***
 
     <dependencies***REMOVED***
