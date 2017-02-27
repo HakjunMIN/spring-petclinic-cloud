@@ -16,7 +16,7 @@
     </parent***REMOVED***
 
     <properties***REMOVED***
-        <spring-boot-admin.version***REMOVED***1.4.5</spring-boot-admin.version***REMOVED***
+        <spring-boot-admin.version***REMOVED***1.4.6</spring-boot-admin.version***REMOVED***
     </properties***REMOVED***
 
     <dependencies***REMOVED***

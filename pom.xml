@@ -27,7 +27,7 @@
     </modules***REMOVED***
 
     <properties***REMOVED***
-        <assertj.version***REMOVED***3.5.2</assertj.version***REMOVED***
+        <assertj.version***REMOVED***3.6.2</assertj.version***REMOVED***
         <spring-cloud.version***REMOVED***Camden.SR5</spring-cloud.version***REMOVED***
         <sleuth.version***REMOVED***1.1.2.RELEASE</sleuth.version***REMOVED***
         <java.version***REMOVED***1.8</java.version***REMOVED***
