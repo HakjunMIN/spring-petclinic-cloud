@@ -29,7 +29,7 @@
     <properties***REMOVED***
         <assertj.version***REMOVED***3.6.2</assertj.version***REMOVED***
         <spring-cloud.version***REMOVED***Camden.SR5</spring-cloud.version***REMOVED***
-        <sleuth.version***REMOVED***1.1.2.RELEASE</sleuth.version***REMOVED***
+        <sleuth.version***REMOVED***1.1.3.RELEASE</sleuth.version***REMOVED***
         <java.version***REMOVED***1.8</java.version***REMOVED***
 
 		<docker.image.prefix***REMOVED***mszarlinski</docker.image.prefix***REMOVED***
