@@ -5,12 +5,12 @@
 	<parent***REMOVED***
 		<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 		<artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-		<version***REMOVED***1.5.1.RELEASE</version***REMOVED***
+		<version***REMOVED***1.5.2.RELEASE</version***REMOVED***
 	</parent***REMOVED***
 
 	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
 	<artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-	<version***REMOVED***1.5.1</version***REMOVED***
+	<version***REMOVED***1.5.2</version***REMOVED***
     <name***REMOVED***${project.artifactId***REMOVED***</name***REMOVED***
 	<packaging***REMOVED***pom</packaging***REMOVED***
 
@@ -28,7 +28,7 @@
 
     <properties***REMOVED***
         <assertj.version***REMOVED***3.6.2</assertj.version***REMOVED***
-        <spring-cloud.version***REMOVED***Camden.SR6</spring-cloud.version***REMOVED***
+        <spring-cloud.version***REMOVED***Dalston.RELEASE</spring-cloud.version***REMOVED***
         <sleuth.version***REMOVED***1.1.3.RELEASE</sleuth.version***REMOVED***
         <java.version***REMOVED***1.8</java.version***REMOVED***
 

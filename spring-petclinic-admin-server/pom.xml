@@ -12,11 +12,11 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
         <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-        <version***REMOVED***1.5.1</version***REMOVED***
+        <version***REMOVED***1.5.2</version***REMOVED***
     </parent***REMOVED***
 
     <properties***REMOVED***
-        <spring-boot-admin.version***REMOVED***1.4.6</spring-boot-admin.version***REMOVED***
+        <spring-boot-admin.version***REMOVED***1.5.0</spring-boot-admin.version***REMOVED***
     </properties***REMOVED***
 
     <dependencies***REMOVED***
