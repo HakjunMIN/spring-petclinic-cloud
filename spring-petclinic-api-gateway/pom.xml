@@ -11,15 +11,15 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
         <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-        <version***REMOVED***1.5.2</version***REMOVED***
+        <version***REMOVED***1.5.3</version***REMOVED***
     </parent***REMOVED***
 
     <properties***REMOVED***
         <webjars-bootstrap.version***REMOVED***3.3.7-1</webjars-bootstrap.version***REMOVED***
         <webjars-jquery-ui.version***REMOVED***1.11.4</webjars-jquery-ui.version***REMOVED***
         <webjars-jquery.version***REMOVED***3.1.1-1</webjars-jquery.version***REMOVED***
-        <webjars-angular.version***REMOVED***1.6.2</webjars-angular.version***REMOVED***
-        <webjars-angular-ui-router.version***REMOVED***0.2.18</webjars-angular-ui-router.version***REMOVED***
+        <webjars-angular.version***REMOVED***1.6.4</webjars-angular.version***REMOVED***
+        <webjars-angular-ui-router.version***REMOVED***1.0.3</webjars-angular-ui-router.version***REMOVED***
         <wro4j.version***REMOVED***1.8.0</wro4j.version***REMOVED***
     </properties***REMOVED***
 
