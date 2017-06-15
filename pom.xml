@@ -28,8 +28,8 @@
 
     <properties***REMOVED***
         <assertj.version***REMOVED***3.7.0</assertj.version***REMOVED***
-        <spring-cloud.version***REMOVED***Dalston.RELEASE</spring-cloud.version***REMOVED***
-        <sleuth.version***REMOVED***1.2.0.RELEASE</sleuth.version***REMOVED***
+        <spring-cloud.version***REMOVED***Dalston.SR1</spring-cloud.version***REMOVED***
+        <sleuth.version***REMOVED***1.2.1.RELEASE</sleuth.version***REMOVED***
         <java.version***REMOVED***1.8</java.version***REMOVED***
 
 		<docker.image.prefix***REMOVED***mszarlinski</docker.image.prefix***REMOVED***
