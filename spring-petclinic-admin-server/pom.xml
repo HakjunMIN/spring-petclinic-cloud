@@ -31,7 +31,7 @@
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-starter-eureka</artifactId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-netflix-eureka-client</artifactId***REMOVED***
         </dependency***REMOVED***
 
         <!-- Spring Boot Admin --***REMOVED***

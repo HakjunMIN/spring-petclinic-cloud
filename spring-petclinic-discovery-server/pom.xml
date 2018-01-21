@@ -29,7 +29,7 @@
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-starter-eureka-server</artifactId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-netflix-eureka-server</artifactId***REMOVED***
         </dependency***REMOVED***
 
     </dependencies***REMOVED***
