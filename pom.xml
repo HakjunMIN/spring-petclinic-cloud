@@ -33,6 +33,8 @@
         <java.version***REMOVED***1.8</java.version***REMOVED***
 
 		<docker.image.prefix***REMOVED***mszarlinski</docker.image.prefix***REMOVED***
+        <docker.image.exposed.port***REMOVED***9090</docker.image.exposed.port***REMOVED***
+        <docker.image.dockerfile.dir***REMOVED***${basedir***REMOVED***</docker.image.dockerfile.dir***REMOVED***
 		<docker.plugin.version***REMOVED***0.4.13</docker.plugin.version***REMOVED***
     </properties***REMOVED***
 
@@ -124,6 +126,44 @@
                 </plugins***REMOVED***
             </build***REMOVED***
 
+        </profile***REMOVED***
+
+        <profile***REMOVED***
+            <id***REMOVED***buildDocker</id***REMOVED***
+            <build***REMOVED***
+                <pluginManagement***REMOVED***
+                    <plugins***REMOVED***
+                        <plugin***REMOVED***
+                            <groupId***REMOVED***com.spotify</groupId***REMOVED***
+                            <artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
+                            <version***REMOVED***${docker.plugin.version***REMOVED***</version***REMOVED***
+                            <executions***REMOVED***
+                                <execution***REMOVED***
+                                    <phase***REMOVED***install</phase***REMOVED***
+                                    <goals***REMOVED***
+                                        <goal***REMOVED***build</goal***REMOVED***
+                                    </goals***REMOVED***
+                                </execution***REMOVED***
+                            </executions***REMOVED***
+                            <configuration***REMOVED***
+                                <imageName***REMOVED***${docker.image.prefix***REMOVED***/${project.artifactId***REMOVED***</imageName***REMOVED***
+                                <dockerDirectory***REMOVED***${docker.image.dockerfile.dir***REMOVED***</dockerDirectory***REMOVED***
+                                <resources***REMOVED***
+                                    <resource***REMOVED***
+                                        <targetPath***REMOVED***/</targetPath***REMOVED***
+                                        <directory***REMOVED***${project.build.directory***REMOVED***</directory***REMOVED***
+                                        <include***REMOVED***${project.build.finalName***REMOVED***.jar</include***REMOVED***
+                                    </resource***REMOVED***
+                                </resources***REMOVED***
+                                <buildArgs***REMOVED***
+                                    <ARTIFACT_NAME***REMOVED***${project.build.finalName***REMOVED***</ARTIFACT_NAME***REMOVED***
+                                    <EXPOSED_PORT***REMOVED***${docker.image.exposed.port***REMOVED***</EXPOSED_PORT***REMOVED***
+                                </buildArgs***REMOVED***
+                            </configuration***REMOVED***
+                        </plugin***REMOVED***
+                    </plugins***REMOVED***
+                </pluginManagement***REMOVED***
+            </build***REMOVED***
         </profile***REMOVED***
     </profiles***REMOVED***
 

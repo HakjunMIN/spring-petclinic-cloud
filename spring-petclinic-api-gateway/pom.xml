@@ -21,6 +21,8 @@
         <webjars-angular.version***REMOVED***1.6.4</webjars-angular.version***REMOVED***
         <webjars-angular-ui-router.version***REMOVED***1.0.3</webjars-angular-ui-router.version***REMOVED***
         <wro4j.version***REMOVED***1.8.0</wro4j.version***REMOVED***
+        <docker.image.exposed.port***REMOVED***8081</docker.image.exposed.port***REMOVED***
+        <docker.image.dockerfile.dir***REMOVED***${basedir***REMOVED***/../docker</docker.image.dockerfile.dir***REMOVED***
     </properties***REMOVED***
 
     <dependencies***REMOVED***
@@ -149,28 +151,6 @@
                         <groupId***REMOVED***com.spotify</groupId***REMOVED***
                         <artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
                         <version***REMOVED***${docker.plugin.version***REMOVED***</version***REMOVED***
-                        <executions***REMOVED***
-                            <execution***REMOVED***
-                                <phase***REMOVED***install</phase***REMOVED***
-                                <goals***REMOVED***
-                                    <goal***REMOVED***build</goal***REMOVED***
-                                </goals***REMOVED***
-                            </execution***REMOVED***
-                        </executions***REMOVED***
-                        <configuration***REMOVED***
-                            <imageName***REMOVED***${docker.image.prefix***REMOVED***/${project.artifactId***REMOVED***</imageName***REMOVED***
-                            <dockerDirectory***REMOVED***${project.basedir***REMOVED***/src/main/docker</dockerDirectory***REMOVED***
-                            <resources***REMOVED***
-                                <resource***REMOVED***
-                                    <targetPath***REMOVED***/</targetPath***REMOVED***
-                                    <directory***REMOVED***${project.build.directory***REMOVED***</directory***REMOVED***
-                                    <include***REMOVED***${project.build.finalName***REMOVED***.jar</include***REMOVED***
-                                </resource***REMOVED***
-                            </resources***REMOVED***
-                            <buildArgs***REMOVED***
-                                <ARTIFACT_NAME***REMOVED***${project.build.finalName***REMOVED***</ARTIFACT_NAME***REMOVED***
-                            </buildArgs***REMOVED***
-                        </configuration***REMOVED***
                     </plugin***REMOVED***
                 </plugins***REMOVED***
             </build***REMOVED***

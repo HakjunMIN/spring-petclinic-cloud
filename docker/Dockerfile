@@ -6,5 +6,5 @@ ARG ARTIFACT_NAME
 ADD ${ARTIFACT_NAME***REMOVED***.jar /app.jar
 ENV SPRING_PROFILES_ACTIVE docker
 RUN bash -c 'touch /app.jar'
-EXPOSE 8081
+EXPOSE ${EXPOSED_PORT***REMOVED***
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
