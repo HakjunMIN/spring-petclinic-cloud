@@ -11,7 +11,7 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
         <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-        <version***REMOVED***1.5.9</version***REMOVED***
+        <version***REMOVED***2.0.3</version***REMOVED***
     </parent***REMOVED***
 
     <properties***REMOVED***
@@ -106,7 +106,7 @@
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.webjars</groupId***REMOVED***
-            <artifactId***REMOVED***webjars-locator</artifactId***REMOVED***
+            <artifactId***REMOVED***webjars-locator-core</artifactId***REMOVED***
         </dependency***REMOVED***
     </dependencies***REMOVED***
 
