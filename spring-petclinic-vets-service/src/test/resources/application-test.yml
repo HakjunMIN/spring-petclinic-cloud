@@ -1,6 +1,11 @@
 spring.jpa.hibernate.ddl-auto: none
 
 ***REMOVED***
+  datasource:
+    schema: classpath*:db/hsqldb/schema.sql
+    data: classpath*:db/hsqldb/data.sql
+
+***REMOVED***
   cache:
     ttl: 10
     heap-size: 10
