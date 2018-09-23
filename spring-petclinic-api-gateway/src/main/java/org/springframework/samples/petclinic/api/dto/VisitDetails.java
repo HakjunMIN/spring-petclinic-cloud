@@ -13,23 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.samples.petclinic.api.application;
+package org.springframework.samples.petclinic.api.dto;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.samples.petclinic.api.dto.OwnerDetails;
-import org.springframework.stereotype.Component;
-import org.springframework.web.client.RestTemplate;
+import lombok.Value;
 
 /**
  * @author Maciej Szarlinski
  */
-@Component
-@RequiredArgsConstructor
-public class CustomersServiceClient {
+@Value
+public class VisitDetails {
 
-    private final RestTemplate loadBalancedRestTemplate;
+    private int id;
 
-    public OwnerDetails getOwner(final int ownerId) {
-        return loadBalancedRestTemplate.getForObject("http://customers-service/owners/{ownerId***REMOVED***", OwnerDetails.class, ownerId);
-    ***REMOVED***
+    private int petId;
+
+    private String date;
+
+    private String description;
 ***REMOVED***
