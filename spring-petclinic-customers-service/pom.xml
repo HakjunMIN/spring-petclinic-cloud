@@ -20,11 +20,6 @@
     </properties***REMOVED***
 
 	<dependencies***REMOVED***
-        <!-- Petclinic --***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.samples.petclinic.monitoring</groupId***REMOVED***
-            <artifactId***REMOVED***spring-petclinic-monitoring</artifactId***REMOVED***
-        </dependency***REMOVED***
 
         <!-- Spring Boot --***REMOVED***
         <dependency***REMOVED***
