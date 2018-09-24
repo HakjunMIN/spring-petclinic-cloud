@@ -37,6 +37,12 @@
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
             <scope***REMOVED***test</scope***REMOVED***
+            <exclusions***REMOVED***
+                <exclusion***REMOVED***
+                    <groupId***REMOVED***junit</groupId***REMOVED***
+                    <artifactId***REMOVED***junit</artifactId***REMOVED***
+                </exclusion***REMOVED***
+            </exclusions***REMOVED***
         </dependency***REMOVED***
 
         <!-- Spring Cloud --***REMOVED***
@@ -77,6 +83,17 @@
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
 
+        <!-- Testing --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
+            <artifactId***REMOVED***junit-jupiter-api</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
+            <artifactId***REMOVED***junit-jupiter-engine</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
 	</dependencies***REMOVED***
 
     <profiles***REMOVED***
