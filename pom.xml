@@ -28,9 +28,9 @@
 
     <properties***REMOVED***
         <java.version***REMOVED***1.8</java.version***REMOVED***
-        <junit.version***REMOVED***5.3.1</junit.version***REMOVED***
         <assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
-        
+
+        <spring-boot.version***REMOVED***2.0.4.RELEASE</spring-boot.version***REMOVED***
         <spring-cloud.version***REMOVED***Finchley.SR1</spring-cloud.version***REMOVED***
         <sleuth.version***REMOVED***2.0.0.RC2</sleuth.version***REMOVED***
 
@@ -58,18 +58,17 @@
                 <type***REMOVED***pom</type***REMOVED***
                 <scope***REMOVED***import</scope***REMOVED***
             </dependency***REMOVED***
-
             <dependency***REMOVED***
-                <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
-                <artifactId***REMOVED***junit-jupiter-api</artifactId***REMOVED***
-                <version***REMOVED***${junit.version***REMOVED***</version***REMOVED***
+                <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+                <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+                <version***REMOVED***${spring-boot.version***REMOVED***</version***REMOVED***
                 <scope***REMOVED***test</scope***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
-                <artifactId***REMOVED***junit-jupiter-engine</artifactId***REMOVED***
-                <version***REMOVED***${junit.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***test</scope***REMOVED***
+                <exclusions***REMOVED***
+                    <exclusion***REMOVED***
+                    <groupId***REMOVED***junit</groupId***REMOVED***
+                    <artifactId***REMOVED***junit</artifactId***REMOVED***
+                    </exclusion***REMOVED***
+                </exclusions***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.assertj</groupId***REMOVED***
