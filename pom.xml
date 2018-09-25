@@ -27,10 +27,14 @@
     </modules***REMOVED***
 
     <properties***REMOVED***
-        <assertj.version***REMOVED***3.9.0</assertj.version***REMOVED***
+        <java.version***REMOVED***1.8</java.version***REMOVED***
+        <assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
+
+        <spring-boot.version***REMOVED***2.0.4.RELEASE</spring-boot.version***REMOVED***
         <spring-cloud.version***REMOVED***Finchley.SR1</spring-cloud.version***REMOVED***
         <sleuth.version***REMOVED***2.0.0.RC2</sleuth.version***REMOVED***
-        <java.version***REMOVED***1.8</java.version***REMOVED***
+
+        <maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
 
         <docker.image.prefix***REMOVED***mszarlinski</docker.image.prefix***REMOVED***
         <docker.image.exposed.port***REMOVED***9090</docker.image.exposed.port***REMOVED***
@@ -54,7 +58,18 @@
                 <type***REMOVED***pom</type***REMOVED***
                 <scope***REMOVED***import</scope***REMOVED***
             </dependency***REMOVED***
-
+            <dependency***REMOVED***
+                <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+                <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+                <version***REMOVED***${spring-boot.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***test</scope***REMOVED***
+                <exclusions***REMOVED***
+                    <exclusion***REMOVED***
+                    <groupId***REMOVED***junit</groupId***REMOVED***
+                    <artifactId***REMOVED***junit</artifactId***REMOVED***
+                    </exclusion***REMOVED***
+                </exclusions***REMOVED***
+            </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.assertj</groupId***REMOVED***
                 <artifactId***REMOVED***assertj-core</artifactId***REMOVED***

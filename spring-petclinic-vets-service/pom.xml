@@ -21,6 +21,10 @@
 
 	<dependencies***REMOVED***
         <!-- Spring Boot --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
+		</dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-configuration-processor</artifactId***REMOVED***
@@ -43,10 +47,6 @@
             <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
             <scope***REMOVED***test</scope***REMOVED***
         </dependency***REMOVED***
-		<dependency***REMOVED***
-			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-			<artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
-		</dependency***REMOVED***
 
         <!-- Spring Cloud--***REMOVED***
         <dependency***REMOVED***
@@ -83,7 +83,6 @@
             <groupId***REMOVED***org.jolokia</groupId***REMOVED***
             <artifactId***REMOVED***jolokia-core</artifactId***REMOVED***
         </dependency***REMOVED***
-
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
 			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
@@ -95,6 +94,17 @@
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
 
+        <!-- Testing --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
+            <artifactId***REMOVED***junit-jupiter-api</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
+            <artifactId***REMOVED***junit-jupiter-engine</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
 	</dependencies***REMOVED***
 
     <profiles***REMOVED***

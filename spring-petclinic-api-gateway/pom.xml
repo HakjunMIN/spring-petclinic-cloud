@@ -83,6 +83,7 @@
             <groupId***REMOVED***org.projectlombok</groupId***REMOVED***
             <artifactId***REMOVED***lombok</artifactId***REMOVED***
         </dependency***REMOVED***
+
         <!-- Webjars --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.webjars</groupId***REMOVED***
@@ -107,6 +108,18 @@
         <dependency***REMOVED***
             <groupId***REMOVED***org.webjars</groupId***REMOVED***
             <artifactId***REMOVED***webjars-locator-core</artifactId***REMOVED***
+        </dependency***REMOVED***
+
+        <!-- Testing --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
+            <artifactId***REMOVED***junit-jupiter-api</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
+            <artifactId***REMOVED***junit-jupiter-engine</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
         </dependency***REMOVED***
     </dependencies***REMOVED***
 
