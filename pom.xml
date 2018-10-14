@@ -23,7 +23,6 @@
         <module***REMOVED***spring-petclinic-config-server</module***REMOVED***
         <module***REMOVED***spring-petclinic-discovery-server</module***REMOVED***
         <module***REMOVED***spring-petclinic-api-gateway</module***REMOVED***
-        <module***REMOVED***spring-petclinic-tracing-server</module***REMOVED***
     </modules***REMOVED***
 
     <properties***REMOVED***
