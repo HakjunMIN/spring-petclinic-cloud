@@ -15,8 +15,11 @@
  */
 package org.springframework.samples.petclinic.api.application;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import lombok.RequiredArgsConstructor;
 import org.springframework.samples.petclinic.api.dto.VisitDetails;
 import org.springframework.samples.petclinic.api.dto.Visits;
@@ -38,6 +41,7 @@ public class VisitsServiceClient {
 
     private final RestTemplate loadBalancedRestTemplate;
 
+    @HystrixCommand(fallbackMethod = "emptyVisitsForPets")
     public Map<Integer, List<VisitDetails***REMOVED******REMOVED*** getVisitsForPets(final List<Integer***REMOVED*** petIds) {
         UriComponentsBuilder builder = fromHttpUrl("http://visits-service/pets/visits")
             .queryParam("petId", joinIds(petIds));
@@ -50,5 +54,9 @@ public class VisitsServiceClient {
 
     private String joinIds(List<Integer***REMOVED*** petIds) {
         return petIds.stream().map(Object::toString).collect(joining(","));
+    ***REMOVED***
+
+    private Map<Integer, List<VisitDetails***REMOVED******REMOVED*** emptyVisitsForPets(List<Integer***REMOVED*** petIds) {
+        return Collections.emptyMap();
     ***REMOVED***
 ***REMOVED***
