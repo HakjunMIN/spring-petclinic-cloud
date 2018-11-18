@@ -1,0 +1,12 @@
+***REMOVED***
+***REMOVED***
+  ***REMOVED***
+      uri: http://localhost:8888
+  application:
+    name: hystrix-dashboard
+---
+***REMOVED***
+  profiles: docker
+***REMOVED***
+  ***REMOVED***
+      uri: http://config-server:8888

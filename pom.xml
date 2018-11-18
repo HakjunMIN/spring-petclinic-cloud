@@ -23,6 +23,7 @@
         <module***REMOVED***spring-petclinic-config-server</module***REMOVED***
         <module***REMOVED***spring-petclinic-discovery-server</module***REMOVED***
         <module***REMOVED***spring-petclinic-api-gateway</module***REMOVED***
+        <module***REMOVED***spring-petclinic-hystrix-dashboard</module***REMOVED***
     </modules***REMOVED***
 
     <properties***REMOVED***

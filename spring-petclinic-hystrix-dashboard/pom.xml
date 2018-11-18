@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"***REMOVED***
+    <parent***REMOVED***
+        <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
+        <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
+        <version***REMOVED***2.0.5</version***REMOVED***
+    </parent***REMOVED***
+    <modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
+
+    <artifactId***REMOVED***spring-petclinic-hystrix-dashboard</artifactId***REMOVED***
+    <description***REMOVED***Circuit breaker dashboard with with Spring Cloud Netflix Hystrix</description***REMOVED***
+
+    <properties***REMOVED***
+        <docker.image.exposed.port***REMOVED***7979</docker.image.exposed.port***REMOVED***
+        <docker.image.dockerfile.dir***REMOVED***${basedir***REMOVED***/../docker</docker.image.dockerfile.dir***REMOVED***
+    </properties***REMOVED***
+
+    <dependencies***REMOVED***
+
+        <!-- Spring Boot --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+            <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+
+        <!-- Spring Cloud --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-netflix-hystrix-dashboard</artifactId***REMOVED***
+        </dependency***REMOVED***
+
+        <!-- Testing --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
+            <artifactId***REMOVED***junit-jupiter-engine</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+    </dependencies***REMOVED***
+
+    <profiles***REMOVED***
+        <profile***REMOVED***
+            <id***REMOVED***buildDocker</id***REMOVED***
+            <build***REMOVED***
+                <plugins***REMOVED***
+                    <plugin***REMOVED***
+                        <groupId***REMOVED***com.spotify</groupId***REMOVED***
+                        <artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
+                        <version***REMOVED***${docker.plugin.version***REMOVED***</version***REMOVED***
+                    </plugin***REMOVED***
+                </plugins***REMOVED***
+            </build***REMOVED***
+        </profile***REMOVED***
+    </profiles***REMOVED***
+
+</project***REMOVED***
