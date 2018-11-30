@@ -6,12 +6,12 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
         <artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-        <version***REMOVED***2.0.6.RELEASE</version***REMOVED***
+        <version***REMOVED***2.1.0.RELEASE</version***REMOVED***
     </parent***REMOVED***
 
     <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
     <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-    <version***REMOVED***2.0.6</version***REMOVED***
+    <version***REMOVED***2.1.0</version***REMOVED***
     <name***REMOVED***${project.artifactId***REMOVED***</name***REMOVED***
     <packaging***REMOVED***pom</packaging***REMOVED***
 
@@ -30,8 +30,8 @@
         <java.version***REMOVED***1.8</java.version***REMOVED***
         <assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
 
-        <spring-boot.version***REMOVED***2.0.4.RELEASE</spring-boot.version***REMOVED***
-        <spring-cloud.version***REMOVED***Finchley.SR2</spring-cloud.version***REMOVED***
+        <spring-boot.version***REMOVED***2.1.0.RELEASE</spring-boot.version***REMOVED***
+        <spring-cloud.version***REMOVED***Greenwich.M3</spring-cloud.version***REMOVED***
         <sleuth.version***REMOVED***2.0.0.RC2</sleuth.version***REMOVED***
 
         <maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
