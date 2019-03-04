@@ -76,6 +76,14 @@
 			<artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***io.micrometer</groupId***REMOVED***
+            <artifactId***REMOVED***micrometer-core</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***io.micrometer</groupId***REMOVED***
+            <artifactId***REMOVED***micrometer-registry-prometheus</artifactId***REMOVED***
+        </dependency***REMOVED***
 
         <!-- Testing --***REMOVED***
         <dependency***REMOVED***
