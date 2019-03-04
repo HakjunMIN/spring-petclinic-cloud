@@ -32,6 +32,7 @@
 
         <spring-boot.version***REMOVED***2.1.2.RELEASE</spring-boot.version***REMOVED***
         <spring-cloud.version***REMOVED***Greenwich.RELEASE</spring-cloud.version***REMOVED***
+        <micrometer.version***REMOVED***1.0.5</micrometer.version***REMOVED***
 
         <maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
 
@@ -68,6 +69,19 @@
                 <artifactId***REMOVED***assertj-core</artifactId***REMOVED***
                 <version***REMOVED***${assertj.version***REMOVED***</version***REMOVED***
                 <scope***REMOVED***test</scope***REMOVED***
+            </dependency***REMOVED***
+
+            <!-- Micrometer core dependency  --***REMOVED***
+            <dependency***REMOVED***
+                <groupId***REMOVED***io.micrometer</groupId***REMOVED***
+                <artifactId***REMOVED***micrometer-core</artifactId***REMOVED***
+                <version***REMOVED***${micrometer.version***REMOVED***</version***REMOVED***
+            </dependency***REMOVED***
+            <!-- Micrometer Prometheus registry  --***REMOVED***
+            <dependency***REMOVED***
+                <groupId***REMOVED***io.micrometer</groupId***REMOVED***
+                <artifactId***REMOVED***micrometer-registry-prometheus</artifactId***REMOVED***
+                <version***REMOVED***${micrometer.version***REMOVED***</version***REMOVED***
             </dependency***REMOVED***
         </dependencies***REMOVED***
     </dependencyManagement***REMOVED***
