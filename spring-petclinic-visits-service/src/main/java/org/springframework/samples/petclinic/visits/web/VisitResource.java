@@ -49,14 +49,14 @@ class VisitResource {
     private final VisitRepository visitRepository;
 
     @PostMapping("owners/*/pets/{petId***REMOVED***/visits")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    void create(
+    @ResponseStatus(HttpStatus.CREATED)
+    Visit create(
         @Valid @RequestBody Visit visit,
         @PathVariable("petId") int petId) {
 
         visit.setPetId(petId);
         log.info("Saving visit {***REMOVED***", visit);
-        visitRepository.save(visit);
+        return visitRepository.save(visit);
     ***REMOVED***
 
     @GetMapping("owners/*/pets/{petId***REMOVED***/visits")

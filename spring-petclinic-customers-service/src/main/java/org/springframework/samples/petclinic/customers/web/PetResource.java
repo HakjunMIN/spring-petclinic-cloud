@@ -47,8 +47,8 @@ class PetResource {
     ***REMOVED***
 
     @PostMapping("/owners/{ownerId***REMOVED***/pets")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void processCreationForm(
+    @ResponseStatus(HttpStatus.CREATED)
+    public Pet processCreationForm(
         @RequestBody PetRequest petRequest,
         @PathVariable("ownerId") int ownerId) {
 
@@ -57,7 +57,7 @@ class PetResource {
         Owner owner = optionalOwner.orElseThrow(() -***REMOVED*** new ResourceNotFoundException("Owner "+ownerId+" not found"));
         owner.addPet(pet);
 
-        save(pet, petRequest);
+        return save(pet, petRequest);
     ***REMOVED***
 
     @PutMapping("/owners/*/pets/{petId***REMOVED***")
@@ -68,7 +68,7 @@ class PetResource {
         save(pet, petRequest);
     ***REMOVED***
 
-    private void save(final Pet pet, final PetRequest petRequest) {
+    private Pet save(final Pet pet, final PetRequest petRequest) {
 
         pet.setName(petRequest.getName());
         pet.setBirthDate(petRequest.getBirthDate());
@@ -77,7 +77,7 @@ class PetResource {
             .ifPresent(pet::setType);
 
         log.info("Saving pet {***REMOVED***", pet);
-        petRepository.save(pet);
+        return petRepository.save(pet);
     ***REMOVED***
 
     @GetMapping("owners/*/pets/{petId***REMOVED***")

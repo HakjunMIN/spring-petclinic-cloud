@@ -48,8 +48,8 @@ class OwnerResource {
      */
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void createOwner(@Valid @RequestBody Owner owner) {
-        ownerRepository.save(owner);
+    public Owner createOwner(@Valid @RequestBody Owner owner) {
+        return ownerRepository.save(owner);
     ***REMOVED***
 
     /**
@@ -72,7 +72,8 @@ class OwnerResource {
      * Update Owner
      */
     @PutMapping(value = "/{ownerId***REMOVED***")
-    public Owner updateOwner(@PathVariable("ownerId") int ownerId, @Valid @RequestBody Owner ownerRequest) {
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void updateOwner(@PathVariable("ownerId") int ownerId, @Valid @RequestBody Owner ownerRequest) {
         final Optional<Owner***REMOVED*** owner = ownerRepository.findById(ownerId);
 
         final Owner ownerModel = owner.orElseThrow(() -***REMOVED*** new ResourceNotFoundException("Owner "+ownerId+" not found"));
@@ -83,6 +84,6 @@ class OwnerResource {
         ownerModel.setAddress(ownerRequest.getAddress());
         ownerModel.setTelephone(ownerRequest.getTelephone());
         log.info("Saving owner {***REMOVED***", ownerModel);
-        return ownerRepository.save(ownerModel);
+        ownerRepository.save(ownerModel);
     ***REMOVED***
 ***REMOVED***
