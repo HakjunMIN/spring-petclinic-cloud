@@ -71,18 +71,6 @@
                 <scope***REMOVED***test</scope***REMOVED***
             </dependency***REMOVED***
 
-            <!-- Micrometer core dependency  --***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***io.micrometer</groupId***REMOVED***
-                <artifactId***REMOVED***micrometer-core</artifactId***REMOVED***
-                <version***REMOVED***${micrometer.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
-            <!-- Micrometer Prometheus registry  --***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***io.micrometer</groupId***REMOVED***
-                <artifactId***REMOVED***micrometer-registry-prometheus</artifactId***REMOVED***
-                <version***REMOVED***${micrometer.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
         </dependencies***REMOVED***
     </dependencyManagement***REMOVED***
 

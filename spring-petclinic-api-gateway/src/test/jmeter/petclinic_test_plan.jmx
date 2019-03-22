@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.0 r1840935"***REMOVED***
+  <hashTree***REMOVED***
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Spring Petclinic Microservices" enabled="true"***REMOVED***
+      <stringProp name="TestPlan.comments"***REMOVED***</stringProp***REMOVED***
+      <boolProp name="TestPlan.functional_mode"***REMOVED***false</boolProp***REMOVED***
+      <boolProp name="TestPlan.tearDown_on_shutdown"***REMOVED***true</boolProp***REMOVED***
+      <boolProp name="TestPlan.serialize_threadgroups"***REMOVED***false</boolProp***REMOVED***
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true"***REMOVED***
+        <collectionProp name="Arguments.arguments"***REMOVED***
+          <elementProp name="PETCLINC_HOST" elementType="Argument"***REMOVED***
+            <stringProp name="Argument.name"***REMOVED***PETCLINC_HOST</stringProp***REMOVED***
+            <stringProp name="Argument.value"***REMOVED***localhost</stringProp***REMOVED***
+            <stringProp name="Argument.metadata"***REMOVED***=</stringProp***REMOVED***
+          </elementProp***REMOVED***
+          <elementProp name="PETCLINIC_PORT" elementType="Argument"***REMOVED***
+            <stringProp name="Argument.name"***REMOVED***PETCLINIC_PORT</stringProp***REMOVED***
+            <stringProp name="Argument.value"***REMOVED***8080</stringProp***REMOVED***
+            <stringProp name="Argument.metadata"***REMOVED***=</stringProp***REMOVED***
+          </elementProp***REMOVED***
+        </collectionProp***REMOVED***
+      </elementProp***REMOVED***
+      <stringProp name="TestPlan.user_define_classpath"***REMOVED***</stringProp***REMOVED***
+    </TestPlan***REMOVED***
+    <hashTree***REMOVED***
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true"***REMOVED***
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables pr�-d�finies" enabled="true"***REMOVED***
+          <collectionProp name="Arguments.arguments"/***REMOVED***
+        </elementProp***REMOVED***
+        <stringProp name="HTTPSampler.domain"***REMOVED***${PETCLINC_HOST***REMOVED***</stringProp***REMOVED***
+        <stringProp name="HTTPSampler.port"***REMOVED***${PETCLINIC_PORT***REMOVED***</stringProp***REMOVED***
+        <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+        <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+        <stringProp name="HTTPSampler.path"***REMOVED***</stringProp***REMOVED***
+        <stringProp name="HTTPSampler.concurrentPool"***REMOVED***6</stringProp***REMOVED***
+        <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+        <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+      </ConfigTestElement***REMOVED***
+      <hashTree/***REMOVED***
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true"***REMOVED***
+        <collectionProp name="HeaderManager.headers"***REMOVED***
+          <elementProp name="" elementType="Header"***REMOVED***
+            <stringProp name="Header.name"***REMOVED***Accept</stringProp***REMOVED***
+            <stringProp name="Header.value"***REMOVED***application/json, text/plain, */*</stringProp***REMOVED***
+          </elementProp***REMOVED***
+          <elementProp name="" elementType="Header"***REMOVED***
+            <stringProp name="Header.name"***REMOVED***Content-Type</stringProp***REMOVED***
+            <stringProp name="Header.value"***REMOVED***application/json;charset=UTF-8</stringProp***REMOVED***
+          </elementProp***REMOVED***
+          <elementProp name="" elementType="Header"***REMOVED***
+            <stringProp name="Header.name"***REMOVED***Accept-Encoding</stringProp***REMOVED***
+            <stringProp name="Header.value"***REMOVED***gzip, deflate, br</stringProp***REMOVED***
+          </elementProp***REMOVED***
+        </collectionProp***REMOVED***
+      </HeaderManager***REMOVED***
+      <hashTree/***REMOVED***
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true"***REMOVED***
+        <collectionProp name="ultimatethreadgroupdata"***REMOVED***
+          <collectionProp name="-111815413"***REMOVED***
+            <stringProp name="49"***REMOVED***1</stringProp***REMOVED***
+            <stringProp name="0"***REMOVED***0</stringProp***REMOVED***
+            <stringProp name="48"***REMOVED***0</stringProp***REMOVED***
+            <stringProp name="50547"***REMOVED***300</stringProp***REMOVED***
+            <stringProp name="1629"***REMOVED***30</stringProp***REMOVED***
+          </collectionProp***REMOVED***
+        </collectionProp***REMOVED***
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true"***REMOVED***
+          <boolProp name="LoopController.continue_forever"***REMOVED***false</boolProp***REMOVED***
+          <intProp name="LoopController.loops"***REMOVED***-1</intProp***REMOVED***
+        </elementProp***REMOVED***
+        <stringProp name="ThreadGroup.on_sample_error"***REMOVED***continue</stringProp***REMOVED***
+      </kg.apc.jmeter.threads.UltimateThreadGroup***REMOVED***
+      <hashTree***REMOVED***
+        <RandomVariableConfig guiclass="TestBeanGUI" testclass="RandomVariableConfig" testname="Pet Type" enabled="true"***REMOVED***
+          <stringProp name="variableName"***REMOVED***PET_TYPE</stringProp***REMOVED***
+          <stringProp name="outputFormat"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="minimumValue"***REMOVED***1</stringProp***REMOVED***
+          <stringProp name="maximumValue"***REMOVED***6</stringProp***REMOVED***
+          <stringProp name="randomSeed"***REMOVED***</stringProp***REMOVED***
+          <boolProp name="perThread"***REMOVED***false</boolProp***REMOVED***
+        </RandomVariableConfig***REMOVED***
+        <hashTree/***REMOVED***
+        <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true"***REMOVED***
+          <stringProp name="ConstantTimer.delay"***REMOVED***300</stringProp***REMOVED***
+          <stringProp name="RandomTimer.range"***REMOVED***100.0</stringProp***REMOVED***
+        </GaussianRandomTimer***REMOVED***
+        <hashTree/***REMOVED***
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="All Owners" enabled="true"***REMOVED***
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables pr�-d�finies" enabled="true"***REMOVED***
+            <collectionProp name="Arguments.arguments"/***REMOVED***
+          </elementProp***REMOVED***
+          <stringProp name="HTTPSampler.domain"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.port"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.path"***REMOVED***/api/customer/owners</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.method"***REMOVED***GET</stringProp***REMOVED***
+          <boolProp name="HTTPSampler.follow_redirects"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.auto_redirects"***REMOVED***false</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.use_keepalive"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST"***REMOVED***false</boolProp***REMOVED***
+          <stringProp name="HTTPSampler.embedded_url_re"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+        </HTTPSamplerProxy***REMOVED***
+        <hashTree***REMOVED***
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assertion HTTP 200" enabled="true"***REMOVED***
+            <collectionProp name="Asserion.test_strings"***REMOVED***
+              <stringProp name="49586"***REMOVED***200</stringProp***REMOVED***
+            </collectionProp***REMOVED***
+            <stringProp name="Assertion.custom_message"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="Assertion.test_field"***REMOVED***Assertion.response_code</stringProp***REMOVED***
+            <boolProp name="Assertion.assume_success"***REMOVED***false</boolProp***REMOVED***
+            <intProp name="Assertion.test_type"***REMOVED***8</intProp***REMOVED***
+          </ResponseAssertion***REMOVED***
+          <hashTree/***REMOVED***
+        </hashTree***REMOVED***
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add Owner" enabled="true"***REMOVED***
+          <boolProp name="HTTPSampler.postBodyRaw"***REMOVED***true</boolProp***REMOVED***
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments"***REMOVED***
+            <collectionProp name="Arguments.arguments"***REMOVED***
+              <elementProp name="" elementType="HTTPArgument"***REMOVED***
+                <boolProp name="HTTPArgument.always_encode"***REMOVED***false</boolProp***REMOVED***
+                <stringProp name="Argument.value"***REMOVED***{  &#xd;
+   &quot;firstName&quot;:&quot;Firstname&quot;,&#xd;
+   &quot;lastName&quot;:&quot;Lastname&quot;,&#xd;
+   &quot;address&quot;:&quot;Adress&quot;,&#xd;
+   &quot;city&quot;:&quot;City&quot;,&#xd;
+   &quot;telephone&quot;:&quot;0000000000&quot;&#xd;
+***REMOVED***</stringProp***REMOVED***
+                <stringProp name="Argument.metadata"***REMOVED***=</stringProp***REMOVED***
+              </elementProp***REMOVED***
+            </collectionProp***REMOVED***
+          </elementProp***REMOVED***
+          <stringProp name="HTTPSampler.domain"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.port"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.path"***REMOVED***/api/customer/owners</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.method"***REMOVED***POST</stringProp***REMOVED***
+          <boolProp name="HTTPSampler.follow_redirects"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.auto_redirects"***REMOVED***false</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.use_keepalive"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST"***REMOVED***false</boolProp***REMOVED***
+          <stringProp name="HTTPSampler.embedded_url_re"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+        </HTTPSamplerProxy***REMOVED***
+        <hashTree***REMOVED***
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assertion HTTP 201" enabled="true"***REMOVED***
+            <collectionProp name="Asserion.test_strings"***REMOVED***
+              <stringProp name="49587"***REMOVED***201</stringProp***REMOVED***
+            </collectionProp***REMOVED***
+            <stringProp name="Assertion.custom_message"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="Assertion.test_field"***REMOVED***Assertion.response_code</stringProp***REMOVED***
+            <boolProp name="Assertion.assume_success"***REMOVED***false</boolProp***REMOVED***
+            <intProp name="Assertion.test_type"***REMOVED***8</intProp***REMOVED***
+          </ResponseAssertion***REMOVED***
+          <hashTree/***REMOVED***
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Owner ID Extractor" enabled="true"***REMOVED***
+            <stringProp name="JSONPostProcessor.referenceNames"***REMOVED***OWNER_ID</stringProp***REMOVED***
+            <stringProp name="JSONPostProcessor.jsonPathExprs"***REMOVED***$.id</stringProp***REMOVED***
+            <stringProp name="JSONPostProcessor.match_numbers"***REMOVED***</stringProp***REMOVED***
+          </JSONPostProcessor***REMOVED***
+          <hashTree/***REMOVED***
+        </hashTree***REMOVED***
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Owner Details" enabled="true"***REMOVED***
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables pr�-d�finies" enabled="true"***REMOVED***
+            <collectionProp name="Arguments.arguments"/***REMOVED***
+          </elementProp***REMOVED***
+          <stringProp name="HTTPSampler.domain"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.port"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.path"***REMOVED***/api/gateway/owners/${OWNER_ID***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.method"***REMOVED***GET</stringProp***REMOVED***
+          <boolProp name="HTTPSampler.follow_redirects"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.auto_redirects"***REMOVED***false</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.use_keepalive"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST"***REMOVED***false</boolProp***REMOVED***
+          <stringProp name="HTTPSampler.embedded_url_re"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+        </HTTPSamplerProxy***REMOVED***
+        <hashTree***REMOVED***
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assertion HTTP 200" enabled="true"***REMOVED***
+            <collectionProp name="Asserion.test_strings"***REMOVED***
+              <stringProp name="49586"***REMOVED***200</stringProp***REMOVED***
+            </collectionProp***REMOVED***
+            <stringProp name="Assertion.custom_message"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="Assertion.test_field"***REMOVED***Assertion.response_code</stringProp***REMOVED***
+            <boolProp name="Assertion.assume_success"***REMOVED***false</boolProp***REMOVED***
+            <intProp name="Assertion.test_type"***REMOVED***8</intProp***REMOVED***
+          </ResponseAssertion***REMOVED***
+          <hashTree/***REMOVED***
+        </hashTree***REMOVED***
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Owner" enabled="true"***REMOVED***
+          <boolProp name="HTTPSampler.postBodyRaw"***REMOVED***true</boolProp***REMOVED***
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments"***REMOVED***
+            <collectionProp name="Arguments.arguments"***REMOVED***
+              <elementProp name="" elementType="HTTPArgument"***REMOVED***
+                <boolProp name="HTTPArgument.always_encode"***REMOVED***false</boolProp***REMOVED***
+                <stringProp name="Argument.value"***REMOVED***{  &#xd;
+   &quot;id&quot;:&quot;${OWNER_ID***REMOVED***&quot;,&#xd;
+   &quot;firstName&quot;:&quot;Firstname&quot;,&#xd;
+   &quot;lastName&quot;:&quot;Lastname${OWNER_ID***REMOVED***&quot;,&#xd;
+   &quot;address&quot;:&quot;Adress${OWNER_ID***REMOVED***&quot;,&#xd;
+   &quot;city&quot;:&quot;City${OWNER_ID***REMOVED***&quot;,&#xd;
+   &quot;telephone&quot;:&quot;1111111111&quot;&#xd;
+***REMOVED***</stringProp***REMOVED***
+                <stringProp name="Argument.metadata"***REMOVED***=</stringProp***REMOVED***
+              </elementProp***REMOVED***
+            </collectionProp***REMOVED***
+          </elementProp***REMOVED***
+          <stringProp name="HTTPSampler.domain"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.port"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.path"***REMOVED***/api/customer/owners/${OWNER_ID***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.method"***REMOVED***PUT</stringProp***REMOVED***
+          <boolProp name="HTTPSampler.follow_redirects"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.auto_redirects"***REMOVED***false</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.use_keepalive"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST"***REMOVED***false</boolProp***REMOVED***
+          <stringProp name="HTTPSampler.embedded_url_re"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+        </HTTPSamplerProxy***REMOVED***
+        <hashTree***REMOVED***
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assertion HTTP 204" enabled="true"***REMOVED***
+            <collectionProp name="Asserion.test_strings"***REMOVED***
+              <stringProp name="49590"***REMOVED***204</stringProp***REMOVED***
+            </collectionProp***REMOVED***
+            <stringProp name="Assertion.custom_message"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="Assertion.test_field"***REMOVED***Assertion.response_code</stringProp***REMOVED***
+            <boolProp name="Assertion.assume_success"***REMOVED***false</boolProp***REMOVED***
+            <intProp name="Assertion.test_type"***REMOVED***8</intProp***REMOVED***
+          </ResponseAssertion***REMOVED***
+          <hashTree/***REMOVED***
+        </hashTree***REMOVED***
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add Pet" enabled="true"***REMOVED***
+          <boolProp name="HTTPSampler.postBodyRaw"***REMOVED***true</boolProp***REMOVED***
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments"***REMOVED***
+            <collectionProp name="Arguments.arguments"***REMOVED***
+              <elementProp name="" elementType="HTTPArgument"***REMOVED***
+                <boolProp name="HTTPArgument.always_encode"***REMOVED***false</boolProp***REMOVED***
+                <stringProp name="Argument.value"***REMOVED***{  &#xd;
+   &quot;name&quot;:&quot;Pet&quot;,&#xd;
+   &quot;birthDate&quot;:&quot;2018-12-31T23:00:00.000Z&quot;,&#xd;
+   &quot;typeId&quot;:&quot;${PET_TYPE***REMOVED***&quot;&#xd;
+***REMOVED***</stringProp***REMOVED***
+                <stringProp name="Argument.metadata"***REMOVED***=</stringProp***REMOVED***
+              </elementProp***REMOVED***
+            </collectionProp***REMOVED***
+          </elementProp***REMOVED***
+          <stringProp name="HTTPSampler.domain"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.port"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.path"***REMOVED***/api/customer/owners/${OWNER_ID***REMOVED***/pets</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.method"***REMOVED***POST</stringProp***REMOVED***
+          <boolProp name="HTTPSampler.follow_redirects"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.auto_redirects"***REMOVED***false</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.use_keepalive"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST"***REMOVED***false</boolProp***REMOVED***
+          <stringProp name="HTTPSampler.embedded_url_re"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+        </HTTPSamplerProxy***REMOVED***
+        <hashTree***REMOVED***
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assertion HTTP 201" enabled="true"***REMOVED***
+            <collectionProp name="Asserion.test_strings"***REMOVED***
+              <stringProp name="49587"***REMOVED***201</stringProp***REMOVED***
+            </collectionProp***REMOVED***
+            <stringProp name="Assertion.custom_message"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="Assertion.test_field"***REMOVED***Assertion.response_code</stringProp***REMOVED***
+            <boolProp name="Assertion.assume_success"***REMOVED***false</boolProp***REMOVED***
+            <intProp name="Assertion.test_type"***REMOVED***8</intProp***REMOVED***
+          </ResponseAssertion***REMOVED***
+          <hashTree/***REMOVED***
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Pet ID Extractor" enabled="true"***REMOVED***
+            <stringProp name="JSONPostProcessor.referenceNames"***REMOVED***PET_ID</stringProp***REMOVED***
+            <stringProp name="JSONPostProcessor.jsonPathExprs"***REMOVED***$.id</stringProp***REMOVED***
+            <stringProp name="JSONPostProcessor.match_numbers"***REMOVED***</stringProp***REMOVED***
+          </JSONPostProcessor***REMOVED***
+          <hashTree/***REMOVED***
+        </hashTree***REMOVED***
+        <RandomController guiclass="RandomControlGui" testclass="RandomController" testname="Add Random second Pet" enabled="true"***REMOVED***
+          <intProp name="InterleaveControl.style"***REMOVED***1</intProp***REMOVED***
+        </RandomController***REMOVED***
+        <hashTree***REMOVED***
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add Pet" enabled="true"***REMOVED***
+            <boolProp name="HTTPSampler.postBodyRaw"***REMOVED***true</boolProp***REMOVED***
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments"***REMOVED***
+              <collectionProp name="Arguments.arguments"***REMOVED***
+                <elementProp name="" elementType="HTTPArgument"***REMOVED***
+                  <boolProp name="HTTPArgument.always_encode"***REMOVED***false</boolProp***REMOVED***
+                  <stringProp name="Argument.value"***REMOVED***{  &#xd;
+   &quot;name&quot;:&quot;Pet&quot;,&#xd;
+   &quot;birthDate&quot;:&quot;2018-12-31T23:00:00.000Z&quot;,&#xd;
+   &quot;typeId&quot;:&quot;${PET_TYPE***REMOVED***&quot;&#xd;
+***REMOVED***</stringProp***REMOVED***
+                  <stringProp name="Argument.metadata"***REMOVED***=</stringProp***REMOVED***
+                </elementProp***REMOVED***
+              </collectionProp***REMOVED***
+            </elementProp***REMOVED***
+            <stringProp name="HTTPSampler.domain"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.port"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.path"***REMOVED***/api/customer/owners/${OWNER_ID***REMOVED***/pets</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.method"***REMOVED***POST</stringProp***REMOVED***
+            <boolProp name="HTTPSampler.follow_redirects"***REMOVED***true</boolProp***REMOVED***
+            <boolProp name="HTTPSampler.auto_redirects"***REMOVED***false</boolProp***REMOVED***
+            <boolProp name="HTTPSampler.use_keepalive"***REMOVED***true</boolProp***REMOVED***
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST"***REMOVED***false</boolProp***REMOVED***
+            <stringProp name="HTTPSampler.embedded_url_re"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+          </HTTPSamplerProxy***REMOVED***
+          <hashTree***REMOVED***
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assertion HTTP 201" enabled="true"***REMOVED***
+              <collectionProp name="Asserion.test_strings"***REMOVED***
+                <stringProp name="49587"***REMOVED***201</stringProp***REMOVED***
+              </collectionProp***REMOVED***
+              <stringProp name="Assertion.custom_message"***REMOVED***</stringProp***REMOVED***
+              <stringProp name="Assertion.test_field"***REMOVED***Assertion.response_code</stringProp***REMOVED***
+              <boolProp name="Assertion.assume_success"***REMOVED***false</boolProp***REMOVED***
+              <intProp name="Assertion.test_type"***REMOVED***8</intProp***REMOVED***
+            </ResponseAssertion***REMOVED***
+            <hashTree/***REMOVED***
+          </hashTree***REMOVED***
+        </hashTree***REMOVED***
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Pet" enabled="true"***REMOVED***
+          <boolProp name="HTTPSampler.postBodyRaw"***REMOVED***true</boolProp***REMOVED***
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments"***REMOVED***
+            <collectionProp name="Arguments.arguments"***REMOVED***
+              <elementProp name="" elementType="HTTPArgument"***REMOVED***
+                <boolProp name="HTTPArgument.always_encode"***REMOVED***false</boolProp***REMOVED***
+                <stringProp name="Argument.value"***REMOVED***{  &#xd;
+   &quot;id&quot;: ${PET_ID***REMOVED***,&#xd;
+   &quot;name&quot;:&quot;Pet${OWNER_ID***REMOVED***&quot;,&#xd;
+   &quot;birthDate&quot;:&quot;2018-12-31T23:00:00.000Z&quot;,&#xd;
+   &quot;typeId&quot;:&quot;${PET_TYPE***REMOVED***&quot;&#xd;
+***REMOVED***</stringProp***REMOVED***
+                <stringProp name="Argument.metadata"***REMOVED***=</stringProp***REMOVED***
+              </elementProp***REMOVED***
+            </collectionProp***REMOVED***
+          </elementProp***REMOVED***
+          <stringProp name="HTTPSampler.domain"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.port"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.path"***REMOVED***/api/customer/owners/${OWNER_ID***REMOVED***/pets/${PET_ID***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.method"***REMOVED***PUT</stringProp***REMOVED***
+          <boolProp name="HTTPSampler.follow_redirects"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.auto_redirects"***REMOVED***false</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.use_keepalive"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST"***REMOVED***false</boolProp***REMOVED***
+          <stringProp name="HTTPSampler.embedded_url_re"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+        </HTTPSamplerProxy***REMOVED***
+        <hashTree***REMOVED***
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assertion HTTP 204" enabled="true"***REMOVED***
+            <collectionProp name="Asserion.test_strings"***REMOVED***
+              <stringProp name="49590"***REMOVED***204</stringProp***REMOVED***
+            </collectionProp***REMOVED***
+            <stringProp name="Assertion.custom_message"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="Assertion.test_field"***REMOVED***Assertion.response_code</stringProp***REMOVED***
+            <boolProp name="Assertion.assume_success"***REMOVED***false</boolProp***REMOVED***
+            <intProp name="Assertion.test_type"***REMOVED***8</intProp***REMOVED***
+          </ResponseAssertion***REMOVED***
+          <hashTree/***REMOVED***
+        </hashTree***REMOVED***
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add Visit" enabled="true"***REMOVED***
+          <boolProp name="HTTPSampler.postBodyRaw"***REMOVED***true</boolProp***REMOVED***
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments"***REMOVED***
+            <collectionProp name="Arguments.arguments"***REMOVED***
+              <elementProp name="" elementType="HTTPArgument"***REMOVED***
+                <boolProp name="HTTPArgument.always_encode"***REMOVED***false</boolProp***REMOVED***
+                <stringProp name="Argument.value"***REMOVED***{ &#xd;
+	&quot;date&quot;:&quot;2019-03-15&quot;,&#xd;
+	&quot;description&quot;:&quot;Visit&quot;&#xd;
+***REMOVED***</stringProp***REMOVED***
+                <stringProp name="Argument.metadata"***REMOVED***=</stringProp***REMOVED***
+              </elementProp***REMOVED***
+            </collectionProp***REMOVED***
+          </elementProp***REMOVED***
+          <stringProp name="HTTPSampler.domain"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.port"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.path"***REMOVED***/api/visit/owners/${OWNER_ID***REMOVED***/pets/${PET_ID***REMOVED***/visits</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.method"***REMOVED***POST</stringProp***REMOVED***
+          <boolProp name="HTTPSampler.follow_redirects"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.auto_redirects"***REMOVED***false</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.use_keepalive"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST"***REMOVED***false</boolProp***REMOVED***
+          <stringProp name="HTTPSampler.embedded_url_re"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+        </HTTPSamplerProxy***REMOVED***
+        <hashTree***REMOVED***
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assertion HTTP 201" enabled="true"***REMOVED***
+            <collectionProp name="Asserion.test_strings"***REMOVED***
+              <stringProp name="49587"***REMOVED***201</stringProp***REMOVED***
+            </collectionProp***REMOVED***
+            <stringProp name="Assertion.custom_message"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="Assertion.test_field"***REMOVED***Assertion.response_code</stringProp***REMOVED***
+            <boolProp name="Assertion.assume_success"***REMOVED***false</boolProp***REMOVED***
+            <intProp name="Assertion.test_type"***REMOVED***8</intProp***REMOVED***
+          </ResponseAssertion***REMOVED***
+          <hashTree/***REMOVED***
+        </hashTree***REMOVED***
+        <RandomController guiclass="RandomControlGui" testclass="RandomController" testname="Add Random second visit" enabled="true"***REMOVED***
+          <intProp name="InterleaveControl.style"***REMOVED***1</intProp***REMOVED***
+        </RandomController***REMOVED***
+        <hashTree***REMOVED***
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add Visit" enabled="true"***REMOVED***
+            <boolProp name="HTTPSampler.postBodyRaw"***REMOVED***true</boolProp***REMOVED***
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments"***REMOVED***
+              <collectionProp name="Arguments.arguments"***REMOVED***
+                <elementProp name="" elementType="HTTPArgument"***REMOVED***
+                  <boolProp name="HTTPArgument.always_encode"***REMOVED***false</boolProp***REMOVED***
+                  <stringProp name="Argument.value"***REMOVED***{ &#xd;
+	&quot;date&quot;:&quot;2019-03-15&quot;,&#xd;
+	&quot;description&quot;:&quot;Visit&quot;&#xd;
+***REMOVED***</stringProp***REMOVED***
+                  <stringProp name="Argument.metadata"***REMOVED***=</stringProp***REMOVED***
+                </elementProp***REMOVED***
+              </collectionProp***REMOVED***
+            </elementProp***REMOVED***
+            <stringProp name="HTTPSampler.domain"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.port"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.path"***REMOVED***/api/visit/owners/${OWNER_ID***REMOVED***/pets/${PET_ID***REMOVED***/visits</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.method"***REMOVED***POST</stringProp***REMOVED***
+            <boolProp name="HTTPSampler.follow_redirects"***REMOVED***true</boolProp***REMOVED***
+            <boolProp name="HTTPSampler.auto_redirects"***REMOVED***false</boolProp***REMOVED***
+            <boolProp name="HTTPSampler.use_keepalive"***REMOVED***true</boolProp***REMOVED***
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST"***REMOVED***false</boolProp***REMOVED***
+            <stringProp name="HTTPSampler.embedded_url_re"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+          </HTTPSamplerProxy***REMOVED***
+          <hashTree***REMOVED***
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assertion HTTP 201" enabled="true"***REMOVED***
+              <collectionProp name="Asserion.test_strings"***REMOVED***
+                <stringProp name="49587"***REMOVED***201</stringProp***REMOVED***
+              </collectionProp***REMOVED***
+              <stringProp name="Assertion.custom_message"***REMOVED***</stringProp***REMOVED***
+              <stringProp name="Assertion.test_field"***REMOVED***Assertion.response_code</stringProp***REMOVED***
+              <boolProp name="Assertion.assume_success"***REMOVED***false</boolProp***REMOVED***
+              <intProp name="Assertion.test_type"***REMOVED***8</intProp***REMOVED***
+            </ResponseAssertion***REMOVED***
+            <hashTree/***REMOVED***
+          </hashTree***REMOVED***
+        </hashTree***REMOVED***
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="All Vets" enabled="true"***REMOVED***
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables pr�-d�finies" enabled="true"***REMOVED***
+            <collectionProp name="Arguments.arguments"/***REMOVED***
+          </elementProp***REMOVED***
+          <stringProp name="HTTPSampler.domain"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.port"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.protocol"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.contentEncoding"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.path"***REMOVED***/api/vet/vets</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.method"***REMOVED***GET</stringProp***REMOVED***
+          <boolProp name="HTTPSampler.follow_redirects"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.auto_redirects"***REMOVED***false</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.use_keepalive"***REMOVED***true</boolProp***REMOVED***
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST"***REMOVED***false</boolProp***REMOVED***
+          <stringProp name="HTTPSampler.embedded_url_re"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.connect_timeout"***REMOVED***</stringProp***REMOVED***
+          <stringProp name="HTTPSampler.response_timeout"***REMOVED***</stringProp***REMOVED***
+        </HTTPSamplerProxy***REMOVED***
+        <hashTree***REMOVED***
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assertion HTTP 200" enabled="true"***REMOVED***
+            <collectionProp name="Asserion.test_strings"***REMOVED***
+              <stringProp name="49586"***REMOVED***200</stringProp***REMOVED***
+            </collectionProp***REMOVED***
+            <stringProp name="Assertion.custom_message"***REMOVED***</stringProp***REMOVED***
+            <stringProp name="Assertion.test_field"***REMOVED***Assertion.response_code</stringProp***REMOVED***
+            <boolProp name="Assertion.assume_success"***REMOVED***false</boolProp***REMOVED***
+            <intProp name="Assertion.test_type"***REMOVED***8</intProp***REMOVED***
+          </ResponseAssertion***REMOVED***
+          <hashTree/***REMOVED***
+        </hashTree***REMOVED***
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true"***REMOVED***
+          <boolProp name="ResultCollector.error_logging"***REMOVED***false</boolProp***REMOVED***
+          <objProp***REMOVED***
+            <name***REMOVED***saveConfig</name***REMOVED***
+            <value class="SampleSaveConfiguration"***REMOVED***
+              <time***REMOVED***true</time***REMOVED***
+              <latency***REMOVED***true</latency***REMOVED***
+              <timestamp***REMOVED***true</timestamp***REMOVED***
+              <success***REMOVED***true</success***REMOVED***
+              <label***REMOVED***true</label***REMOVED***
+              <code***REMOVED***true</code***REMOVED***
+              <message***REMOVED***true</message***REMOVED***
+              <threadName***REMOVED***true</threadName***REMOVED***
+              <dataType***REMOVED***true</dataType***REMOVED***
+              <encoding***REMOVED***false</encoding***REMOVED***
+              <assertions***REMOVED***true</assertions***REMOVED***
+              <subresults***REMOVED***true</subresults***REMOVED***
+              <responseData***REMOVED***false</responseData***REMOVED***
+              <samplerData***REMOVED***false</samplerData***REMOVED***
+              <xml***REMOVED***false</xml***REMOVED***
+              <fieldNames***REMOVED***true</fieldNames***REMOVED***
+              <responseHeaders***REMOVED***false</responseHeaders***REMOVED***
+              <requestHeaders***REMOVED***false</requestHeaders***REMOVED***
+              <responseDataOnError***REMOVED***false</responseDataOnError***REMOVED***
+              <saveAssertionResultsFailureMessage***REMOVED***true</saveAssertionResultsFailureMessage***REMOVED***
+              <assertionsResultsToSave***REMOVED***0</assertionsResultsToSave***REMOVED***
+              <bytes***REMOVED***true</bytes***REMOVED***
+              <sentBytes***REMOVED***true</sentBytes***REMOVED***
+              <url***REMOVED***true</url***REMOVED***
+              <threadCounts***REMOVED***true</threadCounts***REMOVED***
+              <idleTime***REMOVED***true</idleTime***REMOVED***
+              <connectTime***REMOVED***true</connectTime***REMOVED***
+            </value***REMOVED***
+          </objProp***REMOVED***
+          <stringProp name="filename"***REMOVED***</stringProp***REMOVED***
+        </ResultCollector***REMOVED***
+        <hashTree/***REMOVED***
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true"***REMOVED***
+          <boolProp name="ResultCollector.error_logging"***REMOVED***false</boolProp***REMOVED***
+          <objProp***REMOVED***
+            <name***REMOVED***saveConfig</name***REMOVED***
+            <value class="SampleSaveConfiguration"***REMOVED***
+              <time***REMOVED***true</time***REMOVED***
+              <latency***REMOVED***true</latency***REMOVED***
+              <timestamp***REMOVED***true</timestamp***REMOVED***
+              <success***REMOVED***true</success***REMOVED***
+              <label***REMOVED***true</label***REMOVED***
+              <code***REMOVED***true</code***REMOVED***
+              <message***REMOVED***true</message***REMOVED***
+              <threadName***REMOVED***true</threadName***REMOVED***
+              <dataType***REMOVED***true</dataType***REMOVED***
+              <encoding***REMOVED***false</encoding***REMOVED***
+              <assertions***REMOVED***true</assertions***REMOVED***
+              <subresults***REMOVED***true</subresults***REMOVED***
+              <responseData***REMOVED***false</responseData***REMOVED***
+              <samplerData***REMOVED***false</samplerData***REMOVED***
+              <xml***REMOVED***false</xml***REMOVED***
+              <fieldNames***REMOVED***true</fieldNames***REMOVED***
+              <responseHeaders***REMOVED***false</responseHeaders***REMOVED***
+              <requestHeaders***REMOVED***false</requestHeaders***REMOVED***
+              <responseDataOnError***REMOVED***false</responseDataOnError***REMOVED***
+              <saveAssertionResultsFailureMessage***REMOVED***true</saveAssertionResultsFailureMessage***REMOVED***
+              <assertionsResultsToSave***REMOVED***0</assertionsResultsToSave***REMOVED***
+              <bytes***REMOVED***true</bytes***REMOVED***
+              <sentBytes***REMOVED***true</sentBytes***REMOVED***
+              <url***REMOVED***true</url***REMOVED***
+              <threadCounts***REMOVED***true</threadCounts***REMOVED***
+              <idleTime***REMOVED***true</idleTime***REMOVED***
+              <connectTime***REMOVED***true</connectTime***REMOVED***
+            </value***REMOVED***
+          </objProp***REMOVED***
+          <stringProp name="filename"***REMOVED***</stringProp***REMOVED***
+        </ResultCollector***REMOVED***
+        <hashTree/***REMOVED***
+      </hashTree***REMOVED***
+    </hashTree***REMOVED***
+  </hashTree***REMOVED***
+</jmeterTestPlan***REMOVED***
