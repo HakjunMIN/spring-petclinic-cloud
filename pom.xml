@@ -6,12 +6,12 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
         <artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-        <version***REMOVED***2.0.6.RELEASE</version***REMOVED***
+        <version***REMOVED***2.1.1.RELEASE</version***REMOVED***
     </parent***REMOVED***
 
     <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
     <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-    <version***REMOVED***2.0.6</version***REMOVED***
+    <version***REMOVED***2.1.2</version***REMOVED***
     <name***REMOVED***${project.artifactId***REMOVED***</name***REMOVED***
     <packaging***REMOVED***pom</packaging***REMOVED***
 
@@ -30,9 +30,9 @@
         <java.version***REMOVED***1.8</java.version***REMOVED***
         <assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
 
-        <spring-boot.version***REMOVED***2.0.4.RELEASE</spring-boot.version***REMOVED***
-        <spring-cloud.version***REMOVED***Finchley.SR2</spring-cloud.version***REMOVED***
-        <sleuth.version***REMOVED***2.0.0.RC2</sleuth.version***REMOVED***
+        <spring-boot.version***REMOVED***2.1.2.RELEASE</spring-boot.version***REMOVED***
+        <spring-cloud.version***REMOVED***Greenwich.RELEASE</spring-cloud.version***REMOVED***
+        <micrometer.version***REMOVED***1.0.5</micrometer.version***REMOVED***
 
         <maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
 
@@ -45,13 +45,6 @@
 
     <dependencyManagement***REMOVED***
         <dependencies***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-                <artifactId***REMOVED***spring-cloud-sleuth-dependencies</artifactId***REMOVED***
-                <type***REMOVED***pom</type***REMOVED***
-                <scope***REMOVED***import</scope***REMOVED***
-                <version***REMOVED***${sleuth.version***REMOVED***</version***REMOVED***
-            </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
                 <artifactId***REMOVED***spring-cloud-dependencies</artifactId***REMOVED***
