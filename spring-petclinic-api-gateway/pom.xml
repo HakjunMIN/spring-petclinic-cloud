@@ -158,6 +158,12 @@
                         <artifactId***REMOVED***bootstrap</artifactId***REMOVED***
                         <version***REMOVED***${webjars-bootstrap.version***REMOVED***</version***REMOVED***
                     </dependency***REMOVED***
+                    <!-- Some tweak for wro4j 1.8 compatibility with Java 9+--***REMOVED***
+                    <dependency***REMOVED***
+                        <groupId***REMOVED***org.mockito</groupId***REMOVED***
+                        <artifactId***REMOVED***mockito-core</artifactId***REMOVED***
+                        <version***REMOVED***${mockito.version***REMOVED***</version***REMOVED***
+                    </dependency***REMOVED***
                 </dependencies***REMOVED***
             </plugin***REMOVED***
         </plugins***REMOVED***
