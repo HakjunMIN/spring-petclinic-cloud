@@ -40,7 +40,7 @@
         <docker.image.exposed.port***REMOVED***9090</docker.image.exposed.port***REMOVED***
         <docker.image.dockerfile.dir***REMOVED***${basedir***REMOVED***</docker.image.dockerfile.dir***REMOVED***
         <docker.image.dockerize.version***REMOVED***v0.6.1</docker.image.dockerize.version***REMOVED***
-        <docker.plugin.version***REMOVED***0.4.13</docker.plugin.version***REMOVED***
+        <docker.plugin.version***REMOVED***1.2.0</docker.plugin.version***REMOVED***
     </properties***REMOVED***
 
     <dependencyManagement***REMOVED***
