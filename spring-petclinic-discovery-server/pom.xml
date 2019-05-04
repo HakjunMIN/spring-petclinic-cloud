@@ -48,6 +48,12 @@
             <artifactId***REMOVED***junit-jupiter-engine</artifactId***REMOVED***
             <scope***REMOVED***test</scope***REMOVED***
         </dependency***REMOVED***
+
+        <!-- JAXB is required since Java 9 --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.glassfish.jaxb</groupId***REMOVED***
+            <artifactId***REMOVED***jaxb-runtime</artifactId***REMOVED***
+        </dependency***REMOVED***
     </dependencies***REMOVED***
 
     <profiles***REMOVED***
