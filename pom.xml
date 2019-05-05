@@ -36,7 +36,7 @@
 
         <maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
 
-        <docker.image.prefix***REMOVED***mszarlinski</docker.image.prefix***REMOVED***
+        <docker.image.prefix***REMOVED***springcommunity</docker.image.prefix***REMOVED***
         <docker.image.exposed.port***REMOVED***9090</docker.image.exposed.port***REMOVED***
         <docker.image.dockerfile.dir***REMOVED***${basedir***REMOVED***</docker.image.dockerfile.dir***REMOVED***
         <docker.image.dockerize.version***REMOVED***v0.6.1</docker.image.dockerize.version***REMOVED***
@@ -154,6 +154,8 @@
                             <configuration***REMOVED***
                                 <imageName***REMOVED***${docker.image.prefix***REMOVED***/${project.artifactId***REMOVED***</imageName***REMOVED***
                                 <dockerDirectory***REMOVED***${docker.image.dockerfile.dir***REMOVED***</dockerDirectory***REMOVED***
+                                <serverId***REMOVED***docker-hub</serverId***REMOVED***
+                                <registryUrl***REMOVED***https://index.docker.io/v1/</registryUrl***REMOVED***
                                 <resources***REMOVED***
                                     <resource***REMOVED***
                                         <targetPath***REMOVED***/</targetPath***REMOVED***
