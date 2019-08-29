@@ -44,10 +44,6 @@
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
             <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
             <scope***REMOVED***test</scope***REMOVED***
         </dependency***REMOVED***
@@ -71,7 +67,7 @@
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-starter-netflix-zuul</artifactId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-gateway</artifactId***REMOVED***
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
