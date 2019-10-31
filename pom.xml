@@ -6,7 +6,7 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
         <artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-        <version***REMOVED***2.2.0.M5</version***REMOVED***
+        <version***REMOVED***2.2.0.RC1</version***REMOVED***
     </parent***REMOVED***
 
     <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
@@ -30,8 +30,8 @@
         <java.version***REMOVED***1.8</java.version***REMOVED***
         <assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
 
-        <spring-boot.version***REMOVED***2.2.0.M5</spring-boot.version***REMOVED***
-        <spring-cloud.version***REMOVED***Hoxton.M2</spring-cloud.version***REMOVED***
+        <spring-boot.version***REMOVED***2.2.0.RC1</spring-boot.version***REMOVED***
+        <spring-cloud.version***REMOVED***Hoxton.M3</spring-cloud.version***REMOVED***
 
         <maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
 
