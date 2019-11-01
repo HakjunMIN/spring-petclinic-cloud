@@ -11,7 +11,7 @@
 	<parent***REMOVED***
 		<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
 		<artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-		<version***REMOVED***2.1.4</version***REMOVED***
+		<version***REMOVED***2.2.0</version***REMOVED***
 	</parent***REMOVED***
 
     <properties***REMOVED***
