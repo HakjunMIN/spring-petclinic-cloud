@@ -12,4 +12,4 @@ server.port: 8888
   ***REMOVED***
       server:
         git:
-          uri: file:///${GIT_REPO***REMOVED***
+          basedir: file:///${GIT_REPO***REMOVED***
