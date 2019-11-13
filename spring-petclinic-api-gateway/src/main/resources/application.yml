@@ -1,5 +1,8 @@
 ***REMOVED***
 ***REMOVED***
+    loadbalancer:
+      ribbon:
+  ***REMOVED***
     gateway:
       routes:
         - id: vets-service
