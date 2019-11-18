@@ -5,11 +5,7 @@ server.port: 8888
       server:
         git:
           uri: https://github.com/spring-petclinic/spring-petclinic-microservices-config
----
-***REMOVED***
-  profiles: local
-***REMOVED***
-  ***REMOVED***
-      server:
-        git:
-          uri: file:///${GIT_REPO***REMOVED***
+        # Use the File System Backend to avoid git pulling. Enable "native" profile in the Config Server.
+        native:
+          searchLocations: file:///${GIT_REPO***REMOVED***
+

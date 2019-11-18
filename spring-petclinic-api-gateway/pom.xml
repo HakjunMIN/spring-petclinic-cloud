@@ -11,7 +11,7 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
         <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-        <version***REMOVED***2.1.4</version***REMOVED***
+        <version***REMOVED***2.2.1</version***REMOVED***
     </parent***REMOVED***
 
     <properties***REMOVED***
@@ -60,6 +60,20 @@
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-netflix-eureka-client</artifactId***REMOVED***
+            <exclusions***REMOVED***
+                <exclusion***REMOVED***
+                    <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+                    <artifactId***REMOVED***spring-cloud-starter-netflix-ribbon</artifactId***REMOVED***
+                </exclusion***REMOVED***
+                <exclusion***REMOVED***
+                    <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+                    <artifactId***REMOVED***spring-cloud-netflix-ribbon</artifactId***REMOVED***
+                </exclusion***REMOVED***
+                <exclusion***REMOVED***
+                    <groupId***REMOVED***com.netflix.ribbon</groupId***REMOVED***
+                    <artifactId***REMOVED***ribbon-eureka</artifactId***REMOVED***
+                </exclusion***REMOVED***
+            </exclusions***REMOVED***
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
@@ -72,6 +86,12 @@
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-netflix-hystrix</artifactId***REMOVED***
+            <exclusions***REMOVED***
+                <exclusion***REMOVED***
+                    <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+                    <artifactId***REMOVED***spring-cloud-netflix-ribbon</artifactId***REMOVED***
+                </exclusion***REMOVED***
+            </exclusions***REMOVED***
         </dependency***REMOVED***
 
         <!-- Third parties --***REMOVED***
@@ -123,6 +143,11 @@
         <dependency***REMOVED***
             <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
             <artifactId***REMOVED***junit-jupiter-engine</artifactId***REMOVED***
+            <scope***REMOVED***test</scope***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***com.squareup.okhttp3</groupId***REMOVED***
+            <artifactId***REMOVED***mockwebserver</artifactId***REMOVED***
             <scope***REMOVED***test</scope***REMOVED***
         </dependency***REMOVED***
     </dependencies***REMOVED***

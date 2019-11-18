@@ -26,6 +26,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.server.RequestPredicates;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
@@ -50,6 +51,12 @@ public class ApiGatewayApplication {
         return new RestTemplate();
     ***REMOVED***
 
+    @Bean
+    @LoadBalanced
+    public WebClient.Builder loadBalancedWebClientBuilder() {
+        return WebClient.builder();
+    ***REMOVED***
+
     @Value("classpath:/static/index.html")
     private Resource indexHtml;
 
@@ -61,7 +68,7 @@ public class ApiGatewayApplication {
     RouterFunction<?***REMOVED*** routerFunction() {
         RouterFunction router = RouterFunctions.resources("/**", new ClassPathResource("static/"))
             .andRoute(RequestPredicates.GET("/"),
-                request -***REMOVED*** ServerResponse.ok().contentType(MediaType.TEXT_HTML).syncBody(indexHtml));
+                request -***REMOVED*** ServerResponse.ok().contentType(MediaType.TEXT_HTML).bodyValue(indexHtml));
         return router;
     ***REMOVED***
 ***REMOVED***
