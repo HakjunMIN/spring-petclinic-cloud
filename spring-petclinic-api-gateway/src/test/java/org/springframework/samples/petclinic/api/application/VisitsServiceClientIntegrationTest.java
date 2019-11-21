@@ -47,20 +47,6 @@ class VisitsServiceClientIntegrationTest {
         assertVisitDescriptionEquals(visits.block(), PET_ID,"test visit");
     ***REMOVED***
 
-    /**
-     * Test Hystrix fallback method
-     */
-//    @Test
-//    public void getVisitsForPets_withServerError() {
-//
-//        mockServer.expect(requestTo("http://visits-service/pets/visits?petId=1"))
-//            .andRespond(withServerError());
-//
-//        Map<Integer, List<VisitDetails***REMOVED******REMOVED*** visits = null;
-//        visitsServiceClient.getVisitsForPets(Mono.just(Collections.singletonList(1)));
-//
-//        assertEquals(0, visits.size());
-//    ***REMOVED***
 
     private void assertVisitDescriptionEquals(Visits visits, int petId, String description) {
         assertEquals(1, visits.getItems().size());

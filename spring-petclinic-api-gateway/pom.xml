@@ -55,6 +55,10 @@
         </dependency***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-circuitbreaker-reactor-resilience4j</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
         </dependency***REMOVED***
         <dependency***REMOVED***
@@ -73,6 +77,10 @@
                     <groupId***REMOVED***com.netflix.ribbon</groupId***REMOVED***
                     <artifactId***REMOVED***ribbon-eureka</artifactId***REMOVED***
                 </exclusion***REMOVED***
+                <exclusion***REMOVED***
+                    <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+                    <artifactId***REMOVED***spring-cloud-netflix-hystrix</artifactId***REMOVED***
+                </exclusion***REMOVED***
             </exclusions***REMOVED***
         </dependency***REMOVED***
         <dependency***REMOVED***
@@ -82,16 +90,6 @@
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
             <artifactId***REMOVED***spring-cloud-starter-gateway</artifactId***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-starter-netflix-hystrix</artifactId***REMOVED***
-            <exclusions***REMOVED***
-                <exclusion***REMOVED***
-                    <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-                    <artifactId***REMOVED***spring-cloud-netflix-ribbon</artifactId***REMOVED***
-                </exclusion***REMOVED***
-            </exclusions***REMOVED***
         </dependency***REMOVED***
 
         <!-- Third parties --***REMOVED***
@@ -106,6 +104,10 @@
         <dependency***REMOVED***
             <groupId***REMOVED***io.micrometer</groupId***REMOVED***
             <artifactId***REMOVED***micrometer-registry-prometheus</artifactId***REMOVED***
+        </dependency***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***io.github.resilience4j</groupId***REMOVED***
+            <artifactId***REMOVED***resilience4j-micrometer</artifactId***REMOVED***
         </dependency***REMOVED***
 
         <!-- Webjars --***REMOVED***
