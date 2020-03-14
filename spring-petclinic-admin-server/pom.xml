@@ -16,7 +16,7 @@
     </parent***REMOVED***
 
     <properties***REMOVED***
-        <spring-boot-admin.version***REMOVED***2.1.2</spring-boot-admin.version***REMOVED***
+        <spring-boot-admin.version***REMOVED***2.2.2</spring-boot-admin.version***REMOVED***
         <docker.image.exposed.port***REMOVED***9090</docker.image.exposed.port***REMOVED***
         <docker.image.dockerfile.dir***REMOVED***${basedir***REMOVED***/../docker</docker.image.dockerfile.dir***REMOVED***
     </properties***REMOVED***

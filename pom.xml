@@ -29,8 +29,8 @@
         <java.version***REMOVED***1.8</java.version***REMOVED***
         <assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
 
-        <spring-boot.version***REMOVED***2.2.0.RELEASE</spring-boot.version***REMOVED***
-        <spring-cloud.version***REMOVED***Hoxton.RC2</spring-cloud.version***REMOVED***
+        <spring-boot.version***REMOVED***2.2.1.RELEASE</spring-boot.version***REMOVED***
+        <spring-cloud.version***REMOVED***Hoxton.RELEASE</spring-cloud.version***REMOVED***
 
         <maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
 
