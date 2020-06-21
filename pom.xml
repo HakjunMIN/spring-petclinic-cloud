@@ -6,12 +6,12 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
         <artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-        <version***REMOVED***2.1.4.RELEASE</version***REMOVED***
+        <version***REMOVED***2.2.8.RELEASE</version***REMOVED***
     </parent***REMOVED***
 
     <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
     <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-    <version***REMOVED***2.1.4</version***REMOVED***
+    <version***REMOVED***2.2.8</version***REMOVED***
     <name***REMOVED***${project.artifactId***REMOVED***</name***REMOVED***
     <packaging***REMOVED***pom</packaging***REMOVED***
 
@@ -23,15 +23,14 @@
         <module***REMOVED***spring-petclinic-config-server</module***REMOVED***
         <module***REMOVED***spring-petclinic-discovery-server</module***REMOVED***
         <module***REMOVED***spring-petclinic-api-gateway</module***REMOVED***
-        <module***REMOVED***spring-petclinic-hystrix-dashboard</module***REMOVED***
     </modules***REMOVED***
 
     <properties***REMOVED***
         <java.version***REMOVED***1.8</java.version***REMOVED***
         <assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
 
-        <spring-boot.version***REMOVED***2.1.2.RELEASE</spring-boot.version***REMOVED***
-        <spring-cloud.version***REMOVED***Greenwich.SR1</spring-cloud.version***REMOVED***
+        <spring-boot.version***REMOVED***2.2.8.RELEASE</spring-boot.version***REMOVED***
+        <spring-cloud.version***REMOVED***Hoxton.SR5</spring-cloud.version***REMOVED***
 
         <maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
 
@@ -177,10 +176,24 @@
 
     <repositories***REMOVED***
         <repository***REMOVED***
-            <id***REMOVED***repository.spring.milestone</id***REMOVED***
-            <name***REMOVED***Spring Milestone Repository</name***REMOVED***
-            <url***REMOVED***http://repo.spring.io/milestone</url***REMOVED***
+            <id***REMOVED***spring-milestones</id***REMOVED***
+            <name***REMOVED***Spring Milestones</name***REMOVED***
+            <url***REMOVED***https://repo.spring.io/milestone</url***REMOVED***
+            <snapshots***REMOVED***
+                <enabled***REMOVED***false</enabled***REMOVED***
+            </snapshots***REMOVED***
         </repository***REMOVED***
     </repositories***REMOVED***
+
+    <pluginRepositories***REMOVED***
+        <pluginRepository***REMOVED***
+            <id***REMOVED***spring-milestones</id***REMOVED***
+            <name***REMOVED***Spring Milestones</name***REMOVED***
+            <url***REMOVED***https://repo.spring.io/milestone</url***REMOVED***
+            <snapshots***REMOVED***
+                <enabled***REMOVED***false</enabled***REMOVED***
+            </snapshots***REMOVED***
+        </pluginRepository***REMOVED***
+    </pluginRepositories***REMOVED***
 
 </project***REMOVED***
