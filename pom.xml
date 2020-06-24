@@ -72,6 +72,7 @@
         </dependencies***REMOVED***
     </dependencyManagement***REMOVED***
 
+
     <profiles***REMOVED***
         <profile***REMOVED***
             <id***REMOVED***springboot</id***REMOVED***
@@ -88,6 +89,10 @@
                         <artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
                         <configuration***REMOVED***
                             <fork***REMOVED***true</fork***REMOVED***
+                            <!-- Layered jars optimizes Docker images --***REMOVED***
+                            <layers***REMOVED***
+                                <enabled***REMOVED***true</enabled***REMOVED***
+                            </layers***REMOVED***
                         </configuration***REMOVED***
                         <executions***REMOVED***
                             <execution***REMOVED***
