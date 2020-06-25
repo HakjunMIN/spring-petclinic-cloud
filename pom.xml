@@ -6,12 +6,12 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
         <artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-        <version***REMOVED***2.2.8.RELEASE</version***REMOVED***
+        <version***REMOVED***2.3.1.RELEASE</version***REMOVED***
     </parent***REMOVED***
 
     <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
     <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-    <version***REMOVED***2.2.8</version***REMOVED***
+    <version***REMOVED***2.3.1</version***REMOVED***
     <name***REMOVED***${project.artifactId***REMOVED***</name***REMOVED***
     <packaging***REMOVED***pom</packaging***REMOVED***
 
@@ -29,7 +29,7 @@
         <java.version***REMOVED***1.8</java.version***REMOVED***
         <assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
 
-        <spring-boot.version***REMOVED***2.2.8.RELEASE</spring-boot.version***REMOVED***
+        <spring-boot.version***REMOVED***2.3.1.RELEASE</spring-boot.version***REMOVED***
         <spring-cloud.version***REMOVED***Hoxton.SR5</spring-cloud.version***REMOVED***
 
         <maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
@@ -72,6 +72,7 @@
         </dependencies***REMOVED***
     </dependencyManagement***REMOVED***
 
+
     <profiles***REMOVED***
         <profile***REMOVED***
             <id***REMOVED***springboot</id***REMOVED***
@@ -88,6 +89,10 @@
                         <artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
                         <configuration***REMOVED***
                             <fork***REMOVED***true</fork***REMOVED***
+                            <!-- Layered jars optimizes Docker images --***REMOVED***
+                            <layers***REMOVED***
+                                <enabled***REMOVED***true</enabled***REMOVED***
+                            </layers***REMOVED***
                         </configuration***REMOVED***
                         <executions***REMOVED***
                             <execution***REMOVED***
