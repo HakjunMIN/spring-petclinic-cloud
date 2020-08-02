@@ -143,6 +143,15 @@
 				<enabled***REMOVED***false</enabled***REMOVED***
 			</snapshots***REMOVED***
 		</repository***REMOVED***
+		<repository***REMOVED***
+			<id***REMOVED***spring-snapshots</id***REMOVED***
+			<name***REMOVED***Spring Snapshots</name***REMOVED***
+			<url***REMOVED***https://repo.spring.io/snapshot</url***REMOVED***
+			<snapshots***REMOVED***
+				<enabled***REMOVED***true</enabled***REMOVED***
+			</snapshots***REMOVED***
+		</repository***REMOVED***
+
 	</repositories***REMOVED***
 
 	<pluginRepositories***REMOVED***
