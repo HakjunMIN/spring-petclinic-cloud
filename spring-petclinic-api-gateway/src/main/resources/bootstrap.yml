@@ -4,9 +4,28 @@
       uri: http://localhost:8888
   application:
     name: api-gateway
+#this is a bug that needs to be resolved
+management:
+  metrics:
+    export:
+      wavefront:
+        apiToken: ""
 ---
 ***REMOVED***
   profiles: docker
 ***REMOVED***
   ***REMOVED***
       uri: http://config-server:8888
+---
+***REMOVED***
+  profiles: kubernetes
+***REMOVED***
+  ***REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
+  ***REMOVED***
+    ***REMOVED***
+  ***REMOVED***
+        name: pet-clinic-config

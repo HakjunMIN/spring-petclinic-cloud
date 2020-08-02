@@ -9,14 +9,15 @@
     <description***REMOVED***Spring PetClinic Discovery Server</description***REMOVED***
 
     <parent***REMOVED***
-        <groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-        <artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-        <version***REMOVED***2.3.1</version***REMOVED***
+        <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+        <artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
+        <version***REMOVED***2.3.1.RELEASE</version***REMOVED***
+        <relativePath/***REMOVED***
     </parent***REMOVED***
 
     <properties***REMOVED***
-        <docker.image.exposed.port***REMOVED***8761</docker.image.exposed.port***REMOVED***
-        <docker.image.dockerfile.dir***REMOVED***${basedir***REMOVED***/../docker</docker.image.dockerfile.dir***REMOVED***
+        <spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/discovery-service</spring-boot.build-image.imageName***REMOVED***
+        <spring-cloud.version***REMOVED***Hoxton.SR6</spring-cloud.version***REMOVED***
     </properties***REMOVED***
 
     <dependencies***REMOVED***
@@ -55,19 +56,73 @@
             <artifactId***REMOVED***jaxb-runtime</artifactId***REMOVED***
         </dependency***REMOVED***
     </dependencies***REMOVED***
+    <dependencyManagement***REMOVED***
+        <dependencies***REMOVED***
+            <dependency***REMOVED***
+                <groupId***REMOVED***io.pivotal.spring.cloud</groupId***REMOVED***
+                <artifactId***REMOVED***spring-cloud-services-dependencies</artifactId***REMOVED***
+                <version***REMOVED***3.1.2.RELEASE</version***REMOVED***
+                <type***REMOVED***pom</type***REMOVED***
+                <scope***REMOVED***import</scope***REMOVED***
+            </dependency***REMOVED***
 
-    <profiles***REMOVED***
-        <profile***REMOVED***
-            <id***REMOVED***buildDocker</id***REMOVED***
-            <build***REMOVED***
-                <plugins***REMOVED***
-                    <plugin***REMOVED***
-                        <groupId***REMOVED***com.spotify</groupId***REMOVED***
-                        <artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
-                        <version***REMOVED***${docker.plugin.version***REMOVED***</version***REMOVED***
-                    </plugin***REMOVED***
-                </plugins***REMOVED***
-            </build***REMOVED***
-        </profile***REMOVED***
-    </profiles***REMOVED***
+            <dependency***REMOVED***
+                <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+                <artifactId***REMOVED***spring-cloud-dependencies</artifactId***REMOVED***
+                <version***REMOVED***${spring-cloud.version***REMOVED***</version***REMOVED***
+                <type***REMOVED***pom</type***REMOVED***
+                <scope***REMOVED***import</scope***REMOVED***
+            </dependency***REMOVED***
+            <dependency***REMOVED***
+                <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+                <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+                <version***REMOVED***${spring-boot.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***test</scope***REMOVED***
+                <exclusions***REMOVED***
+                    <exclusion***REMOVED***
+                        <groupId***REMOVED***junit</groupId***REMOVED***
+                        <artifactId***REMOVED***junit</artifactId***REMOVED***
+                    </exclusion***REMOVED***
+                </exclusions***REMOVED***
+            </dependency***REMOVED***
+            <dependency***REMOVED***
+                <groupId***REMOVED***org.assertj</groupId***REMOVED***
+                <artifactId***REMOVED***assertj-core</artifactId***REMOVED***
+                <version***REMOVED***${assertj.version***REMOVED***</version***REMOVED***
+                <scope***REMOVED***test</scope***REMOVED***
+            </dependency***REMOVED***
+        </dependencies***REMOVED***
+    </dependencyManagement***REMOVED***
+    <build***REMOVED***
+        <finalName***REMOVED***discovery-service</finalName***REMOVED***
+        <plugins***REMOVED***
+            <plugin***REMOVED***
+                <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+                <artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
+                <configuration***REMOVED***
+                  <layers***REMOVED***
+                    <enabled***REMOVED***true</enabled***REMOVED***
+                  </layers***REMOVED***
+                </configuration***REMOVED***
+                <executions***REMOVED***
+                    <execution***REMOVED***
+                        <!-- Spring Boot Actuator displays build-related information if a 
+                            META-INF/build-info.properties file is present --***REMOVED***
+                        <goals***REMOVED***
+                            <goal***REMOVED***build-info</goal***REMOVED***
+                        </goals***REMOVED***
+                        <configuration***REMOVED***
+                            <additionalProperties***REMOVED***
+                                <encoding.source***REMOVED***${project.build.sourceEncoding***REMOVED***</encoding.source***REMOVED***
+                                <encoding.reporting***REMOVED***${project.reporting.outputEncoding***REMOVED***</encoding.reporting***REMOVED***
+                                <java.source***REMOVED***${maven.compiler.source***REMOVED***</java.source***REMOVED***
+                                <java.target***REMOVED***${maven.compiler.target***REMOVED***</java.target***REMOVED***
+                            </additionalProperties***REMOVED***
+                        </configuration***REMOVED***
+                    </execution***REMOVED***
+                </executions***REMOVED***
+            </plugin***REMOVED***
+        </plugins***REMOVED***
+    </build***REMOVED***
+
 </project***REMOVED***
