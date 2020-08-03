@@ -23,6 +23,10 @@
     ***REMOVED***
   ***REMOVED***
         name: pet-clinic-config
+management:
+  endpoint:
+    restart:
+***REMOVED***
 ---
 ***REMOVED***
   profiles: tas4k8s
@@ -36,3 +40,7 @@
     ***REMOVED***
   ***REMOVED***
         name: pet-clinic-config
+management:
+  endpoint:
+    restart:
+***REMOVED***

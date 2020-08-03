@@ -29,3 +29,7 @@ management:
     ***REMOVED***
   ***REMOVED***
         name: pet-clinic-config
+management:
+  endpoint:
+    restart:
+***REMOVED***

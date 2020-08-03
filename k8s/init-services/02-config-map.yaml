@@ -7,6 +7,9 @@ metadata:
 data:
   application.yaml: |-
     server:
+      shutdown: graceful
+      lifecycle:
+        timeout-per-shutdown-phase: 15
       port: 8080
       compression:
   ***REMOVED***
@@ -24,6 +27,14 @@ data:
     # Metrics
     management:
       endpoint:
+        health:
+          probes:
+      ***REMOVED***
+      health:
+        livenessState:
+    ***REMOVED***
+        readinessState:
+    ***REMOVED***
         restart:
     ***REMOVED***
         metrics:
@@ -34,7 +45,6 @@ data:
         web:
           exposure:
             include: '*'
-
       metrics:
         export:
           prometheus:
