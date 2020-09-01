@@ -1,0 +1,19 @@
+---
+applications:
+  - name: vets-service
+    path: target/vets-service.jar
+    buildpacks:
+      - java_buildpack_offline
+    health-check-type: http
+    health-check-http-endpoint: /actuator/health
+    routes:
+      - route: vets-service.apps.internal
+  ***REMOVED***
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ ***REMOVED*** ***REMOVED***'
+      JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{ enabled: false ***REMOVED***'
+      SPRING_PROFILES_ACTIVE: cloud
+    services:
+      - vets-db
+      - config
+      - registry
+      - wavefront

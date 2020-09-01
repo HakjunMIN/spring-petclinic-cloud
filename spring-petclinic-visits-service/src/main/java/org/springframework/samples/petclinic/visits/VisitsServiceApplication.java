@@ -22,7 +22,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 /**
  * @author Maciej Szarlinski
  */
-@EnableDiscoveryClient
 ***REMOVED***
 public class VisitsServiceApplication {
 

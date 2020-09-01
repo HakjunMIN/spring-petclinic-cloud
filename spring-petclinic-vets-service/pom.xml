@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?***REMOVED***
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"***REMOVED***
 	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
 
@@ -9,80 +10,99 @@
 	<description***REMOVED***Spring PetClinic Vets Service</description***REMOVED***
 
 	<parent***REMOVED***
-		<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-		<artifactId***REMOVED***spring-petclinic-microservices</artifactId***REMOVED***
-		<version***REMOVED***2.3.1</version***REMOVED***
+		<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+		<artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
+		<version***REMOVED***2.3.1.RELEASE</version***REMOVED***
+		<relativePath/***REMOVED***
 	</parent***REMOVED***
 
-    <properties***REMOVED***
-        <docker.image.exposed.port***REMOVED***8081</docker.image.exposed.port***REMOVED***
-        <docker.image.dockerfile.dir***REMOVED***${basedir***REMOVED***/../docker</docker.image.dockerfile.dir***REMOVED***
-    </properties***REMOVED***
+	<properties***REMOVED***
+		<java.version***REMOVED***11</java.version***REMOVED***
+		<assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
+
+		<spring-boot.version***REMOVED***2.3.1.RELEASE</spring-boot.version***REMOVED***
+		<spring-cloud.version***REMOVED***Hoxton.SR6</spring-cloud.version***REMOVED***
+		<wavefront.version***REMOVED***2.0.1-SNAPSHOT</wavefront.version***REMOVED***
+
+		<maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
+
+		<spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/vets-service</spring-boot.build-image.imageName***REMOVED***
+	</properties***REMOVED***
 
 	<dependencies***REMOVED***
-        <!-- Spring Boot --***REMOVED***
+		<!-- Spring Boot --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-validation</artifactId***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***com.wavefront</groupId***REMOVED***
+			<artifactId***REMOVED***wavefront-spring-boot-starter</artifactId***REMOVED***
+		</dependency***REMOVED***
+
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 			<artifactId***REMOVED***spring-boot-starter-web</artifactId***REMOVED***
 		</dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-configuration-processor</artifactId***REMOVED***
-            <optional***REMOVED***true</optional***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-starter-cache</artifactId***REMOVED***
-        </dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-security</artifactId***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-configuration-processor</artifactId***REMOVED***
+			<optional***REMOVED***true</optional***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-actuator</artifactId***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-cache</artifactId***REMOVED***
+		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 			<artifactId***REMOVED***spring-boot-starter-data-jpa</artifactId***REMOVED***
 		</dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-            <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
-            <scope***REMOVED***test</scope***REMOVED***
-        </dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+			<artifactId***REMOVED***spring-boot-devtools</artifactId***REMOVED***
+			<optional***REMOVED***true</optional***REMOVED***
+		</dependency***REMOVED***
 
-        <!-- Spring Cloud--***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-sleuth-zipkin</artifactId***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-starter-netflix-eureka-client</artifactId***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-            <artifactId***REMOVED***spring-cloud-starter-sleuth</artifactId***REMOVED***
-        </dependency***REMOVED***
+		<!-- Spring Cloud --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+			<artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+			<artifactId***REMOVED***spring-cloud-starter-sleuth</artifactId***REMOVED***
+		</dependency***REMOVED***
 
-        <!-- Third parties--***REMOVED***
+		<!-- Third parties --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.projectlombok</groupId***REMOVED***
 			<artifactId***REMOVED***lombok</artifactId***REMOVED***
 		</dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***javax.cache</groupId***REMOVED***
-            <artifactId***REMOVED***cache-api</artifactId***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.ehcache</groupId***REMOVED***
-            <artifactId***REMOVED***ehcache</artifactId***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.jolokia</groupId***REMOVED***
-            <artifactId***REMOVED***jolokia-core</artifactId***REMOVED***
-        </dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***javax.cache</groupId***REMOVED***
+			<artifactId***REMOVED***cache-api</artifactId***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.ehcache</groupId***REMOVED***
+			<artifactId***REMOVED***ehcache</artifactId***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.jolokia</groupId***REMOVED***
+			<artifactId***REMOVED***jolokia-core</artifactId***REMOVED***
+		</dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.hsqldb</groupId***REMOVED***
 			<artifactId***REMOVED***hsqldb</artifactId***REMOVED***
@@ -93,36 +113,214 @@
 			<artifactId***REMOVED***mysql-connector-java</artifactId***REMOVED***
 			<scope***REMOVED***runtime</scope***REMOVED***
 		</dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***io.micrometer</groupId***REMOVED***
-            <artifactId***REMOVED***micrometer-registry-prometheus</artifactId***REMOVED***
-        </dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***io.zipkin.brave</groupId***REMOVED***
+			<artifactId***REMOVED***brave-instrumentation-mysql8</artifactId***REMOVED***
+		</dependency***REMOVED***
 
-        <!-- Testing --***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
-            <artifactId***REMOVED***junit-jupiter-api</artifactId***REMOVED***
-            <scope***REMOVED***test</scope***REMOVED***
-        </dependency***REMOVED***
-        <dependency***REMOVED***
-            <groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
-            <artifactId***REMOVED***junit-jupiter-engine</artifactId***REMOVED***
-            <scope***REMOVED***test</scope***REMOVED***
-        </dependency***REMOVED***
+		<!-- Testing --***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
+			<artifactId***REMOVED***junit-jupiter-api</artifactId***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
+		<dependency***REMOVED***
+			<groupId***REMOVED***org.junit.jupiter</groupId***REMOVED***
+			<artifactId***REMOVED***junit-jupiter-engine</artifactId***REMOVED***
+			<scope***REMOVED***test</scope***REMOVED***
+		</dependency***REMOVED***
 	</dependencies***REMOVED***
 
-    <profiles***REMOVED***
-        <profile***REMOVED***
-            <id***REMOVED***buildDocker</id***REMOVED***
-            <build***REMOVED***
-                <plugins***REMOVED***
-                    <plugin***REMOVED***
-                        <groupId***REMOVED***com.spotify</groupId***REMOVED***
-                        <artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
-                        <version***REMOVED***${docker.plugin.version***REMOVED***</version***REMOVED***
-                    </plugin***REMOVED***
-                </plugins***REMOVED***
-            </build***REMOVED***
-        </profile***REMOVED***
-    </profiles***REMOVED***
+
+	<dependencyManagement***REMOVED***
+		<dependencies***REMOVED***
+			<dependency***REMOVED***
+				<groupId***REMOVED***io.pivotal.spring.cloud</groupId***REMOVED***
+				<artifactId***REMOVED***spring-cloud-services-dependencies</artifactId***REMOVED***
+				<version***REMOVED***3.1.2.RELEASE</version***REMOVED***
+				<type***REMOVED***pom</type***REMOVED***
+				<scope***REMOVED***import</scope***REMOVED***
+			</dependency***REMOVED***
+
+			<dependency***REMOVED***
+				<groupId***REMOVED***com.wavefront</groupId***REMOVED***
+				<artifactId***REMOVED***wavefront-spring-boot-bom</artifactId***REMOVED***
+				<version***REMOVED***${wavefront.version***REMOVED***</version***REMOVED***
+				<type***REMOVED***pom</type***REMOVED***
+				<scope***REMOVED***import</scope***REMOVED***
+			</dependency***REMOVED***
+
+			<dependency***REMOVED***
+				<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+				<artifactId***REMOVED***spring-cloud-dependencies</artifactId***REMOVED***
+				<version***REMOVED***${spring-cloud.version***REMOVED***</version***REMOVED***
+				<type***REMOVED***pom</type***REMOVED***
+				<scope***REMOVED***import</scope***REMOVED***
+			</dependency***REMOVED***
+			<dependency***REMOVED***
+				<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+				<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
+				<version***REMOVED***${spring-boot.version***REMOVED***</version***REMOVED***
+				<scope***REMOVED***test</scope***REMOVED***
+				<exclusions***REMOVED***
+					<exclusion***REMOVED***
+						<groupId***REMOVED***junit</groupId***REMOVED***
+						<artifactId***REMOVED***junit</artifactId***REMOVED***
+					</exclusion***REMOVED***
+				</exclusions***REMOVED***
+			</dependency***REMOVED***
+			<dependency***REMOVED***
+				<groupId***REMOVED***org.assertj</groupId***REMOVED***
+				<artifactId***REMOVED***assertj-core</artifactId***REMOVED***
+				<version***REMOVED***${assertj.version***REMOVED***</version***REMOVED***
+				<scope***REMOVED***test</scope***REMOVED***
+			</dependency***REMOVED***
+		</dependencies***REMOVED***
+	</dependencyManagement***REMOVED***
+
+	<build***REMOVED***
+		<finalName***REMOVED***vets-service</finalName***REMOVED***
+		<plugins***REMOVED***
+			<plugin***REMOVED***
+				<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
+				<artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
+				<configuration***REMOVED***
+                  <layers***REMOVED***
+                    <enabled***REMOVED***true</enabled***REMOVED***
+                  </layers***REMOVED***
+				</configuration***REMOVED***
+				<executions***REMOVED***
+					<execution***REMOVED***
+						<!-- Spring Boot Actuator displays build-related information if a 
+							META-INF/build-info.properties file is present --***REMOVED***
+						<goals***REMOVED***
+							<goal***REMOVED***build-info</goal***REMOVED***
+						</goals***REMOVED***
+						<configuration***REMOVED***
+							<additionalProperties***REMOVED***
+								<encoding.source***REMOVED***${project.build.sourceEncoding***REMOVED***</encoding.source***REMOVED***
+								<encoding.reporting***REMOVED***${project.reporting.outputEncoding***REMOVED***</encoding.reporting***REMOVED***
+								<java.source***REMOVED***${maven.compiler.source***REMOVED***</java.source***REMOVED***
+								<java.target***REMOVED***${maven.compiler.target***REMOVED***</java.target***REMOVED***
+							</additionalProperties***REMOVED***
+						</configuration***REMOVED***
+					</execution***REMOVED***
+				</executions***REMOVED***
+			</plugin***REMOVED***
+		</plugins***REMOVED***
+	</build***REMOVED***
+
+
+	<profiles***REMOVED***
+		<profile***REMOVED***
+			<id***REMOVED***local</id***REMOVED***
+			<dependencies***REMOVED***
+				<!-- Spring Cloud Services --***REMOVED***
+				<dependency***REMOVED***
+					<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+					<artifactId***REMOVED***spring-cloud-starter-netflix-eureka-client</artifactId***REMOVED***
+					<exclusions***REMOVED***
+						<exclusion***REMOVED***
+							<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+							<artifactId***REMOVED***spring-cloud-starter-netflix-ribbon</artifactId***REMOVED***
+						</exclusion***REMOVED***
+						<exclusion***REMOVED***
+							<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+							<artifactId***REMOVED***spring-cloud-netflix-ribbon</artifactId***REMOVED***
+						</exclusion***REMOVED***
+						<exclusion***REMOVED***
+							<groupId***REMOVED***com.netflix.ribbon</groupId***REMOVED***
+							<artifactId***REMOVED***ribbon-eureka</artifactId***REMOVED***
+						</exclusion***REMOVED***
+						<exclusion***REMOVED***
+							<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+							<artifactId***REMOVED***spring-cloud-netflix-hystrix</artifactId***REMOVED***
+						</exclusion***REMOVED***
+					</exclusions***REMOVED***
+				</dependency***REMOVED***
+			</dependencies***REMOVED***
+		</profile***REMOVED***
+		<profile***REMOVED***
+			<id***REMOVED***cloud</id***REMOVED***
+			<dependencies***REMOVED***
+				<!-- Spring Cloud Services --***REMOVED***
+				<dependency***REMOVED***
+					<groupId***REMOVED***io.pivotal.spring.cloud</groupId***REMOVED***
+					<artifactId***REMOVED***spring-cloud-services-starter-config-client</artifactId***REMOVED***
+				</dependency***REMOVED***
+				<dependency***REMOVED***
+					<groupId***REMOVED***io.pivotal.spring.cloud</groupId***REMOVED***
+					<artifactId***REMOVED***spring-cloud-services-starter-service-registry</artifactId***REMOVED***
+				</dependency***REMOVED***
+				<dependency***REMOVED***
+					<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+					<artifactId***REMOVED***spring-cloud-starter-netflix-eureka-client</artifactId***REMOVED***
+					<exclusions***REMOVED***
+						<exclusion***REMOVED***
+							<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+							<artifactId***REMOVED***spring-cloud-starter-netflix-ribbon</artifactId***REMOVED***
+						</exclusion***REMOVED***
+						<exclusion***REMOVED***
+							<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+							<artifactId***REMOVED***spring-cloud-netflix-ribbon</artifactId***REMOVED***
+						</exclusion***REMOVED***
+						<exclusion***REMOVED***
+							<groupId***REMOVED***com.netflix.ribbon</groupId***REMOVED***
+							<artifactId***REMOVED***ribbon-eureka</artifactId***REMOVED***
+						</exclusion***REMOVED***
+						<exclusion***REMOVED***
+							<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+							<artifactId***REMOVED***spring-cloud-netflix-hystrix</artifactId***REMOVED***
+						</exclusion***REMOVED***
+					</exclusions***REMOVED***
+				</dependency***REMOVED***
+			</dependencies***REMOVED***
+		</profile***REMOVED***
+
+
+		<profile***REMOVED***
+			<id***REMOVED***k8s</id***REMOVED***
+	        <activation***REMOVED***
+	            <activeByDefault***REMOVED***true</activeByDefault***REMOVED***
+	        </activation***REMOVED***
+			<dependencies***REMOVED***
+				<dependency***REMOVED***
+					<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+					<artifactId***REMOVED***spring-cloud-starter-kubernetes-config</artifactId***REMOVED***
+				</dependency***REMOVED***
+			</dependencies***REMOVED***
+		</profile***REMOVED***
+	</profiles***REMOVED***
+
+	<repositories***REMOVED***
+		<repository***REMOVED***
+			<id***REMOVED***spring-milestones</id***REMOVED***
+			<name***REMOVED***Spring Milestones</name***REMOVED***
+			<url***REMOVED***https://repo.spring.io/milestone</url***REMOVED***
+			<snapshots***REMOVED***
+				<enabled***REMOVED***false</enabled***REMOVED***
+			</snapshots***REMOVED***
+		</repository***REMOVED***
+		<repository***REMOVED***
+			<id***REMOVED***spring-snapshots</id***REMOVED***
+			<name***REMOVED***Spring Snapshots</name***REMOVED***
+			<url***REMOVED***https://repo.spring.io/snapshot</url***REMOVED***
+			<snapshots***REMOVED***
+				<enabled***REMOVED***true</enabled***REMOVED***
+			</snapshots***REMOVED***
+		</repository***REMOVED***
+
+	</repositories***REMOVED***
+
+	<pluginRepositories***REMOVED***
+		<pluginRepository***REMOVED***
+			<id***REMOVED***spring-milestones</id***REMOVED***
+			<name***REMOVED***Spring Milestones</name***REMOVED***
+			<url***REMOVED***https://repo.spring.io/milestone</url***REMOVED***
+			<snapshots***REMOVED***
+				<enabled***REMOVED***false</enabled***REMOVED***
+			</snapshots***REMOVED***
+		</pluginRepository***REMOVED***
+	</pluginRepositories***REMOVED***
+
 </project***REMOVED***

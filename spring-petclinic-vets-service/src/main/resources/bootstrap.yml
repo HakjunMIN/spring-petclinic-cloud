@@ -10,3 +10,37 @@
 ***REMOVED***
   ***REMOVED***
       uri: http://config-server:8888
+---
+***REMOVED***
+  profiles: kubernetes
+***REMOVED***
+  ***REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
+  ***REMOVED***
+    ***REMOVED***
+  ***REMOVED***
+        name: pet-clinic-config
+management:
+  endpoint:
+    restart:
+***REMOVED***
+---
+***REMOVED***
+  profiles: tas4k8s
+***REMOVED***
+  ***REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
+***REMOVED***
+  ***REMOVED***
+    ***REMOVED***
+  ***REMOVED***
+        name: pet-clinic-config
+management:
+  endpoint:
+    restart:
+***REMOVED***
