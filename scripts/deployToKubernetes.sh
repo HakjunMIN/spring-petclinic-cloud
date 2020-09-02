@@ -1,6 +1,10 @@
 ***REMOVED***
 
-#Make sure you set REPOSITOR_PREFIX with double quote for each path route. For example - my-registry.com\\/demo
-cat ./k8s/*.yaml | \
-sed 's/\${REPOSITORY_PREFIX***REMOVED***'"/${REPOSITORY_PREFIX***REMOVED***/g" | \
-kubectl apply -f -
+if [ -z "${REPOSITORY_PREFIX***REMOVED***" ]
+then 
+    echo "Please set the REPOSITORY_PREFIX"
+else 
+    cat ./k8s/*.yaml | \
+    sed 's#\${REPOSITORY_PREFIX***REMOVED***'"#${REPOSITORY_PREFIX***REMOVED***#g" | \
+    kubectl apply -f -
+fi
