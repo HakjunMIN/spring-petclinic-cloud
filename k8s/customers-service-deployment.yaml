@@ -6,7 +6,7 @@ metadata:
   labels:
     app: customers-service
   name: customers-service
-  namespace: spring-pet-clinic
+  namespace: spring-petclinic
 ***REMOVED***
   replicas: 1
   selector:
@@ -56,7 +56,7 @@ metadata:
                name: customers-db-mysql
                key: mysql-root-password
         - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
-          value: proxy://wavefront-proxy.spring-pet-clinic.svc.cluster.local:2878
+          value: proxy://wavefront-proxy.spring-petclinic.svc.cluster.local:2878
         ports:
         - containerPort: 8080
         resources: {***REMOVED***
