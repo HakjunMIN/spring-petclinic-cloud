@@ -258,6 +258,9 @@
 
 		<profile***REMOVED***
 			<id***REMOVED***k8s</id***REMOVED***
+	        <activation***REMOVED***
+	            <activeByDefault***REMOVED***true</activeByDefault***REMOVED***
+	        </activation***REMOVED***
 			<dependencies***REMOVED***
 				<dependency***REMOVED***
 					<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
