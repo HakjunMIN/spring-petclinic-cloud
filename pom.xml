@@ -40,16 +40,9 @@
 					<plugin***REMOVED***
 						<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 						<artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
-						<configuration***REMOVED***
-							<configuration***REMOVED***
-								<image***REMOVED***
-									<name***REMOVED***odedia/${project.artifactId***REMOVED***</name***REMOVED***
-								</image***REMOVED***
-							</configuration***REMOVED***
-						</configuration***REMOVED***
 						<executions***REMOVED***
 							<execution***REMOVED***
-								<!-- Spring Boot Actuator displays build-related information if a 
+								<!-- Spring Boot Actuator displays build-related information if a
 									META-INF/build-info.properties file is present --***REMOVED***
 								<goals***REMOVED***
 									<goal***REMOVED***build-info</goal***REMOVED***
@@ -66,7 +59,7 @@
 						</executions***REMOVED***
 					</plugin***REMOVED***
 
-					<!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties 
+					<!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties
 						file is present --***REMOVED***
 					<plugin***REMOVED***
 						<groupId***REMOVED***pl.project13.maven</groupId***REMOVED***

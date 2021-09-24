@@ -18,7 +18,7 @@
     <properties***REMOVED***
         <spring-boot-admin.version***REMOVED***2.2.2</spring-boot-admin.version***REMOVED***
         <spring-cloud.version***REMOVED***Hoxton.SR6</spring-cloud.version***REMOVED***
-        <spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/admin-server</spring-boot.build-image.imageName***REMOVED***
+        <spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-admin-server</spring-boot.build-image.imageName***REMOVED***
 
     </properties***REMOVED***
 
@@ -107,7 +107,7 @@
                 </configuration***REMOVED***
                 <executions***REMOVED***
                     <execution***REMOVED***
-                        <!-- Spring Boot Actuator displays build-related information if a 
+                        <!-- Spring Boot Actuator displays build-related information if a
                             META-INF/build-info.properties file is present --***REMOVED***
                         <goals***REMOVED***
                             <goal***REMOVED***build-info</goal***REMOVED***

@@ -18,7 +18,7 @@ metadata:
         app: vets-service
     ***REMOVED***
       containers:
-      - image: ${REPOSITORY_PREFIX***REMOVED***/vets-service:latest
+      - image: ${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-vets-service:latest
         name: vets-service
         imagePullPolicy: Always
         livenessProbe:
