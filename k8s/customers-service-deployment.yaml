@@ -19,7 +19,7 @@ metadata:
         app: customers-service
     ***REMOVED***
       containers:
-      - image: ${REPOSITORY_PREFIX***REMOVED***/customers-service:latest
+      - image: ${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-customers-service:latest
         name: customers-service
         imagePullPolicy: Always
         livenessProbe:

@@ -16,7 +16,7 @@
 	<packaging***REMOVED***jar</packaging***REMOVED***
 	<description***REMOVED***Spring PetClinic Customers Service</description***REMOVED***
 
-	
+
 	<properties***REMOVED***
 		<java.version***REMOVED***11</java.version***REMOVED***
 		<assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
@@ -26,7 +26,7 @@
 		<wavefront.version***REMOVED***2.0.1-SNAPSHOT</wavefront.version***REMOVED***
 
 		<maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
-		<spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/customers-service</spring-boot.build-image.imageName***REMOVED***
+		<spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-customers-service</spring-boot.build-image.imageName***REMOVED***
 	</properties***REMOVED***
 
 	<dependencies***REMOVED***
@@ -260,7 +260,7 @@
 				</configuration***REMOVED***
 				<executions***REMOVED***
 					<execution***REMOVED***
-						<!-- Spring Boot Actuator displays build-related information if a 
+						<!-- Spring Boot Actuator displays build-related information if a
 							META-INF/build-info.properties file is present --***REMOVED***
 						<goals***REMOVED***
 							<goal***REMOVED***build-info</goal***REMOVED***

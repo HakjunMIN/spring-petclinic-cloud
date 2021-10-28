@@ -18,7 +18,7 @@ metadata:
         app: api-gateway
     ***REMOVED***
       containers:
-      - image: ${REPOSITORY_PREFIX***REMOVED***/***REMOVED***latest
+      - image: ${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-***REMOVED***latest
         name: api-gateway
         imagePullPolicy: Always
         livenessProbe:

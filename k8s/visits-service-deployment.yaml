@@ -18,7 +18,7 @@ metadata:
         app: visits-service
     ***REMOVED***
       containers:
-      - image: ${REPOSITORY_PREFIX***REMOVED***/visits-service:latest
+      - image: ${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-visits-service:latest
         name: visits-service
         imagePullPolicy: Always
         livenessProbe:
