@@ -7,7 +7,7 @@
 	<parent***REMOVED***
 		<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 		<artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-		<version***REMOVED***2.3.1.RELEASE</version***REMOVED***
+		<version***REMOVED***2.6.3</version***REMOVED***
 		<relativePath/***REMOVED***
 	</parent***REMOVED***
 
@@ -21,13 +21,14 @@
 		<java.version***REMOVED***11</java.version***REMOVED***
 		<assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
 
-		<spring-boot.version***REMOVED***2.3.1.RELEASE</spring-boot.version***REMOVED***
-		<spring-cloud.version***REMOVED***Hoxton.SR5</spring-cloud.version***REMOVED***
-		<wavefront.version***REMOVED***2.0.1-SNAPSHOT</wavefront.version***REMOVED***
+		<spring-boot.version***REMOVED***2.6.3</spring-boot.version***REMOVED***
+		<spring-cloud.version***REMOVED***2021.0.0</spring-cloud.version***REMOVED***
+        <spring-cloud-services.version***REMOVED***3.3.0</spring-cloud-services.version***REMOVED***
+        <wavefront.version***REMOVED***2.2.2</wavefront.version***REMOVED***
 
-		<maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
-		<spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-customers-service</spring-boot.build-image.imageName***REMOVED***
-	</properties***REMOVED***
+        <maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
+        <spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-customers-service</spring-boot.build-image.imageName***REMOVED***
+    </properties***REMOVED***
 
 	<dependencies***REMOVED***
 
@@ -69,6 +70,10 @@
 		</dependency***REMOVED***
 
 		<!-- Spring Cloud --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-bootstrap</artifactId***REMOVED***
+        </dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
 			<artifactId***REMOVED***spring-cloud-starter-config</artifactId***REMOVED***
@@ -125,7 +130,7 @@
 			<dependency***REMOVED***
 				<groupId***REMOVED***io.pivotal.spring.cloud</groupId***REMOVED***
 				<artifactId***REMOVED***spring-cloud-services-dependencies</artifactId***REMOVED***
-				<version***REMOVED***3.1.2.RELEASE</version***REMOVED***
+				<version***REMOVED***${spring-cloud-services.version***REMOVED***</version***REMOVED***
 				<type***REMOVED***pom</type***REMOVED***
 				<scope***REMOVED***import</scope***REMOVED***
 			</dependency***REMOVED***
@@ -144,18 +149,6 @@
 				<version***REMOVED***${spring-cloud.version***REMOVED***</version***REMOVED***
 				<type***REMOVED***pom</type***REMOVED***
 				<scope***REMOVED***import</scope***REMOVED***
-			</dependency***REMOVED***
-			<dependency***REMOVED***
-				<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-				<artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
-				<version***REMOVED***${spring-boot.version***REMOVED***</version***REMOVED***
-				<scope***REMOVED***test</scope***REMOVED***
-				<exclusions***REMOVED***
-					<exclusion***REMOVED***
-						<groupId***REMOVED***junit</groupId***REMOVED***
-						<artifactId***REMOVED***junit</artifactId***REMOVED***
-					</exclusion***REMOVED***
-				</exclusions***REMOVED***
 			</dependency***REMOVED***
 			<dependency***REMOVED***
 				<groupId***REMOVED***org.assertj</groupId***REMOVED***
@@ -241,7 +234,7 @@
 			<dependencies***REMOVED***
 				<dependency***REMOVED***
 					<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-					<artifactId***REMOVED***spring-cloud-starter-kubernetes-config</artifactId***REMOVED***
+					<artifactId***REMOVED***spring-cloud-starter-kubernetes-client-config</artifactId***REMOVED***
 				</dependency***REMOVED***
 			</dependencies***REMOVED***
 		</profile***REMOVED***
@@ -279,34 +272,4 @@
 		</plugins***REMOVED***
 	</build***REMOVED***
 
-	<repositories***REMOVED***
-		<repository***REMOVED***
-			<id***REMOVED***spring-milestones</id***REMOVED***
-			<name***REMOVED***Spring Milestones</name***REMOVED***
-			<url***REMOVED***https://repo.spring.io/milestone</url***REMOVED***
-			<snapshots***REMOVED***
-				<enabled***REMOVED***false</enabled***REMOVED***
-			</snapshots***REMOVED***
-		</repository***REMOVED***
-		<repository***REMOVED***
-			<id***REMOVED***spring-snapshots</id***REMOVED***
-			<name***REMOVED***Spring Snapshots</name***REMOVED***
-			<url***REMOVED***https://repo.spring.io/snapshot</url***REMOVED***
-			<snapshots***REMOVED***
-				<enabled***REMOVED***true</enabled***REMOVED***
-			</snapshots***REMOVED***
-		</repository***REMOVED***
-
-	</repositories***REMOVED***
-
-	<pluginRepositories***REMOVED***
-		<pluginRepository***REMOVED***
-			<id***REMOVED***spring-milestones</id***REMOVED***
-			<name***REMOVED***Spring Milestones</name***REMOVED***
-			<url***REMOVED***https://repo.spring.io/milestone</url***REMOVED***
-			<snapshots***REMOVED***
-				<enabled***REMOVED***false</enabled***REMOVED***
-			</snapshots***REMOVED***
-		</pluginRepository***REMOVED***
-	</pluginRepositories***REMOVED***
 </project***REMOVED***
