@@ -260,7 +260,6 @@
 	</build***REMOVED***
 
 	<profiles***REMOVED***
-
 		<profile***REMOVED***
 			<id***REMOVED***local</id***REMOVED***
 			<dependencies***REMOVED***
@@ -328,14 +327,14 @@
 
 
 		<profile***REMOVED***
-			<id***REMOVED***kubernetes</id***REMOVED***
+			<id***REMOVED***k8s</id***REMOVED***
 	        <activation***REMOVED***
 	            <activeByDefault***REMOVED***true</activeByDefault***REMOVED***
 	        </activation***REMOVED***
 			<dependencies***REMOVED***
 				<dependency***REMOVED***
 					<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
-					<artifactId***REMOVED***spring-cloud-starter-kubernetes-client-all</artifactId***REMOVED***
+					<artifactId***REMOVED***spring-cloud-starter-kubernetes-client-config</artifactId***REMOVED***
 				</dependency***REMOVED***
 			</dependencies***REMOVED***
 		</profile***REMOVED***

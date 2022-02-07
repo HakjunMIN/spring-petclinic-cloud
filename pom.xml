@@ -12,7 +12,6 @@
 
 	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
 	<artifactId***REMOVED***spring-petclinic-cloud</artifactId***REMOVED***
-	<version***REMOVED***2.3.1</version***REMOVED***
 	<name***REMOVED***${project.artifactId***REMOVED***</name***REMOVED***
 	<packaging***REMOVED***pom</packaging***REMOVED***
 
