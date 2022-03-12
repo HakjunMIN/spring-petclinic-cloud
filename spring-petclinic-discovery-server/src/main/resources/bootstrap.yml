@@ -6,7 +6,10 @@
     name: discovery-server
 ---
 ***REMOVED***
-  profiles: docker
+***REMOVED***
+***REMOVED***
+      on-profile: docker
 ***REMOVED***
   ***REMOVED***
       uri: http://config-server:8888
+

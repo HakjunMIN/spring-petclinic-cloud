@@ -6,13 +6,17 @@
     name: visits-service
 ---
 ***REMOVED***
-  profiles: docker
+***REMOVED***
+***REMOVED***
+      on-profile: docker
 ***REMOVED***
   ***REMOVED***
       uri: http://config-server:8888
 ---
 ***REMOVED***
-  profiles: kubernetes
+***REMOVED***
+***REMOVED***
+      on-profile: kubernetes
 ***REMOVED***
   ***REMOVED***
 ***REMOVED***
@@ -29,7 +33,9 @@ management:
 ***REMOVED***
 ---
 ***REMOVED***
-  profiles: tas4k8s
+***REMOVED***
+***REMOVED***
+      on-profile: tas4k8s
 ***REMOVED***
   ***REMOVED***
 ***REMOVED***

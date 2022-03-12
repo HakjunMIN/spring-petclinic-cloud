@@ -11,13 +11,14 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
         <artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-        <version***REMOVED***2.3.1.RELEASE</version***REMOVED***
+        <version***REMOVED***2.6.3</version***REMOVED***
         <relativePath/***REMOVED***
     </parent***REMOVED***
 
     <properties***REMOVED***
         <spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-config-server</spring-boot.build-image.imageName***REMOVED***
-        <spring-cloud.version***REMOVED***Hoxton.SR6</spring-cloud.version***REMOVED***
+        <spring-cloud.version***REMOVED***2021.0.0</spring-cloud.version***REMOVED***
+        <spring-cloud-services.version***REMOVED***3.3.0</spring-cloud-services.version***REMOVED***
     </properties***REMOVED***
 
 	<dependencies***REMOVED***
@@ -29,6 +30,10 @@
         </dependency***REMOVED***
 
         <!-- Spring Cloud --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
+            <artifactId***REMOVED***spring-cloud-starter-bootstrap</artifactId***REMOVED***
+        </dependency***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
 			<artifactId***REMOVED***spring-cloud-config-server</artifactId***REMOVED***
@@ -57,7 +62,7 @@
             <dependency***REMOVED***
                 <groupId***REMOVED***io.pivotal.spring.cloud</groupId***REMOVED***
                 <artifactId***REMOVED***spring-cloud-services-dependencies</artifactId***REMOVED***
-                <version***REMOVED***3.1.2.RELEASE</version***REMOVED***
+                <version***REMOVED***${spring-cloud-services.version***REMOVED***</version***REMOVED***
                 <type***REMOVED***pom</type***REMOVED***
                 <scope***REMOVED***import</scope***REMOVED***
             </dependency***REMOVED***
@@ -68,18 +73,6 @@
                 <version***REMOVED***${spring-cloud.version***REMOVED***</version***REMOVED***
                 <type***REMOVED***pom</type***REMOVED***
                 <scope***REMOVED***import</scope***REMOVED***
-            </dependency***REMOVED***
-            <dependency***REMOVED***
-                <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-                <artifactId***REMOVED***spring-boot-starter-test</artifactId***REMOVED***
-                <version***REMOVED***${spring-boot.version***REMOVED***</version***REMOVED***
-                <scope***REMOVED***test</scope***REMOVED***
-                <exclusions***REMOVED***
-                    <exclusion***REMOVED***
-                        <groupId***REMOVED***junit</groupId***REMOVED***
-                        <artifactId***REMOVED***junit</artifactId***REMOVED***
-                    </exclusion***REMOVED***
-                </exclusions***REMOVED***
             </dependency***REMOVED***
             <dependency***REMOVED***
                 <groupId***REMOVED***org.assertj</groupId***REMOVED***

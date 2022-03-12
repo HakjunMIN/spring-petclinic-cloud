@@ -12,13 +12,17 @@ management:
         apiToken: ""
 ---
 ***REMOVED***
-  profiles: docker
+***REMOVED***
+***REMOVED***
+      on-profile: docker
 ***REMOVED***
   ***REMOVED***
       uri: http://config-server:8888
 ---
 ***REMOVED***
-  profiles: kubernetes
+***REMOVED***
+***REMOVED***
+      on-profile: kubernetes
 ***REMOVED***
   ***REMOVED***
 ***REMOVED***

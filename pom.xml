@@ -7,12 +7,11 @@
 	<parent***REMOVED***
 		<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
 		<artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-		<version***REMOVED***2.3.1.RELEASE</version***REMOVED***
+		<version***REMOVED***2.6.3</version***REMOVED***
 	</parent***REMOVED***
 
 	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
 	<artifactId***REMOVED***spring-petclinic-cloud</artifactId***REMOVED***
-	<version***REMOVED***2.3.1</version***REMOVED***
 	<name***REMOVED***${project.artifactId***REMOVED***</name***REMOVED***
 	<packaging***REMOVED***pom</packaging***REMOVED***
 
@@ -126,36 +125,5 @@
 			</build***REMOVED***
 		</profile***REMOVED***
 	</profiles***REMOVED***
-
-	<repositories***REMOVED***
-		<repository***REMOVED***
-			<id***REMOVED***spring-milestones</id***REMOVED***
-			<name***REMOVED***Spring Milestones</name***REMOVED***
-			<url***REMOVED***https://repo.spring.io/milestone</url***REMOVED***
-			<snapshots***REMOVED***
-				<enabled***REMOVED***false</enabled***REMOVED***
-			</snapshots***REMOVED***
-		</repository***REMOVED***
-		<repository***REMOVED***
-			<id***REMOVED***spring-snapshots</id***REMOVED***
-			<name***REMOVED***Spring Snapshots</name***REMOVED***
-			<url***REMOVED***https://repo.spring.io/snapshot</url***REMOVED***
-			<snapshots***REMOVED***
-				<enabled***REMOVED***true</enabled***REMOVED***
-			</snapshots***REMOVED***
-		</repository***REMOVED***
-
-	</repositories***REMOVED***
-
-	<pluginRepositories***REMOVED***
-		<pluginRepository***REMOVED***
-			<id***REMOVED***spring-milestones</id***REMOVED***
-			<name***REMOVED***Spring Milestones</name***REMOVED***
-			<url***REMOVED***https://repo.spring.io/milestone</url***REMOVED***
-			<snapshots***REMOVED***
-				<enabled***REMOVED***false</enabled***REMOVED***
-			</snapshots***REMOVED***
-		</pluginRepository***REMOVED***
-	</pluginRepositories***REMOVED***
 
 </project***REMOVED***
