@@ -20,15 +20,21 @@
 		<java.version***REMOVED***11</java.version***REMOVED***
 		<assertj.version***REMOVED***3.11.1</assertj.version***REMOVED***
 		<maven-surefire-plugin.version***REMOVED***2.22.0</maven-surefire-plugin.version***REMOVED***
-		<spring-boot.version***REMOVED***2.6.3</spring-boot.version***REMOVED***
-		<spring-cloud.version***REMOVED***2021.0.0</spring-cloud.version***REMOVED***
+		<spring-boot.version***REMOVED***2.7.4</spring-boot.version***REMOVED***
+		<spring-cloud.version***REMOVED***2021.0.4</spring-cloud.version***REMOVED***
 		<wavefront.version***REMOVED***2.2.2</wavefront.version***REMOVED***
-
 		<spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-visits-service</spring-boot.build-image.imageName***REMOVED***
         <spring-cloud-services.version***REMOVED***3.3.0</spring-cloud-services.version***REMOVED***
+		<appcliation-insights.version***REMOVED***3.4.1</appcliation-insights.version***REMOVED***
     </properties***REMOVED***
 
 	<dependencies***REMOVED***
+		 <!-- App Insight --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***com.microsoft.azure</groupId***REMOVED***
+            <artifactId***REMOVED***applicationinsights-runtime-attach</artifactId***REMOVED***
+            <version***REMOVED***${appcliation-insights.version***REMOVED***</version***REMOVED***
+        </dependency***REMOVED***
 		<!-- Spring Boot --***REMOVED***
 		<dependency***REMOVED***
 			<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
@@ -160,6 +166,11 @@
                   <layers***REMOVED***
                     <enabled***REMOVED***true</enabled***REMOVED***
                   </layers***REMOVED***
+				  <image***REMOVED***
+					<env***REMOVED***
+						<BP_JVM_TYPE***REMOVED***JDK</BP_JVM_TYPE***REMOVED***
+					</env***REMOVED***
+				  </image***REMOVED***
 				</configuration***REMOVED***
 				<executions***REMOVED***
 					<execution***REMOVED***

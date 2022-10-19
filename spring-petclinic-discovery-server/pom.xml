@@ -11,17 +11,26 @@
     <parent***REMOVED***
         <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
         <artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-        <version***REMOVED***2.6.3</version***REMOVED***
+        <version***REMOVED***2.7.4</version***REMOVED***
         <relativePath/***REMOVED***
     </parent***REMOVED***
 
     <properties***REMOVED***
         <spring-boot.build-image.imageName***REMOVED***${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-discovery-service</spring-boot.build-image.imageName***REMOVED***
-        <spring-cloud.version***REMOVED***2021.0.0</spring-cloud.version***REMOVED***
-        <spring-cloud-services.version***REMOVED***3.3.0</spring-cloud-services.version***REMOVED***
+   
+		<spring-cloud.version***REMOVED***2021.0.4</spring-cloud.version***REMOVED***
+        <spring-cloud-services.version***REMOVED***3.5.0</spring-cloud-services.version***REMOVED***
+        <appcliation-insights.version***REMOVED***3.4.1</appcliation-insights.version***REMOVED***
     </properties***REMOVED***
 
     <dependencies***REMOVED***
+        <!-- App Insight --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***com.microsoft.azure</groupId***REMOVED***
+            <artifactId***REMOVED***applicationinsights-runtime-attach</artifactId***REMOVED***
+            <version***REMOVED***${appcliation-insights.version***REMOVED***</version***REMOVED***
+        </dependency***REMOVED***
+            
         <!-- Spring Boot --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***

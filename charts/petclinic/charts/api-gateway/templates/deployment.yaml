@@ -3,23 +3,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: vets-service
-  name: vets-service
+    app: api-gateway
+  name: api-gateway
   namespace: spring-petclinic
 ***REMOVED***
   replicas: 1
   selector:
     matchLabels:
-      app: vets-service
+      app: api-gateway
   strategy: {***REMOVED***
   template:
     metadata:
       labels:
-        app: vets-service
+        app: api-gateway
     ***REMOVED***
       containers:
-      - image: ${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-vets-service:latest
-        name: vets-service
+      - image: "{{ .Values.image.repository ***REMOVED******REMOVED***:{{ .Values.image.tag | default .Chart.AppVersion ***REMOVED******REMOVED***"
+        name: api-gateway
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -45,23 +45,9 @@ metadata:
       ***REMOVED***
         - name: SPRING_PROFILES_ACTIVE
           value: kubernetes
-        - name: SPRING_DATASOURCE_URL
-          value: jdbc:mysql://vets-db-mysql.spring-petclinic.svc.cluster.local:3306/service_instance_db?queryInterceptors=brave.mysql8.TracingQueryInterceptor&exceptionInterceptors=brave.mysql8.TracingExceptionInterceptor&zipkinServiceName=vets-db
-      ***REMOVED***
-          value: root
-      ***REMOVED***
-      ***REMOVED***
-       ***REMOVED***
-               name: vets-db-mysql
-               key: mysql-root-password
         - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
           value: proxy://wavefront-proxy.spring-petclinic.svc.cluster.local:2878
-    ***REMOVED***
-          value: c91aa53f-77a3-4009-b9f0-2c8a1f513596  
         ports:
         - containerPort: 8080
-        resources: {***REMOVED***
       restartPolicy: Always
-      imagePullSecrets:
-        - name: regcred
 status: {***REMOVED***

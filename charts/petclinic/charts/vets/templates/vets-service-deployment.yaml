@@ -18,7 +18,7 @@ metadata:
         app: vets-service
     ***REMOVED***
       containers:
-      - image: ${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-vets-service:latest
+      - image:  "{{ .Values.image.repository ***REMOVED******REMOVED***:{{ .Values.image.tag | default .Chart.AppVersion ***REMOVED******REMOVED***"
         name: vets-service
         imagePullPolicy: Always
         livenessProbe:
@@ -56,12 +56,8 @@ metadata:
                key: mysql-root-password
         - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
           value: proxy://wavefront-proxy.spring-petclinic.svc.cluster.local:2878
-    ***REMOVED***
-          value: c91aa53f-77a3-4009-b9f0-2c8a1f513596  
         ports:
         - containerPort: 8080
         resources: {***REMOVED***
       restartPolicy: Always
-      imagePullSecrets:
-        - name: regcred
 status: {***REMOVED***
