@@ -18,7 +18,7 @@ spec:
         app: api-gateway
     spec:
       containers:
-      - image: ${REPOSITORY_PREFIX}/spring-petclinic-cloud-api-gateway:latest
+      - image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
         name: api-gateway
         imagePullPolicy: Always
         livenessProbe:
@@ -47,11 +47,7 @@ spec:
           value: kubernetes
         - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
           value: proxy://wavefront-proxy.spring-petclinic.svc.cluster.local:2878
-        - name: APPINSIGHTS_INSTRUMENTATIONKEY
-          value: c91aa53f-77a3-4009-b9f0-2c8a1f513596
         ports:
         - containerPort: 8080
       restartPolicy: Always
-      imagePullSecrets:
-        - name: regcred
 status: {}
