@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: azurespringacr.azurecr.io/petclinic/spring-petclinic-cloud-visits-service
+  repository: azurespringacr.azurecr.io/petclinic/spring-petclinic-cloud-customers-service
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
@@ -17,21 +17,21 @@ env:
   - name: SPRING_PROFILES_ACTIVE
     value: kubernetes
   - name: SPRING_DATASOURCE_URL
-    value: jdbc:mysql://visits-db-mysql.spring-petclinic.svc.cluster.local:3306/service_instance_db?queryInterceptors=brave.mysql8.TracingQueryInterceptor&exceptionInterceptors=brave.mysql8.TracingExceptionInterceptor&zipkinServiceName=visits-db
+    value: jdbc:mysql://customers-db-mysql.spring-petclinic.svc.cluster.local:3306/service_instance_db?queryInterceptors=brave.mysql8.TracingQueryInterceptor&exceptionInterceptors=brave.mysql8.TracingExceptionInterceptor&zipkinServiceName=customers-db
 ***REMOVED***
     value: root
 ***REMOVED***
 ***REMOVED***
   ***REMOVED***
-          name: visits-db-mysql
+          name: customers-db-mysql
           key: mysql-root-password
   - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
     value: proxy://wavefront-proxy.spring-petclinic.svc.cluster.local:2878
   - name: APPINSIGHTS_INSTRUMENTATIONKEY
     value: c91aa53f-77a3-4009-b9f0-2c8a1f513596  
 
-nameOverride: "visits-service"
-fullnameOverride: "visits-service"
+nameOverride: "customers-service"
+fullnameOverride: "customers-service"
 
 serviceAccount:
   # Specifies whether a service account should be created

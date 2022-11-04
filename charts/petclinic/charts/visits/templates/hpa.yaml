@@ -1,0 +1,28 @@
+{{- if .Values.autoscaling.enabled ***REMOVED******REMOVED***
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ include "visits.fullname" . ***REMOVED******REMOVED***
+  labels:
+    {{- include "visits.labels" . | nindent 4 ***REMOVED******REMOVED***
+***REMOVED***
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ include "visits.fullname" . ***REMOVED******REMOVED***
+  minReplicas: {{ .Values.autoscaling.minReplicas ***REMOVED******REMOVED***
+  maxReplicas: {{ .Values.autoscaling.maxReplicas ***REMOVED******REMOVED***
+  metrics:
+    {{- if .Values.autoscaling.targetCPUUtilizationPercentage ***REMOVED******REMOVED***
+    - type: Resource
+      resource:
+        name: cpu
+        targetAverageUtilization: {{ .Values.autoscaling.targetCPUUtilizationPercentage ***REMOVED******REMOVED***
+    {{- end ***REMOVED******REMOVED***
+    {{- if .Values.autoscaling.targetMemoryUtilizationPercentage ***REMOVED******REMOVED***
+    - type: Resource
+      resource:
+        name: memory
+        targetAverageUtilization: {{ .Values.autoscaling.targetMemoryUtilizationPercentage ***REMOVED******REMOVED***
+    {{- end ***REMOVED******REMOVED***
+{{- end ***REMOVED******REMOVED***

@@ -1,0 +1,61 @@
+{{- if .Values.ingress.enabled -***REMOVED******REMOVED***
+{{- $fullName := include "visits.fullname" . -***REMOVED******REMOVED***
+{{- $svcPort := .Values.service.port -***REMOVED******REMOVED***
+{{- if and .Values.ingress.className (not (semverCompare "***REMOVED***=1.18-0" .Capabilities.KubeVersion.GitVersion)) ***REMOVED******REMOVED***
+  {{- if not (hasKey .Values.ingress.annotations "kubernetes.io/ingress.class") ***REMOVED******REMOVED***
+  {{- $_ := set .Values.ingress.annotations "kubernetes.io/ingress.class" .Values.ingress.className***REMOVED******REMOVED***
+  {{- end ***REMOVED******REMOVED***
+{{- end ***REMOVED******REMOVED***
+{{- if semverCompare "***REMOVED***=1.19-0" .Capabilities.KubeVersion.GitVersion -***REMOVED******REMOVED***
+apiVersion: networking.k8s.io/v1
+{{- else if semverCompare "***REMOVED***=1.14-0" .Capabilities.KubeVersion.GitVersion -***REMOVED******REMOVED***
+apiVersion: networking.k8s.io/v1beta1
+{{- else -***REMOVED******REMOVED***
+apiVersion: extensions/v1beta1
+{{- end ***REMOVED******REMOVED***
+kind: Ingress
+metadata:
+  name: {{ $fullName ***REMOVED******REMOVED***
+  labels:
+    {{- include "visits.labels" . | nindent 4 ***REMOVED******REMOVED***
+  {{- with .Values.ingress.annotations ***REMOVED******REMOVED***
+  annotations:
+    {{- toYaml . | nindent 4 ***REMOVED******REMOVED***
+  {{- end ***REMOVED******REMOVED***
+***REMOVED***
+  {{- if and .Values.ingress.className (semverCompare "***REMOVED***=1.18-0" .Capabilities.KubeVersion.GitVersion) ***REMOVED******REMOVED***
+  ingressClassName: {{ .Values.ingress.className ***REMOVED******REMOVED***
+  {{- end ***REMOVED******REMOVED***
+  {{- if .Values.ingress.tls ***REMOVED******REMOVED***
+  tls:
+    {{- range .Values.ingress.tls ***REMOVED******REMOVED***
+    - hosts:
+        {{- range .hosts ***REMOVED******REMOVED***
+        - {{ . | quote ***REMOVED******REMOVED***
+        {{- end ***REMOVED******REMOVED***
+      secretName: {{ .secretName ***REMOVED******REMOVED***
+    {{- end ***REMOVED******REMOVED***
+  {{- end ***REMOVED******REMOVED***
+  rules:
+    {{- range .Values.ingress.hosts ***REMOVED******REMOVED***
+    - host: {{ .host | quote ***REMOVED******REMOVED***
+      http:
+        paths:
+          {{- range .paths ***REMOVED******REMOVED***
+          - path: {{ .path ***REMOVED******REMOVED***
+            {{- if and .pathType (semverCompare "***REMOVED***=1.18-0" $.Capabilities.KubeVersion.GitVersion) ***REMOVED******REMOVED***
+            pathType: {{ .pathType ***REMOVED******REMOVED***
+            {{- end ***REMOVED******REMOVED***
+            backend:
+              {{- if semverCompare "***REMOVED***=1.19-0" $.Capabilities.KubeVersion.GitVersion ***REMOVED******REMOVED***
+              service:
+                name: {{ $fullName ***REMOVED******REMOVED***
+                port:
+                  number: {{ $svcPort ***REMOVED******REMOVED***
+              {{- else ***REMOVED******REMOVED***
+              serviceName: {{ $fullName ***REMOVED******REMOVED***
+              servicePort: {{ $svcPort ***REMOVED******REMOVED***
+              {{- end ***REMOVED******REMOVED***
+          {{- end ***REMOVED******REMOVED***
+    {{- end ***REMOVED******REMOVED***
+{{- end ***REMOVED******REMOVED***

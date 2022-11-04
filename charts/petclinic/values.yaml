@@ -1,14 +1,26 @@
-replicaCount: 1
-
-nameOverride: ""
-
-wavefrontApiKey: ""
-***REMOVED*** 
 ***REMOVED***
-    repository: docker.io/springcommunity/spring-petclinic-cloud-api-gateway
-    pullPolicy: IfNotPresent #Always
-    tag: "" #image tag should be set in Chart.yaml - but where it's a strange tag, just override here
+***REMOVED***
+    repository: azurespringacr.azurecr.io/petclinic/spring-petclinic-cloud-vets-service
+***REMOVED***
+ 
 
-  service:
-    type: ClusterIP
-    port: 80
+***REMOVED***
+***REMOVED***
+    repository: azurespringacr.azurecr.io/petclinic/spring-petclinic-cloud-customers-service
+***REMOVED***
+  resources: 
+    limits:
+      memory: 1Gi
+    requests:
+      cpu: 500m
+      memory: 1Gi  
+
+***REMOVED***
+***REMOVED***
+    repository: azurespringacr.azurecr.io/petclinic/spring-petclinic-cloud-visits-service
+***REMOVED***
+
+***REMOVED***
+***REMOVED***
+    repository: azurespringacr.azurecr.io/petclinic/spring-petclinic-cloud-api-gateway
+***REMOVED***
