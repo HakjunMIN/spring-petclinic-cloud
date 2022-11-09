@@ -1,26 +1,26 @@
 ***REMOVED***
 ***REMOVED***
-    repository: azurespringacr.azurecr.io/petclinic/spring-petclinic-cloud-vets-service
+    repository: springpetacr.azurecr.io/petclinic/spring-petclinic-vets-service
 ***REMOVED***
  
 
 ***REMOVED***
 ***REMOVED***
-    repository: azurespringacr.azurecr.io/petclinic/spring-petclinic-cloud-customers-service
+    repository: springpetacr.azurecr.io/petclinic/spring-petclinic-customers-service
+***REMOVED*** 
+
+***REMOVED***
+***REMOVED***
+    repository: springpetacr.azurecr.io/petclinic/spring-petclinic-visits-service
+***REMOVED***
+
+***REMOVED***
+***REMOVED***
+    repository: springpetacr.azurecr.io/petclinic/spring-petclinic-api-gateway
 ***REMOVED***
   resources: 
     limits:
-      memory: 1Gi
+      memory: 2Gi
     requests:
-      cpu: 500m
+      cpu: 1000m
       memory: 1Gi  
-
-***REMOVED***
-***REMOVED***
-    repository: azurespringacr.azurecr.io/petclinic/spring-petclinic-cloud-visits-service
-***REMOVED***
-
-***REMOVED***
-***REMOVED***
-    repository: azurespringacr.azurecr.io/petclinic/spring-petclinic-cloud-api-gateway
-***REMOVED***
