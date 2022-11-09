@@ -25,6 +25,7 @@ metadata:
         {{- toYaml . | nindent 8 ***REMOVED******REMOVED***
       {{- end ***REMOVED******REMOVED***
       serviceAccountName: {{ include "visits.serviceAccountName" . ***REMOVED******REMOVED***
+      
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 ***REMOVED******REMOVED***
       containers:
@@ -33,6 +34,7 @@ metadata:
             {{- toYaml .Values.securityContext | nindent 12 ***REMOVED******REMOVED***
         ***REMOVED*** "{{ .Values.image.repository ***REMOVED******REMOVED***:{{ .Values.image.tag | default .Chart.AppVersion ***REMOVED******REMOVED***"
           imagePullPolicy: {{ .Values.image.pullPolicy ***REMOVED******REMOVED***
+        ***REMOVED*** {{- toYaml .Values.volumeMounts | nindent 12***REMOVED******REMOVED***
           ports:
             - containerPort: 8080
           livenessProbe:
@@ -59,3 +61,8 @@ metadata:
       tolerations:
         {{- toYaml . | nindent 8 ***REMOVED******REMOVED***
       {{- end ***REMOVED******REMOVED***
+      {{- with .Values.volumes ***REMOVED******REMOVED***
+     ***REMOVED***
+        {{- toYaml . | nindent 8 ***REMOVED******REMOVED***
+      {{- end ***REMOVED******REMOVED***
+      
