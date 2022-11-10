@@ -25,6 +25,13 @@
     </properties***REMOVED***
 
     <dependencies***REMOVED***
+        <!-- Azure App Config --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***com.azure.spring</groupId***REMOVED***
+            <artifactId***REMOVED***azure-spring-cloud-appconfiguration-config</artifactId***REMOVED***
+            <version***REMOVED***2.6.0</version***REMOVED***
+        </dependency***REMOVED***
+
         <!-- Spring Boot --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***org.springframework.boot</groupId***REMOVED***

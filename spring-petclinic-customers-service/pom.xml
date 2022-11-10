@@ -31,7 +31,13 @@
     </properties***REMOVED***
 
 	<dependencies***REMOVED***
-
+        <!-- Azure App Config --***REMOVED***
+        <dependency***REMOVED***
+            <groupId***REMOVED***com.azure.spring</groupId***REMOVED***
+            <artifactId***REMOVED***azure-spring-cloud-appconfiguration-config</artifactId***REMOVED***
+            <version***REMOVED***2.6.0</version***REMOVED***
+        </dependency***REMOVED***
+		
  		<!-- App Insight --***REMOVED***
         <dependency***REMOVED***
             <groupId***REMOVED***com.microsoft.azure</groupId***REMOVED***
@@ -234,10 +240,7 @@
 
 
 		<profile***REMOVED***
-			<id***REMOVED***k8s</id***REMOVED***
-	        <activation***REMOVED***
-	            <activeByDefault***REMOVED***true</activeByDefault***REMOVED***
-	        </activation***REMOVED***
+			<id***REMOVED***k8s</id***REMOVED***	        
 			<dependencies***REMOVED***
 				<dependency***REMOVED***
 					<groupId***REMOVED***org.springframework.cloud</groupId***REMOVED***
