@@ -27,6 +27,9 @@
     ***REMOVED***
   ***REMOVED***
         name: petclinic-config
+***REMOVED***
+***REMOVED***
+  ***REMOVED***    
 management:
   endpoint:
     restart:
@@ -68,7 +71,7 @@ management:
 ***REMOVED***
           - connection-string: "Endpoint=https://springappconfig.azconfig.io;Id=urfc-lq-s0:hv6xtBHrPOMfbk72GhD0;Secret=ZFZIiP2w44M8R8lTXTiYPQ7woXltzwhwfCIEv3yw7Kg="
             selects:
-              - label-filter: 'stage'
+              - label-filter: ',${spring.profiles.active***REMOVED***'
   
 management:
   endpoint:
