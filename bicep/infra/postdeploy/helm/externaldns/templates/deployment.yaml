@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "app.fullname" . ***REMOVED******REMOVED***
+  labels:
+    {{- include "app.labels" . | nindent 4 ***REMOVED******REMOVED***
+***REMOVED***
+  replicas: {{ .Values.replicaCount ***REMOVED******REMOVED***
+  selector:
+    matchLabels:
+      {{- include "app.selectorLabels" . | nindent 6 ***REMOVED******REMOVED***
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        {{- include "app.selectorLabels" . | nindent 8 ***REMOVED******REMOVED***
+    ***REMOVED***
+      serviceAccountName: {{ include "app.serviceAccountName" . ***REMOVED******REMOVED***
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 ***REMOVED******REMOVED***
+      containers:
+        - name: {{ .Chart.Name ***REMOVED******REMOVED***
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 ***REMOVED******REMOVED***
+        ***REMOVED*** "{{ .Values.image.repository ***REMOVED******REMOVED***:{{ .Values.image.tag | default .Chart.AppVersion ***REMOVED******REMOVED***"
+          #imagePullPolicy: {{ .Values.image.pullPolicy ***REMOVED******REMOVED***
+          args:
+            - --source=service
+            - --source=ingress
+            - --domain-filter={{ .Values.externaldns.domainfilter ***REMOVED******REMOVED***
+            - --provider={{ .Values.externaldns.provider ***REMOVED******REMOVED***
+        ***REMOVED***
+            - name: {{ .Values.volumeAndSecretname ***REMOVED******REMOVED***
+              mountPath: /etc/kubernetes
+        ***REMOVED***
+     ***REMOVED***
+        - name: {{ .Values.volumeAndSecretname ***REMOVED******REMOVED***
+          secret:
+            secretName: {{ .Values.volumeAndSecretname ***REMOVED******REMOVED***

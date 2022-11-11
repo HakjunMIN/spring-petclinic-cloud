@@ -1,0 +1,22 @@
+1. Get the application URL by running these commands:
+{{- if .Values.ingress.enabled ***REMOVED******REMOVED***
+{{- range $host := .Values.ingress.hosts ***REMOVED******REMOVED***
+  {{- range .paths ***REMOVED******REMOVED***
+  http{{ if $.Values.ingress.tls ***REMOVED******REMOVED***s{{ end ***REMOVED******REMOVED***://{{ $host.host ***REMOVED******REMOVED***{{ .path ***REMOVED******REMOVED***
+  {{- end ***REMOVED******REMOVED***
+{{- end ***REMOVED******REMOVED***
+{{- else if contains "NodePort" .Values.service.type ***REMOVED******REMOVED***
+  export NODE_PORT=$(kubectl get --namespace {{ .Release.Namespace ***REMOVED******REMOVED*** -o jsonpath="{.spec.ports[0].nodePort***REMOVED***" services {{ include "visits.fullname" . ***REMOVED******REMOVED***)
+  export NODE_IP=$(***REMOVED*** --namespace {{ .Release.Namespace ***REMOVED******REMOVED*** -o jsonpath="{.items[0].status.addresses[0].address***REMOVED***")
+  echo http://$NODE_IP:$NODE_PORT
+{{- else if contains "LoadBalancer" .Values.service.type ***REMOVED******REMOVED***
+     NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+           You can watch the status of by running 'kubectl get --namespace {{ .Release.Namespace ***REMOVED******REMOVED*** svc -w {{ include "visits.fullname" . ***REMOVED******REMOVED***'
+  export SERVICE_IP=$(kubectl get svc --namespace {{ .Release.Namespace ***REMOVED******REMOVED*** {{ include "visits.fullname" . ***REMOVED******REMOVED*** --template "{{"{{ range (index .status.loadBalancer.ingress 0) ***REMOVED******REMOVED***{{.***REMOVED******REMOVED***{{ end ***REMOVED******REMOVED***"***REMOVED******REMOVED***")
+  echo http://$SERVICE_IP:{{ .Values.service.port ***REMOVED******REMOVED***
+{{- else if contains "ClusterIP" .Values.service.type ***REMOVED******REMOVED***
+  export POD_NAME=$(kubectl get pods --namespace {{ .Release.Namespace ***REMOVED******REMOVED*** -l "app.kubernetes.io/name={{ include "visits.name" . ***REMOVED******REMOVED***,app.kubernetes.io/instance={{ .Release.Name ***REMOVED******REMOVED***" -o jsonpath="{.items[0].metadata.name***REMOVED***")
+  export CONTAINER_PORT=$(kubectl get pod --namespace {{ .Release.Namespace ***REMOVED******REMOVED*** $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort***REMOVED***")
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl --namespace {{ .Release.Namespace ***REMOVED******REMOVED*** port-forward $POD_NAME 8080:$CONTAINER_PORT
+{{- end ***REMOVED******REMOVED***

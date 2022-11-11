@@ -1,0 +1,25 @@
+
+@host=20.214.220.215
+###
+GET http://{{host***REMOVED******REMOVED***/api/customer/owners
+
+
+###
+GET http://{{host***REMOVED******REMOVED***/api/customer/owners/4
+
+###
+GET http://{{host***REMOVED******REMOVED***/actuator
+
+###
+GET http://{{host***REMOVED******REMOVED***/api/customer/owners/ 
+http://{{host***REMOVED******REMOVED***/api/customer/petTypes
+http://{{host***REMOVED******REMOVED***/api/customer/owners/3/pets/4
+http://{{host***REMOVED******REMOVED***/api/customer/owners/6/pets/8/
+
+###
+http://{{host***REMOVED******REMOVED***/api/vet/vets
+http://{{host***REMOVED******REMOVED***/api/visit/owners/6/pets/8/visits
+http://{{host***REMOVED******REMOVED***/api/visit/owners/6/pets/8/visits
+
+###
+GET http://{{host***REMOVED******REMOVED***/api/visit/owners/6/pets/8/visits
