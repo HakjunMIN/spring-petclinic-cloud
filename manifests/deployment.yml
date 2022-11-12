@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: springmsademo 
+***REMOVED***
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springmsademo
+  template:
+    metadata:
+      labels:
+        app: springmsademo 
+    ***REMOVED***
+      containers:
+        - name: springmsademo 
+        ***REMOVED*** spreg.azurecr.io/springmsademo
+          ports:
+          - containerPort: 80
