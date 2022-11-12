@@ -1,7 +1,0 @@
-<?xml version="1.0"?***REMOVED***
-<!DOCTYPE module PUBLIC
-		"-//Puppy Crawl//DTD Check Configuration 1.2//EN"
-		"https://checkstyle.org/dtds/configuration_1_2.dtd"***REMOVED***
-<module name="com.puppycrawl.tools.checkstyle.Checker"***REMOVED***
-	<module name="io.spring.nohttp.checkstyle.check.NoHttpCheck"/***REMOVED***
-</module***REMOVED***
