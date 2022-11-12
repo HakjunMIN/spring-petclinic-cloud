@@ -16,12 +16,9 @@
 	<packaging***REMOVED***pom</packaging***REMOVED***
 
 	<modules***REMOVED***
-		<!-- <module***REMOVED***spring-petclinic-admin-server</module***REMOVED*** --***REMOVED***
 		<module***REMOVED***spring-petclinic-customers-service</module***REMOVED***
 		<module***REMOVED***spring-petclinic-vets-service</module***REMOVED***
 		<module***REMOVED***spring-petclinic-visits-service</module***REMOVED***
-		<!-- <module***REMOVED***spring-petclinic-config-server</module***REMOVED*** --***REMOVED***
-		<!-- <module***REMOVED***spring-petclinic-discovery-server</module***REMOVED*** --***REMOVED***
 		<module***REMOVED***spring-petclinic-api-gateway</module***REMOVED***
 	</modules***REMOVED***
 
