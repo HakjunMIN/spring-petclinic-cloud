@@ -1,14 +1,17 @@
 
-@host=20.196.248.71
-###
-GET http://{{host}}/api/customer/owners
-
-
-###
-GET http://{{host}}/api/customer/owners/4
+@host=20.249.49.74
 
 ###
 GET http://{{host}}/actuator
+
+###
+GET http://{{host}}/api/customer/actuator
+
+###
+GET http://{{host}}/api/customer/owners
+
+###
+GET http://{{host}}/api/customer/owners/4
 
 ###
 POST http://{{host}}/actuator/refresh
