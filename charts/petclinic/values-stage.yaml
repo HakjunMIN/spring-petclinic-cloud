@@ -89,6 +89,8 @@
     value: "stage"
 
 ***REMOVED***
+  service:
+    type: ClusterIP
 ***REMOVED***
   - name: SPRING_PROFILES_ACTIVE         
     value: "stage"     
