@@ -1,5 +1,5 @@
 
-@host=20.214.220.215
+@host=20.196.248.71
 ###
 GET http://{{host}}/api/customer/owners
 
@@ -9,6 +9,9 @@ GET http://{{host}}/api/customer/owners/4
 
 ###
 GET http://{{host}}/actuator
+
+###
+POST http://{{host}}/actuator/refresh
 
 ###
 GET http://{{host}}/api/customer/owners/ 
