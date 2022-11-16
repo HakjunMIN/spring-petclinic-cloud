@@ -89,6 +89,8 @@ visits:
     value: "stage"
 
 api-gateway:
+  service:
+    type: ClusterIP
   env:
   - name: SPRING_PROFILES_ACTIVE         
     value: "stage"     
