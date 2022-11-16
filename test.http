@@ -1,14 +1,17 @@
 
-@host=20.196.248.71
-###
-GET http://{{host***REMOVED******REMOVED***/api/customer/owners
-
-
-###
-GET http://{{host***REMOVED******REMOVED***/api/customer/owners/4
+@host=20.249.49.74
 
 ###
 GET http://{{host***REMOVED******REMOVED***/actuator
+
+###
+GET http://{{host***REMOVED******REMOVED***/api/customer/actuator
+
+###
+GET http://{{host***REMOVED******REMOVED***/api/customer/owners
+
+###
+GET http://{{host***REMOVED******REMOVED***/api/customer/owners/4
 
 ###
 POST http://{{host***REMOVED******REMOVED***/actuator/refresh
