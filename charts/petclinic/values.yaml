@@ -1,3 +1,6 @@
+keyvault:
+  enabled: false
+
 vets:
   image:
     repository: spreg.azurecr.io/petclinic/spring-petclinic-cloud-vets-service
