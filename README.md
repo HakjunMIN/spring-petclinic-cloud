@@ -109,7 +109,7 @@ cd spring-petclinic-api-gateway && docker build -t ${REPOSITORY_PREFIX}/spring-p
 > [!IMPORTANT]
 >
 > OSX M1 맥북에서 Docker 빌드할 때 ` --platform linux/amd64` 파라미터를 반드시 넣어야 함.
-> 혹은 `buildx`를 통해 멀티 플랫폼 빌드 수행 https://docs.docker.com.xy2401.com/buildx/working-with-buildx/
+> 혹은 `buildx`를 통해 멀티 플랫폼 빌드 수행 https://www.docker.com/blog/how-to-rapidly-build-multi-architecture-images-with-buildx/
 
 혹은 `spring-boot:build-image` goal 사용
   
