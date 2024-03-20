@@ -18,7 +18,7 @@
 * bash 설정
   
   ```bash
-  alias k='kubectl'
+  alias k='kubectl' 
   alias ns='kubectl config set-context $(kubectl config current-context) --namespace'
   alias nsv='kubectl config view | grep namespace:'
   ```
