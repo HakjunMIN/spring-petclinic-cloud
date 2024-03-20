@@ -1,5 +1,5 @@
 
-@host=20.249.49.74
+@host=4.230.152.237
 
 ###
 GET http://{{host***REMOVED******REMOVED***/actuator
