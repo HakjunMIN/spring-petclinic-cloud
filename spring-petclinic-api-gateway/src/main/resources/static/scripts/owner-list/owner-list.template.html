@@ -1,31 +1,31 @@
-<h2***REMOVED***Owners</h2***REMOVED***
+<h2>Owners</h2>
 
-<form onsubmit="javascript:void(0)" style="max-width: 20em; margin-top: 2em;"***REMOVED***
-    <div class="form-group"***REMOVED***
-        <input type="text" class="form-control" placeholder="Search Filter" ng-model="$ctrl.query" /***REMOVED***
-    </div***REMOVED***
-</form***REMOVED***
+<form onsubmit="javascript:void(0)" style="max-width: 20em; margin-top: 2em;">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search Filter" ng-model="$ctrl.query" />
+    </div>
+</form>
 
-<table class="table table-striped"***REMOVED***
-    <thead***REMOVED***
-    <tr***REMOVED***
-        <th***REMOVED***Name</th***REMOVED***
-        <th class="hidden-sm hidden-xs"***REMOVED***Address</th***REMOVED***
-        <th***REMOVED***City</th***REMOVED***
-        <th***REMOVED***Telephone</th***REMOVED***
-        <th class="hidden-xs"***REMOVED***Pets</th***REMOVED***
-    </tr***REMOVED***
-    </thead***REMOVED***
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th class="hidden-sm hidden-xs">Address</th>
+        <th>City</th>
+        <th>Telephone</th>
+        <th class="hidden-xs">Pets</th>
+    </tr>
+    </thead>
 
-    <tr ng-repeat="owner in $ctrl.owners | filter:$ctrl.query track by owner.id"***REMOVED***
-        <td***REMOVED***
-            <a ui-sref="ownerDetails({ ownerId: owner.id ***REMOVED***)"***REMOVED***
-                {{owner.firstName***REMOVED******REMOVED*** {{owner.lastName***REMOVED******REMOVED***
-            </a***REMOVED***
-        </td***REMOVED***
-        <td class="hidden-sm hidden-xs"***REMOVED***{{owner.address***REMOVED******REMOVED***</td***REMOVED***
-        <td***REMOVED***{{owner.city***REMOVED******REMOVED***</td***REMOVED***
-        <td***REMOVED***{{owner.telephone***REMOVED******REMOVED***</td***REMOVED***
-        <td class="hidden-xs"***REMOVED***<span ng-repeat="pet in owner.pets track by pet.id"***REMOVED***{{pet.name + ' '***REMOVED******REMOVED***</span***REMOVED***</td***REMOVED***
-    </tr***REMOVED***
-</table***REMOVED***
+    <tr ng-repeat="owner in $ctrl.owners | filter:$ctrl.query track by owner.id">
+        <td>
+            <a ui-sref="ownerDetails({ ownerId: owner.id })">
+                {{owner.firstName}} {{owner.lastName}}
+            </a>
+        </td>
+        <td class="hidden-sm hidden-xs">{{owner.address}}</td>
+        <td>{{owner.city}}</td>
+        <td>{{owner.telephone}}</td>
+        <td class="hidden-xs"><span ng-repeat="pet in owner.pets track by pet.id">{{pet.name + ' '}}</span></td>
+    </tr>
+</table>

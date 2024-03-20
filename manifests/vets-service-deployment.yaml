@@ -6,19 +6,19 @@ metadata:
     app: vets-service
   name: vets-service
   namespace: spring-petclinic
-***REMOVED***
+spec:
   replicas: 1
   selector:
     matchLabels:
       app: vets-service
-  strategy: {***REMOVED***
+  strategy: {}
   template:
     metadata:
       labels:
         app: vets-service
-    ***REMOVED***
+    spec:
       containers:
-      - image: ${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-vets-service:latest
+      - image: ${REPOSITORY_PREFIX}/spring-petclinic-cloud-vets-service:latest
         name: vets-service
         imagePullPolicy: Always
         livenessProbe:
@@ -43,16 +43,16 @@ metadata:
           requests:
             cpu: 500m
             memory: 1Gi
-      ***REMOVED***
+        env:
         - name: SPRING_PROFILES_ACTIVE
           value: kubernetes
         - name: SPRING_DATASOURCE_URL
           value: jdbc:mysql://vets-db-mysql.spring-petclinic.svc.cluster.local:3306/service_instance_db?queryInterceptors=brave.mysql8.TracingQueryInterceptor&exceptionInterceptors=brave.mysql8.TracingExceptionInterceptor&zipkinServiceName=vets-db
-      ***REMOVED***
+        - name: SPRING_DATASOURCE_USERNAME
           value: root
-      ***REMOVED***
-      ***REMOVED***
-       ***REMOVED***
+        - name: SPRING_DATASOURCE_PASSWORD
+          valueFrom:
+             secretKeyRef:
                name: vets-db-mysql
                key: mysql-root-password
         - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
@@ -62,4 +62,4 @@ metadata:
       restartPolicy: Always
       imagePullSecrets:
         - name: regcred
-status: {***REMOVED***
+status: {}

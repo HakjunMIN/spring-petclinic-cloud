@@ -79,8 +79,8 @@ if [ -z "$M2_HOME" ] ; then
   # need this for relative symlinks
   while [ -h "$PRG" ] ; do
     ls=`ls -ld "$PRG"`
-    link=`expr "$ls" : '.*-***REMOVED*** \(.*\)$'`
-    if expr "$link" : '/.*' ***REMOVED*** /dev/null; then
+    link=`expr "$ls" : '.*-> \(.*\)$'`
+    if expr "$link" : '/.*' > /dev/null; then
       PRG="$link"
     else
       PRG="`dirname "$PRG"`/$link"
@@ -150,8 +150,8 @@ if [ -z "$JAVACMD" ] ; then
 fi
 
 if [ ! -x "$JAVACMD" ] ; then
-  echo "Error: JAVA_HOME is not defined correctly." ***REMOVED***&2
-  echo "  We cannot execute $JAVACMD" ***REMOVED***&2
+  echo "Error: JAVA_HOME is not defined correctly." >&2
+  echo "  We cannot execute $JAVACMD" >&2
   exit 1
 fi
 
@@ -179,20 +179,20 @@ find_maven_basedir() {
       break
     fi
     # workaround for JBEAP-8937 (on Solaris 10/Sparc)
-    if [ -d "${wdir***REMOVED***" ]; then
+    if [ -d "${wdir}" ]; then
       wdir=`cd "$wdir/.."; pwd`
     fi
     # end of workaround
   done
-  echo "${basedir***REMOVED***"
-***REMOVED***
+  echo "${basedir}"
+}
 
 # concatenates all lines of a file
 concat_lines() {
   if [ -f "$1" ]; then
     echo "$(tr -s '\n' ' ' < "$1")"
   fi
-***REMOVED***
+}
 
 BASE_DIR=`find_maven_basedir "$(pwd)"`
 if [ -z "$BASE_DIR" ]; then
@@ -209,7 +209,7 @@ if [ -r "$BASE_DIR/.mvn/wrapper/maven-wrapper.jar" ]; then
     fi
 else
     if [ "$MVNW_VERBOSE" = true ]; then
-      echo "Couldn't find .mvn/wrapper/maven-wrapper.jar, downloading it ***REMOVED***"
+      echo "Couldn't find .mvn/wrapper/maven-wrapper.jar, downloading it ..."
     fi
     if [ -n "$MVNW_REPOURL" ]; then
       jarUrl="$MVNW_REPOURL/io/takari/maven-wrapper/0.5.4/maven-wrapper-0.5.4.jar"
@@ -228,18 +228,18 @@ else
       wrapperJarPath=`cygpath --path --windows "$wrapperJarPath"`
     fi
 
-    if command -v wget ***REMOVED*** /dev/null; then
+    if command -v wget > /dev/null; then
         if [ "$MVNW_VERBOSE" = true ]; then
-          echo "Found wget ***REMOVED*** using wget"
+          echo "Found wget ... using wget"
         fi
         if [ -z "$MVNW_USERNAME" ] || [ -z "$MVNW_PASSWORD" ]; then
             wget "$jarUrl" -O "$wrapperJarPath"
         else
             wget --http-user=$MVNW_USERNAME --http-password=$MVNW_PASSWORD "$jarUrl" -O "$wrapperJarPath"
         fi
-    elif command -v curl ***REMOVED*** /dev/null; then
+    elif command -v curl > /dev/null; then
         if [ "$MVNW_VERBOSE" = true ]; then
-          echo "Found curl ***REMOVED*** using curl"
+          echo "Found curl ... using curl"
         fi
         if [ -z "$MVNW_USERNAME" ] || [ -z "$MVNW_PASSWORD" ]; then
             curl -o "$wrapperJarPath" "$jarUrl" -f
@@ -259,7 +259,7 @@ else
         if [ -e "$javaClass" ]; then
             if [ ! -e "$BASE_DIR/.mvn/wrapper/MavenWrapperDownloader.class" ]; then
                 if [ "$MVNW_VERBOSE" = true ]; then
-                  echo " - Compiling MavenWrapperDownloader.java ***REMOVED***"
+                  echo " - Compiling MavenWrapperDownloader.java ..."
                 fi
                 # Compiling the Java class
                 ("$JAVA_HOME/bin/javac" "$javaClass")
@@ -267,7 +267,7 @@ else
             if [ -e "$BASE_DIR/.mvn/wrapper/MavenWrapperDownloader.class" ]; then
                 # Running the downloader
                 if [ "$MVNW_VERBOSE" = true ]; then
-                  echo " - Running MavenWrapperDownloader.java ***REMOVED***"
+                  echo " - Running MavenWrapperDownloader.java ..."
                 fi
                 ("$JAVA_HOME/bin/java" -cp .mvn/wrapper MavenWrapperDownloader "$MAVEN_PROJECTBASEDIR")
             fi
@@ -278,7 +278,7 @@ fi
 # End of extension
 ##########################################################################################
 
-export MAVEN_PROJECTBASEDIR=${MAVEN_BASEDIR:-"$BASE_DIR"***REMOVED***
+export MAVEN_PROJECTBASEDIR=${MAVEN_BASEDIR:-"$BASE_DIR"}
 if [ "$MVNW_VERBOSE" = true ]; then
   echo $MAVEN_PROJECTBASEDIR
 fi
@@ -306,5 +306,5 @@ WRAPPER_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain
 exec "$JAVACMD" \
   $MAVEN_OPTS \
   -classpath "$MAVEN_PROJECTBASEDIR/.mvn/wrapper/maven-wrapper.jar" \
-  "-Dmaven.home=${M2_HOME***REMOVED***" "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR***REMOVED***" \
-  ${WRAPPER_LAUNCHER***REMOVED*** $MAVEN_CONFIG "$@"
+  "-Dmaven.home=${M2_HOME}" "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR}" \
+  ${WRAPPER_LAUNCHER} $MAVEN_CONFIG "$@"

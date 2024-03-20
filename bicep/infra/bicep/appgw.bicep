@@ -8,28 +8,28 @@ param workspaceId string
 param appGWcount int
 param appGWmaxCount int
 
-var appgwName = 'agw-${resourceName***REMOVED***'
-var appgwResourceId = resourceId('Microsoft.Network/applicationGateways', '${appgwName***REMOVED***')
+var appgwName = 'agw-${resourceName}'
+var appgwResourceId = resourceId('Microsoft.Network/applicationGateways', '${appgwName}')
 
 resource appgwpip 'Microsoft.Network/publicIPAddresses@2020-07-01' = {
-  name: 'pip-agw-${resourceName***REMOVED***'
+  name: 'pip-agw-${resourceName}'
   location: location
   sku: {
     name: 'Standard'
-  ***REMOVED***
+  }
   properties: {
     publicIPAllocationMethod: 'Static'
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 var frontendPublicIpConfig = {
   properties: {
     publicIPAddress: {
-      id: '${appgwpip.id***REMOVED***'
-    ***REMOVED***
-  ***REMOVED***
+      id: '${appgwpip.id}'
+    }
+  }
   name: 'appGatewayFrontendIP'
-***REMOVED***
+}
 
 var frontendPrivateIpConfig = {
   properties: {
@@ -37,18 +37,18 @@ var frontendPrivateIpConfig = {
     privateIPAddress: privateIpApplicationGateway
     subnet: {
       id: appGwSubnetId
-    ***REMOVED***
-  ***REMOVED***
+    }
+  }
   name: 'appGatewayPrivateIP'
-***REMOVED***
+}
 
 var tier = 'WAF_v2'
 var appGWsku = union({
   name: tier
   tier: tier
-***REMOVED***, appGWmaxCount == 0 ? {
+}, appGWmaxCount == 0 ? {
   capacity: appGWcount
-***REMOVED*** : {***REMOVED***)
+} : {})
 
 // ugh, need to create a variable with the app gateway properies, because of the conditional key 'autoscaleConfiguration'
 var appgwProperties = union({
@@ -59,9 +59,9 @@ var appgwProperties = union({
       properties: {
         subnet: {
           id: appGwSubnetId
-  ***REMOVED***
-***REMOVED***
-    ***REMOVED***
+        }
+      }
+    }
   ]
   frontendIPConfigurations: empty(privateIpApplicationGateway) ? array(frontendPublicIpConfig) : concat(array(frontendPublicIpConfig), array(frontendPrivateIpConfig))
   frontendPorts: [
@@ -69,13 +69,13 @@ var appgwProperties = union({
       name: 'appGatewayFrontendPort'
       properties: {
         port: 80
-***REMOVED***
-    ***REMOVED***
+      }
+    }
   ]
   backendAddressPools: [
     {
       name: 'defaultaddresspool'
-    ***REMOVED***
+    }
   ]
   backendHttpSettingsCollection: [
     {
@@ -86,22 +86,22 @@ var appgwProperties = union({
         cookieBasedAffinity: 'Disabled'
         requestTimeout: 30
         pickHostNameFromBackendAddress: true
-***REMOVED***
-    ***REMOVED***
+      }
+    }
   ]
   httpListeners: [
     {
       name: 'hlisten'
       properties: {
         frontendIPConfiguration: {
-          id: '${appgwResourceId***REMOVED***/frontendIPConfigurations/appGatewayFrontendIP'
-  ***REMOVED***
+          id: '${appgwResourceId}/frontendIPConfigurations/appGatewayFrontendIP'
+        }
         frontendPort: {
-          id: '${appgwResourceId***REMOVED***/frontendPorts/appGatewayFrontendPort'
-  ***REMOVED***
+          id: '${appgwResourceId}/frontendPorts/appGatewayFrontendPort'
+        }
         protocol: 'Http'
-***REMOVED***
-    ***REMOVED***
+      }
+    }
   ]
   requestRoutingRules: [
     {
@@ -109,23 +109,23 @@ var appgwProperties = union({
       properties: {
         ruleType: 'Basic'
         httpListener: {
-          id: '${appgwResourceId***REMOVED***/httpListeners/hlisten'
-  ***REMOVED***
+          id: '${appgwResourceId}/httpListeners/hlisten'
+        }
         backendAddressPool: {
-          id: '${appgwResourceId***REMOVED***/backendAddressPools/defaultaddresspool'
-  ***REMOVED***
+          id: '${appgwResourceId}/backendAddressPools/defaultaddresspool'
+        }
         backendHttpSettings: {
-          id: '${appgwResourceId***REMOVED***/backendHttpSettingsCollection/defaulthttpsetting'
-  ***REMOVED***
-***REMOVED***
-    ***REMOVED***
+          id: '${appgwResourceId}/backendHttpSettingsCollection/defaulthttpsetting'
+        }
+      }
+    }
   ]
-***REMOVED***, appGWmaxCount ***REMOVED*** 0 ? {
+}, appGWmaxCount > 0 ? {
   autoscaleConfiguration: {
     minCapacity: appGWcount
     maxCapacity: appGWmaxCount
-  ***REMOVED***
-***REMOVED*** : {***REMOVED***)
+  }
+} : {})
 
 var appGwZones = !empty(availabilityZones) ? availabilityZones : []
 
@@ -138,11 +138,11 @@ resource appgw 'Microsoft.Network/applicationGateways@2020-07-01' = if (!empty(u
   identity: !empty(userAssignedIdentity) ? {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '${userAssignedIdentity***REMOVED***': {***REMOVED***
-    ***REMOVED***
-  ***REMOVED*** : {***REMOVED***
+      '${userAssignedIdentity}': {}
+    }
+  } : {}
   properties: appgwProperties
-***REMOVED***
+}
 
 param agicPrincipleId string
 var contributor = resourceId('Microsoft.Authorization/roleDefinitions', 'b24988ac-6180-42a0-ab88-20f7382dd24c')
@@ -154,8 +154,8 @@ resource appGwAGICContrib 'Microsoft.Authorization/roleAssignments@2020-04-01-pr
     roleDefinitionId: contributor
     principalType: 'ServicePrincipal'
     principalId: agicPrincipleId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 var reader = resourceId('Microsoft.Authorization/roleDefinitions', 'acdd72a7-3385-48ef-bd42-f606fba81ae7')
 resource appGwAGICRGReader 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = {
@@ -165,8 +165,8 @@ resource appGwAGICRGReader 'Microsoft.Authorization/roleAssignments@2020-04-01-p
     roleDefinitionId: reader
     principalType: 'ServicePrincipal'
     principalId: agicPrincipleId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 output appgwId string = appgw.id
 output ApplicationGatewayName string = appgw.name
@@ -177,20 +177,20 @@ var diagProperties = {
   logs: [
     {
       category: 'ApplicationGatewayAccessLog'
-***REMOVED***
-    ***REMOVED***
+      enabled: true
+    }
     {
       category: 'ApplicationGatewayPerformanceLog'
-***REMOVED***
-    ***REMOVED***
+      enabled: true
+    }
     {
       category: 'ApplicationGatewayFirewallLog'
-***REMOVED***
-    ***REMOVED***
+      enabled: true
+    }
   ]
-***REMOVED***
+}
 resource appgw_Diag 'Microsoft.Insights/diagnosticSettings@2017-05-01-preview' = if (!empty(workspaceId)) {
   scope: appgw
   name: 'appgwDiag'
   properties: diagProperties
-***REMOVED***
+}

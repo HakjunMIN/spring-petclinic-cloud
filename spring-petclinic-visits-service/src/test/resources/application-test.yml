@@ -1,6 +1,6 @@
 spring.jpa.hibernate.ddl-auto: none
 
-***REMOVED***
+spring:
   datasource:
     schema: classpath*:db/hsqldb/schema.sql
     data: classpath*:db/hsqldb/data.sql

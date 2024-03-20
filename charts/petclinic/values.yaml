@@ -1,25 +1,25 @@
 keyvault:
   enabled: false
 
-***REMOVED***
-***REMOVED***
+vets:
+  image:
     repository: spreg.azurecr.io/petclinic/spring-petclinic-cloud-vets-service
-***REMOVED***
+    tag: latest
  
-***REMOVED***
-***REMOVED***
+customers:
+  image:
     repository: spreg.azurecr.io/petclinic/spring-petclinic-cloud-customers-service
-***REMOVED*** 
+    tag: latest 
 
-***REMOVED***
-***REMOVED***
+visits:
+  image:
     repository: spreg.azurecr.io/petclinic/spring-petclinic-cloud-visits-service
-***REMOVED***
+    tag: latest
 
-***REMOVED***
-***REMOVED***
+api-gateway:
+  image:
     repository: spreg.azurecr.io/petclinic/spring-petclinic-cloud-api-gateway
-***REMOVED***
+    tag: latest
   resources: 
     limits:
       memory: 2Gi

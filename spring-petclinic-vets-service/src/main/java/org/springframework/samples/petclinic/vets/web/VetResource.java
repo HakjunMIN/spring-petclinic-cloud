@@ -40,7 +40,7 @@ class VetResource {
     private final VetRepository vetRepository;
 
     @GetMapping
-    public List<Vet***REMOVED*** showResourcesVetList() {
+    public List<Vet> showResourcesVetList() {
         return vetRepository.findAll();
-    ***REMOVED***
-***REMOVED***
+    }
+}

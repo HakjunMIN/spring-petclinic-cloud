@@ -19,7 +19,7 @@ param agentCount int = 3
 
 @description('The maximum number of nodes for the user node pool')
 param agentCountMax int = 0
-var autoScale = agentCountMax ***REMOVED*** agentCount
+var autoScale = agentCountMax > agentCount
 
 @description('The maximum number of pods per node.')
 param maxPods int = 30
@@ -28,14 +28,14 @@ param maxPods int = 30
 param nodeTaints array = []
 
 @description('Any labels that should be applied to the node pool')
-param nodeLabels object = {***REMOVED***
+param nodeLabels object = {}
 
 @description('The subnet the node pool will use')
 param subnetId string
 
 resource aks 'Microsoft.ContainerService/managedClusters@2021-10-01' existing = {
   name: AksName
-***REMOVED***
+}
 
 resource nodepool 'Microsoft.ContainerService/managedClusters/agentPools@2021-10-01' = {
   parent: aks
@@ -56,8 +56,8 @@ resource nodepool 'Microsoft.ContainerService/managedClusters/agentPools@2021-10
     vnetSubnetID: !empty(subnetId) ? subnetId : json('null')
     upgradeSettings: {
       maxSurge: '33%'
-    ***REMOVED***
+    }
     nodeTaints: nodeTaints
     nodeLabels: nodeLabels
-  ***REMOVED***
-***REMOVED***
+  }
+}

@@ -42,12 +42,12 @@ param byoAGWSubnetId string = ''
 //--- Custom or BYO networking requires BYO AKS User Identity
 var aks_byo_identity = custom_vnet || !empty(byoAKSSubnetId)
 resource uai 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = if (aks_byo_identity) {
-  name: 'id-aks-${resourceName***REMOVED***'
+  name: 'id-aks-${resourceName}'
   location: location
-***REMOVED***
+}
 
 //----------------------------------------------------- BYO Vnet
-var existingAksVnetRG = !empty(byoAKSSubnetId) ? (length(split(byoAKSSubnetId, '/')) ***REMOVED*** 4 ? split(byoAKSSubnetId, '/')[4] : '') : ''
+var existingAksVnetRG = !empty(byoAKSSubnetId) ? (length(split(byoAKSSubnetId, '/')) > 4 ? split(byoAKSSubnetId, '/')[4] : '') : ''
 
 module aksnetcontrib './aksnetcontrib.bicep' = if (!empty(byoAKSSubnetId)) {
   name: 'addAksNetContributor'
@@ -57,21 +57,21 @@ module aksnetcontrib './aksnetcontrib.bicep' = if (!empty(byoAKSSubnetId)) {
     user_identity_principalId: aks_byo_identity ? uai.properties.principalId : ''
     user_identity_name: uai.name
     user_identity_rg: resourceGroup().name
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
-var existingAGWSubnetName = !empty(byoAGWSubnetId) ? (length(split(byoAGWSubnetId, '/')) ***REMOVED*** 10 ? split(byoAGWSubnetId, '/')[10] : '') : ''
-var existingAGWVnetName = !empty(byoAGWSubnetId) ? (length(split(byoAGWSubnetId, '/')) ***REMOVED*** 9 ? split(byoAGWSubnetId, '/')[8] : '') : ''
-var existingAGWVnetRG = !empty(byoAGWSubnetId) ? (length(split(byoAGWSubnetId, '/')) ***REMOVED*** 9 ? split(byoAGWSubnetId, '/')[4] : '') : ''
+var existingAGWSubnetName = !empty(byoAGWSubnetId) ? (length(split(byoAGWSubnetId, '/')) > 10 ? split(byoAGWSubnetId, '/')[10] : '') : ''
+var existingAGWVnetName = !empty(byoAGWSubnetId) ? (length(split(byoAGWSubnetId, '/')) > 9 ? split(byoAGWSubnetId, '/')[8] : '') : ''
+var existingAGWVnetRG = !empty(byoAGWSubnetId) ? (length(split(byoAGWSubnetId, '/')) > 9 ? split(byoAGWSubnetId, '/')[4] : '') : ''
 
 resource existingAgwVnet 'Microsoft.Network/virtualNetworks@2021-02-01' existing = if (!empty(byoAGWSubnetId)) {
   name: existingAGWVnetName
   scope: resourceGroup(existingAGWVnetRG)
-***REMOVED***
+}
 resource existingAGWSubnet 'Microsoft.Network/virtualNetworks/subnets@2020-11-01' existing = if (!empty(byoAGWSubnetId)) {
  parent: existingAgwVnet
  name: existingAGWSubnetName
-***REMOVED***
+}
 
 //------------------------------------------------------ Create custom vnet
 @minLength(9)
@@ -145,8 +145,8 @@ module network './network.bicep' = if (custom_vnet) {
     workspaceDiagsId: createLaw ? aks_law.id : ''
     networkSecurityGroups: CreateNetworkSecurityGroups
     ingressApplicationGatewayPublic: empty(privateIpApplicationGateway)
-  ***REMOVED***
-***REMOVED***
+  }
+}
 output CustomVnetId string = custom_vnet ? network.outputs.vnetId : ''
 output CustomVnetPrivateLinkSubnetId string = custom_vnet ? network.outputs.privateLinkSubnetId : ''
 
@@ -178,8 +178,8 @@ module dnsZone './dnsZone.bicep' = if (!empty(dnsZoneId)) {
     isPrivate: isPrivate
     vnetId: isPrivate ? (!empty(byoAKSSubnetId) ? split(byoAKSSubnetId, '/subnets')[0] : (custom_vnet ? network.outputs.vnetId : '')) : ''
     principalId: any(aks.properties.identityProfile.kubeletidentity).objectId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 /*__  __  _______ ____    ____    ____    ____  ___      __    __   __      .___________.
 |  |/  / |   ____|\   \  /   /    \   \  /   / /   \    |  |  |  | |  |     |           |
@@ -206,12 +206,12 @@ param KeyVaultPurgeProtection bool = true
 @description('Add IP to KV firewall allow-list')
 param kvIPAllowlist array = []
 
-var akvRawName = 'kv-${replace(resourceName, '-', '')***REMOVED***${uniqueString(resourceGroup().id, resourceName)***REMOVED***'
-var akvName = length(akvRawName) ***REMOVED*** 24 ? substring(akvRawName, 0, 24) : akvRawName
+var akvRawName = 'kv-${replace(resourceName, '-', '')}${uniqueString(resourceGroup().id, resourceName)}'
+var akvName = length(akvRawName) > 24 ? substring(akvRawName, 0, 24) : akvRawName
 
 var kvIPRules = [for kvIp in kvIPAllowlist: {
   value: kvIp
-***REMOVED***]
+}]
 
 resource kv 'Microsoft.KeyVault/vaults@2021-06-01-preview' = if (createKV) {
   name: akvName
@@ -221,7 +221,7 @@ resource kv 'Microsoft.KeyVault/vaults@2021-06-01-preview' = if (createKV) {
     sku: {
       family: 'A'
       name: 'standard'
-    ***REMOVED***
+    }
     // publicNetworkAccess:  whether the vault will accept traffic from public internet. If set to 'disabled' all traffic except private endpoint traffic and that that originates from trusted services will be blocked.
     publicNetworkAccess: privateLinks && empty(kvIPAllowlist) ? 'disabled' : 'enabled'
 
@@ -230,7 +230,7 @@ resource kv 'Microsoft.KeyVault/vaults@2021-06-01-preview' = if (createKV) {
       defaultAction: 'Deny'
       ipRules: kvIPRules
       virtualNetworkRules: []
-    ***REMOVED*** : {***REMOVED***
+    } : {}
 
     //enabledForTemplateDeployment: true
     enableRbacAuthorization: true
@@ -239,8 +239,8 @@ resource kv 'Microsoft.KeyVault/vaults@2021-06-01-preview' = if (createKV) {
     enabledForTemplateDeployment: false
     enableSoftDelete: KeyVaultSoftDelete
     enablePurgeProtection: KeyVaultPurgeProtection ? true : json('null')
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 var keyVaultSecretsUserRole = resourceId('Microsoft.Authorization/roleDefinitions', '4633458b-17de-408a-b874-0445c86b69e6')
 resource kvAppGwSecretsUserRole 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = if (createKV && appgwKVIntegration) {
@@ -250,8 +250,8 @@ resource kvAppGwSecretsUserRole 'Microsoft.Authorization/roleAssignments@2020-04
     roleDefinitionId: keyVaultSecretsUserRole
     principalType: 'ServicePrincipal'
     principalId: deployAppGw ? appGwIdentity.properties.principalId : ''
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource kvCSIdriverSecretsUserRole 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = if (createKV && azureKeyvaultSecretsProvider) {
   scope: kv
@@ -260,8 +260,8 @@ resource kvCSIdriverSecretsUserRole 'Microsoft.Authorization/roleAssignments@202
     roleDefinitionId: keyVaultSecretsUserRole
     principalType: 'ServicePrincipal'
     principalId: aks.properties.addonProfiles.azureKeyvaultSecretsProvider.identity.objectId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 @description('The principal ID of the service principal that has access to the Key Vault')
 param kvOfficerRolePrincipalId string = ''
@@ -273,8 +273,8 @@ resource kvUserSecretOfficerRole 'Microsoft.Authorization/roleAssignments@2020-0
     roleDefinitionId: keyVaultSecretsOfficerRole
     principalType: 'User'
     principalId: kvOfficerRolePrincipalId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 
 var keyVaultCertsOfficerRole = resourceId('Microsoft.Authorization/roleDefinitions', 'a4417e6f-fecd-4de8-b567-7b0420556985')
@@ -285,8 +285,8 @@ resource kvUserCertsOfficerRole 'Microsoft.Authorization/roleAssignments@2020-04
     roleDefinitionId: keyVaultCertsOfficerRole
     principalType: 'User'
     principalId: kvOfficerRolePrincipalId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 output keyVaultName string = createKV ? kv.name : ''
 output keyVaultId string = createKV ? kv.id : ''
@@ -299,17 +299,17 @@ resource kvDiags 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = if
     logs: [
       {
         category: 'AuditEvent'
-  ***REMOVED***
-***REMOVED***
+        enabled: true
+      }
     ]
     metrics: [
       {
         category: 'AllMetrics'
-  ***REMOVED***
-***REMOVED***
+        enabled: true
+      }
     ]
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 
 /*   ___           ______     .______
@@ -341,7 +341,7 @@ param acrUntaggedRetentionPolicyEnabled bool = false
 @description('The number of days to retain untagged manifests for')
 param acrUntaggedRetentionPolicy int = 30
 
-var acrName = 'cr${replace(resourceName, '-', '')***REMOVED***${uniqueString(resourceGroup().id, resourceName)***REMOVED***'
+var acrName = 'cr${replace(resourceName, '-', '')}${uniqueString(resourceGroup().id, resourceName)}'
 
 resource acr 'Microsoft.ContainerRegistry/registries@2021-06-01-preview' = if (!empty(registries_sku)) {
   name: acrName
@@ -349,18 +349,18 @@ resource acr 'Microsoft.ContainerRegistry/registries@2021-06-01-preview' = if (!
   sku: {
     #disable-next-line BCP036 //Disabling validation of this parameter to cope with empty string to indicate no ACR required.
     name: registries_sku
-  ***REMOVED***
+  }
   properties: {
     policies: {
       trustPolicy: enableACRTrustPolicy ? {
         status: acrContentTrustEnabled
         type: 'Notary'
-***REMOVED*** : {***REMOVED***
+      } : {}
       retentionPolicy: acrUntaggedRetentionPolicyEnabled ? {
         status: 'enabled'
         days: acrUntaggedRetentionPolicy
-***REMOVED*** : json('null')
-    ***REMOVED***
+      } : json('null')
+    }
     publicNetworkAccess: privateLinks /* && empty(acrIPWhitelist)*/ ? 'Disabled' : 'Enabled'
     zoneRedundancy: acrZoneRedundancyEnabled
     /*
@@ -371,13 +371,13 @@ resource acr 'Microsoft.ContainerRegistry/registries@2021-06-01-preview' = if (!
           {
             action: 'Allow'
             value: acrIPWhitelist
-  ***REMOVED***
+        }
       ]
       virtualNetworkRules: []
-    ***REMOVED***
+    }
     */
-  ***REMOVED***
-***REMOVED***
+  }
+}
 output containerRegistryName string = !empty(registries_sku) ? acr.name : ''
 output containerRegistryId string = !empty(registries_sku) ? acr.id : ''
 
@@ -389,22 +389,22 @@ resource acrDiags 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = i
     logs: [
       {
         category: 'ContainerRegistryRepositoryEvents'
-  ***REMOVED***
-***REMOVED***
+        enabled: true
+      }
       {
         category: 'ContainerRegistryLoginEvents'
-  ***REMOVED***
-***REMOVED***
+        enabled: true
+      }
     ]
     metrics: [
       {
         category: 'AllMetrics'
-  ***REMOVED***
+        enabled: true
         timeGrain: 'PT1M'
-***REMOVED***
+      }
     ]
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 //resource acrPool 'Microsoft.ContainerRegistry/registries/agentPools@2019-06-01-preview' = if (custom_vnet && (!empty(registries_sku)) && privateLinks && acrPrivatePool) {
 module acrPool 'acragentpool.bicep' = if (custom_vnet && (!empty(registries_sku)) && privateLinks && acrPrivatePool) {
@@ -413,8 +413,8 @@ module acrPool 'acragentpool.bicep' = if (custom_vnet && (!empty(registries_sku)
     acrName: acr.name
     acrPoolSubnetId: custom_vnet ? network.outputs.acrPoolSubnetId : ''
     location: location
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 var AcrPullRole = resourceId('Microsoft.Authorization/roleDefinitions', '7f951dda-4ed3-4680-a7ca-43fe172d538d')
 var KubeletObjectId = any(aks.properties.identityProfile.kubeletidentity).objectId
@@ -426,8 +426,8 @@ resource aks_acr_pull 'Microsoft.Authorization/roleAssignments@2020-04-01-previe
     roleDefinitionId: AcrPullRole
     principalType: 'ServicePrincipal'
     principalId: KubeletObjectId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 var AcrPushRole = resourceId('Microsoft.Authorization/roleDefinitions', '8311e382-0749-4cb8-b61a-304f252e45ec')
 
@@ -441,8 +441,8 @@ resource aks_acr_push 'Microsoft.Authorization/roleAssignments@2020-04-01-previe
     roleDefinitionId: AcrPushRole
     principalType: 'User'
     principalId: acrPushRolePrincipalId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 /*______  __  .______       _______ ____    __    ____  ___       __       __
 |   ____||  | |   _  \     |   ____|\   \  /  \  /   / /   \     |  |     |  |
@@ -479,8 +479,8 @@ module firewall './firewall.bicep' = if (azureFirewalls && custom_vnet) {
     acrAgentPoolSubnetAddressPrefix: acrAgentPoolSubnetAddressPrefix
     // inboundHttpFW: inboundHttpFW
     availabilityZones: availabilityZones
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 /*   ___      .______   .______          _______ ____    __    ____
     /   \     |   _  \  |   _  \        /  _____|\   \  /  \  /   /
@@ -522,33 +522,33 @@ var appGWenableWafFirewall = appGWsku=='Standard_v2' ? false : appGWenableFirewa
 // 'identity' is always created (adding: "|| deployAppGw") until this is fixed:
 // https://github.com/Azure/bicep/issues/387#issuecomment-885671296
 resource appGwIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' = if (deployAppGw) {
-  name: 'id-appgw-${resourceName***REMOVED***'
+  name: 'id-appgw-${resourceName}'
   location: location
-***REMOVED***
+}
 
-var appgwName = 'agw-${resourceName***REMOVED***'
-var appgwResourceId = deployAppGw ? resourceId('Microsoft.Network/applicationGateways', '${appgwName***REMOVED***') : ''
+var appgwName = 'agw-${resourceName}'
+var appgwResourceId = deployAppGw ? resourceId('Microsoft.Network/applicationGateways', '${appgwName}') : ''
 
 resource appgwpip 'Microsoft.Network/publicIPAddresses@2021-02-01' = if (deployAppGw) {
-  name: 'pip-agw-${resourceName***REMOVED***'
+  name: 'pip-agw-${resourceName}'
   location: location
   sku: {
     name: 'Standard'
-  ***REMOVED***
+  }
   zones: !empty(availabilityZones) ? availabilityZones : []
   properties: {
     publicIPAllocationMethod: 'Static'
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 var frontendPublicIpConfig = {
   properties: {
     publicIPAddress: {
       id: appgwpip.id
-    ***REMOVED***
-  ***REMOVED***
+    }
+  }
   name: 'appGatewayFrontendIP'
-***REMOVED***
+}
 
 var frontendPrivateIpConfig = {
   properties: {
@@ -556,10 +556,10 @@ var frontendPrivateIpConfig = {
     privateIPAddress: privateIpApplicationGateway
     subnet: {
       id: appGwSubnetId
-    ***REMOVED***
-  ***REMOVED***
+    }
+  }
   name: 'appGatewayPrivateIP'
-***REMOVED***
+}
 
 @allowed([
   'Prevention'
@@ -575,14 +575,14 @@ var appGwFirewallConfigOwasp = {
   requestBodyCheck: true
   maxRequestBodySizeInKb: 128
   disabledRuleGroups: []
-***REMOVED***
+}
 
 var appGWskuObj = union({
   name: appGWsku
   tier: appGWsku
-***REMOVED***, appGWmaxCount == 0 ? {
+}, appGWmaxCount == 0 ? {
   capacity: appGWcount
-***REMOVED*** : {***REMOVED***)
+} : {})
 
 // ugh, need to create a variable with the app gateway properies, because of the conditional key 'autoscaleConfiguration'
 var appgwProperties = union({
@@ -590,7 +590,7 @@ var appgwProperties = union({
   sslPolicy: {
     policyType: 'Predefined'
     policyName: 'AppGwSslPolicy20170401S'
-  ***REMOVED***
+  }
   webApplicationFirewallConfiguration: appGWenableWafFirewall ? appGwFirewallConfigOwasp : json('null')
   gatewayIPConfigurations: [
     {
@@ -598,9 +598,9 @@ var appgwProperties = union({
       properties: {
         subnet: {
           id: appGwSubnetId
-  ***REMOVED***
-***REMOVED***
-    ***REMOVED***
+        }
+      }
+    }
   ]
   frontendIPConfigurations: empty(privateIpApplicationGateway) ? array(frontendPublicIpConfig) : concat(array(frontendPublicIpConfig), array(frontendPrivateIpConfig))
   frontendPorts: [
@@ -608,13 +608,13 @@ var appgwProperties = union({
       name: 'appGatewayFrontendPort'
       properties: {
         port: 80
-***REMOVED***
-    ***REMOVED***
+      }
+    }
   ]
   backendAddressPools: [
     {
       name: 'defaultaddresspool'
-    ***REMOVED***
+    }
   ]
   backendHttpSettingsCollection: [
     {
@@ -625,22 +625,22 @@ var appgwProperties = union({
         cookieBasedAffinity: 'Disabled'
         requestTimeout: 30
         pickHostNameFromBackendAddress: true
-***REMOVED***
-    ***REMOVED***
+      }
+    }
   ]
   httpListeners: [
     {
       name: 'hlisten'
       properties: {
         frontendIPConfiguration: {
-          id: empty(privateIpApplicationGateway) ? '${appgwResourceId***REMOVED***/frontendIPConfigurations/appGatewayFrontendIP' : '${appgwResourceId***REMOVED***/frontendIPConfigurations/appGatewayPrivateIP'
-  ***REMOVED***
+          id: empty(privateIpApplicationGateway) ? '${appgwResourceId}/frontendIPConfigurations/appGatewayFrontendIP' : '${appgwResourceId}/frontendIPConfigurations/appGatewayPrivateIP'
+        }
         frontendPort: {
-          id: '${appgwResourceId***REMOVED***/frontendPorts/appGatewayFrontendPort'
-  ***REMOVED***
+          id: '${appgwResourceId}/frontendPorts/appGatewayFrontendPort'
+        }
         protocol: 'Http'
-***REMOVED***
-    ***REMOVED***
+      }
+    }
   ]
   requestRoutingRules: [
     {
@@ -648,23 +648,23 @@ var appgwProperties = union({
       properties: {
         ruleType: 'Basic'
         httpListener: {
-          id: '${appgwResourceId***REMOVED***/httpListeners/hlisten'
-  ***REMOVED***
+          id: '${appgwResourceId}/httpListeners/hlisten'
+        }
         backendAddressPool: {
-          id: '${appgwResourceId***REMOVED***/backendAddressPools/defaultaddresspool'
-  ***REMOVED***
+          id: '${appgwResourceId}/backendAddressPools/defaultaddresspool'
+        }
         backendHttpSettings: {
-          id: '${appgwResourceId***REMOVED***/backendHttpSettingsCollection/defaulthttpsetting'
-  ***REMOVED***
-***REMOVED***
-    ***REMOVED***
+          id: '${appgwResourceId}/backendHttpSettingsCollection/defaulthttpsetting'
+        }
+      }
+    }
   ]
-***REMOVED***, appGWmaxCount ***REMOVED*** 0 ? {
+}, appGWmaxCount > 0 ? {
   autoscaleConfiguration: {
     minCapacity: appGWcount
     maxCapacity: appGWmaxCount
-  ***REMOVED***
-***REMOVED*** : {***REMOVED***)
+  }
+} : {})
 
 // 'identity' is always set until this is fixed: https://github.com/Azure/bicep/issues/387#issuecomment-885671296
 resource appgw 'Microsoft.Network/applicationGateways@2021-02-01' = if (deployAppGw) {
@@ -674,11 +674,11 @@ resource appgw 'Microsoft.Network/applicationGateways@2021-02-01' = if (deployAp
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
-      '${appGwIdentity.id***REMOVED***': {***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
+      '${appGwIdentity.id}': {}
+    }
+  }
   properties: appgwProperties
-***REMOVED***
+}
 
 // DEPLOY_APPGW_ADDON This is a curcuit breaker to NOT deploy the appgw addon for BYO subnet, due to the error: IngressApplicationGateway addon cannot find Application Gateway
 var DEPLOY_APPGW_ADDON = ingressApplicationGateway && empty(byoAGWSubnetId)
@@ -692,8 +692,8 @@ resource appGwAGICContrib 'Microsoft.Authorization/roleAssignments@2020-04-01-pr
     roleDefinitionId: contributor
     principalType: 'ServicePrincipal'
     principalId: aks.properties.addonProfiles.ingressApplicationGateway.identity.objectId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 // AGIC's identity requires "Reader" permission over Application Gateway's resource group.
 var reader = resourceId('Microsoft.Authorization/roleDefinitions', 'acdd72a7-3385-48ef-bd42-f606fba81ae7')
@@ -704,8 +704,8 @@ resource appGwAGICRGReader 'Microsoft.Authorization/roleAssignments@2020-04-01-p
     roleDefinitionId: reader
     principalType: 'ServicePrincipal'
     principalId: aks.properties.addonProfiles.ingressApplicationGateway.identity.objectId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 // AGIC's identity requires "Managed Identity Operator" permission over the user assigned identity of Application Gateway.
 var managedIdentityOperator = resourceId('Microsoft.Authorization/roleDefinitions', 'f1a07417-d97a-45cb-824c-7a7467783830')
@@ -716,8 +716,8 @@ resource appGwAGICMIOp 'Microsoft.Authorization/roleAssignments@2020-04-01-previ
     roleDefinitionId: managedIdentityOperator
     principalType: 'ServicePrincipal'
     principalId: aks.properties.addonProfiles.ingressApplicationGateway.identity.objectId
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 // AppGW Diagnostics
 resource appgw_Diag 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = if (createLaw && deployAppGw) {
@@ -728,19 +728,19 @@ resource appgw_Diag 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' =
     logs: [
       {
         category: 'ApplicationGatewayAccessLog'
-  ***REMOVED***
-***REMOVED***
+        enabled: true
+      }
       {
         category: 'ApplicationGatewayPerformanceLog'
-  ***REMOVED***
-***REMOVED***
+        enabled: true
+      }
       {
         category: 'ApplicationGatewayFirewallLog'
-  ***REMOVED***
-***REMOVED***
+        enabled: true
+      }
     ]
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 // =================================================
 
@@ -755,8 +755,8 @@ output ApplicationGatewayName string = deployAppGw ? appgw.name : ''
 |  .  \  |  `--'  | |  |_)  | |  |____ |  |\  \----.|  |\   | |  |____     |  |     |  |____ .----)   |
 |__|\__\  \______/  |______/  |_______|| _| `._____||__| \__| |_______|    |__|     |_______||_______/ */
 
-@description('DNS prefix. Defaults to {resourceName***REMOVED***-dns')
-param dnsPrefix string = '${resourceName***REMOVED***-dns'
+@description('DNS prefix. Defaults to {resourceName}-dns')
+param dnsPrefix string = '${resourceName}-dns'
 
 @description('Kubernetes Version')
 param kubernetesVersion string = '1.23.12'
@@ -802,7 +802,7 @@ param agentCount int = 3
 
 @description('The maximum number of nodes for the user node pool')
 param agentCountMax int = 0
-var autoScale = agentCountMax ***REMOVED*** agentCount
+var autoScale = agentCountMax > agentCount
 
 @description('The maximum number of pods per node.')
 param maxPods int = 30
@@ -890,7 +890,7 @@ param JustUseSystemPool bool = false
 param SystemPoolType string = 'Cost-Optimised'
 
 @description('A custom system pool spec')
-param SystemPoolCustomPreset object = {***REMOVED***
+param SystemPoolCustomPreset object = {}
 
 param AutoscaleProfile object = {
   'balance-similar-node-groups': 'true'
@@ -910,7 +910,7 @@ param AutoscaleProfile object = {
   'scan-interval': '10s'
   'skip-nodes-with-local-storage': 'true'
   'skip-nodes-with-system-pods': 'true'
-***REMOVED***
+}
 
 @description('System Pool presets are derived from the recommended system pool specs')
 var systemPoolPresets = {
@@ -921,7 +921,7 @@ var systemPoolPresets = {
     maxCount: 3
     enableAutoScaling: true
     availabilityZones: []
-  ***REMOVED***
+  }
   Standard : {
     vmSize: 'Standard_DS2_v2'
     count: 3
@@ -933,7 +933,7 @@ var systemPoolPresets = {
       '2'
       '3'
     ]
-  ***REMOVED***
+  }
   HighSpec : {
     vmSize: 'Standard_D4s_v3'
     count: 3
@@ -945,8 +945,8 @@ var systemPoolPresets = {
       '2'
       '3'
     ]
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 var systemPoolBase = {
   name: 'npsystem'
@@ -957,11 +957,11 @@ var systemPoolBase = {
   vnetSubnetID: !empty(aksSubnetId) ? aksSubnetId : json('null')
   upgradeSettings: {
     maxSurge: '33%'
-  ***REMOVED***
+  }
   nodeTaints: [
     JustUseSystemPool ? '' : 'CriticalAddonsOnly=true:NoSchedule'
   ]
-***REMOVED***
+}
 
 var userPoolVmProfile = {
   vmSize: agentVMSize
@@ -970,7 +970,7 @@ var userPoolVmProfile = {
   maxCount: autoScale ? agentCountMax : json('null')
   enableAutoScaling: autoScale
   availabilityZones: !empty(availabilityZones) ? availabilityZones : null
-***REMOVED***
+}
 
 var agentPoolProfileUser = union({
   name: 'npuser01'
@@ -983,10 +983,10 @@ var agentPoolProfileUser = union({
   vnetSubnetID: !empty(aksSubnetId) ? aksSubnetId : json('null')
   upgradeSettings: {
     maxSurge: '33%'
-  ***REMOVED***
-***REMOVED***, userPoolVmProfile)
+  }
+}, userPoolVmProfile)
 
-var agentPoolProfiles = JustUseSystemPool ? array(union(systemPoolBase, userPoolVmProfile)) : concat(array(union(systemPoolBase, SystemPoolType=='Custom' && SystemPoolCustomPreset != {***REMOVED*** ? SystemPoolCustomPreset : systemPoolPresets[SystemPoolType])), array(agentPoolProfileUser))
+var agentPoolProfiles = JustUseSystemPool ? array(union(systemPoolBase, userPoolVmProfile)) : concat(array(union(systemPoolBase, SystemPoolType=='Custom' && SystemPoolCustomPreset != {} ? SystemPoolCustomPreset : systemPoolPresets[SystemPoolType])), array(agentPoolProfileUser))
 
 var akssku = AksPaidSkuForSLA ? 'Paid' : 'Free'
 
@@ -994,10 +994,10 @@ var akssku = AksPaidSkuForSLA ? 'Paid' : 'Free'
 var aks_addons = {
   omsagent: {
     enabled: createLaw && omsagent
-  ***REMOVED*** {
+    config: {
       logAnalyticsWorkspaceResourceID: createLaw && omsagent ? aks_law.id : json('null')
-    ***REMOVED***
-  ***REMOVED***
+    }
+  }
   gitops: {
     //    config": null,
     enabled: !empty(gitops)
@@ -1005,51 +1005,51 @@ var aks_addons = {
     //      clientId: 'xxx',
     //      objectId: 'xxx',
     //      resourceId: '/subscriptions/95efa97a-9b5d-4f74-9f75-a3396e23344d/resourcegroups/xxx/providers/Microsoft.ManagedIdentity/userAssignedIdentities/xxx'
-    //    ***REMOVED***
-  ***REMOVED***
+    //    }
+  }
   azurepolicy: {
-  ***REMOVED*** {
+    config: {
       version: !empty(azurepolicy) ? 'v2' : json('null')
-    ***REMOVED***
+    }
     enabled: !empty(azurepolicy)
-  ***REMOVED***
+  }
   azureKeyvaultSecretsProvider: {
-  ***REMOVED*** {
+    config: {
       enableSecretRotation: 'false'
-    ***REMOVED***
+    }
     enabled: azureKeyvaultSecretsProvider
-  ***REMOVED***
+  }
   openServiceMesh: {
     enabled: openServiceMeshAddon
-  ***REMOVED*** {***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    config: {}
+  }
+}
 
 var aks_addons1 = DEPLOY_APPGW_ADDON && ingressApplicationGateway ? union(aks_addons, deployAppGw ? {
   ingressApplicationGateway: {
-  ***REMOVED*** {
+    config: {
       applicationGatewayId: appgw.id
-    ***REMOVED***
+    }
     enabled: true
-  ***REMOVED***
-***REMOVED*** : {
+  }
+} : {
   // AKS RP will deploy the AppGateway for us (not creating custom or BYO VNET)
   ingressApplicationGateway: {
     enabled: true
-  ***REMOVED*** {
+    config: {
       applicationGatewayName: appgwName
       subnetCIDR: '10.2.0.0/16'
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***) : aks_addons
+    }
+  }
+}) : aks_addons
 
 
 var aks_identity = {
   type: 'UserAssigned'
   userAssignedIdentities: {
-    '${uai.id***REMOVED***': {***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    '${uai.id}': {}
+  }
+}
 
 var aksProperties = {
   kubernetesVersion: kubernetesVersion
@@ -1059,14 +1059,14 @@ var aksProperties = {
     managed: true
     enableAzureRBAC: enableAzureRBAC
     tenantID: aad_tenant_id
-  ***REMOVED*** : null
+  } : null
   apiServerAccessProfile: !empty(authorizedIPRanges) ? {
     authorizedIPRanges: authorizedIPRanges
-  ***REMOVED*** : {
+  } : {
     enablePrivateCluster: enablePrivateCluster
     privateDNSZone: enablePrivateCluster ? 'none' : ''
     enablePrivateClusterPublicFQDN: enablePrivateCluster
-  ***REMOVED***
+  }
   agentPoolProfiles: agentPoolProfiles
   networkProfile: {
     loadBalancerSku: 'standard'
@@ -1077,48 +1077,48 @@ var aksProperties = {
     serviceCidr: serviceCidr
     dnsServiceIP: dnsServiceIP
     dockerBridgeCidr: dockerBridgeCidr
-  ***REMOVED***
+  }
   disableLocalAccounts: AksDisableLocalAccounts && enable_aad
   autoUpgradeProfile: !empty(upgradeChannel) ? {
     upgradeChannel: upgradeChannel
-  ***REMOVED*** : {***REMOVED***
+  } : {}
   addonProfiles: !empty(aks_addons1) ? aks_addons1 : aks_addons
-  autoScalerProfile: autoScale ? AutoscaleProfile : {***REMOVED***
-***REMOVED***
+  autoScalerProfile: autoScale ? AutoscaleProfile : {}
+}
 
 @description('Needing to seperately declare and union this because of https://github.com/Azure/AKS/issues/2774')
 var azureDefenderSecurityProfile = {
   securityProfile : {
     azureDefender: {
-***REMOVED***
+      enabled: true
       logAnalyticsWorkspaceResourceId: aks_law.id
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}
 
 resource aks 'Microsoft.ContainerService/managedClusters@2021-10-01' = {
-  name: 'aks-${resourceName***REMOVED***'
+  name: 'aks-${resourceName}'
   location: location
   properties: DefenderForContainers && omsagent ? union(aksProperties,azureDefenderSecurityProfile) : aksProperties
   identity: aks_byo_identity ? aks_identity : {
     type: 'SystemAssigned'
-  ***REMOVED***
+  }
   sku: {
     name: 'Basic'
     tier: akssku
-  ***REMOVED***
-***REMOVED***
+  }
+}
 output aksClusterName string = aks.name
 
 var policySetBaseline = '/providers/Microsoft.Authorization/policySetDefinitions/a8640138-9b0a-4a28-b8cb-1666c838647d'
 var policySetRestrictive = '/providers/Microsoft.Authorization/policySetDefinitions/42b8ef37-b724-4e24-bbc8-7a7708edfe00'
 
 resource aks_policies 'Microsoft.Authorization/policyAssignments@2020-09-01' = if (!empty(azurepolicy)) {
-  name: '${resourceName***REMOVED***-${azurePolicyInitiative***REMOVED***'
+  name: '${resourceName}-${azurePolicyInitiative}'
   location: location
   properties: {
     policyDefinitionId: azurePolicyInitiative == 'Baseline' ? policySetBaseline : policySetRestrictive
-  ***REMOVED*** {
+    parameters: {
       excludedNamespaces: {
         value: [
             'kube-system'
@@ -1126,18 +1126,18 @@ resource aks_policies 'Microsoft.Authorization/policyAssignments@2020-09-01' = i
             'azure-arc'
             'cluster-baseline-setting'
         ]
-***REMOVED***
+      }
       effect: {
         value: azurepolicy
-***REMOVED***
-    ***REMOVED***
+      }
+    }
     metadata: {
       assignedBy: 'Aks Construction'
-    ***REMOVED***
-    displayName: 'Kubernetes cluster pod security ${azurePolicyInitiative***REMOVED*** standards for Linux-based workloads'
+    }
+    displayName: 'Kubernetes cluster pod security ${azurePolicyInitiative} standards for Linux-based workloads'
     description: 'As per: https://github.com/Azure/azure-policy/blob/master/built-in-policies/policySetDefinitions/Kubernetes/'
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 @description('The principal ID to assign the AKS admin role.')
 param adminprincipleid string = ''
@@ -1150,8 +1150,8 @@ resource aks_admin_role_assignment 'Microsoft.Authorization/roleAssignments@2020
     roleDefinitionId: buildInAKSRBACClusterAdmin
     principalType: 'User'
     principalId: adminprincipleid
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 //---------------------------------------------------------------------------------- gitops (to apply the post-helm packages to the cluster)
 // WAITING FOR PUBLIC PREVIEW
@@ -1160,7 +1160,7 @@ resource aks_admin_role_assignment 'Microsoft.Authorization/roleAssignments@2020
 resource gitops 'Microsoft.KubernetesConfiguration/sourceControlConfigurations@2019-11-01-preview' = if (false) {
   name: 'bla'
   location: 'bla'
-***REMOVED***
+}
 */
 
 /*__  ___.   ______   .__   __.  __  .___________.  ______   .______       __  .__   __.   _______
@@ -1186,16 +1186,16 @@ resource AksDiags 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' =  
     workspaceId: aks_law.id
     logs: [for aksDiagCategory in AksDiagCategories: {
       category: aksDiagCategory
-***REMOVED***
-    ***REMOVED***]
+      enabled: true
+    }]
     metrics: [
       {
         category: 'AllMetrics'
-  ***REMOVED***
-***REMOVED***
+        enabled: true
+      }
     ]
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 @description('Enable Metric Alerts')
 param createAksMetricAlerts bool = true
@@ -1211,12 +1211,12 @@ var AlertFrequencyLookup = {
   Short: {
     evalFrequency: 'PT1M'
     windowSize: 'PT5M'
-  ***REMOVED***
+  }
   Long: {
     evalFrequency: 'PT15M'
     windowSize: 'PT1H'
-  ***REMOVED***
-***REMOVED***
+  }
+}
 var AlertFrequency = AlertFrequencyLookup[AksMetricAlertMetricFrequencyModel]
 
 module aksmetricalerts './aksmetricalerts.bicep' = if (createLaw) {
@@ -1230,15 +1230,15 @@ module aksmetricalerts './aksmetricalerts.bicep' = if (createLaw) {
     windowSize: AlertFrequency.windowSize
     alertSeverity: 'Informational'
     logAnalyticsWorkspaceLocation: location
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 //---------------------------------------------------------------------------------- Container Insights
 
 @description('The Log Analytics retention period')
 param retentionInDays int = 30
 
-var aks_law_name = 'log-${resourceName***REMOVED***'
+var aks_law_name = 'log-${resourceName}'
 
 var createLaw = (omsagent || deployAppGw || azureFirewalls)
 
@@ -1247,10 +1247,10 @@ resource aks_law 'Microsoft.OperationalInsights/workspaces@2021-06-01' = if (cre
   location: location
   properties: {
     retentionInDays: retentionInDays
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
-//This role assignment enables AKS-***REMOVED***LA Fast Alerting experience
+//This role assignment enables AKS->LA Fast Alerting experience
 var MonitoringMetricsPublisherRole = resourceId('Microsoft.Authorization/roleDefinitions', '3913510d-42f4-4e42-8a64-420c390055eb')
 resource FastAlertingRole_Aks_Law 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = if (omsagent) {
   scope: aks
@@ -1259,8 +1259,8 @@ resource FastAlertingRole_Aks_Law 'Microsoft.Authorization/roleAssignments@2020-
     roleDefinitionId: MonitoringMetricsPublisherRole
     principalId: aks.properties.addonProfiles.omsagent.identity.objectId
     principalType: 'ServicePrincipal'
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 output LogAnalyticsName string = (createLaw) ? aks_law.name : ''
 output LogAnalyticsGuid string = (createLaw) ? aks_law.properties.customerId : ''

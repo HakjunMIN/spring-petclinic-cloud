@@ -19,16 +19,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.samples.petclinic.vets.system.VetsProperties;
-***REMOVED***
+import com.microsoft.applicationinsights.attach.ApplicationInsights;
 /**
  * @author Maciej Szarlinski
  */
-***REMOVED***
-***REMOVED***
-***REMOVED***
+@SpringBootApplication
+@EnableConfigurationProperties(VetsProperties.class)
+public class VetsServiceApplication {
 
 	public static void main(String[] args) {
 		ApplicationInsights.attach();
 		SpringApplication.run(VetsServiceApplication.class, args);
-	***REMOVED***
-***REMOVED***
+	}
+}

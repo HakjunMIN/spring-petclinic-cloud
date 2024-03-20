@@ -20,8 +20,8 @@ module aksconst 'infra/bicep/main.bicep' = {
     ingressApplicationGateway: true
     appGWcount: 1    
     appGWsku: 'Standard_v2'
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 //RBAC for deployment-scripts
 var contributor='b24988ac-6180-42a0-ab88-20f7382dd24c'
@@ -38,9 +38,9 @@ module kubeNamespace 'br/public:deployment-scripts/aks-run-command:1.0.1' = {
       rbacClusterAdmin
     ]
     commands: [
-      '***REMOVED***'
+      'kubectl create namespace spring-petclinic'
     ]
-  ***REMOVED***
+  }
 
-***REMOVED***
+}
 

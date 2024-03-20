@@ -5,25 +5,25 @@
       "id": "grafana",
       "name": "Grafana",
       "version": "5.0.0"
-    ***REMOVED***,
+    },
     {
       "type": "panel",
       "id": "graph",
       "name": "Graph",
       "version": "5.0.0"
-    ***REMOVED***,
+    },
     {
       "type": "datasource",
       "id": "prometheus",
       "name": "Prometheus",
       "version": "5.0.0"
-    ***REMOVED***,
+    },
     {
       "type": "panel",
       "id": "singlestat",
       "name": "Singlestat",
       "version": "5.0.0"
-    ***REMOVED***
+    }
   ],
   "annotations": {
     "list": [
@@ -35,9 +35,9 @@
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
         "type": "dashboard"
-***REMOVED***
+      }
     ]
-  ***REMOVED***,
+  },
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
@@ -46,7 +46,7 @@
   "links": [],
   "panels": [
     {
-      "aliasColors": {***REMOVED***,
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -57,7 +57,7 @@
         "w": 12,
         "x": 0,
         "y": 0
-***REMOVED***,
+      },
       "id": 11,
       "legend": {
         "avg": false,
@@ -67,7 +67,7 @@
         "show": true,
         "total": false,
         "values": true
-***REMOVED***,
+      },
       "lines": true,
       "linewidth": 1,
       "links": [],
@@ -82,19 +82,19 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(rate(http_server_requests_seconds_sum{status!~\"5..\"***REMOVED***[1m]))/sum(rate(http_server_requests_seconds_count{ status!~\"5..\"***REMOVED***[1m]))",
+          "expr": "sum(rate(http_server_requests_seconds_sum{status!~\"5..\"}[1m]))/sum(rate(http_server_requests_seconds_count{ status!~\"5..\"}[1m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "HTTP - AVG",
           "refId": "A"
-  ***REMOVED***,
+        },
         {
-          "expr": "max(http_server_requests_seconds_max{status!~\"5..\"***REMOVED***)",
+          "expr": "max(http_server_requests_seconds_max{status!~\"5..\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "HTTP - MAX",
           "refId": "B"
-  ***REMOVED***
+        }
       ],
       "thresholds": [],
       "timeFrom": null,
@@ -104,7 +104,7 @@
         "shared": true,
         "sort": 0,
         "value_type": "individual"
-***REMOVED***,
+      },
       "type": "graph",
       "xaxis": {
         "buckets": null,
@@ -112,7 +112,7 @@
         "name": null,
         "show": true,
         "values": []
-***REMOVED***,
+      },
       "yaxes": [
         {
           "decimals": null,
@@ -122,7 +122,7 @@
           "max": null,
           "min": "0",
           "show": true
-  ***REMOVED***,
+        },
         {
           "format": "short",
           "label": null,
@@ -130,11 +130,11 @@
           "max": null,
           "min": null,
           "show": true
-  ***REMOVED***
+        }
       ]
-    ***REMOVED***,
+    },
     {
-      "aliasColors": {***REMOVED***,
+      "aliasColors": {},
       "bars": false,
       "dashLength": 10,
       "dashes": false,
@@ -145,7 +145,7 @@
         "w": 12,
         "x": 12,
         "y": 0
-***REMOVED***,
+      },
       "id": 9,
       "legend": {
         "avg": false,
@@ -155,7 +155,7 @@
         "show": true,
         "total": false,
         "values": true
-***REMOVED***,
+      },
       "lines": true,
       "linewidth": 1,
       "links": [],
@@ -176,15 +176,15 @@
           "intervalFactor": 1,
           "legendFormat": "request - ok",
           "refId": "A"
-  ***REMOVED***,
+        },
         {
-          "expr": "sum(rate(http_server_requests_seconds_count{status=~\"5..\"***REMOVED***[1m]))",
+          "expr": "sum(rate(http_server_requests_seconds_count{status=~\"5..\"}[1m]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "request - err",
           "refId": "B"
-  ***REMOVED***
+        }
       ],
       "thresholds": [],
       "timeFrom": null,
@@ -194,7 +194,7 @@
         "shared": true,
         "sort": 0,
         "value_type": "individual"
-***REMOVED***,
+      },
       "type": "graph",
       "xaxis": {
         "buckets": null,
@@ -202,7 +202,7 @@
         "name": null,
         "show": true,
         "values": []
-***REMOVED***,
+      },
       "yaxes": [
         {
           "format": "ops",
@@ -211,7 +211,7 @@
           "max": null,
           "min": "0",
           "show": true
-  ***REMOVED***,
+        },
         {
           "format": "short",
           "label": null,
@@ -219,9 +219,9 @@
           "max": null,
           "min": null,
           "show": true
-  ***REMOVED***
+        }
       ]
-    ***REMOVED***,
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -239,13 +239,13 @@
         "show": false,
         "thresholdLabels": false,
         "thresholdMarkers": true
-***REMOVED***,
+      },
       "gridPos": {
         "h": 5,
         "w": 6,
         "x": 0,
         "y": 9
-***REMOVED***,
+      },
       "id": 2,
       "interval": null,
       "links": [],
@@ -254,11 +254,11 @@
         {
           "name": "value to text",
           "value": 1
-  ***REMOVED***,
+        },
         {
           "name": "range to text",
           "value": 2
-  ***REMOVED***
+        }
       ],
       "maxDataPoints": 100,
       "nullPointMode": "connected",
@@ -272,23 +272,23 @@
           "from": "null",
           "text": "N/A",
           "to": "null"
-  ***REMOVED***
+        }
       ],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
         "lineColor": "rgb(31, 120, 193)",
         "show": false
-***REMOVED***,
+      },
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(petclinic_owner_seconds_count{method=\"PUT\", status=\"204\"***REMOVED***)",
+          "expr": "sum(petclinic_owner_seconds_count{method=\"PUT\", status=\"204\"})",
           "format": "time_series",
           "instant": true,
           "intervalFactor": 1,
           "refId": "A"
-  ***REMOVED***
+        }
       ],
       "thresholds": "",
       "title": "Owners Updated",
@@ -299,10 +299,10 @@
           "op": "=",
           "text": "N/A",
           "value": "null"
-  ***REMOVED***
+        }
       ],
       "valueName": "avg"
-    ***REMOVED***,
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -320,13 +320,13 @@
         "show": false,
         "thresholdLabels": false,
         "thresholdMarkers": true
-***REMOVED***,
+      },
       "gridPos": {
         "h": 5,
         "w": 6,
         "x": 6,
         "y": 9
-***REMOVED***,
+      },
       "id": 3,
       "interval": null,
       "links": [],
@@ -335,11 +335,11 @@
         {
           "name": "value to text",
           "value": 1
-  ***REMOVED***,
+        },
         {
           "name": "range to text",
           "value": 2
-  ***REMOVED***
+        }
       ],
       "maxDataPoints": 100,
       "nullPointMode": "connected",
@@ -353,24 +353,24 @@
           "from": "null",
           "text": "N/A",
           "to": "null"
-  ***REMOVED***
+        }
       ],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
         "lineColor": "rgb(31, 120, 193)",
         "show": false
-***REMOVED***,
+      },
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(petclinic_owner_seconds_count{method=\"POST\", status=\"201\"***REMOVED***)",
+          "expr": "sum(petclinic_owner_seconds_count{method=\"POST\", status=\"201\"})",
           "format": "time_series",
           "instant": true,
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "A"
-  ***REMOVED***
+        }
       ],
       "thresholds": "",
       "title": "Owners Created",
@@ -381,10 +381,10 @@
           "op": "=",
           "text": "N/A",
           "value": "null"
-  ***REMOVED***
+        }
       ],
       "valueName": "avg"
-    ***REMOVED***,
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -402,13 +402,13 @@
         "show": false,
         "thresholdLabels": false,
         "thresholdMarkers": true
-***REMOVED***,
+      },
       "gridPos": {
         "h": 5,
         "w": 6,
         "x": 12,
         "y": 9
-***REMOVED***,
+      },
       "id": 4,
       "interval": null,
       "links": [],
@@ -417,11 +417,11 @@
         {
           "name": "value to text",
           "value": 1
-  ***REMOVED***,
+        },
         {
           "name": "range to text",
           "value": 2
-  ***REMOVED***
+        }
       ],
       "maxDataPoints": 100,
       "nullPointMode": "connected",
@@ -435,24 +435,24 @@
           "from": "null",
           "text": "N/A",
           "to": "null"
-  ***REMOVED***
+        }
       ],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
         "lineColor": "rgb(31, 120, 193)",
         "show": false
-***REMOVED***,
+      },
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(petclinic_pet_seconds_count{method=\"POST\", status=\"201\"***REMOVED***)",
+          "expr": "sum(petclinic_pet_seconds_count{method=\"POST\", status=\"201\"})",
           "format": "time_series",
           "instant": true,
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "A"
-  ***REMOVED***
+        }
       ],
       "thresholds": "",
       "title": "Pets Created",
@@ -463,10 +463,10 @@
           "op": "=",
           "text": "N/A",
           "value": "null"
-  ***REMOVED***
+        }
       ],
       "valueName": "avg"
-    ***REMOVED***,
+    },
     {
       "cacheTimeout": null,
       "colorBackground": false,
@@ -484,13 +484,13 @@
         "show": false,
         "thresholdLabels": false,
         "thresholdMarkers": true
-***REMOVED***,
+      },
       "gridPos": {
         "h": 5,
         "w": 6,
         "x": 18,
         "y": 9
-***REMOVED***,
+      },
       "id": 5,
       "interval": null,
       "links": [],
@@ -499,11 +499,11 @@
         {
           "name": "value to text",
           "value": 1
-  ***REMOVED***,
+        },
         {
           "name": "range to text",
           "value": 2
-  ***REMOVED***
+        }
       ],
       "maxDataPoints": 100,
       "nullPointMode": "connected",
@@ -517,24 +517,24 @@
           "from": "null",
           "text": "N/A",
           "to": "null"
-  ***REMOVED***
+        }
       ],
       "sparkline": {
         "fillColor": "rgba(31, 118, 189, 0.18)",
         "full": false,
         "lineColor": "rgb(31, 120, 193)",
         "show": false
-***REMOVED***,
+      },
       "tableColumn": "Value",
       "targets": [
         {
-          "expr": "sum(petclinic_visit_seconds_count{method=\"POST\", status=\"201\"***REMOVED***)",
+          "expr": "sum(petclinic_visit_seconds_count{method=\"POST\", status=\"201\"})",
           "format": "time_series",
           "instant": true,
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "A"
-  ***REMOVED***
+        }
       ],
       "thresholds": "",
       "title": "Visit Created",
@@ -545,12 +545,12 @@
           "op": "=",
           "text": "N/A",
           "value": "null"
-  ***REMOVED***
+        }
       ],
       "valueName": "avg"
-    ***REMOVED***,
+    },
     {
-      "aliasColors": {***REMOVED***,
+      "aliasColors": {},
       "bars": true,
       "dashLength": 10,
       "dashes": false,
@@ -561,7 +561,7 @@
         "w": 24,
         "x": 0,
         "y": 14
-***REMOVED***,
+      },
       "id": 7,
       "legend": {
         "alignAsTable": false,
@@ -575,7 +575,7 @@
         "show": true,
         "total": false,
         "values": true
-***REMOVED***,
+      },
       "lines": false,
       "linewidth": 1,
       "links": [],
@@ -590,34 +590,34 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum(petclinic_owner_seconds_count{method=\"POST\", status=\"201\"***REMOVED***)",
+          "expr": "sum(petclinic_owner_seconds_count{method=\"POST\", status=\"201\"})",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
           "legendFormat": "owner create",
           "refId": "A"
-  ***REMOVED***,
+        },
         {
-          "expr": "sum(petclinic_pet_seconds_count{method=\"POST\", status=\"201\"***REMOVED***)",
+          "expr": "sum(petclinic_pet_seconds_count{method=\"POST\", status=\"201\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "pet create",
           "refId": "B"
-  ***REMOVED***,
+        },
         {
-          "expr": "sum(petclinic_visit_seconds_count{method=\"POST\", status=\"201\"***REMOVED***)",
+          "expr": "sum(petclinic_visit_seconds_count{method=\"POST\", status=\"201\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "visit create",
           "refId": "C"
-  ***REMOVED***,
+        },
         {
-          "expr": "sum(petclinic_owner_seconds_count{method=\"PUT\", status=\"204\"***REMOVED***)",
+          "expr": "sum(petclinic_owner_seconds_count{method=\"PUT\", status=\"204\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "owner update",
           "refId": "D"
-  ***REMOVED***
+        }
       ],
       "thresholds": [],
       "timeFrom": null,
@@ -627,7 +627,7 @@
         "shared": true,
         "sort": 0,
         "value_type": "individual"
-***REMOVED***,
+      },
       "type": "graph",
       "xaxis": {
         "buckets": null,
@@ -635,7 +635,7 @@
         "name": null,
         "show": true,
         "values": []
-***REMOVED***,
+      },
       "yaxes": [
         {
           "format": "short",
@@ -644,7 +644,7 @@
           "max": null,
           "min": null,
           "show": true
-  ***REMOVED***,
+        },
         {
           "format": "short",
           "label": null,
@@ -652,9 +652,9 @@
           "max": null,
           "min": null,
           "show": true
-  ***REMOVED***
+        }
       ]
-    ***REMOVED***
+    }
   ],
   "refresh": "30s",
   "schemaVersion": 16,
@@ -669,7 +669,7 @@
         "current": {
           "text": "auto",
           "value": "$__auto_interval_timeRange"
-  ***REMOVED***,
+        },
         "hide": 0,
         "label": null,
         "name": "timeRange",
@@ -678,68 +678,68 @@
             "selected": true,
             "text": "auto",
             "value": "$__auto_interval_timeRange"
-    ***REMOVED***,
+          },
           {
             "selected": false,
             "text": "1m",
             "value": "1m"
-    ***REMOVED***,
+          },
           {
             "selected": false,
             "text": "10m",
             "value": "10m"
-    ***REMOVED***,
+          },
           {
             "selected": false,
             "text": "30m",
             "value": "30m"
-    ***REMOVED***,
+          },
           {
             "selected": false,
             "text": "1h",
             "value": "1h"
-    ***REMOVED***,
+          },
           {
             "selected": false,
             "text": "6h",
             "value": "6h"
-    ***REMOVED***,
+          },
           {
             "selected": false,
             "text": "12h",
             "value": "12h"
-    ***REMOVED***,
+          },
           {
             "selected": false,
             "text": "1d",
             "value": "1d"
-    ***REMOVED***,
+          },
           {
             "selected": false,
             "text": "7d",
             "value": "7d"
-    ***REMOVED***,
+          },
           {
             "selected": false,
             "text": "14d",
             "value": "14d"
-    ***REMOVED***,
+          },
           {
             "selected": false,
             "text": "30d",
             "value": "30d"
-    ***REMOVED***
+          }
         ],
         "query": "1m,10m,30m,1h,6h,12h,1d,7d,14d,30d",
         "refresh": 2,
         "type": "interval"
-***REMOVED***
+      }
     ]
-  ***REMOVED***,
+  },
   "time": {
     "from": "now-1h",
     "to": "now"
-  ***REMOVED***,
+  },
   "timepicker": {
     "refresh_intervals": [
       "5s",
@@ -764,9 +764,9 @@
       "7d",
       "30d"
     ]
-  ***REMOVED***,
+  },
   "timezone": "",
   "title": "Spring Petclinic Metrics",
   "uid": "69JXeR0iw",
   "version": 1
-***REMOVED***
+}

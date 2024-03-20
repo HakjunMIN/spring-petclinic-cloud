@@ -20,13 +20,13 @@ public class InsecurityConfiguration extends WebSecurityConfigurerAdapter {
     	.and()
     	.httpBasic().disable()
     	.csrf().disable();
-    ***REMOVED***
+    }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
         log.warn("configuring insecure WebSecurity");
         web.ignoring().antMatchers("/**");
-    ***REMOVED***
+    }
 
-***REMOVED***
+}
 

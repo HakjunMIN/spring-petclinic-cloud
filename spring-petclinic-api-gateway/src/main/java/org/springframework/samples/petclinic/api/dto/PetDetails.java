@@ -34,6 +34,6 @@ public class PetDetails {
 
     private PetType type;
 
-    private final List<VisitDetails***REMOVED*** visits = new ArrayList<***REMOVED***();
+    private final List<VisitDetails> visits = new ArrayList<>();
 
-***REMOVED***
+}

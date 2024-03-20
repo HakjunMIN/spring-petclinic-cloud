@@ -29,23 +29,23 @@ class VisitsServiceClientIntegrationTest {
         server = new MockWebServer();
         visitsServiceClient = new VisitsServiceClient(WebClient.builder());
         visitsServiceClient.setHostname(server.url("/").toString());
-    ***REMOVED***
+    }
 
     @AfterEach
     void shutdown() throws IOException {
         this.server.shutdown();
-    ***REMOVED***
+    }
 
     @Test
     void getVisitsForPets_withAvailableVisitsService() {
-        prepareResponse(response -***REMOVED*** response
+        prepareResponse(response -> response
             .setHeader("Content-Type", "application/json")
-            .setBody("{\"items\":[{\"id\":5,\"date\":\"2018-11-15\",\"description\":\"test visit\",\"petId\":1***REMOVED***]***REMOVED***"));
+            .setBody("{\"items\":[{\"id\":5,\"date\":\"2018-11-15\",\"description\":\"test visit\",\"petId\":1}]}"));
 
-        Mono<Visits***REMOVED*** visits = visitsServiceClient.getVisitsForPets(Collections.singletonList(1));
+        Mono<Visits> visits = visitsServiceClient.getVisitsForPets(Collections.singletonList(1));
 
         assertVisitDescriptionEquals(visits.block(), PET_ID,"test visit");
-    ***REMOVED***
+    }
 
 
     private void assertVisitDescriptionEquals(Visits visits, int petId, String description) {
@@ -53,12 +53,12 @@ class VisitsServiceClientIntegrationTest {
         assertNotNull(visits.getItems().get(0));
         assertEquals(petId, visits.getItems().get(0).getPetId());
         assertEquals(description, visits.getItems().get(0).getDescription());
-    ***REMOVED***
+    }
 
-    private void prepareResponse(Consumer<MockResponse***REMOVED*** consumer) {
+    private void prepareResponse(Consumer<MockResponse> consumer) {
         MockResponse response = new MockResponse();
         consumer.accept(response);
         this.server.enqueue(response);
-    ***REMOVED***
+    }
 
-***REMOVED***
+}

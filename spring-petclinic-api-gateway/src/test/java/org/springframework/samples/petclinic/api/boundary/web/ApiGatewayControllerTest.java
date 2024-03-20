@@ -20,7 +20,7 @@ import java.net.ConnectException;
 import java.util.Collections;
 
 @WebFluxTest(controllers = ApiGatewayController.class)
-@Import({ReactiveResilience4JAutoConfiguration.class, CircuitBreakerConfiguration.class, InsecurityConfiguration.class***REMOVED***)
+@Import({ReactiveResilience4JAutoConfiguration.class, CircuitBreakerConfiguration.class, InsecurityConfiguration.class})
 class ApiGatewayControllerTest {
 
 	@MockBean
@@ -59,12 +59,12 @@ class ApiGatewayControllerTest {
 		.exchange()
 		.expectStatus().isOk()
 		//.expectBody(String.class)
-		//.consumeWith(response -***REMOVED***
+		//.consumeWith(response ->
 		//    Assertions.assertThat(response.getResponseBody()).isEqualTo("Garfield"));
 		.expectBody()
 		.jsonPath("$.pets[0].name").isEqualTo("Garfield")
 		.jsonPath("$.pets[0].visits[0].description").isEqualTo("First visit");
-	***REMOVED***
+	}
 
 	/**
 	 * Test Resilience4j fallback method
@@ -91,5 +91,5 @@ class ApiGatewayControllerTest {
 		.expectBody()
 		.jsonPath("$.pets[0].name").isEqualTo("Garfield")
 		.jsonPath("$.pets[0].visits").isEmpty();
-	***REMOVED***
-***REMOVED***
+	}
+}

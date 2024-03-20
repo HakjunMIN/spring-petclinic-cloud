@@ -1,4 +1,4 @@
-***REMOVED***
+#!/bin/bash
 set -e
 
 echo "Installing Cert Manager from $CERTMANAGERURI"

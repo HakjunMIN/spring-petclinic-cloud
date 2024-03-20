@@ -1,40 +1,40 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "visits.fullname" . ***REMOVED******REMOVED***
+  name: {{ include "visits.fullname" . }}
   labels:
-    {{- include "visits.labels" . | nindent 4 ***REMOVED******REMOVED***
-***REMOVED***
-  {{- if not .Values.autoscaling.enabled ***REMOVED******REMOVED***
-  replicas: {{ .Values.replicaCount ***REMOVED******REMOVED***
-  {{- end ***REMOVED******REMOVED***
+    {{- include "visits.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
   selector:
     matchLabels:
-      {{- include "visits.selectorLabels" . | nindent 6 ***REMOVED******REMOVED***
+      {{- include "visits.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations ***REMOVED******REMOVED***
+      {{- with .Values.podAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 ***REMOVED******REMOVED***
-      {{- end ***REMOVED******REMOVED***
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       labels:
-        {{- include "visits.selectorLabels" . | nindent 8 ***REMOVED******REMOVED***
-    ***REMOVED***
-      {{- with .Values.imagePullSecrets ***REMOVED******REMOVED***
+        {{- include "visits.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 ***REMOVED******REMOVED***
-      {{- end ***REMOVED******REMOVED***
-      serviceAccountName: {{ include "visits.serviceAccountName" . ***REMOVED******REMOVED***
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "visits.serviceAccountName" . }}
       
       securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 ***REMOVED******REMOVED***
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name ***REMOVED******REMOVED***
+        - name: {{ .Chart.Name }}
           securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 ***REMOVED******REMOVED***
-        ***REMOVED*** "{{ .Values.image.repository ***REMOVED******REMOVED***:{{ .Values.image.tag | default .Chart.AppVersion ***REMOVED******REMOVED***"
-          imagePullPolicy: {{ .Values.image.pullPolicy ***REMOVED******REMOVED***
-        ***REMOVED*** {{- toYaml .Values.volumeMounts | nindent 12***REMOVED******REMOVED***
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts: {{- toYaml .Values.volumeMounts | nindent 12}}
           ports:
             - containerPort: 8080
           livenessProbe:
@@ -47,24 +47,24 @@ metadata:
               path: /actuator/health/readiness
               port: 8080
             initialDelaySeconds: 15  
-        ***REMOVED*** 
-            {{- toYaml .Values.env | nindent 12***REMOVED******REMOVED***    
+          env: 
+            {{- toYaml .Values.env | nindent 12}}    
           resources:
-            {{- toYaml .Values.resources | nindent 12 ***REMOVED******REMOVED***
-      {{- with .Values.nodeSelector ***REMOVED******REMOVED***
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
       nodeSelector:
-        {{- toYaml . | nindent 8 ***REMOVED******REMOVED***
-      {{- end ***REMOVED******REMOVED***
-      {{- with .Values.affinity ***REMOVED******REMOVED***
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
       affinity:
-        {{- toYaml . | nindent 8 ***REMOVED******REMOVED***
-      {{- end ***REMOVED******REMOVED***
-      {{- with .Values.tolerations ***REMOVED******REMOVED***
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
       tolerations:
-        {{- toYaml . | nindent 8 ***REMOVED******REMOVED***
-      {{- end ***REMOVED******REMOVED***
-      {{- with .Values.volumes ***REMOVED******REMOVED***
-     ***REMOVED***
-        {{- toYaml . | nindent 8 ***REMOVED******REMOVED***
-      {{- end ***REMOVED******REMOVED***
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.volumes }}
+      volumes:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       

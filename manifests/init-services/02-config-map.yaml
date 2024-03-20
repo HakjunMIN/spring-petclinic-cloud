@@ -12,7 +12,7 @@ data:
         timeout-per-shutdown-phase: 15
       port: 8080
       compression:
-  ***REMOVED***
+        enabled: true
         mime-types: application/json,text/css,application/javascript
         min-response-size: 2048
 
@@ -29,18 +29,18 @@ data:
       endpoint:
         health:
           probes:
-      ***REMOVED***
+            enabled: true
       health:
         livenessState:
-    ***REMOVED***
+          enabled: true
         readinessState:
-    ***REMOVED***
+          enabled: true
         restart:
-    ***REMOVED***
+          enabled: true
         metrics:
-    ***REMOVED***
+          enabled: true
         prometheus:
-    ***REMOVED***
+          enabled: true
       endpoints:
         web:
           exposure:
@@ -48,14 +48,14 @@ data:
       metrics:
         export:
           prometheus:
-      ***REMOVED***
+            enabled: true
           wavefront:
-      ***REMOVED***
+            enabled: true
 
     customers-service-id: http://customers-service.spring-petclinic.svc.cluster.local:8080
     visits-service-id: http://vists-service.spring-petclinic.svc.cluster.local:8080
 
-    ***REMOVED***
+    spring:
       datasource:
         schema: classpath*:db/mysql/schema.sql
         data: classpath*:db/mysql/data.sql
@@ -70,23 +70,23 @@ data:
       sleuth:
         sampler:
           probability: 1.0
-      ***REMOVED***
+        config:
           # Allow the microservices to override the remote properties with their own System properties or config file
           allow-override: true
           # Override configuration with any local property source
           override-none: true
       messages:
         basename: messages/messages
-    ***REMOVED***
-    ***REMOVED***
+      cloud:
+        kubernetes:
           discovery:
-      ***REMOVED***
+            enabled: true
         loadbalancer:
           ribbon:
-      ***REMOVED***
+            enabled: false
         gateway:
           x-forwarded:  
-      ***REMOVED*** 
+            enabled: true 
             for-enabled: true 
             proto-enabled: true 
             host-append: false  
@@ -111,7 +111,7 @@ data:
                 - Path=/api/customer/**
               filters:
                 - StripPrefix=2
-    ***REMOVED***
+    vets:
       cache:
         ttl: 60
         heap-size: 101

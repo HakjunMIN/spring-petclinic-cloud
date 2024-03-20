@@ -9,4 +9,4 @@ import org.springframework.context.annotation.Profile;
 @EnableDiscoveryClient
 public class ApiGatewayDiscoveryConfig {
 
-***REMOVED***
+}

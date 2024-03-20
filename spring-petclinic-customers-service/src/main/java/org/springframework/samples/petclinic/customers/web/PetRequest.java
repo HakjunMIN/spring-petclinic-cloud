@@ -37,4 +37,4 @@ class PetRequest {
     private String name;
 
     private int typeId;
-***REMOVED***
+}

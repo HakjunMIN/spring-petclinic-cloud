@@ -54,7 +54,7 @@ class PetResourceTest {
             .andExpect(jsonPath("$.id").value(2))
             .andExpect(jsonPath("$.name").value("Basil"))
             .andExpect(jsonPath("$.type.id").value(6));
-    ***REMOVED***
+    }
 
     private Pet setupPet() {
         Owner owner = new Owner();
@@ -72,5 +72,5 @@ class PetResourceTest {
 
         owner.addPet(pet);
         return pet;
-    ***REMOVED***
-***REMOVED***
+    }
+}

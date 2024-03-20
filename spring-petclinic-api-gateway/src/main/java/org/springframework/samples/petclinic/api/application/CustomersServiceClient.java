@@ -30,15 +30,15 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class CustomersServiceClient {
 
-	@Value("${customers-service-id://customers-service***REMOVED***")
+	@Value("${customers-service-id://customers-service}")
 	private String hostname;
 	
     private final WebClient.Builder webClientBuilder;
 
-    public Mono<OwnerDetails***REMOVED*** getOwner(final int ownerId) {
+    public Mono<OwnerDetails> getOwner(final int ownerId) {
         return webClientBuilder.build().get()
-            .uri(hostname + "/owners/{ownerId***REMOVED***", ownerId)
+            .uri(hostname + "/owners/{ownerId}", ownerId)
             .retrieve()
             .bodyToMono(OwnerDetails.class);
-    ***REMOVED***
-***REMOVED***
+    }
+}

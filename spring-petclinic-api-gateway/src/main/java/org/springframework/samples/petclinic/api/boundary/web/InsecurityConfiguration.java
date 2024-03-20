@@ -16,5 +16,5 @@ public class InsecurityConfiguration {
                 .and()
                 .csrf().disable()
                 .build();
-    ***REMOVED***
-***REMOVED***
+    }
+}

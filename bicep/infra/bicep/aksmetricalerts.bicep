@@ -39,13 +39,13 @@ var alertServerityLookup = {
   Warning: 2
   Informational: 3
   Verbose: 4
-***REMOVED***
+}
 var alertSeverityNumber = alertServerityLookup[alertSeverity]
 
 var AksResourceId = resourceId('Microsoft.ContainerService/managedClusters', clusterName)
 
 resource Node_CPU_utilization_high_for_clusterName_CI_1 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Node CPU utilization high for ${clusterName***REMOVED*** CI-1'
+  name: 'Node CPU utilization high for ${clusterName} CI-1'
   location: 'global'
   properties: {
     criteria: {
@@ -59,7 +59,7 @@ resource Node_CPU_utilization_high_for_clusterName_CI_1 'Microsoft.Insights/metr
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'cpuUsagePercentage'
           metricNamespace: 'Insights.Container/nodes'
@@ -68,10 +68,10 @@ resource Node_CPU_utilization_high_for_clusterName_CI_1 'Microsoft.Insights/metr
           threshold: 80
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'Node CPU utilization across the cluster.'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -81,11 +81,11 @@ resource Node_CPU_utilization_high_for_clusterName_CI_1 'Microsoft.Insights/metr
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Node_working_set_memory_utilization_high_for_clusterName_CI_2 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Node working set memory utilization high for ${clusterName***REMOVED*** CI-2'
+  name: 'Node working set memory utilization high for ${clusterName} CI-2'
   location: 'global'
   properties: {
     criteria: {
@@ -99,7 +99,7 @@ resource Node_working_set_memory_utilization_high_for_clusterName_CI_2 'Microsof
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'memoryWorkingSetPercentage'
           metricNamespace: 'Insights.Container/nodes'
@@ -108,10 +108,10 @@ resource Node_working_set_memory_utilization_high_for_clusterName_CI_2 'Microsof
           threshold: 80
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'Node working set memory utilization across the cluster.'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -121,11 +121,11 @@ resource Node_working_set_memory_utilization_high_for_clusterName_CI_2 'Microsof
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Jobs_completed_more_than_6_hours_ago_for_clusterName_CI_11 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Jobs completed more than 6 hours ago for ${clusterName***REMOVED*** CI-11'
+  name: 'Jobs completed more than 6 hours ago for ${clusterName} CI-11'
   location: 'global'
   properties: {
     criteria: {
@@ -139,14 +139,14 @@ resource Jobs_completed_more_than_6_hours_ago_for_clusterName_CI_11 'Microsoft.I
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'kubernetes namespace'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'completedJobsCount'
           metricNamespace: 'Insights.Container/pods'
@@ -155,10 +155,10 @@ resource Jobs_completed_more_than_6_hours_ago_for_clusterName_CI_11 'Microsoft.I
           threshold: 0
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'This alert monitors completed jobs (more than 6 hours ago).'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -168,11 +168,11 @@ resource Jobs_completed_more_than_6_hours_ago_for_clusterName_CI_11 'Microsoft.I
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Container_CPU_usage_high_for_clusterName_CI_9 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Container CPU usage high for ${clusterName***REMOVED*** CI-9'
+  name: 'Container CPU usage high for ${clusterName} CI-9'
   location: 'global'
   properties: {
     criteria: {
@@ -186,14 +186,14 @@ resource Container_CPU_usage_high_for_clusterName_CI_9 'Microsoft.Insights/metri
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'kubernetes namespace'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'cpuExceededPercentage'
           metricNamespace: 'Insights.Container/containers'
@@ -202,10 +202,10 @@ resource Container_CPU_usage_high_for_clusterName_CI_9 'Microsoft.Insights/metri
           threshold: 90
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'This alert monitors container CPU utilization.'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -215,11 +215,11 @@ resource Container_CPU_usage_high_for_clusterName_CI_9 'Microsoft.Insights/metri
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Container_working_set_memory_usage_high_for_clusterName_CI_10 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Container working set memory usage high for ${clusterName***REMOVED*** CI-10'
+  name: 'Container working set memory usage high for ${clusterName} CI-10'
   location: 'global'
   properties: {
     criteria: {
@@ -233,14 +233,14 @@ resource Container_working_set_memory_usage_high_for_clusterName_CI_10 'Microsof
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'kubernetes namespace'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'memoryWorkingSetExceededPercentage'
           metricNamespace: 'Insights.Container/containers'
@@ -249,10 +249,10 @@ resource Container_working_set_memory_usage_high_for_clusterName_CI_10 'Microsof
           threshold: 90
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'This alert monitors container working set memory utilization.'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -262,11 +262,11 @@ resource Container_working_set_memory_usage_high_for_clusterName_CI_10 'Microsof
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Pods_in_failed_state_for_clusterName_CI_4 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Pods in failed state for ${clusterName***REMOVED*** CI-4'
+  name: 'Pods in failed state for ${clusterName} CI-4'
   location: 'global'
   properties: {
     criteria: {
@@ -280,7 +280,7 @@ resource Pods_in_failed_state_for_clusterName_CI_4 'Microsoft.Insights/metricAle
               values: [
                 'Failed'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'podCount'
           metricNamespace: 'Insights.Container/pods'
@@ -289,10 +289,10 @@ resource Pods_in_failed_state_for_clusterName_CI_4 'Microsoft.Insights/metricAle
           threshold: 0
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'Pod status monitoring.'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -302,11 +302,11 @@ resource Pods_in_failed_state_for_clusterName_CI_4 'Microsoft.Insights/metricAle
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Disk_usage_high_for_clusterName_CI_5 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Disk usage high for ${clusterName***REMOVED*** CI-5'
+  name: 'Disk usage high for ${clusterName} CI-5'
   location: 'global'
   properties: {
     criteria: {
@@ -320,14 +320,14 @@ resource Disk_usage_high_for_clusterName_CI_5 'Microsoft.Insights/metricAlerts@2
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'device'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'DiskUsedPercentage'
           metricNamespace: 'Insights.Container/nodes'
@@ -336,10 +336,10 @@ resource Disk_usage_high_for_clusterName_CI_5 'Microsoft.Insights/metricAlerts@2
           threshold: 80
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'This alert monitors disk usage for all nodes and storage devices.'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -349,11 +349,11 @@ resource Disk_usage_high_for_clusterName_CI_5 'Microsoft.Insights/metricAlerts@2
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Nodes_in_not_ready_status_for_clusterName_CI_3 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Nodes in not ready status for ${clusterName***REMOVED*** CI-3'
+  name: 'Nodes in not ready status for ${clusterName} CI-3'
   location: 'global'
   properties: {
     criteria: {
@@ -367,7 +367,7 @@ resource Nodes_in_not_ready_status_for_clusterName_CI_3 'Microsoft.Insights/metr
               values: [
                 'NotReady'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'nodesCount'
           metricNamespace: 'Insights.Container/nodes'
@@ -376,10 +376,10 @@ resource Nodes_in_not_ready_status_for_clusterName_CI_3 'Microsoft.Insights/metr
           threshold: 0
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'Node status monitoring.'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -389,11 +389,11 @@ resource Nodes_in_not_ready_status_for_clusterName_CI_3 'Microsoft.Insights/metr
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Containers_getting_OOM_killed_for_clusterName_CI_6 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Containers getting OOM killed for ${clusterName***REMOVED*** CI-6'
+  name: 'Containers getting OOM killed for ${clusterName} CI-6'
   location: 'global'
   properties: {
     criteria: {
@@ -407,14 +407,14 @@ resource Containers_getting_OOM_killed_for_clusterName_CI_6 'Microsoft.Insights/
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'controllerName'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'oomKilledContainerCount'
           metricNamespace: 'Insights.Container/pods'
@@ -423,10 +423,10 @@ resource Containers_getting_OOM_killed_for_clusterName_CI_6 'Microsoft.Insights/
           threshold: 0
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'This alert monitors number of containers killed due to out of memory (OOM) error.'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -436,11 +436,11 @@ resource Containers_getting_OOM_killed_for_clusterName_CI_6 'Microsoft.Insights/
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Persistent_volume_usage_high_for_clusterName_CI_18 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Persistent volume usage high for ${clusterName***REMOVED*** CI-18'
+  name: 'Persistent volume usage high for ${clusterName} CI-18'
   location: 'global'
   properties: {
     criteria: {
@@ -454,14 +454,14 @@ resource Persistent_volume_usage_high_for_clusterName_CI_18 'Microsoft.Insights/
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'kubernetesNamespace'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'pvUsageExceededPercentage'
           metricNamespace: 'Insights.Container/persistentvolumes'
@@ -470,10 +470,10 @@ resource Persistent_volume_usage_high_for_clusterName_CI_18 'Microsoft.Insights/
           threshold: 80
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'This alert monitors persistent volume utilization.'
     enabled: false
     evaluationFrequency: evalFrequency
@@ -483,11 +483,11 @@ resource Persistent_volume_usage_high_for_clusterName_CI_18 'Microsoft.Insights/
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Pods_not_in_ready_state_for_clusterName_CI_8 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Pods not in ready state for ${clusterName***REMOVED*** CI-8'
+  name: 'Pods not in ready state for ${clusterName} CI-8'
   location: 'global'
   properties: {
     criteria: {
@@ -501,14 +501,14 @@ resource Pods_not_in_ready_state_for_clusterName_CI_8 'Microsoft.Insights/metric
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'kubernetes namespace'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'PodReadyPercentage'
           metricNamespace: 'Insights.Container/pods'
@@ -517,10 +517,10 @@ resource Pods_not_in_ready_state_for_clusterName_CI_8 'Microsoft.Insights/metric
           threshold: 80
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'This alert monitors for excessive pods not in the ready state.'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -530,11 +530,11 @@ resource Pods_not_in_ready_state_for_clusterName_CI_8 'Microsoft.Insights/metric
     severity: alertSeverityNumber
     targetResourceType: 'microsoft.containerservice/managedclusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Restarting_container_count_for_clusterName_CI_7 'Microsoft.Insights/metricAlerts@2018-03-01' = {
-  name: 'Restarting container count for ${clusterName***REMOVED*** CI-7'
+  name: 'Restarting container count for ${clusterName} CI-7'
   location: 'global'
   properties: {
     criteria: {
@@ -548,14 +548,14 @@ resource Restarting_container_count_for_clusterName_CI_7 'Microsoft.Insights/met
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'controllerName'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           metricName: 'restartingContainerCount'
           metricNamespace: 'Insights.Container/pods'
@@ -564,10 +564,10 @@ resource Restarting_container_count_for_clusterName_CI_7 'Microsoft.Insights/met
           threshold: 0
           timeAggregation: 'Average'
           skipMetricValidation: true
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
+    }
     description: 'This alert monitors number of containers restarting across the cluster.'
     enabled: metricAlertsEnabled
     evaluationFrequency: evalFrequency
@@ -577,11 +577,11 @@ resource Restarting_container_count_for_clusterName_CI_7 'Microsoft.Insights/met
     severity: alertSeverityNumber
     targetResourceType: 'Microsoft.ContainerService/managedClusters'
     windowSize: windowSize
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource Container_CPU_usage_violates_the_configured_threshold_for_clustername_CI_19 'microsoft.insights/metricAlerts@2018-03-01' = {
-  name: 'Container CPU usage violates the configured threshold for ${clusterName***REMOVED*** CI-19'
+  name: 'Container CPU usage violates the configured threshold for ${clusterName} CI-19'
   location: 'global'
   properties: {
     description: 'This alert monitors container CPU usage. It uses the threshold defined in the config map.'
@@ -606,28 +606,28 @@ resource Container_CPU_usage_violates_the_configured_threshold_for_clustername_C
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'kubernetes namespace'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           operator: 'GreaterThan'
           timeAggregation: 'Average'
           skipMetricValidation: true
           criterionType: 'StaticThresholdCriterion'
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}
 
 resource Container_working_set_memory_usage_violates_the_configured_threshold_for_clustername_CI_20 'microsoft.insights/metricAlerts@2018-03-01' = {
-  name: 'Container working set memory usage violates the configured threshold for ${clusterName***REMOVED*** CI-20'
+  name: 'Container working set memory usage violates the configured threshold for ${clusterName} CI-20'
   location: 'global'
   properties: {
     description: 'This alert monitors container working set memory usage. It uses the threshold defined in the config map.'
@@ -652,29 +652,29 @@ resource Container_working_set_memory_usage_violates_the_configured_threshold_fo
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'kubernetes namespace'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           operator: 'GreaterThan'
           timeAggregation: 'Average'
           skipMetricValidation: true
           criterionType: 'StaticThresholdCriterion'
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}
 
 
 resource PV_usage_violates_the_configured_threshold_for_clustername_CI_21 'microsoft.insights/metricAlerts@2018-03-01' = {
-  name: 'PV usage violates the configured threshold for ${clusterName***REMOVED*** CI-21'
+  name: 'PV usage violates the configured threshold for ${clusterName} CI-21'
   location: 'global'
   properties: {
     description: 'This alert monitors PV usage. It uses the threshold defined in the config map.'
@@ -699,32 +699,32 @@ resource PV_usage_violates_the_configured_threshold_for_clustername_CI_21 'micro
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
             {
               name: 'kubernetesNamespace'
               operator: 'Include'
               values: [
                 '*'
               ]
-      ***REMOVED***
+            }
           ]
           operator: 'GreaterThan'
           timeAggregation: 'Average'
           skipMetricValidation: true
           criterionType: 'StaticThresholdCriterion'
-  ***REMOVED***
+        }
       ]
       'odata.type': 'Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria'
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}
 
 
 resource Daily_data_cap_breached_for_workspace_logworkspacename_CIQ_1_name_resource 'microsoft.insights/scheduledqueryrules@2021-02-01-preview' = {
-  name: 'Daily data cap breached for workspace ${logAnalyticsWorkspaceName***REMOVED*** CIQ-1'
+  name: 'Daily data cap breached for workspace ${logAnalyticsWorkspaceName} CIQ-1'
   location: logAnalyticsWorkspaceLocation
   properties: {
-    displayName: 'Daily data cap breached for workspace ${logAnalyticsWorkspaceName***REMOVED*** CIQ-1'
+    displayName: 'Daily data cap breached for workspace ${logAnalyticsWorkspaceName} CIQ-1'
     description: 'This alert monitors daily data cap defined on a workspace and fires when the daily data cap is breached.'
     severity: 1
     enabled: metricAlertsEnabled
@@ -744,10 +744,10 @@ resource Daily_data_cap_breached_for_workspace_logworkspacename_CIQ_1_name_resou
           failingPeriods: {
             numberOfEvaluationPeriods: 1
             minFailingPeriodsToAlert: 1
-    ***REMOVED***
-  ***REMOVED***
+          }
+        }
       ]
-    ***REMOVED***
+    }
     muteActionsDuration: 'P1D'
-  ***REMOVED***
-***REMOVED***
+  }
+}

@@ -64,43 +64,43 @@ public class Pet {
 
     public Integer getId() {
         return id;
-    ***REMOVED***
+    }
 
     public void setId(final Integer id) {
         this.id = id;
-    ***REMOVED***
+    }
 
     public String getName() {
         return this.name;
-    ***REMOVED***
+    }
 
     public void setName(final String name) {
         this.name = name;
-    ***REMOVED***
+    }
 
     public Date getBirthDate() {
         return birthDate;
-    ***REMOVED***
+    }
 
     public void setBirthDate(final Date birthDate) {
         this.birthDate = birthDate;
-    ***REMOVED***
+    }
 
     public PetType getType() {
         return type;
-    ***REMOVED***
+    }
 
     public void setType(final PetType type) {
         this.type = type;
-    ***REMOVED***
+    }
 
     public Owner getOwner() {
         return owner;
-    ***REMOVED***
+    }
 
     public void setOwner(final Owner owner) {
         this.owner = owner;
-    ***REMOVED***
+    }
 
     @Override
     public String toString() {
@@ -112,6 +112,6 @@ public class Pet {
             .append("ownerFirstname", this.getOwner().getFirstName())
             .append("ownerLastname", this.getOwner().getLastName())
             .toString();
-    ***REMOVED***
+    }
 
-***REMOVED***
+}

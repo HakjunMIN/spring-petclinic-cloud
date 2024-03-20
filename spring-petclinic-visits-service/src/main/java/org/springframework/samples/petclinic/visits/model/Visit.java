@@ -62,22 +62,22 @@ public class Visit {
 
     public Integer getId() {
         return id;
-    ***REMOVED***
+    }
 
     public Date getDate() {
         return date;
-    ***REMOVED***
+    }
 
     public String getDescription() {
         return description;
-    ***REMOVED***
+    }
 
     public int getPetId() {
         return petId;
-    ***REMOVED***
+    }
 
     public void setPetId(final int petId) {
         this.petId = petId;
-    ***REMOVED***
+    }
 
-***REMOVED***
+}

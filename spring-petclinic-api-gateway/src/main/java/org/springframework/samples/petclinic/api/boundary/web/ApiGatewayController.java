@@ -44,38 +44,38 @@ public class ApiGatewayController {
 
     private final VisitsServiceClient visitsServiceClient;
 
-    private final ReactiveCircuitBreakerFactory<?, ?***REMOVED*** cbFactory;
+    private final ReactiveCircuitBreakerFactory<?, ?> cbFactory;
 
-    @GetMapping(value = "owners/{ownerId***REMOVED***")
-    public Mono<OwnerDetails***REMOVED*** getOwnerDetails(final @PathVariable int ownerId) {
+    @GetMapping(value = "owners/{ownerId}")
+    public Mono<OwnerDetails> getOwnerDetails(final @PathVariable int ownerId) {
         return customersServiceClient.getOwner(ownerId)
-            .flatMap(owner -***REMOVED***
+            .flatMap(owner ->
                 visitsServiceClient.getVisitsForPets(owner.getPetIds())
-                    .transform(it -***REMOVED*** {
+                    .transform(it -> {
                         ReactiveCircuitBreaker cb = cbFactory.create("getOwnerDetails");
-                        return cb.run(it, throwable -***REMOVED*** emptyVisitsForPets());
-              ***REMOVED***)
+                        return cb.run(it, throwable -> emptyVisitsForPets());
+                    })
                     .map(addVisitsToOwner(owner))
             );
 
-    ***REMOVED***
+    }
 
-    private Function<Visits, OwnerDetails***REMOVED*** addVisitsToOwner(OwnerDetails owner) {
-        return visits -***REMOVED*** {
+    private Function<Visits, OwnerDetails> addVisitsToOwner(OwnerDetails owner) {
+        return visits -> {
             owner.getPets()
-                .forEach(pet -***REMOVED*** pet.getVisits()
+                .forEach(pet -> pet.getVisits()
                     .addAll(visits.getItems().stream()
-                        .filter(v -***REMOVED*** v.getPetId() == pet.getId())
+                        .filter(v -> v.getPetId() == pet.getId())
                         .collect(Collectors.toList()))
                 );
             return owner;
-  ***REMOVED***;
-    ***REMOVED***
+        };
+    }
 
-    private Mono<Visits***REMOVED*** emptyVisitsForPets() {
+    private Mono<Visits> emptyVisitsForPets() {
         return Mono.just(new Visits());
-    ***REMOVED***
-***REMOVED***
+    }
+}
 
 
 

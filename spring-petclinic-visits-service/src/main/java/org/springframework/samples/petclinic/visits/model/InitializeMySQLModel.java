@@ -22,7 +22,7 @@ public class InitializeMySQLModel {
 	    dataSourceInitializer.setDataSource(dataSource);
 	    dataSourceInitializer.setDatabasePopulator(resourceDatabasePopulator);
 	    return dataSourceInitializer;
-	***REMOVED***
+	}
 	
-***REMOVED***
+}
 

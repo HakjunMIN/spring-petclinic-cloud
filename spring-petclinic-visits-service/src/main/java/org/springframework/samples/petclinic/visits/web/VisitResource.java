@@ -48,30 +48,30 @@ class VisitResource {
 
     private final VisitRepository visitRepository;
 
-    @PostMapping("owners/*/pets/{petId***REMOVED***/visits")
+    @PostMapping("owners/*/pets/{petId}/visits")
     @ResponseStatus(HttpStatus.CREATED)
     Visit create(
         @Valid @RequestBody Visit visit,
         @PathVariable("petId") int petId) {
 
         visit.setPetId(petId);
-        log.info("Saving visit {***REMOVED***", visit);
+        log.info("Saving visit {}", visit);
         return visitRepository.save(visit);
-    ***REMOVED***
+    }
 
-    @GetMapping("owners/*/pets/{petId***REMOVED***/visits")
-    List<Visit***REMOVED*** visits(@PathVariable("petId") int petId) {
+    @GetMapping("owners/*/pets/{petId}/visits")
+    List<Visit> visits(@PathVariable("petId") int petId) {
         return visitRepository.findByPetId(petId);
-    ***REMOVED***
+    }
 
     @GetMapping("pets/visits")
-    Visits visitsMultiGet(@RequestParam("petId") List<Integer***REMOVED*** petIds) {
-        final List<Visit***REMOVED*** byPetIdIn = visitRepository.findByPetIdIn(petIds);
+    Visits visitsMultiGet(@RequestParam("petId") List<Integer> petIds) {
+        final List<Visit> byPetIdIn = visitRepository.findByPetIdIn(petIds);
         return new Visits(byPetIdIn);
-    ***REMOVED***
+    }
 
     @Value
     static class Visits {
-        private final List<Visit***REMOVED*** items;
-    ***REMOVED***
-***REMOVED***
+        private final List<Visit> items;
+    }
+}

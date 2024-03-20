@@ -13,16 +13,16 @@ var existingAksVnetName = !empty(byoAKSSubnetId) ? split(byoAKSSubnetId, '/')[8]
 
 resource existingvnet 'Microsoft.Network/virtualNetworks@2021-02-01' existing =  {
   name: existingAksVnetName
-***REMOVED***
+}
 resource existingAksSubnet 'Microsoft.Network/virtualNetworks/subnets@2020-08-01' existing = {
   parent: existingvnet
   name: existingAksSubnetName
-***REMOVED***
+}
 
 resource uai 'Microsoft.ManagedIdentity/userAssignedIdentities@2018-11-30' existing = {
   name: user_identity_name
   scope: resourceGroup(user_identity_rg)
-***REMOVED***
+}
 
 resource existing_vnet_cont 'Microsoft.Authorization/roleAssignments@2020-04-01-preview' = {
   name:  guid(user_identity_principalId, existingAksSubnetName)
@@ -31,5 +31,5 @@ resource existing_vnet_cont 'Microsoft.Authorization/roleAssignments@2020-04-01-
     roleDefinitionId: networkContributorRole
     principalId: uai.properties.principalId
     principalType: 'ServicePrincipal'
-  ***REMOVED***
-***REMOVED***
+  }
+}

@@ -23,7 +23,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Models a {@link Vet Vet's***REMOVED*** specialty (for example, dentistry).
+ * Models a {@link Vet Vet's} specialty (for example, dentistry).
  *
  * @author Juergen Hoeller
  */
@@ -39,17 +39,17 @@ public class Specialty {
 
     public Integer getId() {
         return id;
-    ***REMOVED***
+    }
 
     public void setId(final Integer id) {
         this.id = id;
-    ***REMOVED***
+    }
 
     public String getName() {
         return name;
-    ***REMOVED***
+    }
 
     public void setName(final String name) {
         this.name = name;
-    ***REMOVED***
-***REMOVED***
+    }
+}

@@ -42,48 +42,48 @@ import io.github.resilience4j.timelimiter.TimeLimiterConfig;
 /**
  * @author Maciej Szarlinski
  */
-***REMOVED***
+@SpringBootApplication
 public class ApiGatewayApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ApiGatewayApplication.class, args);
-    ***REMOVED***
+    }
 
     @Bean
     @LoadBalanced
     RestTemplate loadBalancedRestTemplate() {
         return new RestTemplate();
-    ***REMOVED***
+    }
 
     @Bean
     @LoadBalanced
     public WebClient.Builder loadBalancedWebClientBuilder() {
         return WebClient.builder();
-    ***REMOVED***
+    }
 
     @Value("classpath:/static/index.html")
     private Resource indexHtml;
 
     /**
      * workaround solution for forwarding to index.html
-     * @see <a href="https://github.com/spring-projects/spring-boot/issues/9785"***REMOVED***#9785</a***REMOVED***
+     * @see <a href="https://github.com/spring-projects/spring-boot/issues/9785">#9785</a>
      */
     @Bean
-    RouterFunction<?***REMOVED*** routerFunction() {
-        RouterFunction<ServerResponse***REMOVED*** router = RouterFunctions.resources("/**", new ClassPathResource("static/"))
+    RouterFunction<?> routerFunction() {
+        RouterFunction<ServerResponse> router = RouterFunctions.resources("/**", new ClassPathResource("static/"))
             .andRoute(RequestPredicates.GET("/"),
-                request -***REMOVED*** ServerResponse.ok().contentType(MediaType.TEXT_HTML).bodyValue(indexHtml));
+                request -> ServerResponse.ok().contentType(MediaType.TEXT_HTML).bodyValue(indexHtml));
         return router;
-    ***REMOVED***
+    }
 
     /**
      * Default Resilience4j circuit breaker configuration
      */
     @Bean
-    public Customizer<ReactiveResilience4JCircuitBreakerFactory***REMOVED*** defaultCustomizer() {
-        return factory -***REMOVED*** factory.configureDefault(id -***REMOVED*** new Resilience4JConfigBuilder(id)
+    public Customizer<ReactiveResilience4JCircuitBreakerFactory> defaultCustomizer() {
+        return factory -> factory.configureDefault(id -> new Resilience4JConfigBuilder(id)
             .circuitBreakerConfig(CircuitBreakerConfig.ofDefaults())
             .timeLimiterConfig(TimeLimiterConfig.custom().timeoutDuration(Duration.ofSeconds(4)).build())
             .build());
-    ***REMOVED***
-***REMOVED***
+    }
+}

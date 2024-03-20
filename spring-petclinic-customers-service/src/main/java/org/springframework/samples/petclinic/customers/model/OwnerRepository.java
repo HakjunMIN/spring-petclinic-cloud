@@ -18,7 +18,7 @@ package org.springframework.samples.petclinic.customers.model;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * Repository class for <code***REMOVED***Owner</code***REMOVED*** domain objects All method names are compliant with Spring Data naming
+ * Repository class for <code>Owner</code> domain objects All method names are compliant with Spring Data naming
  * conventions so this interface can easily be extended for Spring Data See here: http://static.springsource.org/spring-data/jpa/docs/current/reference/html/jpa.repositories.html#jpa.query-methods.query-creation
  *
  * @author Ken Krebs
@@ -27,4 +27,4 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Michael Isvy
  * @author Maciej Szarlinski
  */
-public interface OwnerRepository extends JpaRepository<Owner, Integer***REMOVED*** { ***REMOVED***
+public interface OwnerRepository extends JpaRepository<Owner, Integer> { }

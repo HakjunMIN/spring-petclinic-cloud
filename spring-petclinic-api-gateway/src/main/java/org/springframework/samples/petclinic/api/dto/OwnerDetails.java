@@ -41,12 +41,12 @@ public class OwnerDetails {
 
     private String telephone;
 
-    private final List<PetDetails***REMOVED*** pets = new ArrayList<***REMOVED***();
+    private final List<PetDetails> pets = new ArrayList<>();
 
     @JsonIgnore
-    public List<Integer***REMOVED*** getPetIds() {
+    public List<Integer> getPetIds() {
         return pets.stream()
             .map(PetDetails::getId)
             .collect(toList());
-    ***REMOVED***
-***REMOVED***
+    }
+}

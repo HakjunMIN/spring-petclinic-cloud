@@ -18,15 +18,15 @@ package org.springframework.samples.petclinic.visits;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-***REMOVED***
+import com.microsoft.applicationinsights.attach.ApplicationInsights;
 /**
  * @author Maciej Szarlinski
  */
-***REMOVED***
+@SpringBootApplication
 public class VisitsServiceApplication {
 
     public static void main(String[] args) {
         ApplicationInsights.attach();
         SpringApplication.run(VisitsServiceApplication.class, args);
-    ***REMOVED***
-***REMOVED***
+    }
+}

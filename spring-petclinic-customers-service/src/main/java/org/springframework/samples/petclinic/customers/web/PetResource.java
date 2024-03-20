@@ -42,31 +42,31 @@ class PetResource {
 
 
     @GetMapping("/petTypes")
-    public List<PetType***REMOVED*** getPetTypes() {
+    public List<PetType> getPetTypes() {
         return petRepository.findPetTypes();
-    ***REMOVED***
+    }
 
-    @PostMapping("/owners/{ownerId***REMOVED***/pets")
+    @PostMapping("/owners/{ownerId}/pets")
     @ResponseStatus(HttpStatus.CREATED)
     public Pet processCreationForm(
         @RequestBody PetRequest petRequest,
         @PathVariable("ownerId") int ownerId) {
 
         final Pet pet = new Pet();
-        final Optional<Owner***REMOVED*** optionalOwner = ownerRepository.findById(ownerId);
-        Owner owner = optionalOwner.orElseThrow(() -***REMOVED*** new ResourceNotFoundException("Owner "+ownerId+" not found"));
+        final Optional<Owner> optionalOwner = ownerRepository.findById(ownerId);
+        Owner owner = optionalOwner.orElseThrow(() -> new ResourceNotFoundException("Owner "+ownerId+" not found"));
         owner.addPet(pet);
 
         return save(pet, petRequest);
-    ***REMOVED***
+    }
 
-    @PutMapping("/owners/*/pets/{petId***REMOVED***")
+    @PutMapping("/owners/*/pets/{petId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void processUpdateForm(@RequestBody PetRequest petRequest) {
         int petId = petRequest.getId();
         Pet pet = findPetById(petId);
         save(pet, petRequest);
-    ***REMOVED***
+    }
 
     private Pet save(final Pet pet, final PetRequest petRequest) {
 
@@ -76,22 +76,22 @@ class PetResource {
         petRepository.findPetTypeById(petRequest.getTypeId())
             .ifPresent(pet::setType);
 
-        log.info("Saving pet {***REMOVED***", pet);
+        log.info("Saving pet {}", pet);
         return petRepository.save(pet);
-    ***REMOVED***
+    }
 
-    @GetMapping("owners/*/pets/{petId***REMOVED***")
+    @GetMapping("owners/*/pets/{petId}")
     public PetDetails findPet(@PathVariable("petId") int petId) {
         return new PetDetails(findPetById(petId));
-    ***REMOVED***
+    }
 
 
     private Pet findPetById(int petId) {
-        Optional<Pet***REMOVED*** pet = petRepository.findById(petId);
+        Optional<Pet> pet = petRepository.findById(petId);
         if (!pet.isPresent()) {
             throw new ResourceNotFoundException("Pet "+petId+" not found");
-  ***REMOVED***
+        }
         return pet.get();
-    ***REMOVED***
+    }
 
-***REMOVED***
+}

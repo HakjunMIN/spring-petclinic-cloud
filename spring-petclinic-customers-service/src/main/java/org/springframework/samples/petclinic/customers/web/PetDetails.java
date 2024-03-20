@@ -46,5 +46,5 @@ class PetDetails {
         this.owner = pet.getOwner().getFirstName() + " " + pet.getOwner().getLastName();
         this.birthDate = pet.getBirthDate();
         this.type = pet.getType();
-    ***REMOVED***
-***REMOVED***
+    }
+}

@@ -24,4 +24,4 @@ import lombok.Data;
 public class PetType {
 
     private String name;
-***REMOVED***
+}

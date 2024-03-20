@@ -24,7 +24,7 @@ import javax.persistence.Table;
 
 /**
  * @author Juergen Hoeller
- * Can be Cat, Dog, Hamster***REMOVED***
+ * Can be Cat, Dog, Hamster...
  */
 @Entity
 @Table(name = "types")
@@ -38,13 +38,13 @@ public class PetType {
 
     public Integer getId() {
         return id;
-    ***REMOVED***
+    }
 
     public void setId(final Integer id) {
         this.id = id;
-    ***REMOVED***
+    }
 
     public String getName() {
         return this.name;
-    ***REMOVED***
-***REMOVED***
+    }
+}

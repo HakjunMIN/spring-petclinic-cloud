@@ -36,5 +36,5 @@ public class VetsProperties {
         private int ttl;
 
         private int heapSize;
-    ***REMOVED***
-***REMOVED***
+    }
+}

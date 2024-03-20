@@ -65,52 +65,52 @@ public class Vet {
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "vet_specialties", joinColumns = @JoinColumn(name = "vet_id"),
         inverseJoinColumns = @JoinColumn(name = "specialty_id"))
-    private Set<Specialty***REMOVED*** specialties;
+    private Set<Specialty> specialties;
 
     public Integer getId() {
         return id;
-    ***REMOVED***
+    }
 
     public void setId(Integer id) {
         this.id = id;
-    ***REMOVED***
+    }
 
     public String getFirstName() {
         return this.firstName;
-    ***REMOVED***
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-    ***REMOVED***
+    }
 
     public String getLastName() {
         return this.lastName;
-    ***REMOVED***
+    }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    ***REMOVED***
+    }
 
-    protected Set<Specialty***REMOVED*** getSpecialtiesInternal() {
+    protected Set<Specialty> getSpecialtiesInternal() {
         if (this.specialties == null) {
-            this.specialties = new HashSet<***REMOVED***();
-  ***REMOVED***
+            this.specialties = new HashSet<>();
+        }
         return this.specialties;
-    ***REMOVED***
+    }
 
     @XmlElement
-    public List<Specialty***REMOVED*** getSpecialties() {
-        List<Specialty***REMOVED*** sortedSpecs = new ArrayList<***REMOVED***(getSpecialtiesInternal());
+    public List<Specialty> getSpecialties() {
+        List<Specialty> sortedSpecs = new ArrayList<>(getSpecialtiesInternal());
         PropertyComparator.sort(sortedSpecs, new MutableSortDefinition("name", true, true));
         return Collections.unmodifiableList(sortedSpecs);
-    ***REMOVED***
+    }
 
     public int getNrOfSpecialties() {
         return getSpecialtiesInternal().size();
-    ***REMOVED***
+    }
 
     public void addSpecialty(Specialty specialty) {
         getSpecialtiesInternal().add(specialty);
-    ***REMOVED***
+    }
 
-***REMOVED***
+}

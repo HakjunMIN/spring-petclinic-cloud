@@ -1,4 +1,4 @@
-***REMOVED***
+#!/bin/bash
 set -e
 
 echo "Retrieving KubeletId for $AKSNAME in $RG"
@@ -7,14 +7,14 @@ TenantId=$(az account show --query tenantId -o tsv)
 SubscriptionId=$(az account show --query id -o tsv)
 
 JSONSECRETPATH="azure.json"
-cat<<EOF***REMOVED***$JSONSECRETPATH
+cat<<EOF>$JSONSECRETPATH
 {
 "userAssignedIdentityID": "$KubeletId",
 "tenantId": "$TenantId",
 "useManagedIdentityExtension": true,
 "subscriptionId": "$SubscriptionId",
 "resourceGroup": "$DNSRG"
-***REMOVED***
+}
 EOF
 
 cat azure.json

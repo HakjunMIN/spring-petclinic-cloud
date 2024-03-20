@@ -6,6 +6,6 @@ angular.module('visits', ['ui.router'])
             .state('visits', {
                 parent: 'app',
                 url: '/owners/:ownerId/pets/:petId/visits',
-                template: '<visits***REMOVED***</visits***REMOVED***'
-      ***REMOVED***)
-    ***REMOVED***]);
+                template: '<visits></visits>'
+            })
+    }]);

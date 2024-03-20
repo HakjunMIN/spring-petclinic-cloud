@@ -11,10 +11,10 @@ public class CircuitBreakerConfiguration {
     @Bean
     public CircuitBreakerRegistry circuitBreakerRegistry() {
         return CircuitBreakerRegistry.ofDefaults();
-    ***REMOVED***
+    }
 
     @Bean
     public TimeLimiterRegistry timeLimiterRegistry() {
         return TimeLimiterRegistry.ofDefaults();
-    ***REMOVED***
-***REMOVED***
+    }
+}

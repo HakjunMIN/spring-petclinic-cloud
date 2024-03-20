@@ -34,24 +34,24 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class VisitsServiceClient {
 
-	@Value("${visits-service-id://visits-service***REMOVED***")
+	@Value("${visits-service-id://visits-service}")
     private String hostname;
 
     private final WebClient.Builder webClientBuilder;
 
-    public Mono<Visits***REMOVED*** getVisitsForPets(final List<Integer***REMOVED*** petIds) {
+    public Mono<Visits> getVisitsForPets(final List<Integer> petIds) {
         return webClientBuilder.build()
             .get()
-            .uri(hostname + "/pets/visits?petId={petId***REMOVED***", joinIds(petIds))
+            .uri(hostname + "/pets/visits?petId={petId}", joinIds(petIds))
             .retrieve()
             .bodyToMono(Visits.class);
-    ***REMOVED***
+    }
 
-    private String joinIds(List<Integer***REMOVED*** petIds) {
+    private String joinIds(List<Integer> petIds) {
         return petIds.stream().map(Object::toString).collect(joining(","));
-    ***REMOVED***
+    }
 
     void setHostname(String hostname) {
         this.hostname = hostname;
-    ***REMOVED***
-***REMOVED***
+    }
+}

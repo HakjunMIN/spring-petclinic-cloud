@@ -8,20 +8,20 @@ param acrPrivatePool bool = false
 param acrAgentPoolSubnetAddressPrefix string = ''
 param availabilityZones array = []
 
-var firewallPublicIpName = 'pip-afw-${resourceName***REMOVED***'
+var firewallPublicIpName = 'pip-afw-${resourceName}'
 
 resource fw_pip 'Microsoft.Network/publicIPAddresses@2021-03-01' = {
   name: firewallPublicIpName
   location: location
   sku: {
     name: 'Standard'
-  ***REMOVED***
+  }
   zones: !empty(availabilityZones) ? availabilityZones : []
   properties: {
     publicIPAllocationMethod: 'Static'
     publicIPAddressVersion: 'IPv4'
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource fwDiags 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = if (!empty(workspaceDiagsId)) {
   scope: fw
@@ -31,38 +31,38 @@ resource fwDiags 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = if
     logs: [
       {
         category: 'AzureFirewallApplicationRule'
-  ***REMOVED***
+        enabled: true
         retentionPolicy: {
           days: 10
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+          enabled: false
+        }
+      }
       {
         category: 'AzureFirewallNetworkRule'
-  ***REMOVED***
+        enabled: true
         retentionPolicy: {
           days: 10
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+          enabled: false
+        }
+      }
     ]
     metrics: [
       {
         category: 'AllMetrics'
-  ***REMOVED***
+        enabled: true
         retentionPolicy: {
-    ***REMOVED***
+          enabled: false
           days: 0
-  ***REMOVED***
-***REMOVED***
+        }
+      }
     ]
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 @description('Whitelist dnsZone name (required by cert-manager validation process)')
 param appDnsZoneName string = ''
 
-var fw_name = 'afw-${resourceName***REMOVED***'
+var fw_name = 'afw-${resourceName}'
 resource fw 'Microsoft.Network/azureFirewalls@2021-03-01' = {
   name: fw_name
   location: location
@@ -74,37 +74,37 @@ resource fw 'Microsoft.Network/azureFirewalls@2021-03-01' = {
         properties: {
           subnet: {
             id: fwSubnetId
-    ***REMOVED***
+          }
           publicIPAddress: {
             id: fw_pip.id
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+          }
+        }
+      }
     ]
     threatIntelMode: 'Alert'
     firewallPolicy: {
       id: fwPolicy.id
 
-    ***REMOVED***
+    }
     applicationRuleCollections: []
     networkRuleCollections: []
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource fwPolicy 'Microsoft.Network/firewallPolicies@2020-11-01' = {
-  name: 'afwp-${resourceName***REMOVED***'
+  name: 'afwp-${resourceName}'
   location: location
   properties: {
     sku: {
       tier: 'Standard'
-    ***REMOVED***
+    }
     threatIntelMode: 'Alert'
     threatIntelWhitelist: {
       fqdns: []
       ipAddresses: []
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}
 
 resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-11-01' = {
   parent: fwPolicy
@@ -118,7 +118,7 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
         priority: 100
         action: {
           type: 'Allow'
-  ***REMOVED***
+        }
         rules: concat([
           {
             name: 'ControlPlaneTCP'
@@ -130,13 +130,13 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
               vnetAksSubnetAddressPrefix
             ]
             destinationAddresses: [
-              'AzureCloud.${location***REMOVED***'
+              'AzureCloud.${location}'
             ]
             destinationPorts: [
               '9000' /* For tunneled secure communication between the nodes and the control plane. */
               '22'
             ]
-    ***REMOVED***
+          }
           {
             name: 'ControlPlaneUDP'
             ruleType: 'NetworkRule'
@@ -147,12 +147,12 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
               vnetAksSubnetAddressPrefix
             ]
             destinationAddresses: [
-              'AzureCloud.${location***REMOVED***'
+              'AzureCloud.${location}'
             ]
             destinationPorts: [
               '1194' /* For tunneled secure communication between the nodes and the control plane. */
             ]
-    ***REMOVED***
+          }
           {
             name: 'AzureMonitorForContainers'
             ruleType: 'NetworkRule'
@@ -168,7 +168,7 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
             destinationPorts: [
               '443'
             ]
-    ***REMOVED***
+          }
         ], acrPrivatePool ? [
           {
             name: 'acr-agentpool'
@@ -189,16 +189,16 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
             destinationPorts: [
               '443'
             ]
-    ***REMOVED***
+          }
         ]:[])
-***REMOVED***
+      }
       {
         ruleCollectionType: 'FirewallPolicyFilterRuleCollection'
         name: 'CoreAksHttpEgress'
         priority: 400
         action: {
           type: 'Allow'
-  ***REMOVED***
+        }
         rules: concat([
             {
               name: 'aks'
@@ -207,11 +207,11 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
                 {
                   port: 443
                   protocolType: 'Https'
-          ***REMOVED***
+                }
                 {
                   port: 80
                   protocolType: 'Http'
-          ***REMOVED***
+                }
               ]
               targetFqdns: []
               fqdnTags: [
@@ -220,7 +220,7 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
               sourceAddresses: [
                 vnetAksSubnetAddressPrefix
               ]
-      ***REMOVED***
+            }
           ], certManagerFW ? [
             {
               name: 'certman-quay'
@@ -229,11 +229,11 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
                 {
                   port: 443
                   protocolType: 'Https'
-          ***REMOVED***
+                }
                 {
                   port: 80
                   protocolType: 'Http'
-          ***REMOVED***
+                }
               ]
               targetFqdns: [
                 'quay.io'
@@ -242,7 +242,7 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
               sourceAddresses: [
                 vnetAksSubnetAddressPrefix
               ]
-      ***REMOVED***
+            }
             {
               name: 'certman-letsencrypt'
               ruleType: 'ApplicationRule'
@@ -250,11 +250,11 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
                 {
                   port: 443
                   protocolType: 'Https'
-          ***REMOVED***
+                }
                 {
                   port: 80
                   protocolType: 'Http'
-          ***REMOVED***
+                }
               ]
               targetFqdns: [
                 'letsencrypt.org'
@@ -263,7 +263,7 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
               sourceAddresses: [
                 vnetAksSubnetAddressPrefix
               ]
-      ***REMOVED***
+            }
           ] : [], certManagerFW && !empty(appDnsZoneName) ? [
             {
               name: 'certman-appDnsZoneName'
@@ -272,22 +272,22 @@ resource fwpRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2020-
                 {
                   port: 443
                   protocolType: 'Https'
-          ***REMOVED***
+                }
                 {
                   port: 80
                   protocolType: 'Http'
-          ***REMOVED***
+                }
               ]
               targetFqdns: [
                 appDnsZoneName
-                '*.${appDnsZoneName***REMOVED***'
+                '*.${appDnsZoneName}'
               ]
               sourceAddresses: [
                 vnetAksSubnetAddressPrefix
               ]
-      ***REMOVED***
+            }
           ] : [])
-***REMOVED***
+      }
     ]
-  ***REMOVED***
-***REMOVED***
+  }
+}

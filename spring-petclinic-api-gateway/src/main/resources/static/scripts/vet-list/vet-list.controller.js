@@ -6,5 +6,5 @@ angular.module('vetList')
 
         $http.get('api/vet/vets').then(function (resp) {
             self.vetList = resp.data;
-  ***REMOVED***);
-    ***REMOVED***]);
+        });
+    }]);

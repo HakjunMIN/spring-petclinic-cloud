@@ -23,7 +23,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 /**
- * Repository class for <code***REMOVED***Pet</code***REMOVED*** domain objects All method names are compliant with Spring Data naming
+ * Repository class for <code>Pet</code> domain objects All method names are compliant with Spring Data naming
  * conventions so this interface can easily be extended for Spring Data See here: http://static.springsource.org/spring-data/jpa/docs/current/reference/html/jpa.repositories.html#jpa.query-methods.query-creation
  *
  * @author Ken Krebs
@@ -32,18 +32,18 @@ import org.springframework.data.repository.query.Param;
  * @author Michael Isvy
  * @author Maciej Szarlinski
  */
-public interface PetRepository extends JpaRepository<Pet, Integer***REMOVED*** {
+public interface PetRepository extends JpaRepository<Pet, Integer> {
 
     /**
-     * Retrieve all {@link PetType***REMOVED***s from the data store.
-     * @return a Collection of {@link PetType***REMOVED***s.
+     * Retrieve all {@link PetType}s from the data store.
+     * @return a Collection of {@link PetType}s.
      */
     @Query("SELECT ptype FROM PetType ptype ORDER BY ptype.name")
-    List<PetType***REMOVED*** findPetTypes();
+    List<PetType> findPetTypes();
 
     @Query("FROM PetType ptype WHERE ptype.id = :typeId")
-    Optional<PetType***REMOVED*** findPetTypeById(@Param("typeId") int typeId);
+    Optional<PetType> findPetTypeById(@Param("typeId") int typeId);
 
 
-***REMOVED***
+}
 

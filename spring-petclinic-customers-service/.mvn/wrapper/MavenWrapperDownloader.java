@@ -61,18 +61,18 @@ public class MavenWrapperDownloader {
                 Properties mavenWrapperProperties = new Properties();
                 mavenWrapperProperties.load(mavenWrapperPropertyFileInputStream);
                 url = mavenWrapperProperties.getProperty(PROPERTY_NAME_WRAPPER_URL, url);
-      ***REMOVED*** catch (IOException e) {
+            } catch (IOException e) {
                 System.out.println("- ERROR loading '" + MAVEN_WRAPPER_PROPERTIES_PATH + "'");
-      ***REMOVED*** finally {
+            } finally {
                 try {
                     if(mavenWrapperPropertyFileInputStream != null) {
                         mavenWrapperPropertyFileInputStream.close();
-              ***REMOVED***
-          ***REMOVED*** catch (IOException e) {
-                    // Ignore ***REMOVED***
-          ***REMOVED***
-      ***REMOVED***
-  ***REMOVED***
+                    }
+                } catch (IOException e) {
+                    // Ignore ...
+                }
+            }
+        }
         System.out.println("- Downloading from: " + url);
 
         File outputFile = new File(baseDirectory.getAbsolutePath(), MAVEN_WRAPPER_JAR_PATH);
@@ -80,19 +80,19 @@ public class MavenWrapperDownloader {
             if(!outputFile.getParentFile().mkdirs()) {
                 System.out.println(
                         "- ERROR creating output directory '" + outputFile.getParentFile().getAbsolutePath() + "'");
-      ***REMOVED***
-  ***REMOVED***
+            }
+        }
         System.out.println("- Downloading to: " + outputFile.getAbsolutePath());
         try {
             downloadFileFromURL(url, outputFile);
             System.out.println("Done");
             System.exit(0);
-  ***REMOVED*** catch (Throwable e) {
+        } catch (Throwable e) {
             System.out.println("- Error downloading");
             e.printStackTrace();
             System.exit(1);
-  ***REMOVED***
-    ***REMOVED***
+        }
+    }
 
     private static void downloadFileFromURL(String urlString, File destination) throws Exception {
         if (System.getenv("MVNW_USERNAME") != null && System.getenv("MVNW_PASSWORD") != null) {
@@ -102,9 +102,9 @@ public class MavenWrapperDownloader {
                 @Override
                 protected PasswordAuthentication getPasswordAuthentication() {
                     return new PasswordAuthentication(username, password);
-          ***REMOVED***
-      ***REMOVED***);
-  ***REMOVED***
+                }
+            });
+        }
         URL website = new URL(urlString);
         ReadableByteChannel rbc;
         rbc = Channels.newChannel(website.openStream());
@@ -112,6 +112,6 @@ public class MavenWrapperDownloader {
         fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
         fos.close();
         rbc.close();
-    ***REMOVED***
+    }
 
-***REMOVED***
+}

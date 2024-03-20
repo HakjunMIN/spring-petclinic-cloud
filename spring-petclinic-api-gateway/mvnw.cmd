@@ -61,9 +61,9 @@ set ERROR_CODE=0
 if not "%JAVA_HOME%" == "" goto OkJHome
 
 echo.
-echo Error: JAVA_HOME not found in your environment. ***REMOVED***&2
-echo Please set the JAVA_HOME variable in your environment to match the ***REMOVED***&2
-echo location of your Java installation. ***REMOVED***&2
+echo Error: JAVA_HOME not found in your environment. >&2
+echo Please set the JAVA_HOME variable in your environment to match the >&2
+echo location of your Java installation. >&2
 echo.
 goto error
 
@@ -71,10 +71,10 @@ goto error
 if exist "%JAVA_HOME%\bin\java.exe" goto init
 
 echo.
-echo Error: JAVA_HOME is set to an invalid directory. ***REMOVED***&2
-echo JAVA_HOME = "%JAVA_HOME%" ***REMOVED***&2
-echo Please set the JAVA_HOME variable in your environment to match the ***REMOVED***&2
-echo location of your Java installation. ***REMOVED***&2
+echo Error: JAVA_HOME is set to an invalid directory. >&2
+echo JAVA_HOME = "%JAVA_HOME%" >&2
+echo Please set the JAVA_HOME variable in your environment to match the >&2
+echo location of your Java installation. >&2
 echo.
 goto error
 
@@ -137,7 +137,7 @@ if exist %WRAPPER_JAR% (
         SET DOWNLOAD_URL="%MVNW_REPOURL%/io/takari/maven-wrapper/0.5.4/maven-wrapper-0.5.4.jar"
     )
     if "%MVNW_VERBOSE%" == "true" (
-        echo Couldn't find %WRAPPER_JAR%, downloading it ***REMOVED***
+        echo Couldn't find %WRAPPER_JAR%, downloading it ...
         echo Downloading from: %DOWNLOAD_URL%
     )
 
@@ -145,9 +145,9 @@ if exist %WRAPPER_JAR% (
 		"$webclient = new-object System.Net.WebClient;"^
 		"if (-not ([string]::IsNullOrEmpty('%MVNW_USERNAME%') -and [string]::IsNullOrEmpty('%MVNW_PASSWORD%'))) {"^
 		"$webclient.Credentials = new-object System.Net.NetworkCredential('%MVNW_USERNAME%', '%MVNW_PASSWORD%');"^
-		"***REMOVED***"^
+		"}"^
 		"[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $webclient.DownloadFile('%DOWNLOAD_URL%', '%WRAPPER_JAR%')"^
-		"***REMOVED***"
+		"}"
     if "%MVNW_VERBOSE%" == "true" (
         echo Finished downloading %WRAPPER_JAR%
     )

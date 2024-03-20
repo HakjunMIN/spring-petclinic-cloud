@@ -56,14 +56,14 @@ This application uses Wavefront as a SaaS that can provide free Spring Boot moni
 
 Otherwise, generate a free wavefront token by running one of the apps, for example:
 
-***REMOVED***bash
+```bash
 cd spring-petclinic-api-gateway
 mvn spring-boot:run
-***REMOVED***
+```
 
 You will see something like this in the logs:
 
-***REMOVED***
+```
 A Wavefront account has been provisioned successfully and the API token has been saved to disk.
 
 To share this account, make sure the following is added to your configuration:
@@ -74,29 +74,29 @@ To share this account, make sure the following is added to your configuration:
 Connect to your Wavefront dashboard using this one-time use link:
 https://wavefront.surf/us/AAA4s5f8xJ9yD
 
-***REMOVED***
+```
 
 You free account has now been created.
 
 Create a user-provided service for Wavefront using the data above. For example:
 
-***REMOVED***
-cf cups -p '{"uri": "https://wavefront.surf", "api-token": "2e41f7cf-1111-2222-3333-7397a56113ca", "application-name": "spring-petclinic-cloudfoundry", "fremium": "true"***REMOVED***' wavefront
-***REMOVED***
+```
+cf cups -p '{"uri": "https://wavefront.surf", "api-token": "2e41f7cf-1111-2222-3333-7397a56113ca", "application-name": "spring-petclinic-cloudfoundry", "fremium": "true"}' wavefront
+```
 If your operator deployed the wavefront proxy in your Cloud Foundry environment, point the URI to the proxy instead. You can obtain the value of the IP and port by creating a service key of the wavefront proxy and viewing the resulting JSON file. 
 
 Contine with creating the services and deploying the application's microservices. A sample is available at `scripts/deployToCloudFoundry.sh`. Note that some of the services' plans may be different in your environment, so please review before executing. For example, you want want to fork the [spring-petclinic-cloud-config](https://github.com/spring-petclinic/spring-petclinic-cloud-config.git) repository if you want to make changes to the configuration.
 
-***REMOVED***
-echo "Creating Required Services***REMOVED***"
+```
+echo "Creating Required Services..."
 {
-  cf create-service -c '{ "git": { "uri": "https://github.com/spring-petclinic/spring-petclinic-cloud-config.git", "periodic": true ***REMOVED***, "count": 3 ***REMOVED***' p.config-server standard config &
+  cf create-service -c '{ "git": { "uri": "https://github.com/spring-petclinic/spring-petclinic-cloud-config.git", "periodic": true }, "count": 3 }' p.config-server standard config &
   cf create-service p.service-registry standard registry & 
   cf create-service p.mysql db-small customers-db &
   cf create-service p.mysql db-small vets-db &
   cf create-service p.mysql db-small visits-db &
   sleep 5
-***REMOVED*** &***REMOVED*** /dev/null
+} &> /dev/null
 until [ `cf service config | grep -c "succeeded"` -ge 1  ] && [ `cf service registry | grep -c "succeeded"` -ge 1  ] && [ `cf service customers-db | grep -c "succeeded"` -ge 1  ] && [ `cf service vets-db | grep -c "succeeded"` -ge 1  ] && [ `cf service visits-db | grep -c "succeeded"` -ge 1  ]
 do
   echo -n "."
@@ -110,13 +110,13 @@ cf add-network-policy api-gateway --destination-app customers-service --protocol
 cf add-network-policy api-gateway --destination-app visits-service --protocol tcp --port 8080
 
 cf start vets-service & cf start visits-service & cf start customers-service & cf start api-gateway &
-***REMOVED***
+```
 
 You can now access your application by querying the route for the `api-gateway`:
 
-***REMOVED***
+```
 ✗ cf apps
-Getting apps in org pet-clinic / space pet-clinic as user@email.com***REMOVED***
+Getting apps in org pet-clinic / space pet-clinic as user@email.com...
 OK
 
 name                requested state   instances   memory   disk   urls
@@ -125,7 +125,7 @@ customers-service   started           1/1         1G       1G     customers-serv
 vets-service        started           1/1         1G       1G     vets-service.apps.internal
 visits-service      started           1/1         1G       1G     visits-service.apps.internal
 
-***REMOVED***
+```
 
 Access your route (like `api-gateway.apps.mysite.com` above) to see the application.
 
@@ -145,25 +145,25 @@ This get a little bit more complicated when deploying to Kubernetes, since we ne
 
 ### Choose your Docker registry
 
-You need to define your target Docker registry. Make sure you're already logged in by running `docker login <endpoint***REMOVED***` or `docker login` if you're just targeting Docker hub.
+You need to define your target Docker registry. Make sure you're already logged in by running `docker login <endpoint>` or `docker login` if you're just targeting Docker hub.
 
 Setup an env variable to target your Docker registry. If you're targeting Docker hub, simple provide your username, for example:
 
-***REMOVED***bash
+```bash
 export REPOSITORY_PREFIX=odedia
-***REMOVED***
+```
 
 For other Docker registries, provide the full URL to your repository, for example:
 
-***REMOVED***bash
+```bash
 export REPOSITORY_PREFIX=harbor.myregistry.com/demo
-***REMOVED***
+```
 
 One of the neat features in Spring Boot 2.3 is that it can leverage [Cloud Native Buildpacks](https://buildpacks.io) and [Paketo Buildpacks](https://paketo.io) to build production-ready images for us. Since we also configured the `spring-boot-maven-plugin` to use `layers`, we'll get optimized layering of the various components that build our Spring Boot app for optimal image caching. What this means in practice is that if we simple change a line of code in our app, it would only require us to push the layer containing our code and not the entire uber jar. To build all images and pushing them to your registry, run:
 
-***REMOVED***bash
-mvn spring-boot:build-image -Pk8s -DREPOSITORY_PREFIX=${REPOSITORY_PREFIX***REMOVED*** && ./scripts/pushImages.sh
-***REMOVED***
+```bash
+mvn spring-boot:build-image -Pk8s -DREPOSITORY_PREFIX=${REPOSITORY_PREFIX} && ./scripts/pushImages.sh
+```
 
 Since these are standalone microservices, you can also `cd` into any of the project folders and build it indivitually (as well as push it to the registry).
 
@@ -173,50 +173,50 @@ Make sure you're targeting your Kubernetes cluster.
 
 Docker images for kubernetes have been published into DockerHub in the [springcommunity](https://hub.docker.com/u/springcommunity)
 organization. You can pull an image:
-***REMOVED***
+```
 docker pull springcommunity/spring-petclinic-cloud-discovery-service
-***REMOVED***
+```
 
 ### Setting things up in Kubernetes
 
 Create the `spring-petclinic` namespace for Spring petclinic:
 
-***REMOVED***bash
+```bash
 kubectl apply -f k8s/init-namespace/ 
-***REMOVED***
+```
 
 Create a Kubernetes secret to store the URL and API Token of Wavefront (replace values with your own real ones):
 
-***REMOVED***bash
+```bash
 kubectl create secret generic wavefront -n spring-petclinic --from-literal=wavefront-url=https://wavefront.surf --from-literal=wavefront-api-token=2e41f7cf-1111-2222-3333-7397a56113ca
-***REMOVED***
+```
 
 Create the Wavefront proxy pod, and the various Kubernetes services that will be used later on by our deployments:
 
-***REMOVED***bash
+```bash
 kubectl apply -f k8s/init-services
-***REMOVED***
+```
 
 Verify the services are available:
 
-***REMOVED***bash
+```bash
 ✗ kubectl get svc -n spring-petclinic
 NAME                TYPE           CLUSTER-IP     EXTERNAL-IP   PORT(S)             AGE
-api-gateway         LoadBalancer   10.7.250.24    <pending***REMOVED***     80:32675/TCP        36s
-customers-service   ClusterIP      10.7.245.64    <none***REMOVED***        8080/TCP            36s
-vets-service        ClusterIP      10.7.245.150   <none***REMOVED***        8080/TCP            36s
-visits-service      ClusterIP      10.7.251.227   <none***REMOVED***        8080/TCP            35s
-wavefront-proxy     ClusterIP      10.7.253.85    <none***REMOVED***        2878/TCP,9411/TCP   37s
-***REMOVED***
+api-gateway         LoadBalancer   10.7.250.24    <pending>     80:32675/TCP        36s
+customers-service   ClusterIP      10.7.245.64    <none>        8080/TCP            36s
+vets-service        ClusterIP      10.7.245.150   <none>        8080/TCP            36s
+visits-service      ClusterIP      10.7.251.227   <none>        8080/TCP            35s
+wavefront-proxy     ClusterIP      10.7.253.85    <none>        2878/TCP,9411/TCP   37s
+```
 
 Verify the wavefront proxy is running:
 
-***REMOVED***bash
+```bash
 ✗ kubectl get pods -n spring-petclinic
 NAME                              READY   STATUS    RESTARTS   AGE
 wavefront-proxy-dfbd4b695-fdd6t   1/1     Running   0          36s
 
-***REMOVED***
+```
 
 ### Settings up databases with helm
 
@@ -224,34 +224,34 @@ We'll now need to deploy our databases. For that, we'll use helm. You'll need he
 
 Make sure you have a single `default` StorageClass in your Kubernetes cluster:
 
-***REMOVED***bash
+```bash
 ✗ kubectl get sc
 NAME                 PROVISIONER            AGE
 standard (default)   kubernetes.io/gce-pd   6h11m
 
-***REMOVED***
+```
 
 Deploy the databases:
 
-***REMOVED***bash
-***REMOVED***
-***REMOVED***
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
 helm install vets-db-mysql bitnami/mysql --namespace spring-petclinic --version 8.8.8 --set auth.database=service_instance_db
 helm install visits-db-mysql bitnami/mysql --namespace spring-petclinic  --version 8.8.8 --set auth.database=service_instance_db
 helm install customers-db-mysql bitnami/mysql --namespace spring-petclinic  --version 8.8.8 --set auth.database=service_instance_db
-***REMOVED***
+```
 
 ### Deploying the application
 
 Our deployment YAMLs have a placeholder called `REPOSITORY_PREFIX` so we'll be able to deploy the images from any Docker registry. Sadly, Kubernetes doesn't support environment variables in the YAML descriptors. We have a small script to do it for us and run our deployments:
 
-***REMOVED***bash
+```bash
 ./scripts/deployToKubernetes.sh
-***REMOVED***
+```
 
 Verify the pods are deployed:
 
-***REMOVED***bash
+```bash
 ✗ kubectl get pods -n spring-petclinic 
 NAME                                 READY   STATUS    RESTARTS   AGE
 api-gateway-585fff448f-q45jc         1/1     Running   0          4m20s
@@ -262,15 +262,15 @@ vets-service-85cb8677df-l5xpj        1/1     Running   0          4m2s
 visits-db-mysql-0                    1/1     Running   0          11m
 visits-service-654fffbcc7-zj2jw      1/1     Running   0          4m2s
 wavefront-proxy-dfbd4b695-fdd6t      1/1     Running   0          14m
-***REMOVED***
+```
 
 Get the `EXTERNAL-IP` of the API Gateway:
 
-***REMOVED***bash
+```bash
 ✗ kubectl get svc -n spring-petclinic api-gateway 
 NAME          TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)        AGE
 api-gateway   LoadBalancer   10.7.250.24   34.1.2.22   80:32675/TCP   18m
-***REMOVED***
+```
 
 You can now browse to that IP in your browser and see the application running.
 
@@ -334,9 +334,9 @@ Dependency for Connector/J, the MySQL JDBC driver is already included in the `po
 
 You may start a MySql database with docker:
 
-***REMOVED***
+```
 docker run -e MYSQL_ROOT_PASSWORD=petclinic -e MYSQL_DATABASE=petclinic -p 3306:3306 mysql:5.7.8
-***REMOVED***
+```
 or download and install the MySQL database (e.g., MySQL Community Server 5.7 GA), which can be found here: https://dev.mysql.com/downloads/
 
 ### Use the Spring 'mysql' profile
@@ -345,13 +345,13 @@ To use a MySQL database, you have to start 3 microservices (`visits-service`, `c
 with the `mysql` Spring profile. Add the `--spring.profiles.active=mysql` as programm argument.
 
 By default, at startup, database schema will be created and data will be populated.
-You may also manually create the PetClinic database and data by executing the `"db/mysql/{schema,data***REMOVED***.sql"` scripts of each 3 microservices. 
+You may also manually create the PetClinic database and data by executing the `"db/mysql/{schema,data}.sql"` scripts of each 3 microservices. 
 In the `application.yml` of the [Configuration repository], set the `initialization-mode` to `never`.
 
 If you are running the microservices with Docker, you have to add the `mysql` profile into the (Dockerfile)[docker/Dockerfile]:
-***REMOVED***
+```
 ENV SPRING_PROFILES_ACTIVE docker,mysql
-***REMOVED***
+```
 In the `mysql section` of the `application.yml` from the [Configuration repository], you have to change 
 the host and port of your MySQL JDBC connection string. 
 
@@ -377,7 +377,7 @@ You will find the JSON configuration file here: [docker/grafana/dashboards/grafa
 The id for this dashboard is `4701`.
 
 ### Custom metrics
-Spring Boot registers a lot number of core metrics: JVM, CPU, Tomcat, Logback***REMOVED*** 
+Spring Boot registers a lot number of core metrics: JVM, CPU, Tomcat, Logback... 
 The Spring Boot auto-configuration enables the instrumentation of requests handled by Spring MVC.
 All those three REST controllers `OwnerResource`, `PetResource` and `VisitResource` have been instrumented by the `@Timed` Micrometer annotation at class level.
 
@@ -421,7 +421,7 @@ that could be used to implement the Pet Clinic then please join the community th
 
 The [issue tracker](https://github.com/spring-petclinic/spring-petclinic-microservices/issues) is the preferred channel for bug reports, features requests and submitting pull requests.
 
-For pull requests, editor preferences are available in the [editor config](.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org***REMOVED***.
+For pull requests, editor preferences are available in the [editor config](.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
 
 
 [Configuration repository]: https://github.com/spring-petclinic/spring-petclinic-microservices-config

@@ -1,126 +1,126 @@
-<?xml version="1.0" encoding="UTF-8"?***REMOVED***
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"***REMOVED***
-	<modelVersion***REMOVED***4.0.0</modelVersion***REMOVED***
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-	<parent***REMOVED***
-		<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-		<artifactId***REMOVED***spring-boot-starter-parent</artifactId***REMOVED***
-		<version***REMOVED***2.6.3</version***REMOVED***
-	</parent***REMOVED***
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.3</version>
+	</parent>
 
-	<groupId***REMOVED***org.springframework.samples</groupId***REMOVED***
-	<artifactId***REMOVED***spring-petclinic-cloud</artifactId***REMOVED***
-	<name***REMOVED***${project.artifactId***REMOVED***</name***REMOVED***
-	<packaging***REMOVED***pom</packaging***REMOVED***
+	<groupId>org.springframework.samples</groupId>
+	<artifactId>spring-petclinic-cloud</artifactId>
+	<name>${project.artifactId}</name>
+	<packaging>pom</packaging>
 
-	<modules***REMOVED***
-		<module***REMOVED***spring-petclinic-customers-service</module***REMOVED***
-		<module***REMOVED***spring-petclinic-vets-service</module***REMOVED***
-		<module***REMOVED***spring-petclinic-visits-service</module***REMOVED***
-		<module***REMOVED***spring-petclinic-api-gateway</module***REMOVED***
-	</modules***REMOVED***
+	<modules>
+		<module>spring-petclinic-customers-service</module>
+		<module>spring-petclinic-vets-service</module>
+		<module>spring-petclinic-visits-service</module>
+		<module>spring-petclinic-api-gateway</module>
+	</modules>
 
-	<profiles***REMOVED***
-		<profile***REMOVED***
-			<id***REMOVED***springboot</id***REMOVED***
-			<activation***REMOVED***
-				<file***REMOVED***
-					<!-- Just a way to identify a Spring Boot application --***REMOVED***
-					<exists***REMOVED***src/main/resources/bootstrap.yml</exists***REMOVED***
-				</file***REMOVED***
-			</activation***REMOVED***
-			<build***REMOVED***
-				<plugins***REMOVED***
-					<plugin***REMOVED***
-						<groupId***REMOVED***org.springframework.boot</groupId***REMOVED***
-						<artifactId***REMOVED***spring-boot-maven-plugin</artifactId***REMOVED***
-						<executions***REMOVED***
-							<execution***REMOVED***
+	<profiles>
+		<profile>
+			<id>springboot</id>
+			<activation>
+				<file>
+					<!-- Just a way to identify a Spring Boot application -->
+					<exists>src/main/resources/bootstrap.yml</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.springframework.boot</groupId>
+						<artifactId>spring-boot-maven-plugin</artifactId>
+						<executions>
+							<execution>
 								<!-- Spring Boot Actuator displays build-related information if a
-									META-INF/build-info.properties file is present --***REMOVED***
-								<goals***REMOVED***
-									<goal***REMOVED***build-info</goal***REMOVED***
-								</goals***REMOVED***
-								<configuration***REMOVED***
-									<additionalProperties***REMOVED***
-										<encoding.source***REMOVED***${project.build.sourceEncoding***REMOVED***</encoding.source***REMOVED***
-										<encoding.reporting***REMOVED***${project.reporting.outputEncoding***REMOVED***</encoding.reporting***REMOVED***
-										<java.source***REMOVED***${maven.compiler.source***REMOVED***</java.source***REMOVED***
-										<java.target***REMOVED***${maven.compiler.target***REMOVED***</java.target***REMOVED***
-									</additionalProperties***REMOVED***
-								</configuration***REMOVED***
-							</execution***REMOVED***
-						</executions***REMOVED***
-					</plugin***REMOVED***
+									META-INF/build-info.properties file is present -->
+								<goals>
+									<goal>build-info</goal>
+								</goals>
+								<configuration>
+									<additionalProperties>
+										<encoding.source>${project.build.sourceEncoding}</encoding.source>
+										<encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
+										<java.source>${maven.compiler.source}</java.source>
+										<java.target>${maven.compiler.target}</java.target>
+									</additionalProperties>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
 
 					<!-- Spring Boot Actuator displays build-related information if a META-INF/build-info.properties
-						file is present --***REMOVED***
-					<plugin***REMOVED***
-						<groupId***REMOVED***pl.project13.maven</groupId***REMOVED***
-						<artifactId***REMOVED***git-commit-id-plugin</artifactId***REMOVED***
-						<executions***REMOVED***
-							<execution***REMOVED***
-								<goals***REMOVED***
-									<goal***REMOVED***revision</goal***REMOVED***
-								</goals***REMOVED***
-							</execution***REMOVED***
-						</executions***REMOVED***
-						<configuration***REMOVED***
-							<verbose***REMOVED***true</verbose***REMOVED***
-							<dateFormat***REMOVED***yyyy-MM-dd'T'HH:mm:ssZ</dateFormat***REMOVED***
-							<generateGitPropertiesFile***REMOVED***true</generateGitPropertiesFile***REMOVED***
-							<generateGitPropertiesFilename***REMOVED***${project.build.outputDirectory***REMOVED***/git.properties
-							</generateGitPropertiesFilename***REMOVED***
-							<failOnNoGitDirectory***REMOVED***false</failOnNoGitDirectory***REMOVED***
-						</configuration***REMOVED***
-					</plugin***REMOVED***
-				</plugins***REMOVED***
-			</build***REMOVED***
+						file is present -->
+					<plugin>
+						<groupId>pl.project13.maven</groupId>
+						<artifactId>git-commit-id-plugin</artifactId>
+						<executions>
+							<execution>
+								<goals>
+									<goal>revision</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<verbose>true</verbose>
+							<dateFormat>yyyy-MM-dd'T'HH:mm:ssZ</dateFormat>
+							<generateGitPropertiesFile>true</generateGitPropertiesFile>
+							<generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties
+							</generateGitPropertiesFilename>
+							<failOnNoGitDirectory>false</failOnNoGitDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
 
-		</profile***REMOVED***
+		</profile>
 
-		<profile***REMOVED***
-			<id***REMOVED***buildDocker</id***REMOVED***
-			<build***REMOVED***
-				<pluginManagement***REMOVED***
-					<plugins***REMOVED***
-						<plugin***REMOVED***
-							<groupId***REMOVED***com.spotify</groupId***REMOVED***
-							<artifactId***REMOVED***docker-maven-plugin</artifactId***REMOVED***
-							<version***REMOVED***${docker.plugin.version***REMOVED***</version***REMOVED***
-							<executions***REMOVED***
-								<execution***REMOVED***
-									<phase***REMOVED***install</phase***REMOVED***
-									<goals***REMOVED***
-										<goal***REMOVED***build</goal***REMOVED***
-									</goals***REMOVED***
-								</execution***REMOVED***
-							</executions***REMOVED***
-							<configuration***REMOVED***
-								<imageName***REMOVED***${docker.image.prefix***REMOVED***/${project.artifactId***REMOVED***</imageName***REMOVED***
-								<dockerDirectory***REMOVED***${docker.image.dockerfile.dir***REMOVED***</dockerDirectory***REMOVED***
-								<serverId***REMOVED***docker-hub</serverId***REMOVED***
-								<registryUrl***REMOVED***https://index.docker.io/v1/</registryUrl***REMOVED***
-								<resources***REMOVED***
-									<resource***REMOVED***
-										<targetPath***REMOVED***/</targetPath***REMOVED***
-										<directory***REMOVED***${project.build.directory***REMOVED***</directory***REMOVED***
-										<include***REMOVED***${project.build.finalName***REMOVED***.jar</include***REMOVED***
-									</resource***REMOVED***
-								</resources***REMOVED***
-								<buildArgs***REMOVED***
-									<ARTIFACT_NAME***REMOVED***${project.build.finalName***REMOVED***</ARTIFACT_NAME***REMOVED***
-									<EXPOSED_PORT***REMOVED***${docker.image.exposed.port***REMOVED***</EXPOSED_PORT***REMOVED***
-									<DOCKERIZE_VERSION***REMOVED***${docker.image.dockerize.version***REMOVED***</DOCKERIZE_VERSION***REMOVED***
-								</buildArgs***REMOVED***
-							</configuration***REMOVED***
-						</plugin***REMOVED***
-					</plugins***REMOVED***
-				</pluginManagement***REMOVED***
-			</build***REMOVED***
-		</profile***REMOVED***
-	</profiles***REMOVED***
+		<profile>
+			<id>buildDocker</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>com.spotify</groupId>
+							<artifactId>docker-maven-plugin</artifactId>
+							<version>${docker.plugin.version}</version>
+							<executions>
+								<execution>
+									<phase>install</phase>
+									<goals>
+										<goal>build</goal>
+									</goals>
+								</execution>
+							</executions>
+							<configuration>
+								<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+								<dockerDirectory>${docker.image.dockerfile.dir}</dockerDirectory>
+								<serverId>docker-hub</serverId>
+								<registryUrl>https://index.docker.io/v1/</registryUrl>
+								<resources>
+									<resource>
+										<targetPath>/</targetPath>
+										<directory>${project.build.directory}</directory>
+										<include>${project.build.finalName}.jar</include>
+									</resource>
+								</resources>
+								<buildArgs>
+									<ARTIFACT_NAME>${project.build.finalName}</ARTIFACT_NAME>
+									<EXPOSED_PORT>${docker.image.exposed.port}</EXPOSED_PORT>
+									<DOCKERIZE_VERSION>${docker.image.dockerize.version}</DOCKERIZE_VERSION>
+								</buildArgs>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 
-</project***REMOVED***
+</project>

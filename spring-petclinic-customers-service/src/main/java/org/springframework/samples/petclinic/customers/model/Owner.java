@@ -76,69 +76,69 @@ public class Owner {
     private String telephone;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "owner")
-    private Set<Pet***REMOVED*** pets;
+    private Set<Pet> pets;
 
     public Integer getId() {
         return id;
-    ***REMOVED***
+    }
 
     public String getFirstName() {
         return firstName;
-    ***REMOVED***
+    }
 
     public void setFirstName(final String firstName) {
         this.firstName = firstName;
-    ***REMOVED***
+    }
 
     public String getLastName() {
         return lastName;
-    ***REMOVED***
+    }
 
     public void setLastName(final String lastName) {
         this.lastName = lastName;
-    ***REMOVED***
+    }
 
     public String getAddress() {
         return this.address;
-    ***REMOVED***
+    }
 
     public void setAddress(String address) {
         this.address = address;
-    ***REMOVED***
+    }
 
     public String getCity() {
         return this.city;
-    ***REMOVED***
+    }
 
     public void setCity(String city) {
         this.city = city;
-    ***REMOVED***
+    }
 
     public String getTelephone() {
         return this.telephone;
-    ***REMOVED***
+    }
 
     public void setTelephone(String telephone) {
         this.telephone = telephone;
-    ***REMOVED***
+    }
 
-    protected Set<Pet***REMOVED*** getPetsInternal() {
+    protected Set<Pet> getPetsInternal() {
         if (this.pets == null) {
-            this.pets = new HashSet<***REMOVED***();
-  ***REMOVED***
+            this.pets = new HashSet<>();
+        }
         return this.pets;
-    ***REMOVED***
+    }
 
-    public List<Pet***REMOVED*** getPets() {
-        final List<Pet***REMOVED*** sortedPets = new ArrayList<***REMOVED***(getPetsInternal());
+    public List<Pet> getPets() {
+        final List<Pet> sortedPets = new ArrayList<>(getPetsInternal());
         PropertyComparator.sort(sortedPets, new MutableSortDefinition("name", true, true));
         return Collections.unmodifiableList(sortedPets);
-    ***REMOVED***
+    }
 
     public void addPet(Pet pet) {
         getPetsInternal().add(pet);
         pet.setOwner(this);
-    ***REMOVED***
+    }
 
     @Override
     public String toString() {
@@ -151,5 +151,5 @@ public class Owner {
             .append("city", this.city)
             .append("telephone", this.telephone)
             .toString();
-    ***REMOVED***
-***REMOVED***
+    }
+}

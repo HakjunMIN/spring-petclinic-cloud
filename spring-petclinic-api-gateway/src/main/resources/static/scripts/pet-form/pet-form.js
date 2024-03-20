@@ -6,11 +6,11 @@ angular.module('petForm', ['ui.router'])
             .state('petNew', {
                 parent: 'app',
                 url: '/owners/:ownerId/new-pet',
-                template: '<pet-form***REMOVED***</pet-form***REMOVED***'
-      ***REMOVED***)
+                template: '<pet-form></pet-form>'
+            })
             .state('petEdit', {
                 parent: 'app',
                 url: '/owners/:ownerId/pets/:petId',
-                template: '<pet-form***REMOVED***</pet-form***REMOVED***'
-      ***REMOVED***)
-    ***REMOVED***]);
+                template: '<pet-form></pet-form>'
+            })
+    }]);

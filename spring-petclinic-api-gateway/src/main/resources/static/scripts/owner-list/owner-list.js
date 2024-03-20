@@ -6,6 +6,6 @@ angular.module('ownerList', ['ui.router'])
             .state('owners', {
                 parent: 'app',
                 url: '/owners',
-                template: '<owner-list***REMOVED***</owner-list***REMOVED***'
-      ***REMOVED***)
-    ***REMOVED***]);
+                template: '<owner-list></owner-list>'
+            })
+    }]);

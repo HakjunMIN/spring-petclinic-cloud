@@ -4,7 +4,7 @@ param acrPoolSubnetId string = ''
 
 resource acr 'Microsoft.ContainerRegistry/registries@2021-06-01-preview' existing =  {
   name: acrName
-***REMOVED***
+}
 
 resource acrPool 'Microsoft.ContainerRegistry/registries/agentPools@2019-06-01-preview' = {
   name: 'private-pool'
@@ -15,5 +15,5 @@ resource acrPool 'Microsoft.ContainerRegistry/registries/agentPools@2019-06-01-p
     os: 'Linux'
     tier: 'S1'
     virtualNetworkSubnetResourceId: acrPoolSubnetId
-  ***REMOVED***
-***REMOVED***
+  }
+}

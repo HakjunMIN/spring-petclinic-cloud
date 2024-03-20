@@ -6,7 +6,7 @@ metadata:
     app: vets-service
   name: vets-service
   namespace: spring-petclinic
-***REMOVED***
+spec:
   ports:
   - name: "http"
     port: 8080
@@ -14,4 +14,4 @@ metadata:
   selector:
     app: vets-service
 status:
-  loadBalancer: {***REMOVED***
+  loadBalancer: {}

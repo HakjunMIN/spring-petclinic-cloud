@@ -10,6 +10,6 @@ class ApiGatewayApplicationTests {
 
 	@Test
 	void contextLoads() {
-	***REMOVED***
+	}
 
-***REMOVED***
+}

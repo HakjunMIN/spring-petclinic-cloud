@@ -1,40 +1,40 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "app.fullname" . ***REMOVED******REMOVED***
+  name: {{ include "app.fullname" . }}
   labels:
-    {{- include "app.labels" . | nindent 4 ***REMOVED******REMOVED***
-***REMOVED***
-  replicas: {{ .Values.replicaCount ***REMOVED******REMOVED***
+    {{- include "app.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      {{- include "app.selectorLabels" . | nindent 6 ***REMOVED******REMOVED***
+      {{- include "app.selectorLabels" . | nindent 6 }}
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        {{- include "app.selectorLabels" . | nindent 8 ***REMOVED******REMOVED***
-    ***REMOVED***
-      serviceAccountName: {{ include "app.serviceAccountName" . ***REMOVED******REMOVED***
+        {{- include "app.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ include "app.serviceAccountName" . }}
       securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 ***REMOVED******REMOVED***
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Chart.Name ***REMOVED******REMOVED***
+        - name: {{ .Chart.Name }}
           securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 ***REMOVED******REMOVED***
-        ***REMOVED*** "{{ .Values.image.repository ***REMOVED******REMOVED***:{{ .Values.image.tag | default .Chart.AppVersion ***REMOVED******REMOVED***"
-          #imagePullPolicy: {{ .Values.image.pullPolicy ***REMOVED******REMOVED***
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          #imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
             - --source=service
             - --source=ingress
-            - --domain-filter={{ .Values.externaldns.domainfilter ***REMOVED******REMOVED***
-            - --provider={{ .Values.externaldns.provider ***REMOVED******REMOVED***
-        ***REMOVED***
-            - name: {{ .Values.volumeAndSecretname ***REMOVED******REMOVED***
+            - --domain-filter={{ .Values.externaldns.domainfilter }}
+            - --provider={{ .Values.externaldns.provider }}
+          volumeMounts:
+            - name: {{ .Values.volumeAndSecretname }}
               mountPath: /etc/kubernetes
-        ***REMOVED***
-     ***REMOVED***
-        - name: {{ .Values.volumeAndSecretname ***REMOVED******REMOVED***
+              readOnly: true
+      volumes:
+        - name: {{ .Values.volumeAndSecretname }}
           secret:
-            secretName: {{ .Values.volumeAndSecretname ***REMOVED******REMOVED***
+            secretName: {{ .Values.volumeAndSecretname }}

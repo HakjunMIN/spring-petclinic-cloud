@@ -19,11 +19,11 @@ env:
     value: kubernetes
   - name: SPRING_DATASOURCE_URL
     value: jdbc:mysql://customers-db-mysql.spring-petclinic.svc.cluster.local:3306/service_instance_db?queryInterceptors=brave.mysql8.TracingQueryInterceptor&exceptionInterceptors=brave.mysql8.TracingExceptionInterceptor&zipkinServiceName=customers-db
-***REMOVED***
+  - name: SPRING_DATASOURCE_USERNAME
     value: root
-***REMOVED***
-***REMOVED***
-  ***REMOVED***
+  - name: SPRING_DATASOURCE_PASSWORD
+    valueFrom:
+        secretKeyRef:
           name: customers-db-mysql
           key: mysql-root-password
   - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
@@ -38,17 +38,17 @@ serviceAccount:
   # Specifies whether a service account should be created
   create: false
   # Annotations to add to the service account
-  annotations: {***REMOVED***
+  annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 
-podAnnotations: {***REMOVED***
+podAnnotations: {}
 
-podSecurityContext: {***REMOVED***
+podSecurityContext: {}
   # fsGroup: 2000
 
-securityContext: {***REMOVED***
+securityContext: {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -64,7 +64,7 @@ service:
 ingress:
   enabled: false
   className: ""
-  annotations: {***REMOVED***
+  annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
@@ -97,8 +97,8 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-nodeSelector: {***REMOVED***
+nodeSelector: {}
 
 tolerations: []
 
-affinity: {***REMOVED***
+affinity: {}

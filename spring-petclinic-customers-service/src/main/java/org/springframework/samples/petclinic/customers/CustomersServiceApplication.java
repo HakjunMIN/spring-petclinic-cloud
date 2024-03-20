@@ -17,18 +17,18 @@ package org.springframework.samples.petclinic.customers;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-***REMOVED***
+import com.microsoft.applicationinsights.attach.ApplicationInsights;
 
 /**
  * @author Maciej Szarlinski
  */
-***REMOVED***
+@SpringBootApplication
 public class CustomersServiceApplication {
 
 	public static void main(String[] args) {
 		ApplicationInsights.attach();
 		SpringApplication.run(CustomersServiceApplication.class, args);
-	***REMOVED***
+	}
 
 
-***REMOVED***
+}

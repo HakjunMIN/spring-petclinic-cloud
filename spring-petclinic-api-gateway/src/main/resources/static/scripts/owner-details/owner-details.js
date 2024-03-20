@@ -6,6 +6,6 @@ angular.module('ownerDetails', ['ui.router'])
             .state('ownerDetails', {
                 parent: 'app',
                 url: '/owners/details/:ownerId',
-                template: '<owner-details***REMOVED***</owner-details***REMOVED***'
-      ***REMOVED***)
-    ***REMOVED***]);
+                template: '<owner-details></owner-details>'
+            })
+    }]);

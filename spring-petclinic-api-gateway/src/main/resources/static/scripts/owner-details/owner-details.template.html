@@ -1,70 +1,70 @@
-<h2***REMOVED***Owner Information</h2***REMOVED***
+<h2>Owner Information</h2>
 
-<table class="table table-striped"***REMOVED***
-    <tr***REMOVED***
-        <th class="col-sm-3"***REMOVED***Name</th***REMOVED***
-        <td***REMOVED***<b***REMOVED***{{$ctrl.owner.firstName***REMOVED******REMOVED*** {{$ctrl.owner.lastName***REMOVED******REMOVED***</b***REMOVED***</td***REMOVED***
-    </tr***REMOVED***
-    <tr***REMOVED***
-        <th***REMOVED***Address</th***REMOVED***
-        <td***REMOVED***{{$ctrl.owner.address***REMOVED******REMOVED***</td***REMOVED***
-    </tr***REMOVED***
-    <tr***REMOVED***
-        <th***REMOVED***City</th***REMOVED***
-        <td***REMOVED***{{$ctrl.owner.city***REMOVED******REMOVED***</td***REMOVED***
-    </tr***REMOVED***
-    <tr***REMOVED***
-        <th***REMOVED***Telephone</th***REMOVED***
-        <td***REMOVED***{{$ctrl.owner.telephone***REMOVED******REMOVED***</td***REMOVED***
-    </tr***REMOVED***
-    <tr***REMOVED***
-        <td***REMOVED***
-            <a class="btn btn-default" ui-sref="ownerEdit({ownerId: $ctrl.owner.id***REMOVED***)"***REMOVED***Edit Owner</a***REMOVED***
-        </td***REMOVED***
-        <td***REMOVED***
-            <a ui-sref="petNew({ownerId: $ctrl.owner.id***REMOVED***)" class="btn btn-default"***REMOVED***Add New Pet</a***REMOVED***
-        </td***REMOVED***
-    </tr***REMOVED***
-</table***REMOVED***
+<table class="table table-striped">
+    <tr>
+        <th class="col-sm-3">Name</th>
+        <td><b>{{$ctrl.owner.firstName}} {{$ctrl.owner.lastName}}</b></td>
+    </tr>
+    <tr>
+        <th>Address</th>
+        <td>{{$ctrl.owner.address}}</td>
+    </tr>
+    <tr>
+        <th>City</th>
+        <td>{{$ctrl.owner.city}}</td>
+    </tr>
+    <tr>
+        <th>Telephone</th>
+        <td>{{$ctrl.owner.telephone}}</td>
+    </tr>
+    <tr>
+        <td>
+            <a class="btn btn-default" ui-sref="ownerEdit({ownerId: $ctrl.owner.id})">Edit Owner</a>
+        </td>
+        <td>
+            <a ui-sref="petNew({ownerId: $ctrl.owner.id})" class="btn btn-default">Add New Pet</a>
+        </td>
+    </tr>
+</table>
 
-<h2***REMOVED***Pets and Visits</h2***REMOVED***
+<h2>Pets and Visits</h2>
 
-<table class="table table-striped"***REMOVED***
-    <tr ng-repeat="pet in $ctrl.owner.pets track by pet.id"***REMOVED***
-        <td valign="top"***REMOVED***
-            <dl class="dl-horizontal"***REMOVED***
-                <dt***REMOVED***Name</dt***REMOVED***
-                <dd***REMOVED***<a ui-sref="petEdit({ownerId: $ctrl.owner.id, petId: pet.id***REMOVED***)"***REMOVED***{{pet.name***REMOVED******REMOVED***</a***REMOVED***</dd***REMOVED***
-                <dt***REMOVED***Birth Date</dt***REMOVED***
-                <dd***REMOVED***{{pet.birthDate | date:'yyyy MMM dd'***REMOVED******REMOVED***</dd***REMOVED***
-                <dt***REMOVED***Type</dt***REMOVED***
-                <dd***REMOVED***{{pet.type.name***REMOVED******REMOVED***</dd***REMOVED***
-            </dl***REMOVED***
-        </td***REMOVED***
-        <td valign="top"***REMOVED***
-            <table class="table-condensed"***REMOVED***
-                <thead***REMOVED***
-                <tr***REMOVED***
-                    <th***REMOVED***Visit Date</th***REMOVED***
-                    <th***REMOVED***Description</th***REMOVED***
-                </tr***REMOVED***
-                </thead***REMOVED***
-                <tr ng-repeat="visit in pet.visits track by visit.id"***REMOVED***
-                    <td***REMOVED***{{visit.date | date:'yyyy MMM dd'***REMOVED******REMOVED***</td***REMOVED***
-                    <td***REMOVED***{{visit.description***REMOVED******REMOVED***</td***REMOVED***
-                </tr***REMOVED***
-                <tr***REMOVED***
-                    <td***REMOVED***
-                        <a ui-sref="petEdit({ownerId: $ctrl.owner.id, petId: pet.id***REMOVED***)"***REMOVED***Edit Pet</a***REMOVED***
-                    </td***REMOVED***
-                    <td***REMOVED***
-                        <a ui-sref="visits({ownerId: $ctrl.owner.id, petId: pet.id***REMOVED***)"***REMOVED***Add Visit</a***REMOVED***
-                    </td***REMOVED***
-                </tr***REMOVED***
-            </table***REMOVED***
-        </td***REMOVED***
-    </tr***REMOVED***
-</table***REMOVED***
+<table class="table table-striped">
+    <tr ng-repeat="pet in $ctrl.owner.pets track by pet.id">
+        <td valign="top">
+            <dl class="dl-horizontal">
+                <dt>Name</dt>
+                <dd><a ui-sref="petEdit({ownerId: $ctrl.owner.id, petId: pet.id})">{{pet.name}}</a></dd>
+                <dt>Birth Date</dt>
+                <dd>{{pet.birthDate | date:'yyyy MMM dd'}}</dd>
+                <dt>Type</dt>
+                <dd>{{pet.type.name}}</dd>
+            </dl>
+        </td>
+        <td valign="top">
+            <table class="table-condensed">
+                <thead>
+                <tr>
+                    <th>Visit Date</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tr ng-repeat="visit in pet.visits track by visit.id">
+                    <td>{{visit.date | date:'yyyy MMM dd'}}</td>
+                    <td>{{visit.description}}</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a ui-sref="petEdit({ownerId: $ctrl.owner.id, petId: pet.id})">Edit Pet</a>
+                    </td>
+                    <td>
+                        <a ui-sref="visits({ownerId: $ctrl.owner.id, petId: pet.id})">Add Visit</a>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 
 
 

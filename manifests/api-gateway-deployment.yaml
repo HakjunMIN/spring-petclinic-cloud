@@ -6,19 +6,19 @@ metadata:
     app: api-gateway
   name: api-gateway
   namespace: spring-petclinic
-***REMOVED***
+spec:
   replicas: 1
   selector:
     matchLabels:
       app: api-gateway
-  strategy: {***REMOVED***
+  strategy: {}
   template:
     metadata:
       labels:
         app: api-gateway
-    ***REMOVED***
+    spec:
       containers:
-      - image: ${REPOSITORY_PREFIX***REMOVED***/spring-petclinic-cloud-***REMOVED***latest
+      - image: ${REPOSITORY_PREFIX}/spring-petclinic-cloud-api-gateway:latest
         name: api-gateway
         imagePullPolicy: Always
         livenessProbe:
@@ -42,7 +42,7 @@ metadata:
           requests:
             cpu: 2000m
             memory: 1Gi
-      ***REMOVED***
+        env:
         - name: SPRING_PROFILES_ACTIVE
           value: kubernetes
         - name: MANAGEMENT_METRICS_EXPORT_WAVEFRONT_URI
@@ -52,4 +52,4 @@ metadata:
       restartPolicy: Always
       imagePullSecrets:
         - name: regcred
-status: {***REMOVED***
+status: {}

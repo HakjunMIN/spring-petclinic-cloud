@@ -6,11 +6,11 @@ angular.module('ownerForm', ['ui.router'])
             .state('ownerNew', {
                 parent: 'app',
                 url: '/owners/new',
-                template: '<owner-form***REMOVED***</owner-form***REMOVED***'
-      ***REMOVED***)
+                template: '<owner-form></owner-form>'
+            })
             .state('ownerEdit', {
                 parent: 'app',
                 url: '/owners/:ownerId/edit',
-                template: '<owner-form***REMOVED***</owner-form***REMOVED***'
-      ***REMOVED***)
-    ***REMOVED***]);
+                template: '<owner-form></owner-form>'
+            })
+    }]);

@@ -6,7 +6,7 @@ metadata:
     app: api-gateway
   name: api-gateway
   namespace: spring-petclinic
-***REMOVED***
+spec:
   ports:
   - name: "http"
     port: 80
@@ -15,4 +15,4 @@ metadata:
     app: api-gateway
   type: LoadBalancer
 status:
-  loadBalancer: {***REMOVED***
+  loadBalancer: {}

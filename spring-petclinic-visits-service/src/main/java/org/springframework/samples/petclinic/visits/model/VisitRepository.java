@@ -21,7 +21,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * Repository class for <code***REMOVED***Visit</code***REMOVED*** domain objects All method names are compliant with Spring Data naming conventions so this interface can easily be extended for Spring
+ * Repository class for <code>Visit</code> domain objects All method names are compliant with Spring Data naming conventions so this interface can easily be extended for Spring
  * Data See here: http://static.springsource.org/spring-data/jpa/docs/current/reference/html/jpa.repositories.html#jpa.query-methods.query-creation
  *
  * @author Ken Krebs
@@ -30,9 +30,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Michael Isvy
  * @author Maciej Szarlinski
  */
-public interface VisitRepository extends JpaRepository<Visit, Integer***REMOVED*** {
+public interface VisitRepository extends JpaRepository<Visit, Integer> {
 
-    List<Visit***REMOVED*** findByPetId(int petId);
+    List<Visit> findByPetId(int petId);
 
-    List<Visit***REMOVED*** findByPetIdIn(Collection<Integer***REMOVED*** petIds);
-***REMOVED***
+    List<Visit> findByPetIdIn(Collection<Integer> petIds);
+}

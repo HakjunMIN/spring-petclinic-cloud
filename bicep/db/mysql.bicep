@@ -67,12 +67,12 @@ var firewallrules = [
     Name: 'rule1'
     StartIpAddress: '0.0.0.0'
     EndIpAddress: '255.255.255.255'
-  ***REMOVED***
+  }
   {
     Name: 'rule2'
     StartIpAddress: '0.0.0.0'
     EndIpAddress: '255.255.255.255'
-  ***REMOVED***
+  }
 ]
 
 resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
@@ -83,17 +83,17 @@ resource vnet 'Microsoft.Network/virtualNetworks@2021-05-01' = {
       addressPrefixes: [
         vnetAddressPrefix
       ]
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}
 
 resource subnet 'Microsoft.Network/virtualNetworks/subnets@2021-05-01' = {
   parent: vnet
   name: subnetName
   properties: {
     addressPrefix: subnetPrefix
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource mysqlDbServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
   name: serverName
@@ -102,9 +102,9 @@ resource mysqlDbServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
     name: skuName
     tier: SkuTier
     capacity: skuCapacity
-    size: '${SkuSizeMB***REMOVED***'  //a string is expected here but a int for the storageProfile***REMOVED***
+    size: '${SkuSizeMB}'  //a string is expected here but a int for the storageProfile...
     family: skuFamily
-  ***REMOVED***
+  }
   properties: {
     createMode: 'Default'
     version: mysqlVersion
@@ -114,23 +114,23 @@ resource mysqlDbServer 'Microsoft.DBforMySQL/servers@2017-12-01' = {
       storageMB: SkuSizeMB
       backupRetentionDays: backupRetentionDays
       geoRedundantBackup: geoRedundantBackup
-    ***REMOVED***
-  ***REMOVED***
+    }
+  }
 
   resource virtualNetworkRule 'virtualNetworkRules@2017-12-01' = {
     name: virtualNetworkRuleName
     properties: {
       virtualNetworkSubnetId: subnet.id
       ignoreMissingVnetServiceEndpoint: true
-    ***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}
 
 @batchSize(1)
 resource firewallRules 'Microsoft.DBforMySQL/servers/firewallRules@2017-12-01' = [for rule in firewallrules: {
-  name: '${mysqlDbServer.name***REMOVED***/${rule.Name***REMOVED***'
+  name: '${mysqlDbServer.name}/${rule.Name}'
   properties: {
     startIpAddress: rule.StartIpAddress
     endIpAddress: rule.EndIpAddress
-  ***REMOVED***
-***REMOVED***]
+  }
+}]

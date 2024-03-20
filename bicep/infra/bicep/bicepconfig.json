@@ -6,47 +6,47 @@
         "rules": {
             "no-hardcoded-location" : {
                 "level": "error"
-      ***REMOVED***,
+            },
             "no-loc-expr-outside-params" : {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "protect-commandtoexecute-secrets" : {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "explicit-values-for-loc-params" : {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "adminusername-should-not-be-literal": {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "no-hardcoded-env-urls": {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "no-unnecessary-dependson": {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "no-unused-params": {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "no-unused-vars": {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "outputs-should-not-contain-secrets": {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "prefer-interpolation": {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "secure-parameter-default": {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "simplify-interpolation": {
                 "level": "warning"
-      ***REMOVED***,
+            },
             "use-stable-vm-image": {
                 "level": "warning"
-      ***REMOVED***
-  ***REMOVED***
-***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
+            }
+        }
+      }
+    }
+  }

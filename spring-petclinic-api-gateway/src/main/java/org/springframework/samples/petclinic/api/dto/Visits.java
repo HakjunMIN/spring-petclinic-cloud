@@ -26,6 +26,6 @@ import lombok.Value;
 @Value
 public class Visits {
 
-    private List<VisitDetails***REMOVED*** items = new ArrayList<***REMOVED***();
+    private List<VisitDetails> items = new ArrayList<>();
 
-***REMOVED***
+}

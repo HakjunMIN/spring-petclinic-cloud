@@ -2,12 +2,12 @@ param resourceName string
 param location string = resourceGroup().location
 param workspaceDiagsId string = ''
 
-var nsgName = 'nsg-agw-${resourceName***REMOVED***'
+var nsgName = 'nsg-agw-${resourceName}'
 
 resource nsg 'Microsoft.Network/networkSecurityGroups@2021-05-01' = {
   name: nsgName
   location: location
-***REMOVED***
+}
 output nsgId string = nsg.id
 
 resource ruleAppGwManagement 'Microsoft.Network/networkSecurityGroups/securityRules@2020-11-01' = {
@@ -22,8 +22,8 @@ resource ruleAppGwManagement 'Microsoft.Network/networkSecurityGroups/securityRu
     access: 'Allow'
     priority: 100
     direction: 'Inbound'
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource ruleAzureLoadBalancer 'Microsoft.Network/networkSecurityGroups/securityRules@2020-11-01' = {
   parent: nsg
@@ -41,8 +41,8 @@ resource ruleAzureLoadBalancer 'Microsoft.Network/networkSecurityGroups/security
     destinationPortRanges: []
     sourceAddressPrefixes: []
     destinationAddressPrefixes: []
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 resource ruleDenyInternet 'Microsoft.Network/networkSecurityGroups/securityRules@2020-11-01' = {
   parent: nsg
@@ -61,8 +61,8 @@ resource ruleDenyInternet 'Microsoft.Network/networkSecurityGroups/securityRules
     destinationPortRanges: []
     sourceAddressPrefixes: []
     destinationAddressPrefixes: []
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 param allowInternetHttpIn bool = false
 resource ruleInternetHttp 'Microsoft.Network/networkSecurityGroups/securityRules@2020-11-01' = if(allowInternetHttpIn) {
@@ -83,8 +83,8 @@ resource ruleInternetHttp 'Microsoft.Network/networkSecurityGroups/securityRules
     ]
     sourceAddressPrefixes: []
     destinationAddressPrefixes: []
-  ***REMOVED***
-***REMOVED***
+  }
+}
 
 param NsgDiagnosticCategories array = [
   'NetworkSecurityGroupEvent'
@@ -92,13 +92,13 @@ param NsgDiagnosticCategories array = [
 ]
 
 resource nsgDiags 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = if (!empty(workspaceDiagsId)) {
-  name: 'diags-${nsgName***REMOVED***'
+  name: 'diags-${nsgName}'
   scope: nsg
   properties: {
     workspaceId: workspaceDiagsId
     logs: [for diagCategory in NsgDiagnosticCategories: {
       category: diagCategory
-***REMOVED***
-    ***REMOVED***]
-  ***REMOVED***
-***REMOVED***
+      enabled: true
+    }]
+  }
+}

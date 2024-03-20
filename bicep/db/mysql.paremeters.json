@@ -4,6 +4,6 @@
     "parameters": {
       "virtualNetworkName": {
         "value": "aks-vnet"
-***REMOVED***
-    ***REMOVED***
-  ***REMOVED***
+      }
+    }
+  }

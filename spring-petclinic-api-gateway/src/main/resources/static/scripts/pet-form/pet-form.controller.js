@@ -7,7 +7,7 @@ angular.module('petForm')
 
         $http.get('api/customer/petTypes').then(function (resp) {
             self.types = resp.data;
-  ***REMOVED***).then(function () {
+        }).then(function () {
 
             var petId = $stateParams.petId || 0;
 
@@ -16,17 +16,17 @@ angular.module('petForm')
                     self.pet = resp.data;
                     self.pet.birthDate = new Date(self.pet.birthDate);
                     self.petTypeId = "" + self.pet.type.id;
-          ***REMOVED***);
-      ***REMOVED*** else {
+                });
+            } else {
                 $http.get('api/customer/owners/' + ownerId).then(function (resp) {
                     self.pet = {
                         owner: resp.data.firstName + " " + resp.data.lastName
-              ***REMOVED***;
+                    };
                     self.petTypeId = "1";
-          ***REMOVED***)
+                })
 
-      ***REMOVED***
-  ***REMOVED***);
+            }
+        });
 
         self.submit = function () {
             var id = self.pet.id || 0;
@@ -36,23 +36,23 @@ angular.module('petForm')
                 name: self.pet.name,
                 birthDate: self.pet.birthDate,
                 typeId: self.petTypeId
-      ***REMOVED***;
+            };
 
             var req;
             if (id) {
                 req = $http.put("api/customer/owners/" + ownerId + "/pets/" + id, data);
-      ***REMOVED*** else {
+            } else {
                 req = $http.post("api/customer/owners/" + ownerId + "/pets", data);
-      ***REMOVED***
+            }
 
             req.then(function () {
-                $state.go("owners", {ownerId: ownerId***REMOVED***);
-      ***REMOVED***, function (response) {
+                $state.go("owners", {ownerId: ownerId});
+            }, function (response) {
                 var error = response.data;
                 error.errors = error.errors || [];
                 alert(error.error + "\r\n" + error.errors.map(function (e) {
                         return e.field + ": " + e.defaultMessage;
-              ***REMOVED***).join("\r\n"));
-      ***REMOVED***);
-  ***REMOVED***;
-    ***REMOVED***]);
+                    }).join("\r\n"));
+            });
+        };
+    }]);

@@ -10,21 +10,21 @@ angular.module('visits')
 
         $http.get(url).then(function (resp) {
             self.visits = resp.data;
-  ***REMOVED***);
+        });
 
         self.submit = function () {
             var data = {
                 date: $filter('date')(self.date, "yyyy-MM-dd"),
                 description: self.desc
-      ***REMOVED***;
+            };
 
             $http.post(url, data).then(function () {
-                $state.go("owners", { ownerId: $stateParams.ownerId ***REMOVED***);
-      ***REMOVED***, function (response) {
+                $state.go("owners", { ownerId: $stateParams.ownerId });
+            }, function (response) {
                 var error = response.data;
                 alert(error.error + "\r\n" + error.errors.map(function (e) {
                         return e.field + ": " + e.defaultMessage;
-              ***REMOVED***).join("\r\n"));
-      ***REMOVED***);
-  ***REMOVED***;
-    ***REMOVED***]);
+                    }).join("\r\n"));
+            });
+        };
+    }]);
