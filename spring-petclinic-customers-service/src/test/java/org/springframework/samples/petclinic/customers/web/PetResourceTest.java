@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * @author Maciej Szarlinski
  */
-@WebMvcTest(PetResource.class)
+@WebMvcTest(value = PetResource.class, excludeAutoConfiguration = {org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class})
 @ActiveProfiles("test")
 class PetResourceTest {
 
