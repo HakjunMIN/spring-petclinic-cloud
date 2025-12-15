@@ -12,19 +12,18 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.3</version>
+		<version>3.3.6</version>
 		<relativePath/>
 	</parent>
 
 	<properties>
-		<java.version>11</java.version>
-		<assertj.version>3.11.1</assertj.version>
+		<java.version>17</java.version>
 		<maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
-		<spring-boot.version>2.7.4</spring-boot.version>
-		<spring-cloud.version>2021.0.4</spring-cloud.version>
-		<wavefront.version>2.2.2</wavefront.version>
+		<spring-boot.version>3.3.6</spring-boot.version>
+		<spring-cloud.version>2023.0.6</spring-cloud.version>
+		<wavefront.version>3.2.0</wavefront.version>
 		<spring-boot.build-image.imageName>${REPOSITORY_PREFIX}/spring-petclinic-cloud-visits-service</spring-boot.build-image.imageName>
-        <spring-cloud-services.version>3.3.0</spring-cloud-services.version>
+        <spring-cloud-services.version>3.5.0</spring-cloud-services.version>
 		<appcliation-insights.version>3.4.1</appcliation-insights.version>
     </properties>
 
@@ -87,10 +86,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
-		</dependency>
 
 		<!-- Third parties -->
 		<dependency>
@@ -103,12 +98,8 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.jolokia</groupId>
-			<artifactId>jolokia-core</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -153,12 +144,6 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-			<dependency>
-				<groupId>org.assertj</groupId>
-				<artifactId>assertj-core</artifactId>
-				<version>${assertj.version}</version>
-				<scope>test</scope>
-			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -185,14 +170,6 @@
 						<goals>
 							<goal>build-info</goal>
 						</goals>
-						<configuration>
-							<additionalProperties>
-								<encoding.source>${project.build.sourceEncoding}</encoding.source>
-								<encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
-								<java.source>${maven.compiler.source}</java.source>
-								<java.target>${maven.compiler.target}</java.target>
-							</additionalProperties>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
