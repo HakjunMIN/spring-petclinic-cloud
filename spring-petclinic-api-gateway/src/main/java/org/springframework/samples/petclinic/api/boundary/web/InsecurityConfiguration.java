@@ -12,9 +12,10 @@ public class InsecurityConfiguration {
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
     	return http
-                .authorizeExchange().anyExchange().permitAll()
-                .and()
-                .csrf().disable()
+                .authorizeExchange(exchange -> exchange
+                	.anyExchange().permitAll()
+                )
+                .csrf(csrf -> csrf.disable())
                 .build();
     }
 }

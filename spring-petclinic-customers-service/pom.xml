@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.3</version>
+		<version>3.3.6</version>
 		<relativePath/>
 	</parent>
 
@@ -17,13 +17,12 @@
 	<description>Spring PetClinic Customers Service</description>
 
 	<properties>
-		<java.version>11</java.version>
-		<assertj.version>3.11.1</assertj.version>
+		<java.version>17</java.version>
 
-		<spring-boot.version>2.7.4</spring-boot.version>
-		<spring-cloud.version>2021.0.4</spring-cloud.version>
+		<spring-boot.version>3.3.6</spring-boot.version>
+		<spring-cloud.version>2023.0.6</spring-cloud.version>
         <spring-cloud-services.version>3.5.0</spring-cloud-services.version>
-        <wavefront.version>2.2.2</wavefront.version>
+        <wavefront.version>3.2.0</wavefront.version>
 		<appcliation-insights.version>3.4.1</appcliation-insights.version>
 
         <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
@@ -91,25 +90,17 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-sleuth</artifactId>
-		</dependency>
 
 		<!-- Third parties -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.hsqldb</groupId>
 			<artifactId>hsqldb</artifactId>
 			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.jolokia</groupId>
-			<artifactId>jolokia-core</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -129,11 +120,6 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.assertj</groupId>
-			<artifactId>assertj-core</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -162,12 +148,6 @@
 				<version>${spring-cloud.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.assertj</groupId>
-				<artifactId>assertj-core</artifactId>
-				<version>${assertj.version}</version>
-				<scope>test</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
@@ -276,14 +256,6 @@
 						<goals>
 							<goal>build-info</goal>
 						</goals>
-						<configuration>
-							<additionalProperties>
-								<encoding.source>${project.build.sourceEncoding}</encoding.source>
-								<encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
-								<java.source>${maven.compiler.source}</java.source>
-								<java.target>${maven.compiler.target}</java.target>
-							</additionalProperties>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
